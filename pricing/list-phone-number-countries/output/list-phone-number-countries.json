@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "page": 0,
+        "page_size": 50,
+        "first_page_url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries?PageSize=50&Page=0",
+        "next_page_url": null,
+        "key": "countries"
+    },
+    "countries": [
+        {
+            "country": "Austria",
+            "iso_country": "AT",
+            "url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries/AT"
+        },
+        {
+            "country": "Australia",
+            "iso_country": "AU",
+            "url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries/AU"
+        },
+	...
+     ]
+}

@@ -1,0 +1,16 @@
+{
+    "number": "+15108675309",
+    "country": "United States",
+    "iso_country" : "US",
+    "outbound_call_price": {
+        "base_price": "0.015",
+        "current_price": "0.015"
+    },
+    "inbound_call_price": {
+        "number_type" : null,
+        "base_price" : null,
+        "current_price" : null
+    },
+    "price_unit": "USD",
+    "url": "https://pricing.twilio.com/v1/Voice/Numbers/+15108673509"
+}

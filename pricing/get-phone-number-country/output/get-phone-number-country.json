@@ -1,0 +1,18 @@
+{
+    "country": "United States",
+    "iso_country": "US",
+    "phone_number_prices": [
+        {
+            "number_type": "local",
+            "base_price": "1.00",
+            "current_price": "1.00"
+        },
+        {
+            "number_type": "toll free",
+            "base_price": "2.00",
+            "current_price": "2.00"
+        }
+    ],
+    "price_unit": "USD",
+    "url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries/US"
+}

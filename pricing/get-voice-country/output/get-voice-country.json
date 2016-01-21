@@ -1,0 +1,33 @@
+{
+    "country" : "Estonia",
+    "iso_country": "EE",
+    "outbound_prefix_prices": [
+	{
+            "prefixes": ["37240", "37270", "37281", "37282"],
+            "friendly_name": "Programmable Outbound Minute - Estonia - Other",
+            "base_price": "0.465",
+            "current_price": "0.465"
+        },
+	{
+            "prefixes": ["3725"],
+            "friendly_name": "Programmable Outbound Minute - Estonia - Mobile",
+            "base_price": "0.0575",
+            "current_price": "0.0575"
+        },
+        {
+            "prefixes": ["372"],
+            "friendly_name": "Programmable Outbound Minute - Estonia",
+            "base_price": "0.033",
+            "current_price": "0.030"
+        },
+    ],
+    "inbound_call_prices": [
+        {
+            "number_type": "national",
+            "base_price": "0.0075",
+            "current_price": "0.0070"
+        }
+    ],
+    "price_unit": "USD",
+    "url" : "https://pricing.twilio.com/v1/Voice/Countries/EE"
+}
