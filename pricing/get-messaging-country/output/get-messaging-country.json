@@ -1,0 +1,83 @@
+{
+  "url": "https://pricing.twilio.com/v1/Messaging/Countries/EE",
+  "country": "Estonia",
+  "iso_country": "EE",
+  "price_unit": "USD",
+  "outbound_sms_prices": [
+    {
+      "mcc": "248",
+      "mnc": "1",
+      "carrier": "EMT",
+      "prices": [
+        {
+          "number_type": "mobile",
+          "base_price": "0.1040",
+          "current_price": "0.1040"
+        },
+        {
+          "number_type": "local",
+          "base_price": "0.1040",
+          "current_price": "0.1040"
+        }
+      ]
+    },
+    {
+      "mcc": "248",
+      "mnc": "2",
+      "carrier": "Elisa",
+      "prices": [
+        {
+          "number_type": "mobile",
+          "base_price": "0.0845",
+          "current_price": "0.0845"
+        },
+        {
+          "number_type": "local",
+          "base_price": "0.0845",
+          "current_price": "0.0845"
+        }
+      ]
+    },
+    {
+      "mcc": "248",
+      "mnc": "3",
+      "carrier": "Tele2",
+      "prices": [
+        {
+          "number_type": "mobile",
+          "base_price": "0.050",
+          "current_price": "0.050"
+        },
+        {
+          "number_type": "local",
+          "base_price": "0.050",
+          "current_price": "0.050"
+        }
+      ]
+    },
+    {
+      "mcc": "248",
+      "mnc": "999",
+      "carrier": "Other",
+      "prices": [
+        {
+          "number_type": "mobile",
+          "base_price": "0.02383",
+          "current_price": "0.02383"
+        },
+        {
+          "number_type": "local",
+          "base_price": "0.02383",
+          "current_price": "0.02383"
+        }
+      ]
+    }
+  ],
+  "inbound_sms_prices": [
+    {
+      "number_type": "mobile",
+      "base_price": "0.0075",
+      "current_price": "0.0075"
+    }
+  ]
+}
