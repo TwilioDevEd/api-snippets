@@ -11,8 +11,8 @@ class Example
     var lookups = new LookupsClient(AccountSid, AuthToken);
 
     // Look up a phone number in E.164 format
-    var phoneNumber = lookups.GetPhoneNumber("+15108675309");
+    var phoneNumber = lookups.GetPhoneNumber("+15108675309", true);
+    Console.WriteLine(phoneNumber.Carrier.Type);
     Console.WriteLine(phoneNumber.Carrier.Name);
   }
 }
-

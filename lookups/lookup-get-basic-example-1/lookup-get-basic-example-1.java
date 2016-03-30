@@ -12,8 +12,9 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException {
     LookupsClient client = new LookupsClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    PhoneNumber number = client.getPhoneNumber("+15108675309");
+    PhoneNumber number = client.getPhoneNumber("+15108675309", true);
 
+    System.out.println(number.getType());
     System.out.println(number.getCarrierName());
   }
 }

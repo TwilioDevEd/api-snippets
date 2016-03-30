@@ -3,17 +3,23 @@ import com.twilio.sdk.LookupsClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.lookups.PhoneNumber;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "AC3094732a3c49700934481addd5ce1659";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
-  public static void main(String[] args) throws TwilioRestException {
+  public static void main(String[] args) throws TwilioRestException, UnsupportedEncodingException {
     LookupsClient client = new LookupsClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    PhoneNumber number = client.getPhoneNumber("(510) 867-5309", "US", true);
+    String nationalNumber = URLEncoder.encode("(510) 867-5309", "UTF-8")
+                            .replaceAll("\\+", "%20");
+    PhoneNumber number = client.getPhoneNumber(nationalNumber, "US", true);
 
+    System.out.println(number.getType());
     System.out.println(number.getCarrierName());
   }
 }
