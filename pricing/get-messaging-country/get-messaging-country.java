@@ -13,9 +13,9 @@ public class Example {
 		TwilioPricingClient client = new TwilioPricingClient(ACCOUNT_SID, AUTH_TOKEN);
 
 		// Get Twilio Voice pricing information for a specific country
-		MessagingCountry c = client.getVoiceCountry("EE");
+		VoiceCountry vc = client.getVoiceCountry("EE");
 
-		for (MessagingCountry.InboundSmsPrice p : c.getInboundSmsPrices()) {
+		for (VoiceCountry.InboundCallPrice p : vc.getInboundCallPrices()) {
 			// For each call pricing category, print number type and
 			// current (reflecting any discounts your account has) price.
 			System.out.println(p.getNumberType().toString());

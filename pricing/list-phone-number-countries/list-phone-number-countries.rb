@@ -7,7 +7,7 @@ auth_token = '{{ auth_token }}'
 @client = Twilio::REST::PricingClient.new account_sid, auth_token
 
 
-@countries = @client.phone_number.countries.list()
+@countries = @client.phone_numbers.countries.list
 @countries.each do |c|
   puts c.iso_country
 end

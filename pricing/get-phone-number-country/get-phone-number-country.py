@@ -6,7 +6,7 @@ account_sid = "AC3094732a3c49700934481addd5ce1659"
 auth_token = "{{ auth_token }}"
 client = TwilioPricingClient(account_sid, auth_token)
 
-country = client.phone_numbers.countries.get("US")
+country = client.phone_numbers.countries.get("US") 
 
 for p in country.phone_number_prices:
-    print "{} {}".format(p['type'], p['current_price'])
+    print "{} {}".format(p['number_type'], p['current_price'])
