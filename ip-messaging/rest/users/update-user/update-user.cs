@@ -5,12 +5,12 @@ using Twilio;
 class Example {
     static void Main (string[] args) {
         // Find your Account Sid and Auth Token at twilio.com/user/account
-        string accountSid = "accountSid";
-        string authToken = "authToken";
+        const string accountSid = "accountSid";
+        const string authToken = "authToken";
 
-        string serviceSid = "serviceSid";
-        string userSid = "userSid";
-        string roleSid = "roleSid";
+        const string serviceSid = "serviceSid";
+        const string userSid = "userSid";
+        const string roleSid = "roleSid";
 
         // Update a user
         var client = new TwilioIpMessagingClient(accountSid, authToken);

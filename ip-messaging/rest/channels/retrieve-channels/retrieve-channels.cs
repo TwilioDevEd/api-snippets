@@ -5,10 +5,10 @@ using Twilio;
 class Example {
     static void Main (string[] args) {
         // Find your Account Sid and Auth Token at twilio.com/user/account
-        string accountSid = "accountSid";
-        string authToken = "authToken";
-        string serviceSid = "serviceSid";
-        string channelSid = "channelSid";
+        const string accountSid = "accountSid";
+        const string authToken = "authToken";
+        const string serviceSid = "serviceSid";
+        const string channelSid = "channelSid";
 
         // Retrieve the channel
         var client = new TwilioIpMessagingClient(accountSid, authToken);
