@@ -1,0 +1,16 @@
+{
+  "sid": "CHxxx",
+  "account_sid": "ACxxx",
+  "service_sid": "ISxxx",
+  "friendly_name": "MyChannel",
+  "attributes": null,
+  "type":"private",
+  "date_created": "2015-08-24T22:18:57Z",
+  "date_updated": "2015-08-24T22:18:57Z",
+  "created_by": "system",
+  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx",
+  "links": {
+    "members": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Members",
+    "messages": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Messages"
+  }
+}

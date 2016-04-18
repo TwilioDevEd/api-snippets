@@ -1,0 +1,30 @@
+{
+  "services": [
+    {
+      "sid": "ISxxx",
+      "account_sid": "ACxxx",
+      "friendly_name": "My Awesome Service",
+      "date_created": "2015-08-24T15:28:32Z",
+      "date_updated": "2015-08-24T15:28:32Z",
+      "default_service_role_sid": "admin",
+      "default_channel_role_sid": "creator",
+      "typing_indicator_timeout": 5,
+      "webhooks": null,
+      "url": "https://ip-messaging.twilio.com/v1/Services/ISxxx",
+      "links": {
+        "channels": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Channels",
+        "roles": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Roles",
+        "users": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Users"
+      }
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://ip-messaging.twilio.com/v1/Services?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://ip-messaging.twilio.com/v1/Services?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "services"
+  }
+}

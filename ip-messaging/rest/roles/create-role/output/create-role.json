@@ -1,0 +1,15 @@
+{
+  "sid": "RL4bd30b6183854055a419a75995e5ab3c",
+  "account_sid": "ACxxx",
+  "service_sid": "IS67f7fa9b52f748beb5e7914356925410",
+  "role_sid": null,
+  "friendly_name": "my role",
+  "type": "deployment",
+  "permissions": [
+    "createChannel",
+    "joinChannel"
+  ],
+  "date_created": "2015-08-27T19:44:07Z",
+  "date_updated": "2015-08-27T19:44:07Z",
+  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Roles/RL4bd30b6183854055a419a75995e5ab3c"
+}

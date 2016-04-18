@@ -1,0 +1,11 @@
+{
+  "sid": "MB4843877911674127aedcbb98b07a4db1",
+  "account_sid": "ACxxx",
+  "channel_sid": "CH1d2cb9759eb940b4b83050a0234f94c8",
+  "service_sid": "IS67f7fa9b52f748beb5e7914356925410",
+  "identity": "kwhinnery",
+  "role_sid": null,
+  "date_created": "2015-08-27T20:05:15Z",
+  "date_updated": "2015-08-27T20:05:15Z",
+  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CH1d2cb9759eb940b4b83050a0234f94c8/Members/MB4843877911674127aedcbb98b07a4db1"
+}

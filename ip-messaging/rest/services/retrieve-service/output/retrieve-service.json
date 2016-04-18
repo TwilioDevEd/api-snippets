@@ -1,0 +1,17 @@
+{
+  "sid": "ISxxx",
+  "account_sid": "ACxxx",
+  "friendly_name": "HipFlowSlackDock",
+  "date_created": "2015-08-25T04:10:54Z",
+  "date_updated": "2015-08-25T04:10:54Z",
+  "default_service_role_sid": "admin",
+  "default_channel_role_sid": "creator",
+  "typing_indicator_timeout": 5,
+  "webhooks": null,
+  "url": "https://ip-messaging.twilio.com/v1/Services/ISxxx",
+  "links": {
+    "channels": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Channels",
+    "roles": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Roles",
+    "users": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Users"
+  }
+}
