@@ -1,0 +1,12 @@
+{
+  "sid": "IM89d815654d104f0b899103d25f83f186",
+  "account_sid": "ACxxx",
+  "service_sid": "CH1d2cb9759eb940b4b83050a0234f94c8",
+  "to": "IS67f7fa9b52f748beb5e7914356925410",
+  "date_created": "2015-08-27T20:32:09Z",
+  "date_updated": "2015-08-27T20:32:09Z",
+  "was_edited": false,
+  "from": "system",
+  "body": "Jenny, Jenny, who can I turn to?",
+  "url": "https://ip-messaging.twilio.com/v1/Services/CH1d2cb9759eb940b4b83050a0234f94c8/Channels/IS67f7fa9b52f748beb5e7914356925410/Messages/IM89d815654d104f0b899103d25f83f186"
+}

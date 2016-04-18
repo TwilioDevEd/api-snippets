@@ -1,0 +1,2 @@
+curl -XDELETE https://ip-messaging.twilio.com/v1/Services/{service sid}/Channels/{channel sid} \
+    -u '{twilio account sid}:{twilio auth token}'

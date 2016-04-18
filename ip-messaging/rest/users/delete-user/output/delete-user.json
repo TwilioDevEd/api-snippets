@@ -1,0 +1,2 @@
+A successful delete will return a status code 204 and an empty body.
+
