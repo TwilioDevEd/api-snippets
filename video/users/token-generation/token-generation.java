@@ -1,32 +1,42 @@
-private class GetCapabilityTokenAsyncTask extends AsyncTask<String, Void, String> {
-    @Override
-    protected void onPostExecute(String result) {
-        super.onPostExecute(result);
-        /*
-        * Initialize the Twilio Conversations SDK
-        */
-        initializeTwilioSdk();
+// Import necessary dependencies 
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
-        /*
-        * Set the initial state of the UI
-        */
-        setCallAction();
+...
+
+    private void retrieveAccessTokenfromServer() {
+        Ion.with(this)
+                // Make JSON request to server
+                .load("http://localhost:8080/token.php")
+                .asJsonObject()
+                .setCallback(new FutureCallback<JsonObject>() {
+                    @Override
+                    // Handle response from server
+                    public void onCompleted(Exception e, JsonObject result) {
+                        if (e == null) {
+                            // The identity can be used to receive calls
+                            String identity = result.get("identity").getAsString();
+                            String accessToken = result.get("token").getAsString();
+                            Log.i(TAG, "Token found: " + accessToken);
+                            accessManager =
+                                    TwilioAccessManagerFactory.createAccessManager(accessToken,
+                                                    accessManagerListener());
+                            conversationsClient =
+                                    TwilioConversations
+                                            .createConversationsClient(accessManager,
+                                                    conversationsClientListener());
+
+                            // Listen for incoming Invites
+                            conversationsClient.listen();
+                        } else {
+                            Log.i(TAG, "error fetching token from server");
+                            Toast.makeText(ConversationActivity.this,
+                                    R.string.error_retrieving_access_token, Toast.LENGTH_SHORT)
+                                    .show();
+                        }
+                    }
+                });
     }
 
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
-    protected String doInBackground(String... params) {
-        try {
-            String response = HttpHelper.httpGet(params[0]);
-            JSONObject obj = new JSONObject(response);
-            ACCESS_TOKEN = obj.getString("token");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-            return ACCESS_TOKEN;
-    }
-}
+...

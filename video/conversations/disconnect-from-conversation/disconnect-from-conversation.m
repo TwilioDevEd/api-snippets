@@ -1,9 +1,12 @@
-// disconnect the conversation based on user input
-- (IBAction)discconectConversation:(id)sender {
-    [self.conversation disconnect];
-}
+// To disconnect from a Conversation, we call:
+[self.conversation disconnect];
 
-// Delegate method will be called when a conversation disconnects
+
+// This results in a call to TWCConversationDelegate#conversationEnded
+
+#pragma mark - TWCConversationDelegate
+
 - (void)conversationEnded:(TWCConversation *)conversation {
-    NSLog(@"Conversation ended.");
+	NSLog(@"Disconnected from the Conversation.");
+	self.conversation = nil;
 }

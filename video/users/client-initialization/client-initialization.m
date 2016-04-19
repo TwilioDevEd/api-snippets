@@ -1,18 +1,19 @@
-// Access token fetched from server
-NSString *accessToken = @"access token string";
-       
-// create an access manager to take care of token expiration events 
-self.accessManager = [TwilioAccessManager accessManagerWithToken:accessToken 
-                                                        delegate:self];
+// Create an AccessManager to manage our Access Token
+TwilioAccessManager *accessManager = [TwilioAccessManager accessManagerWithToken:accessToken 
+                                                        				delegate:self];
 
-// Initialize the conversations SDK and connect to Twilio
-self.conversationsClient = [TwilioConversationsClient conversationsClientWithAccessManager:self.accessManager
-                                                                                  delegate:self];
+// Create a Conversations Client and connect to Twilio's backend. 
+TwilioConversationsClient *conversationsClient = 
+	[TwilioConversationsClient conversationsClientWithAccessManager:self.accessManager
+                                                           delegate:self];
+[conversationsClient listen];
 
-/*
- The listen method results in a call to one of two delegate methods, depending
- on the success or failure of the connection to Twilio:
-    - conversationsClientDidStartListeningForInvites:
-    - conversationsClient:didFailToStartListeningWithError:
- */
-[self.conversationsClient listen];
+/* See the "Working with Conversations" guide for instructions on implementing
+a TwilioConversationsClientDelegate */ 
+
+#pragma mark - TwilioConversationsClientDelegate
+
+- (void)conversationsClientDidStartListeningForInvites:(TwilioConversationsClient *)conversationsClient {
+    NSLog(@"Connected to Twilio!");
+    ...
+}

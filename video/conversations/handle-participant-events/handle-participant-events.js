@@ -1,19 +1,11 @@
-myConversation.on('participantConnected', function(participant) {
-  console.log(participant.identity + ' joined the Conversation');
-
-  // Get the participant's Media,
-  var participantMedia = participant.media;
-
-  // And attach it to your application's view.
-  var participantView = document.getElementById('participant-view');
-  participantMedia.attach(participantView);
-  participantVideos.appendChild(participantView);
+conversation.on('participantConnected', function(participant) {
+  console.log('Participant connected: ' + participant.identity);
 });
 
-myConversation.on('participantDisconnected', function(participant) {
-  console.log(participant.identity + ' left the Conversation');
+conversation.on('participantFailed', function(participant) {
+  console.log('Participant failed to connect: ' + participant.identity);
 });
 
-myConversation.on('participantFailed', function(identity) {
-  console.log(identity + ' failed to join the Conversation');
+conversation.on('participantDisconnected', function(participant) {
+  console.log('Participant disconnected: ' + participant.identity);
 });

@@ -1,8 +1,8 @@
-conversation.invite(['bob', 'charlie']);
+conversation.invite(['charles', 'dena']);
 conversation.on('participantConnected', function(participant) {
-  if (participant.identity === 'bob') {
-    console.log('Bob has connected');
-  } else if (participant.identity === 'charlie') {
-    console.log('Charlie has connected');
+  if (participant.identity == 'charles') {
+    console.log('Charles has connected.');
+  } else if (participant.identity == 'dena') {
+    console.log('Dena has connected.');
   }
 });

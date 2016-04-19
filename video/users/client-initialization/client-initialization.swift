@@ -1,13 +1,17 @@
-// Access token fetched from server
-let accessToken = "token string from server";
+// Create an AccessManager to manage our Access Token
+var accessManager = TwilioAccessManager(token:accessToken, delegate:self);
 
-// create an access manager to take care of token expiration events 
-self.accessManager = TwilioAccessManager(token:accessToken, delegate:self);
+// Create a Conversations Client and connect to Twilio's backend.
+var client = TwilioConversationsClient(accessManager: accessManager!,
+									   delegate: self);
+client!.listen()
 
-self.client = TwilioConversationsClient(accessManager: self.accessManager!, 
-  delegate: self);
+/* See the "Working with Conversations" guide for instructions on implementing
+a TwilioConversationsClientDelegate */ 
 
-// Start listening for invitations - delegate methods are fired when the
-// connection succeeds or fails
-self.client?.listen();
-print("The client identity is \(self.client?.identity)");
+// MARK: TwilioConversationsClientDelegate
+
+func conversationsClientDidStartListeningForInvites(conversationsClient: TwilioConversationsClient) {
+    print("Connected to Twilio!")
+    ...
+}

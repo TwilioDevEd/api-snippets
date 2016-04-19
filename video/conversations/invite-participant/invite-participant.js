@@ -1,5 +1,4 @@
-conversation.invite('charles').then(function(participant) {
-    console.log("Remote participant accepted your Invite: "  participant.identity);
-}, function(error) {
-    console.log("Remote participant did not connect: "  participant.identity);
+conversation.invite('charles');
+conversation.on('participantConnected', function(participant) {
+  console.log('A remote Participant connected: ' + participant.identity);
 });
