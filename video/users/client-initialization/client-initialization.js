@@ -1,6 +1,5 @@
-// Create an AccessManager which can manage the expiration and lifecycle of
-// the end user's connection to Twilio
-var accessManager = new Twilio.AccessManager('token string');
+// Create an AccessManager to manage our Access Token
+var accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
 
 // Create a Conversations Client and connect to Twilio's backend
 conversationsClient = new Twilio.Conversations.Client(accessManager);

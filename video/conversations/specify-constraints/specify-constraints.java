@@ -1,20 +1,33 @@
-//Add participants
-Set<String> participants = new HashSet<>();
-participants.add("Alice");
-participants.add("Bob");
+// See the "Create a Conversation" guide for for details of the ConversationCallback
+...
+  outgoingInvite = conversationsClient
+    .sendConversationInvite(participants, 
+                            setupLocalMedia(), 
+                            new ConversationCallback() {
+  ...
 
-//Specify localMedia
-LocalMedia localMedia = setupLocalMedia();
+  };
 
-//Send invite
-outgoingInvite = conversationsClient.sendConversationInvite(participants, localMedia, new ConversationCallback() {
+
+private CameraCapturer cameraCapturer;
+
+// Create LocalMedia with a camera track and no microphone track
+private LocalMedia setupLocalMedia() {
+  LocalMedia localMedia = LocalMediaFactory.createLocalMedia(localMediaListener());
+  LocalVideoTrack localVideoTrack = LocalVideoTrackFactory
+    .createLocalVideoTrack(cameraCapturer);
+  localMedia.addLocalVideoTrack(localVideoTrack);
+  return localMedia;
+}
+
+// LocalMedia listener
+private LocalMediaListener localMediaListener(){
+  return new LocalMediaListener() {
     @Override
-    public void onConversation(Conversation conversation, ConversationException e) {
-        if (e == null) {
-            // Participant has accepted invite, we are in active conversation
-            ConversationActivity.this.conversation = conversation;
-        } else {
-            hangup();
-        }
+    public void onLocalVideoTrackAdded(Conversation conversation, 
+                                       LocalVideoTrack localVideoTrack) {
+      // Attach Camera track to renderer...
     }
-});
+    ...
+  };
+}

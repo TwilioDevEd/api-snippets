@@ -1,10 +1,11 @@
-// Disconnect the conversation based on user input
-@IBAction func hangupButtonPressed(sender: AnyObject) {
-    self.conversation?.disconnect();
-    NSLog("hangup");
-}
+// To disconnect from a Conversation, we call:
+self.conversation?.disconnect()
 
-// Delegate method will be called when a conversation disconnects
+
+// This results in a call to TWCConversationDelegate#conversationEnded
+
+// MARK: TWCConversationDelegate  
 func conversationEnded(conversation: TWCConversation) {
-    NSLog("Conversation ended");
+	print(@"Disconnected from the Conversation.")
+    self.conversation = nil
 }

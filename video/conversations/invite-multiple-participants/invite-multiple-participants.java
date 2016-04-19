@@ -1,17 +1,10 @@
-//Add participants
-Set<String> participants = new HashSet<>();
-participants.add("Alice");
-participants.add("Bob");
+Set<String> newParticipants = new HashSet<>();
+newParticipants.add("charles");
+newParticipants.add("dena");
 
-//Send invite
-outgoingInvite = conversationsClient.sendConversationInvite(participants, localMedia, new ConversationCallback() {
-    @Override
-    public void onConversation(Conversation conversation, ConversationException e) {
-        if (e == null) {
-            // Participant has accepted invite, we are in active conversation
-            ConversationActivity.this.conversation = conversation;
-        } else {
-            hangup();
-        }
-    }
-});
+/* See the "Create a Conversation" guide for instructions on configuring a
+ConversationListener */
+conversation.invite(newParticipants); 
+/* Results in [newParticipants.size()] callbacks to
+ConversationListener#onParticipantConnected and/or
+ConversationListener#onFailedToConnectParticipant */

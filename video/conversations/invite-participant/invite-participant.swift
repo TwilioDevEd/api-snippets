@@ -1,5 +1,9 @@
+// See the "Create a Conversation" guide for instructions on configuring a TWCConversationsDelegate
 do {
-    try self.conversation?.invite("Charles");
+    try conversation.invite("charles")
 } catch {
-    print(error);
+    print("Unable to send the Invite")
 }
+/* Results in a callback to
+TWCConversationDelegate#conversation:didConnectParticipant or
+TWCConversationDelegate#conversation:didFailToConnectParticipant */
