@@ -46,9 +46,11 @@ public class WebApp {
       grant.setServiceSid(env.get("TWILIO_IPM_SERVICE_SID"));
 
       // Create access token
-      AccessToken token =
-          new AccessToken.Builder(env.get("TWILIO_ACCOUNT_SID"), env.get("TWILIO_API_KEY"),
-              env.get("TWILIO_API_SECRET")).identity(identity).grant(grant).build();
+      AccessToken token = new AccessToken.Builder(
+        System.getenv("TWILIO_ACCOUNT_SID"),
+        System.getenv("TWILIO_API_KEY"),
+        System.getenv("TWILIO_API_SECRET")
+      ).identity(identity).grant(grant).build();
 
       // create JSON response payload
       HashMap<String, String> json = new HashMap<String, String>();
