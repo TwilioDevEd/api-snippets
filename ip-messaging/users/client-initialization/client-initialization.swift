@@ -1,0 +1,1 @@
+self.client = TwilioIPMessagingClient.ipMessagingClientWithToken(token, delegate: self)
