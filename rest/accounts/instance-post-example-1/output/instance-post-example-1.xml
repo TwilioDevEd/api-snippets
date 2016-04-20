@@ -1,0 +1,24 @@
+<TwilioResponse>
+  <Account>
+	<Sid>AC1365ff479ef6502d85c27be6467a310c</Sid>
+	<FriendlyName>MySubaccount</FriendlyName>
+	<Status>suspended</Status>
+	<AuthToken>redacted</AuthToken>
+	<DateCreated>Tue, 12 Jan 2010 04:41:09 +0000</DateCreated>
+	<DateUpdated>Tue, 25 Jan 2011 07:24:36 +0000</DateUpdated>
+	<Type>Full</Type>
+	<Uri>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c</Uri>
+	<SubresourceUris>
+	  <AvailablePhoneNumbers>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/AvailablePhoneNumbers</AvailablePhoneNumbers>
+	  <Calls>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Calls</Calls>
+	  <Conferences>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Conferences</Conferences>
+	  <IncomingPhoneNumbers>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/IncomingPhoneNumbers</IncomingPhoneNumbers>
+	  <Notifications>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Notifications</Notifications>
+	  <OutgoingCallerIds>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/OutgoingCallerIds</OutgoingCallerIds>
+	  <Recordings>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Recordings</Recordings>
+	  <Sandbox>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Sandbox</Sandbox>
+	  <SMSMessages>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/SMS/Messages</SMSMessages>
+	  <Transcriptions>/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Transcriptions</Transcriptions>
+	</SubresourceUris>
+  </Account>
+</TwilioResponse>
