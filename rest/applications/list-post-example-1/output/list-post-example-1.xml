@@ -1,0 +1,23 @@
+<TwilioResponse>
+	<Application>
+		<Sid>AP2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
+		<DateCreated>Mon, 16 Aug 2010 23:00:23 +0000</DateCreated>
+		<DateUpdated>Mon, 16 Aug 2010 23:00:23 +0000</DateUpdated>
+		<AccountSid>ACdc5f1e11047ebd6fe7a55f120be3a900</AccountSid>
+		<FriendlyName>Phone Me</FriendlyName>
+		<ApiVersion>2010-04-01</ApiVersion>
+		<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
+		<VoiceMethod>GET</VoiceMethod>
+		<VoiceFallbackUrl></VoiceFallbackUrl>
+		<VoiceFallbackMethod>POST</VoiceFallbackMethod>
+		<StatusCallback/>
+		<StatusCallbackMethod/>
+		<VoiceCallerIdLookup>false</VoiceCallerIdLookup>
+		<SmsUrl></SmsUrl>
+		<SmsMethod>POST</SmsMethod>
+		<SmsFallbackUrl></SmsFallbackUrl>
+		<SmsFallbackMethod>GET</SmsFallbackMethod>
+		<SmsStatusCallback/>
+		<Uri>/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
+	</Application>
+</TwilioResponse>

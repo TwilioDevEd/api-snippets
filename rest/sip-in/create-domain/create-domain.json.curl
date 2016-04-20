@@ -1,0 +1,6 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains.json \
+    -d "FriendlyName=My%20Domain" \
+    -d "VoiceUrl=https://demo.twilio.com/welcome" \
+    -d "AuthType=IP_ACL" \
+    -d "DomainName=marlo.sip.twilio.com" \
+    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'

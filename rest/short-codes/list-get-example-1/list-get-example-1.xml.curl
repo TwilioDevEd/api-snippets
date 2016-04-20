@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/SMS/ShortCodes \
+    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'

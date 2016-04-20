@@ -1,0 +1,6 @@
+{
+    "status":400,
+    "message":"Account not authorized to call +14005550003. Perhaps you need to enable some international permissions: https:\/\/www.twilio.com\/user\/account\/international",
+    "code":21215,
+    "more_info":"http:\/\/www.twilio.com\/docs\/errors\/21215"
+}

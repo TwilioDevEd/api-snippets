@@ -1,0 +1,22 @@
+<TwilioResponse>
+	<Message>
+		<Sid>MM90c6fc909d8504d45ecdb3a3d5b3556e</Sid>
+		<DateCreated>Wed, 18 Aug 2010 20:01:40 +0000</DateCreated>
+		<DateUpdated>Wed, 18 Aug 2010 20:01:40 +0000</DateUpdated>
+		<DateSent/>
+		<AccountSid>AC5ef8732a3c49700934481addd5ce1659</AccountSid>
+		<From>+14159352345</From>
+		<To>+15558675309</To>
+		<Body>Jenny please?! I love you &lt;3</Body>
+        <NumSegments>1</NumSegments>
+        <NumMedia>1</NumMedia>
+		<Status>queued</Status>
+		<Direction>outbound-api</Direction>
+		<ApiVersion>2010-04-01</ApiVersion>
+		<Price/>
+		<PriceUnit>/>
+		<ErrorCode/>
+		<ErrorMessage/>
+		<Uri>/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Messages/MM90c6fc909d8504d45ecdb3a3d5b3556e</Uri>
+	</Message>
+</TwilioResponse>

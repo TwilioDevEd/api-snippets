@@ -1,0 +1,4 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2.json \
+    -d "FriendlyName=Little%20Kevin" \
+    -d "VoiceMethod=GET" \
+    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'

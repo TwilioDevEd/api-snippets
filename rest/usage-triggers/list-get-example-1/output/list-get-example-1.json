@@ -1,0 +1,27 @@
+{
+   "first_page_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/.json?UsageCategory=calls&Recurring=daily&Page=0&PageSize=50",
+   "previous_page_uri": null, 
+   "usage_triggers": [
+      {
+         "usage_record_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Today.json?Category=calls", 
+         "date_updated": "Sat, 29 Sep 2012 19:42:57 +0000", 
+         "date_fired": null, 
+         "friendly_name": "a trigger", 
+         "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers//UTc2db285b0cbf4c60a2f1a8db237a5fba.json", 
+         "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+         "callback_method": "POST", 
+         "trigger_by": "count", 
+         "sid": "UTc2db285b0cbf4c60a2f1a8db237a5fba", 
+         "current_value": "0", 
+         "date_created": "Sun, 23 Sep 2012 23:07:29 +0000", 
+         "callback_url": "http://www.google.com", 
+         "recurring": "daily", 
+         "usage_category": "calls", 
+         "trigger_value": "0.000000"
+      }
+   ], 
+   "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers.json?UsageCategory=calls&Recurring=daily", 
+   "page_size": 50,
+   "next_page_uri": null,
+   "page": 0
+}

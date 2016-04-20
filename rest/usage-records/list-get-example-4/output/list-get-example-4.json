@@ -1,0 +1,41 @@
+{
+   "first_page_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Daily.json?Category=calls-inbound&StartDate=2012-09-01&EndDate=2012-09-30&Page=0&PageSize=50",
+   "previous_page_uri": null, 
+   "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Daily.json?Category=calls-inbound&StartDate=2012-09-01&EndDate=2012-09-30", 
+   "page_size": 50,
+   "usage_records": [
+      {
+         "category": "calls-inbound", 
+         "count": "0", 
+         "price_unit": "usd", 
+         "subresource_uris": null, 
+         "description": "Inbound Calls", 
+         "end_date": "2012-09-30", 
+         "usage_unit": "minutes", 
+         "price": "0", 
+         "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Daily.json?Category=calls-inbound&StartDate=2012-09-30&EndDate=2012-09-30", 
+         "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+         "usage": "0", 
+         "start_date": "2012-09-30", 
+         "count_unit": "calls"
+      }, 
+      {
+         "category": "calls-inbound", 
+         "count": "0", 
+         "price_unit": "usd", 
+         "subresource_uris": null, 
+         "description": "Inbound Calls", 
+         "end_date": "2012-09-29", 
+         "usage_unit": "minutes", 
+         "price": "0", 
+         "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Daily.json?Category=calls-inbound&StartDate=2012-09-29&EndDate=2012-09-29", 
+         "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+         "usage": "0", 
+         "start_date": "2012-09-29", 
+         "count_unit": "calls"
+      }
+      . . .
+   ], 
+   "next_page_uri": null,
+   "page": 0
+}

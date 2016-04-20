@@ -1,0 +1,26 @@
+<TwilioResponse>
+    <SipDomains [paging attributes]>
+        <SipDomain>
+            <Sid>SD098e7b11c00d0ba152b1d3f084c4b776</Sid>
+            <AccountSid>ACba8bc05eacf94afdae398e642c9cc32d</AccountSid>
+            <FriendlyName>Scranton Office</FriendlyName>
+            <ApiVersion>2010-04-01</ApiVersion>
+            <DomainName>dunder-mifflin-scranton.sip.twilio.com</DomainName>
+            <AuthType/>
+            <VoiceUrl>https://dundermifflin.example.com/twilio/app.php</VoiceUrl>
+            <VoiceMethod>POST</VoiceMethod>
+            <VoiceFallbackUrl/>
+            <VoiceFallbackMethod>POST</VoiceFallbackMethod>
+            <VoiceStatusCallbackUrl/>
+            <VoiceStatusCallbackMethod>POST</VoiceStatusCallbackMethod>
+            <DateCreated>Fri, 06 Sep 2013 18:48:50 -0000</DateCreated>
+            <DateUpdated>Fri, 06 Sep 2013 18:48:50 -0000</DateUpdated>
+            <Uri>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776</Uri>
+            <SubresourceUris>
+                <CredentialListMappings>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/CredentialListMappings</CredentialListMappings>
+                <IpAccessControlListMappings>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/IpAccessControlListMappings</IpAccessControlListMappings>
+            </SubresourceUris>
+        </SipDomain>
+        ...
+    </SipDomains>
+</TwilioResponse>

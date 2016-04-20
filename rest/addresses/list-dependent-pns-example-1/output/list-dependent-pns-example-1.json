@@ -1,0 +1,28 @@
+{
+    "page": 0,
+    "page_size": 50,
+    "uri": "/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e/DependentPhoneNumbers.json",
+    "first_page_uri": "/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e/DependentPhoneNumbers.json?Page=0&PageSize=50",
+    "previous_page_uri": null,
+    "next_page_uri": null,
+    "dependent_phone_numbers": [
+        {
+            "friendly_name": "(510) 555-1212",
+            "phone_number": "+15105551212",
+            "lata": "722",
+            "rate_center": "OKLD TRNID",
+            "latitude": "37.780000",
+            "longitude": "-122.380000",
+            "region": "CA",
+            "postal_code": "94703",
+            "iso_country": "US",
+            "capabilities":{
+                "voice":"true",
+                "SMS":"true",
+                "MMS":"false"
+            }
+            "address_requirements": "any"
+        }
+    ]
+}
+

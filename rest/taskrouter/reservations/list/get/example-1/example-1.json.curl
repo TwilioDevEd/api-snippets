@@ -1,0 +1,2 @@
+$ curl https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations \
+    -u '{account_sid}:{auth_token}'

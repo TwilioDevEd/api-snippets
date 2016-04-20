@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://taskrouter.twilio.com/v1/Workspaces?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://taskrouter.twilio.com/v1/Workspaces?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "workspaces"
+  },
+  "workspaces": [
+    {
+      "sid": "WS7d4813fc78909747b773945352c5b960",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "friendly_name": "Workspace",
+      "event_callback_url": "http://callcenterapp.ngrok.com/eventcallback",
+      "default_activity_sid": "WAef18703ae3626aa90f6c4eea177aa57b",
+      "date_created": "2014-10-11T05:15:31Z",
+      "date_updated": "2015-01-20T19:18:58Z",
+      "default_activity_name": "Not Ready",
+      "timeout_activity_sid": "WAef18703ae3626aa90f6c4eea177aa57b",
+      "timeout_activity_name": "Not Ready",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960",
+      "links": {
+        "activities": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities",
+        "task_queues": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/TaskQueues",
+        "statistics": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Statistics",
+        "tasks": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Tasks",
+        "workers": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers",
+        "workflows": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workflows"
+      }
+    },
+    {
+      "sid": "WS7221f08da012fb3890e56c2d1233f4a7",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "friendly_name": "SocketWorkspace",
+      "event_callback_url": "",
+      "default_activity_sid": "WAb49490f8db22c0311fa91e967243ac77",
+      "date_created": "2014-12-10T21:05:53Z",
+      "date_updated": "2014-12-10T21:05:53Z",
+      "default_activity_name": "Offline",
+      "timeout_activity_sid": "WAb49490f8db22c0311fa91e967243ac77",
+      "timeout_activity_name": "Offline",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7",
+      "links": {
+        "activities": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/Activities",
+        "task_queues": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/TaskQueues",
+        "statistics": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/Statistics",
+        "tasks": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/Tasks",
+        "workers": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/Workers",
+        "workflows": "https://taskrouter.twilio.com/v1/Workspaces/WS7221f08da012fb3890e56c2d1233f4a7/Workflows"
+      }
+    },
+    {
+      "sid": "WS0b37cb82ee097132c15cc5295dbe42a1",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "friendly_name": "MyWorkspace",
+      "event_callback_url": "",
+      "default_activity_sid": "WA019ec124f872366546ed5b3f42428c16",
+      "date_created": "2015-01-28T23:01:18Z",
+      "date_updated": "2015-07-22T22:57:34Z",
+      "default_activity_name": "Offline",
+      "timeout_activity_sid": "WA019ec124f872366546ed5b3f42428c16",
+      "timeout_activity_name": "Offline",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1",
+      "links": {
+        "activities": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Activities",
+        "task_queues": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/TaskQueues",
+        "statistics": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Statistics",
+        "tasks": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Tasks",
+        "workers": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Workers",
+        "workflows": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Workflows"
+      }
+    }
+  ]
+}

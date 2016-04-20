@@ -1,0 +1,4 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e.json \
+-d "CustomerName=Customer 456" \
+-d "Street=2 Hasselhoff Lane" \
+-u 'AC2136d48e32ed050d5523abe052ac92f2:{AuthToken}'

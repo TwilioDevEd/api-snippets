@@ -1,0 +1,2 @@
+$ curl -XDELETE https://api.twilio.com/2010-04-01/Accounts/AC228ba32a3c49700934481addd5ce1659/OutgoingCallerIds/PNe536d32a3c49700934481addd5ce1659 \
+    -u 'AC228ba32a3c49700934481addd5ce1659:{AuthToken}'

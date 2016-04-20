@@ -1,0 +1,15 @@
+<TwilioResponse>
+  <ShortCode>
+    <Sid>SC6b20cb705c1e8f00210049b20b70fce2</Sid>
+    <AccountSid>ACdc5f1e6f7a0441659833ca940b72503d</AccountSid>
+    <FriendlyName>67898</FriendlyName>
+    <ShortCode>67898</ShortCode>
+    <DateCreated>Sat, 09 Jul 2011 22:36:22 +0000</DateCreated>
+    <DateUpdated>Sat, 09 Jul 2011 22:36:22 +0000</DateUpdated>
+    <SmsUrl>http://demo.twilio.com/docs/sms.xml</SmsUrl>
+    <SmsMethod>POST</SmsMethod>
+    <SmsFallbackUrl>http://smsapp.com/fallback</SmsFallbackUrl>
+    <SmsFallbackMethod>GET</SmsFallbackMethod>
+    <Uri>/2010-04-01/Accounts/ACdc5f1e6f7a0441659833ca940b72503d/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2</Uri>
+  </ShortCode>
+</TwilioResponse>

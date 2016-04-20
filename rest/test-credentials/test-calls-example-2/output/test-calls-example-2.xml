@@ -1,0 +1,8 @@
+<TwilioResponse>
+    <RestException>
+        <Status>400</Status>
+		<Message>Account not authorized to call +14005550003. Perhaps you need to enable some international permissions: https://www.twilio.com/user/account/settings/international</Message>
+        <Code>21215</Code>
+        <MoreInfo>http://www.twilio.com/docs/errors/21215</MoreInfo>
+    </RestException>
+</TwilioResponse>

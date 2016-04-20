@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Recordings.json \
+    -u 'ACda6f132a3c49700934481addd5ce1659:{AuthToken}'

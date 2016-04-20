@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TwilioResponse>
+  <Token>
+    <Username>40a90ad073c0ac74820142e5ba7fe4e6a1e83db2c48bff30a7ea6c47862c8bc4</Username>
+    <Password>LyCKdB0y9jfJqjppGHRtBqfPXtUFTwtZHw4Qpf9LnH4=</Password>
+    <AccountSid>ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</AccountSid>
+    <Ttl>3600</Ttl>
+    <IceServers>
+      <IceServer>
+        <Url>stun:global.stun.twilio.com:3478?transport=udp</Url>
+      </IceServer>
+      <IceServer>
+        <Url>turn:global.turn.twilio.com:3478?transport=udp</Url>
+        <Username>40a90ad073c0ac74820142e5ba7fe4e6a1e83db2c48bff30a7ea6c47862c8bc4</Username>
+        <Credential>LyCKdB0y9jfJqjppGHRtBqfPXtUFTwtZHw4Qpf9LnH4=</Credential>
+      </IceServer>
+    </IceServers>
+    <Registrars/>
+    <DateCreated>Mon, 17 Nov 2014 23:42:45 +0000</DateCreated>
+    <DateUpdated>Mon, 17 Nov 2014 23:42:45 +0000</DateUpdated>
+  </Token>
+</TwilioResponse>

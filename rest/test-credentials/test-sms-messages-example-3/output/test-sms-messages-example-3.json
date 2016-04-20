@@ -1,0 +1,6 @@
+{
+    "status":400,
+    "message":"Message body is required.",
+    "code":21602,
+    "more_info":"http:\/\/www.twilio.com\/docs\/errors\/21602"
+}

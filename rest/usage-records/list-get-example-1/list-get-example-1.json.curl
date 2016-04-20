@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Records/LastMonth.json \
+    -u 'ACed732a3c49700934481addd5ce1659f0:{AuthToken}'

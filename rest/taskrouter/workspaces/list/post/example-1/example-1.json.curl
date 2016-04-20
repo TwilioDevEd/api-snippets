@@ -1,0 +1,5 @@
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces \
+    -d "FriendlyName=NewWorkspace" \
+    -d "EventCallbackUrl=http://requestb.in/vh9reovh" \
+    -d "Template=FIFO" \
+    -u '{account_sid}:{auth_token}' -d

@@ -1,0 +1,6 @@
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/TaskQueues \
+    -d "FriendlyName=English" \
+    -d "ReservationActivitySid=WAxxxx" \
+    -d "AssignmentActivitySid=WAyyyy" \
+    -d "TargetWorkers=languages HAS 'english'" \
+    -u '{account_sid}:{auth_token}' -d

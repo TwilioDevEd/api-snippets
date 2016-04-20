@@ -1,0 +1,12 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Calls.json \
+    -d "Url=http://demo.twilio.com/docs/voice.xml" \
+    -d "To=%2B14155551212" \
+    -d "From=%2B18668675309" \
+    -d "Method=GET" \
+    -d "StatusCallback=https://www.myapp.com/events" \
+    -d "StatusCallbackMethod=POST" \
+    -d "StatusCallbackEvent=initiated" \
+    -d "StatusCallbackEvent=ringing" \
+    -d "StatusCallbackEvent=answered" \
+    -d "StatusCallbackEvent=completed" \
+    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'

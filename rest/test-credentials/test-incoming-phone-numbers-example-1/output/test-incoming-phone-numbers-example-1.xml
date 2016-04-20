@@ -1,0 +1,28 @@
+<TwilioResponse>
+    <IncomingPhoneNumber>
+        <Sid>PN378279e21f1c90ea1c5377f554978cec</Sid>
+        <AccountSid>AC309477cc62c7fa34332f1be208657535</AccountSid>
+        <FriendlyName>(500) 555-0006</FriendlyName>
+        <PhoneNumber>+15005550006</PhoneNumber>
+        <VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
+        <VoiceMethod>POST</VoiceMethod>
+        <VoiceFallbackUrl></VoiceFallbackUrl>
+        <VoiceFallbackMethod>POST</VoiceFallbackMethod>
+        <VoiceCallerIdLookup>false</VoiceCallerIdLookup>
+        <DateCreated/><DateUpdated/>
+        <SmsUrl></SmsUrl>
+        <SmsMethod>POST</SmsMethod>
+        <SmsFallbackUrl></SmsFallbackUrl>
+        <SmsFallbackMethod>POST</SmsFallbackMethod>
+        <Capabilities>
+            <Voice>false</Voice>
+            <SMS>false</SMS>
+        </Capabilities>
+        <StatusCallback></StatusCallback>
+        <StatusCallbackMethod>POST</StatusCallbackMethod>
+        <ApiVersion>2010-04-01</ApiVersion>
+        <VoiceApplicationSid></VoiceApplicationSid>
+        <SmsApplicationSid></SmsApplicationSid>
+        <Uri>/2010-04-01/Accounts/AC309477cc62c7fa34332f1be208657535/IncomingPhoneNumbers/PN378279e21f1c90ea1c5377f554978cec</Uri>
+    </IncomingPhoneNumber>
+</TwilioResponse>

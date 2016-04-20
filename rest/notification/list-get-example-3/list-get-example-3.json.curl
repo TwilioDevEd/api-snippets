@@ -1,0 +1,4 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Notifications.json \
+    -d "MessageDate>=2009-07-06" \
+    -d "Log=1" \
+    -u 'ACda6f132a3c49700934481addd5ce1659:{AuthToken}'

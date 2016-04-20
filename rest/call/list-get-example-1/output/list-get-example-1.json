@@ -1,0 +1,35 @@
+{
+    "page": 0,
+    "page_size": 50,
+    "uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=1",
+    "first_page_uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=50&Page=0",
+    "previous_page_uri": null,
+    "next_page_uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=50&Page=1&AfterSid=CA8d67bfc16f4b472a5b7c7bbf3c7977ae",
+    "calls": [{
+        "sid": "CA4c22bfc16f4b484d8b7cbe0f3c79bcc7",
+        "date_created": "Tue, 12 Jun 2012 03:25:49 +0000",
+        "date_updated": "Tue, 12 Jun 2012 03:27:05 +0000",
+        "parent_call_sid": null,
+        "account_sid": "AC5ef877a5fe4238be081ea6f3c44186f3",
+        "to": "+18085553279",
+        "to_formatted": "(808) 555-3279",
+        "from": "+17075559463",
+        "from_formatted": "(707) 555-9463",
+        "phone_number_sid": "PN907a2531e2d34c94b24b2794e73681de",
+        "status": "completed",
+        "start_time": "Tue, 12 Jun 2012 03:26:15 +0000",
+        "end_time": "Tue, 12 Jun 2012 03:27:05 +0000",
+        "duration": "50",
+        "price": "-0.02000",
+        "direction": "outbound-api",
+        "answered_by": null,
+        "api_version": "2010-04-01",
+        "forwarded_from": null,
+        "caller_name": null,
+        "uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7.json",
+        "subresource_uris": {
+            "notifications": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Notifications.json",
+            "recordings": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Recordings.json"
+        }
+    }, ... ]
+}

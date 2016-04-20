@@ -1,0 +1,17 @@
+{
+	"page": 0,
+	"page_size": 50,
+	"uri": "\/2010-04-01\/Accounts\/ACdc5f1e11047ebd6fe7a55f120be3a900\/SigningKeys.json",
+	"first_page_uri": "\/2010-04-01\/Accounts\/ACdc5f1e11047ebd6fe7a55f120be3a900\/SigningKeys.json?Page=0&PageSize=50",
+	"previous_page_uri": null,
+	"next_page_uri": null,
+	"signing_keys": [
+            {
+                "date_updated": "2015-05-14T23:44:32Z",
+                "date_created": "2015-05-14T23:44:32Z",
+                "friendly_name": null,
+                "sid": "SKdac2dad1695721987de823226f0a62a4"
+            },
+            ...
+	]
+}

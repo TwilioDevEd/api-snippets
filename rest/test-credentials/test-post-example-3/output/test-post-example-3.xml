@@ -1,0 +1,8 @@
+<TwilioResponse>
+  <RestException>
+    <Status>400</Status>
+    <Message>33 is not a valid number</Message>
+    <Code>21421</Code>
+    <MoreInfo>http://www.twilio.com/docs/errors/21421</MoreInfo>
+  </RestException>
+</TwilioResponse>

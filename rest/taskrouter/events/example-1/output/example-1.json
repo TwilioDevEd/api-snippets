@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Events?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Events?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "events"
+  },
+  "events": [
+    {
+      "sid": "EVfddc1f055300995f76cf65ef99df05cf",
+      "description": "Worker Cases Worker updated to Ready Activity",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "event_type": "worker.activity.update",
+      "resource_type": "worker",
+      "resource_sid": "WKa0f24176fee1938e495760b1122995b6",
+      "resource_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers/WKa0f24176fee1938e495760b1122995b6",
+      "event_date": "2015-07-31T23:36:33Z",
+      "source": "twilio",
+      "source_ip_address": "REDACTED",
+      "actor_type": "workspace",
+      "actor_sid": "WS7d4813fc78909747b773945352c5b960",
+      "actor_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960",
+      "event_data": {
+        "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+        "workspace_name": "Workspace",
+        "worker_sid": "WKa0f24176fee1938e495760b1122995b6",
+        "worker_name": "Cases Worker",
+        "worker_attributes": "{\"type\":\"cases\"}",
+        "worker_activity_sid": "WAc568c96375feb0d4fce47f6975a3eed8",
+        "worker_activity_name": "Ready",
+        "worker_time_in_previous_activity": "11784",
+        "worker_previous_activity_sid": "WAef18703ae3626aa90f6c4eea177aa57b"
+      },
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Events/EVfddc1f055300995f76cf65ef99df05cf"
+    },
+    {
+      "sid": "EV931fd4a3f59617469e50c4c92e1e5011",
+      "description": "Task WTd480a09f869b59812e7690af3e7cf23c assigned to Worker Cases Worker with Reservation WR91b5d973ba3a81fe03fcb81e40f14d72",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "event_type": "reservation.created",
+      "resource_type": "task",
+      "resource_sid": "WTd480a09f869b59812e7690af3e7cf23c",
+      "resource_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Tasks/WTd480a09f869b59812e7690af3e7cf23c",
+      "event_date": "2015-07-31T23:36:33Z",
+      "source": "twilio",
+      "source_ip_address": "REDACTED",
+      "actor_type": "workspace",
+      "actor_sid": "WS7d4813fc78909747b773945352c5b960",
+      "actor_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960",
+      "event_data": {
+        "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+        "workspace_name": "Workspace",
+        "task_sid": "WTd480a09f869b59812e7690af3e7cf23c",
+        "task_attributes": "{}",
+        "task_age": "80802",
+        "task_priority": "0",
+        "task_assignment_status": "reserved",
+        "reservation_sid": "WR91b5d973ba3a81fe03fcb81e40f14d72",
+        "worker_sid": "WKa0f24176fee1938e495760b1122995b6",
+        "worker_name": "Cases Worker",
+        "worker_attributes": "{\"type\":\"cases\"}",
+        "worker_activity_sid": "WAc568c96375feb0d4fce47f6975a3eed8",
+        "worker_activity_name": "Reserved",
+        "worker_time_in_previous_activity": "0",
+        "workflow_sid": "WWb630832558964d981afe7e370df6985b",
+        "workflow_name": "Default Fifo Workflow",
+        "task_queue_sid": "WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
+        "task_queue_name": "Everyone"
+      },
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Events/EV931fd4a3f59617469e50c4c92e1e5011"
+    },
+    {
+      "sid": "EV53ffa071773c683e5dee4da8df8809c5",
+      "description": "Worker Cases Worker updated to Reserved Activity",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "event_type": "worker.activity.update",
+      "resource_type": "worker",
+      "resource_sid": "WKa0f24176fee1938e495760b1122995b6",
+      "resource_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers/WKa0f24176fee1938e495760b1122995b6",
+      "event_date": "2015-07-31T23:36:33Z",
+      "source": "twilio",
+      "source_ip_address": "REDACTED",
+      "actor_type": "workspace",
+      "actor_sid": "WS7d4813fc78909747b773945352c5b960",
+      "actor_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960",
+      "event_data": {
+        "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+        "workspace_name": "Workspace",
+        "worker_sid": "WKa0f24176fee1938e495760b1122995b6",
+        "worker_name": "Cases Worker",
+        "worker_attributes": "{\"type\":\"cases\"}",
+        "worker_activity_sid": "WA7208808f8a0460f4a38c17375767716c",
+        "worker_activity_name": "Reserved",
+        "worker_time_in_previous_activity": "0",
+        "worker_previous_activity_sid": "WAc568c96375feb0d4fce47f6975a3eed8"
+      },
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Events/EV53ffa071773c683e5dee4da8df8809c5"
+    }
+  ]
+}

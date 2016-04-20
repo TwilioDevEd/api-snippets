@@ -1,0 +1,8 @@
+<TwilioResponse>
+  <RestException>
+    <Status>400</Status>
+    <Message>To number: +15005550009, is not a mobile number</Message>
+    <Code>21614</Code>
+    <MoreInfo>http://www.twilio.com/docs/errors/21614</MoreInfo>
+  </RestException>
+</TwilioResponse>

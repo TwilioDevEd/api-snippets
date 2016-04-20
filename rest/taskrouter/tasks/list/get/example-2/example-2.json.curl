@@ -1,0 +1,3 @@
+$ curl https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Tasks \
+    -d 'AssignmentStatus=pending' \
+    -u '{account_sid}:{auth_token}'

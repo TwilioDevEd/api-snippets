@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Conferences/CFbbe4632a3c49700934481addd5ce1659/Participants/CA386025c9bf5d6052a1d1ea42b4d16662 \
+    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'
