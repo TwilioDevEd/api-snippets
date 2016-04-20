@@ -1,4 +1,4 @@
 {
- "title": "delete-ip-acl",
- "type": "server",
+  "title": "delete-ip-acl",
+  "type": "server"
 }
