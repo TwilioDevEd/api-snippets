@@ -1,0 +1,13 @@
+<TwilioResponse>
+	<Participant>
+		<CallSid>CA386025c9bf5d6052a1d1ea42b4d16662</CallSid>
+		<ConferenceSid>CFbbe46ff1274e283f7e3ac1df0072ab39</ConferenceSid>
+		<AccountSid>AC5ef872f6da5a21de157d80997a64bd33</AccountSid>
+		<Muted>true</Muted>
+		<EndConferenceOnExit>true</EndConferenceOnExit>
+		<StartConferenceOnEnter>true</StartConferenceOnEnter>
+		<DateCreated>Wed, 18 Aug 2010 20:20:10 +0000</DateCreated>
+		<DateUpdated>Wed, 18 Aug 2010 20:23:23 +0000</DateUpdated>
+		<Uri>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants/CA386025c9bf5d6052a1d1ea42b4d16662</Uri>
+	</Participant>
+</TwilioResponse>

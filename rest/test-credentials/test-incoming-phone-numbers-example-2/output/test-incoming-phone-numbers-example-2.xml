@@ -1,0 +1,8 @@
+<TwilioResponse>
+  <RestException>
+    <Status>400</Status>
+    <Message>+15005550000 is not available</Message>
+    <Code>21422</Code>
+    <MoreInfo>http://www.twilio.com/docs/errors/21422</MoreInfo>
+  </RestException>
+</TwilioResponse>

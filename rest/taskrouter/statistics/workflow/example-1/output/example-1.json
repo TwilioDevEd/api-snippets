@@ -1,0 +1,31 @@
+{
+  "realtime": {
+    "longest_task_waiting_sid": "WTd480a09f869b59812e7690af3e7cf23c",
+    "longest_task_waiting_age": 76651,
+    "total_tasks": 1,
+    "tasks_by_status": {
+      "pending": 1,
+      "assigned": 0,
+      "reserved": 0
+    }
+  },
+  "cumulative": {
+    "start_time": "2015-07-31T22:12:22Z",
+    "end_time": "2015-07-31T22:27:22Z",
+    "reservations_accepted": 0,
+    "reservations_canceled": 0,
+    "reservations_created": 0,
+    "reservations_rescinded": 0,
+    "reservations_rejected": 0,
+    "reservations_timed_out": 0,
+    "tasks_entered": 0,
+    "tasks_canceled": 0,
+    "tasks_deleted": 0,
+    "tasks_moved": 0,
+    "tasks_timed_out_in_workflow": 0,
+    "avg_task_acceptance_time": 0
+  },
+  "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+  "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+  "workflow_sid": "WWb630832558964d981afe7e370df6985b"
+}

@@ -1,0 +1,30 @@
+// Install the Java helper library from twilio.com/docs/java/install
+import com.twilio.sdk.TwilioRestClient;
+import com.twilio.sdk.TwilioRestException;
+import com.twilio.sdk.resource.factory.IncomingPhoneNumberFactory;
+import com.twilio.sdk.resource.instance.IncomingPhoneNumber;
+import com.twilio.sdk.resource.list.IncomingPhoneNumberList;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+public class Example { 
+
+  // Find your Account Sid and Token at twilio.com/user/account
+  public static final String ACCOUNT_SID = "AC3094732a3c49700934481addd5ce1659";
+  public static final String AUTH_TOKEN = "{{ auth_token }}";
+
+  public static void main(String[] args) throws TwilioRestException {
+    TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
+
+    // Build a filter for the IncomingPhoneNumberList
+    List<NameValuePair> params = new ArrayList<NameValuePair>();
+    params.add(new BasicNameValuePair("PhoneNumber", "+15005550000"));
+    
+    
+    IncomingPhoneNumberFactory numberFactory = client.getAccount().getIncomingPhoneNumberFactory();
+    IncomingPhoneNumber number = numberFactory.create(params);
+    System.out.println(number.getSid());
+  }
+}

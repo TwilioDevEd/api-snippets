@@ -1,0 +1,12 @@
+{
+	"sid": "CAe03b7cd806070d1f32bdb7f1046a41c0",
+    "account_sid": "AC7b659acc64804bd8bc01a2d9d54248e1",
+    "quality_score": 3,
+    "issues": [
+        "post-dial-delay",
+        "dtmf-not-captured",
+        "imperfect-audio"
+    ]
+	"date_created": "Wed, 04 Aug 2010 21:37:41 +0000",
+	"date_updated": "Fri, 06 Aug 2010 01:15:02 +0000",
+}

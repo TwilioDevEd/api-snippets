@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TwilioResponse>
+    <IncomingPhoneNumbers page="0" pagesize="50" uri="/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/IncomingPhoneNumbers.xml?PhoneNumber=%2B14158675309" firstpageuri="/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/IncomingPhoneNumbers.xml?PhoneNumber=%2B14158675309&Page=0&PageSize=50" previouspageuri="" nextpageuri="">
+        <IncomingPhoneNumber>
+            <Sid>PN3f94c94562ac88dccf16f8859a1a8b25</Sid>
+            <AccountSid>ACdc5f132a3c49700934481addd5ce1659</AccountSid>
+            <FriendlyName>Jenny</FriendlyName>
+            <PhoneNumber>+14158675309</PhoneNumber>
+            <VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
+            <VoiceMethod>GET</VoiceMethod>
+            <VoiceFallbackUrl/>
+            <VoiceFallbackMethod/>
+            <VoiceCallerIdLookup>false</VoiceCallerIdLookup>
+            <VoiceApplicationSid/>
+            <DateCreated>Thu, 13 Nov 2008 07:56:24 +0000</DateCreated>
+            <DateUpdated>Thu, 13 Nov 2008 08:45:58 +0000</DateUpdated>
+            <SmsUrl/>
+            <SmsMethod/>
+            <SmsFallbackUrl/>
+            <SmsFallbackMethod/>
+            <SmsApplicationSid>AP9b2e38d8c592488c397fc871a82a74ec</SmsApplicationSid>
+            <Capabilities>
+                <Voice>true</Voice>
+                <SMS>false</SMS>
+                <MMS>false</MMS>
+            </Capabilities>
+            <StatusCallback/>
+            <StatusCallbackMethod/>
+            <ApiVersion>2010-04-01</ApiVersion>
+            <Uri>/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/IncomingPhoneNumbers/PN3f94c94562ac88dccf16f8859a1a8b26</Uri>
+        </IncomingPhoneNumber>
+		...
+    </IncomingPhoneNumbers>
+</TwilioResponse>

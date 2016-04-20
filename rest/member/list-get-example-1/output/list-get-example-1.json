@@ -1,0 +1,24 @@
+{
+    "page": 0,
+    "page_size": 50,
+    "first_page_uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxx/Members.json?Page=0&PageSize=50",
+    "next_page_uri": null,
+    "previous_page_uri": null,
+    "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxx/Members.json",
+    "queue_members": [
+        {
+            "call_sid": "CAxxxxxxxx",
+            "date_enqueued": "Mon, 4 Feb 2012 15:44:15 +0000",
+            "wait_time": 30,
+            "position": 1,
+            "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxx/Members/CAxxxxxxxx.json"
+        },
+        {
+            "call_sid": "CAyyyyyyy",
+            "date_enqueued": "Mon, 4 Feb 2012 15:44:30 +0000",
+            "wait_time": 45,
+            "position": 2,
+            "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxx/Members/CAyyyyyyy.json"
+        }
+    ]
+}

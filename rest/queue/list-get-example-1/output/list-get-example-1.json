@@ -1,0 +1,30 @@
+{
+    "uri": "/2010-04-01/Accounts/AC5ef87.../Queues.json",
+    "first_page_uri": "/2010-04-01/Accounts/AC5ef87.../Queues.json?Page=0&PageSize=50",
+    "next_page_uri": "",
+    "page": 0,
+    "page_size": 50,
+    "previous_page_uri": "",
+    "queues": [
+        {
+            "average_wait_time": 0,
+            "current_size": 0,
+            "date_created": "Thu, 17 May 2012 23:50:39 +0000",
+            "date_updated": "Thu, 17 May 2012 23:50:39 +0000",
+            "friendly_name": "persistent_queue1",
+            "max_size": 1000,
+            "sid": "QUxxxxxxxxx",
+            "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxxx.json"
+        },
+        { 
+            "average_wait_time": 0,
+            "current_size": 0,
+            "date_created": "Thu, 26 Apr 2012 20:12:45 +0000",
+            "date_updated": "Thu, 26 Apr 2012 20:12:45 +0000",
+            "friendly_name": "persistent_queue2",
+            "max_size": 100,
+            "sid": "QUyyyyyyyyy",
+            "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUyyyyyyyyy.json"
+        }
+    ]
+}

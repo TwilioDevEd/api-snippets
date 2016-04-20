@@ -1,0 +1,16 @@
+<TwilioResponse>
+  <Transcription>
+    <Sid>TR8c61027b709ffb038236612dc5af8723</Sid>
+    <AccountSid>AC5ef872f6da5a21de157d80997a64bd33</AccountSid>
+    <DateCreated>Mon, 26 Jul 2010 00:09:58 +0000</DateCreated>
+    <DateUpdated>Mon, 26 Jul 2010 00:10:25 +0000</DateUpdated>
+    <Status>completed</Status>
+    <Type>fast</Type>
+    <RecordingSid>REca11f06dc31b5515a2dfb1f5134361f2</RecordingSid>
+    <Duration>6</Duration>
+    <TranscriptionText>Tommy? Tommy is that you? I told you never to call me again.</TranscriptionText>
+    <ApiVersion>2008-08-01</ApiVersion>
+    <Price>-0.05000</Price>
+    <Uri>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Transcriptions/TR8c61027b709ffb038236612dc5af8723</Uri>
+  </Transcription>
+</TwilioResponse>

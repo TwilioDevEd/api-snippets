@@ -1,0 +1,11 @@
+// Download the Node helper library from twilio.com/docs/node/install
+// These vars are your accountSid and authToken from twilio.com/user/account
+var accountSid = 'AC81e0c32a3c49700934481addd5ce1659';
+var authToken = "{{ auth_token }}";
+var client = require('twilio')(accountSid, authToken);
+
+client.authorizedConnectApps.list(function(err, data) {
+    data.authorizedApps.forEach(function(authorizedApp) {
+        console.log(authorizedApp.ConnectAppHomepageUrl);
+    });
+});

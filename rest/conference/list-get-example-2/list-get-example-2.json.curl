@@ -1,0 +1,4 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Conferences.json \
+    -d "Status=in-progress" \
+    -d "FriendlyName=MyRoom" \
+    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'

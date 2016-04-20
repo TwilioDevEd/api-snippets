@@ -1,0 +1,8 @@
+<TwilioResponse>
+    <RestException>
+        <Status>400</Status>
+        <Message>Message body is required.</Message>
+        <Code>21602</Code>
+        <MoreInfo>http://www.twilio.com/docs/errors/21602</MoreInfo>
+    </RestException>
+</TwilioResponse>

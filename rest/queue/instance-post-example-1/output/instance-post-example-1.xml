@@ -1,0 +1,12 @@
+<TwilioResponse>
+    <Queue>
+        <Sid>QUxxxxxxxxxxxx</Sid>
+        <FriendlyName>newqueue</FriendlyName>
+        <CurrentSize>0</CurrentSize>
+        <AvgWaitTime>0</AvgWaitTime>
+        <MaxSize>123</MaxSize>
+        <DateCreated>2012-06-21 23:55:36</DateCreated>
+        <DateUpdated>2012-06-22 00:02:15</DateUpdated>
+        <Uri>/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxxxxxx</Uri>
+    </Queue>
+</TwilioResponse>

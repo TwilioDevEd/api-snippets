@@ -1,0 +1,27 @@
+{
+    "sid":"PNbc8e66614955250fc32ae5bacbd73902",
+    "account_sid":"AC309477cc62c7fa34332f1be208657535",
+    "friendly_name":"(500) 555-0006",
+    "phone_number":"+15005550006",
+    "voice_url":"http://demo.twilio.com/docs/voice.xml",
+    "voice_method":"POST",
+    "voice_fallback_url":"",
+    "voice_fallback_method":"POST",
+    "voice_caller_id_lookup":false,
+    "date_created":"Wed, 10 Oct 2012 21:36:14 +0000",
+    "date_updated":"Wed, 10 Oct 2012 21:36:14 +0000",
+    "sms_url":"",
+    "sms_method":"POST",
+    "sms_fallback_url":"",
+    "sms_fallback_method":"POST",
+    "capabilities":{
+        "voice":false,
+        "sms":false
+    },
+    "status_callback":"",
+    "status_callback_method":"POST",
+    "api_version":"2010-04-01",
+    "voice_application_sid":"",
+    "sms_application_sid":"",
+    "uri":"\/2010-04-01\/Accounts\/AC309477cc62c7fa34332f1be208657535\/IncomingPhoneNumbers\/PNbc8e66614955250fc32ae5bacbd73902.json"
+}

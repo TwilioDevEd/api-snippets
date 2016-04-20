@@ -1,0 +1,17 @@
+{
+  "sid": "WWd42d9fcb655eea2fc0c6210d1b775205",
+  "friendly_name": "New SalesMarketingSupport Workflow",
+  "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+  "workspace_sid": "WS0b37cb82ee097132c15cc5295dbe42a1",
+  "assignment_callback_url": "http://example.com",
+  "fallback_assignment_callback_url": "",
+  "document_content_type": null,
+  "configuration": "{\"task_routing\":{\"filters\":[{\"targets\":[{\"queue\":\"WQea1950600afa0880db95aad6a10d19f8\"}],\"friendly_name\":\"\",\"expression\":\"type == \\\"sales\\\"\"},{\"targets\":[{\"queue\":\"WQ942eb82719318338f9c741ca53fd8927\"}],\"friendly_name\":\"marketing\",\"expression\":\"type == \\\"marketing\\\"\"},{\"targets\":[{\"queue\":\"WQ224fec815c99f8e60cadead209c2bd45\"}],\"friendly_name\":\"support\",\"expression\":\"type == \\\"support\\\"\"}],\"default_filter\":{\"queue\":\"WQ942eb82719318338f9c741ca53fd8927\"}}}",
+  "task_reservation_timeout": 120,
+  "date_created": "2015-06-18T02:17:18Z",
+  "date_updated": "2015-08-03T17:55:26Z",
+  "url": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Workflows/WWd42d9fcb655eea2fc0c6210d1b775205",
+  "links": {
+    "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "connect_app_sid": "CN47260e643654388faabe8aaa18ea6756",
+  "account_sid": "AC5ef872f6da5a21de157d80997a64bd33",
+  "permissions": ["get-all", "post-all"],
+  "connect_app_friendly_name": "My Connect App",
+  "connect_app_description": null,
+  "connect_app_company_name": "My Company",
+  "connect_app_homepage_url": "http://www.mycompany.com"
+}

@@ -1,0 +1,21 @@
+<TwilioResponse>
+	<Notifications page="0" pagesize="50" uri="/2010-04-01/Accounts/ACda6f1e11047ebd6fe7a55f120be3a900/Notifications" firstpageuri="/2010-04-01/Accounts/ACda6f1e11047ebd6fe7a55f120be3a900/Notifications?Page=0&PageSize=50" previouspageuri="" nextpageuri="/2010-04-01/Accounts/ACda6f1e11047ebd6fe7a55f120be3a900/Notifications?Page=1&PageSize=50">
+		<Notification>
+			<Sid>NO5a7a84730f529f0a76b3e30c01315d1a</Sid>
+			<AccountSid>ACda6f1e11047ebd6fe7a55f120be3a900</AccountSid>
+			<CallSid>CAa8857b0dcc71b4909aced594f7f87453</CallSid>
+			<Log>0</Log>
+			<ErrorCode>11205</ErrorCode>
+			<MoreInfo>http://www.twilio.com/docs/errors/11205</MoreInfo>
+			<MessageText>EmailNotification=false&LogLevel=ERROR&sourceComponent=13400&Msg=HTTP+Connection+Failure+-+Read+timed+out&ErrorCode=11205&msg=HTTP+Connection+Failure+-+Read+timed+out&url=4min19secs.mp3</MessageText>
+			<MessageDate>Tue, 09 Feb 2010 01:23:53 +0000</MessageDate>
+			<RequestMethod>POST</RequestMethod>
+			<RequestUrl>http://demo.twilio.com/welcome</RequestUrl>
+			<DateCreated>Tue, 09 Feb 2010 01:23:53 +0000</DateCreated>
+			<ApiVersion>2008-08-01</ApiVersion>
+			<DateUpdated>Tue, 09 Feb 2010 01:23:53 +0000</DateUpdated>
+			<Uri>/2010-04-01/Accounts/ACda6f1e11047ebd6fe7a55f120be3a900/Notifications/NO5a7a84730f529f0a76b3e30c01315d1a</Uri>
+		</Notification>
+		...
+	</Notifications>
+</TwilioResponse>

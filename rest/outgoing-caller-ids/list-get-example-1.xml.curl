@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC3094732a3c49700934481addd5ce1659/OutgoingCallerIds \
+    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'

@@ -1,0 +1,22 @@
+<TwilioResponse>
+    <Queues  [paging attributes]>
+        <Queue>
+            <Sid>QUxxxxxxxxx</Sid>
+            <FriendlyName>persistent_queue1</FriendlyName>
+            <CurrentSize>32</CurrentSize>
+            <AverageWaitTime>140<AverageWaitTime>
+            <MaxSize>1000</MaxSize>
+            <DateCreated>2012-02-04 12:44:15</DateCreated>
+            <DateUpdated>2012-02-05 17:33:44</DateUpdated>
+        </Queue>
+        <Queue>
+            <Sid>QUyyyyyyyyy</Sid>
+            <FriendlyName>persistent_queue2</FriendlyName>
+            <CurrentSize>10</CurrentSize>
+            <AverageWaitTime>140<AverageWaitTime>
+            <MaxSize>100</MaxSize>
+            <DateCreated>2012-02-04 12:44:15</DateCreated>
+            <DateUpdated>2012-02-05 17:33:44</DateUpdated>
+        </Queue>
+    </Queues>
+</TwilioResponse>

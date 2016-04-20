@@ -1,0 +1,10 @@
+{ 
+    "average_wait_time": 0,
+    "current_size": 0,
+    "date_created": "Thu, 21 Jun 2012 23:55:36 +0000",
+    "date_updated": "Fri, 22 Jun 2012 00:02:15 +0000",
+    "friendly_name": "newqueue",
+    "max_size": 123,
+    "sid": "QUxxxxxxxxxxxx",
+    "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxxxxxx.json"
+}

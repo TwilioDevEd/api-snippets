@@ -1,0 +1,12 @@
+<TwilioResponse>
+    <IpAccessControlList>
+        <Sid>AL95a47094615fe05b7c17e62a7877836c</Sid>
+        <FriendlyName>Production Gateways IP Address - Scranton</FriendlyName>
+        <DateCreated>Wed, 11 Sep 2013 04:06:07 -0000</DateCreated>
+        <DateUpdated>Wed, 11 Sep 2013 04:06:07 -0000</DateUpdated>
+        <Uri>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c</Uri>
+        <SubresourceUris>
+          <Addresses>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c/Addresses</Addresses>
+        </SubresourceUris>
+    </IpAccessControlList>
+</TwilioResponse>

@@ -1,0 +1,27 @@
+{
+	"sid": "CAa346467ca321c71dbd5e12f627deb854",
+	"date_created": "Thu, 19 Aug 2010 00:12:15 +0000",
+	"date_updated": "Thu, 19 Aug 2010 00:12:15 +0000",
+	"parent_call_sid": null,
+	"account_sid": "AC228ba7a5fe4238be081ea6f3c44186f3",
+	"to": "+14155551212",
+	"formatted_to": "(415) 555-1212",
+	"from": "+14158675309",
+	"formatted_from": "(415) 867-5309",
+	"phone_number_sid": "PNd6b0e1e84f7b117332aed2fd2e5bbcab",
+	"status": "queued",
+	"start_time": null,
+	"end_time": null,
+	"duration": null,
+	"price": null,
+	"direction": "outbound-api",
+	"answered_by": null,
+	"api_version": "2010-04-01",
+	"forwarded_from": null,
+	"caller_name": null,
+	"uri": "\/2010-04-01\/Accounts\/AC228ba7a5fe4238be081ea6f3c44186f3\/Calls\/CAa346467ca321c71dbd5e12f627deb854.json",
+	"subresource_uris": {
+		"notifications": "\/2010-04-01\/Accounts\/AC228ba7a5fe4238be081ea6f3c44186f3\/Calls\/CAa346467ca321c71dbd5e12f627deb854\/Notifications.json",
+		"recordings": "\/2010-04-01\/Accounts\/AC228ba7a5fe4238be081ea6f3c44186f3\/Calls\/CAa346467ca321c71dbd5e12f627deb854\/Recordings.json"
+	}
+}

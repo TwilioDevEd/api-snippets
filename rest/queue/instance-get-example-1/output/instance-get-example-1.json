@@ -1,0 +1,10 @@
+{
+    "sid": "QUxxxxxxxxx",
+    "friendly_name": "persistent_queue1",
+    "current_size": 0,
+    "average_wait_time": 0,
+    "max_size": 10,
+    "date_created": "Mon, 26 Mar 2012 22:00:14 +0000",
+    "date_updated": "Mon, 26 Mar 2012 22:00:14 +0000",
+    "uri": "/2010-04-01/Accounts/AC5ef87.../Queues/QUxxxxxxxxx.json"
+}

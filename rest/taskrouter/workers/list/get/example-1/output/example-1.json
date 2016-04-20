@@ -1,0 +1,49 @@
+{
+  "workers": [
+    {
+      "sid": "WKa0f24176fee1938e495760b1122995b6",
+      "friendly_name": "Cases Worker",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "activity_sid": "WAc568c96375feb0d4fce47f6975a3eed8",
+      "activity_name": "Ready",
+      "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+      "attributes": "{\"type\":\"cases\"}",
+      "available": true,
+      "date_created": "2014-10-11T05:36:19Z",
+      "date_updated": "2015-01-20T19:19:08Z",
+      "date_status_changed": "2015-01-28T00:29:53Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers/WKa0f24176fee1938e495760b1122995b6",
+      "links": {
+        "activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WAc568c96375feb0d4fce47f6975a3eed8",
+        "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960"
+      }
+    },
+    {
+      "sid": "WKdd181933abb30b4659780f345bb5559b",
+      "friendly_name": "Leads Worker",
+      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "activity_sid": "WAef18703ae3626aa90f6c4eea177aa57b",
+      "activity_name": "Not Ready",
+      "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+      "attributes": "{\"type\":\"leads\"}",
+      "available": false,
+      "date_created": "2014-10-13T20:56:08Z",
+      "date_updated": "2014-10-13T20:56:08Z",
+      "date_status_changed": "2014-10-14T03:37:18Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers/WKdd181933abb30b4659780f345bb5559b",
+      "links": {
+        "activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WAef18703ae3626aa90f6c4eea177aa57b",
+        "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960"
+      }
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workers?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "workers"
+  }
+}

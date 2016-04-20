@@ -1,0 +1,12 @@
+<TwilioResponse>
+    <IpAddresses [paging data]>
+        <IpAddress>
+            <Sid>IP6fbe2e8619a14fabaefaf4fb131c0b9d</Sid>
+            <FriendlyName>My office IP Address</FriendlyName>
+            <IpAddress>55.102.123.124</IpAddress>
+            <DateCreated>Wed, 11 Sep 2013 04:32:30 -0000</DateCreated>
+            <DateUpdated>Wed, 11 Sep 2013 04:32:30 -0000</DateUpdated>
+            <Uri>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL0c37d0be69a6a6fe1e270c5fa4a2cac7/Addresses/IP6fbe2e8619a14fabaefaf4fb131c0b9d</Uri>
+        </IpAddress>
+    </IpAddresses>
+</TwilioResponse>

@@ -1,0 +1,16 @@
+<TwilioResponse>
+    <QueueMembers [paging attributes]>
+        <QueueMember>
+            <CallSid>CAxxxxxxxx</CallSid>
+            <DateEnqueued>2012-02-04 15:44:15</DateEnqueued>
+            <WaitTime>30</WaitTime>
+            <Position>1</Position>
+        </QueueMember>
+        <QueueMember>
+            <CallSid>CAyyyyyyy</CallSid>
+            <DateEnqueued>2012-02-04 15:44:30</DateEnqueued>
+            <WaitTime>45</WaitTime>
+            <Position>2</Position>
+        </QueueMember>
+    </QueueMembers>
+</TwilioResponse>

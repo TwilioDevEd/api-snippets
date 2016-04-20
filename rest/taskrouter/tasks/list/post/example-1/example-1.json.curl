@@ -1,0 +1,4 @@
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Tasks \
+    -d "WorkflowSid={WorkflowSid}" \
+    --data-urlencode Attributes='{"type":"support"}' \
+    -u '{account_sid}:{auth_token}' -d

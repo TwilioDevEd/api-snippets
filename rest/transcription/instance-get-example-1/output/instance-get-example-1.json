@@ -1,0 +1,14 @@
+{
+	"account_sid": "AC5ef872f6da5a21de157d80997a64bd33",
+	"api_version": "2008-08-01",
+	"date_created": "Mon, 26 Jul 2010 00:09:58 +0000",
+	"date_updated": "Mon, 26 Jul 2010 00:10:25 +0000",
+	"duration": "6",
+	"price": "-0.05000",
+	"recording_sid": "REca11f06dc31b5515a2dfb1f5134361f2",
+	"sid": "TR8c61027b709ffb038236612dc5af8723",
+	"status": "completed",
+	"transcription_text": "Tommy? Tommy is that you? I told you never to call me again.",
+	"type": "fast",
+	"uri": "/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Transcriptions/TR8c61027b709ffb038236612dc5af8723.json"
+}

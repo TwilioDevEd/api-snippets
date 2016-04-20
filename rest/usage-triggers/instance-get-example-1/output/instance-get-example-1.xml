@@ -1,0 +1,19 @@
+<TwilioResponse>
+   <UsageTrigger>
+      <Sid>UT33c6aeeba34e48f38d6899ea5b765ad4</Sid>
+      <AccountSid>ACed70abd024d3f57a4027b5dc2ca88d5b</AccountSid>
+      <DateCreated>Sat, 29 Sep 2012 19:45:43 +0000</DateCreated>
+      <DateUpdated>Sat, 29 Sep 2012 19:47:54 +0000</DateUpdated>
+      <DateFired />
+      <FriendlyName>Trigger for calls at usage of 500</FriendlyName>
+      <UsageCategory>calls</UsageCategory>
+      <TriggerBy>usage</TriggerBy>
+      <Recurring />
+      <TriggerValue>500.000000</TriggerValue>
+      <CurrentValue>21</CurrentValue>
+      <CallbackUrl>http://www.example.com/</CallbackUrl>
+      <CallbackMethod>POST</CallbackMethod>
+      <UsageRecordUri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records?Category=calls</UsageRecordUri>
+      <Uri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4</Uri>
+   </UsageTrigger>
+</TwilioResponse>
