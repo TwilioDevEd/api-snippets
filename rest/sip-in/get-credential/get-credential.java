@@ -15,7 +15,6 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Credential credential = client.getAccount().getCredentialList("CL32a3c49700934481addd5ce1659f04d2").getCredential("SC32a3c49700934481addd5ce1659f04d2");
-    System.out.println(credential.getUsername());
-    
+    System.out.println(credential.getUsername()); 
   }
 }

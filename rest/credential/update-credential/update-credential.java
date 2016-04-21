@@ -23,7 +23,6 @@ public class Example {
     // Build a filter for the CredentialList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("Password", "07"));
-    credential.update(params);
-    
+    credential.update(params);   
   }
 }

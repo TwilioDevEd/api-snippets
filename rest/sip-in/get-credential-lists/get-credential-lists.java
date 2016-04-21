@@ -20,7 +20,6 @@ public class Example {
     // Loop over credentialLists and print out a property for each one.
     for (CredentialListInstance credentialList : credentialLists) {
       System.out.println(credentialList.getFriendlyName());
-    }
-    
+    } 
   }
 }
