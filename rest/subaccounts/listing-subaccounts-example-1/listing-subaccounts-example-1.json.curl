@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c.json \
+    -u 'AC1365ff479ef6502d85c27be6467a310c:{AuthToken}'
