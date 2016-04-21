@@ -1,6 +1,6 @@
 <TwilioResponse>
-	<RestException>
-		<Status>404</Status>
-		<Message>The requested resource was not found</Message>
-	</RestException>
+  <RestException>
+    <Status>404</Status>
+    <Message>The requested resource was not found</Message>
+  </RestException>
 </TwilioResponse>
