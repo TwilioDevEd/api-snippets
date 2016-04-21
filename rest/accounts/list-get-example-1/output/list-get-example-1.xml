@@ -1,0 +1,26 @@
+<TwilioResponse>
+  <Accounts page="0" pagesize="50" uri="/2010-04-01/Accounts" firstpageuri="/2010-04-01/Accounts?Page=0&amp;PageSize=50" previouspageuri="" nextpageuri="">
+	<Account>
+	  <Sid>AC39b8702b46fbbbf3f2956a63ee851a01</Sid>
+	  <FriendlyName>Chieftain</FriendlyName>
+	  <Status>active</Status>
+	  <AuthToken>redacted</AuthToken>
+	  <DateCreated>Tue, 12 Jan 2010 04:41:09 +0000</DateCreated>
+	  <DateUpdated>Tue, 25 Jan 2011 07:24:36 +0000</DateUpdated>
+	  <Type>Full</Type>
+	  <Uri>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01</Uri>
+	  <SubresourceUris>
+		<AvailablePhoneNumbers>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/AvailablePhoneNumbers</AvailablePhoneNumbers>
+		<Calls>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Calls</Calls>
+		<Conferences>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Conferences</Conferences>
+		<IncomingPhoneNumbers>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/IncomingPhoneNumbers</IncomingPhoneNumbers>
+		<Notifications>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Notifications</Notifications>
+		<OutgoingCallerIds>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/OutgoingCallerIds</OutgoingCallerIds>
+		<Recordings>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Recordings</Recordings>
+		<Sandbox>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Sandbox</Sandbox>
+		<SMSMessages>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/SMS/Messages</SMSMessages>
+		<Transcriptions>/2010-04-01/Accounts/AC39b8702b46fbbbf3f2956a63ee851a01/Transcriptions</Transcriptions>
+	  </SubresourceUris>
+	</Account>
+  </Accounts>
+</TwilioResponse>

@@ -1,0 +1,24 @@
+<TwilioResponse>
+  <Account>
+    <Sid>ACba8bc05eacf94afdae398e642c9cc32d</Sid>
+    <FriendlyName>Do you like my friendly name?</FriendlyName>
+    <Type>Full</Type>
+    <Status>active</Status>
+    <DateCreated>Wed, 04 Aug 2010 21:37:41 +0000</DateCreated>
+    <DateUpdated>Fri, 06 Aug 2010 01:15:02 +0000</DateUpdated>
+    <AuthToken>redacted</AuthToken>
+    <Uri>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d</Uri>
+    <SubresourceUris>
+      <AvailablePhoneNumbers>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/AvailablePhoneNumbers</AvailablePhoneNumbers>
+      <Calls>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Calls</Calls>
+      <Conferences>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Conferences</Conferences>
+      <IncomingPhoneNumbers>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/IncomingPhoneNumbers</IncomingPhoneNumbers>
+      <Notifications>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Notifications</Notifications>
+      <OutgoingCallerIds>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/OutgoingCallerIds</OutgoingCallerIds>
+      <Recordings>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Recordings</Recordings>
+      <Sandbox>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Sandbox</Sandbox>
+      <SMSMessages>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/SMS/Messages</SMSMessages>
+      <Transcriptions>/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Transcriptions</Transcriptions>
+    </SubresourceUris>
+  </Account>
+</TwilioResponse>
