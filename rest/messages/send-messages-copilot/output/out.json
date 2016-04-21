@@ -1,0 +1,22 @@
+{
+  "sid": "SM18c9444687c240caa8b54dc9a22e14d8",
+  "date_created": "Tue, 03 Nov 2015 20:26:16 +0000",
+  "date_updated": "Tue, 03 Nov 2015 20:26:16 +0000",
+  "date_sent": null,
+  "account_sid": "AC32a3c49700934481addd5ce1659f04d2",
+  "to": "+16518675309",
+  "from": null,
+  "messaging_service_sid": "MG9752274e9e519418a7406176694466fa",
+  "body": "Phantom Menace was clearly the best of the prequel trilogy.",
+  "status": "accepted",
+  "num_segments": "0",
+  "num_media": "0",
+  "direction": "outbound-api",
+  "api_version": "2010-04-01",
+  "price": null,
+  "price_unit": null,
+  "uri": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Messages/SM18c9444687c240caa8b54dc9a22e14d8.json",
+  "subresource_uris": {
+    "media": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Messages/SM18c9444687c240caa8b54dc9a22e14d8/Media.json"
+  }
+}

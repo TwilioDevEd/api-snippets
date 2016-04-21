@@ -1,0 +1,5 @@
+curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Messages.json' \
+  --data-urlencode 'To=+16518675309'  \
+  --data-urlencode 'MessagingServiceSid=MG9752274e9e519418a7406176694466fa'  \
+  --data-urlencode 'Body=Phantom Menace was clearly the best of the prequel trilogy.'  \
+  -u AC32a3c49700934481addd5ce1659f04d2:auth_token
