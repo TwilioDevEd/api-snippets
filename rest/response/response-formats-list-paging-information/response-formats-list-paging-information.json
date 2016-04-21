@@ -1,0 +1,34 @@
+{
+	"page": 0,
+	"page_size": 50,
+	"uri": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls.json",
+	"first_page_uri": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls.json?Page=0&PageSize=50",
+	"previous_page_uri": null,
+	"next_page_uri": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls.json?Page=1&PageSize=50&AfterSid=CA228399228abecca920de212121",
+	"calls": [
+		{
+			"sid": "CA92d4405c9237c4ea04b56cbda88e128c",
+			"date_created": "Fri, 13 Aug 2010 01:16:22 +0000",
+			"date_updated": "Fri, 13 Aug 2010 01:16:22 +0000",
+			"parent_call_sid": null,
+			"account_sid": "AC228b97a5fe4138be081eaff3c44180f3",
+			"to": "+15305431221",
+			"from": "+15145623443",
+			"phone_number_sid": "PNe2d8e63b37f46f2adb16f228afdb9058",
+			"status": "queued",
+			"start_time": null,
+			"end_time": null,
+			"duration": null,
+			"price": null,
+			"flags":["outbound-api"],
+			"api_version": "2010-04-01",
+			"forwarded_from": null,
+			"caller_name": null,
+			"uri": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls\/CA92d4405c9237c4ea04b56cbda88e128c.json",
+			"subresource_uris": {
+				"notifications": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls\/CA92d4405c9237c4ea04b56cbda88e128c\/Notifications.json",
+				"recordings": "\/2010-04-01\/Accounts\/AC228b97a5fe4138be081eaff3c44180f3\/Calls\/CA92d4405c9237c4ea04b56cbda88e128c\/Recordings.json"
+			}
+		}
+	]
+}
