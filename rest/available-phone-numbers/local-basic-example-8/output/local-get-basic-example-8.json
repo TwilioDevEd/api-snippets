@@ -1,0 +1,15 @@
+{
+  "uri": "\/2010-04-01\/Accounts\/ACde6f1e11047ebd6fe7a55f120be3a900\/AvailablePhoneNumbers\/US\/Local.json?ExcludeLocalAddressRequired=True",
+  "available_phone_numbers": [
+    {
+      "friendly_name": "(510) 555-1212",
+      "phone_number": "+15105551212",
+      "iso_country": "US",
+      "capabilities":{
+        "voice":"true",
+        "SMS":"true"
+        "MMS":"false"
+      }
+    }
+  ]
+}

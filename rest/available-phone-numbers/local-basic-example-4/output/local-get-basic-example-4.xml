@@ -1,0 +1,20 @@
+<TwilioResponse>
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f1e11047ebd6fe7a55f120be3a900/AvailablePhoneNumbers/US/Local?InRegion=AR">
+		<AvailablePhoneNumber>
+			<FriendlyName>(501) 555-1212</FriendlyName>
+			<PhoneNumber>+15015551212</PhoneNumber>
+			<Lata>528</Lata>
+			<RateCenter>LITTLEROCK</RateCenter>
+			<Latitude>34.7556</Latitude>
+			<Longitude>-92.318</Longitude>
+			<Region>AR</Region>
+			<PostalCode>72205</PostalCode>
+			<IsoCountry>US</IsoCountry>
+	        <Capabilities>
+                <Voice>true</Voice>
+                <SMS>true</SMS>
+                <MMS>false</SMS>
+            </Capabilities>
+		</AvailablePhoneNumber>
+	</AvailablePhoneNumbers>
+</TwilioResponse>

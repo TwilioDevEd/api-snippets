@@ -1,0 +1,21 @@
+<TwilioResponse>
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f132a3c49700934481addd5ce1659/AvailablePhoneNumbers/GB/Mobile">
+		<AvailablePhoneNumber>
+			<FriendlyName>+447903501715</FriendlyName>
+			<PhoneNumber>+447903501715</PhoneNumber>
+			<Lata/>
+			<RateCenter/>
+			<Latitude/>
+			<Longitude/>
+			<Region>Clacton-on-Sea</Region>
+			<PostalCode>/>
+			<IsoCountry>GB</IsoCountry>
+	        <Capabilities>
+                <Voice>false</Voice>
+                <SMS>true</SMS>
+                <MMS>false</SMS>
+            </Capabilities>
+		</AvailablePhoneNumber>
+		...
+	</AvailablePhoneNumbers>
+</TwilioResponse>

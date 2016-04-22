@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TwilioResponse>
+<Message>
+  <Sid>MMc781610ec0b3400c9e0cab8e757da937</Sid>
+  <DateCreated>Mon, 19 Oct 2015 07:09:09 +0000</DateCreated>
+  <DateUpdated>Mon, 19 Oct 2015 07:09:09 +0000</DateUpdated>
+  <DateSent/>
+  <AccountSid>AC5ef872f6da5a21de157d80997a64bd33</AccountSid>
+  <To>+16518675309</To>
+  <From>+14158141829</From>
+  <Body>Hey Jenny! Good luck on the bar exam!</Body>
+  <Status>queued</Status>
+  <NumSegments>1</NumSegments>
+  <NumMedia>1</NumMedia>
+  <Direction>outbound-api</Direction>
+  <ApiVersion>2010-04-01</ApiVersion>
+  <Price/>
+  <PriceUnit>USD</PriceUnit>
+  <ErrorCode/>
+  <ErrorMessage/>
+  <Uri>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Messages/MMf1150fe5baf04104a39c3f311a053e4e.xml</Uri>
+  <SubresourceUris>
+    <Media>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Messages/MMf1150fe5baf04104a39c3f311a053e4e/Media.xml</Media>
+  </SubresourceUris>
+</Message>
+</TwilioResponse>
