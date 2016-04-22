@@ -1,0 +1,20 @@
+<TwilioResponse>
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f1e11047ebd6fe7a55f120be3a900/AvailablePhoneNumbers/US/Local?Contains=510555****">
+		<AvailablePhoneNumber>
+			<FriendlyName>(510) 555-1214</FriendlyName>
+			<PhoneNumber>+15105551214</PhoneNumber>
+			<Lata>722</Lata>
+			<RateCenter>OKLD0349T</RateCenter>
+			<Latitude>37.806940</Latitude>
+			<Longitude>-122.270360</Longitude>
+			<Region>CA</Region>
+			<PostalCode>94612</PostalCode>
+			<IsoCountry>US</IsoCountry>
+	        <Capabilities>
+                <Voice>true</Voice>
+                <SMS>true</SMS>
+                <MMS>false</SMS>
+            </Capabilities>
+		</AvailablePhoneNumber>
+	</AvailablePhoneNumbers>
+</TwilioResponse>

@@ -1,0 +1,2 @@
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACde6f132a3c49700934481addd5ce1659/AvailablePhoneNumbers/GB/Mobile.json \
+    -u 'ACde6f132a3c49700934481addd5ce1659:{AuthToken}'

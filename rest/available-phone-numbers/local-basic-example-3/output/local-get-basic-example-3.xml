@@ -1,0 +1,20 @@
+<TwilioResponse>
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f1e11047ebd6fe7a55f120be3a900/AvailablePhoneNumbers/US/Local?Contains=STORM">
+		<AvailablePhoneNumber>
+			<FriendlyName>(510) 557-8676</FriendlyName>
+			<PhoneNumber>+15105578676</PhoneNumber>
+			<Lata>722</Lata>
+			<RateCenter>FRNK MAIN</RateCenter>
+			<Latitude>37.557</Latitude>
+			<Longitude>-122.0073</Longitude>
+			<Region>CA</Region>
+			<PostalCode>94560</PostalCode>
+			<IsoCountry>US</IsoCountry>
+	        <Capabilities>
+                <Voice>true</Voice>
+                <SMS>true</SMS>
+                <MMS>false</SMS>
+            </Capabilities>
+		</AvailablePhoneNumber>
+	</AvailablePhoneNumbers>
+</TwilioResponse>

@@ -1,0 +1,14 @@
+<TwilioResponse>
+    <AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f1e11047ebd6fe7a55f120be3a900/AvailablePhoneNumbers/GB/Local?Contains=+4420&SmsEnabled=true">
+        <AvailablePhoneNumber>
+            <FriendlyName>+442033224780</FriendlyName>
+            <PhoneNumber>+442033224780</PhoneNumber>
+            <IsoCountry>GB</IsoCountry>
+	        <Capabilities>
+                <Voice>true</Voice>
+                <SMS>true</SMS>
+                <MMS>false</SMS>
+            </Capabilities>
+        </AvailablePhoneNumber>
+    </AvailablePhoneNumbers>
+</TwilioResponse>
