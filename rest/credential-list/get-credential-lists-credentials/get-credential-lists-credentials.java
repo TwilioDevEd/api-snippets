@@ -20,7 +20,6 @@ public class Example {
     // Loop over credentials and print out a property for each one.
     for (Credential credential : credentials) {
       System.out.println(credential.getUsername());
-    }
-    
+    }  
   }
 }
