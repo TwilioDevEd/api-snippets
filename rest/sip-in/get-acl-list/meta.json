@@ -1,4 +1,4 @@
 {
-  "title": "get-acl-list",
+  "title": "Get an IpAccessControlList",
   "type": "server"
 }
