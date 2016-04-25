@@ -1,4 +1,4 @@
 {
-  "title": "delete-ip-acl",
+  "title": "Delete an IpAccessControlList",
   "type": "server"
 }
