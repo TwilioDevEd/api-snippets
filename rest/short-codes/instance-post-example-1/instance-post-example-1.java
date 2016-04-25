@@ -23,7 +23,6 @@ public class Example {
     // Build a filter for the ShortCodeList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("SmsUrl", "http://demo.twilio.com/docs/sms.xml"));
-    shortCode.update(params);
-    
+    shortCode.update(params); 
   }
 }

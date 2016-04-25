@@ -1,2 +1,0 @@
-POST /2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Triggers
-UsageCategory=sms&TriggerValue=1000&CallbackUrl=http://www.example.com/
