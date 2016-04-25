@@ -1,2 +1,0 @@
-$ curl -XDELETE https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2/IpAddresses/IP32a3c49700934481addd5ce1659f04d2 \
-    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'
