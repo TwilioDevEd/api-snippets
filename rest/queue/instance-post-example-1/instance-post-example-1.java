@@ -23,7 +23,6 @@ public class Example {
     // Build a filter for the QueueList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("MaxSize", "123"));
-    queue.update(params);
-    
+    queue.update(params); 
   }
 }

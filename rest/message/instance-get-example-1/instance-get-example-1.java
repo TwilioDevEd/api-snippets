@@ -15,7 +15,6 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Message message = client.getAccount().getMessage("MM800f449d0399ed014aae2bcc0cc2f2ec");
-    System.out.println(message.getBody());
-    
+    System.out.println(message.getBody()); 
   }
 }

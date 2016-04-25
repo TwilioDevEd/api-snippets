@@ -13,14 +13,11 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    
-    
     OutgoingCallerIdList callerIds = client.getAccount().getOutgoingCallerIds();
     
     // Loop over callerIds and print out a property for each one.
     for (OutgoingCallerId callerId : callerIds) {
       System.out.println(callerId.getPhoneNumber());
-    }
-    
+    } 
   }
 }

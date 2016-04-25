@@ -22,7 +22,6 @@ public class Example {
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("FriendlyName", "newqueue"));
     
-    
     QueueFactory queueFactory = client.getAccount().getQueueFactory();
     Queue queue = queueFactory.create(params);
     System.out.println(queue.getSid());

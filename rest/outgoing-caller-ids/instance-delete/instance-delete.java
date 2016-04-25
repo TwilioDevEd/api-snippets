@@ -16,7 +16,6 @@ public class Example {
     // check out the list resource examples on this page
     OutgoingCallerId callerId = client.getAccount().getOutgoingCallerId("PNe536d32a3c49700934481addd5ce1659");
     
-    callerId.delete();
-    
+    callerId.delete(); 
   }
 }

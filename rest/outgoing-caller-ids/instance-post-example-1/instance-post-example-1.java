@@ -23,7 +23,6 @@ public class Example {
     // Build a filter for the OutgoingCallerIdList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("FriendlyName", "My Second Line"));
-    callerId.update(params);
-    
+    callerId.update(params); 
   }
 }

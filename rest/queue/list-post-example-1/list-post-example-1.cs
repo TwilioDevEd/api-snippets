@@ -10,7 +10,6 @@ class Example
     string AuthToken = "{{ auth_token }}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
-    
     var queue = twilio.CreateQueue("newqueue");
     
     Console.WriteLine(queue.Sid);

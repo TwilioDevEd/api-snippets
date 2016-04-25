@@ -25,7 +25,6 @@ public class Example {
     params.add(new BasicNameValuePair("PhoneNumber", "+15105647903"));
     params.add(new BasicNameValuePair("VoiceMethod", "GET"));
     
-    
     IncomingPhoneNumberFactory numberFactory = client.getAccount().getIncomingPhoneNumberFactory();
     IncomingPhoneNumber number = numberFactory.create(params);
     System.out.println(number.getSid());

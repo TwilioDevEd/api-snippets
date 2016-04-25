@@ -6,7 +6,7 @@ var client = require('twilio')(accountSid, authToken);
 
 client.incomingPhoneNumbers.list({ 
   phoneNumber: "867" 
-}, function(err, data) {
+  }, function(err, data) {
     data.numbers.forEach(function(number) {
         console.log(number.voiceUrl);
     });

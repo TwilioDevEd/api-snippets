@@ -16,7 +16,6 @@ public class Example {
     // check out the list resource examples on this page
     Media media = client.getAccount().getMessage("MM800f449d0399ed014aae2bcc0cc2f2ec").getMedia("ME557ce644e5ab84fa21cc21112e22c485");
 
-    media.delete();
-
+    media.delete(); 
   }
 }

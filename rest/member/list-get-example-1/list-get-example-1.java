@@ -12,8 +12,6 @@ public class Example {
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
-
-    
     
     MemberList members = client.getAccount().getQueue("QU5ef8732a3c49700934481addd5ce1659").getMembers();
     

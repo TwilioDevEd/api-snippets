@@ -24,7 +24,6 @@ public class Example {
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("VoiceUrl", "http://demo.twilio.com/docs/voice.xml"));
     params.add(new BasicNameValuePair("SmsUrl", "http://demo.twilio.com/docs/sms.xml"));
-    number.update(params);
-    
+    number.update(params); 
   }
 }

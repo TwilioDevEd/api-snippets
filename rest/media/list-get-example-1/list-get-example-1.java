@@ -12,9 +12,7 @@ public class Example {
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
-
-    
-    
+ 
     MediaList medias = client.getAccount().getMessage("MM800f449d0399ed014aae2bcc0cc2f2ec").getMedia();
     
     // Loop over medias and print out a property for each one.

@@ -25,7 +25,6 @@ public class Example {
     // Loop over numbers and print out a property for each one.
     for (IncomingPhoneNumber number : numbers) {
       System.out.println(number.getPhoneNumber());
-    }
-    
+    } 
   }
 }

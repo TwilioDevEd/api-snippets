@@ -7,7 +7,6 @@ account_sid = 'AC5ef8732a3c49700934481addd5ce1659'
 auth_token = '{{ auth_token }}'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-
 # Loop over queues and print out a property for each one
 @client.account.queues.list.each do |queue|
     puts queue.average_wait_time

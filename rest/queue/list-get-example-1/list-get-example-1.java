@@ -12,9 +12,7 @@ public class Example {
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
-
-    
-    
+ 
     QueueList queues = client.getAccount().getQueues();
     
     // Loop over queues and print out a property for each one.

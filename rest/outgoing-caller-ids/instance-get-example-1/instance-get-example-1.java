@@ -15,7 +15,6 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     OutgoingCallerId callerId = client.getAccount().getOutgoingCallerId("PNe905d7e6b410746a0fb08c57e5a186f3");
-    System.out.println(callerId.getPhoneNumber());
-    
+    System.out.println(callerId.getPhoneNumber()); 
   }
 }

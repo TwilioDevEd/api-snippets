@@ -7,7 +7,6 @@ account_sid = 'ACdc5f132a3c49700934481addd5ce1659'
 auth_token = '{{ auth_token }}'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-
 # Loop over numbers and print out a property for each one
 @client.account.incoming_phone_numbers.list({
     :phone_number => "867"}).each do |number|
