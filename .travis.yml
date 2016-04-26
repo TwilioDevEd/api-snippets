@@ -1,0 +1,10 @@
+sudo: required
+language: ruby
+rvm:
+  - rvm 2.2.2
+before_install:
+  - sudo apt-get install python-pip python2.7-dev build-essential
+  - python -V
+  - pip -V
+install:
+  - sudo pip install -U twilio
