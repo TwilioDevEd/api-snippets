@@ -1,12 +1,20 @@
-require 'twilio-ruby'
+TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
+TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
 
-# Get your Account Sid and Auth Token from twilio.com/user/account
-account_sid = 'ACdc5f132a3c49700934481addd5ce1659'
-auth_token = '123'
-@client = Twilio::REST::Client.new account_sid, auth_token
+file = File.open(File.expand_path('rest/accounts/instance-get-example-1/instance-get-example-1.py'))
+content = file.read
 
-key = @client.account.signing_key.create(friendly_name: "User Jenny")
-puts key.sid
-puts key.secret
+puts content
 
-# Kernel.exit(1)
+content = content.gsub('ACba8bc05eacf94afdae398e642c9cc32d', TWILIO_ACCOUNT_SID)
+content = content.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
+
+puts content
+
+File.open('parsed.py', 'w') { |file| file.write(content) }
+
+out = system('python parsed.py')
+
+Kernel.exit(out)
+
+puts 'worked'
