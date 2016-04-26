@@ -4,7 +4,11 @@ rvm:
   - rvm 2.2.2
 before_install:
   - sudo apt-get install python-pip python2.7-dev build-essential
+  - sudo pip install --upgrade pip
   - python -V
   - pip -V
 install:
   - sudo pip install -U twilio
+  - gem install twilio-ruby
+script:
+  - ruby test-tools/test_snippets.rb
