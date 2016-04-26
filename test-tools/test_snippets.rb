@@ -11,10 +11,10 @@ content = content.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
 
 puts content
 
-File.open('parsed.py', 'w') { |file| file.write(content) }
-
-out = system('python parsed.py')
-
-Kernel.exit(out)
+# File.open('parsed.py', 'w') { |file| file.write(content) }
+#
+# out = system('python parsed.py')
+#
+# Kernel.exit(out)
 
 puts 'worked'
