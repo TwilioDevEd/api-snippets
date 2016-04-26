@@ -5,7 +5,7 @@ BASE_PATH = File.expand_path('./')
 # puts Dir.entries('.')
 
 Dir.glob("**/*") do |file|
-  HelperMethods.replace_account_sid file
+  HelperMethods.replace_account_sid file unless File.directory?(file)
 end
 
 # Dir.foreach(BASE_PATH) do |item|

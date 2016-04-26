@@ -1,12 +1,15 @@
 module HelperMethods
   def self.replace_account_sid(file_path)
-    File.open(File.expand_path(file_path), 'wr') do |file|
-      original = file.read
-      replaced = original.gsub(/AC\w{32}/, '{{ account_sid }}')
+    file = File.open(File.expand_path(file_path), 'r')
+    original = file.read
+    replaced = original.gsub(/AC\w{32}/, '{{ account_sid }}')
+    replaced = replaced.gsub('{AuthToken}', '{{ auth_token }}')
 
-      file.write(replaced) unless original == replaced
+    unless original == replaced
+      puts replaced
+      # File.open(File.expand_path(file_path), 'w') { |document| document.write(replaced) }
     end
 
-
+    file.close
   end
 end
