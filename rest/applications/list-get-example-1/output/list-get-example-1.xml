@@ -1,10 +1,10 @@
 <TwilioResponse>
-	<Applications page="0" pagesize="50" uri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Applications" firstpageuri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Applications?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
+	<Applications page="0" pagesize="50" uri="/2010-04-01/Accounts/{{ account_sid }}/Applications" firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/Applications?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
 		<Application>
 			<Sid>AP3f94c94562ac88dccf16f8859a1a8b25</Sid>
 			<DateCreated>Thu, 13 Nov 2008 07:56:24 +0000</DateCreated>
 			<DateUpdated>Thu, 13 Nov 2008 08:45:58 +0000</DateUpdated>
-			<AccountSid>ACdc5f1e11047ebd6fe7a55f120be3a900</AccountSid>
+			<AccountSid>{{ account_sid }}</AccountSid>
 			<FriendlyName>Long Play</FriendlyName>
 			<ApiVersion>2010-04-01</ApiVersion>
 			<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
@@ -19,7 +19,7 @@
 			<SmsFallbackUrl/>
 			<SmsFallbackMethod/>
 			<SmsStatusCallback/>
-			<Uri>/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Applications/AP3f94c94562ac88dccf16f8859a1a8b25</Uri>
+			<Uri>/2010-04-01/Accounts/{{ account_sid }}/Applications/AP3f94c94562ac88dccf16f8859a1a8b25</Uri>
 		</Application>
 		...
 	</Applications>

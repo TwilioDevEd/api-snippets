@@ -1,5 +1,5 @@
 {
-	"uri": "\/2010-04-01\/Accounts\/ACde6f1e11047ebd6fe7a55f120be3a900\/AvailablePhoneNumbers\/US\/TollFree.json?Contains=STORM",
+	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/AvailablePhoneNumbers\/US\/TollFree.json?Contains=STORM",
 	"available_phone_numbers": [
 		{
 			"friendly_name": "(866) 557-8676",

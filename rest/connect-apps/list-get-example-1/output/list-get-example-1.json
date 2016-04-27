@@ -2,7 +2,7 @@
   "connect_apps": [
     {
       "sid": "CNb989fdd207b04d16aee578018ef5fd93",
-      "account_sid": "AC72d87bea57556989c033c644f6270b8e",
+      "account_sid": "{{ account_sid }}",
       "friendly_name": "My awesome ConnectApp",
       "description": "An amazing TwilioConnect application that does amazing things!",
       "company_name": "My Company",
@@ -16,8 +16,8 @@
   ],
   "page": 0,
   "page_size": 50,
-  "uri": "\/2010-04-01\/Accounts\/AC81e0ca4b0af06b833b6726957613c5d4\/ConnectApps\/.json",
-  "first_page_uri": "\/2010-04-01\/Accounts\/AC81e0ca4b0af06b833b6726957613c5d4\/ConnectApps\/.json?Page=0&PageSize=50",
+  "uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/ConnectApps\/.json",
+  "first_page_uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/ConnectApps\/.json?Page=0&PageSize=50",
   "previous_page_uri": null,
   "next_page_uri": null,
 }

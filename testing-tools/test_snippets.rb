@@ -1,20 +1,27 @@
-TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
-TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
+require 'json'
+Dir[File.dirname(__FILE__) + '/parser/*.rb'].each { |file| require File.expand_path(file) }
 
-file = File.open(File.expand_path('rest/accounts/instance-get-example-1/instance-get-example-1.py'))
-content = file.read
+LANGUAGE_PARSERS = {
+  '.java' => Parser::JavaParser.new,
+  '.rb'   => Parser::RubyParser.new,
+  '.js'   => Parser::NodeParser.new,
+  '.php'  => Parser::PhpParser.new,
+  '.py'   => Parser::PythonParser.new,
+  '.curl' => Parser::CurlParser.new
+}
 
-puts content
+Dir.glob("**/") do |directory|
+  next if directory.include?('testing-tools') || !File.exist?("#{directory}meta.json")
 
-content = content.gsub('ACba8bc05eacf94afdae398e642c9cc32d', TWILIO_ACCOUNT_SID)
-content = content.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
+  json_object = JSON.parse(File.read("#{directory}meta.json"))
+  next unless json_object.fetch('test', 'false').downcase == 'true'
+  puts "------#{directory}-------"
+  Dir[directory + '*'].each do |file|
+    path = File.expand_path(file)
+    next if File.directory?(path)
 
-puts content
-
-# File.open('parsed.py', 'w') { |file| file.write(content) }
-#
-# out = system('python parsed.py')
-#
-# Kernel.exit(out)
-
-puts 'worked'
+    extension = File.extname(path)
+    next unless LANGUAGE_PARSERS.key?(extension)
+    LANGUAGE_PARSERS.fetch(extension).parse_file(file)
+  end
+end

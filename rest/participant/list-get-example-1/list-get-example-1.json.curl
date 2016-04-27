@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Conferences/CFbbe4632a3c49700934481addd5ce1659/Participants.json \
-    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe4632a3c49700934481addd5ce1659/Participants.json \
+    -u '{{ account_sid }}:{{ auth_token }}'

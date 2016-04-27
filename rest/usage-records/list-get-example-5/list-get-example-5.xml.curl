@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Records \
-    -u 'ACed732a3c49700934481addd5ce1659f0:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Usage/Records \
+    -u '{{ account_sid }}:{{ auth_token }}'

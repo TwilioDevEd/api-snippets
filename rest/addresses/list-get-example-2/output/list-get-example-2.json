@@ -1,14 +1,14 @@
 {
     "page": 0,
     "page_size": 50,
-    "uri":"/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses.json?CustomerName=Customer+123",
-    "first_page_uri": "/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses.json?Page=0&PageSize=50&CustomerName=Customer+123",
+    "uri":"/2010-04-01/Accounts/{{ account_sid }}/Addresses.json?CustomerName=Customer+123",
+    "first_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/Addresses.json?Page=0&PageSize=50&CustomerName=Customer+123",
     "previous_page_uri": null,
     "next_page_uri": null,
     "addresses": [
         {
             "sid": "AD2a0747eba6abf96b7e3c3ff0b4530f6e",
-            "account_sid": "ACdc5f1e11047ebd6fe7a55f120be3a900",
+            "account_sid": "{{ account_sid }}",
             "friendly_name": "Billing - Customer 123",
             "customer_name": "Customer 123",
             "street": "1 Hasselhoff Lane",

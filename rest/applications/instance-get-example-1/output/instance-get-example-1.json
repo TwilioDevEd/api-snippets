@@ -2,7 +2,7 @@
 	"sid": "AP2a0747eba6abf96b7e3c3ff0b4530f6e",
 	"date_created": "Mon, 16 Aug 2010 23:00:23 +0000",
 	"date_updated": "Mon, 16 Aug 2010 23:00:23 +0000",
-	"account_sid": "ACdc5f1e11047ebd6fe7a55f120be3a900",
+	"account_sid": "{{ account_sid }}",
 	"friendly_name": "Phone Me",
 	"api_version": "2010-04-01",
 	"voice_url": "http://demo.twilio.com/docs/voice.xml",
@@ -17,5 +17,5 @@
 	"sms_fallback_url": null,
 	"sms_fallback_method": "GET",
 	"sms_status_callback": null,
-	"uri": "\/2010-04-01\/Accounts\/ACdc5f1e11047ebd6fe7a55f120be3a900\/Applications\/AP2a0747eba6abf96b7e3c3ff0b4530f6e.json"
+	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Applications\/AP2a0747eba6abf96b7e3c3ff0b4530f6e.json"
 }

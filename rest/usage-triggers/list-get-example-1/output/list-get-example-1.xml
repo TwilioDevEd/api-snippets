@@ -1,8 +1,8 @@
 <TwilioResponse>
-   <UsageTriggers pagesize="50" nextpageuri="" uri="/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/?UsageCategory=calls&Recurring=daily" firstpageuri="/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/?UsageCategory=calls&Recurring=daily&Page=0&PageSize=50" previouspageuri="" page="0">
+   <UsageTriggers pagesize="50" nextpageuri="" uri="/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/?UsageCategory=calls&Recurring=daily" firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/?UsageCategory=calls&Recurring=daily&Page=0&PageSize=50" previouspageuri="" page="0">
       <UsageTrigger>
          <Sid>UTc2db285b0cbf4c60a2f1a8db237a5fba</Sid>
-         <AccountSid>ACed70abd024d3f57a4027b5dc2ca88d5b</AccountSid>
+         <AccountSid>{{ account_sid }}</AccountSid>
          <DateCreated>Sun, 23 Sep 2012 23:07:29 +0000</DateCreated>
          <DateUpdated>Sat, 29 Sep 2012 19:42:57 +0000</DateUpdated>
          <DateFired />
@@ -14,8 +14,8 @@
          <CurrentValue>0</CurrentValue>
          <CallbackUrl>http://www.google.com</CallbackUrl>
          <CallbackMethod>POST</CallbackMethod>
-         <UsageRecordUri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records/Today?Category=calls</UsageRecordUri>
-         <Uri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers//UTc2db285b0cbf4c60a2f1a8db237a5fba</Uri>
+         <UsageRecordUri>/2010-04-01/Accounts/{{ account_sid }}/Usage/Records/Today?Category=calls</UsageRecordUri>
+         <Uri>/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers//UTc2db285b0cbf4c60a2f1a8db237a5fba</Uri>
       </UsageTrigger>
    </UsageTriggers>
 </TwilioResponse>

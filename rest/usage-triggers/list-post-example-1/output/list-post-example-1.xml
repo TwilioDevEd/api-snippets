@@ -1,7 +1,7 @@
 <TwilioResponse>
    <UsageTrigger>
       <Sid>UTc142bed7b38c4f8186ef41a309814fd2</Sid>
-      <AccountSid>ACed70abd024d3f57a4027b5dc2ca88d5b</AccountSid>
+      <AccountSid>{{ account_sid }}</AccountSid>
       <DateCreated>Sat, 13 Oct 2012 21:32:30 +0000</DateCreated>
       <DateUpdated>Sat, 13 Oct 2012 21:32:30 +0000</DateUpdated>
       <DateFired />
@@ -13,7 +13,7 @@
       <CurrentValue>57</CurrentValue>
       <CallbackUrl>http://www.example.com</CallbackUrl>
       <CallbackMethod>POST</CallbackMethod>
-      <UsageRecordUri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records?Category=sms</UsageRecordUri>
-      <Uri>/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/UTc142bed7b38c4f8186ef41a309814fd2</Uri>
+      <UsageRecordUri>/2010-04-01/Accounts/{{ account_sid }}/Usage/Records?Category=sms</UsageRecordUri>
+      <Uri>/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/UTc142bed7b38c4f8186ef41a309814fd2</Uri>
    </UsageTrigger>
 </TwilioResponse>

@@ -1,7 +1,7 @@
 <TwilioResponse>
 	<IncomingPhoneNumber>
 		<Sid>PN2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
-		<AccountSid>AC00000000000000000000000000000002</AccountSid>
+		<AccountSid>{{ account_sid }}</AccountSid>
 		<FriendlyName>My Company Line</FriendlyName>
 		<PhoneNumber>+15105647903</PhoneNumber>
 		<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
@@ -22,6 +22,6 @@
 		<StatusCallback/>
 		<StatusCallbackMethod/>
 		<ApiVersion>2010-04-01</ApiVersion>
-		<Uri>/2010-04-01/Accounts/AC00000000000000000000000000000002/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
+		<Uri>/2010-04-01/Accounts/{{ account_sid }}/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
 	</IncomingPhoneNumber>
 </TwilioResponse>

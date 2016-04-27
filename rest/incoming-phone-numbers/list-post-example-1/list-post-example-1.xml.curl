@@ -1,6 +1,6 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/IncomingPhoneNumbers \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/IncomingPhoneNumbers \
     -d "FriendlyName=My%20Company%20Line" \
     -d "VoiceUrl=http://demo.twilio.com/docs/voice.xml" \
     -d "PhoneNumber=%2B15105647903" \
     -d "VoiceMethod=GET" \
-    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

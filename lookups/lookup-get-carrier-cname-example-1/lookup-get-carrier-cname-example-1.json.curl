@@ -1,2 +1,2 @@
 $ curl -XGET "https://lookups.twilio.com/v1/PhoneNumbers/+15108675309/?Type=carrier&Type=caller-name" \
-    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

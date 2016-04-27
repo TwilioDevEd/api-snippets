@@ -1,5 +1,5 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Calls.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Calls.json \
     -d "Url=http://www.example.com/sipdial.xml" \
     -d "To=sip:kate%40example.com" \
     -d "From=Jack" \
-    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

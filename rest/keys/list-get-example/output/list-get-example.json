@@ -1,8 +1,8 @@
 {
 	"page": 0,
 	"page_size": 50,
-	"uri": "\/2010-04-01\/Accounts\/ACdc5f1e11047ebd6fe7a55f120be3a900\/Keys.json",
-	"first_page_uri": "\/2010-04-01\/Accounts\/ACdc5f1e11047ebd6fe7a55f120be3a900\/Keys.json?Page=0&PageSize=50",
+	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Keys.json",
+	"first_page_uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Keys.json?Page=0&PageSize=50",
 	"previous_page_uri": null,
 	"next_page_uri": null,
 	"keys": [

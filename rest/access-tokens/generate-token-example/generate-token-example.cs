@@ -7,7 +7,7 @@ class Example
 	static void Main(string[] args)
 	{
 		// Find your Account Sid and Auth Token at twilio.com/user/account
-		string AccountSid = "ACdc5f132a3c49700934481addd5ce1659";
+		string AccountSid = "{{ account_sid }}";
 		string SigningKeySid = SID;
 		string SigningKeySecret = SECRET;
 

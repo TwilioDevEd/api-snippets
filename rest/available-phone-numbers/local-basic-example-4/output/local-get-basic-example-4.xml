@@ -1,5 +1,5 @@
 <TwilioResponse>
-	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACde6f1e11047ebd6fe7a55f120be3a900/AvailablePhoneNumbers/US/Local?InRegion=AR">
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers/US/Local?InRegion=AR">
 		<AvailablePhoneNumber>
 			<FriendlyName>(501) 555-1212</FriendlyName>
 			<PhoneNumber>+15015551212</PhoneNumber>

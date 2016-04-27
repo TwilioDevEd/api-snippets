@@ -1,4 +1,5 @@
 {
   "title": "Get Account Details",
-  "type": "server"
+  "type": "server",
+  "test": "true"
 }

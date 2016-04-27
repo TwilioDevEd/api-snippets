@@ -1,5 +1,5 @@
 <TwilioResponse>
-	<Keys page="0" pagesize="50" uri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Keys" firstpageuri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/Keys?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
+	<Keys page="0" pagesize="50" uri="/2010-04-01/Accounts/{{ account_sid }}/Keys" firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/Keys?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
             <Key>
                 <Sid>SKdac2dad1695721987de823226f0a62a4</Sid>
                 <FriendlyName>Foobar</FriendlyName>

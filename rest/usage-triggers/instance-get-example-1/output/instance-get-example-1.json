@@ -1,10 +1,10 @@
 {
-   "usage_record_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records.json?Category=calls", 
+   "usage_record_uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Records.json?Category=calls", 
    "date_updated": "Sat, 29 Sep 2012 19:47:54 +0000", 
    "date_fired": null, 
    "friendly_name": "Trigger for calls at usage of 500", 
-   "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json", 
-   "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+   "uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json", 
+   "account_sid": "{{ account_sid }}", 
    "callback_method": "POST", 
    "trigger_by": "usage", 
    "sid": "UT33c6aeeba34e48f38d6899ea5b765ad4", 

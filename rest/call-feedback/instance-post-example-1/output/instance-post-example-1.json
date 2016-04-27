@@ -1,6 +1,6 @@
 {
 	"sid": "CAe03b7cd806070d1f32bdb7f1046a41c0",
-    "account_sid": "AC7b659acc64804bd8bc01a2d9d54248e1",
+    "account_sid": "{{ account_sid }}",
     "quality_score": 3,
     "issues": [
         "post-dial-delay",

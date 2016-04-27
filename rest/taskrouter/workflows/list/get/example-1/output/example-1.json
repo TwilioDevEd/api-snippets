@@ -12,7 +12,7 @@
     {
       "sid": "WWb630832558964d981afe7e370df6985b",
       "friendly_name": "Default Fifo Workflow",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "assignment_callback_url": "http://example.com",
       "fallback_assignment_callback_url": null,
@@ -29,7 +29,7 @@
     {
       "sid": "WWa6c1ddbb5081e1e3635bc75352bdb0d6",
       "friendly_name": "Workflow2",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "assignment_callback_url": "http://example.com",
       "fallback_assignment_callback_url": "http://example2.com",
@@ -46,7 +46,7 @@
     {
       "sid": "WW16de9c38d0a5e5896fb493fa6928571c",
       "friendly_name": "Workflow3",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "assignment_callback_url": "http://example.com",
       "fallback_assignment_callback_url": "http://example2.com",
@@ -63,7 +63,7 @@
     {
       "sid": "WW9ec57d8759f952a7040c8f770f22244b",
       "friendly_name": "Leads and Cases Workflow",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "assignment_callback_url": "http://wds-agent.ngrok.com/callback",
       "fallback_assignment_callback_url": "http://wds-agent.ngrok.com/callback",
@@ -80,7 +80,7 @@
     {
       "sid": "WWe7d15ec6d23b584b65702aa4d02aec60",
       "friendly_name": "blah",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "assignment_callback_url": "http://example.com",
       "fallback_assignment_callback_url": "http://example.com",

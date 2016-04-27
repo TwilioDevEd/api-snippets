@@ -1,7 +1,7 @@
 <TwilioResponse>
     <IncomingPhoneNumber>
         <Sid>PN378279e21f1c90ea1c5377f554978cec</Sid>
-        <AccountSid>AC309477cc62c7fa34332f1be208657535</AccountSid>
+        <AccountSid>{{ account_sid }}</AccountSid>
         <FriendlyName>(500) 555-0006</FriendlyName>
         <PhoneNumber>+15005550006</PhoneNumber>
         <VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
@@ -23,6 +23,6 @@
         <ApiVersion>2010-04-01</ApiVersion>
         <VoiceApplicationSid></VoiceApplicationSid>
         <SmsApplicationSid></SmsApplicationSid>
-        <Uri>/2010-04-01/Accounts/AC309477cc62c7fa34332f1be208657535/IncomingPhoneNumbers/PN378279e21f1c90ea1c5377f554978cec</Uri>
+        <Uri>/2010-04-01/Accounts/{{ account_sid }}/IncomingPhoneNumbers/PN378279e21f1c90ea1c5377f554978cec</Uri>
     </IncomingPhoneNumber>
 </TwilioResponse>

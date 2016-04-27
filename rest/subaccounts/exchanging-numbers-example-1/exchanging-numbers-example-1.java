@@ -11,8 +11,8 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "AC0132a3c49700934481addd5ce1659f04";
-  public static final String ORIGINAL_ACCT = "AC00000000000000000000000000000001";
+  public static final String ACCOUNT_SID = "{{ account_sid }}";
+  public static final String ORIGINAL_ACCT = "{{ account_sid }}";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {
@@ -24,7 +24,7 @@ public class Example {
       .getIncomingPhoneNumber("PN2a0747eba6abf96b7e3c3ff0b4530f6e");
     // Build a filter for the IncomingPhoneNumberList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("AccountSid", "AC00000000000000000000000000000002"));
+    params.add(new BasicNameValuePair("AccountSid", "{{ account_sid }}"));
     number.update(params);
     
   }

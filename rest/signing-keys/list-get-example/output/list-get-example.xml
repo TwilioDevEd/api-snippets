@@ -1,5 +1,5 @@
 <TwilioResponse>
-	<SigningKeys page="0" pagesize="50" uri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/SigningKeys" firstpageuri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/SigningKeys?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
+	<SigningKeys page="0" pagesize="50" uri="/2010-04-01/Accounts/{{ account_sid }}/SigningKeys" firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/SigningKeys?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
             <SigningKey>
                 <Sid>SKdac2dad1695721987de823226f0a62a4</Sid>
                 <FriendlyName>Foobar</FriendlyName>

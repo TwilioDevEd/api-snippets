@@ -1,5 +1,5 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Triggers.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers.json \
     -d "TriggerValue=1000" \
     -d "UsageCategory=sms" \
     -d "CallbackUrl=http://www.example.com/" \
-    -u 'ACed732a3c49700934481addd5ce1659f0:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

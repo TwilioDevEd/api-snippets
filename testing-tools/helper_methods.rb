@@ -7,7 +7,7 @@ module HelperMethods
 
     unless original == replaced
       puts replaced
-      # File.open(File.expand_path(file_path), 'w') { |document| document.write(replaced) }
+      File.open(File.expand_path(file_path), 'w') { |document| document.write(replaced) }
     end
 
     file.close

@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e/DependentPhoneNumbers \
-    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e/DependentPhoneNumbers \
+    -u '{{ account_sid }}:{{ auth_token }}'

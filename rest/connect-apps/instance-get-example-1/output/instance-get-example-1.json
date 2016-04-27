@@ -1,6 +1,6 @@
 {
 	"sid": "CNb989fdd207b04d16aee578018ef5fd93",
-	"account_sid": "AC72d87bea57556989c033c644f6270b8e",
+	"account_sid": "{{ account_sid }}",
 	"friendly_name": "My awesome ConnectApp",
 	"description": "An amazing TwilioConnect application that does amazing things!",
 	"company_name": "My Company",

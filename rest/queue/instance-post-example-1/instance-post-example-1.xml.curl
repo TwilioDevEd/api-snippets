@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Queues/QU32a3c49700934481addd5ce1659f04d2 \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Queues/QU32a3c49700934481addd5ce1659f04d2 \
     -d "MaxSize=123" \
-    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

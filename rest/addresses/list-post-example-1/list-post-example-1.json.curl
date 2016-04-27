@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC2136d48e32ed050d5523abe052ac92f2/Addresses.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Addresses.json \
 -d "CustomerName=Customer 123" \
 -d "FriendlyName=Billing - Customer 123" \
 -d "Street=1 Hasselhoff Lane" \
@@ -6,4 +6,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC2136d48e32ed050d5523a
 -d "Region=Berlin" \
 -d "PostalCode=10875" \
 -d "IsoCountry=DE" \
--u 'AC2136d48e32ed050d5523abe052ac92f2:{AuthToken}'
+-u '{{ account_sid }}:{{ auth_token }}'

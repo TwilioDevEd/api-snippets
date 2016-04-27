@@ -4,7 +4,7 @@
 		<DateCreated>Mon, 16 Aug 2010 03:45:01 +0000</DateCreated>
 		<DateUpdated>Mon, 16 Aug 2010 03:45:03 +0000</DateUpdated>
 		<DateSent>Mon, 16 Aug 2010 03:45:03 +0000</DateSent>
-		<AccountSid>AC5ef8732a3c49700934481addd5ce1659</AccountSid>
+		<AccountSid>{{ account_sid }}</AccountSid>
 		<To>+15558675309</To>
 		<From>+14158141829</From>
 		<Body>Hey Jenny why aren't you returning my calls?</Body>
@@ -17,6 +17,6 @@
 		<PriceUnit>USD</PriceUnit>
 		<ErrorCode/>
 		<ErrorMessage/>
-		<Uri>/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec</Uri>
+		<Uri>/2010-04-01/Accounts/{{ account_sid }}/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec</Uri>
 	</Message>
 </TwilioResponse>

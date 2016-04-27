@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC228ba32a3c49700934481addd5ce1659/OutgoingCallerIds/PNe536d32a3c49700934481addd5ce1659 \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/OutgoingCallerIds/PNe536d32a3c49700934481addd5ce1659 \
     -d "FriendlyName=My%20Second%20Line" \
-    -u 'AC228ba32a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

@@ -1,16 +1,16 @@
 {
-    "first_page_uri": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings.json?PageSize=50&Page=0",
+    "first_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings.json?PageSize=50&Page=0",
     "previous_page_uri": null,
-    "uri": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings.json?PageSize=50&Page=0",
+    "uri": "/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings.json?PageSize=50&Page=0",
     "page_size": 50,
     "ip_access_control_list_mappings": [
         {
             "subresource_uris": {
-                "addresses": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c/Addresses.json"
+                "addresses": "/2010-04-01/Accounts/{{ account_sid }}/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c/Addresses.json"
             },
             "date_updated": "Wed, 11 Sep 2013 04:06:07 -0000",
             "friendly_name": "My new acl",
-            "uri": "/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c.json",
+            "uri": "/2010-04-01/Accounts/{{ account_sid }}/SIP/IpAccessControlLists/AL95a47094615fe05b7c17e62a7877836c.json",
             "sid": "AL95a47094615fe05b7c17e62a7877836c",
             "date_created": "Wed, 11 Sep 2013 04:06:07 -0000"
         },

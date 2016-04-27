@@ -1,6 +1,6 @@
 {
   "sid": "WAef18703ae3626aa90f6c4eea177aa57b",
-  "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+  "account_sid": "{{ account_sid }}",
   "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
   "friendly_name": "Not Ready",
   "available": false,

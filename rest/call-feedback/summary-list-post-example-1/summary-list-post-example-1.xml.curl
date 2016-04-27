@@ -1,6 +1,6 @@
-$ curl -XPOST /2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Calls/FeedbackSummary \
+$ curl -XPOST /2010-04-01/Accounts/{{ account_sid }}/Calls/FeedbackSummary \
     -d "StartDate=2014-06-01" \
     -d "EndDate=2014-06-30" \
     -d "IncludeSubaccounts=True" \
     -d "StatusCallback=http://www.example.com/feedback" \
-    -u "AC7b659acc64804bd8bc01a2d9d54248e1:{AuthToken}"
+    -u "{{ account_sid }}:{{ auth_token }}"

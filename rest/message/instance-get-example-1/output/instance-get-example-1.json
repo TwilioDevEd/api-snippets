@@ -1,5 +1,5 @@
 {
-   "account_sid": "AC5ef8732a3c49700934481addd5ce1659",
+   "account_sid": "{{ account_sid }}",
    "api_version": "2010-04-01",
    "body": "Hey Jenny why aren't you returning my calls?",
    "error_code": null,
@@ -15,5 +15,5 @@
    "sid": "MM800f449d0399ed014aae2bcc0cc2f2ec",
    "status": "sent",
    "to": "+15558675309",
-   "uri": "/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec.json"
+   "uri": "/2010-04-01/Accounts/{{ account_sid }}/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec.json"
 }

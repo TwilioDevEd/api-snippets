@@ -12,7 +12,7 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "AC3094732a3c49700934481addd5ce1659";
+  public static final String ACCOUNT_SID = "{{ account_sid }}";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {

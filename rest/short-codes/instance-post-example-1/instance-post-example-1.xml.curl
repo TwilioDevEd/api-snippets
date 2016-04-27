@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce3 \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce3 \
     -d "SmsUrl=http://demo.twilio.com/docs/sms.xml" \
-    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

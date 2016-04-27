@@ -6,7 +6,7 @@ class Example
   static void Main(string[] args) 
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "AC5ef877a5fe4238be081ea6f3c44186f3";
+    string AccountSid = "{{ account_sid }}";
     string AuthToken = "{{ auth_token }}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 

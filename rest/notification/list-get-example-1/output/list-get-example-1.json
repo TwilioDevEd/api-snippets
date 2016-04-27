@@ -1,14 +1,14 @@
 {
 	"page": 0,
 	"page_size": 50,
-	"uri": "\/2010-04-01\/Accounts\/ACda6f1e11047ebd6fe7a55f120be3a900\/Notifications.json",
-	"first_page_uri": "\/2010-04-01\/Accounts\/ACda6f1e11047ebd6fe7a55f120be3a900\/Notifications.json?Page=0&PageSize=50",
+	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Notifications.json",
+	"first_page_uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Notifications.json?Page=0&PageSize=50",
 	"previous_page_uri": null,
-	"next_page_uri": "\/2010-04-01\/Accounts\/ACda6f1e11047ebd6fe7a55f120be3a900\/Notifications.json?Page=1&PageSize=50",
+	"next_page_uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Notifications.json?Page=1&PageSize=50",
 	"notifications": [
 		{
 			"sid": "NO5a7a84730f529f0a76b3e30c01315d1a",
-			"account_sid": "ACda6f1e11047ebd6fe7a55f120be3a900",
+			"account_sid": "{{ account_sid }}",
 			"call_sid": "CAa8857b0dcc71b4909aced594f7f87453",
 			"log": "0",
 			"error_code": "11205",
@@ -20,7 +20,7 @@
 			"date_created": "Tue, 09 Feb 2010 01:23:53 +0000",
 			"api_version": "2008-08-01",
 			"date_updated": "Tue, 09 Feb 2010 01:23:53 +0000",
-			"uri": "\/2010-04-01\/Accounts\/ACda6f1e11047ebd6fe7a55f120be3a900\/Notifications\/NO5a7a84730f529f0a76b3e30c01315d1a.json"
+			"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Notifications\/NO5a7a84730f529f0a76b3e30c01315d1a.json"
 		},
 		...
 	]

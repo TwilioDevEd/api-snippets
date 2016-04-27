@@ -8,7 +8,7 @@ import java.util.Map;
 public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "AC1365ff479ef6502d85c27be6467a310c";
+  public static final String ACCOUNT_SID = "{{ account_sid }}";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {

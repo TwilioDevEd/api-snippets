@@ -2,7 +2,7 @@
   "activities": [
     {
       "sid": "WAef18703ae3626aa90f6c4eea177aa57b",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Not Ready",
       "available": false,
@@ -15,7 +15,7 @@
     },
     {
       "sid": "WAc568c96375feb0d4fce47f6975a3eed8",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Ready",
       "available": true,
@@ -28,7 +28,7 @@
     },
     {
       "sid": "WAe29fd962395b0ce5da1fa6b3e24f834f",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Busy",
       "available": false,
@@ -41,7 +41,7 @@
     },
     {
       "sid": "WA7208808f8a0460f4a38c17375767716c",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Reserved",
       "available": false,

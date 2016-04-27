@@ -6,7 +6,7 @@ import com.twilio.sdk.resource.instance.Account;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACba8bc05eacf94afdae398e642c9cc32d";
+  public static final String ACCOUNT_SID = "{{ account_sid }}";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {
@@ -14,7 +14,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Account account = client.getAccount("ACba8bc05eacf94afdae398e642c9cc32d");
+    Account account = client.getAccount("{{ account_sid }}");
     System.out.println(account.getDateCreated());
     
   }

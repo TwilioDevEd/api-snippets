@@ -4,7 +4,7 @@
 		<DateCreated>Thu, 19 Aug 2010 00:25:48 +0000</DateCreated>
 		<DateUpdated>Thu, 19 Aug 2010 00:25:48 +0000</DateUpdated>
 		<ParentCallSid/>
-		<AccountSid>AC5ef872f6da5a21de157d80997a64bd33</AccountSid>
+		<AccountSid>{{ account_sid }}</AccountSid>
 		<To>+14155551212</To>
 		<FormattedTo>(415) 555-1212</FormattedTo>
 		<From>+18668675309</From>
@@ -20,10 +20,10 @@
 		<ApiVersion>2010-04-01</ApiVersion>
 		<ForwardedFrom/>
 		<CallerName/>
-		<Uri>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Calls/CAc7a1fe47b14637f42fd94274d1907a1d</Uri>
+		<Uri>/2010-04-01/Accounts/{{ account_sid }}/Calls/CAc7a1fe47b14637f42fd94274d1907a1d</Uri>
 		<SubresourceUris>
-			<Notifications>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Calls/CAc7a1fe47b14637f42fd94274d1907a1d/Notifications</Notifications>
-			<Recordings>/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Calls/CAc7a1fe47b14637f42fd94274d1907a1d/Recordings</Recordings>
+			<Notifications>/2010-04-01/Accounts/{{ account_sid }}/Calls/CAc7a1fe47b14637f42fd94274d1907a1d/Notifications</Notifications>
+			<Recordings>/2010-04-01/Accounts/{{ account_sid }}/Calls/CAc7a1fe47b14637f42fd94274d1907a1d/Recordings</Recordings>
 		</SubresourceUris>
 	</Call>
 </TwilioResponse>

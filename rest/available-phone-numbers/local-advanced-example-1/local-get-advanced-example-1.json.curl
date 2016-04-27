@@ -1,6 +1,6 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACde6f132a3c49700934481addd5ce1659/AvailablePhoneNumbers/US/Local.json \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers/US/Local.json \
     -d "NearLatLong=37.840699%2C-122.461853" \
     -d "Distance=50" \
     -d "Contains=555" \
     -d "InRegion=CA" \
-    -u 'ACde6f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

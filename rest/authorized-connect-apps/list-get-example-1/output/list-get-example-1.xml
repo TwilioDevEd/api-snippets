@@ -1,8 +1,8 @@
 <TwilioResponse>
-  <AuthorizedConnectApps page="0" pagesize="50" uri="/2010-04-01/Accounts/AC81e0ca4b0af06b833b6726957613c5d4/AuthorizedConnectApps/" firstpageuri="/2010-04-01/Accounts/AC81e0ca4b0af06b833b6726957613c5d4/AuthorizedConnectApps/?Page=0&PageSize=50" previouspageuri=""nextpageuri="">
+  <AuthorizedConnectApps page="0" pagesize="50" uri="/2010-04-01/Accounts/{{ account_sid }}/AuthorizedConnectApps/" firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/AuthorizedConnectApps/?Page=0&PageSize=50" previouspageuri=""nextpageuri="">
     <AuthorizedConnectApp>
       <ConnectAppSid>CNb989fdd207b04d16aee578018ef5fd93</ConnectAppSid>
-      <AccountSid>AC828fd6e37bee469a9aee33475d67db2c</AccountSid>
+      <AccountSid>{{ account_sid }}</AccountSid>
 	  <Permissions>
 	    <Permission>get-all</Permission>
 	    <Permission>post-all</Permission>

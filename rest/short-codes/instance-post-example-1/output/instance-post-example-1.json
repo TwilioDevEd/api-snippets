@@ -1,6 +1,6 @@
 {
 	"sid": "SC6b20cb705c1e8f00210049b20b70fce2",
-	"account_sid": "ACdc5f1e6f7a0441659833ca940b72503d",
+	"account_sid": "{{ account_sid }}",
 	"friendly_name": "67898",
 	"short_code": "67898",
 	"date_created": "Sat, 09 Jul 2011 22:36:22 +0000",
@@ -9,5 +9,5 @@
 	"sms_method": "POST",
 	"sms_fallback_url": "http://smsapp.com/fallback",
 	"sms_fallback_method": "GET",
-	"uri": "/2010-04-01/Accounts/ACdc5f1e6f7a0441659833ca940b72503d/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2.json"
+	"uri": "/2010-04-01/Accounts/{{ account_sid }}/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2.json"
 }

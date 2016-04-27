@@ -3,7 +3,7 @@
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "AC3094732a3c49700934481addd5ce1659";
+$sid = "{{ account_sid }}";
 $token = "{{ auth_token }}";
 $client = new Lookups_Services_Twilio($sid, $token);
 

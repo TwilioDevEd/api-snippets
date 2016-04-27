@@ -2,7 +2,7 @@
   "task_queues": [
     {
       "sid": "WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Everyone",
       "target_workers": "1==1",
@@ -22,7 +22,7 @@
     },
     {
       "sid": "WQf2207a00937afb7b90ad16cc6f489f5e",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Sales",
       "target_workers": "type == 'leads'",
@@ -42,7 +42,7 @@
     },
     {
       "sid": "WQf855e98ad280d0a0a325628e24ca9627",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "{{ account_sid }}",
       "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
       "friendly_name": "Service",
       "target_workers": "type == 'cases'",

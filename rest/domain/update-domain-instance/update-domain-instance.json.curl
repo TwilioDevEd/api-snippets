@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains/SD27f0288630a668bdfbf177f8e22f5ccc.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD27f0288630a668bdfbf177f8e22f5ccc.json \
     -d "FriendlyName=Scranton%20Office%20Dev" \
     -d "VoiceMethod=GET" \
-    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

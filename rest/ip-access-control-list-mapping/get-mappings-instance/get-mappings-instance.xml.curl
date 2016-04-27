@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings/AL95a47094615fe05b7c17e62a7877836c \
-    -u 'AC32a3c49700934481addd5ce1659f04d2:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings/AL95a47094615fe05b7c17e62a7877836c \
+    -u '{{ account_sid }}:{{ auth_token }}'

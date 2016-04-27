@@ -1,3 +1,3 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC228ba32a3c49700934481addd5ce1659/OutgoingCallerIds \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/OutgoingCallerIds \
     -d "PhoneNumber=%2B14158675309" \
-    -u 'AC228ba32a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

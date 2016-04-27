@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e.json \
     -d "VoiceUrl=http://demo.twilio.com/docs/voice.xml" \
     -d "SmsUrl=http://demo.twilio.com/docs/sms.xml" \
-    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

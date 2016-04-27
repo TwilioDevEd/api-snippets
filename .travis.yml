@@ -10,6 +10,7 @@ before_install:
 install:
 - sudo pip install -U twilio
 - gem install twilio-ruby
+- gem install json
 script:
 - ruby testing-tools/test_snippets.rb
 env:

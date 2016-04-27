@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC3094732a3c49700934481addd5ce1659/SMS/Messages.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SMS/Messages.json \
     -d "To=%2B14108675309" \
     -d "From=%2B15005550006" \
-    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

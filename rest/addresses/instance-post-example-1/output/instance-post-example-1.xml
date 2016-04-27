@@ -3,7 +3,7 @@
 		<Sid>AD2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
 		<DateCreated>Mon, 16 Aug 2010 23:00:23 +0000</DateCreated>
 		<DateUpdated>Mon, 16 Aug 2010 23:00:23 +0000</DateUpdated>
-		<AccountSid>AC755325d45d80675a4727a7a54e1b4ce4</AccountSid>
+		<AccountSid>{{ account_sid }}</AccountSid>
 		<FriendlyName>Billing - Customer 123</FriendlyName>
 		<CustomerName>Customer 456</CustomerName>
 		<Street>2 Hasselhoff Lane</Street>
@@ -12,6 +12,6 @@
 		<PostalCode>10785</PostalCode>
 		<IsoCountry>DE</IsoCountry>
 		<ApiVersion>2010-04-01</ApiVersion>
-		<Uri>/2010-04-01/Accounts/AC755325d45d80675a4727a7a54e1b4ce4/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
+		<Uri>/2010-04-01/Accounts/{{ account_sid }}/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
 	</Address>
 </TwilioResponse>

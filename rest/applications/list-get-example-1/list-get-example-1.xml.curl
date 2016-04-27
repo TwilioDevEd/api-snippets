@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACdc5f132a3c49700934481addd5ce1659/Applications \
-    -u 'ACdc5f132a3c49700934481addd5ce1659:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Applications \
+    -u '{{ account_sid }}:{{ auth_token }}'

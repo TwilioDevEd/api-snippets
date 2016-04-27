@@ -1,5 +1,5 @@
 {
-	"account_sid": "AC5ef872f6da5a21de157d80997a64bd33",
+	"account_sid": "{{ account_sid }}",
 	"api_version": "2010-04-01",
 	"date_created": "Wed, 18 Aug 2010 20:20:06 +0000",
 	"date_updated": "Wed, 18 Aug 2010 20:24:32 +0000",
@@ -7,7 +7,7 @@
 	"sid": "CFbbe46ff1274e283f7e3ac1df0072ab39",
 	"status": "completed",
 	"subresource_uris": {
-		"participants": "/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants.json"
+		"participants": "/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants.json"
 	},
-	"uri": "/2010-04-01/Accounts/AC5ef872f6da5a21de157d80997a64bd33/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39.json"
+	"uri": "/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39.json"
 }

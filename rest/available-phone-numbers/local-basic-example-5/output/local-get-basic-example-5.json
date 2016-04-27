@@ -1,5 +1,5 @@
 {
-  "uri": "\/2010-04-01\/Accounts\/ACde6f1e11047ebd6fe7a55f120be3a900\/AvailablePhoneNumbers\/GB\/Local.json?Contains=+4420&SmsEnabled=true",
+  "uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/AvailablePhoneNumbers\/GB\/Local.json?Contains=+4420&SmsEnabled=true",
   "available_phone_numbers": [
     {
       "friendly_name": "+442033224780",

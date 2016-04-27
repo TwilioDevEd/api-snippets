@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/AC81e0ca4b0af06b833b6726957613c5d4/ConnectApps \
-    -u 'AC81e0ca4b0af06b833b6726957613c5d4:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/ConnectApps \
+    -u '{{ account_sid }}:{{ auth_token }}'

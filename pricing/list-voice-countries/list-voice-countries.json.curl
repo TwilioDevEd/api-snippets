@@ -1,2 +1,2 @@
 $ curl -XGET https://pricing.twilio.com/v1/Voice/Countries \
-    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'
+    -u '{{ account_sid }}:{{ auth_token }}'

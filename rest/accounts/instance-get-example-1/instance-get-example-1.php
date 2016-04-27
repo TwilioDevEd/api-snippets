@@ -3,11 +3,11 @@
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACba8bc05eacf94afdae398e642c9cc32d"; 
+$sid = "{{ account_sid }}"; 
 $token = "{{ auth_token }}"; 
 $client = new Services_Twilio($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client->accounts->get("ACba8bc05eacf94afdae398e642c9cc32d");
+$account = $client->accounts->get("{{ account_sid }}");
 echo $account->date_created;

@@ -3,7 +3,7 @@
 	"date_created": "Tue, 10 Aug 2010 08:02:17 +0000",
 	"date_updated": "Tue, 10 Aug 2010 08:02:47 +0000",
 	"parent_call_sid": null,
-	"account_sid": "AC5ef872f6da5a21de157d80997a64bd33",
+	"account_sid": "{{ account_sid }}",
 	"to": "+14153855708",
 	"from": "+14158141819",
 	"phone_number_sid": null,
@@ -18,9 +18,9 @@
 	"annotation": null,
 	"forwarded_from": null,
 	"caller_name": null,
-	"uri": "\/2010-04-01\/Accounts\/AC5ef872f6da5a21de157d80997a64bd33\/Calls\/CAe1644a7eed5088b159577c5802d8be38.json",
+	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Calls\/CAe1644a7eed5088b159577c5802d8be38.json",
 	"subresource_uris":{
-		"notifications": "\/2010-04-01\/Accounts\/AC5ef872f6da5a21de157d80997a64bd33\/Calls\/CAe1644a7eed5088b159577c5802d8be38\/Notifications.json",
-		"recordings": "\/2010-04-01\/Accounts\/AC5ef872f6da5a21de157d80997a64bd33\/Calls\/CAe1644a7eed5088b159577c5802d8be38\/Recordings.json"
+		"notifications": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Calls\/CAe1644a7eed5088b159577c5802d8be38\/Notifications.json",
+		"recordings": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Calls\/CAe1644a7eed5088b159577c5802d8be38\/Recordings.json"
 	}
 }
