@@ -1,0 +1,19 @@
+[
+    {
+        "title": "About NTS",
+        "links": [
+            {
+                "title": "Overview",
+                "path": "/docs/api/stun-turn"
+            },
+            {
+                "title": "Regions",
+                "path": "/docs/api/stun-turn/regions"
+            },
+            {
+                "title": "FAQ",
+                "path": "/docs/api/stun-turn/faq"
+            }
+        ]
+    }
+]
