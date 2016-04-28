@@ -7,7 +7,7 @@ module LanguageHandler
 
     BASE_PATH = 'output/'
 
-    def parse_file(path)
+    def replace_and_relocate(path)
       file = File.open(File.expand_path(path))
       content = file.read
       write_content(text_with_credentials(content), path)
@@ -19,12 +19,17 @@ module LanguageHandler
     end
 
     def write_content(content, path)
-      dir_name = BASE_PATH + File.dirname(path)
-      FileUtils.mkdir_p(dir_name) unless Dir.exist?(dir_name)
+      dir_name  = BASE_PATH + File.dirname(path)
+      file_name = File.basename(path)
+      FileUtils.mkdir_p("#{dir_name}/#{language_directory}") unless Dir.exist?("#{dir_name}/#{language_directory}")
 
-      new_file = File.new(BASE_PATH + path, 'w+')
+      new_file = File.new("#{dir_name}/#{language_directory}/#{file_name}", 'w+')
       new_file.write(content)
       new_file.close
+    end
+
+    def language_directory
+      'undefined_dir'
     end
   end
 end

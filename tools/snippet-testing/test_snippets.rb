@@ -12,12 +12,12 @@ LANGUAGE_HANDLERS = {
 }
 
 LANGUAGE_EXECUTORS = {
-  '.java' => LanguageExecutor::JavaLanguageExecutor.new,
-  '.rb'   => LanguageExecutor::RubyLanguageExecutor.new,
-  '.js'   => LanguageExecutor::NodeLanguageExecutor.new,
-  '.php'  => LanguageExecutor::PhpLanguageExecutor.new,
-  '.py'   => LanguageExecutor::PythonLanguageExecutor.new,
-  '.curl' => LanguageExecutor::CurlLanguageExecutor.new
+  'java' => LanguageExecutor::JavaLanguageExecutor.new,
+  'rb'   => LanguageExecutor::RubyLanguageExecutor.new,
+  'js'   => LanguageExecutor::NodeLanguageExecutor.new,
+  'php'  => LanguageExecutor::PhpLanguageExecutor.new,
+  'py'   => LanguageExecutor::PythonLanguageExecutor.new,
+  'curl' => LanguageExecutor::CurlLanguageExecutor.new
 }
 
 Dir.glob("**/") do |directory|
@@ -32,6 +32,11 @@ Dir.glob("**/") do |directory|
 
     extension = File.extname(path)
     next unless LANGUAGE_HANDLERS.key?(extension)
-    LANGUAGE_HANDLERS.fetch(extension).parse_file(file)
+    LANGUAGE_HANDLERS.fetch(extension).replace_and_relocate(file)
   end
+end
+
+Dir.glob('output/**/') do |directory|
+  LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('py')
+  puts directory
 end
