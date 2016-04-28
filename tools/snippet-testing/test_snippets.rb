@@ -1,5 +1,6 @@
 require 'json'
 Dir[File.dirname(__FILE__) + '/language_handler/*.rb'].each { |file| require File.expand_path(file) }
+Dir[File.dirname(__FILE__) + '/language_executor/*.rb'].each { |file| require File.expand_path(file) }
 
 LANGUAGE_HANDLERS = {
   '.java' => LanguageHandler::JavaLanguageHandler.new,
@@ -8,6 +9,15 @@ LANGUAGE_HANDLERS = {
   '.php'  => LanguageHandler::PhpLanguageHandler.new,
   '.py'   => LanguageHandler::PythonLanguageHandler.new,
   '.curl' => LanguageHandler::CurlLanguageHandler.new
+}
+
+LANGUAGE_EXECUTORS = {
+  '.java' => LanguageExecutor::JavaLanguageExecutor.new,
+  '.rb'   => LanguageExecutor::RubyLanguageExecutor.new,
+  '.js'   => LanguageExecutor::NodeLanguageExecutor.new,
+  '.php'  => LanguageExecutor::PhpLanguageExecutor.new,
+  '.py'   => LanguageExecutor::PythonLanguageExecutor.new,
+  '.curl' => LanguageExecutor::CurlLanguageExecutor.new
 }
 
 Dir.glob("**/") do |directory|
