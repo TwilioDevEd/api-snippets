@@ -1,7 +1,7 @@
 require 'fileutils'
 
-module Parser
-  class BaseParser
+module LanguageHandler
+  class BaseLanguageHandler
     TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
     TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
 
