@@ -1,0 +1,62 @@
+{
+  "events": [
+    {
+      "links": {
+        "resource": null,
+        "actor": null
+      },
+      "event_data": {
+        "resource_properties": {
+          "friendly_name": {
+            "previous": "tim+audittester1@twilio.com",
+            "updated": "tim+audittester100@twilio.com"
+          },
+          "email_address": {
+            "previous": "tim+audittester1@twilio.com",
+            "updated": "tim+audittester100@twilio.com"
+          }
+        }
+      },
+      "source_ip_address": "12.130.117.96",
+      "source": "web",
+      "url": "https://monitor.twilio.com/v1/Events/AEd6373d5a8e9540ce9f697d2bae7a2c34",
+      "sid": "AEd6373d5a8e9540ce9f697d2bae7a2c34",
+      "account_sid": "ACb29e441c446ac578bd751f038bfc3f3e",
+      "actor_sid": "USd0afd67cddff4ec7cb0022771a203cb1",
+      "actor_type": "user",
+      "description": null,
+      "event_date": "2015-01-04T00:38:23Z",
+      "event_type": "user.updated",
+      "resource_sid": "USd0afd67cddff4ec7cb0022771a203cb1",
+      "resource_type": "user"
+    },
+    {
+      "links": {
+        "resource": null,
+        "actor": null
+      },
+      "event_data": null,
+      "source_ip_address": "12.130.117.96",
+      "source": "web",
+      "url": "https://monitor.twilio.com/v1/Events/AEf98c1e62319846a791c62f982cb045f6",
+      "sid": "AEf98c1e62319846a791c62f982cb045f6",
+      "account_sid": "ACb29e441c446ac578bd751f038bfc3f3e",
+      "actor_sid": "USd0afd67cddff4ec7cb0022771a203cb1",
+      "actor_type": "user",
+      "description": null,
+      "event_date": "2015-01-04T00:38:22Z",
+      "event_type": "user-session.created",
+      "resource_sid": "USd0afd67cddff4ec7cb0022771a203cb1",
+      "resource_type": "user-session"
+    }
+  ],
+  "meta": {
+    "key": "events",
+    "next_page_url": null,
+    "url": "https://monitor.twilio.com/v1/Events?SourceIpAddress=12.130.117.96&PageSize=50&Page=0",
+    "previous_page_url": null,
+    "first_page_url": "https://monitor.twilio.com/v1/Events?SourceIpAddress=12.130.117.96&PageSize=50&Page=0",
+    "page_size": 50,
+    "page": 0
+  }
+}

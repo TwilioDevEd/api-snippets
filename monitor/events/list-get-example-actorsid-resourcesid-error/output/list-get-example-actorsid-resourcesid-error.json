@@ -1,0 +1,6 @@
+{
+  "status": 400,
+  "more_info": "https://www.twilio.com/docs/errors/400",
+  "message": "Invalid combination of AuditEvent filters, no combinations of ResourceSid, IpAddress, ActorSid, and ResourceType are supported.",
+  "code": 400
+}

@@ -1,0 +1,30 @@
+{
+  "links": {
+    "resource": "https://api.twilio.com/2010-04-01/Accounts/ACb29e441c446ac578bd751f038bfc3f3e/IncomingPhoneNumbers/PN4aa51b930717ea83c91971b86d99018f",
+    "actor": null
+  },
+  "event_data": {
+    "resource_properties": {
+      "voice_fallback_url": {
+        "previous": null,
+        "updated": ""
+      },
+      "voice_url": {
+        "previous": "http://www.example.com",
+        "updated": "http://www.example.com/hello-jenny"
+      }
+    }
+  },
+  "source_ip_address": "73.189.144.70",
+  "source": "web",
+  "url": "https://monitor.twilio.com/v1/Events/AE21f24380625e4aa4abec76e39b14458d",
+  "sid": "AE21f24380625e4aa4abec76e39b14458d",
+  "account_sid": "ACb29e441c446ac578bd751f038bfc3f3e",
+  "actor_sid": "USd0afd67cddff4ec7cb0022771a203cb1",
+  "actor_type": "user",
+  "description": null,
+  "event_date": "2015-04-29T02:55:15Z",
+  "event_type": "phone-number.updated",
+  "resource_sid": "PN4aa51b930717ea83c91971b86d99018f",
+  "resource_type": "phone-number"
+}

@@ -1,0 +1,2 @@
+$ curl -XGET https://monitor.twilio.com/v1/Events?StartDate=2015-03-01T00:00:00Z&EndDate=2015-04-01T00:00:00Z \
+    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'
