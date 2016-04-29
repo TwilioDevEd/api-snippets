@@ -2,13 +2,15 @@ require 'json'
 Dir[File.dirname(__FILE__) + '/language_handler/*.rb'].each { |file| require File.expand_path(file) }
 Dir[File.dirname(__FILE__) + '/language_executor/*.rb'].each { |file| require File.expand_path(file) }
 
+OUTPUT_PATH = 'output/'
+
 LANGUAGE_HANDLERS = {
-  '.java' => LanguageHandler::JavaLanguageHandler.new,
-  '.rb'   => LanguageHandler::RubyLanguageHandler.new,
-  '.js'   => LanguageHandler::NodeLanguageHandler.new,
-  '.php'  => LanguageHandler::PhpLanguageHandler.new,
-  '.py'   => LanguageHandler::PythonLanguageHandler.new,
-  '.curl' => LanguageHandler::CurlLanguageHandler.new
+  '.java' => LanguageHandler::JavaLanguageHandler.new(OUTPUT_PATH),
+  '.rb'   => LanguageHandler::RubyLanguageHandler.new(OUTPUT_PATH),
+  '.js'   => LanguageHandler::NodeLanguageHandler.new(OUTPUT_PATH),
+  '.php'  => LanguageHandler::PhpLanguageHandler.new(OUTPUT_PATH),
+  '.py'   => LanguageHandler::PythonLanguageHandler.new(OUTPUT_PATH),
+  '.curl' => LanguageHandler::CurlLanguageHandler.new(OUTPUT_PATH)
 }
 
 LANGUAGE_EXECUTORS = {
