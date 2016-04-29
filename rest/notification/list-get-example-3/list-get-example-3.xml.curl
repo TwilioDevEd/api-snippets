@@ -1,4 +1,4 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Notifications \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
     -d "MessageDate>=2009-07-06" \
     -d "Log=1" \
-    -u '{{ account_sid }}:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

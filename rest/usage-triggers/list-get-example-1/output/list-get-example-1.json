@@ -1,14 +1,14 @@
 {
-   "first_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/.json?UsageCategory=calls&Recurring=daily&Page=0&PageSize=50",
+   "first_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/.json?UsageCategory=calls&Recurring=daily&Page=0&PageSize=50",
    "previous_page_uri": null, 
    "usage_triggers": [
       {
-         "usage_record_uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Records/Today.json?Category=calls", 
+         "usage_record_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Today.json?Category=calls", 
          "date_updated": "Sat, 29 Sep 2012 19:42:57 +0000", 
          "date_fired": null, 
          "friendly_name": "a trigger", 
-         "uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers//UTc2db285b0cbf4c60a2f1a8db237a5fba.json", 
-         "account_sid": "{{ account_sid }}", 
+         "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers//UTc2db285b0cbf4c60a2f1a8db237a5fba.json", 
+         "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
          "callback_method": "POST", 
          "trigger_by": "count", 
          "sid": "UTc2db285b0cbf4c60a2f1a8db237a5fba", 
@@ -20,7 +20,7 @@
          "trigger_value": "0.000000"
       }
    ], 
-   "uri": "/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers.json?UsageCategory=calls&Recurring=daily", 
+   "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers.json?UsageCategory=calls&Recurring=daily", 
    "page_size": 50,
    "next_page_uri": null,
    "page": 0

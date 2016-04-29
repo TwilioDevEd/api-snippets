@@ -1,6 +1,6 @@
 {
     "sid":"PNbc8e66614955250fc32ae5bacbd73902",
-    "account_sid":"{{ account_sid }}",
+    "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "friendly_name":"(500) 555-0006",
     "phone_number":"+15005550006",
     "voice_url":"http://demo.twilio.com/docs/voice.xml",
@@ -23,5 +23,5 @@
     "api_version":"2010-04-01",
     "voice_application_sid":"",
     "sms_application_sid":"",
-    "uri":"\/2010-04-01\/Accounts\/{{ account_sid }}\/IncomingPhoneNumbers\/PNbc8e66614955250fc32ae5bacbd73902.json"
+    "uri":"\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers\/PNbc8e66614955250fc32ae5bacbd73902.json"
 }

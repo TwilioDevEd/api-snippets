@@ -3,7 +3,7 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // You will need your Account Sid and a SigningKey Sid and Secret
 // to generate an Access Token for your SDK endpoint to connect to Twilio.
-$accountSid = "{{ account_sid }}";
+$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $signingKeySid = SID;
 $signingKeySecret = SECRET;
 

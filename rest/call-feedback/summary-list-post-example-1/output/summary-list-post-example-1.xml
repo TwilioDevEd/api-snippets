@@ -3,7 +3,7 @@
         <Sid>FSa346467ca321c71dbd5e12f627deb854</Sid>
         <StartDate>2014-06-01</StartDate>
         <EndDate>2014-06-30</EndDate>
-        <AccountSid>{{ account_sid }}</AccountSid>
+        <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
         <IncludeSubaccounts>true</IncludeSubaccounts>
         <Status>in-progress</Status>
         <CallCount/>

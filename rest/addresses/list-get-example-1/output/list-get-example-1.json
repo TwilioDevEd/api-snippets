@@ -1,14 +1,14 @@
 {
     "page": 0,
     "page_size": 50,
-    "uri":"/2010-04-01/Accounts/{{ account_sid }}/Addresses.json",
-    "first_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/Addresses.json?Page=0&PageSize=50",
+    "uri":"/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses.json",
+    "first_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses.json?Page=0&PageSize=50",
     "previous_page_uri": null,
     "next_page_uri": null,
     "addresses": [
         {
             "sid": "AD2a0747eba6abf96b7e3c3ff0b4530f6e",
-            "account_sid": "{{ account_sid }}",
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "friendly_name": "Billing - Customer 123",
             "customer_name": "Customer 123",
             "street": "1 Hasselhoff Lane",

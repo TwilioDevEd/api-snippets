@@ -1,6 +1,6 @@
 {
 	"sid": "NO5a7a84730f529f0a76b3e30c01315d1a",
-	"account_sid": "{{ account_sid }}",
+	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 	"call_sid": "CAa8857b0dcc71b4909aced594f7f87453",
 	"log": "0",
 	"error_code": "11205",
@@ -10,10 +10,10 @@
 	"response_body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n\t<Play>4min19secs.mp3<\/Play>\n<\/Response>\n",
 	"request_method": "GET",
 	"request_url": "http:\/\/demo.twilio.com\/welcome",
-	"request_variables": "AccountSid={{ account_sid }}&CallStatus=in-progress&Called=4152374451&CallerCountry=US&CalledZip=94937&CallerCity=&Caller=4150000000&CalledCity=INVERNESS&CalledCountry=US&DialStatus=answered&CallerState=California&CallSid=CAa8857b0dcc71b4909aced594f7f87453&CalledState=CA&CallerZip=",
+	"request_variables": "AccountSid=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&CallStatus=in-progress&Called=4152374451&CallerCountry=US&CalledZip=94937&CallerCity=&Caller=4150000000&CalledCity=INVERNESS&CalledCountry=US&DialStatus=answered&CallerState=California&CallSid=CAa8857b0dcc71b4909aced594f7f87453&CalledState=CA&CallerZip=",
 	"response_headers": "Date=Tue%2C+09+Feb+2010+01%3A23%3A38+GMT&Vary=Accept-Encoding&Content-Length=91&Content-Type=text%2Fxml&Accept-Ranges=bytes&Server=Apache%2F2.2.3+%28CentOS%29&X-Powered-By=PHP%2F5.1.6",
 	"date_created": "Tue, 09 Feb 2010 01:23:53 +0000",
 	"api_version": "2008-08-01",
 	"date_updated": "Tue, 09 Feb 2010 01:23:53 +0000",
-	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/Notifications\/NO5a7a84730f529f0a76b3e30c01315d1a.json"
+	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Notifications\/NO5a7a84730f529f0a76b3e30c01315d1a.json"
 }

@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Addresses?CustomerName=Customer+123 \
-    -u '{{ account_sid }}:{{ auth_token }}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses?CustomerName=Customer+123 \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

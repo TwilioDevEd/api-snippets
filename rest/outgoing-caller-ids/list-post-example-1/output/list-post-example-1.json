@@ -1,5 +1,5 @@
 {
-	"account_sid": "{{ account_sid }}",
+	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 	"phone_number": "+14158675309",
 	"friendly_name": "My Home Phone Number",
 	"validation_code": 123456,

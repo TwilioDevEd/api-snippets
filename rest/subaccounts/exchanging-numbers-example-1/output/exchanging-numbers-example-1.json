@@ -1,6 +1,6 @@
 {
 	"sid": "PN2a0747eba6abf96b7e3c3ff0b4530f6e",
-	"account_sid": "{{ account_sid }}",
+	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 	"friendly_name": "My Company Line",
 	"phone_number": "+15105647903",
 	"voice_url": "http://demo.twilio.com/docs/voice.xml",
@@ -21,5 +21,5 @@
 	"status_callback": null,
 	"status_callback_method": null,
 	"api_version": "2010-04-01",
-	"uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/IncomingPhoneNumbers\/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json"
+	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers\/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json"
 }

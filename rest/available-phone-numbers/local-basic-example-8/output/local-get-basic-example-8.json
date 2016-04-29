@@ -1,5 +1,5 @@
 {
-  "uri": "\/2010-04-01\/Accounts\/{{ account_sid }}\/AvailablePhoneNumbers\/US\/Local.json?ExcludeLocalAddressRequired=True",
+  "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AvailablePhoneNumbers\/US\/Local.json?ExcludeLocalAddressRequired=True",
   "available_phone_numbers": [
     {
       "friendly_name": "(510) 555-1212",

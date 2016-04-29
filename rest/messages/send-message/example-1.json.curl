@@ -1,6 +1,6 @@
-curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Messages.json' \
+curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json' \
 --data-urlencode 'To=+16518675309'  \
 --data-urlencode 'From=+14158141829'  \
 --data-urlencode 'Body=Hey Jenny! Good luck on the bar exam!'  \
 -d 'MediaUrl=http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg' \
--u {{ account_sid }}:[AuthToken]
+-u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:[AuthToken]

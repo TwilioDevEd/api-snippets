@@ -1,4 +1,4 @@
-var accountSid = '{{ account_sid }}';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var signingKeySid = SID;
 var signingKeySecret = SECRET;
 

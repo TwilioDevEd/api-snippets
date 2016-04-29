@@ -3,7 +3,7 @@
     "date_created":"Wed, 10 Oct 2012 17:57:42 +0000",
     "date_updated":"Wed, 10 Oct 2012 17:57:42 +0000",
     "date_sent":null,
-    "account_sid":"{{ account_sid }}",
+    "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "to":"+14108675309",
     "from":"+15005550006",
     "body":"hi",
@@ -11,5 +11,5 @@
     "direction":"outbound-api",
     "api_version":"2010-04-01",
     "price":null,
-    "uri":"\/2010-04-01\/Accounts\/{{ account_sid }}\/SMS\/Messages\/SM711c87aba9a3ed02554c91a7d503b64e.json"
+    "uri":"\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/SMS\/Messages\/SM711c87aba9a3ed02554c91a7d503b64e.json"
 }

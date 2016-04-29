@@ -3,7 +3,7 @@
   <Token>
     <Username>40a90ad073c0ac74820142e5ba7fe4e6a1e83db2c48bff30a7ea6c47862c8bc4</Username>
     <Password>LyCKdB0y9jfJqjppGHRtBqfPXtUFTwtZHw4Qpf9LnH4=</Password>
-    <AccountSid>{{ account_sid }}</AccountSid>
+    <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
     <Ttl>3600</Ttl>
     <IceServers>
       <IceServer>

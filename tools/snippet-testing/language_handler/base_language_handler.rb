@@ -20,7 +20,7 @@ module LanguageHandler
     attr_reader :base_path
 
     def text_with_credentials(file_content)
-      replaced = file_content.gsub('{{ account_sid }}', TWILIO_ACCOUNT_SID)
+      replaced = file_content.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', TWILIO_ACCOUNT_SID)
       replaced.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
     end
 

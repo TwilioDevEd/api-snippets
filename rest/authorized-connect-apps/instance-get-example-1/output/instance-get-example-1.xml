@@ -1,6 +1,6 @@
 <TwilioResponse>
 	<AuthorizedConnectApp>
-		<AccountSid>{{ account_sid }}</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<Permissions>
 			<Permission>get-all</Permission>
 			<Permission>post-all</Permission>

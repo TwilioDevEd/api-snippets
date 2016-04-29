@@ -1,47 +1,47 @@
 <TwilioResponse>
   <Accounts page="0" pagesize="50" uri="/2010-04-01/Accounts" firstpageuri="/2010-04-01/Accounts?Page=0&amp;PageSize=50" previouspageuri="" nextpageuri="">
 	<Account>
-	  <Sid>{{ account_sid }}</Sid>
+	  <Sid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Sid>
 	  <FriendlyName>Chieftain</FriendlyName>
 	  <Status>active</Status>
 	  <AuthToken>redacted</AuthToken>
 	  <DateCreated>Tue, 12 Jan 2010 04:41:09 +0000</DateCreated>
 	  <DateUpdated>Tue, 25 Jan 2011 07:24:36 +0000</DateUpdated>
 	  <Type>Full</Type>
-	  <Uri>/2010-04-01/Accounts/{{ account_sid }}</Uri>
+	  <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Uri>
 	  <SubresourceUris>
-		<AvailablePhoneNumbers>/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers</AvailablePhoneNumbers>
-		<Calls>/2010-04-01/Accounts/{{ account_sid }}/Calls</Calls>
-		<Conferences>/2010-04-01/Accounts/{{ account_sid }}/Conferences</Conferences>
-		<IncomingPhoneNumbers>/2010-04-01/Accounts/{{ account_sid }}/IncomingPhoneNumbers</IncomingPhoneNumbers>
-		<Notifications>/2010-04-01/Accounts/{{ account_sid }}/Notifications</Notifications>
-		<OutgoingCallerIds>/2010-04-01/Accounts/{{ account_sid }}/OutgoingCallerIds</OutgoingCallerIds>
-		<Recordings>/2010-04-01/Accounts/{{ account_sid }}/Recordings</Recordings>
-		<Sandbox>/2010-04-01/Accounts/{{ account_sid }}/Sandbox</Sandbox>
-		<SMSMessages>/2010-04-01/Accounts/{{ account_sid }}/SMS/Messages</SMSMessages>
-		<Transcriptions>/2010-04-01/Accounts/{{ account_sid }}/Transcriptions</Transcriptions>
+		<AvailablePhoneNumbers>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers</AvailablePhoneNumbers>
+		<Calls>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls</Calls>
+		<Conferences>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences</Conferences>
+		<IncomingPhoneNumbers>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers</IncomingPhoneNumbers>
+		<Notifications>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications</Notifications>
+		<OutgoingCallerIds>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds</OutgoingCallerIds>
+		<Recordings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings</Recordings>
+		<Sandbox>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sandbox</Sandbox>
+		<SMSMessages>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages</SMSMessages>
+		<Transcriptions>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions</Transcriptions>
 	  </SubresourceUris>
 	</Account>
 	<Account>
-	  <Sid>{{ account_sid }}</Sid>
+	  <Sid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Sid>
 	  <FriendlyName>Chieftain Subaccount</FriendlyName>
 	  <Status>active</Status>
 	  <AuthToken>redacted</AuthToken>
 	  <DateCreated>Tue, 16 Jan 2010 04:41:09 +0000</DateCreated>
 	  <DateUpdated>Tue, 17 Jan 2011 07:24:36 +0000</DateUpdated>
 	  <Type>Full</Type>
-	  <Uri>/2010-04-01/Accounts/{{ account_sid }}</Uri>
+	  <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Uri>
 	  <SubresourceUris>
-		<AvailablePhoneNumbers>/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers</AvailablePhoneNumbers>
-		<Calls>/2010-04-01/Accounts/{{ account_sid }}/Calls</Calls>
-		<Conferences>/2010-04-01/Accounts/{{ account_sid }}/Conferences</Conferences>
-		<IncomingPhoneNumbers>/2010-04-01/Accounts/{{ account_sid }}/IncomingPhoneNumbers</IncomingPhoneNumbers>
-		<Notifications>/2010-04-01/Accounts/{{ account_sid }}/Notifications</Notifications>
-		<OutgoingCallerIds>/2010-04-01/Accounts/{{ account_sid }}/OutgoingCallerIds</OutgoingCallerIds>
-		<Recordings>/2010-04-01/Accounts/{{ account_sid }}/Recordings</Recordings>
-		<Sandbox>/2010-04-01/Accounts/{{ account_sid }}/Sandbox</Sandbox>
-		<SMSMessages>/2010-04-01/Accounts/{{ account_sid }}/SMS/Messages</SMSMessages>
-		<Transcriptions>/2010-04-01/Accounts/{{ account_sid }}/Transcriptions</Transcriptions>
+		<AvailablePhoneNumbers>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers</AvailablePhoneNumbers>
+		<Calls>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls</Calls>
+		<Conferences>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences</Conferences>
+		<IncomingPhoneNumbers>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers</IncomingPhoneNumbers>
+		<Notifications>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications</Notifications>
+		<OutgoingCallerIds>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds</OutgoingCallerIds>
+		<Recordings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings</Recordings>
+		<Sandbox>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sandbox</Sandbox>
+		<SMSMessages>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages</SMSMessages>
+		<Transcriptions>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions</Transcriptions>
 	  </SubresourceUris>
 	</Account>
   </Accounts>

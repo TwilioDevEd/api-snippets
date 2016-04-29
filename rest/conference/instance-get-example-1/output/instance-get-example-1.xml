@@ -1,15 +1,15 @@
 <TwilioResponse>
 	<Conference>
 		<Sid>CFbbe46ff1274e283f7e3ac1df0072ab39</Sid>
-		<AccountSid>{{ account_sid }}</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<FriendlyName>Party Line</FriendlyName>
 		<Status>completed</Status>
 		<DateCreated>Wed, 18 Aug 2010 20:20:06 +0000</DateCreated>
 		<ApiVersion>2010-04-01</ApiVersion>
 		<DateUpdated>Wed, 18 Aug 2010 20:24:32 +0000</DateUpdated>
-		<Uri>/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39</Uri>
+		<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39</Uri>
 		<SubresourceUris>
-			<Participants>/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants</Participants>
+			<Participants>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants</Participants>
 		</SubresourceUris>
 	</Conference>
 </TwilioResponse>

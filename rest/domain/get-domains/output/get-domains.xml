@@ -2,7 +2,7 @@
     <SipDomains [paging attributes]>
         <SipDomain>
             <Sid>SD098e7b11c00d0ba152b1d3f084c4b776</Sid>
-            <AccountSid>{{ account_sid }}</AccountSid>
+            <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
             <FriendlyName>Scranton Office</FriendlyName>
             <ApiVersion>2010-04-01</ApiVersion>
             <DomainName>dunder-mifflin-scranton.sip.twilio.com</DomainName>
@@ -15,10 +15,10 @@
             <VoiceStatusCallbackMethod>POST</VoiceStatusCallbackMethod>
             <DateCreated>Fri, 06 Sep 2013 18:48:50 -0000</DateCreated>
             <DateUpdated>Fri, 06 Sep 2013 18:48:50 -0000</DateUpdated>
-            <Uri>/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776</Uri>
+            <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776</Uri>
             <SubresourceUris>
-                <CredentialListMappings>/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/CredentialListMappings</CredentialListMappings>
-                <IpAccessControlListMappings>/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/IpAccessControlListMappings</IpAccessControlListMappings>
+                <CredentialListMappings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/CredentialListMappings</CredentialListMappings>
+                <IpAccessControlListMappings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD098e7b11c00d0ba152b1d3f084c4b776/IpAccessControlListMappings</IpAccessControlListMappings>
             </SubresourceUris>
         </SipDomain>
         ...

@@ -1,2 +1,2 @@
 $ curl -XGET https://pricing.twilio.com/v1/PhoneNumbers/Countries \
-    -u '{{ account_sid }}:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

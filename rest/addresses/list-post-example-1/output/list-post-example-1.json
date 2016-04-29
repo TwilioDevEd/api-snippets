@@ -1,6 +1,6 @@
 {
     "sid": "AD2a0747eba6abf96b7e3c3ff0b4530f6e",
-    "account_sid": "{{ account_sid }}",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "friendly_name": "Billing - Customer 123",
     "customer_name": "Customer 123",
     "street": "1 Hasselhoff Lane",

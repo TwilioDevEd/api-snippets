@@ -1,2 +1,2 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Tokens \
-    -u "{{ account_sid }}:{{ auth_token }}"
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tokens \
+    -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}"

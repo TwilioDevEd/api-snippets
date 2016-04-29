@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2.json \
-    -u '{{ account_sid }}:{{ auth_token }}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2.json \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

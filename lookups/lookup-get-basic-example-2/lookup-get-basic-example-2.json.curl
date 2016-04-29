@@ -1,2 +1,2 @@
 $ curl -XGET 'https://lookups.twilio.com/v1/PhoneNumbers/(510)%20867-5309?Type=carrier&CountryCode=US' \
-    -u '{{ account_sid }}:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

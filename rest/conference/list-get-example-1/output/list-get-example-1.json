@@ -1,13 +1,13 @@
 {
-	"first_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/Conferences.json?Page=0&PageSize=50",
-	"next_page_uri": "/2010-04-01/Accounts/{{ account_sid }}/Conferences.json?Page=1&PageSize=50",
+	"first_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences.json?Page=0&PageSize=50",
+	"next_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences.json?Page=1&PageSize=50",
 	"page": 0,
 	"page_size": 50,
 	"previous_page_uri": null,
-	"uri": "/2010-04-01/Accounts/{{ account_sid }}/Conferences.json",
+	"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences.json",
 	"conferences": [
 		{
-			"account_sid": "{{ account_sid }}",
+			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 			"api_version": "2010-04-01",
 			"date_created": "Wed, 18 Aug 2010 20:20:06 +0000",
 			"date_updated": "Wed, 18 Aug 2010 20:24:32 +0000",
@@ -15,9 +15,9 @@
 			"sid": "CFbbe46ff1274e283f7e3ac1df0072ab39",
 			"status": "completed",
 			"subresource_uris": {
-				"participants": "/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants.json",
+				"participants": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39/Participants.json",
 			},
-			"uri": "/2010-04-01/Accounts/{{ account_sid }}/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39.json"
+			"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39.json"
 		},
 		...
 	]

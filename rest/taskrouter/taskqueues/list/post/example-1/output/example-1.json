@@ -1,6 +1,6 @@
 {
   "sid": "WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
-  "account_sid": "{{ account_sid }}",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
   "friendly_name": "Everyone",
   "target_workers": "1==1",

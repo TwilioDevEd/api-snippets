@@ -3,7 +3,7 @@
 		<Sid>AP2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
 		<DateCreated>Mon, 16 Aug 2010 23:00:23 +0000</DateCreated>
 		<DateUpdated>Mon, 16 Aug 2010 23:00:23 +0000</DateUpdated>
-		<AccountSid>{{ account_sid }}</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<FriendlyName>Phone Me</FriendlyName>
 		<ApiVersion>2010-04-01</ApiVersion>
 		<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
@@ -18,6 +18,6 @@
 		<SmsFallbackUrl/>
 		<SmsFallbackMethod>GET</SmsFallbackMethod>
 		<SmsStatusCallback/>
-		<Uri>/2010-04-01/Accounts/{{ account_sid }}/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
+		<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
 	</Application>
 </TwilioResponse>

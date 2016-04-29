@@ -48,6 +48,6 @@
     "tasks_timed_out_in_workflow": 0,
     "avg_task_acceptance_time": 0
   },
-  "account_sid": "{{ account_sid }}",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "workspace_sid": "WS7d4813fc78909747b773945352c5b960"
 }

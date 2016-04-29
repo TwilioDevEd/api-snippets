@@ -1,5 +1,5 @@
 <TwilioResponse>
-	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers/GB/Mobile">
+	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/GB/Mobile">
 		<AvailablePhoneNumber>
 			<FriendlyName>+447903501715</FriendlyName>
 			<PhoneNumber>+447903501715</PhoneNumber>

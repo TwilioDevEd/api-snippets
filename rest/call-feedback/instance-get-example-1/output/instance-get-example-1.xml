@@ -1,7 +1,7 @@
 <TwilioResponse>
     <Feedback>
         <Sid>CAe03b7cd806070d1f32bdb7f1046a41c0</Sid>
-        <AccountSid>{{ account_sid }}</AccountSid>
+        <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
         <QualityScore>3</QualityScore>
         <Issues>
             <Issue>post-dial-delay</Issue>

@@ -3,7 +3,7 @@ from twilio.access_token import AccessToken
 # You will need your Account Sid and a SigningKey Sid and Secret
 # to generate an Access Token for your SDK endpoint to connect to Twilio.
 
-account_sid = "{{ account_sid }}"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 signingkey_sid = SID
 signingkey_secret = SECRET
 

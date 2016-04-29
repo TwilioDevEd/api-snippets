@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains.json \
-    -u '{{ account_sid }}:{{ auth_token }}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains.json \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
