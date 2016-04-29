@@ -12,12 +12,16 @@ module LanguageHandler
     def replace_and_relocate(path)
       file = File.open(File.expand_path(path))
       content = file.read
-      write_content(text_with_credentials(content), path)
+      write_content(text_with_replacements(content), path)
     end
 
     private
 
     attr_reader :base_path
+
+    def text_with_replacements(file_content)
+      text_with_credentials(file_content)
+    end
 
     def text_with_credentials(file_content)
       replaced = file_content.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', TWILIO_ACCOUNT_SID)

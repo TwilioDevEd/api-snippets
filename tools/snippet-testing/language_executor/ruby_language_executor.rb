@@ -5,7 +5,7 @@ module LanguageExecutor
     private
 
     def execute(file)
-      system("ruby", file)
+      execute_with_suppressed_output("ruby #{file}")
     end
   end
 end

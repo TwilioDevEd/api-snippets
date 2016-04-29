@@ -5,7 +5,7 @@ module LanguageExecutor
     private
 
     def execute(file)
-      system("node", file)
+      execute_with_suppressed_output("node #{file}")
     end
   end
 end

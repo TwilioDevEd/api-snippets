@@ -5,7 +5,7 @@ module LanguageExecutor
     private
 
     def execute(file)
-      system("python", file)
+      execute_with_suppressed_output("python #{file}")
     end
   end
 end

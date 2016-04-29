@@ -44,6 +44,7 @@ Dir.glob('output/**/') do |directory|
   LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('py')
   LANGUAGE_EXECUTORS.fetch('rb').test_snippet(directory) if directory.include?('rb')
   LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('js')
+  LANGUAGE_EXECUTORS.fetch('curl').test_snippet(directory) if directory.include?('curl')
 end
 
 if ErrorLogger.instance.build_failed?

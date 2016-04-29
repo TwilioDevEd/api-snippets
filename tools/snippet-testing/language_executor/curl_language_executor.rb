@@ -2,10 +2,10 @@ require_relative 'base_language_executor'
 
 module LanguageExecutor
   class CurlLanguageExecutor < BaseLanguageExecutor
-    def test_snippet(path)
-      Dir.glob(path + '/*.curl') do |file|
-        puts file
-      end
+    private
+
+    def execute(file)
+      execute_with_suppressed_output("sh #{file}")
     end
   end
 end

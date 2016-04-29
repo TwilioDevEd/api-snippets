@@ -14,5 +14,9 @@ module LanguageExecutor
     def execute(file)
       raise 'this method must be implemented in child clases'
     end
+
+    def execute_with_suppressed_output(command)
+      system("#{command} > /dev/null 2>&1")
+    end
   end
 end
