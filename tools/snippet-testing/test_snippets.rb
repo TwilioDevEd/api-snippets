@@ -1,4 +1,5 @@
 require 'json'
+require 'colorize'
 require_relative 'error_logger'
 Dir[File.dirname(__FILE__) + '/language_handler/*.rb'].each { |file| require File.expand_path(file) }
 Dir[File.dirname(__FILE__) + '/language_executor/*.rb'].each { |file| require File.expand_path(file) }
@@ -42,19 +43,17 @@ end
 Dir.glob('output/**/') do |directory|
   LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('py')
   LANGUAGE_EXECUTORS.fetch('rb').test_snippet(directory) if directory.include?('rb')
+  LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('js')
 end
 
 if ErrorLogger.instance.build_failed?
-  puts "\n\n\n---------------------------------------------------------------"
-  puts '-------------There were errors on these files:-----------------'
   ErrorLogger.instance.print_errors
-
   exit(1)
 end
 
-puts '################################'
-puts '#                              #'
-puts '# Build Finished Successfully! #'
-puts '#                              #'
-puts '################################'
+puts "################################\n"\
+     "#                              #\n"\
+     "# Build Finished Successfully! #\n"\
+     "#                              #\n"\
+     "################################".green
 

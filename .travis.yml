@@ -7,13 +7,18 @@ before_install:
 - sudo pip install --upgrade pip
 - python -V
 - pip -V
+- curl -sL https://deb.nodesource.com/setup | sudo bash -
+- sudo apt-get install -y nodejs
 install:
 - sudo pip install -U twilio
 - gem install twilio-ruby
 - gem install json
+- gem install colorize
+- sudo npm install -g twilio
 script:
 - ruby tools/snippet-testing/test_snippets.rb
 env:
   global:
+  - NODE_PATH=/usr/lib/node_modules
   - secure: Odf9EvKRNWEmJtHNxmj7xNXoDgjH0xj7iYknr3V5m6i0TPE9UFBEXoy0vumeqzhmaQD66ZRobn8LEvu0jyXEQUvCRifDjC3FtDmo53WLp89GrEn28HphIEUahd02CQwelCmxKr3HmDP41O+DF2hEwAoc1Q1woOPMTGwuyPakOJzbFq8h67Hb7o3mzzR3om+FymTCDNxTevJHKQS5pFgGBXEXjIuTttd2WxJAcuBBvQ1WVXJFpV3Hi6BvV4W8e+Op8vHWbChl2FGGNQ5Td4NZDqqw27gmM5og7ldpfFTzzIAMfaayTHzU+/gUlINQuDvGffGZTL/M0csqpkXFcS8md+TlkqCaj41lw46vU1WZBxLs5rBI2RHI19uRAHU322xBQw92ReokaRyeic0GpObaTJIUYo6+lI0M/Q03dTGz+xE1w0bNDzYE4szjQoTQXxfS1p3pj/WemvEx6pAah+wB1ZV6UpvLrFNlfdTOMUStVMUvmFk9qVM6XqH0UfZo7AWU78X06F26BHScLqpEud+OivnzMB/7hZvagK6KJGpb/gZ/JitVm3eRDlIeqWJpMKYR8DbQRhrh6WY9VGDNTAQ8LaCBtSErDWMCVm/ewyBEfsn/yZXicBoH2w8v9VAU9SsZuq3bOZOY4rEq0TRLiciEAs7T4J6NZ/33Mux6FxEit0k=
   - secure: hJ4p1fgk5Ou+RzlwXUlrwoHyXWwWVorCM4xET9IlZe8cf54Zj2ynv8I8CX9aqJ9JPvdbdaxG7aqJeTE/s/3e11HKdWU2Cto8Z6rUBbPjtQErJk2iz+Iyjwxv8yoMIy7QGk/jROhWBQIZah3IZaZbq5Ad0F6oD3exBhfEpNcLi8raMddtdcCEFTW0Lbq2y2zGe1eadcwmVVvjYHQnSsBW3l/a/1SoBtiL7HFRdfzdF+KDFTyKG5uNAOVvrV0Z2UcjHolY5Bh/x8yciqiNyP8VHdJZm3FrGp+FQOQ0z5dj6VlkUhodXCKYTgMgKcgmH10O/+/ScmQv4sRhCmPzAG+L40K4Nojprn2arWRqpjvyCJZZERnUUftctApXhKfrX63jIHeXhreOiXQJ0lwJi+rtphDebXQkWYChn73E82bZxP/FHix9gIbY8abtkcMk0sMU2D1SUucfpQk5usIAYrqUaLJIsWLcg+ndoKbvbvWQX9cN6zjEk9C/2/eapRvhWlA7ouK29fIhFQ+mogi9ENwp936qwUQt7LL5/FK25p1SdEStF71Z+wVC09qBC0ZRJombUxGPFqNSrnPeWN2SwhRuW9hjh4lZa//imTH16WTFUJHAHYIG5cNkiYJ+Hl9OBU+JB5oMeu70y/6riQ0Xqo41oAP7+RjubWTVJ/HjtVjewOk=

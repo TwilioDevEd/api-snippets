@@ -1,4 +1,5 @@
 require 'singleton'
+require 'colorize'
 
 class ErrorLogger
   include Singleton
@@ -16,7 +17,9 @@ class ErrorLogger
   end
 
   def print_errors
-    errors.each { |error| puts error }
+    puts "\n\n\n###############################################################\n"\
+         "#############There were errors on these files:#################\n".red
+    errors.each { |error| puts error.red }
   end
 
   attr_reader :errors
