@@ -40,11 +40,12 @@ Dir.glob("**/") do |directory|
   end
 end
 
-Dir.glob('output/**/') do |directory|
+Dir.glob(OUTPUT_PATH + '**/') do |directory|
   LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('py')
   LANGUAGE_EXECUTORS.fetch('rb').test_snippet(directory) if directory.include?('rb')
   LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('js')
   LANGUAGE_EXECUTORS.fetch('curl').test_snippet(directory) if directory.include?('curl')
+  LANGUAGE_EXECUTORS.fetch('php').test_snippet(directory) if directory.include?('php')
 end
 
 if ErrorLogger.instance.build_failed?

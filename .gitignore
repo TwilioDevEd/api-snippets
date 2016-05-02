@@ -39,3 +39,4 @@ node_modules
 # Testing
 output/
 .env
+vendor/
