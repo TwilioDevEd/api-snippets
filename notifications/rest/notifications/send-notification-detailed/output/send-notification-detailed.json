@@ -1,0 +1,25 @@
+{
+  "sid": "NOxxx",
+  "account_sid": "ACxxx",
+  "service_sid": "ISxxx",  
+  "date_created": "2015-08-26T00:07:12Z",
+  "identities": ["Bob"],
+  "tags": [],
+  "priority": "high",
+  "ttl": 2419200,
+  "title":"Generic loooooooong title for all Bindings",
+  "body":"This is the body for all Bindings",
+  "sound": null,
+  "action": null,
+  "data": null,
+  "gcm":{
+    "notification":{
+      "tag":"MyTag"
+    }
+  },
+  "apn":{
+    "aps":{
+      "title":"Short title for Watch."
+    }
+  }
+}
