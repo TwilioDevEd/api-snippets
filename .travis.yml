@@ -3,6 +3,7 @@ language: ruby
 rvm:
 - rvm 2.2.2
 before_install:
+- jdk_switcher use oraclejdk8
 - sudo apt-get install python-pip python2.7-dev build-essential
 - sudo pip install --upgrade pip
 - python -V
@@ -12,6 +13,9 @@ before_install:
 - sudo apt-get install curl php5-cli git php5-curl
 - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin
   --filename=composer
+- sudo add-apt-repository ppa:cwchien/gradle -y
+- sudo apt-get update
+- sudo apt-get install gradle
 install:
 - sudo pip install -U twilio
 - gem install twilio-ruby

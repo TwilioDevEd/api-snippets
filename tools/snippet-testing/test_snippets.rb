@@ -24,12 +24,14 @@ LANGUAGE_EXECUTORS = {
   'curl' => LanguageExecutor::CurlLanguageExecutor.new
 }
 
+puts '####### Snippets Marked For Testing #######'
 Dir.glob("**/") do |directory|
   next if directory.include?('testing-tools') || !File.exist?("#{directory}meta.json")
 
   json_object = JSON.parse(File.read("#{directory}meta.json"))
   next unless json_object.fetch('test', 'false').downcase == 'true'
-  puts "------#{directory}-------"
+  puts "- #{directory}"
+
   Dir[directory + '*'].each do |file|
     path = File.expand_path(file)
     next if File.directory?(path)
@@ -46,6 +48,7 @@ Dir.glob(OUTPUT_PATH + '**/') do |directory|
   LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('js')
   LANGUAGE_EXECUTORS.fetch('curl').test_snippet(directory) if directory.include?('curl')
   LANGUAGE_EXECUTORS.fetch('php').test_snippet(directory) if directory.include?('php')
+  LANGUAGE_EXECUTORS.fetch('java').test_snippet(directory) if directory.include?('java')
 end
 
 if ErrorLogger.instance.build_failed?

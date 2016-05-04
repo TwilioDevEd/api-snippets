@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "Example"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.twilio.sdk:twilio-java-sdk:6.3.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.6'
+}

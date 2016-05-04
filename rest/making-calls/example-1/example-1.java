@@ -9,7 +9,7 @@ import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -23,8 +23,8 @@ public class Example {
     params.add(new BasicNameValuePair("Url", "http://demo.twilio.com/docs/voice.xml"));
     params.add(new BasicNameValuePair("To", "+14155551212"));
     params.add(new BasicNameValuePair("From", "+14158675309"));
-    
-    
+
+
     CallFactory callFactory = client.getAccount().getCallFactory();
     Call call = callFactory.create(params);
     System.out.println(call.getSid());
