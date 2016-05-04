@@ -1,0 +1,5 @@
+curl -G https://notifications.twilio.com/v1/Services/ISxxx/Bindings \
+    -d 'BindingType=gcm' \ 
+    -d 'Tag=new user' \
+    -d 'StartDate=2015-08-25' \
+    -u '{twilio account sid}:{twilio auth token}'

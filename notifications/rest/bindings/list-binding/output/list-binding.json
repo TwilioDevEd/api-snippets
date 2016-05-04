@@ -1,0 +1,47 @@
+{
+  "bindings": [
+    {
+      "sid": "BSxxx",
+      "account_sid": "ACxxx",
+      "service_sid": "ISxxx",
+      "date_created": "2015-08-26T00:07:12Z",
+      "date_updated": "2015-08-26T00:07:12Z",
+      "notification_protocol_version": "3",
+      "endpoint": "endpointID",
+      "identity": "bob",
+      "binding_type": "gcm",
+      "address": "xxx",
+      "tags": [
+        "premium", 
+        "new user"
+      ],
+      "url": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings/BSxxx"
+    },
+    {
+      "sid": "BSxxx",
+      "account_sid": "ACxxx",
+      "service_sid": "ISxxx",
+      "date_created": "2016-03-16T10:08:00Z",
+      "date_updated": "2016-03-16T10:08:00Z",
+      "notification_protocol_version": "3",
+      "endpoint": "Endpoint ID 2",
+      "identity": "Alice",
+      "binding_type": "gcm",
+      "address": "xxx",
+      "tags": [
+        "normal",
+        "new user"
+      ],
+      "url": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings/BSxxx"
+}
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "bindings"
+  }
+}

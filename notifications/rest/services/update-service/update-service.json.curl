@@ -1,0 +1,3 @@
+curl -XPOST https://notifications.twilio.com/v1/Services/ISxxx \
+    -d "FriendlyName=NewFlowHipSlackChatDock" \
+    -u '{twilio account sid}:{twilio auth token}'
