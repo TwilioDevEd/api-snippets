@@ -1,14 +1,14 @@
 {
     "page": 0,
     "page_size": 50,
-    "uri": "\/2010-04-01\/Accounts\/ACdc5f132a3c49700934481addd5ce1659\/IncomingPhoneNumbers.xml?PhoneNumber=415",
-    "first_page_uri": "\/2010-04-01\/Accounts\/ACdc5f132a3c49700934481addd5ce1659\/IncomingPhoneNumbers.xml?PhoneNumber=415&Page=0&PageSize=50",
+    "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers.xml?PhoneNumber=415",
+    "first_page_uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers.xml?PhoneNumber=415&Page=0&PageSize=50",
     "previous_page_uri": null,
     "next_page_uri": null,
     "incoming_phone_numbers": [
         {
             "sid": "PN3f94c94562ac88dccf16f8859a1a8b25",
-            "account_sid": "ACdc5f132a3c49700934481addd5ce1659",
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "friendly_name": "Jenny",
             "phone_number": "+14158675309",
             "voice_url": "http:\/\/demo.twilio.com\/docs/voice.xml",
@@ -32,7 +32,7 @@
             "status_callback": null,
             "status_callback_method": null,
             "api_version": "2010-04-01",
-            "uri": "\/2010-04-01\/Accounts\/ACdc5f132a3c49700934481addd5ce1659\/IncomingPhoneNumbers\/PN3f94c94562ac88dccf16f8859a1a8b26.json"
+            "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers\/PN3f94c94562ac88dccf16f8859a1a8b26.json"
         },
         ...
     ]

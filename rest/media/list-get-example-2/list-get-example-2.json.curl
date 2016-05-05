@@ -1,3 +1,3 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Media.json \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media.json \
     -d "ParentSid=MMdc5f132a3c49700934481addd5ce1659" \
-    -u 'ACda6f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

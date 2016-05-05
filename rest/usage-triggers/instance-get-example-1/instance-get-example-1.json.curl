@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json \
-    -u 'ACed732a3c49700934481addd5ce1659f0:{AuthToken}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

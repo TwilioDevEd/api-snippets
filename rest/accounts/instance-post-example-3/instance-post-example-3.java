@@ -11,7 +11,7 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "AC12345678123456781234567812345678";
+  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {
@@ -19,7 +19,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Account account = client.getAccount("AC12345678123456781234567812345678");
+    Account account = client.getAccount("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
     // Build a filter for the AccountList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("Status", "closed"));

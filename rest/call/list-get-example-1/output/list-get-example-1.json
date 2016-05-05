@@ -1,16 +1,16 @@
 {
     "page": 0,
     "page_size": 50,
-    "uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=1",
-    "first_page_uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=50&Page=0",
+    "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls.json?PageSize=1",
+    "first_page_uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls.json?PageSize=50&Page=0",
     "previous_page_uri": null,
-    "next_page_uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls.json?PageSize=50&Page=1&AfterSid=CA8d67bfc16f4b472a5b7c7bbf3c7977ae",
+    "next_page_uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls.json?PageSize=50&Page=1&AfterSid=CA8d67bfc16f4b472a5b7c7bbf3c7977ae",
     "calls": [{
         "sid": "CA4c22bfc16f4b484d8b7cbe0f3c79bcc7",
         "date_created": "Tue, 12 Jun 2012 03:25:49 +0000",
         "date_updated": "Tue, 12 Jun 2012 03:27:05 +0000",
         "parent_call_sid": null,
-        "account_sid": "AC5ef877a5fe4238be081ea6f3c44186f3",
+        "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "to": "+18085553279",
         "to_formatted": "(808) 555-3279",
         "from": "+17075559463",
@@ -26,10 +26,10 @@
         "api_version": "2010-04-01",
         "forwarded_from": null,
         "caller_name": null,
-        "uri": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7.json",
+        "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7.json",
         "subresource_uris": {
-            "notifications": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Notifications.json",
-            "recordings": "\/2010-04-01\/Accounts\/AC5ef877a5fe4238be081ea6f3c44186f3\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Recordings.json"
+            "notifications": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Notifications.json",
+            "recordings": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7\/Recordings.json"
         }
     }, ... ]
 }
