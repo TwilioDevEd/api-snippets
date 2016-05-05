@@ -1,4 +1,4 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACed732a3c49700934481addd5ce1659f0/Usage/Triggers.json \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers.json \
     -d "Recurring=daily" \
     -d "UsageCategory=calls" \
-    -u 'ACed732a3c49700934481addd5ce1659f0:{AuthToken}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

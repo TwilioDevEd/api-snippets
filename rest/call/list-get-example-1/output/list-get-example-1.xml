@@ -1,15 +1,15 @@
 <TwilioResponse>
 	<Calls page="0" pagesize="1" 
-	uri="/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls.xml?PageSize=50" 
-	firstpageuri="/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls.xml?PageSize=50&amp;Page=0" 
+	uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.xml?PageSize=50" 
+	firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.xml?PageSize=50&amp;Page=0" 
 	previouspageuri="" 
-	nextpageuri="/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls.xml?PageSize=50&amp;Page=1&amp;AfterSid=CA8d67bfc16f4b472a5b7c7bbf3c7977ae">
+	nextpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.xml?PageSize=50&amp;Page=1&amp;AfterSid=CA8d67bfc16f4b472a5b7c7bbf3c7977ae">
 		<Call>
 			<Sid>CA4c22bfc16f4b484d8b7cbe0f3c79bcc7</Sid>
 			<DateCreated>Tue, 12 Jun 2012 03:25:49 +0000</DateCreated>
 			<DateUpdated>Tue, 12 Jun 2012 03:27:05 +0000</DateUpdated>
 			<ParentCallSid/>
-			<AccountSid>AC5ef877a5fe4238be081ea6f3c44186f3</AccountSid>
+			<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 			<To>+18085553279</To>
 			<ToFormatted>(808) 555-3279</ToFormatted>
 			<From>+17075559463</From>
@@ -25,10 +25,10 @@
 			<ApiVersion>2010-04-01</ApiVersion>
 			<ForwardedFrom/>
 			<CallerName/>
-			<Uri>/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7.xml</Uri>
+			<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7.xml</Uri>
 			<SubresourceUris>
-				<Notifications>/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7/Notifications.xml</Notifications>
-				<Recordings>/2010-04-01/Accounts/AC5ef877a5fe4238be081ea6f3c44186f3/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7/Recordings.xml</Recordings>
+				<Notifications>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7/Notifications.xml</Notifications>
+				<Recordings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA4c22bfc16f4b484d8b7cbe0f3c79bcc7/Recordings.xml</Recordings>
 			</SubresourceUris>
 		</Call>
 		...

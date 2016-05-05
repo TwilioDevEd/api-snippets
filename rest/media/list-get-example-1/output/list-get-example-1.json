@@ -1,26 +1,26 @@
-{ "first_page_uri":"/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media.json?PageSize=50&Page=0",
+{ "first_page_uri":"/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media.json?PageSize=50&Page=0",
     "media_list":[
        {
           "sid":"ME85ebf7e12cb821f84b319340424dcb02",
-          "account_sid":"ACda6f132a3c49700934481addd5ce1659",
+          "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
           "parent_sid":"MM800f449d0399ed014aae2bcc0cc2f2ec",
           "content_type":"image/png",
           "date_created":"Wed, 25 Sep 2013 22:47:18 +0000",
           "date_updated":"Wed, 25 Sep 2013 22:47:19 +0000",
-          "uri":"/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media/ME85ebf7e12cb821f84b319340424dcb02.json"
+          "uri":"/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media/ME85ebf7e12cb821f84b319340424dcb02.json"
        },
        {
           "sid":"ME8d8f717e2d6e5383055b3cd150ac5f54",
-          "account_sid":"ACda6f132a3c49700934481addd5ce1659",
+          "account_sid":"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
           "parent_sid":"MM800f449d0399ed014aae2bcc0cc2f2ec",
           "content_type":"image/png",
           "date_created":"Wed, 25 Sep 2013 22:47:18 +0000",
           "date_updated":"Wed, 25 Sep 2013 22:47:19 +0000",
-          "uri":"/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media/ME8d8f717e2d6e5383055b3cd150ac5f54.json"
+          "uri":"/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media/ME8d8f717e2d6e5383055b3cd150ac5f54.json"
        }
     ],
     "previous_page_uri":null,
-    "uri":"/2010-04-01/Accounts/ACda6f132a3c49700934481addd5ce1659/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media.json?PageSize=50&Page=0",
+    "uri":"/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media.json?PageSize=50&Page=0",
     "page_size":50,
     "next_page_uri":null,
     "page":0

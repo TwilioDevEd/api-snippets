@@ -1,7 +1,7 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls \
     -d "To=sip:kate@example.com" \
     -d "From=Jack" \
     -d "Url=http://www.example.com/sipdial.xml" \
     -d "SipAuthUsername=jack" \
     -d "SipAuthPassword=secret" \
-    -u "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:{AuthToken}"
+    -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}"
