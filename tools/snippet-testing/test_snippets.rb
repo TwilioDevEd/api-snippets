@@ -12,7 +12,8 @@ LANGUAGE_HANDLERS = {
   '.js'   => LanguageHandler::NodeLanguageHandler.new(OUTPUT_PATH),
   '.php'  => LanguageHandler::PhpLanguageHandler.new(OUTPUT_PATH),
   '.py'   => LanguageHandler::PythonLanguageHandler.new(OUTPUT_PATH),
-  '.curl' => LanguageHandler::CurlLanguageHandler.new(OUTPUT_PATH)
+  '.curl' => LanguageHandler::CurlLanguageHandler.new(OUTPUT_PATH),
+  '.cs'   => LanguageHandler::CsharpLanguageHandler.new(OUTPUT_PATH)
 }
 
 LANGUAGE_EXECUTORS = {
@@ -21,7 +22,8 @@ LANGUAGE_EXECUTORS = {
   'js'   => LanguageExecutor::NodeLanguageExecutor.new,
   'php'  => LanguageExecutor::PhpLanguageExecutor.new,
   'py'   => LanguageExecutor::PythonLanguageExecutor.new,
-  'curl' => LanguageExecutor::CurlLanguageExecutor.new
+  'curl' => LanguageExecutor::CurlLanguageExecutor.new,
+  'cs'   => LanguageExecutor::CsharpLanguageExecutor.new
 }
 
 puts '####### Snippets Marked For Testing #######'
@@ -43,12 +45,14 @@ Dir.glob("**/") do |directory|
 end
 
 Dir.glob(OUTPUT_PATH + '**/') do |directory|
-  LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('py')
-  LANGUAGE_EXECUTORS.fetch('rb').test_snippet(directory) if directory.include?('rb')
-  LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('js')
-  LANGUAGE_EXECUTORS.fetch('curl').test_snippet(directory) if directory.include?('curl')
-  LANGUAGE_EXECUTORS.fetch('php').test_snippet(directory) if directory.include?('php')
-  LANGUAGE_EXECUTORS.fetch('java').test_snippet(directory) if directory.include?('java')
+  LANGUAGE_EXECUTORS.fetch('py').test_snippet(directory) if directory.include?('/py/')
+  LANGUAGE_EXECUTORS.fetch('rb').test_snippet(directory) if directory.include?('/rb/')
+  LANGUAGE_EXECUTORS.fetch('js').test_snippet(directory) if directory.include?('/js/')
+  LANGUAGE_EXECUTORS.fetch('curl').test_snippet(directory) if directory.include?('/curl/')
+  LANGUAGE_EXECUTORS.fetch('php').test_snippet(directory) if directory.include?('/php/')
+  LANGUAGE_EXECUTORS.fetch('java').test_snippet(directory) if directory.include?('/java/')
+  LANGUAGE_EXECUTORS.fetch('cs').test_snippet(directory) if directory.include?('/cs/')
+
 end
 
 if ErrorLogger.instance.build_failed?

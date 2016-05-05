@@ -1,13 +1,11 @@
 sudo: required
-language: ruby
-rvm:
-- rvm 2.2.2
+language: csharp
+mono:
+- latest
 before_install:
 - jdk_switcher use oraclejdk8
 - sudo apt-get install python-pip python2.7-dev build-essential
 - sudo pip install --upgrade pip
-- python -V
-- pip -V
 - curl -sL https://deb.nodesource.com/setup | sudo bash -
 - sudo apt-get install -y nodejs
 - sudo apt-get install curl php5-cli git php5-curl
