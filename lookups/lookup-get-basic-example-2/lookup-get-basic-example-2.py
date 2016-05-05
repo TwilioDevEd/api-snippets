@@ -9,7 +9,7 @@ except ImportError:
     from urllib import quote
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "AC3094732a3c49700934481addd5ce1659"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "{{ auth_token }}"
 client = TwilioLookupsClient(account_sid, auth_token)
 

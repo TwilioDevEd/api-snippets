@@ -7,7 +7,7 @@ import com.twilio.sdk.resource.list.CallList;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "AC5ef877a5fe4238be081ea6f3c44186f3";
+  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   public static final String AUTH_TOKEN = "{{ auth_token }}";
 
   public static void main(String[] args) throws TwilioRestException {

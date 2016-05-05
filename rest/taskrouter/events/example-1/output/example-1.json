@@ -12,7 +12,7 @@
     {
       "sid": "EVfddc1f055300995f76cf65ef99df05cf",
       "description": "Worker Cases Worker updated to Ready Activity",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "event_type": "worker.activity.update",
       "resource_type": "worker",
       "resource_sid": "WKa0f24176fee1938e495760b1122995b6",
@@ -39,7 +39,7 @@
     {
       "sid": "EV931fd4a3f59617469e50c4c92e1e5011",
       "description": "Task WTd480a09f869b59812e7690af3e7cf23c assigned to Worker Cases Worker with Reservation WR91b5d973ba3a81fe03fcb81e40f14d72",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "event_type": "reservation.created",
       "resource_type": "task",
       "resource_sid": "WTd480a09f869b59812e7690af3e7cf23c",
@@ -75,7 +75,7 @@
     {
       "sid": "EV53ffa071773c683e5dee4da8df8809c5",
       "description": "Worker Cases Worker updated to Reserved Activity",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "event_type": "worker.activity.update",
       "resource_type": "worker",
       "resource_sid": "WKa0f24176fee1938e495760b1122995b6",

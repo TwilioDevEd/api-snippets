@@ -1,6 +1,6 @@
 <TwilioResponse>
 	<AuthorizedConnectApp>
-		<AccountSid>AC5ef872f6da5a21de157d80997a64bd33</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<Permissions>
 			<Permission>get-all</Permission>
 			<Permission>post-all</Permission>

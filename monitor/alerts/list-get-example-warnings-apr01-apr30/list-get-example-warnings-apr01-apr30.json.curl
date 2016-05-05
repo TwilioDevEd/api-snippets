@@ -2,4 +2,4 @@ $ curl -G https://monitor.twilio.com/v1/Alerts \
     -d "StartDate=2015-04-01T00:00:00Z" \
     -d "EndDate=2015-04-30T23:59:59Z" \
     -d "LogLevel=warning" \
-    -u 'ACda6f132a3c49700934481addd5ce1659:{AuthToken}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
