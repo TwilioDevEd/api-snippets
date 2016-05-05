@@ -35,3 +35,9 @@ node_modules
 
 # Miscellaneous
 .DS_Store
+
+# Testing
+output/
+.env
+vendor/
+nuget/
