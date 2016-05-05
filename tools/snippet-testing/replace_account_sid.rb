@@ -15,6 +15,6 @@ rescue
 end
 
 Dir.glob("**/*") do |file|
-  next if file.include?('snippet-testing') || file.include?('nuget/') || file.include?('vendor/')
+  next if file.index(/^tools\//) || file.include?('nuget/') || file.include?('vendor/') || file.include?('output/')
   replace_account_sid(file) unless File.directory?(file)
 end
