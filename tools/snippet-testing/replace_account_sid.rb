@@ -1,12 +1,8 @@
 def replace_account_sid(file_path)
   file = File.open(File.expand_path(file_path), 'r')
   original = file.read
-  replaced = original.gsub('{{ account_sid }}', 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  replaced = original.gsub(/AC\w{32}/, 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   replaced = replaced.gsub('{AuthToken}', '{{ auth_token }}')
-
-  # This was the original replace
-  # replaced = original.gsub(/AC\w{32}/, '{{ account_sid }}')
-  # replaced = replaced.gsub('{AuthToken}', '{{ auth_token }}')
 
   unless original == replaced
     puts replaced
