@@ -21,11 +21,9 @@ install:
 - gem install colorize
 - sudo npm install -g twilio
 - composer install
-- nuget install RestSharp -Version 105.2.3
-- nuget install Twilio -Version 4.7.1
-- nuget install Twilio.IpMessaging -Version 1.2.0
-- nuget install Twilio.Pricing -Version 1.1.0
-- ls
+- nuget install Twilio -Version 4.7.1 -OutputDirectory nuget
+- nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
+- nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
 script:
 - ruby tools/snippet-testing/test_snippets.rb
 env:

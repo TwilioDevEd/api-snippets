@@ -23,7 +23,13 @@ LANGUAGE_EXECUTORS = {
   'php'  => LanguageExecutor::PhpLanguageExecutor.new,
   'py'   => LanguageExecutor::PythonLanguageExecutor.new,
   'curl' => LanguageExecutor::CurlLanguageExecutor.new,
-  'cs'   => LanguageExecutor::CsharpLanguageExecutor.new
+  'cs'   => LanguageExecutor::CsharpLanguageExecutor.new(
+    [
+      'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
+      'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+      'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll'
+    ]
+  )
 }
 
 puts '####### Snippets Marked For Testing #######'
@@ -64,5 +70,5 @@ puts "################################\n"\
      "#                              #\n"\
      "# Build Finished Successfully! #\n"\
      "#                              #\n"\
-     "################################".green
+     "################################"
 
