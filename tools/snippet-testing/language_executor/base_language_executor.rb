@@ -17,8 +17,9 @@ module LanguageExecutor
     end
 
     def execute_with_suppressed_output(command)
-      exit_code = system("#{command} > /dev/null 2>&1")
-      exit_code ? (puts 'success'.green) : ('failure'.red)
+      exit_code = system("#{command} > /dev/null")
+      # exit_code = system("#{command} > /dev/null 2>&1")
+      exit_code ? (puts 'success'.green) : (puts 'failure'.red)
       exit_code
     end
   end
