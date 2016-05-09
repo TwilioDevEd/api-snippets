@@ -1,8 +1,8 @@
 {
-	"sid": "FSa346467ca321c71dbd5e12f627deb854",
+    "sid": "FSa346467ca321c71dbd5e12f627deb854",
     "start_date": "2014-01-01",
     "end_date": "2014-01-31",
-	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "include_subaccounts": true,
     "status": "in-progress",
     "call_count": null,
@@ -11,6 +11,6 @@
     "quality_score_median": null,
     "quality_score_standard_deviation": null,
     "issues": null,
-	"date_created": "Tue, 10 Aug 2010 08:02:17 +0000",
-	"date_updated": "Tue, 10 Aug 2010 08:02:47 +0000",
+    "date_created": "Tue, 10 Aug 2010 08:02:17 +0000",
+    "date_updated": "Tue, 10 Aug 2010 08:02:47 +0000",
 }
