@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC3094732a3c49700934481addd5ce1659/IncomingPhoneNumbers.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers.json \
     -d "PhoneNumber=33" \
-    -u 'AC3094732a3c49700934481addd5ce1659:{AuthToken}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

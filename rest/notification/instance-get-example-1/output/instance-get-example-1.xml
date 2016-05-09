@@ -1,7 +1,7 @@
 <TwilioResponse>
 	<Notification>
 		<Sid>NO5a7a84730f529f0a76b3e30c01315d1a</Sid>
-		<AccountSid>ACda6f1e11047ebd6fe7a55f120be3a900</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<CallSid>CAa8857b0dcc71b4909aced594f7f87453</CallSid>
 		<Log>0</Log>
 		<ErrorCode>11205</ErrorCode>
@@ -16,7 +16,7 @@
 		<RequestMethod>POST</RequestMethod>
 		<RequestUrl>http://demo.twilio.com/welcome</RequestUrl>
 		<RequestVariables>
-			AccountSid=ACda6f1e11047ebd6fe7a55f120be3a900&CallStatus=in-progress&Called=4152374451&CallerCountry=US&CalledZip=94937&CallerCity=&Caller=4150000000&CalledCity=INVERNESS&CalledCountry=US&DialStatus=answered&CallerState=California&CallSid=CAa8857b0dcc71b4909aced594f7f87453&CalledState=CA&CallerZip=
+			AccountSid=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&CallStatus=in-progress&Called=4152374451&CallerCountry=US&CalledZip=94937&CallerCity=&Caller=4150000000&CalledCity=INVERNESS&CalledCountry=US&DialStatus=answered&CallerState=California&CallSid=CAa8857b0dcc71b4909aced594f7f87453&CalledState=CA&CallerZip=
 		</RequestVariables>
 		<ResponseHeaders>
 			Date=Tue%2C+09+Feb+2010+01%3A23%3A38+GMT&Vary=Accept-Encoding&Content-Length=91&Content-Type=text%2Fxml&Accept-Ranges=bytes&Server=Apache%2F2.2.3+%28CentOS%29&X-Powered-By=PHP%2F5.1.6
@@ -25,7 +25,7 @@
 		<ApiVersion>2008-08-01</ApiVersion>
 		<DateUpdated>Tue, 09 Feb 2010 01:23:53 +0000</DateUpdated>
 		<Uri>
-			/2010-04-01/Accounts/ACda6f1e11047ebd6fe7a55f120be3a900/Notifications/NO5a7a84730f529f0a76b3e30c01315d1a
+			/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications/NO5a7a84730f529f0a76b3e30c01315d1a
 		</Uri>
 	</Notification>
 </TwilioResponse>

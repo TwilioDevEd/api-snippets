@@ -1,10 +1,10 @@
 {
-   "usage_record_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records.json?Category=sms", 
+   "usage_record_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records.json?Category=sms", 
    "date_updated": "Sat, 13 Oct 2012 21:32:30 +0000", 
    "date_fired": null, 
    "friendly_name": "Trigger for sms at usage of 1000", 
-   "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/UTc142bed7b38c4f8186ef41a309814fd2.json", 
-   "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+   "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UTc142bed7b38c4f8186ef41a309814fd2.json", 
+   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
    "callback_method": "POST", 
    "trigger_by": "usage", 
    "sid": "UTc142bed7b38c4f8186ef41a309814fd2", 

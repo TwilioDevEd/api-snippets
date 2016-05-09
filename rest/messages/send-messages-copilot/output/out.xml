@@ -5,7 +5,7 @@
         <DateCreated>Tue, 03 Nov 2015 20:28:44 +0000</DateCreated>
         <DateUpdated>Tue, 03 Nov 2015 20:28:44 +0000</DateUpdated>
         <DateSent/>
-        <AccountSid>AC32a3c49700934481addd5ce1659f04d2</AccountSid>
+        <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
         <To>+16518675309</To>
         <From/>
         <MessagingServiceSid>MG9752274e9e519418a7406176694466fa</MessagingServiceSid>
@@ -17,9 +17,9 @@
         <ApiVersion>2010-04-01</ApiVersion>
         <Price/>
         <PriceUnit/>
-        <Uri>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Messages/SM802a848d6e5948aea0a2780200f70825.xml</Uri>
+        <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SM802a848d6e5948aea0a2780200f70825.xml</Uri>
         <SubresourceUris>
-            <Media>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/Messages/SM802a848d6e5948aea0a2780200f70825/Media.xml</Media>
+            <Media>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SM802a848d6e5948aea0a2780200f70825/Media.xml</Media>
         </SubresourceUris>
     </Message>
 </TwilioResponse>

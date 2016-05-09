@@ -1,7 +1,7 @@
 {
   "sid": "WWd42d9fcb655eea2fc0c6210d1b775205",
   "friendly_name": "New SalesMarketingSupport Workflow",
-  "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "workspace_sid": "WS0b37cb82ee097132c15cc5295dbe42a1",
   "assignment_callback_url": "http://example.com",
   "fallback_assignment_callback_url": "",

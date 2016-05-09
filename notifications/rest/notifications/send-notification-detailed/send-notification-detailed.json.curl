@@ -4,4 +4,4 @@ curl -X POST https://notifications.twilio.com/v1/Services/ISxxx/Notifications \
     -d 'Body=This is the body for all Bindings' \
     -d 'Gcm={"notification":{"tag":"MyTag"}}'
     -d 'Apn={"aps":{"title":"Short title for Watch."}}'
-    -u '{twilio account sid}:{twilio auth token}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

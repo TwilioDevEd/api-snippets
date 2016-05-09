@@ -2,7 +2,7 @@
   "authorized_connect_apps": [
     {
       "connect_app_sid": "CNb989fdd207b04d16aee578018ef5fd93",
-      "account_sid": "AC828fd6e37bee469a9aee33475d67db2c",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "permissions": ["get-all", "post-all"],
       "connect_app_friendly_name": "Jenny Tracker",
       "connect_app_description": null,
@@ -13,8 +13,8 @@
   ],
   "page": 0,
   "page_size": 50,
-  "uri": "\/2010-04-01\/Accounts\/AC81e0ca4b0af06b833b6726957613c5d4\/AuthorizedConnectApps\/.json",
-  "first_page_uri": "\/2010-04-01\/Accounts\/AC81e0ca4b0af06b833b6726957613c5d4\/AuthorizedConnectApps\/.json?Page=0&PageSize=50",
+  "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AuthorizedConnectApps\/.json",
+  "first_page_uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AuthorizedConnectApps\/.json?Page=0&PageSize=50",
   "previous_page_uri": null,
   "next_page_uri": null,
 }

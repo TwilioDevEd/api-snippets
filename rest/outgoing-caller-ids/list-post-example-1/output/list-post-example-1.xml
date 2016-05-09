@@ -1,6 +1,6 @@
 <TwilioResponse>
 	<ValidationRequest>
-		<AccountSid>AC228ba5e5fede1b49e100272a8640f438</AccountSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<PhoneNumber>+14158675309</PhoneNumber>
 		<FriendlyName>My Home Phone Number</FriendlyName>
 		<ValidationCode>123456</ValidationCode>

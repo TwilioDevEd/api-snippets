@@ -3,7 +3,7 @@ require 'rubygems'          # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
-account_sid = 'ACde6f1e11047ebd6fe7a55f120be3a900'
+account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = '{{ auth_token }}'
 @client = Twilio::REST::Client.new account_sid, auth_token
 

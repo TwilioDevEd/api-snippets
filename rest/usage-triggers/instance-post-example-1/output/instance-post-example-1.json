@@ -1,10 +1,10 @@
 {
-   "usage_record_uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Records.json?Category=calls", 
+   "usage_record_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records.json?Category=calls", 
    "date_updated": "Sat, 13 Oct 2012 21:24:35 +0000", 
    "date_fired": null, 
    "friendly_name": "Monthly Maximum Call Usage", 
-   "uri": "/2010-04-01/Accounts/ACed70abd024d3f57a4027b5dc2ca88d5b/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json", 
-   "account_sid": "ACed70abd024d3f57a4027b5dc2ca88d5b", 
+   "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json", 
+   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
    "callback_method": "POST", 
    "trigger_by": "usage", 
    "sid": "UT33c6aeeba34e48f38d6899ea5b765ad4", 

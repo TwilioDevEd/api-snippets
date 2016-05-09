@@ -11,7 +11,7 @@
   "workspaces": [
     {
       "sid": "WS7d4813fc78909747b773945352c5b960",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "friendly_name": "Workspace",
       "event_callback_url": "http://callcenterapp.ngrok.com/eventcallback",
       "default_activity_sid": "WAef18703ae3626aa90f6c4eea177aa57b",
@@ -32,7 +32,7 @@
     },
     {
       "sid": "WS7221f08da012fb3890e56c2d1233f4a7",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "friendly_name": "SocketWorkspace",
       "event_callback_url": "",
       "default_activity_sid": "WAb49490f8db22c0311fa91e967243ac77",
@@ -53,7 +53,7 @@
     },
     {
       "sid": "WS0b37cb82ee097132c15cc5295dbe42a1",
-      "account_sid": "AC9242e2195ab0681fd413fc3c03b7d7f8",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "friendly_name": "MyWorkspace",
       "event_callback_url": "",
       "default_activity_sid": "WA019ec124f872366546ed5b3f42428c16",

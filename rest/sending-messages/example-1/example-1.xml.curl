@@ -1,6 +1,6 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Messages \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages \
     -d "Body=Jenny%20please%3F%21%20I%20love%20you%20<3" \
     -d "To=%2B15558675309" \
     -d "From=%2B14158141829" \
     -d "MediaUrl=http://www.example.com/hearts.png" \
-    -u 'AC5ef8732a3c49700934481addd5ce1659:{AuthToken}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

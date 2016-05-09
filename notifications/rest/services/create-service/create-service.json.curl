@@ -2,4 +2,4 @@ curl -XPOST https://notifications.twilio.com/v1/Services \
     -d "FriendlyName=My Awesome Service" \
     -d "ApnCredentialSid=CRxxx" \
     -d "GcmCredentialSid=CRxxx" \
-    -u '{twilio account sid}:{twilio auth token}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
