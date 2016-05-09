@@ -1,4 +1,6 @@
 {
   "title": "Lookup with E.164 formatted number",
-  "type": "server"
+  "type": "server",
+  "description": "Look up a phone number in the E.164 format",
+  "tags": ["lookup", "phone number"]
 }
