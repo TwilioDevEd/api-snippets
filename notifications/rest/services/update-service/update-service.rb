@@ -2,8 +2,8 @@
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
-account_sid = '{twilio account sid}'
-auth_token = '{twilio auth token}'
+account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+auth_token = '{{ auth_token }}'
 
 # Provide a SID for an existing notification service
 service = client.notifications.v1.services('ISxxx')
