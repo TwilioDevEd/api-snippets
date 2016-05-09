@@ -1,22 +1,22 @@
 {
-    "sid": "AC12345678123456781234567812345678",
+    "sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "friendly_name": "MySubaccount",
     "auth_token": "redacted",
     "date_created": "Tue, 25 Jan 2011 19:24:40 +0000",
     "date_updated": "Tue, 25 Jan 2011 19:25:02 +0000",
     "status": "closed",
     "subresource_uris": {
-        "available_phone_numbers": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/AvailablePhoneNumbers.json",
-        "calls": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Calls.json",
-        "conferences": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Conferences.json",
-        "incoming_phone_numbers": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/IncomingPhoneNumbers.json",
-        "notifications": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Notifications.json",
-        "outgoing_caller_ids": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/OutgoingCallerIds.json",
-        "recordings": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Recordings.json",
-        "sandbox": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Sandbox.json",
-        "sms_messages": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/SMS/Messages.json",
-        "transcriptions": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c/Transcriptions.json"
+        "available_phone_numbers": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers.json",
+        "calls": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.json",
+        "conferences": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences.json",
+        "incoming_phone_numbers": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers.json",
+        "notifications": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications.json",
+        "outgoing_caller_ids": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds.json",
+        "recordings": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json",
+        "sandbox": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sandbox.json",
+        "sms_messages": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages.json",
+        "transcriptions": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions.json"
     },
     "type": "Full",
-    "uri": "/2010-04-01/Accounts/AC1365ff479ef6502d85c27be6467a310c.json"
+    "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json"
 }

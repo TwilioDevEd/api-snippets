@@ -1,8 +1,8 @@
 <TwilioResponse>
-	<IncomingPhoneNumbers page="0" pagesize="50" uri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/IncomingPhoneNumbers" firstpageuri="/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/IncomingPhoneNumbers?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
+	<IncomingPhoneNumbers page="0" pagesize="50" uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers" firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers?Page=0&PageSize=50" previouspageuri="" nextpageuri="">
 		<IncomingPhoneNumber>
 			<Sid>PN3f94c94562ac88dccf16f8859a1a8b25</Sid>
-			<AccountSid>ACdc5f1e11047ebd6fe7a55f120be3a900</AccountSid>
+			<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 			<FriendlyName>Long Play</FriendlyName>
 			<PhoneNumber>+14152374451</PhoneNumber>
 			<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
@@ -26,7 +26,7 @@
 			<StatusCallback/>
 			<StatusCallbackMethod/>
 			<ApiVersion>2010-04-01</ApiVersion>
-			<Uri>/2010-04-01/Accounts/ACdc5f1e11047ebd6fe7a55f120be3a900/IncomingPhoneNumbers/PN3f94c94562ac88dccf16f8859a1a8b25</Uri>
+			<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers/PN3f94c94562ac88dccf16f8859a1a8b25</Uri>
 		</IncomingPhoneNumber>
 		...
 	</IncomingPhoneNumbers>
