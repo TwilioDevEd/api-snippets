@@ -1,0 +1,16 @@
+{
+  "sid": "ISxxx",
+  "account_sid": "ACxxx",
+  "friendly_name": "My Awesome Service",
+  "date_created": "2015-08-24T15:28:32Z",
+  "date_updated": "2015-08-24T15:28:32Z",
+  "apn_credential_sid": "CRxxx",
+  "gcm_credential_sid": "CRxxx",
+  "default_apn_notification_protocol_version":"3",
+  "default_gcm_notification_protocol_version":"3",
+  "url": "https://notifications.twilio.com/v1/Services/ISxxx",
+  "links": {
+    "bindings": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings",
+    "notifications": "https://notifications.twilio.com/v1/Services/ISxxx/Notifications"
+  }
+}

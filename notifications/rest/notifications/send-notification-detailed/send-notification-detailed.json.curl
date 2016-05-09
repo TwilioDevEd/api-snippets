@@ -1,0 +1,7 @@
+curl -X POST https://notifications.twilio.com/v1/Services/ISxxx/Notifications \
+    -d 'Identity=Bob' \
+    -d 'Title=Generic loooooooong title for all Bindings' \
+    -d 'Body=This is the body for all Bindings' \
+    -d 'Gcm={"notification":{"tag":"MyTag"}}'
+    -d 'Apn={"aps":{"title":"Short title for Watch."}}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

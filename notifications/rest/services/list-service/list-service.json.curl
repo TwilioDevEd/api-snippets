@@ -1,0 +1,2 @@
+curl -G https://notifications.twilio.com/v1/Services \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
