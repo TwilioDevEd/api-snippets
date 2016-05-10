@@ -13,7 +13,7 @@ class Example
     var pricingClient = new PricingClient(accountSid, authToken);
 
     // Look up pricing information for the UK
-    var country = pricingClient.GetPhoneNumberCountry("GB");
+    var country = pricingClient.GetPhoneNumberCountry("US");
     // Print number pricing for this country
     foreach (PhoneNumberPrice p in country.PhoneNumberPrices)
     {

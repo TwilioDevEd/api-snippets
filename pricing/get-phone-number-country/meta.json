@@ -1,5 +1,5 @@
 {
-  "title": "Retrieve phone number prices for the US",
+  "title": "Get Phone Number Prices for the US",
   "type": "server",
   "test": "true"
 }
