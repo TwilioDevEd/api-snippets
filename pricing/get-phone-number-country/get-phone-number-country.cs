@@ -12,7 +12,7 @@ class Example
     const string authToken = "{{ auth_token }}";
     var pricingClient = new PricingClient(accountSid, authToken);
 
-    // Look up pricing information for the UK
+    // Look up pricing information for the US
     var country = pricingClient.GetPhoneNumberCountry("US");
     // Print number pricing for this country
     foreach (PhoneNumberPrice p in country.PhoneNumberPrices)
