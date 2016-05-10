@@ -5,17 +5,14 @@ conversation.disconnect();
 // This results in a call to ConversationListener#onConversationEnded
 private ConversationListener conversationListener() {
   return new ConversationListener() {
-      
+
     ...
 
     @Override
-    public void onConversationEnded(Conversation conversation, 
+    public void onConversationEnded(Conversation conversation,
                                     TwilioConversationsException e) {
       // Dispose of the Conversation after disconnecting
-      if (conversation != null) {
-        conversation.dispose();
-        conversation = null;
-      }
+      conversation = null;
     }
   };
 }
