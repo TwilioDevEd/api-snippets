@@ -1,8 +1,8 @@
 from twilio.rest import TwilioPricingClient, TwilioLookupsClient
 
 #auth credentials
-account_sid = "ACCOUNT_SID"
-auth_token  = "AUTH_TOKEN"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token  = "{{ auth_token }}"
 
 #Use Lookup API to get country code / MCC / MNC that corresponds to given phone number
 phone_number = "+15108675309"

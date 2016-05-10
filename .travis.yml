@@ -23,6 +23,7 @@ install:
 - composer install
 - nuget install Twilio -Version 4.7.1 -OutputDirectory nuget
 - nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
+- nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
 script:
 - ruby tools/snippet-testing/test_snippets.rb

@@ -27,7 +27,8 @@ LANGUAGE_EXECUTORS = {
     [
       'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
       'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-      'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll'
+      'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+      'nuget/Twilio.Lookups.1.1.0/lib/3.5/Twilio.Lookups.dll'
     ]
   )
 }

@@ -8,10 +8,10 @@ previewFrameLayout = (FrameLayout) findViewById(R.id.previewFrameLayout);
 
 // Initialize the camera capturer and start the camera preview
 cameraCapturer = CameraCapturerFactory
-	.createCameraCapturer(ConversationActivity.this, 
-                          CameraCapturer.CameraSource.CAMERA_SOURCE_FRONT_CAMERA, 
-                          previewFrameLayout, capturerErrorListener());
-startPreview();
+	.createCameraCapturer(ConversationActivity.this,
+                          CameraCapturer.CameraSource.CAMERA_SOURCE_FRONT_CAMERA,
+                          capturerErrorListener());
+startPreview(previewFrameLayout);
 
 // Handle Camera Capturer errors
 private CapturerErrorListener capturerErrorListener() {
