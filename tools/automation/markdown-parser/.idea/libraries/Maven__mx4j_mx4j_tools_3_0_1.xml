@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: mx4j:mx4j-tools:3.0.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/mx4j/mx4j-tools/3.0.1/mx4j-tools-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/mx4j/mx4j-tools/3.0.1/mx4j-tools-3.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/mx4j/mx4j-tools/3.0.1/mx4j-tools-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -69,10 +69,20 @@ public class Utils {
         HashMap<String, String> result = new HashMap<>();
         String jsonDataStr = null;
         try {
-            jsonDataStr = readFile(jsonFilePath, StandardCharsets.UTF_8);
+            jsonDataStr = Optional.ofNullable(readFile(jsonFilePath, StandardCharsets.UTF_8)).orElse("{\"progress\":{}}");
         } catch (IOException ex) {throw new ParsingFileException(String.format("Error while loading json file %s for configuration: %s", jsonFilePath, ex.getMessage()));
         }
         return (new Gson()).fromJson(jsonDataStr, Map.class);
+    }
+    
+    public static String relativePath(String basePath, String subPath)
+    { 
+       return new File(basePath).toURI().relativize(new File(subPath).toURI()).getPath();
+    }
+    
+    public static String removeSuffix(String text, String suffix)
+    {
+        return (text!=null && text.lastIndexOf(suffix) > 1) ? text.substring(0, text.lastIndexOf(suffix)) : text;
     }
 
 }

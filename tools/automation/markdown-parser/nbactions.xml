@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Resolve dependencies</actionName>
+            <displayName>Resolve dependencies</displayName>
+            <goals>
+                <goal>dependency:resolve</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Search missing pages</actionName>
+            <displayName>Search missing pages</displayName>
+            <goals>
+                <goal>exec:java</goal>
+                <goal>-Dexec.mainClass=scanreport.SearchForMissingPages</goal>
+                <goal>-Dexec.args=/home/ehernandez/twilio/api-snippets/</goal>
+            </goals>
+        </action>
+    </actions>
