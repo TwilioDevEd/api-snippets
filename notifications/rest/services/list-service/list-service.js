@@ -6,7 +6,7 @@ var client = new Twilio(accountSid, authToken);
 
 client.notifications.v1.services.list()
 .then(function(response) {
-    console.log(response);
+  console.log(response);
 }).catch(function(error) {
-    console.log(error);
+  console.log(error);
 });

@@ -8,7 +8,7 @@ var service = client.notifications.v1.services('ISxxx');
 
 service.bindings('BSxxx').fetch()
 .then(function(response) {
-    console.log(response);
+  console.log(response);
 }).catch(function(error) {
-    console.log(error);
+  console.log(error);
 });

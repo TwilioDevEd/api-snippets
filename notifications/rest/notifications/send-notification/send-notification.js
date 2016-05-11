@@ -7,10 +7,10 @@ var client = new Twilio(accountSid, authToken);
 var service = client.notifications.v1.services('ISxxx');
 
 service.notifications.create({
-    'identity':'Bob',
-    'body':'Hello Bob'
+  'identity':'Bob',
+  'body':'Hello Bob'
 }).then(function(response) {
-    console.log(response);
+  console.log(response);
 }).catch(function(error) {
-    console.log(error);
+  console.log(error);
 });
