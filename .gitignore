@@ -37,6 +37,9 @@ node_modules
 .DS_Store
 *.*~
 
+#IDEs
+.idea
+
 # Testing
 output/
 .env
