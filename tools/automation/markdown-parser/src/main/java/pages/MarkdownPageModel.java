@@ -14,19 +14,21 @@ public class MarkdownPageModel {
 
     private final String remoteServerUrl;
 
-    private final File baseRepositoryFolder;
+    private final String baseRepoPath;
 
     private final File file;
 
     private final String remoteUrl;
 
     private final String name;
+    
+    private final String relativePath;
 
-    public MarkdownPageModel(String remoteServerUrl, File baseRepositoryFolder, File file) {
+    public MarkdownPageModel(String remoteServerUrl, String baseRepoPath, File file) {
         this.remoteServerUrl = remoteServerUrl;
-        this.baseRepositoryFolder = baseRepositoryFolder;
+        this.baseRepoPath = baseRepoPath;
         this.file = file;
-        String relativePath = Utils.relativePath(baseRepositoryFolder.getAbsolutePath(), file.getAbsolutePath());
+        relativePath = Utils.relativePath(baseRepoPath, file.getAbsolutePath());
         name = FilenameUtils.removeExtension(file.getName()).toLowerCase();
         String suffix = name.equals("index") ? File.separator + "index.md" : ".md";
         this.remoteUrl = remoteServerUrl + "/" + Utils.removeSuffix(relativePath, suffix).toLowerCase();
@@ -44,11 +46,16 @@ public class MarkdownPageModel {
         return remoteUrl;
     }
 
-    public File getBaseRepositoryFolder() {
-        return baseRepositoryFolder;
+    public String getbaseRepoPath() {
+        return baseRepoPath;
     }
 
     public String getName() {
         return name;
     }
+
+    public String getRelativePath() {
+        return relativePath;
+    }
+    
 }

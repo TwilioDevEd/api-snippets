@@ -28,7 +28,7 @@ public class PagesScanner{
     public void test(String rootFolderPath) {
         File rootFolder = new File(baseFolderPath + rootFolderPath);
         System.out.println("Scanning all markdowns located at " + rootFolder.getAbsolutePath());
-        FileUtils.listFiles(rootFolder, extensions, true).stream().map(mdFile -> new MarkdownPageModel(baseUrl + "/" + rootFolderPath, rootFolder, mdFile)).forEach(listener::onPageFound);
+        FileUtils.listFiles(rootFolder, extensions, true).stream().map(mdFile -> new MarkdownPageModel(baseUrl, baseFolderPath, mdFile)).forEach(listener::onPageFound);
     }
 
 }
