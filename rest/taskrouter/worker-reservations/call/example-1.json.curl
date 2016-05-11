@@ -1,0 +1,7 @@
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{ReservationSid} \
+    -d "Instruction=call" \
+    -d "CallFrom=+15558675309" \
+    -d "CallUrl=http://example.com/agent_answer" \
+    -d "CallStatusCallbackUrl=http://example.com/agent_answer_status_callback" \
+    -d "CallAccept=true" \
+    -u '{account_sid}:{auth_token}'
