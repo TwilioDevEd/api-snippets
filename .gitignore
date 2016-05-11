@@ -38,7 +38,11 @@ node_modules
 *.*~
 
 #IDEs
-.idea
+*.idea
+*/target
+*.iml
+.gradle
+nbactions.xml
 
 # Testing
 output/
