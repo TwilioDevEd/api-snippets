@@ -1,0 +1,5 @@
+curl -X POST https://notifications.twilio.com/v1/Services/ISxxx/Notifications \
+    -d 'Identity=Bob' \
+    -d 'Tags=preferred_device' \
+    -d 'Body=Hello Bob' \
+    -u '{twilio account sid}:{twilio auth token}'

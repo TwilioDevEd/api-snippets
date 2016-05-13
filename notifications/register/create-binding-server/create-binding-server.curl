@@ -1,0 +1,8 @@
+curl -XPOST https://notifications.twilio.com/v1/Services/ISxxx/Bindings \
+    -d "Endpoint=xxx" \
+    -d "Identity=bob" \
+    -d "BindingType=gcm" \
+    -d "Address=xxx" \
+    -d "Tag=premium" \
+    -d "Tag=new user" \
+    -u '{twilio account sid}:{twilio auth token}'
