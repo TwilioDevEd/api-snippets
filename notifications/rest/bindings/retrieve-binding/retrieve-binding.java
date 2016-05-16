@@ -11,7 +11,7 @@ public class RetrieveBinding {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Fetch a binding
-    Binding binding = Binding.fetch("ISxxx","BSxxx").execute();
+    Binding binding = Binding.fetch("ISxxx", "BSxxx").execute();
     System.out.println(binding.toString());
   }
 }

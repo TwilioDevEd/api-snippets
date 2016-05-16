@@ -12,7 +12,7 @@ public class CreateBinding {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create a binding
-    BindingCreator creator = Binding.create("ISxxx","xxx","Bob", Binding.BindingType.GCM,"xxx");
+    BindingCreator creator = Binding.create("ISxxx", "xxx", "Bob", Binding.BindingType.GCM, "xxx");
     creator.setTag("premium");
     Binding binding = creator.execute();
     System.out.println(binding.toString());
