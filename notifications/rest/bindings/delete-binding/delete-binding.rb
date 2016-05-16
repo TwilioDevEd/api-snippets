@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new account_sid, auth_token
 # Retrieve a valid notification service
 service = client.notifications.v1.services('ISxxx')
 
-response = service.bindings('Bxxx').delete()
+response = service.bindings('Bxxx').delete
 
 puts response

@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new account_sid, auth_token
 # Retrieve a valid notification service
 service = client.notifications.v1.services('ISxxx')
 
-binding = service.bindings('Bxxx').fetch()
+binding = service.bindings('Bxxx').fetch
 
 puts binding
