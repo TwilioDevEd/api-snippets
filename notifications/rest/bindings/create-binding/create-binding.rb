@@ -9,6 +9,12 @@ client = Twilio::REST::Client.new account_sid, auth_token
 # Retrieve a valid notification service
 service = client.notifications.v1.services('ISxxx')
 
-binding = service.bindings.create(:endpoint => "xxx", :identity => 'bob', :binding_type => 'gcm', :address => 'xxx', :tag => 'new user') 
+binding = service.bindings.create(
+  endpoint: 'xxx', 
+  identity: 'bob', 
+  binding_type: 'gcm', 
+  address: 'xxx', 
+  tag: 'new user'
+) 
 
 puts binding

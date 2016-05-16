@@ -10,6 +10,12 @@ client = Twilio::REST::Client.new account_sid, auth_token
 service = client.notifications.v1.services('ISxxx')
 
 # Create a detailed notification
-notification = service.notifications.create(:identity => 'Bob', :title => 'Generic loooooooong title for all Bindings', :body => 'This is the body for all Bindings', :gcm => '{"notification":{"tag":"MyTag"}}', :apn => '{"aps":{"title":"Short title for Watch."}}')
+notification = service.notifications.create(
+  identity: 'Bob', 
+  title: 'Generic loooooooong title for all Bindings',
+  body: 'This is the body for all Bindings', 
+  gcm: '{"notification":{"tag":"MyTag"}}', 
+  apn: '{"aps":{"title":"Short title for Watch."}}'
+)
 
 puts notification

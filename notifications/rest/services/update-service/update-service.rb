@@ -7,5 +7,5 @@ auth_token = '{{ auth_token }}'
 
 # Provide a SID for an existing notification service
 service = client.notifications.v1.services('ISxxx')
-response = service.update(:friendly_name => 'NewFlowHipSlackChatDock')
+response = service.update(friendly_name: 'NewFlowHipSlackChatDock')
 puts response

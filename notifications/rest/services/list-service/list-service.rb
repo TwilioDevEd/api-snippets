@@ -5,6 +5,6 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = '{{ auth_token }}'
 
-services = client.notifications.v1.services.list(:limit => 100)
+services = client.notifications.v1.services.list(limit: 100)
 
 puts services

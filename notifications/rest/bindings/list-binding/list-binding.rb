@@ -10,6 +10,6 @@ client = Twilio::REST::Client.new account_sid, auth_token
 service = client.notifications.v1.services('ISxxx')
 
 start_date = Date.parse('2015-08-25')
-bindings = service.bindings.list(:tag => 'new user', :start_date => start_date)
+bindings = service.bindings.list(tag: 'new user', start_date: start_date)
 
 puts bindings
