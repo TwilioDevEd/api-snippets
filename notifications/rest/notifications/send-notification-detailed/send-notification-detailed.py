@@ -8,6 +8,10 @@ client = Client(account, token)
 
 service = client.notifications.v1.services("ISxxx")
 
-notification = service.notifications.create(identity="Bob", title="Generic loooooooong title for all Bindings", body="This is the body for all Bindings", gcm='{"notification":{"tag":"MyTag"}}', apn='{"aps":{"title":"Short title for Watch."}}')
+notification = service.notifications.create(
+    identity="Bob", title="Generic loooooooong title for all Bindings",
+    body="This is the body for all Bindings",
+    gcm='{"notification":{"tag":"MyTag"}}',
+    apn='{"aps":{"title":"Short title for Watch."}}')
 
 print notification
