@@ -9,7 +9,6 @@ $token = "{{ auth_token }}";
 // Initialize the client
 $client = new Twilio\Rest\Client($sid, $token);
 
-$service = $client->notifications->v1->services("ISxxx")
-->fetch();
+$service = $client->notifications->v1->services("ISxxx")->fetch();
 
-print print_r($service, true);
+print_r($service);

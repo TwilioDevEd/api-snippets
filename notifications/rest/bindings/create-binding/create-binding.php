@@ -13,5 +13,5 @@ $service = $client->notifications->v1->services("ISxxx");
 
 $binding = $service->bindings->create("xxx", "bob", "gcm", "xxx", array("tag" => "premium"));
 
-print print_r($binding, true);
+print_r($binding);
  

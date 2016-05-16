@@ -11,10 +11,12 @@ $client = new Twilio\Rest\Client($sid, $token);
 
 $service = $client->notifications->v1->services("ISxxx");
 
-$notification = $service->notifications->create(array(
-    identity => "Bob", 
-    body => "Hello Bob"
-));
+$notification = $service->notifications->create(
+    array(
+        identity => "Bob", 
+        body => "Hello Bob"
+    )
+);
 
-print print_r($notification, true);
+print_r($notification);
  

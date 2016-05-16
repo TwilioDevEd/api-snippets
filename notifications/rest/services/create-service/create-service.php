@@ -9,8 +9,10 @@ $token = "{{ auth_token }}";
 // Initialize the client
 $client = new Twilio\Rest\Client($sid, $token);
 
-$service = $client->notifications->v1->services->create(array(
-    "FriendlyName" => "My Awesome Service",
-));
+$service = $client->notifications->v1->services->create(
+    array(
+        "FriendlyName" => "My Awesome Service",
+    )
+);
 
-print $service; 
+print_r($service); 

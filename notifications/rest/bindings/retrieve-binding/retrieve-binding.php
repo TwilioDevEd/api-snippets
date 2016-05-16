@@ -13,5 +13,5 @@ $service = $client->notifications->v1->services("ISxxx");
 
 $binding = $service->bindings("BSxxx")->fetch();
 
-print print_r($binding, true);
+print_r($binding);
  

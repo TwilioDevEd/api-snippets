@@ -11,6 +11,4 @@ $client = new Twilio\Rest\Client($sid, $token);
 
 $services = $client->notifications->v1->services->read();
 
-$all_services = print_r($services, true);
-
-print $all_services;
+print_r($services);

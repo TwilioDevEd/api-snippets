@@ -11,8 +11,10 @@ $client = new Twilio\Rest\Client($sid, $token);
 
 $service = $client->notifications->v1->services("ISxxx");
 
-$service->update(array(
-    "FriendlyName" => "NewFlowHipSlackChatDock",
-));
+$service->update(
+    array(
+        "FriendlyName" => "NewFlowHipSlackChatDock",
+    )
+);
 
-print $service; 
+print_r($service); 
