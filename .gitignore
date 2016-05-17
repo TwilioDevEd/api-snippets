@@ -43,6 +43,7 @@ node_modules
 *.iml
 .gradle
 nbactions.xml
+*.class
 
 # Testing
 .env
