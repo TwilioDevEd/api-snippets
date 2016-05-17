@@ -1,18 +1,19 @@
 // Create an AccessManager to manage our Access Token
-TwilioAccessManager accessManager = TwilioAccessManagerFactory.createAccessManager(ACCESS_TOKEN, 
+TwilioAccessManager accessManager = TwilioAccessManagerFactory.createAccessManager(ConversationActivity.this,
+                                ACCESS_TOKEN,
                                 accessManagerListener());
 
 // Create a Conversations Client and connect to Twilio's backend.
-ConversationsClient conversationsClient = 
-  TwilioConversations.createConversationsClient(accessManager, conversationsClientListener());
+TwilioConversationsClient conversationsClient =
+  TwilioConversationsClient.create(accessManager, conversationsClientListener());
 conversationsClient.listen();
 
 /* See the "Working with Conversations" guide for instructions on constructing a
-ConversationsClientListener */ 
-private ConversationsClientListener conversationsClientListener() {
-  return new ConversationsClientListener() {
+ConversationsClientListener */
+private TwilioConversationsClient.Listener conversationsClientListener() {
+  return new TwilioConversationsClient.Listener() {
     @Override
-    public void onStartListeningForInvites(ConversationsClient conversationsClient) {
+    public void onStartListeningForInvites(TwilioConversationsClient conversationsClient) {
       Log.i(TAG, "Connected to Twilio!");
     }
 

@@ -20,11 +20,12 @@ import com.koushikdutta.ion.Ion;
                             String accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
                             accessManager =
-                                    TwilioAccessManagerFactory.createAccessManager(accessToken,
+                                    TwilioAccessManagerFactory.createAccessManager(ConversationActivity.this,
+                                                    accessToken,
                                                     accessManagerListener());
                             conversationsClient =
-                                    TwilioConversations
-                                            .createConversationsClient(accessManager,
+                                    TwilioConversationsClient
+                                            .create(accessManager,
                                                     conversationsClientListener());
 
                             // Listen for incoming Invites
