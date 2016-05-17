@@ -43,9 +43,10 @@ node_modules
 *.iml
 .gradle
 nbactions.xml
+*.class
 
 # Testing
 .env
 vendor/
 nuget/
-tools/snippet-testing/test_snippets_mod.rb
+/output/

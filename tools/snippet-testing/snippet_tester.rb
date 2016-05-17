@@ -44,6 +44,7 @@ class SnippetTester
       next unless snippet_model.testable?
       # Add this model to those to be tested
       puts snippet_model
+
       @snippets_models << snippet_model
     end
   end

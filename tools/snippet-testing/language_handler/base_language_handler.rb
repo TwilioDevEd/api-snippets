@@ -38,12 +38,7 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      text_with_credentials(file_content)
-    end
-
-    def text_with_credentials(file_content)
-      replaced = file_content.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', TWILIO_ACCOUNT_SID)
-      replaced.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
+      file_content
     end
 
     def write_content(content, path)

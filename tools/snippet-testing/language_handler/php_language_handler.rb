@@ -20,7 +20,7 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      text_require_autoload(text_with_credentials(file_content))
+      text_require_autoload(file_content)
     end
 
     def text_require_autoload(file_content)
