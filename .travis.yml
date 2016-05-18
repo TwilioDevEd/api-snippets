@@ -14,6 +14,7 @@ before_install:
 - sudo add-apt-repository ppa:cwchien/gradle -y
 - sudo apt-get update
 - sudo apt-get install gradle
+- sudo apt-get install ca-certificates
 install:
 - sudo pip install -U twilio
 - gem install twilio-ruby
@@ -25,13 +26,14 @@ install:
 - nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
+- sudo cp tools/api-proxy/keystore/twilio_cert.pem /etc/ssl/certs/.
+- sudo ls /etc/ssl/certs
+- sudo update-ca-certificates
+
 script:
-- pwd
 - cd tools/api-proxy
-- pwd
 - sudo gradle run &
 - cd ../..
-- pwd
 - sleep 25
 - curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.json
 - pwd
