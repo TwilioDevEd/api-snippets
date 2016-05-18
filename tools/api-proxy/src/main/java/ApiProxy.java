@@ -12,7 +12,7 @@ public class ApiProxy {
                 "twilioKeyStorePassword")); //No-args constructor will start on port 8080, no HTTPS
     wireMockServer.start();
     WireMock wireMock = new WireMock("localhost", 8089);
-    wireMock.register(post(urlMatching("\\/2010-04-01\\/Accounts\\/AC.{32}\\/Calls.json"))
+    wireMock.register(post(urlMatching("\\/2010-04-01\\/Accounts\\/AC.{32}\\/Calls(.json)?"))
         .willReturn(aResponse().withHeader("Content-Type", "application/json").withBody(
             "{" + "\"account_sid\": \"ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\","
                 + "\"annotation\": null,"

@@ -28,6 +28,7 @@ install:
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
 - sudo cp tools/api-proxy/keystore/twilio_cert.pem /etc/ssl/certs/.
 - sudo ls /etc/ssl/certs
+- sudo ls /etc/ssl
 - sudo update-ca-certificates
 
 script:
