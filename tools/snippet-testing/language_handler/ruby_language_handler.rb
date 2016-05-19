@@ -5,13 +5,13 @@ module LanguageHandler
     private
 
     def text_with_replacements(file_content)
-      text_with_custom_api_client(text_with_credentials(file_content))
+      text_with_custom_header(file_content)
     end
 
-    def text_with_custom_api_client(file_content)
-      file_content.gsub(
-        /Client\.new(\(|\s)(.+),\s?(.+)\)?$/,
-        'Client.new(\2, \3, {ssl_verify_peer: false})'
+    def text_with_custom_header(file_content)
+      file_content.prepend(
+        "require 'openssl'\n"\
+        "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE"
       )
     end
 
