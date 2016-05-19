@@ -26,11 +26,8 @@ install:
 - nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
-- sudo cp tools/api-proxy/keystore/twilio_cert.pem /etc/ssl/certs/.
-- sudo ls /etc/ssl/certs
-- sudo ls /etc/ssl
+- sudo cp tools/api-proxy/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
-
 script:
 - cd tools/api-proxy
 - sudo gradle run &

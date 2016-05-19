@@ -7,9 +7,9 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMoc
 public class ApiProxy {
   public static void main(String[] args) {
     WireMockServer wireMockServer = new WireMockServer(
-        wireMockConfig().port(8089).httpsPort(443).keystorePath("keystore/keystore.jks")
+        wireMockConfig().port(8089).httpsPort(443).keystorePath("keystore/twilio-store.jks")
             .keystorePassword(
-                "twilioKeyStorePassword")); //No-args constructor will start on port 8080, no HTTPS
+                "twilioFake")); //No-args constructor will start on port 8080, no HTTPS
     wireMockServer.start();
     WireMock wireMock = new WireMock("localhost", 8089);
     wireMock.register(post(urlMatching("\\/2010-04-01\\/Accounts\\/AC.{32}\\/Calls(.json)?"))
