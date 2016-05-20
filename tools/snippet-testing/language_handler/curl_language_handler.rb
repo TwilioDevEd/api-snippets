@@ -2,6 +2,14 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class CurlLanguageHandler < BaseLanguageHandler
+    def lang_cname
+      'curl'
+    end
+
+    def execute(file)
+      execute_with_suppressed_output("sh #{file}")
+    end
+
     private
 
     def text_with_replacements(file_content)
@@ -10,10 +18,6 @@ module LanguageHandler
 
     def text_without_bash_symbol(file_content)
       file_content.gsub(/\A\$\s/, '')
-    end
-
-    def language_directory
-      'curl'
     end
   end
 end

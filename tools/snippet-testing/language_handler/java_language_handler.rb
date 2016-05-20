@@ -2,6 +2,17 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class JavaLanguageHandler < BaseLanguageHandler
+
+    def lang_cname
+      'java'
+    end
+
+    def execute(file)
+      Dir.chdir(File.dirname file) do
+        execute_with_suppressed_output("gradle build")
+      end
+    end
+
     private
 
     def text_with_replacements(file_content)
@@ -14,17 +25,13 @@ module LanguageHandler
 
     def write_content(content, path)
       dir_name  = base_path + File.dirname(path)
-      java_base_dir = "#{dir_name}/#{language_directory}"
+      java_base_dir = "#{dir_name}"
 
       FileUtils.mkdir_p("#{java_base_dir}/src/main/java/") unless Dir.exist?("#{java_base_dir}/src/main/java/")
       new_file = File.new("#{java_base_dir}/src/main/java/Example.java", 'w+')
       new_file.write(content)
       new_file.close
       FileUtils.cp("#{File.dirname(__FILE__)}/file-templates/build.gradle", "#{java_base_dir}/build.gradle")
-    end
-
-    def language_directory
-      'java'
     end
   end
 end

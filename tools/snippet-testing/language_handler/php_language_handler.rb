@@ -7,6 +7,14 @@ module LanguageHandler
       @autoload_path = File.expand_path(base_path) + '/../vendor/autoload.php'
     end
 
+    def execute(file)
+      execute_with_suppressed_output("php #{file}")
+    end
+
+    def lang_cname
+      'php'
+    end
+
     private
 
     attr_reader :autoload_path
@@ -18,10 +26,6 @@ module LanguageHandler
     def text_require_autoload(file_content)
       replaced = file_content.gsub(/^require.{1,}$/, '')
       replaced.gsub('<?php', "require '#{autoload_path}';").prepend("<?php\n")
-    end
-
-    def language_directory
-      'php'
     end
   end
 end
