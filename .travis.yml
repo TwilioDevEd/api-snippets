@@ -40,6 +40,7 @@ env:
   global:
   - NODE_PATH=/usr/lib/node_modules
   - NODE_TLS_REJECT_UNAUTHORIZED=0
+  - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/tools/api-proxy/keystore/twilio_fake.pem
 addons:
   hosts:
     - api.twilio.com
