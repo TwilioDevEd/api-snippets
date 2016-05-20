@@ -7,8 +7,8 @@ NSString *urlString = [NSString stringWithFormat:tokenEndpoint, identifierForVen
 NSData *jsonResponse = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
 NSError *jsonError;
 NSDictionary *tokenResponse = [NSJSONSerialization JSONObjectWithData:jsonResponse
-                                                            options:kNilOptions
-                                                              error:&jsonError];
+                                                              options:kNilOptions
+                                                                error:&jsonError];
 
 // Handle response from server
 if (!jsonError) {
