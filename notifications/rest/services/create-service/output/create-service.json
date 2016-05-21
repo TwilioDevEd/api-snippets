@@ -8,9 +8,9 @@
   "gcm_credential_sid": "CRxxx",
   "default_apn_notification_protocol_version":"3",
   "default_gcm_notification_protocol_version":"3",
-  "url": "https://notifications.twilio.com/v1/Services/ISxxx",
+  "url": "https://notify.twilio.com/v1/Services/ISxxx",
   "links": {
-    "bindings": "https://notifications.twilio.com/v1/Services/ISxxx/Bindings",
-    "notifications": "https://notifications.twilio.com/v1/Services/ISxxx/Notifications"
+    "bindings": "https://notify.twilio.com/v1/Services/ISxxx/Bindings",
+    "notifications": "https://notify.twilio.com/v1/Services/ISxxx/Notifications"
   }
 }
