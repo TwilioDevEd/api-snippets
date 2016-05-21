@@ -1,4 +1,4 @@
-curl -XPOST https://notifications.twilio.com/v1/Services/ISxxx/Bindings \
+curl -XPOST https://notify.twilio.com/v1/Services/ISxxx/Bindings \
     -d "Endpoint=xxx" \
     -d "Identity=bob" \
     -d "BindingType=gcm" \
