@@ -7,6 +7,12 @@ auth_token = '{{ auth_token }}'
 
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-@client.preview.wireless.devices.list().each do |device|
-  puts device.friendly_name
-end
+usage = @client.preview.wireless.devices(
+  '524116518656369').usage.fetch(
+	start: "2016-05-01",
+	end_: "2016-05-31"
+  )
+
+puts usage.period['start']
+puts usage.period['end']
+puts usage.data_costs['total']

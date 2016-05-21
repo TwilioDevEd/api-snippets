@@ -7,6 +7,7 @@ auth_token = '{{ auth_token }}'
 
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-@client.preview.wireless.devices.list().each do |device|
-  puts device.friendly_name
+@client.preview.wireless.rate_plans.list().each do |plan|
+  puts plan.sid
+  puts plan.alias_
 end

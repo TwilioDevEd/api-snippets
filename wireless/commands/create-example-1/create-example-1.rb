@@ -7,6 +7,8 @@ auth_token = '{{ auth_token }}'
 
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-@client.preview.wireless.devices.list().each do |device|
-  puts device.friendly_name
-end
+@client.preview.wireless.commands.create(
+  device: '524116518656369',
+  command: 'wake-up',
+  callback_url: 'https://devicemanager.mycompany.com/devices/524116518656369/commands'
+)

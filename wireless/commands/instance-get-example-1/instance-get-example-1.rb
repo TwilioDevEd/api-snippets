@@ -6,7 +6,6 @@ account_sid = '{{ account_sid }}'
 auth_token = '{{ auth_token }}'
 
 @client = Twilio::REST::Client.new account_sid, auth_token
+cmd = @client.preview.wireless.commands('DCcb6aa7c620874dd98ba6c9c4108d0ed0').fetch()
 
-@client.preview.wireless.devices.list().each do |device|
-  puts device.friendly_name
-end
+puts cmd.command
