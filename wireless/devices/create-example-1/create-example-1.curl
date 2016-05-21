@@ -1,0 +1,5 @@
+$ curl -X POST https://preview.twilio.com/wireless/Devices \
+    -d 'Alias=996224413905003' \
+    -d "FriendlyName=Charlie's SmartMeter" \
+    -d 'RatePlan={{ rate_plan_sid }}' \
+    -u '{{ account_sid }}:{{ auth_token }}'
