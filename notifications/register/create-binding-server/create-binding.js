@@ -1,33 +1,32 @@
 //Create a binding using device properties
 app.post('/register', function(request, response) {
-  var bindingsUrl = 'http://notification.twilio.com' + '/Services/' 
-    + 'TWILIO_SERVICE_SID' + '/Bindings';
+  
+  // Authenticate with Twilio
+  var client = new twilio(env.TWILIO_ACCOUNT_SID,  env.TWILIO_AUTH_TOKEN);
+  
+  // Get a reference to the user notification service instance
+  var service = client.notifications.v1.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
 
-  // Create a device binding for the connecting client
-  post(bindingsUrl, {
-    auth: {
-      username: 'TWILIO_ACCOUNT_SID',
-      password: 'TWILIO_AUTH_TOKEN'
-    },
-    form: {
-      Endpoint: request.body.endpoint, 
-      Identity: request.body.identity,
-      BindingType: request.body.BindingType,
-      Address: request.body.Address
-    }
-  }, function(err, httpResponse, body) {
+  service.bindings.create({
+    "endpoint": request.body.endpoint,
+    "identity": request.body.identity,
+    "bindingType": request.body.BindingType,
+    "address": request.body.Address
+  }).then(function(binding) {
     var message = 'Binding created!';
-    if (err) {
-      message = 'Failed to create binding.'
-      console.log(message);
-      console.log(err);
-    }
-
-    // Send a JSON response indicating success or failure
+    console.log(binding);
+    // Send a JSON response indicating success
     response.send({
-      success: err,
+      message: message
+    });
+  }).catch(function(error) {
+    var message = 'Failed to create binding: ' + error;
+    console.log(message);
+    
+    // Send a JSON response indicating an internal server error
+    response.status(500).send({
+      error: error,
       message: message
     });
   });
-
 });
