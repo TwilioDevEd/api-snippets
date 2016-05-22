@@ -1,2 +1,2 @@
-$ curl -G https://preview.twilio.com/wireless/Devices/DEb8eff34b248d066a31c4a953134e183e/Usage.json \
+$ curl -G https://preview.twilio.com/wireless/Devices/DEb8eff34b248d066a31c4a953134e183e/Usage \
     -u '{{ account_sid }}:{{ auth_token }}'
