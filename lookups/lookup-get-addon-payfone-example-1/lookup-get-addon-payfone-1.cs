@@ -1,3 +1,7 @@
+using Newtonsoft.Json;
+using RestSharp;
+using RestSharp.Authenticators;
+
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 
@@ -14,7 +18,10 @@ class Example
     request.AddHeader("accept", "application/json");
 
     IRestResponse response = client.Execute(request);
-    Console.WriteLine(response.add_ons.results.payfone_tcpa_compliance.result.Description);
-    Console.WriteLine(response.add_ons.results.payfone_tcpa_compliance.result.Response.NumberMatch);
+
+    dynamic result = JsonConvert.DeserializeObject(response.Content, new JsonSerializerSettings { ContractResolver = new SnakeCaseContractResolver() });
+
+    Console.WriteLine(result.add_ons.results.payfone_tcpa_compliance.result.Description);
+    Console.WriteLine(result.add_ons.results.payfone_tcpa_compliance.result.Response.NumberMatch);
   }
 }
