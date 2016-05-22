@@ -1,2 +1,2 @@
-curl -XDELETE https://notifications.twilio.com/v1/Services/ISxxx \
+curl -XDELETE https://notify.twilio.com/v1/Services/ISxxx \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
