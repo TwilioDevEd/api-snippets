@@ -1,3 +1,6 @@
+// NOTE: This example uses the next generation Twilio helper library - for more
+// information on how to download and install this version, visit
+// https://www.twilio.com/docs/libraries/node
 var env = require('./config.json');
 var twilio = require('twilio');
 
