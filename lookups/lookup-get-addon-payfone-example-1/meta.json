@@ -1,0 +1,6 @@
+{
+  "title": "Lookup with Add-on enabled",
+  "type": "server",
+  "description": "Look up a phone number including the Payfone TCPA Compliance Add-on results.",
+  "tags": ["lookup", "phone number"]
+}
