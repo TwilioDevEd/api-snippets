@@ -14,7 +14,7 @@ service.bindings.create({
   endpoint: 'your_user@example.com:sms',
   identity: 'your_user@example.com',
   bindingType: 'sms',
-  address: '+16512080532',
+  address: '+16516667788',
   tag: ['rogue_one', 'han_solo_spinoff']
 }).then(function(response) {
   console.log(response);
