@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "ApiProxy"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.github.tomakehurst:wiremock:1.58'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.6'
+}

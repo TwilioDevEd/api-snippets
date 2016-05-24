@@ -4,6 +4,17 @@ module LanguageHandler
   class RubyLanguageHandler < BaseLanguageHandler
     private
 
+    def text_with_replacements(file_content)
+      text_with_custom_header(file_content)
+    end
+
+    def text_with_custom_header(file_content)
+      file_content.prepend(
+        "require 'openssl'\n"\
+        "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE"
+      )
+    end
+
     def lang_cname
       'rb'
     end

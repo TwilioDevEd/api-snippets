@@ -13,7 +13,7 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      text_without_bash_symbol(text_with_credentials(file_content))
+      text_without_bash_symbol(file_content)
     end
 
     def text_without_bash_symbol(file_content)
