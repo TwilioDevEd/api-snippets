@@ -13,12 +13,11 @@ module LanguageHandler
     end
 
     def replace_and_relocate(path)
-      puts "Generated #{path}"
       write_content(text_with_replacements(File.open(path).read), path)
     end
 
     def test_snippet(snippet_model)
-      path = snippet_model.get_output_filepath lang_cname
+      path = snippet_model.get_output_filepath(lang_cname)
       ErrorLogger.instance.add_error(path) unless execute(path)
     end
 
