@@ -1,0 +1,2 @@
+$ curl -G https://preview.twilio.com/wireless/Devices \
+    -u '{{ account_sid }}:{{ auth_token }}'

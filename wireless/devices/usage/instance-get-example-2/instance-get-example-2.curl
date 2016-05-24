@@ -1,0 +1,4 @@
+$ curl -G https://preview.twilio.com/wireless/Devices/524116518656369/Usage \
+    -d 'Start=2016-05-01' \
+    -d 'End=2016-05-31' \
+    -u '{{ account_sid }}:{{ auth_token }}'

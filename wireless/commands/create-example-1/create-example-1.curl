@@ -1,0 +1,5 @@
+curl -X POST https://preview.twilio.com/wireless/Commands \
+  -d 'Device=524116518656369' \
+  -d 'Command=wake-up' \
+  -d 'CallbackUrl=https://devicemanager.mycompany.com/devices/524116518656369/commands' \
+  -u '{{ account_sid }}:{{ auth_token }}'
