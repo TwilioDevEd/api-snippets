@@ -45,7 +45,6 @@ node_modules
 nbactions.xml
 
 # Testing
-output/
 .env
 vendor/
 nuget/
