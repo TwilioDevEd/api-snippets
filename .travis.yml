@@ -26,7 +26,7 @@ install:
 - nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
 script:
-- ruby tools/snippet-testing/test_snippets.rb
+- ruby tools/snippet-testing/snippet_tester.rb
 env:
   global:
   - NODE_PATH=/usr/lib/node_modules
