@@ -4,9 +4,9 @@ module Model
       'py',
       'rb',
       'js',
+      'curl',
       'xml.curl',
       'json.curl',
-      'curl',
       'php',
       'java',
       'cs'
@@ -25,17 +25,21 @@ module Model
       @name             = File.basename(@folder_path)
       @type             = json_object.fetch('type', 'server').downcase
       @langs            = @type == 'server' ? SERVER_LANGUAGES : []
-      @file_path_prefix = "#{@folder_path}/#{@name}"
       @testable         = false unless @type == 'server'
+      @available_langs = {}
 
-      @available_langs = @langs.inject([]) do |langs, lang|
-        langs.push(lang) if File.exist?("#{file_path_prefix}.#{lang}")
-        langs
+      Dir.glob("#{folder_path}/**") do |file|
+        lang = File.extname(file)[1..-1]
+        if lang == 'curl'
+          match = file.match(/\.(.+\.curl)/)
+          lang = match.captures.first unless match.nil?
+        end
+        @available_langs.merge!(lang => File.basename(file)) if @langs.include?(lang)
       end
     end
 
     def get_filepath(lang_cname)
-      "#{file_path_prefix}.#{lang_cname}" if available_langs.include? lang_cname
+      "#{folder_path}/#{available_langs.fetch(lang_cname)}" if available_langs.key?(lang_cname)
     end
 
     def get_output_filepath(lang_cname)

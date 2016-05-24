@@ -52,7 +52,7 @@ class SnippetTester
     puts '####### Generating test-enviroment for marked snippets #######'
     @snippets_models.each do |snippet|
       print "Generated #{snippet.folder_path} -> ["
-      snippet.available_langs.each do |lang|
+      snippet.available_langs.each do |lang, _file_name|
         print " #{lang}"
         file = snippet.get_filepath(lang)
         LANGUAGE_HANDLERS.fetch(lang).replace_and_relocate(file)
@@ -65,7 +65,7 @@ class SnippetTester
     puts '####### Testing marked snippets #######'
     @snippets_models.each do |snippet|
       puts "Testing #{snippet.folder_path}"
-      snippet.available_langs.each do |lang|
+      snippet.available_langs.each do |lang, _file_name|
         LANGUAGE_HANDLERS.fetch(lang).test_snippet(snippet)
       end
     end
