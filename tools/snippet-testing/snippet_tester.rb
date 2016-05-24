@@ -30,7 +30,8 @@ class SnippetTester
   attr_reader :parentFolder, :snippets_models, :test_models
 
   def initialize(parentFolder)
-    @parentFolder = parentFolder.nil? ?  "/" : parentFolder
+    @parentFolder = parentFolder.nil? ?  Dir.pwd : parentFolder
+    Dir.chdir(@parentFolder)
     puts "La carpeta base es #{@parentFolder}"
     @snippets_models = []
     @test_models = []
@@ -75,7 +76,7 @@ end
 
 if __FILE__ == $0
 
-  tester = SnippetTester.new($1)
+  tester = SnippetTester.new(ARGV[0])
 
   tester.init
   tester.setup
