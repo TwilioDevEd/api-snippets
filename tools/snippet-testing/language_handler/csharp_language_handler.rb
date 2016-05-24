@@ -2,12 +2,11 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class CsharpLanguageHandler < BaseLanguageHandler
+    private
 
     def lang_cname
       'cs'
     end
-
-    private
 
     def execute(file)
       command = dependencies.inject('mcs') do |cmd, path|

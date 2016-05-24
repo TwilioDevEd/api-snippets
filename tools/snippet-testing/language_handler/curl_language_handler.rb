@@ -2,15 +2,15 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class CurlLanguageHandler < BaseLanguageHandler
-    def lang_cname
-      'curl'
-    end
+    private
 
     def execute(file)
       execute_with_suppressed_output("sh #{file}")
     end
 
-    private
+    def lang_cname
+      'curl'
+    end
 
     def text_with_replacements(file_content)
       text_without_bash_symbol(text_with_credentials(file_content))
