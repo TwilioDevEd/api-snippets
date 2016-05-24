@@ -33,7 +33,6 @@ script:
 - sudo gradle run &
 - cd ../..
 - sleep 25
-- curl -XPOST https://api.twilio.com/2010-04-01/Accounts/AC2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.json
 - pwd
 - ruby tools/snippet-testing/snippet_tester.rb
 env:

@@ -49,4 +49,4 @@ nbactions.xml
 .env
 vendor/
 nuget/
-tools/snippet-testing/test_snippets_mod.rb
+/output/
