@@ -8,6 +8,6 @@ var client = new twilioLibrary.Twilio(accountSid, authToken);
 
 client.preview.wireless.commands.create({
   device: '524116518656369',
-  command: 'wake-up',
+  command: 'wakeup',
   callbackUrl: 'https://devicemanager.mycompany.com/devices/524116518656369/commands'
 });

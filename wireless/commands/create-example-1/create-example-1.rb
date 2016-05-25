@@ -9,6 +9,6 @@ auth_token = '{{ auth_token }}'
 
 @client.preview.wireless.commands.create(
   device: '524116518656369',
-  command: 'wake-up',
+  command: 'wakeup',
   callback_url: 'https://devicemanager.mycompany.com/devices/524116518656369/commands'
 )

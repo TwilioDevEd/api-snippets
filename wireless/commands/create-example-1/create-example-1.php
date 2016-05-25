@@ -13,7 +13,7 @@ $client = new Twilio\Rest\Client($sid, $token);
 $client->preview->wireless->commands->create(
   array(
     'device' => "524116518656369",
-    'command' => "wake-up",
+    'command' => "wakeup",
     'callbackUrl' => "https://devicemanager.mycompany.com/devices/524116518656369/commands"
   )
 );

@@ -10,6 +10,6 @@ wireless = client.preview.wireless
 
 wireless.commands.create(
     device='524116518656369',
-    command='wake-up',
+    command='wakeup',
     callback_url='https://devicemanager.mycompany.com/devices/524116518656369/commands'
 )

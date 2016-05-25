@@ -18,7 +18,7 @@ namespace TwilioApp
 
       await CommandResource.Create(
           "524116518656369", // Device SID or Alias
-          "wake-up" // Command text
+          "wakeup" // Command text
         )
         .SetCallbackUrl("")
         .ExecuteAsync(restClient);
