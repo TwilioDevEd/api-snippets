@@ -46,7 +46,7 @@ nbactions.xml
 *.class
 
 # Testing
-.env
-vendor/
-nuget/
+/.env
+/vendor/
+/nuget/
 /output/
