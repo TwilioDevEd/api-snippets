@@ -1,0 +1,199 @@
+{
+    "create": [
+        {
+            "name": "create",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {
+                    "City": "city",
+                    "CustomerName": "customer_name",
+                    "FriendlyName": "friendly_name",
+                    "IsoCountry": "US",
+                    "PostalCode": "postal_code",
+                    "Region": "region",
+                    "Street": "street"
+                },
+                "method": "POST",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "city": "SF",
+                    "customer_name": "name",
+                    "date_created": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "date_updated": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "friendly_name": null,
+                    "iso_country": "US",
+                    "postal_code": "94019",
+                    "region": "CA",
+                    "sid": "ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "street": "4th",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "delete": [
+        {
+            "name": "delete",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "DELETE",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": null,
+                "status_code": 204
+            }
+        }
+    ],
+    "fetch": [
+        {
+            "name": "fetch",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "city": "SF",
+                    "customer_name": "name",
+                    "date_created": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "date_updated": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "friendly_name": null,
+                    "iso_country": "US",
+                    "postal_code": "94019",
+                    "region": "CA",
+                    "sid": "ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "street": "4th",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "read": [
+        {
+            "name": "read_full",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {
+                    "CustomerName": "customer_name",
+                    "FriendlyName": "friendly_name",
+                    "IsoCountry": "US"
+                },
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json"
+            },
+            "response": {
+                "content": {
+                    "addresses": [
+                        {
+                            "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "city": "SF",
+                            "customer_name": "name",
+                            "date_created": "Tue, 18 Aug 2015 17:07:30 +0000",
+                            "date_updated": "Tue, 18 Aug 2015 17:07:30 +0000",
+                            "friendly_name": null,
+                            "iso_country": "US",
+                            "postal_code": "94019",
+                            "region": "CA",
+                            "sid": "ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "street": "4th",
+                            "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                        }
+                    ],
+                    "end": 0,
+                    "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0",
+                    "last_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0",
+                    "next_page_uri": null,
+                    "num_pages": 1,
+                    "page": 0,
+                    "page_size": 50,
+                    "previous_page_uri": null,
+                    "start": 0,
+                    "total": 1,
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0"
+                },
+                "status_code": 200
+            }
+        },
+        {
+            "name": "read_empty",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {
+                    "CustomerName": "customer_name",
+                    "FriendlyName": "friendly_name",
+                    "IsoCountry": "US"
+                },
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json"
+            },
+            "response": {
+                "content": {
+                    "addresses": [],
+                    "end": 0,
+                    "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0",
+                    "last_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0",
+                    "next_page_uri": null,
+                    "num_pages": 1,
+                    "page": 0,
+                    "page_size": 50,
+                    "previous_page_uri": null,
+                    "start": 0,
+                    "total": 1,
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses.json?PageSize=50&Page=0"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "update": [
+        {
+            "name": "update",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {
+                    "City": "city",
+                    "CustomerName": "customer_name",
+                    "FriendlyName": "friendly_name",
+                    "PostalCode": "postal_code",
+                    "Region": "region",
+                    "Street": "street"
+                },
+                "method": "POST",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "city": "SF",
+                    "customer_name": "name",
+                    "date_created": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "date_updated": "Tue, 18 Aug 2015 17:07:30 +0000",
+                    "friendly_name": null,
+                    "iso_country": "US",
+                    "postal_code": "94019",
+                    "region": "CA",
+                    "sid": "ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "street": "4th",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Addresses/ADaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ]
+}

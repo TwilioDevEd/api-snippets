@@ -1,0 +1,235 @@
+{
+    "create": [
+        {
+            "name": "create",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {
+                    "ApplicationSid": "APaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "Body": "body",
+                    "From": "+987654321",
+                    "MediaUrl": [
+                        "https://example.com"
+                    ],
+                    "StatusCallback": "https://example.com",
+                    "To": "+123456789"
+                },
+                "method": "POST",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "api_version": "2010-04-01",
+                    "body": "O Slash: \u00d8, PoP: \ud83d\udca9",
+                    "date_created": "Thu, 30 Jul 2015 20:12:31 +0000",
+                    "date_sent": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "date_updated": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "direction": "outbound-api",
+                    "error_code": null,
+                    "error_message": null,
+                    "from": "+14155552345",
+                    "num_media": "0",
+                    "num_segments": "1",
+                    "price": "-0.00750",
+                    "price_unit": "USD",
+                    "sid": "SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "status": "sent",
+                    "subresource_uris": {
+                        "media": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Media.json"
+                    },
+                    "to": "+14155552345",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "delete": [
+        {
+            "name": "delete",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "DELETE",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": null,
+                "status_code": 204
+            }
+        }
+    ],
+    "fetch": [
+        {
+            "name": "fetch",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "api_version": "2010-04-01",
+                    "body": "O Slash: \u00d8, PoP: \ud83d\udca9",
+                    "date_created": "Thu, 30 Jul 2015 20:12:31 +0000",
+                    "date_sent": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "date_updated": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "direction": "outbound-api",
+                    "error_code": null,
+                    "error_message": null,
+                    "from": "+14155552345",
+                    "num_media": "0",
+                    "num_segments": "1",
+                    "price": "-0.00750",
+                    "price_unit": "USD",
+                    "sid": "SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "status": "sent",
+                    "subresource_uris": {
+                        "media": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Media.json"
+                    },
+                    "to": "+14155552345",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "read": [
+        {
+            "name": "read_full",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {
+                    "DateSent": "2008-01-02",
+                    "DateSent<": "2008-01-01",
+                    "DateSent>": "2008-01-03",
+                    "From": "+987654321",
+                    "To": "+123456789"
+                },
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json"
+            },
+            "response": {
+                "content": {
+                    "end": 0,
+                    "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=0",
+                    "last_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=119771",
+                    "messages": [
+                        {
+                            "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "api_version": "2010-04-01",
+                            "body": "O Slash: \u00d8, PoP: \ud83d\udca9",
+                            "date_created": "Fri, 04 Sep 2015 22:54:39 +0000",
+                            "date_sent": "Fri, 04 Sep 2015 22:54:41 +0000",
+                            "date_updated": "Fri, 04 Sep 2015 22:54:41 +0000",
+                            "direction": "outbound-api",
+                            "error_code": null,
+                            "error_message": null,
+                            "from": "+14155552345",
+                            "num_media": "0",
+                            "num_segments": "1",
+                            "price": "-0.00750",
+                            "price_unit": "USD",
+                            "sid": "SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "status": "sent",
+                            "subresource_uris": {
+                                "media": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Media.json"
+                            },
+                            "to": "+14155552345",
+                            "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                        }
+                    ],
+                    "next_page_uri": null,
+                    "num_pages": 119772,
+                    "page": 0,
+                    "page_size": 1,
+                    "previous_page_uri": null,
+                    "start": 0,
+                    "total": 119772,
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=0"
+                },
+                "status_code": 200
+            }
+        },
+        {
+            "name": "read_empty",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {},
+                "method": "GET",
+                "query_params": {
+                    "DateSent": "2008-01-02",
+                    "DateSent<": "2008-01-01",
+                    "DateSent>": "2008-01-03",
+                    "From": "+987654321",
+                    "To": "+123456789"
+                },
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json"
+            },
+            "response": {
+                "content": {
+                    "end": 0,
+                    "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=0",
+                    "last_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=119771",
+                    "messages": [],
+                    "next_page_uri": null,
+                    "num_pages": 119772,
+                    "page": 0,
+                    "page_size": 1,
+                    "previous_page_uri": null,
+                    "start": 0,
+                    "total": 119772,
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages.json?PageSize=1&Page=0"
+                },
+                "status_code": 200
+            }
+        }
+    ],
+    "update": [
+        {
+            "name": "update",
+            "request": {
+                "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "form_params": {
+                    "Body": "body"
+                },
+                "method": "POST",
+                "query_params": {},
+                "url": "https://api.twilio.com/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+            },
+            "response": {
+                "content": {
+                    "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "api_version": "2010-04-01",
+                    "body": "O Slash: \u00d8, PoP: \ud83d\udca9",
+                    "date_created": "Thu, 30 Jul 2015 20:12:31 +0000",
+                    "date_sent": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "date_updated": "Thu, 30 Jul 2015 20:12:33 +0000",
+                    "direction": "outbound-api",
+                    "error_code": null,
+                    "error_message": null,
+                    "from": "+14155552345",
+                    "num_media": "0",
+                    "num_segments": "1",
+                    "price": "-0.00750",
+                    "price_unit": "USD",
+                    "sid": "SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "status": "sent",
+                    "subresource_uris": {
+                        "media": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Media.json"
+                    },
+                    "to": "+14155552345",
+                    "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Messages/SMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+                },
+                "status_code": 200
+            }
+        }
+    ]
+}
