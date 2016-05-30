@@ -15,19 +15,19 @@ import org.json.simple.parser.ParseException;
 
 public class DocParser {
   private Collection<File> fileCollection;
-  private ArrayList<ResourceModel> endpointList;
+  private ArrayList<ResourceModel> resourceList;
 
   public DocParser(File basePath) {
     fileCollection = FileUtils.listFiles(basePath, null, true);
-    populateEndPointCollection();
+    populateResourceList();
   }
 
-  public ArrayList getEndpointList() {
-    return this.endpointList;
+  public ArrayList getResourceList() {
+    return this.resourceList;
   }
 
-  public void populateEndPointCollection() {
-    this.endpointList = new ArrayList<>();
+  public void populateResourceList() {
+    this.resourceList = new ArrayList<>();
     for (File file : fileCollection) {
       HashMap<String, HashMap<String, Object>> resources = new HashMap<>();
       String fileContent = "";
@@ -51,14 +51,13 @@ public class DocParser {
 
         resources.put((String) resource.get(ResourceParser.RESOURCE_NAME), resource);
       }
-      endpointList.add(new ResourceModel(file.toString(), resources));
-//      break;
+      resourceList.add(new ResourceModel(file.toString(), resources));
     }
   }
 
   private HashMap<String, Object> getResourceProperties(String key, JSONObject apiJson) {
     JSONArray resourceArray = (JSONArray) apiJson.get(key);
-    ResourceParser resourceParser = new ResourceParser(resourceArray);
+    ResourceParser resourceParser = new ResourceParser(key, resourceArray);
 
     return resourceParser.getResourceProperties();
   }
