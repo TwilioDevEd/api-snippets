@@ -15,15 +15,11 @@ public class ResourceModel {
     return resourcePath;
   }
 
-  public void setResourcePath(String resourcePath) {
-    this.resourcePath = resourcePath;
-  }
-
   public HashMap<String, HashMap<String, Object>> getResources() {
     return resources;
   }
 
-  public void setResources(HashMap<String, HashMap<String, Object>> resources) {
-    this.resources = resources;
+  public String toString() {
+    return this.resourcePath + ": " + this.resources;
   }
 }

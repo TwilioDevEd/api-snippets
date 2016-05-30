@@ -39,5 +39,6 @@ public class ApiProxy {
                 + "}")));
     System.out.println("Starting server...");
     DocParser parser = new DocParser(new File("api-descriptors"));
+    System.out.println(parser.getEndpointList());
   }
 }

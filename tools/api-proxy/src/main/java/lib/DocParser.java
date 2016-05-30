@@ -3,28 +3,31 @@ package lib;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class DocParser {
   private Collection<File> fileCollection;
-  private Collection<ResourceModel> endpointCollection;
+  private ArrayList<ResourceModel> endpointList;
 
   public DocParser(File basePath) {
     fileCollection = FileUtils.listFiles(basePath, null, true);
     populateEndPointCollection();
   }
 
-  public Collection getEndpointCollection() {
-    return this.endpointCollection;
+  public ArrayList getEndpointList() {
+    return this.endpointList;
   }
 
   public void populateEndPointCollection() {
+    this.endpointList = new ArrayList<>();
     for (File file : fileCollection) {
       HashMap<String, HashMap<String, Object>> resources = new HashMap<>();
       String fileContent = "";
@@ -42,34 +45,21 @@ public class DocParser {
         e.printStackTrace();
       }
 
-
       for (Object key : apiJson.keySet()) {
         String keyString = (String) key;
-        JSONObject resource = (JSONObject) apiJson.get(keyString);
-        resources.put(keyString, getResourceMethod(keyString, resource));
-      }
-      break;
-    }
+        HashMap<String, Object> resource = getResourceProperties(keyString, apiJson);
 
+        resources.put((String) resource.get(ResourceParser.RESOURCE_NAME), resource);
+      }
+      endpointList.add(new ResourceModel(file.toString(), resources));
+//      break;
+    }
   }
 
-  private HashMap<String, Object> getResourceMethod(String key, JSONObject apiJson) {
-    switch ((String) key) {
-      case "read":
-        break;
-      case "fetch":
-        break;
-      case "create":
-        break;
-      case "update":
-        break;
-      case "delete":
-        break;
-      default:
-        break;
+  private HashMap<String, Object> getResourceProperties(String key, JSONObject apiJson) {
+    JSONArray resourceArray = (JSONArray) apiJson.get(key);
+    ResourceParser resourceParser = new ResourceParser(resourceArray);
 
-    }
-    HashMap<String, Object> resource = new HashMap<>();
-    return resource;
+    return resourceParser.getResourceProperties();
   }
 }
