@@ -20,7 +20,14 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      text_require_autoload(file_content)
+      text_with_break_loops(text_require_autoload(file_content))
+    end
+
+    def text_with_break_loops(file_content)
+      file_content.gsub(
+        /foreach\s?\((.+)\)\s?\{(.+)\}/m,
+        "foreach(\\1) {\\2    break;\n}"
+      )
     end
 
     def text_require_autoload(file_content)
