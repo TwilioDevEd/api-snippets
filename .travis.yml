@@ -26,12 +26,13 @@ install:
 - nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
-- sudo cp tools/api-proxy/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
+- git clone https://github.com/TwilioDevEd/twilio-api-faker.git
+- sudo cp twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
 script:
-- cd tools/api-proxy
+- cd twilio-api-faker
 - sudo gradle run &
-- cd ../..
+- cd ..
 - sleep 25
 - pwd
 - ruby tools/snippet-testing/snippet_tester.rb
@@ -39,7 +40,7 @@ env:
   global:
   - NODE_PATH=/usr/lib/node_modules
   - NODE_TLS_REJECT_UNAUTHORIZED=0
-  - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/tools/api-proxy/keystore/twilio_fake.pem
+  - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio_fake.pem
 addons:
   hosts:
     - api.twilio.com
