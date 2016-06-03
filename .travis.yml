@@ -31,7 +31,7 @@ install:
 - sudo update-ca-certificates
 script:
 - cd twilio-api-faker
-- sudo gradle run &
+- sudo gradle run </dev/null &>/dev/null &
 - cd ..
 - sleep 25
 - pwd
