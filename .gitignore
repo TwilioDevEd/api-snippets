@@ -49,4 +49,4 @@ nbactions.xml
 /.env
 /vendor/
 /nuget/
-/output/
+/testable_snippets/

@@ -7,7 +7,7 @@ Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"]
   .each { |file| require File.expand_path(file) }
 
 class SnippetTester
-  OUTPUT_PATH = 'output'.freeze
+  OUTPUT_PATH = 'testable_snippets'.freeze
 
   LANGUAGE_HANDLERS = {
     'java'      => LanguageHandler::JavaLanguageHandler.new(OUTPUT_PATH),
