@@ -15,7 +15,7 @@ endpoint_id = "HipFlowSlackDockRC:{0}:{1}".format(identity, device_id)
 token = AccessToken(account_sid, api_key, api_secret, identity)
 
 # Create an IP Messaging grant and add to token
-ipm_grant = IpMessagingGrant(endpoint_id=endpoint_id, service_sid=service_sid)
+ipm_grant = IpMessagingGrant(endpoint_id=endpoint_id, service_sid=ipm_service_sid)
 token.add_grant(ipm_grant)
 
 # Return token info as JSON

@@ -3,6 +3,7 @@ import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.Address;
 import com.twilio.sdk.resource.list.AddressList;
+import java.util.HashMap;
 
 public class Example {
 
@@ -14,7 +15,7 @@ public class Example {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     // Build a filter for the AddressList
-    Map<String, String> params = new HashMap<String, String>();
+    HashMap<String, String> params = new HashMap<String, String>();
 
     params.put("CustomerName", "Customer 123");
 

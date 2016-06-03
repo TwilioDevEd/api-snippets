@@ -17,7 +17,7 @@ public class Example {
 
     // Loop over numbers and print out a property for each one.
     for (DependentPhoneNumber number : numbers) {
-      System.out.println(number.getFriendlyName());
+      System.out.println(number.getPhoneNumber());
     }
 
   }

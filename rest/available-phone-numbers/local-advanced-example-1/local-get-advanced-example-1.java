@@ -3,11 +3,14 @@ import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.AvailablePhoneNumber;
 import com.twilio.sdk.resource.list.AvailablePhoneNumberList;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -17,16 +20,16 @@ public class Example {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     // Build a filter for the AvailablePhoneNumberList
-    Map<String, String> params = new HashMap<String, String>();
-    
+    HashMap<String, String> params = new HashMap<String, String>();
+
     params.put("NearLatLong", "37.840699,-122.461853");
     params.put("Distance", "50");
     params.put("Contains", "555");
     params.put("InRegion", "CA");
-    
+
     AvailablePhoneNumberList numbers = client.getAccount().getAvailablePhoneNumbers(params, "US", "Local");
     List<AvailablePhoneNumber> list = numbers.getPageData();
-    
+
     // Purchase the first number in the list.
     List<NameValuePair> purchaseParams = new ArrayList<NameValuePair>();
     purchaseParams.add(new BasicNameValuePair("PhoneNumber", list.get(0).getPhoneNumber()));

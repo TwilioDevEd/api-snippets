@@ -1,9 +1,9 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 using Twilio;
-class Example 
+class Example
 {
-  static void Main(string[] args) 
+  static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "{{ account_sid }}";
@@ -11,11 +11,10 @@ class Example
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     var options = new ApplicationOptions();
-    options.FriendlyName = "Phone Me";
     options.VoiceUrl = "http://demo.twilio.com/docs/voice.xml";
     options.VoiceMethod = "GET";
-    var app = twilio.AddApplication(options);
-    
+    var app = twilio.AddApplication("Phone Me", options);
+
     Console.WriteLine(app.Sid);
   }
 }
