@@ -32,7 +32,7 @@ module LanguageHandler
 
     def text_require_autoload(file_content)
       replaced = file_content.gsub(/^require.{1,}$/, '')
-      replaced.gsub('<?php', "require '#{autoload_path}';").prepend("<?php\n")
+      replaced.gsub('<?php', "require '#{autoload_path}';\n").prepend("<?php\n")
     end
   end
 end

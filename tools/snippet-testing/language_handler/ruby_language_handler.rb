@@ -11,7 +11,7 @@ module LanguageHandler
     def text_with_custom_header(file_content)
       file_content.prepend(
         "require 'openssl'\n"\
-        "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE"
+        "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\n"
       )
     end
 
