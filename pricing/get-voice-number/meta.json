@@ -1,5 +1,4 @@
 {
   "title": "Get Voice Prices for Number",
-  "type": "server",
-  "test": "true"
+  "type": "server"
 }

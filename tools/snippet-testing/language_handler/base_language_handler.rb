@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'timeout'
 
 module LanguageHandler
   class BaseLanguageHandler
@@ -26,9 +27,21 @@ module LanguageHandler
     end
 
     def execute_with_suppressed_output(command)
-      exit_code = system("#{command} > /dev/null 2>&1")
-      puts exit_code ? "success [#{lang_cname}]".green : "failure [#{lang_cname}]".red
-      exit_code
+      pid = Process.spawn("#{command} > /dev/null 2>&1")
+      exit_code = 0
+      begin
+        Timeout.timeout(20) do
+          _id, status = Process.wait2(pid)
+          exit_code = status.exitstatus
+        end
+      rescue Timeout::Error
+        puts 'process not finished in time, killing it'
+        Process.kill('KILL', pid)
+        exit_code = 1
+      end
+      success = exit_code == 0
+      puts success ? "success [#{lang_cname}]".green : "failure [#{lang_cname}]".red
+      success
     end
 
     private
@@ -38,12 +51,7 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      text_with_credentials(file_content)
-    end
-
-    def text_with_credentials(file_content)
-      replaced = file_content.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', TWILIO_ACCOUNT_SID)
-      replaced.gsub('{{ auth_token }}', TWILIO_AUTH_TOKEN)
+      file_content
     end
 
     def write_content(content, path)

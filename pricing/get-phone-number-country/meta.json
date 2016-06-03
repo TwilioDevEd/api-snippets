@@ -1,5 +1,4 @@
 {
   "title": "Get Phone Number Prices for the US",
-  "type": "server",
-  "test": "true"
+  "type": "server"
 }
