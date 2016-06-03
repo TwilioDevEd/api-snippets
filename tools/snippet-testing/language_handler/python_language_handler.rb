@@ -14,7 +14,7 @@ module LanguageHandler
         "import twilio.rest.resources.base\n"\
         "import sys\n"\
         "twilio.rest.resources.base.get_cert_file = lambda:  '#{cert_path}'\n"\
-        "sys.modules['twilio.rest.base.resources'] = twilio.rest.resources.base"\
+        "sys.modules['twilio.rest.base.resources'] = twilio.rest.resources.base\n"
       )
     end
 
