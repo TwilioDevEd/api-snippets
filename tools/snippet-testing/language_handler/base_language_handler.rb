@@ -3,22 +3,26 @@ require 'timeout'
 
 module LanguageHandler
   class BaseLanguageHandler
+
     TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
     TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
 
-    attr_reader :base_path, :dependencies
+    attr_reader :source_folder, :dependencies
 
-    def initialize(base_path, dependencies = [])
-      @base_path = base_path
+    def initialize(source_folder, dependencies = [])
+      @source_folder = source_folder
       @dependencies = dependencies
     end
 
-    def replace_and_relocate(path)
-      write_content(text_with_replacements(File.open(path).read), path)
+    def replace_and_relocate(snippet, lang)
+      input_file = snippet.get_input_file(lang)
+      output_file = snippet.get_output_file(lang)
+      content = text_with_replacements(File.open(input_file).read)
+      write_content(content, output_file)
     end
 
     def test_snippet(snippet_model)
-      path = snippet_model.get_output_filepath(lang_cname)
+      path = snippet_model.get_output_file(lang_cname)
       ErrorLogger.instance.add_error(path) unless execute(path)
     end
 
@@ -44,6 +48,10 @@ module LanguageHandler
       success
     end
 
+    def output_folder
+      Model::TestSessionModel::OUTPUT_FOLDER
+    end
+
     private
 
     def lang_cname
@@ -54,11 +62,11 @@ module LanguageHandler
       file_content
     end
 
-    def write_content(content, path)
-      dir_name  = @base_path + (File.dirname path)
-      file_name = File.basename(path)
+    def write_content(content, output_file)
+      dir_name  = File.dirname(output_file)
+      file_name = File.basename(output_file)
       FileUtils.mkdir_p(dir_name) unless Dir.exist?(dir_name)
-      new_file = File.new("#{dir_name}/#{file_name}", 'w+')
+      new_file = File.new(output_file, 'w+')
       new_file.write(content)
       new_file.close
     end
