@@ -1,4 +1,4 @@
-// Import necessary dependencies 
+// Import necessary dependencies
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
@@ -20,7 +20,7 @@ import com.koushikdutta.ion.Ion;
                             String accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
                             accessManager =
-                                    TwilioAccessManagerFactory.createAccessManager(ConversationActivity.this,
+                                    AccessManager.create(ConversationActivity.this,
                                                     accessToken,
                                                     accessManagerListener());
                             conversationsClient =
