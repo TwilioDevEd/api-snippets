@@ -3,8 +3,8 @@ conversation.disconnect();
 
 
 // This results in a call to ConversationListener#onConversationEnded
-private ConversationListener conversationListener() {
-  return new ConversationListener() {
+private Conversation.Listener conversationListener() {
+  return new Conversation.Listener() {
 
     ...
 

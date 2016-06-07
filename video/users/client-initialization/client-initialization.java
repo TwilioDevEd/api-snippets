@@ -1,5 +1,5 @@
 // Create an AccessManager to manage our Access Token
-TwilioAccessManager accessManager = TwilioAccessManagerFactory.createAccessManager(ConversationActivity.this,
+AccessManager accessManager = AccessManager.create(ConversationActivity.this,
                                 ACCESS_TOKEN,
                                 accessManagerListener());
 

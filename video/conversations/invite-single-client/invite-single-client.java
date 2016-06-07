@@ -4,8 +4,8 @@ participants.add("alice");
 public void onClick(DialogInterface dialog, int which) {
   /* See the "Specify Local Media Constraints when Creating a Conversation"
   guide for instructions on constructing LocalMedia */
-  outgoingInvite = conversationsClient.sendConversationInvite(participants, 
-                                                              localMedia, 
+  outgoingInvite = conversationsClient.inviteToConversation(participants,
+                                                              localMedia,
                                                               new ConversationCallback() {
     @Override
     public void onConversation(Conversation conversation, ConversationException e) {
@@ -20,16 +20,16 @@ public void onClick(DialogInterface dialog, int which) {
   });
 }
 
-private ConversationListener conversationListener() {
-  return new ConversationListener() {
+private Conversation.Listener conversationListener() {
+  return new Conversation.Listener() {
     @Override
-    public void onParticipantConnected(Conversation conversation, 
+    public void onParticipantConnected(Conversation conversation,
                                        Participant participant) {
       Log.v(TAG, "A remote Participant connected: " + participant.getSid());
       // Set a Participant Listener here
     }
 
     ...
-    
+
   };
 }

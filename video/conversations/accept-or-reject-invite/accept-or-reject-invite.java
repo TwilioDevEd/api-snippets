@@ -1,7 +1,7 @@
-/* Create an AccessManager - this provides a single place to update your Twilio 
+/* Create an AccessManager - this provides a single place to update your Twilio
 Access Token when using multiple Twilio SDKs */
-accessManager = TwilioAccessManagerFactory
-  .createAccessManager(ConversationActivity.this, TWILIO_ACCESS_TOKEN, accessManagerListener());
+accessManager = AccessManager.create(ConversationActivity.this,
+    TWILIO_ACCESS_TOKEN, accessManagerListener());
 
 // Create a Conversations Client and listen for IncomingInvites
 conversationsClient = TwilioConversationsClient
@@ -18,7 +18,7 @@ private TwilioConversationsClient.Listener conversationsClientListener() {
     ...
 
     @Override
-    public void onIncomingInvite(TwilioConversationsClient conversationsClient, 
+    public void onIncomingInvite(TwilioConversationsClient conversationsClient,
                                  IncomingInvite incomingInvite) {
       // Selectively handle IncomingInvites based on the originator
       if (incomingInvite.getInvitee().equals("ringo")) {
