@@ -3,7 +3,7 @@ from twilio import jwt
 from twilio.task_router import TaskRouterWorkerCapability
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "{{ account_sid }}"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
 workspace_sid = "{{ workspace_sid }}"
 worker_sid = "{{ worker_sid }}"

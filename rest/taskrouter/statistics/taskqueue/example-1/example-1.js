@@ -2,7 +2,7 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 var twilio = require('twilio');
 
-var accountSid = "{{ account_sid }}";
+var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var authToken = "{{ auth_token }}";
 var workspaceSid = "{{ workspace_sid }}";
 var taskQueueSid = "{{ taskqueue_sid }}";
