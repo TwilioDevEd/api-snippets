@@ -7,56 +7,47 @@ Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"]
   .each { |file| require File.expand_path(file) }
 
 class SnippetTester
-  OUTPUT_PATH = 'testable_snippets'.freeze
 
-  LANGUAGE_HANDLERS = {
-    'java'      => LanguageHandler::JavaLanguageHandler.new(OUTPUT_PATH),
-    'rb'        => LanguageHandler::RubyLanguageHandler.new(OUTPUT_PATH),
-    'js'        => LanguageHandler::NodeLanguageHandler.new(OUTPUT_PATH),
-    'php'       => LanguageHandler::PhpLanguageHandler.new(OUTPUT_PATH),
-    'py'        => LanguageHandler::PythonLanguageHandler.new(OUTPUT_PATH),
-    'curl'      => LanguageHandler::CurlLanguageHandler.new(OUTPUT_PATH),
-    'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new(OUTPUT_PATH),
-    'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new(OUTPUT_PATH),
-    'cs'        => LanguageHandler::CsharpLanguageHandler.new(
-      OUTPUT_PATH,
-      [
-        'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
-        'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-        'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll'
-      ]
-    )
-  }.freeze
-
-  def initialize(parent_folder)
-    @parent_folder = parent_folder.nil? ? Dir.pwd : parent_folder
-    Dir.chdir(@parent_folder)
-    puts "Base folder is #{@parent_folder}"
+  def initialize(parent_source_folder)
+    @parent_source_folder = parent_source_folder.nil? ? Dir.pwd : parent_source_folder
+    Dir.chdir(@parent_source_folder)
+    puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
-    @test_models = []
+    #Configuracion por defecto del tester
+    @test_models = [Model::TestSessionModel.new(@parent_source_folder)]
+    @language_handlers = {
+      'java'      => LanguageHandler::JavaLanguageHandler.new(@parent_source_folder),
+      'rb'        => LanguageHandler::RubyLanguageHandler.new(@parent_source_folder),
+      'js'        => LanguageHandler::NodeLanguageHandler.new(@parent_source_folder),
+      'php'       => LanguageHandler::PhpLanguageHandler.new(@parent_source_folder),
+      'py'        => LanguageHandler::PythonLanguageHandler.new(@parent_source_folder),
+      'curl'      => LanguageHandler::CurlLanguageHandler.new(@parent_source_folder),
+      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new(@parent_source_folder),
+      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new(@parent_source_folder),
+      'cs'        => LanguageHandler::CsharpLanguageHandler.new(
+        @parent_source_folder,
+        [
+          'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
+          'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+          'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll'
+        ]
+      )
+    }
   end
 
   # Try to recon which snippets are going to be tested in a given folder
   def init
     puts '####### Recon snippets marked for testing #######'
-    Dir.glob("#{parent_folder}/**/meta.json") do |json_file|
-      snippet_model = Model::SnippetModel.new(json_file.to_s, OUTPUT_PATH)
-      next unless snippet_model.testable?
-      # Add this model to those to be tested
-      puts snippet_model
-
-      @snippets_models << snippet_model
-    end
+    scan_folder_configs(@parent_source_folder)
   end
 
   def setup
     puts '####### Generating test-enviroment for marked snippets #######'
     @snippets_models.each do |snippet|
-      print "Generated #{snippet.folder_path} -> ["
+      print "Generated #{snippet.output_folder} -> ["
       snippet.available_langs.each do |lang, _file_name|
         print " #{lang}"
-        file = snippet.get_filepath(lang)
-        LANGUAGE_HANDLERS.fetch(lang).replace_and_relocate(file)
+        @language_handlers.fetch(lang).replace_and_relocate(snippet, lang)
       end
       print " ]\n"
     end
@@ -65,16 +56,56 @@ class SnippetTester
   def run
     puts '####### Testing marked snippets #######'
     @snippets_models.each do |snippet|
-      puts "Testing #{snippet.folder_path}"
+      puts "Testing #{snippet.output_folder}"
       snippet.available_langs.each do |lang, _file_name|
-        LANGUAGE_HANDLERS.fetch(lang).test_snippet(snippet)
+        @language_handlers.fetch(lang).test_snippet(snippet)
       end
     end
   end
 
   private
 
-  attr_reader :parent_folder, :snippets_models, :test_models
+  attr_reader :parent_source_folder, :snippets_models, :test_models
+
+  def current_config
+    @test_models.last
+  end
+
+  def scan_folder_configs(folder_path)
+    #import yaml config
+    current_folder_has_config = import_existing_config(folder_path)
+    #import snippet json
+    import_existing_snippet(folder_path, current_config)
+    Dir.glob(folder_path+"/*") do |folder|
+      scan_folder_configs(folder) if File.directory?(folder)
+    end
+    erase_added_config if current_folder_has_config
+  end
+
+  def import_existing_config(folder_path)
+    Dir.glob("#{folder_path}#{File::SEPARATOR}test.yaml") do |yaml_path|
+      test_config = Model::TestSessionModel.new(yaml_path, current_config)
+      test_models.push test_config
+      puts test_config
+      return true
+    end
+    return false
+  end
+
+  def erase_added_config
+    test_models.pop
+  end
+
+  def import_existing_snippet(source_folder, test_model)
+    Dir.glob("#{source_folder}#{File::SEPARATOR}meta.json") do |json_file|
+      snippet_model = Model::SnippetModel.new(json_file.to_s, test_model)
+      next unless snippet_model.testable?
+      # Add this model to those to be tested
+      puts snippet_model
+      @snippets_models << snippet_model
+    end
+  end
+
 end
 
 if __FILE__ == $0

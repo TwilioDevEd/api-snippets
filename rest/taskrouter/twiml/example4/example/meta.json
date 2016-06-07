@@ -1,5 +1,5 @@
 {
   "title": "Specifying custom hold music and post-call treatment",
   "type": "server",
-  "test": "false"
+  "testable": "false"
 }

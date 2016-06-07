@@ -16,7 +16,7 @@ class Example
     options.Method = "GET";
     options.StatusCallback = "https://www.myapp.com/events";
     options.StatusCallbackMethod = "POST";
-    options.StatusCallbackEvents = { "initiated", "ringing", "answered", "completed" };
+    options.StatusCallbackEvents = new string[] { "initiated", "ringing", "answered", "completed" };
 
     var call = twilio.InitiateOutboundCall(options);
 
