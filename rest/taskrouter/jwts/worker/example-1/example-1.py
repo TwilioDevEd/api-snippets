@@ -6,7 +6,7 @@ from twilio.task_router import TaskRouterWorkerCapability
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-worker_sid = "{{ worker_sid }}"
+worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 capability = TaskRouterWorkerCapability(account_sid, auth_token, workspace_sid, worker_sid)
 capability.allow_activity_updates()

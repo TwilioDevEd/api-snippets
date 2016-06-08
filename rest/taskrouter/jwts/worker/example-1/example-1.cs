@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string WorkerSid = "{{ worker_sid }}";
+    string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     TaskRouterWorkerCapability capability = new TaskRouterWorkerCapability(AccountSid, AuthToken, WorkspaceSid, WorkerSid);
     capability.AllowActivityUpdates();

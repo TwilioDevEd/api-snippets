@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string TaskQueueSid = "{{ worker_sid }}";
+    string TaskQueueSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     client.DeleteTaskQueue(WorkspaceSid, TaskQueueSid);

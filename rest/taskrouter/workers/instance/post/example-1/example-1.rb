@@ -6,7 +6,7 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = '{{ auth_token }}'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-worker_sid = '{{ worker_sid }}'
+worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 

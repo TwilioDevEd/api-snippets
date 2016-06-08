@@ -6,7 +6,7 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "{{ auth_token }}";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$workerSid = "{{ worker_sid }}";
+$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $capability = new Services_Twilio_TaskRouter_Worker_Capability($accountSid, $authToken, $workspaceSid, $workerSid);
 $capability->allowActivityUpdates();
