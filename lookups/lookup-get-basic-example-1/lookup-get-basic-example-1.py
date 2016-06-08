@@ -2,7 +2,7 @@
 from twilio.rest.lookups import TwilioLookupsClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+account_sid = "{{ account_sid }}"
 auth_token  = "{{ auth_token }}"
 client = TwilioLookupsClient(account_sid, auth_token)
 

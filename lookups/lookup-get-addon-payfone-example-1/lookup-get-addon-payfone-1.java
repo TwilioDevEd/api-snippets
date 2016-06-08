@@ -16,7 +16,7 @@ public class Example {
         CredentialsProvider credsProvider = new BasicCredentialsProvider();
         credsProvider.setCredentials(
                 new AuthScope("lookups.twilio.com", 80),
-                new UsernamePasswordCredentials("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "{{ auth_token }}"));
+                new UsernamePasswordCredentials("{{ account_sid }}", "{{ auth_token }}"));
         CloseableHttpClient httpclient = HttpClients.custom()
                 .setDefaultCredentialsProvider(credsProvider)
                 .build();

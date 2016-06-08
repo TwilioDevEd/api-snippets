@@ -1,2 +1,2 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SigningKeys/SK2a0747eba6abf96b7e3c3ff0b4530f6e.json \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SigningKeys/SK2a0747eba6abf96b7e3c3ff0b4530f6e.json \
+    -u '{{ account_sid }}:{{ auth_token }}'

@@ -1,2 +1,2 @@
 $ curl -G https://monitor.twilio.com/v1/Alerts \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

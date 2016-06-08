@@ -1,3 +1,3 @@
-$ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/GB/Local.json \
+$ curl -G https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/AvailablePhoneNumbers/GB/Local.json \
     -d "VoiceEnabled=true" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

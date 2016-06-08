@@ -5,7 +5,7 @@
 require './vendor/autoload.php';
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; 
+$sid = "{{ account_sid }}"; 
 $token = "{{ auth_token }}"; 
 
 // Initialize the client

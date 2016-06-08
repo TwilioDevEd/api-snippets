@@ -6,7 +6,7 @@
 1. Snippets should use placeholders for user information in a format that resembles
    the original value. For example:
    ```
-   Account SID: ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   Account SID: {{ account_sid }}
    Call SID:    CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    API Key:     SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```

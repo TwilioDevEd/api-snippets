@@ -4,7 +4,7 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+account = "{{ account_sid }}"
 token = "{{ auth_token }}"
 client = Client(account, token)
 

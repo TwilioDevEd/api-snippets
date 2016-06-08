@@ -2,7 +2,7 @@
 from twilio.rest import TwilioPricingClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+account_sid = "{{ account_sid }}"
 auth_token = "{{ auth_token }}"
 client = TwilioPricingClient(account_sid, auth_token)
 
