@@ -4,7 +4,7 @@ def replace_account_sid(file_path)
   replaced = original.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '{{ account_sid }}')
 
   unless original == replaced
-    # puts replaced
+    puts "replaced: #{file_path}"
     File.open(File.expand_path(file_path), 'w') { |document| document.write(replaced) }
   end
 

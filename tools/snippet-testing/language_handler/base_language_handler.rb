@@ -3,9 +3,7 @@ require 'timeout'
 
 module LanguageHandler
   class BaseLanguageHandler
-
-    TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
-    TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
+    DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
 
     attr_reader :source_folder, :dependencies
 
@@ -59,6 +57,15 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
+      replaced = text_without_placeholders(file_content)
+      text_with_specific_replacements(replaced)
+    end
+
+    def text_without_placeholders(file_content)
+      file_content.gsub(/\{\{[^\{\}]+\}\}/, DEFAULT_PLACEHOLDER_REPLACEMENT)
+    end
+
+    def text_with_specific_replacements(file_content)
       file_content
     end
 
