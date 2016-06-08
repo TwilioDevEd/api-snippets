@@ -1,15 +1,15 @@
 <TwilioResponse>
   <Calls page="0" pagesize="50"
-    uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls"
-    firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls?Page=0&PageSize=50"
+    uri="/2010-04-01/Accounts/{{ account_sid }}/Calls"
+    firstpageuri="/2010-04-01/Accounts/{{ account_sid }}/Calls?Page=0&PageSize=50"
     previouspageuri=""
-    nextpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls?Page=1&PageSize=50&AfterSid=CA228399228abecca920de212121">
+    nextpageuri="/2010-04-01/Accounts/{{ account_sid }}/Calls?Page=1&PageSize=50&AfterSid=CA228399228abecca920de212121">
     <Call>
       <Sid>CA92d4405c9237c4ea04b56cbda88e128c</Sid>
       <DateCreated>Fri, 13 Aug 2010 01:16:22 +0000</DateCreated>
       <DateUpdated>Fri, 13 Aug 2010 01:16:22 +0000</DateUpdated>
       <ParentCallSid/>
-      <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+      <AccountSid>{{ account_sid }}</AccountSid>
       <To>+15305431221</To>
       <From>+15104563443</From>
       <PhoneNumberSid>PNe2d8e63b37f46f2adb16f228afdb9058</PhoneNumberSid>
@@ -22,10 +22,10 @@
         <Flag>outbound-api</Flag>
       </Flags>
       <ApiVersion>2010-04-01</ApiVersion> <ForwardedFrom/> <CallerName/>
-      <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA92d4405c9237c4ea04b56cbda88e128c</Uri>
+      <Uri>/2010-04-01/Accounts/{{ account_sid }}/Calls/CA92d4405c9237c4ea04b56cbda88e128c</Uri>
       <SubresourceUris>
-        <Notifications>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA92d4405c9237c4ea04b56cbda88e128c/Notifications</Notifications>
-        <Recordings>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA92d4405c9237c4ea04b56cbda88e128c/Recordings</Recordings>
+        <Notifications>/2010-04-01/Accounts/{{ account_sid }}/Calls/CA92d4405c9237c4ea04b56cbda88e128c/Notifications</Notifications>
+        <Recordings>/2010-04-01/Accounts/{{ account_sid }}/Calls/CA92d4405c9237c4ea04b56cbda88e128c/Recordings</Recordings>
       </SubresourceUris>
     </Call>
     ...

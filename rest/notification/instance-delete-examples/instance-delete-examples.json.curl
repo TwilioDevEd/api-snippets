@@ -1,2 +1,2 @@
-$ curl -XDELETE https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications/NO5a7a84730f529f0a76b3e30c01315d1a.json \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+$ curl -XDELETE https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Notifications/NO5a7a84730f529f0a76b3e30c01315d1a.json \
+    -u '{{ account_sid }}:{{ auth_token }}'

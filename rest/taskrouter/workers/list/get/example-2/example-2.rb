@@ -3,7 +3,7 @@ require 'rubygems'          # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+account_sid = '{{ account_sid }}'
 auth_token = '{{ auth_token }}'
 workspace_sid = '{{ workspace_sid }}'
 

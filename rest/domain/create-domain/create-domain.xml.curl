@@ -1,6 +1,6 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SIP/Domains \
     -d "FriendlyName=Scranton%20Office" \
     -d "VoiceUrl=https://dundermifflin.example.com/twilio/app.php" \
     -d "AuthType=IP_ACL" \
     -d "DomainName=dunder-mifflin-scranton.sip.twilio.com" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

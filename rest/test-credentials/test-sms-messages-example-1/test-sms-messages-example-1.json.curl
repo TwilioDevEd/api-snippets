@@ -1,5 +1,5 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/SMS/Messages.json \
     -d "Body=All%20in%20the%20game%2C%20yo" \
     -d "To=%2B14108675309" \
     -d "From=%2B15005550006" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

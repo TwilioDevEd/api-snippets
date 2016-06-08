@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}.json \
     -d "Status=closed" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

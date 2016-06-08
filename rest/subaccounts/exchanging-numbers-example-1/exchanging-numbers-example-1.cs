@@ -6,13 +6,13 @@ class Example
   static void Main(string[] args) 
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    string AccountSid = "{{ account_sid }}";
     string AuthToken = "{{ auth_token }}";
-    string CurrentAccount = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    string CurrentAccount = "{{ account_sid }}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken, CurrentAccount);
 
     var options = new PhoneNumberOptions();
-    options.AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    options.AccountSid = "{{ account_sid }}";
     
     twilio.UpdateIncomingPhoneNumber("PN2a0747eba6abf96b7e3c3ff0b4530f6e", options);
   }

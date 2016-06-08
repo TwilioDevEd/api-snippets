@@ -1,6 +1,6 @@
 // Download the **Next-Gen** twilio-node library from:
 // twilio.com/docs/libraries/node#installation-nextgen
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; // Your Account SID from www.twilio.com/console
+var accountSid = '{{ account_sid }}'; // Your Account SID from www.twilio.com/console
 var authToken = '{{ auth_token }}';   // Your Auth Token from www.twilio.com/console
 
 var twilioLibrary = require('twilio');

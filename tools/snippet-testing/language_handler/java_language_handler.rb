@@ -15,7 +15,7 @@ module LanguageHandler
       'java'
     end
 
-    def text_with_replacements(file_content)
+    def text_with_specific_replacements(file_content)
       text_with_example_class_name(file_content)
     end
 

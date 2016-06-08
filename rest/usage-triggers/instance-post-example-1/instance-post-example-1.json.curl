@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4.json \
     -d "FriendlyName=Monthly%20Maximum%20Call%20Usage" \
     -d "CallbackUrl=https://www.example.com/monthly-usage-trigger" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

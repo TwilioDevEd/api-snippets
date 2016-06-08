@@ -12,7 +12,7 @@ module LanguageHandler
       'curl'
     end
 
-    def text_with_replacements(file_content)
+    def text_with_specific_replacements(file_content)
       text_without_bash_symbol(file_content)
     end
 

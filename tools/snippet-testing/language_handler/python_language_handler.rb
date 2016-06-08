@@ -4,7 +4,7 @@ module LanguageHandler
   class PythonLanguageHandler < BaseLanguageHandler
     private
 
-    def text_with_replacements(file_content)
+    def text_with_specific_replacements(file_content)
       text_with_custom_header(file_content)
     end
 

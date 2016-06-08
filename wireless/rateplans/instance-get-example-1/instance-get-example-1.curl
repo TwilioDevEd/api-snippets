@@ -1,2 +1,2 @@
 $ curl -G https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8 \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u '{{ account_sid }}:{{ auth_token }}'

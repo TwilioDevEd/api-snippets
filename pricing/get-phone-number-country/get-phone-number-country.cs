@@ -8,7 +8,7 @@ class Example
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    const string accountSid = "{{ account_sid }}";
     const string authToken = "{{ auth_token }}";
     var pricingClient = new PricingClient(accountSid, authToken);
 

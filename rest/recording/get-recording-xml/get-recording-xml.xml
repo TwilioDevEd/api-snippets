@@ -1,7 +1,7 @@
 <TwilioResponse>
   <Recording>
     <Sid>RE557ce644e5ab84fa21cc21112e22c485</Sid>
-    <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+    <AccountSid>{{ account_sid }}</AccountSid>
     <CallSid>CA8dfedb55c129dd4d6bd1f59af9d11080</CallSid>
     <Duration>1</Duration>
     <DateCreated>Fri, 17 Jul 2009 01:52:49 +0000</DateCreated>
@@ -9,6 +9,6 @@
     <DateUpdated>Fri, 17 Jul 2009 01:52:49 +0000</DateUpdated>
     <Price>-0.00250</Price>
     <PriceUnit>USD</PriceUnit>
-    <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab84fa21cc21112e22c485.xml</Uri>
+    <Uri>/2010-04-01/Accounts/{{ account_sid }}/Recordings/RE557ce644e5ab84fa21cc21112e22c485.xml</Uri>
   </Recording>
 </TwilioResponse>

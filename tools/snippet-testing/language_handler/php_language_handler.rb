@@ -19,7 +19,7 @@ module LanguageHandler
       execute_with_suppressed_output("php #{file}")
     end
 
-    def text_with_replacements(file_content)
+    def text_with_specific_replacements(file_content)
       text_with_break_loops(text_require_autoload(file_content))
     end
 
