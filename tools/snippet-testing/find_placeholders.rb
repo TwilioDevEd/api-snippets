@@ -2,7 +2,6 @@ placeholders = []
 
 Dir.glob("**/*") do |file|
   next if file.index(/^tools\//) || file.include?('nuget/') || file.include?('vendor/') || file.include?('testable_snippets/')
-  # replace_account_sid(file) unless File.directory?(file)
 
   unless File.directory?(file)
     file = File.open(File.expand_path(file), 'r')
@@ -10,7 +9,7 @@ Dir.glob("**/*") do |file|
     results = original.scan(/\{\{[^\{\}]+\}\}/)
     results.each do |match|
       unless placeholders.include?(match)
-        puts File.path(file) # First ocurrence of the placeholder
+        # puts File.path(file) # First ocurrence of the placeholder
         puts match
         placeholders.push(match)
       end

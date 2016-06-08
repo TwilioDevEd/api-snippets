@@ -3,25 +3,25 @@
 
 ## Guidelines
 
-1. Snippets should use placeholders for user information in a format that resembles
-   the original value. For example:
+1. Snippets should use placeholders for user information in a [mustache](https://mustache.github.io/mustache.5.html)
+   like format. These are the placeholders you should use for snippets:
    ```
-   Account SID: {{ account_sid }}
-   Call SID:    CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   API Key:     SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   1.  {{ account_sid }}
+   2.  {{ auth_token }}
+   3.  {{ subaccount_auth_token }}
+   4.  {{ workspace_sid }}
+   5.  {{ activity_sid }}
+   6.  {{ worker_sid }}
+   7.  {{ taskqueue_sid }}
+   8.  {{ task_sid }}
+   9.  {{ reservation_sid }}
+   10. {{ workflow_sid }}
+   11. {{ rate_plan_sid }}
    ```
    In the case of phone numbers, any example phone number can be used:
    ```
    Phone Number: +5551234567
    ```
-
-   For placeholders that do not have a specific format, the mustache style should be used for placeholders. For example:
-   ```
-   Auth Token: {{ auth_token }}
-   ```
-
-   __Note:__ This is important as Twilio libraries use these values as a part of the URL for API requests.
-   When testing the snippets real requests will be made to a fake server.
 
 ## Continuous Integration
 
