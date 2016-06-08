@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string TaskSid = "{{ task_sid }}";
+    string TaskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string ReservationSid = "{{ reservation_sid }}";
 
     var client = new TaskRouterClient(AccountSid, AuthToken);

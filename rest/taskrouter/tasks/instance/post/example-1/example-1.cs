@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string TaskSid = "{{ task_sid }}";
+    string TaskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     // update a task's attributes

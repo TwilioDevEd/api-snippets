@@ -14,7 +14,7 @@ public class Example {
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "{{ auth_token }}";
   private static final String WORKSPACE_SID = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  private static final String TASK_SID = "{{ task_sid }}";
+  private static final String TASK_SID = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioTaskRouterClient client = new TwilioTaskRouterClient(ACCOUNT_SID, AUTH_TOKEN);

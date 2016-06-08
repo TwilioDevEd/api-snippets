@@ -5,7 +5,7 @@ var twilio = require('twilio');
 var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var authToken = "{{ auth_token }}";
 var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var taskSid = "{{ task_sid }}";
+var taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
