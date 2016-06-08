@@ -6,17 +6,17 @@
 1. Snippets should use placeholders for user information in a [mustache](https://mustache.github.io/mustache.5.html)
    like format. These are the placeholders you should use for snippets:
 
-   1.  {{ account_sid }}
-   2.  {{ auth_token }}
-   3.  {{ subaccount_auth_token }}
-   4.  {{ workspace_sid }}
-   5.  {{ activity_sid }}
-   6.  {{ worker_sid }}
-   7.  {{ taskqueue_sid }}
-   8.  {{ task_sid }}
-   9.  {{ reservation_sid }}
-   10. {{ workflow_sid }}
-   11. {{ rate_plan_sid }}
+   * {{ account_sid }}
+   * {{ auth_token }}
+   * {{ subaccount_auth_token }}
+   * {{ workspace_sid }}
+   * {{ activity_sid }}
+   * {{ worker_sid }}
+   * {{ taskqueue_sid }}
+   * {{ task_sid }}
+   * {{ reservation_sid }}
+   * {{ workflow_sid }}
+   * {{ rate_plan_sid }}
 
    For phone numbers, any example phone number can be used:
    ```
