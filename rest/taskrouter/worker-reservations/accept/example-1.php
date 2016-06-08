@@ -7,7 +7,7 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "{{ auth_token }}";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$reservationSid = "{{ reservation_sid }}";
+$reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 

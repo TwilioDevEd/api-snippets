@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-reservation_sid = '{{ reservation_sid }}'
+reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
