@@ -6,7 +6,7 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = '{{ auth_token }}'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-taskqueue_sid = '{{ taskqueue_sid }}'
+taskqueue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 capability = Twilio::TaskRouter::TaskQueueCapability.new account_sid, auth_token, workspace_sid, taskqueue_sid
 capability.allow_fetch_subresources

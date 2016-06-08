@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string TaskQueueSid = "{{ taskqueue_sid }}";
+    string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     TaskRouterTaskQueueCapability capability = new TaskRouterTaskQueueCapability(AccountSid, AuthToken, WorkspaceSid, TaskQueueSid);
     capability.AllowFetchSubresources();

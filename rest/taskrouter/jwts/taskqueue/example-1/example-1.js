@@ -5,7 +5,7 @@ var twilio = require('twilio');
 var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var authToken = "{{ auth_token }}";
 var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var taskQueueSid = "{{ taskqueue_sid }}";
+var taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var capability = new twilio.TaskRouterTaskQueueCapability(accountSid, authToken, workspaceSid, taskQueueSid);
 capability.allowFetchSubresources();
