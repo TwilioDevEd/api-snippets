@@ -10,10 +10,10 @@ client = TwilioTaskRouterClient(account_sid, auth_token)
 
 rules = []
 
-sales_queue_sid = "{{ sales_queue_sid }}"
-marketing_queue_sid = "{{ marketing_queue_sid }}"
-support_queue_sid = "{{ support_queue_sid }}"
-everyone_queue_sid = "{{ everyone_queue_sid }}"
+sales_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+marketing_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+support_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+everyone_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 salesRuleTargets = []
 salesRuleTarget = WorkflowRuleTarget(sales_queue_sid, null, null, null)
