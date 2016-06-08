@@ -8,7 +8,7 @@ class Example
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
-    string WorkspaceSid = "{{ workspace_sid }}";
+    string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     Worker worker = client.AddWorker(WorkspaceSid, "Support Worker 1", null, "{\"type\":\"support\"}");

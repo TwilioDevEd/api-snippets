@@ -5,7 +5,7 @@ require 'twilio-ruby'
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = '{{ auth_token }}'
-workspace_sid = '{{ workspace_sid }}'
+workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 worker_sid = '{{ worker_sid }}'
 
 capability = Twilio::TaskRouter::WorkerCapability.new account_sid, auth_token, workspace_sid, worker_sid

@@ -4,7 +4,7 @@ var twilio = require('twilio');
 
 var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var authToken = "{{ auth_token }}";
-var workspaceSid = "{{ workspace_sid }}";
+var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var workerSid = "{{ worker_sid }}";
 var reservationSid = "{{ reservation_sid }}";
 

@@ -4,7 +4,7 @@ from twilio.rest import TwilioTaskRouterClient
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
-workspace_sid = "{{ workspace_sid }}"
+workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 task_sid = "{{ task_sid }}"
 reservation_sid = "{{ reservation_sid }}"
 
