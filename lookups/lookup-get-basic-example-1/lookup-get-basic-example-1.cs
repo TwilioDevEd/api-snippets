@@ -6,7 +6,7 @@ class Example
 {
   static void Main(string[] args)
   {
-    // Find your Account Sid and Auth Token at twilio.com/user/account
+    // Find your Account Sid and Auth Token at twilio.com/console
     const string accountSid = "{{ account_sid }}";
     const string authToken = "{{ auth_token }}";
     var lookupsClient = new LookupsClient(accountSid, authToken);
