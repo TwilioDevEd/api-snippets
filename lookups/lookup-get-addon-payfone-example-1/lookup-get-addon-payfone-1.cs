@@ -1,4 +1,3 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
