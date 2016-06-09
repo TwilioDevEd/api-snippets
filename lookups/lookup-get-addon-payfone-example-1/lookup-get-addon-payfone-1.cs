@@ -1,9 +1,8 @@
+// Download the twilio-csharp library from twilio.com/docs/csharp/install
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
 using Newtonsoft.Json.Serialization;
-
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 
 class Example
