@@ -1,0 +1,5 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Messages.json \
+    --data-urlencode "Body=Never gonna give you up." \
+    --data-urlencode "To=+16518675309" \
+    --data-urlencode "From=+15017250604" \
+    -u '{{ api_key }}:{{ api_secret }}'
