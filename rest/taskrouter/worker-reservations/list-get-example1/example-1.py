@@ -10,5 +10,5 @@ task_sid = "{{ task_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 for reservation in client.workers(workspace_sid).get(worker_sid).reservations.list():
-    print reservation.reservation_status
-    print reservation.worker_name
+    print(reservation.reservation_status)
+    print(reservation.worker_name)

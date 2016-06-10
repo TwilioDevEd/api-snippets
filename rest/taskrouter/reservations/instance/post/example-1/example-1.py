@@ -11,6 +11,6 @@ client = TwilioTaskRouterClient(account_sid, auth_token)
 
 # accept a reservation
 reservation = client.reservations(workspace_sid, task_sid).update(reservation_sid, reservation_status='accepted')
-print reservation.reservation_status
-print reservation.worker_name
+print(reservation.reservation_status)
+print(reservation.worker_name)
 

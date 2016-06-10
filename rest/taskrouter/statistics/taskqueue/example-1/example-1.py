@@ -10,4 +10,4 @@ taskqueue_sid = "{{ taskqueue_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 statistics = client.taskqueues(workspace_sid).get(taskqueue_sid).statistics.get()
-print statistics.cumulative["reservations_accepted"]
+print(statistics.cumulative["reservations_accepted"])

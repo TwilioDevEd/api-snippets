@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 member = client.members('QU5ef8732a3c49700934481addd5ce1659').dequeue("http://demo.twilio.com/docs/voice.xml", "Front", method="POST")
-print member.wait_time
+print(member.wait_time)

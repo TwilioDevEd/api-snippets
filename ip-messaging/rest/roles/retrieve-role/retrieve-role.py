@@ -9,4 +9,4 @@ client = TwilioIpMessagingClient(account, token)
 # Retrieve role
 service = client.services.get(sid="SERVICE_SID")
 role = service.roles.get(sid="ROLE_SID")
-print role
+print(role)

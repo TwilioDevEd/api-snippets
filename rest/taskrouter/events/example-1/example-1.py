@@ -9,4 +9,4 @@ workspace_sid = "{{ workspace_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 for event in client.events(workspace_sid).list():
- 	print event.event_type
+ 	print(event.event_type)

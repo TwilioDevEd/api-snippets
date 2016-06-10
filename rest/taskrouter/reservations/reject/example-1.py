@@ -12,6 +12,6 @@ client = TwilioTaskRouterClient(account_sid, auth_token)
 
 # reject a reservation
 reservation = client.reservations(workspace_sid, task_sid).update(reservation_sid, reservation_status='rejected')
-print reservation.reservation_status
-print reservation.worker_name
+print(reservation.reservation_status)
+print(reservation.worker_name)
 

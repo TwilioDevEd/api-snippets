@@ -10,4 +10,4 @@ signingkey_secret = SECRET
 token = AccessToken(signingkey_sid, account_sid, signingkey_secret)
 token.add_endpoint_grant(ENDPOINT_ADDRESS)
 token.enable_nts()
-print token.to_jwt()
+print(token.to_jwt())

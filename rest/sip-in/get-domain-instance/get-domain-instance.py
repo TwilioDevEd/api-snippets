@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 domain = client.sip.domains.get("SD32a3c49700934481addd5ce1659f04d2")
-print domain.voice_method
+print(domain.voice_method)

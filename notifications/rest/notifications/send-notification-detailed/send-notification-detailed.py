@@ -16,4 +16,4 @@ notification = service.notifications.create(
     gcm='{"notification":{"tag":"MyTag"}}',
     apn='{"aps":{"title":"Short title for Watch."}}')
 
-print notification
+print(notification)

@@ -8,4 +8,4 @@ client = TwilioRestClient(account_sid, auth_token)
 
 trigger = client.usage.triggers.update("UT33c6aeeba34e48f38d6899ea5b765ad4", friendly_name="Monthly Maximum Call Usage",
     callback_url="https://www.example.com/monthly-usage-trigger")
-print trigger.date_fired
+print(trigger.date_fired)

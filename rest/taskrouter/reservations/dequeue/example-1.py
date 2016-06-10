@@ -12,6 +12,6 @@ client = TwilioTaskRouterClient(account_sid, auth_token)
 
 # dequeue a reservation
 reservation = client.reservations(workspace_sid, task_sid).update(reservation_sid, instruction='dequeue', dequeue_from='+18001231234')
-print reservation.reservation_status
-print reservation.worker_name
+print(reservation.reservation_status)
+print(reservation.worker_name)
 

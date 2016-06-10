@@ -7,4 +7,4 @@ token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token)
  
 for c in client.credentials.list():
-    print c
+    print(c)

@@ -10,4 +10,4 @@ client = TwilioRestClient(account_sid, auth_token)
 numbers = client.dependent_phone_numbers('AD2a0747eba6abf96b7e3c3ff0b4530f6e').list()
 
 for number in numbers:
-    print number.friendly_name
+    print(number.friendly_name)

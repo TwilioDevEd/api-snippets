@@ -19,4 +19,4 @@ ipm_grant = IpMessagingGrant(endpoint_id=endpoint_id, service_sid=ipm_service_si
 token.add_grant(ipm_grant)
 
 # Return token info as JSON
-print token.to_jwt()
+print(token.to_jwt())

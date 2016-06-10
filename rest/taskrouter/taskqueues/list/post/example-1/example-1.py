@@ -15,4 +15,4 @@ taskqueue = client.taskqueues(workspace_sid).create(
     target_workers='languages HAS "english"'
 )
 
-print taskqueue.friendly_name
+print(taskqueue.friendly_name)

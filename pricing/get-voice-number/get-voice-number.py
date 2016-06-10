@@ -8,4 +8,4 @@ client = TwilioPricingClient(account_sid, auth_token)
 
 number = client.voice.numbers.get("+15108675309")
 
-print number.outbound_call_price['current_price']
+print(number.outbound_call_price['current_price'])

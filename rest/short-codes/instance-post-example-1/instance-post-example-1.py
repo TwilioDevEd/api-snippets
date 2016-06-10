@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 short_code = client.sms.short_codes.update("SC6b20cb705c1e8f00210049b20b70fce3", sms_url="http://demo.twilio.com/docs/sms.xml")
-print short_code.short_code
+print(short_code.short_code)

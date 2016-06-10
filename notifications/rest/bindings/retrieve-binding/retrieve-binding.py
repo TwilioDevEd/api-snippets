@@ -12,4 +12,4 @@ service = client.notifications.v1.services("ISxxx")
 
 binding = service.bindings("BSxxx").fetch()
 
-print binding
+print(binding)

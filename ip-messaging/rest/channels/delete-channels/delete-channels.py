@@ -10,4 +10,4 @@ client = TwilioIpMessagingClient(account, token)
 service = client.services.get(sid ="SERVICE_SID")
 channel = service.channels.create()
 response = channel.delete()
-print response
+print(response)

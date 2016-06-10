@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioMonitorClient(account_sid, auth_token)
 
 alert = client.alerts.get("NO5a7a84730f529f0a76b3e30c01315d1a")
-print alert.alert_text
+print(alert.alert_text)

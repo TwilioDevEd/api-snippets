@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 short_code = client.sms.short_codes.get("SC6b20cb705c1e8f00210049b20b70fce2")
-print short_code.short_code
+print(short_code.short_code)

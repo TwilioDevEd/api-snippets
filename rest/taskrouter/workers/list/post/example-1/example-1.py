@@ -13,4 +13,4 @@ worker = client.workers(workspace_sid).create(
     attributes='{"type":"support"}'
 )
 
-print worker.friendly_name
+print(worker.friendly_name)

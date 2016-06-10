@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 key = client.signing_keys.get("SK2a0747eba6abf96b7e3c3ff0b4530f6e")
-print key.friendly_name
+print(key.friendly_name)

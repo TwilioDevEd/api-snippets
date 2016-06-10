@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 transcription = client.transcriptions.get("TR8c61027b709ffb038236612dc5af8723")
-print transcription.transcription_text
+print(transcription.transcription_text)

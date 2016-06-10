@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 queue = client.queues.create("newqueue", )
-print queue.sid
+print(queue.sid)

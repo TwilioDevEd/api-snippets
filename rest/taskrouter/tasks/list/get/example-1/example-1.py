@@ -9,4 +9,4 @@ workspace_sid = "{{ workspace_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 for task in client.tasks(workspace_sid).list():
-	print task.attributes
+	print(task.attributes)

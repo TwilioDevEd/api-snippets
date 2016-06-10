@@ -9,4 +9,4 @@ client = TwilioMonitorClient(account_sid, auth_token)
 events = client.events.list(resource_sid="PN4aa51b930717ea83c91971b86d99018f")
 
 for e in events:
-    print e.description
+    print(e.description)

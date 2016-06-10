@@ -8,4 +8,4 @@ client = TwilioIpMessagingClient(account, token)
 
 service = client.services.get(sid ="SERVICE_SID")
 response = service.delete()
-print response
+print(response)

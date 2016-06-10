@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 ip_access_control_list = client.sip.ip_access_control_lists.create(friendly_name="My new acl")
-print ip_access_control_list.sid
+print(ip_access_control_list.sid)

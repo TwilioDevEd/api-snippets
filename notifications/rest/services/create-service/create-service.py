@@ -9,4 +9,4 @@ token = "{{ auth_token }}"
 client = Client(account, token)
 
 service = client.notifications.v1.services.create(friendly_name="My Awesome Service")
-print service
+print(service)

@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 account = client.accounts.update("{{ account_sid }}", status="closed")
-print account.date_created
+print(account.date_created)

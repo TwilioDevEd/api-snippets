@@ -7,4 +7,4 @@ token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token) 
 
 response = client.credentials.delete():
-print response
+print(response)

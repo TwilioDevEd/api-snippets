@@ -8,4 +8,4 @@ client = TwilioIpMessagingClient(account, token)
 
 service = client.services.get(sid ="SERVICE_SID")
 user = service.users.get(sid="USER_SID")
-print user
+print(user)

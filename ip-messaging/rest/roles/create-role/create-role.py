@@ -9,4 +9,4 @@ client = TwilioIpMessagingClient(account, token)
 # Create role
 service = client.services.get(sid="SERVICE_SID")
 role = service.roles.create(friendlyName="new_role", type="deployment", permission="createChannel", permission="joinChannel")
-print role
+print(role)

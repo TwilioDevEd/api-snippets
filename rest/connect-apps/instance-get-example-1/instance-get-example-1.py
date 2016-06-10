@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 connect_app = client.connect_apps.get("CNb989fdd207b04d16aee578018ef5fd93")
-print connect_app.homepage_url
+print(connect_app.homepage_url)
