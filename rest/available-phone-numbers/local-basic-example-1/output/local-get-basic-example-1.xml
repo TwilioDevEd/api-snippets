@@ -1,39 +1,39 @@
 <TwilioResponse>
-	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/Local?AreaCode=510">
-		<AvailablePhoneNumber>
-			<FriendlyName>(510) 564-7903</FriendlyName>
-			<PhoneNumber>+15105647903</PhoneNumber>
-			<Lata>722</Lata>
-			<RateCenter>OKLD TRNID</RateCenter>
-			<Latitude>37.780000</Latitude>
-			<Longitude>-122.380000</Longitude>
-			<Region>CA</Region>
-			<PostalCode>94703</PostalCode>
-			<IsoCountry>US</IsoCountry>
+  <AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/Local?AreaCode=510">
+    <AvailablePhoneNumber>
+      <FriendlyName>(510) 564-7903</FriendlyName>
+      <PhoneNumber>+15105647903</PhoneNumber>
+      <Lata>722</Lata>
+      <RateCenter>OKLD TRNID</RateCenter>
+      <Latitude>37.780000</Latitude>
+      <Longitude>-122.380000</Longitude>
+      <Region>CA</Region>
+      <PostalCode>94703</PostalCode>
+      <IsoCountry>US</IsoCountry>
       <Capabilities>
         <Voice>true</Voice>
         <SMS>true</SMS>
         <MMS>false</SMS>
       </Capabilities>
       <Beta>false</Beta>
-		</AvailablePhoneNumber>
-		<AvailablePhoneNumber>
-			<FriendlyName>(510) 488-4379</FriendlyName>
-			<PhoneNumber>+15104884379</PhoneNumber>
-			<Lata>722</Lata>
-			<RateCenter>OKLD FRTVL</RateCenter>
-			<Latitude>37.780000</Latitude>
-			<Longitude>-122.380000</Longitude>
-			<Region>CA</Region>
-			<PostalCode>94602</PostalCode>
-			<IsoCountry>US</IsoCountry>
+    </AvailablePhoneNumber>
+    <AvailablePhoneNumber>
+      <FriendlyName>(510) 488-4379</FriendlyName>
+      <PhoneNumber>+15104884379</PhoneNumber>
+      <Lata>722</Lata>
+      <RateCenter>OKLD FRTVL</RateCenter>
+      <Latitude>37.780000</Latitude>
+      <Longitude>-122.380000</Longitude>
+      <Region>CA</Region>
+      <PostalCode>94602</PostalCode>
+      <IsoCountry>US</IsoCountry>
       <Capabilities>
         <Voice>true</Voice>
         <SMS>true</SMS>
         <MMS>false</SMS>
       </Capabilities>
       <Beta>false</Beta>
-		</AvailablePhoneNumber>
-		...
-	</AvailablePhoneNumbers>
+    </AvailablePhoneNumber>
+    ...
+  </AvailablePhoneNumbers>
 </TwilioResponse>
