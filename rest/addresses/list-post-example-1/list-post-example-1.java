@@ -2,7 +2,7 @@
 import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.Address;
-import com.twilio.sdk.resource.list.AddressList;
+import com.twilio.sdk.resource.factory.AddressFactory;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.http.NameValuePair;
@@ -25,8 +25,8 @@ public class Example {
     params.add(new BasicNameValuePair("Region", "Berlin"));
     params.add(new BasicNameValuePair("PostalCode", "10875"));
     params.add(new BasicNameValuePair("IsoCountry", "DE"));
-    AddressFactory factory = client().getAccount().getAddressFactory();
-    Address address = factory.create(params):
+    AddressFactory factory = client.getAccount().getAddressFactory();
+    Address address = factory.create(params);
     System.out.println(address.getSid());
   }
 }
