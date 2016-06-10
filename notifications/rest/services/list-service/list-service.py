@@ -9,4 +9,4 @@ token = "{{ auth_token }}"
 client = Client(account, token)
 
 services = client.notifications.v1.services.list()
-print services
+print(services)

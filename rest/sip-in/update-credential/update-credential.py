@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 credential = client.sip.credentials("CL32a3c49700934481addd5ce1659f04d2").update("SC32a3c49700934481addd5ce1659f04d2", password="07")
-print credential.username
+print(credential.username)

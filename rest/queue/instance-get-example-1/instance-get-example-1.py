@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 queue = client.queues.get("QU5ef8732a3c49700934481addd5ce1659")
-print queue.average_wait_time
+print(queue.average_wait_time)

@@ -13,4 +13,4 @@ workspace = client.workspaces.create(
     event_callback_url='http://requestb.in/vh9reovh',
     template='FIFO'
 )
-print workspace.friendly_name
+print(workspace.friendly_name)

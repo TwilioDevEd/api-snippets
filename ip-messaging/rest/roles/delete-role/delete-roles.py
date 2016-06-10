@@ -10,4 +10,4 @@ client = TwilioIpMessagingClient(account, token)
 service = client.services.get(sid="SERVICE_SID")
 role = service.roles.get(sid="ROLE_SID")
 response = role.delete()
-print response
+print(response)

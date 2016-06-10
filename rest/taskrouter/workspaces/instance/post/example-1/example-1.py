@@ -13,4 +13,4 @@ workspace = client.workspaces.update(
     workspace_sid,
     friendly_name='NewFriendlyName',
     event_callback_uri='http://requestb.in/vh9reovh')
-print workspace.friendly_name
+print(workspace.friendly_name)

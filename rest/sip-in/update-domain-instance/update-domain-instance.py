@@ -8,4 +8,4 @@ client = TwilioRestClient(account_sid, auth_token)
 
 domain = client.sip.domains.update("SD32a3c49700934481addd5ce1659f04d2", friendly_name="Little Kevin",
     voice_method="GET")
-print domain.domain_name
+print(domain.domain_name)

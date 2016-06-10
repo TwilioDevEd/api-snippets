@@ -10,4 +10,4 @@ service = client.services.get(sid="SERVICE_SID")
 channel = service.channels.get(sid="CHANNEL_ID")
 messages = channel.messages.list()
 for m in messages:
-    print m
+    print(m)

@@ -10,7 +10,7 @@ client = TwilioTaskRouterClient(account_sid, auth_token)
 
 workspace = client.workspaces.get(workspace_sid)
 statistics = workspace.statistics.get()
-print statistics.cumulative["avg_task_acceptance_time"]
-print statistics.cumulative["tasks_created"]
-print statistics.realtime["tasks_by_status"]["pending"]
-print statistics.realtime["tasks_by_status"]["assigned"]
+print(statistics.cumulative["avg_task_acceptance_time"])
+print(statistics.cumulative["tasks_created"])
+print(statistics.realtime["tasks_by_status"]["pending"])
+print(statistics.realtime["tasks_by_status"]["assigned"])

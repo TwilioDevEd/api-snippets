@@ -10,4 +10,4 @@ domain = client.sip.domains.create(friendly_name="My Domain",
     voice_url="https://demo.twilio.com/welcome",
     auth_type="IP_ACL",
     domain_name="marlo.sip.twilio.com")
-print domain.sid
+print(domain.sid)

@@ -9,4 +9,4 @@ client = TwilioIpMessagingClient(account, token)
 # List the users
 service = client.services.get(sid ="SERVICE_SID")
 for u in service.users.list():
-  print u
+  print(u)

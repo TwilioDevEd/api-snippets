@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 conference = client.conferences.get("CFbbe46ff1274e283f7e3ac1df0072ab39")
-print conference.status
+print(conference.status)

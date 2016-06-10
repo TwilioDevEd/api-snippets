@@ -12,4 +12,4 @@ service = client.notifications.v1.services("ISxxx")
 
 response = service.delete()
 
-print response
+print(response)

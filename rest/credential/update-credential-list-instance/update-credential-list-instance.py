@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 credential_list = client.sip.credential_lists.update("CL32a3c49700934481addd5ce1659f04d2", friendly_name="Marlos Lieutenants")
-print credential_list.friendly_name
+print(credential_list.friendly_name)

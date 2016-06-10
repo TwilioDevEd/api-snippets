@@ -12,4 +12,4 @@ service = client.notifications.v1.services("ISxxx")
 
 binding = service.bindings.create(endpoint="xxx", identity="bob", binding_type="gcm", address ="xxx", tag="premium")
 
-print binding
+print(binding)

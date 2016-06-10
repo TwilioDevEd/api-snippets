@@ -9,4 +9,4 @@ workspace_sid = "{{ workspace_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 statistics = client.workers(workspace_sid).statistics.get()
-print statistics.cumulative["reservations_accepted"]
+print(statistics.cumulative["reservations_accepted"])

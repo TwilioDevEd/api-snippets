@@ -12,4 +12,4 @@ service = client.notifications.v1.services("ISxxx")
 
 notification = service.notifications.create(identity="Bob", body="Hello Bob")
 
-print notification
+print(notification)

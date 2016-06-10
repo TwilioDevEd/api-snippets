@@ -9,7 +9,7 @@ client = TwilioPricingClient(account_sid, auth_token)
 countries = client.messaging_countries().get("EE")
 
 for p in countries.inbound_sms_prices:
-    print "{} {}".format(p['number_type'], p['current_price'])
+    print("{} {}".format(p['number_type'], p['current_price']))
 
 for op in countries.outbound_sms_prices:
-    print "{}: {}".format(op['carrier'], op['prices'])
+    print("{}: {}".format(op['carrier'], op['prices']))

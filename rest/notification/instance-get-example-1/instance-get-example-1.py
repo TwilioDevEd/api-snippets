@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 notification = client.notifications.get("NO5a7a84730f529f0a76b3e30c01315d1a")
-print notification.message_text
+print(notification.message_text)

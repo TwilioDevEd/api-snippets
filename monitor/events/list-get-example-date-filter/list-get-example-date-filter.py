@@ -15,4 +15,4 @@ events = client.events.list(
 )
 
 for e in events:
-    print e.description
+    print(e.description)

@@ -9,4 +9,4 @@ client = TwilioIpMessagingClient(account, token)
 # List the channels
 service = client.services.get(sid="SERVICE_SID")
 for c in service.channels.list():
-    print c.sid
+    print(c.sid)

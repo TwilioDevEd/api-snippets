@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 trigger = client.usage.triggers.get("UT33c6aeeba34e48f38d6899ea5b765ad4")
-print trigger.current_value
+print(trigger.current_value)

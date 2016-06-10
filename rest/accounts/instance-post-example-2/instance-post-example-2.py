@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 account = client.accounts.update("{{ account_sid }}", status="active")
-print account.status
+print(account.status)

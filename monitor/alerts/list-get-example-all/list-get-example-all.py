@@ -10,4 +10,4 @@ client = TwilioMonitorClient(account_sid, auth_token)
 alerts = client.alerts.list()
 
 for alert in alerts:
-    print alert.sid
+    print(alert.sid)

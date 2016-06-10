@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 sms = client.sms.messages.get("SM800f449d0399ed014aae2bcc0cc2f2ec")
-print sms.body
+print(sms.body)

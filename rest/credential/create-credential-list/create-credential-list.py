@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 credential_list = client.sip.credential_lists.create(friendly_name="Low Rises")
-print credential_list.sid
+print(credential_list.sid)

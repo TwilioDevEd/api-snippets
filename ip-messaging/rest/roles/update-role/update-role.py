@@ -10,4 +10,4 @@ client = TwilioIpMessagingClient(account, token)
 service = client.services.get(sid="SERVICE_SID")
 role = service.roles.get(sid="ROLE_SID")
 updated_role = role.update(friendlyName="RoleName", permission="sendMessage", permission="leaveChannel")
-print updated_role
+print(updated_role)

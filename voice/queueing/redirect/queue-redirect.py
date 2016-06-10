@@ -6,4 +6,4 @@ r.say("You will now be connected to the first caller in the queue.")
 with r.dial() as d:
     d.queue("Queue Demo")
 r.redirect()
-print str(r)
+print(str(r))

@@ -15,6 +15,6 @@ reservation = client.reservations(workspace_sid, task_sid).update(reservation_si
 	Instruction='Redirect',
 	RedirectCallSid='CA123456789',
 	RedirectUrl='http://example.com/assignment_redirect')
-print reservation.reservation_status
-print reservation.worker_name
+print(reservation.reservation_status)
+print(reservation.worker_name)
 

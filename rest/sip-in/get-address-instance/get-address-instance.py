@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 ip_address = client.sip.ip_addresses("AL32a3c49700934481addd5ce1659f04d2").get("IP32a3c49700934481addd5ce1659f04d2")
-print ip_address.ip_address
+print(ip_address.ip_address)

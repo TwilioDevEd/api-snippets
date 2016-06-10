@@ -7,4 +7,4 @@ auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
 number = client.phone_numbers.purchase(phone_number="33")
-print number.sid
+print(number.sid)

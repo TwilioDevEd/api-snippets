@@ -13,4 +13,4 @@ activity = client.activities(workspace_sid).create(
     available='true'
 )
 
-print activity.friendly_name
+print(activity.friendly_name)

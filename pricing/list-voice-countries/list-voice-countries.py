@@ -9,4 +9,4 @@ client = TwilioPricingClient(account_sid, auth_token)
 countries = client.voice.countries.list()
 
 for c in countries:
-    print c.iso_country
+    print(c.iso_country)

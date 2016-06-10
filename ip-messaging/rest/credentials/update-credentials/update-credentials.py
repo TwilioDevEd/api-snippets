@@ -7,4 +7,4 @@ token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token) 
 
 credential = client.credentials.create(type="type"):
-print credential.update(sid="NEW_SID")
+print(credential.update(sid="NEW_SID"))

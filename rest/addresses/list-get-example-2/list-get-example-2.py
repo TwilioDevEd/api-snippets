@@ -10,4 +10,4 @@ client = TwilioRestClient(account_sid, auth_token)
 addresses = client.addresses.list(customer_name="Customer 123")
 
 for address in addresses:
-    print address.friendly_name
+    print(address.friendly_name)

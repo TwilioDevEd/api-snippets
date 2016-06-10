@@ -9,4 +9,4 @@ client = TwilioPricingClient(account_sid, auth_token)
 country = client.voice.countries.get("EE")
 
 for p in country.inbound_call_prices:
-    print "{} {}".format(p['number_type'], p['current_price'])
+    print("{} {}".format(p['number_type'], p['current_price']))

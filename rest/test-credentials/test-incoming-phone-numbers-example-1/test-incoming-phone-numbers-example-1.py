@@ -8,4 +8,4 @@ client = TwilioRestClient(account_sid, auth_token)
 
 number = client.phone_numbers.purchase(voice_url="http://demo.twilio.com/docs/voice.xml",
     phone_number="+15005550006")
-print number.sid
+print(number.sid)

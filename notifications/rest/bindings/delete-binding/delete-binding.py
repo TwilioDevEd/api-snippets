@@ -12,4 +12,4 @@ service = client.notifications.v1.services("ISxxx")
 
 response = service.bindings("BSxxx").delete()
 
-print response
+print(response)

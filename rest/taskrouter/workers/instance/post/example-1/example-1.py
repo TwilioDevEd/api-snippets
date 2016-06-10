@@ -10,9 +10,9 @@ worker_sid = "{{ worker_sid }}"
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 activity = client.workers(workspace_sid).update(worker_sid, attributes='{"type":"support"}')
-print activity.friendly_name
+print(activity.friendly_name)
 
 # alternatively
 worker = client.workers(workspace_sid).get(worker_sid)
 worker = worker.update(attributes='{"type":"support"}')
-print worker.attributes
+print(worker.attributes)

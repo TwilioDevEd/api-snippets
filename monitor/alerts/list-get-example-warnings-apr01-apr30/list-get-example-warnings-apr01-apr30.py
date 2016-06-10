@@ -16,4 +16,4 @@ alerts = client.alerts.list(
     log_level="warning"
 )
 for alert in alerts:
-    print alert.alert_text
+    print(alert.alert_text)

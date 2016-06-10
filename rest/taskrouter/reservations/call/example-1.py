@@ -17,6 +17,6 @@ reservation = client.reservations(workspace_sid, task_sid).update(reservation_si
 	call_url='http://example.com/agent_answer',
 	call_status_callback_url='http://example.com/agent_answer_status_callback',
 	call_accept='true')
-print reservation.reservation_status
-print reservation.worker_name
+print(reservation.reservation_status)
+print(reservation.worker_name)
 
