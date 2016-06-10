@@ -11,9 +11,10 @@ class Example {
         const string channelSid = "channelSid";
         const string messageSid = "messageSid";
 
-        // Retrieve Message
+        // Update Message
         var client = new IpMessagingClient(accountSid, authToken);
-        Message message = client.GetMessage(serviceSid, channelSid, messageSid);
+        var newBody = "New text for the message.";
+        var message = client.UpdateMessage(serviceSid, channelSid, messageSid, newBody);
         Console.WriteLine(message);
     }
 }
