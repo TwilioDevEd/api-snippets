@@ -23,6 +23,7 @@
 				<SMS>false</SMS>
 				<MMS>false</MMS>
 			</Capabilities>
+      <Beta>false</Beta>
 			<StatusCallback/>
 			<StatusCallbackMethod/>
 			<ApiVersion>2010-04-01</ApiVersion>

@@ -4,21 +4,23 @@
 			<FriendlyName>(866) 583-8815</FriendlyName>
 			<PhoneNumber>+18665838815</PhoneNumber>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 		<AvailablePhoneNumber>
 			<FriendlyName>(866) 583-0795</FriendlyName>
 			<PhoneNumber>+18665830795</PhoneNumber>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 		...
 	</AvailablePhoneNumbers>

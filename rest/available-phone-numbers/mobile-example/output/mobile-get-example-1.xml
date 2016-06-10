@@ -10,11 +10,12 @@
 			<Region>Clacton-on-Sea</Region>
 			<PostalCode>/>
 			<IsoCountry>GB</IsoCountry>
-	        <Capabilities>
-                <Voice>false</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>false</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 		...
 	</AvailablePhoneNumbers>

@@ -10,11 +10,12 @@
 			<Region>CA</Region>
 			<PostalCode>94612</PostalCode>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 	</AvailablePhoneNumbers>
 </TwilioResponse>

@@ -23,6 +23,7 @@
 		"sms": true,
 		"mms": false
 	},
+  "beta": false
 	"api_version": "2010-04-01",
 	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers\/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json"
 }

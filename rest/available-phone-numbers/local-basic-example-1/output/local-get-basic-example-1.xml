@@ -10,11 +10,12 @@
 			<Region>CA</Region>
 			<PostalCode>94703</PostalCode>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 		<AvailablePhoneNumber>
 			<FriendlyName>(510) 488-4379</FriendlyName>
@@ -26,11 +27,12 @@
 			<Region>CA</Region>
 			<PostalCode>94602</PostalCode>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 		...
 	</AvailablePhoneNumbers>

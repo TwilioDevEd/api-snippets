@@ -12,10 +12,11 @@
 			"postal_code": null,
 			"iso_country": "GB",
 			"capabilities":{
-				"voice":"false",
-				"SMS":"true",
-				"MMS":"false"
-			}
+				"voice": false,
+				"SMS": true,
+				"MMS": false
+			},
+      "beta": false
 		},
 		...
 	]

@@ -21,6 +21,7 @@
 		"sms": true
 		"mms": false
 	},
+  "beta": false
 	"status_callback": null,
 	"status_callback_method": null,
 	"api_version": "2010-04-01",

@@ -12,10 +12,11 @@
 			"postal_code": "94703",
 			"iso_country": "US",
 			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
+				"voice": true,
+				"SMS": true,
+				"MMS": false
+			},
+      "beta": false
 		},
 		{
 			"friendly_name": "(510) 488-4379",
@@ -28,10 +29,11 @@
 			"postal_code": "94602",
 			"iso_country": "US",
 			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
+				"voice": true,
+				"SMS": true,
+				"MMS": false
+			},
+      "beta": false
 		},
 		...
 	]

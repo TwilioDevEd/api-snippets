@@ -6,10 +6,11 @@
 			"phone_number": "+18665578676",
 			"iso_country": "US",
 			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
+				"voice": true,
+				"SMS": true,
+				"MMS": false
+			},
+      "beta": false
 		}
 	]
 }

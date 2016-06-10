@@ -10,11 +10,12 @@
 			<Region>AR</Region>
 			<PostalCode>72205</PostalCode>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 	</AvailablePhoneNumbers>
 </TwilioResponse>

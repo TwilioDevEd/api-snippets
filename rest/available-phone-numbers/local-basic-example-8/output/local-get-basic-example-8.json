@@ -6,10 +6,11 @@
       "phone_number": "+15105551212",
       "iso_country": "US",
       "capabilities":{
-        "voice":"true",
-        "SMS":"true"
-        "MMS":"false"
-      }
+        "voice": true,
+        "SMS": true
+        "MMS": false
+      },
+      "beta": false
     }
   ]
 }

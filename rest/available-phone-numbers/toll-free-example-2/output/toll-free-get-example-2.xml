@@ -4,11 +4,12 @@
 			<FriendlyName>(866) 557-8676</FriendlyName>
 			<PhoneNumber>+18665578676</PhoneNumber>
 			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
 		</AvailablePhoneNumber>
 	</AvailablePhoneNumbers>
 </TwilioResponse>

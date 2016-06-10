@@ -12,10 +12,11 @@
 			"postal_code": "94560",
 			"iso_country": "US",
 			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
+				"voice": true,
+				"SMS": true,
+				"MMS": false
+			},
+      "beta": false
 		}
 	]
 }
