@@ -6,7 +6,7 @@ before_install:
 - jdk_switcher use oraclejdk8
 - sudo apt-get install python-pip python2.7-dev build-essential
 - sudo pip install --upgrade pip
-- curl -sL https://deb.nodesource.com/setup | sudo bash -
+- curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 - sudo apt-get install -y nodejs
 - sudo apt-get install curl php5-cli git php5-curl
 - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin
@@ -15,6 +15,7 @@ before_install:
 - sudo apt-get update
 - sudo apt-get install gradle
 - sudo apt-get install ca-certificates
+- wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
 install:
 - sudo pip install -U twilio
 - gem install twilio-ruby
@@ -22,10 +23,11 @@ install:
 - gem install colorize
 - sudo npm install -g twilio
 - composer install
-- nuget install Twilio -Version 4.7.1 -OutputDirectory nuget
-- nuget install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
-- nuget install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
-- nuget install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
+- mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
+- mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
+- mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
+- mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
+- mono NuGet.exe install Twilio.TaskRouter -Version 2.3.0 -OutputDirectory nuget
 - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
 - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
@@ -34,7 +36,6 @@ script:
 - sudo gradle run </dev/null &>/dev/null &
 - cd ..
 - sleep 25
-- pwd
 - ruby tools/snippet-testing/snippet_tester.rb
 env:
   global:
