@@ -1,31 +1,31 @@
 <TwilioResponse>
-	<IncomingPhoneNumber>
-		<Sid>PN2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
-		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
-		<FriendlyName>My Company Line</FriendlyName>
-		<PhoneNumber>+15105647903</PhoneNumber>
-		<VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
-		<VoiceMethod>GET</VoiceMethod>
-		<VoiceFallbackUrl></VoiceFallbackUrl>
-		<VoiceFallbackMethod>POST</VoiceFallbackMethod>
-		<VoiceCallerIdLookup>false</VoiceCallerIdLookup>
-		<VoiceApplicationSid/>
-		<DateCreated>Mon, 16 Aug 2010 23:00:23 +0000</DateCreated>
-		<DateUpdated>Mon, 16 Aug 2010 23:00:23 +0000</DateUpdated>
-		<SmsUrl></SmsUrl>
-		<SmsMethod>POST</SmsMethod>
-		<SmsFallbackUrl></SmsFallbackUrl>
-		<SmsFallbackMethod>GET</SmsFallbackMethod>
-		<SmsApplicationSid/>
-		<Capabilities>
-			<Voice>true</Voice>
-			<SMS>true</SMS>
-			<MMS>false</MMS>
-		</Capabilities>
+  <IncomingPhoneNumber>
+    <Sid>PN2a0747eba6abf96b7e3c3ff0b4530f6e</Sid>
+    <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+    <FriendlyName>My Company Line</FriendlyName>
+    <PhoneNumber>+15105647903</PhoneNumber>
+    <VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
+    <VoiceMethod>GET</VoiceMethod>
+    <VoiceFallbackUrl></VoiceFallbackUrl>
+    <VoiceFallbackMethod>POST</VoiceFallbackMethod>
+    <VoiceCallerIdLookup>false</VoiceCallerIdLookup>
+    <VoiceApplicationSid/>
+    <DateCreated>Mon, 16 Aug 2010 23:00:23 +0000</DateCreated>
+    <DateUpdated>Mon, 16 Aug 2010 23:00:23 +0000</DateUpdated>
+    <SmsUrl></SmsUrl>
+    <SmsMethod>POST</SmsMethod>
+    <SmsFallbackUrl></SmsFallbackUrl>
+    <SmsFallbackMethod>GET</SmsFallbackMethod>
+    <SmsApplicationSid/>
+    <Capabilities>
+      <Voice>true</Voice>
+      <SMS>true</SMS>
+      <MMS>false</MMS>
+    </Capabilities>
     <Beta>false</Beta>
-		<StatusCallback/>
-		<StatusCallbackMethod/>
-		<ApiVersion>2010-04-01</ApiVersion>
-		<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
-	</IncomingPhoneNumber>
+    <StatusCallback/>
+    <StatusCallbackMethod/>
+    <ApiVersion>2010-04-01</ApiVersion>
+    <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e</Uri>
+  </IncomingPhoneNumber>
 </TwilioResponse>
