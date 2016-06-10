@@ -1,21 +1,22 @@
 {
-	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AvailablePhoneNumbers\/US\/Local.json?Contains=510555****",
-	"available_phone_numbers": [
-		{
-			"friendly_name": "(510) 555-1214",
-			"phone_number": "+15105551214",
-			"lata": "722",
-			"rate_center": "OKLD0349T",
-			"latitude": "37.806940",
-			"longitude": "-122.270360",
-			"region": "CA",
-			"postal_code": "94612",
-			"iso_country": "US",
-			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
-		}
-	]
+  "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AvailablePhoneNumbers\/US\/Local.json?Contains=510555****",
+  "available_phone_numbers": [
+    {
+      "friendly_name": "(510) 555-1214",
+      "phone_number": "+15105551214",
+      "lata": "722",
+      "rate_center": "OKLD0349T",
+      "latitude": "37.806940",
+      "longitude": "-122.270360",
+      "region": "CA",
+      "postal_code": "94612",
+      "iso_country": "US",
+      "capabilities":{
+        "voice": true,
+        "SMS": true,
+        "MMS": false
+      },
+      "beta": false
+    }
+  ]
 }

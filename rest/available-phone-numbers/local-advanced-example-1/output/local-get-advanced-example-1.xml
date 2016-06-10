@@ -1,20 +1,21 @@
 <TwilioResponse>
-	<AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/Local?InRegion=CA&NearLatLong=37.840699,-122.461853&Distance=50&Contains=555">
-		<AvailablePhoneNumber>
-			<FriendlyName>(415) 555-1212</FriendlyName>
-			<PhoneNumber>+14155551212</PhoneNumber>
-			<Lata>722</Lata>
-			<RateCenter>SNFC CNTRL</RateCenter>
-			<Latitude>37.7726</Latitude>
-			<Longitude>-122.4196</Longitude>
-			<Region>CA</Region>
-			<PostalCode>94133</PostalCode>
-			<IsoCountry>US</IsoCountry>
-	        <Capabilities>
-                <Voice>true</Voice>
-                <SMS>true</SMS>
-                <MMS>false</SMS>
-            </Capabilities>
-		</AvailablePhoneNumber>
-	</AvailablePhoneNumbers>
+  <AvailablePhoneNumbers uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/Local?InRegion=CA&NearLatLong=37.840699,-122.461853&Distance=50&Contains=555">
+    <AvailablePhoneNumber>
+      <FriendlyName>(415) 555-1212</FriendlyName>
+      <PhoneNumber>+14155551212</PhoneNumber>
+      <Lata>722</Lata>
+      <RateCenter>SNFC CNTRL</RateCenter>
+      <Latitude>37.7726</Latitude>
+      <Longitude>-122.4196</Longitude>
+      <Region>CA</Region>
+      <PostalCode>94133</PostalCode>
+      <IsoCountry>US</IsoCountry>
+      <Capabilities>
+        <Voice>true</Voice>
+        <SMS>true</SMS>
+        <MMS>false</SMS>
+      </Capabilities>
+      <Beta>false</Beta>
+    </AvailablePhoneNumber>
+  </AvailablePhoneNumbers>
 </TwilioResponse>

@@ -6,10 +6,11 @@
       "phone_number": "+442033224780",
       "iso_country": "GB",
       "capabilities":{
-        "voice":"true",
-        "SMS":"true",
-        "MMS":"false"
-      }
+        "voice": true,
+        "SMS": true,
+        "MMS": false
+      },
+      "beta": false
     }
   ]
 }

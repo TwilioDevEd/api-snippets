@@ -1,38 +1,40 @@
 {
-	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AvailablePhoneNumbers\/US\/Local.json?AreaCode=510",
-	"available_phone_numbers": [
-		{
-			"friendly_name": "(510) 564-7903",
-			"phone_number": "+15105647903",
-			"lata": "722",
-			"rate_center": "OKLD TRNID",
-			"latitude": "37.780000",
-			"longitude": "-122.380000",
-			"region": "CA",
-			"postal_code": "94703",
-			"iso_country": "US",
-			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
-		},
-		{
-			"friendly_name": "(510) 488-4379",
-			"phone_number": "+15104884379",
-			"lata": "722",
-			"rate_center": "OKLD FRTVL",
-			"latitude": "37.780000",
-			"longitude": "-122.380000",
-			"region": "CA",
-			"postal_code": "94602",
-			"iso_country": "US",
-			"capabilities":{
-				"voice":"true",
-				"SMS":"true",
-				"MMS":"false"
-			}
-		},
-		...
-	]
+  "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/AvailablePhoneNumbers\/US\/Local.json?AreaCode=510",
+  "available_phone_numbers": [
+    {
+      "friendly_name": "(510) 564-7903",
+      "phone_number": "+15105647903",
+      "lata": "722",
+      "rate_center": "OKLD TRNID",
+      "latitude": "37.780000",
+      "longitude": "-122.380000",
+      "region": "CA",
+      "postal_code": "94703",
+      "iso_country": "US",
+      "capabilities":{
+        "voice": true,
+        "SMS": true,
+        "MMS": false
+      },
+      "beta": false
+    },
+    {
+      "friendly_name": "(510) 488-4379",
+      "phone_number": "+15104884379",
+      "lata": "722",
+      "rate_center": "OKLD FRTVL",
+      "latitude": "37.780000",
+      "longitude": "-122.380000",
+      "region": "CA",
+      "postal_code": "94602",
+      "iso_country": "US",
+      "capabilities":{
+        "voice": true,
+        "SMS": true,
+        "MMS": false
+      },
+      "beta": false
+    },
+    ...
+  ]
 }
