@@ -9,5 +9,5 @@ $client = new Services_Twilio($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$summary = $client->account->feedback_summary->get("FSa346467ca321c71dbd5e12f627deb854");
+$summary = $client->account->calls->feedback_summary->get("FSa346467ca321c71dbd5e12f627deb854");
 echo $summary->date_created;

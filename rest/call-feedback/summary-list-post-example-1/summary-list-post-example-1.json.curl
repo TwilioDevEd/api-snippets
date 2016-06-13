@@ -1,4 +1,4 @@
-$ curl -XPOST /2010-04-01/Accounts/{{ account_sid }}/Calls/FeedbackSummary.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Calls/FeedbackSummary.json \
     -d "StartDate=2014-06-01" \
     -d "EndDate=2014-06-30" \
     -d "IncludeSubaccounts=True" \
