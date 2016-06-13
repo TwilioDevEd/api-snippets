@@ -13,7 +13,6 @@ $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid)
 $activity = $client->workspace->activities->get($activitySid);
 $activity->update(
 	array(
-		'FriendlyName' => 'NewAvailableFriendlyName',
-		'Available' => 'true'
+		'FriendlyName' => 'NewAvailableFriendlyName'
 	)
 );

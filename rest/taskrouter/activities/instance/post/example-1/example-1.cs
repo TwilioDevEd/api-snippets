@@ -12,7 +12,7 @@ class Example
     string ActivitySid = "{{ activity_sid }}";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
-    Activity activity = client.UpdateActivity(WorkspaceSid, ActivitySid, "NewActivityName", true);
+    Activity activity = client.UpdateActivity(WorkspaceSid, ActivitySid, "NewActivityName");
     Console.WriteLine(activity.FriendlyName);
     Console.WriteLine(activity.Available);
   }

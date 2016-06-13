@@ -21,7 +21,6 @@ public class Example {
     Activity activity = client.getActivity(WORKSPACE_SID, ACTIVITY_SID);
     Map<String, String> params = new HashMap<String, String>();
     params.put("FriendlyName", "NewAvailableFriendlyName");
-    params.put("Available", "true");
     activity.update(params);
 
     //alternatively

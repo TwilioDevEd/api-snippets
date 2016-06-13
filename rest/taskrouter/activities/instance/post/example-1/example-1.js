@@ -10,8 +10,7 @@ var activitySid = "{{ activity_sid }}";
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.activities(activitySid).update({
-    friendlyName: 'NewAvailableFriendlyName',
-    available: true
+    friendlyName: 'NewAvailableFriendlyName'
 }, function(err, activity) {
     console.log(activity.friendly_name);
 });
