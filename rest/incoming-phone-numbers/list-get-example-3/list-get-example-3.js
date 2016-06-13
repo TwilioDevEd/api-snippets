@@ -4,10 +4,11 @@ var accountSid = '{{ account_sid }}';
 var authToken = "{{ auth_token }}";
 var client = require('twilio')(accountSid, authToken);
 
-client.incomingPhoneNumbers.list({ 
-  phoneNumber: "867" 
+client.incomingPhoneNumbers.list({
+    phoneNumber: "867"
   }, function(err, data) {
-    data.numbers.forEach(function(number) {
-        console.log(number.voiceUrl);
+    data.incomingPhoneNumbers.forEach(function(number) {
+      console.log(number.voiceUrl);
     });
-});
+  }
+);
