@@ -6,8 +6,11 @@ import com.twilio.sdk.resource.list.AvailablePhoneNumberList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -18,12 +21,12 @@ public class Example {
 
     // Build a filter for the AvailablePhoneNumberList
     Map<String, String> params = new HashMap<String, String>();
-    
+
     params.put("InRegion", "AR");
-    
+
     AvailablePhoneNumberList numbers = client.getAccount().getAvailablePhoneNumbers(params, "US", "Local");
     List<AvailablePhoneNumber> list = numbers.getPageData();
-    
+
     // Purchase the first number in the list.
     List<NameValuePair> purchaseParams = new ArrayList<NameValuePair>();
     purchaseParams.add(new BasicNameValuePair("PhoneNumber", list.get(0).getPhoneNumber()));
