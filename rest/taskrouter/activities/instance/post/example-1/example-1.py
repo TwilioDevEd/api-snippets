@@ -14,5 +14,5 @@ print(activity.friendly_name)
 
 # alternatively
 activity = client.activities(workspace_sid).get(activity_sid)
-activity = activity.update(friendly_name='NewAvailableFriendlyName',available='true')
+activity = activity.update(friendly_name='NewAvailableFriendlyName')
 print(activity.friendly_name)

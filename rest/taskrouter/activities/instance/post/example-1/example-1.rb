@@ -11,5 +11,5 @@ activity_sid = '{{ activity_sid }}'
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 
 activity = client.workspace.activities.get(activity_sid)
-activity = activity.update(friendly_name: 'NewAvailableFriendlyName', available:'true')
+activity = activity.update(friendly_name: 'NewAvailableFriendlyName')
 puts activity.friendly_name
