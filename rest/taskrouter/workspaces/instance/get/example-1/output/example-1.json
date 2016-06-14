@@ -5,10 +5,11 @@
   "event_callback_url": "",
   "default_activity_sid": "WA019ec124f872366546ed5b3f42428c16",
   "date_created": "2015-01-28T23:01:18Z",
-  "date_updated": "2015-07-22T22:57:34Z",
+  "date_updated": "2015-06-10T22:57:34Z",
   "default_activity_name": "Offline",
   "timeout_activity_sid": "WA019ec124f872366546ed5b3f42428c16",
   "timeout_activity_name": "Offline",
+  "events_filter": null,
   "url": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1",
   "links": {
     "activities": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Activities",
