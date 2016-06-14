@@ -10,26 +10,19 @@
    Call SID:    CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    API Key:     SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
-   In the case of phone numbers, any example phone number can be used:
+
+   __Note:__ This is important as Twilio libraries use these values as a part of the URL for API requests.
+   When testing the snippets real requests will be made to a fake server.
+
+   In the case of phone numbers, the following should be used:
    ```
-   Phone Number: +5551234567
+   Destination Phone Number: +15558675309
+   From/Twilio Number: +15017250604
    ```
 
-   * {{ account_sid }}
-   * {{ auth_token }}
-   * {{ subaccount_auth_token }}
-   * {{ workspace_sid }}
-   * {{ activity_sid }}
-   * {{ worker_sid }}
-   * {{ taskqueue_sid }}
-   * {{ task_sid }}
-   * {{ reservation_sid }}
-   * {{ workflow_sid }}
-   * {{ rate_plan_sid }}
-
-   For phone numbers, any example phone number can be used:
+   For auth_token:
    ```
-   Phone Number: +5551234567
+   Auth Token: your_auth_token
    ```
 
 ## Continuous Integration
