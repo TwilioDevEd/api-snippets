@@ -5,7 +5,7 @@ var authToken = "{{ auth_token }}";
 var client = require('twilio')(accountSid, authToken);
 
 client.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').media.list(function(err, data) {
-    data.medias.forEach(function(media) {
-        console.log(media.ContentType);
+    data.mediaList.forEach(function(media) {
+        console.log(media.contentType);
     });
 });
