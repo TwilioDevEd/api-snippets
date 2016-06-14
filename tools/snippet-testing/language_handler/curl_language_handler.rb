@@ -30,7 +30,11 @@ module LanguageHandler
     end
 
     def text_with_specific_replacements(file_content)
-      text_without_bash_symbol(file_content)
+      text_without_gt_lt_symbols(text_without_bash_symbol(file_content))
+    end
+
+    def text_without_gt_lt_symbols(file_content)
+      file_content.gsub(/[<>]{1}/, '')
     end
 
     def text_without_bash_symbol(file_content)

@@ -23,11 +23,12 @@ install:
 - gem install colorize
 - sudo npm install -g twilio
 - composer install
-- mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
-- mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
-- mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
-- mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
-- mono NuGet.exe install Twilio.TaskRouter -Version 2.3.0 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio.TaskRouter -Version 2.3.0 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio.Auth -Version 1.2.0 -OutputDirectory nuget
 - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
 - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates

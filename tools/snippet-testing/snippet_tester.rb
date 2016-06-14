@@ -29,7 +29,9 @@ class SnippetTester
           'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
           'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
           'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
-          'nuget/Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll'
+          'nuget/Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
+          'nuget/Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+          'nuget/JWT.1.1/lib/3.5/JWT.dll'
         ]
       )
     }

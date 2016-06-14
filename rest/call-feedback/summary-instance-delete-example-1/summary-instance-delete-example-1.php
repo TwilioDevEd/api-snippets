@@ -7,4 +7,4 @@ $sid = "{{ account_sid }}";
 $token = "{{ auth_token }}";
 $client = new Services_Twilio($sid, $token);
 
-$client->account->feedback_summary->delete("FSa346467ca321c71dbd5e12f627deb854");
+$client->account->calls->feedback_summary->delete("FSa346467ca321c71dbd5e12f627deb854");

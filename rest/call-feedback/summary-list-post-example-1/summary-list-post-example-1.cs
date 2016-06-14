@@ -10,9 +10,6 @@ class Example
     string AuthToken = "{{ auth_token }}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
-    var options = new AccountOptions();
-    options.Status = "suspended";
-
     var summary = twilio.CreateFeedbackSummary(new DateTime(2014, 06, 1), new DateTime(2014, 06, 30), true);
     Console.WriteLine(summary.Status);
   }
