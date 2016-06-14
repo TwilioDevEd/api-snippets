@@ -13,7 +13,6 @@ class SnippetTester
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
-    #Configuracion por defecto del tester
     @test_models = [Model::TestSessionModel.new(@parent_source_folder)]
     @language_handlers = {
       'java'      => LanguageHandler::JavaLanguageHandler.new(@parent_source_folder),
@@ -29,7 +28,8 @@ class SnippetTester
         [
           'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
           'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-          'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll'
+          'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+          'nuget/Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll'
         ]
       )
     }
