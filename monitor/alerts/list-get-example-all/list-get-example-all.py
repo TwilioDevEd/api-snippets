@@ -2,7 +2,7 @@
 from twilio.rest.monitor import TwilioMonitorClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "{{ account_sid }}"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
 client = TwilioMonitorClient(account_sid, auth_token)
 

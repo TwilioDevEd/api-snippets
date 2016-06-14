@@ -1,5 +1,5 @@
 // Twilio Credentials 
-var accountSid = '{{ account_sid }}'; 
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
 var authToken = '[AuthToken]'; 
  
 //require the Twilio module and create a REST client 

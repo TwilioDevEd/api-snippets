@@ -1,7 +1,8 @@
 def replace_account_sid(file_path)
   file = File.open(File.expand_path(file_path), 'r')
   original = file.read
-  replaced = original.gsub('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '{{ account_sid }}')
+  replaced = original.gsub(/AC\w{32}/, 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  replaced = replaced.gsub('{AuthToken}', '{{ auth_token }}')
 
   unless original == replaced
     puts "replaced: #{file_path}"
@@ -14,6 +15,6 @@ rescue
 end
 
 Dir.glob("**/*") do |file|
-  next if file.index(/^tools\//) || file.include?('nuget/') || file.include?('vendor/') || file.include?('testable_snippets/')
+  next if file.index(/^tools\//) || file.include?('nuget/') || file.include?('vendor/') || file.include?('output/')
   replace_account_sid(file) unless File.directory?(file)
 end

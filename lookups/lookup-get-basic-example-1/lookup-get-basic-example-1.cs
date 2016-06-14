@@ -6,14 +6,14 @@ class Example
 {
   static void Main(string[] args)
   {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "{{ account_sid }}";
+    // Find your Account Sid and Auth Token at twilio.com/user/account
+    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     const string authToken = "{{ auth_token }}";
     var lookupsClient = new LookupsClient(accountSid, authToken);
 
     // Look up a phone number in E.164 format
     var phoneNumber = lookupsClient.GetPhoneNumber("+15108675309", true);
     Console.WriteLine(phoneNumber.Carrier.Type);
-    Console.WriteLine(phoneNumber.Carrier.Name); 
+    Console.WriteLine(phoneNumber.Carrier.Name);
   }
 }

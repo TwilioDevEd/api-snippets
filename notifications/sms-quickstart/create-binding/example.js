@@ -1,7 +1,7 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/node
-var accountSid = '{{ account_sid }}';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = '{{ auth_token }}';
 var Twilio = require('twilio');
 

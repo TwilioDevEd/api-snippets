@@ -1,6 +1,6 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{ account_sid }}/Calls/FeedbackSummary.json \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/FeedbackSummary.json \
     -d "StartDate=2014-06-01" \
     -d "EndDate=2014-06-30" \
     -d "IncludeSubaccounts=True" \
     -d "StatusCallback=http://www.example.com/feedback" \
-    -u "{{ account_sid }}:{{ auth_token }}"
+    -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}"

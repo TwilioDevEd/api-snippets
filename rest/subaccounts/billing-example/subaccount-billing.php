@@ -3,7 +3,7 @@
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Account Sid and Auth token for your new subaccount
-$sa_sid = "{{ account_sid }}";
+$sa_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $sa_token = "{{ subaccount_auth_token }}";  
 $sa_client = new Services_Twilio($sa_sid, $sa_token);
 $subaccount = $sa_client->account;

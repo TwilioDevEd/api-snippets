@@ -7,7 +7,7 @@ class Example
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at client.com/user/account
-    string AccountSid = "{{ account_sid }}";
+    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "{{ auth_token }}";
     var client = new MonitorClient(AccountSid, AuthToken);
 

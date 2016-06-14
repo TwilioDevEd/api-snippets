@@ -1,6 +1,6 @@
 var https = require('https');
 var url = require('url').parse('https://lookups.twilio.com/v1/PhoneNumbers/+16502530000/?AddOns=payfone_tcpa_compliance&AddOns.payfone_tcpa_compliance.RightPartyContactedDate=20160101');
-url.auth = '{{ account_sid }}:{{ auth_token }}';
+url.auth = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}';
 
 https.get(url, (res) => {
   res.on('data', (jsonString) => {

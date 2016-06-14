@@ -1,2 +1,2 @@
 $ curl -XDELETE https://monitor.twilio.com/v1/Alerts/NO5a7a84730f529f0a76b3e30c01315d1a \
-    -u '{{ account_sid }}:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

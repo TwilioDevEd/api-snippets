@@ -3,8 +3,17 @@
 
 ## Guidelines
 
-1. Snippets should use placeholders for user information in a [mustache](https://mustache.github.io/mustache.5.html)
-   like format. These are the placeholders you should use for snippets:
+1. Snippets should use placeholders for user information in a format that resembles
+   the original value. For example:
+   ```
+   Account SID: ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   Call SID:    CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   API Key:     SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   ```
+   In the case of phone numbers, any example phone number can be used:
+   ```
+   Phone Number: +5551234567
+   ```
 
    * {{ account_sid }}
    * {{ auth_token }}

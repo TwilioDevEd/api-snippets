@@ -5,7 +5,7 @@ require('/path/to/twilio-php/Services/Twilio.php');
  
 // Download the Node helper library from twilio.com/docs/php/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-$account_sid = '{{ account_sid }}'; 
+$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
 $auth_token = '[AuthToken]'; 
 $client = new Services_Twilio($account_sid, $auth_token); 
  

@@ -2,4 +2,4 @@ curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXX
 --data-urlencode 'Tag=rogue_one'  \
 --data-urlencode 'Sms={"from":"+16516667788"}'  \
 --data-urlencode 'Body=A new Rogue One trailer has been released!'  \
--u '{{ account_sid }}:{{ auth_token }}'
+-u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'

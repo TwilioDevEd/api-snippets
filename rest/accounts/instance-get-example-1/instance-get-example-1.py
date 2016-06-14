@@ -2,9 +2,9 @@
 from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "{{ account_sid }}"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "{{ auth_token }}"
 client = TwilioRestClient(account_sid, auth_token)
 
-account = client.accounts.get("{{ account_sid }}")
+account = client.accounts.get("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 print(account.date_created)

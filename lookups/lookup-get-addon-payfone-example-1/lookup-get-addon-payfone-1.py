@@ -7,6 +7,6 @@ headers = {
     'content-type': "application/json"
     }
 
-response = requests.get(url, headers=headers, auth=('{{ account_sid }}', '{{ auth_token }}'))
+response = requests.get(url, headers=headers, auth=('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '{{ auth_token }}'))
 
 print(response.text)
