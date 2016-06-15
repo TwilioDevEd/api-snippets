@@ -4,10 +4,10 @@ require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = '{{ auth_token }}'
-workspace_sid = '{{ workspace_sid }}'
-task_sid = '{{ task_sid }}'
-reservation_sid = '{{ reservation_sid }}'
+auth_token = 'your_auth_token'
+workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+task_sid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 

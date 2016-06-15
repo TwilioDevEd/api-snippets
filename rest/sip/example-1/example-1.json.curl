@@ -2,4 +2,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
     -d "To=sip:kate@example.com" \
     -d "From=Jack" \
     -d "Url=http://www.example.com/sipdial.xml" \
-    -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}"
+    -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token"

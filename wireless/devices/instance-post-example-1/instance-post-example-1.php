@@ -6,7 +6,7 @@
 include 'vendor/autoload.php';
 
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";  // Your Account SID from www.twilio.com/console
-$token = "{{ auth_token }}"; // Your Auth Token from www.twilio.com/console
+$token = "your_auth_token"; // Your Auth Token from www.twilio.com/console
 
 $client = new Twilio\Rest\Client($sid, $token);
 

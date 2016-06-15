@@ -5,4 +5,4 @@ curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXX
 --data-urlencode 'Address=+1651555667777'  \
 --data-urlencode 'Tag=rogue_one'  \
 --data-urlencode 'Tag=han_solo_spinoff'  \
--u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+-u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

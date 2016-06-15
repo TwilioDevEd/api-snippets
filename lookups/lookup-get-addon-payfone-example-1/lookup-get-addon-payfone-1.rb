@@ -9,7 +9,7 @@ http.use_ssl = true
 
 request = Net::HTTP::Get.new(url)
 # All Twilio requests use HTTP basic auth -> http://en.wikipedia.org/wiki/Basic_access_authentication
-request.basic_auth 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '{{ auth_token }}'
+request.basic_auth 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', 'your_auth_token'
 request["accept"] = 'application/json'
 request["content-type"] = 'application/json'
 

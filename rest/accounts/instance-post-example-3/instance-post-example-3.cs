@@ -8,7 +8,7 @@ class Example
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AccountSidToClose = "ACxxxxxxxxxxxxxxxxxxx";
-    string AuthToken = "{{ auth_token }}";
+    string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
     Account account = twilio.ChangeSubAccountStatus(AccountSidToClose, Twilio.AccountStatus.Closed);
   }

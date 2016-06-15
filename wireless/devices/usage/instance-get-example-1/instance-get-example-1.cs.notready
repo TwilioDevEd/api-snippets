@@ -12,7 +12,7 @@ namespace TwilioApp
     static async Task DoTask()
     {
       var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-      var authToken = "{{ auth_token }}";
+      var authToken = "your_auth_token";
 
       var restClient = new TwilioRestClient(accountSid, authToken);
 

@@ -4,8 +4,8 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$authToken = "{{ auth_token }}";
-$workspaceSid = "{{ workspace_sid }}";
+$authToken = "your_auth_token";
+$workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $capability = new Services_Twilio_TaskRouter_Workspace_Capability($accountSid, $authToken, $workspaceSid);
 $capability->allowFetchSubresources();

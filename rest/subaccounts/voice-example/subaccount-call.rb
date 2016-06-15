@@ -3,7 +3,7 @@ require 'twilio-ruby'
 
 # Account Sid and Auth token for your new subaccount
 sub_account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-sub_auth_token = '{{ subaccount_auth_token }}'
+sub_auth_token = 'your_auth_token'
 @sub_account_client = Twilio::REST::Client.new account_sid, auth_token
 
 # Make a call from your subaccount

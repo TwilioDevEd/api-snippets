@@ -4,10 +4,10 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$authToken = "{{ auth_token }}";
-$workspaceSid = "{{ workspace_sid }}";
-$taskSid = "{{ task_sid }}";
-$reservationSid = "{{ reservation_sid }}";
+$authToken = "your_auth_token";
+$workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 

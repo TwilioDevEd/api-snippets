@@ -2,4 +2,4 @@ $ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXX
     -d "Category=calls-inbound" \
     -d "StartDate=2012-09-01" \
     -d "EndDate=2012-09-30" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

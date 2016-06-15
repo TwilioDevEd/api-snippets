@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/node
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = '{{ auth_token }}';
+var authToken = 'your_auth_token';
 var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);

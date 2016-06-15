@@ -3,17 +3,17 @@ from twilio.rest import TwilioTaskRouterClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "{{ auth_token }}"
-workspace_sid = "{{ workspace_sid }}"
+auth_token  = "your_auth_token"
+workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
 rules = []
 
-sales_queue_sid = "{{ sales_queue_sid }}"
-marketing_queue_sid = "{{ marketing_queue_sid }}"
-support_queue_sid = "{{ support_queue_sid }}"
-everyone_queue_sid = "{{ everyone_queue_sid }}"
+sales_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+marketing_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+support_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+everyone_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 salesRuleTargets = []
 salesRuleTarget = WorkflowRuleTarget(sales_queue_sid, null, null, null)

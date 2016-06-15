@@ -2,4 +2,4 @@ curl -X POST https://preview.twilio.com/wireless/Commands \
   -d 'Device=524116518656369' \
   -d 'Command=wakeup' \
   -d 'CallbackUrl=https://devicemanager.mycompany.com/devices/524116518656369/commands' \
-  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

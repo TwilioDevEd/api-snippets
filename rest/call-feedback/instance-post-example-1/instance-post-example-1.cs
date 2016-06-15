@@ -9,7 +9,7 @@ class Example
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "{{ auth_token }}";
+    string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     twilio.CreateFeedback("CAe03b7cd806070d1f32bdb7f1046a41c0", 3, new List<string>() { "imperfect-audio" });
