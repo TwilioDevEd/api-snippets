@@ -9,4 +9,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
     -d "StatusCallbackEvent=ringing" \
     -d "StatusCallbackEvent=answered" \
     -d "StatusCallbackEvent=completed" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

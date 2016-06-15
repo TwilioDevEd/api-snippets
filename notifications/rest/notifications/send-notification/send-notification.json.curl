@@ -1,4 +1,4 @@
 curl -X POST https://notify.twilio.com/v1/Services/ISxxx/Notifications \
     -d 'Identity=Bob' \
     -d 'Body=Hello Bob' \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

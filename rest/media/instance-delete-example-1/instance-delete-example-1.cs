@@ -7,7 +7,7 @@ class Example
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "{{ auth_token }}";
+    string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     twilio.DeleteMedia("MM800f449d0399ed014aae2bcc0cc2f2ec", "ME557ce644e5ab84fa21cc21112e22c485");

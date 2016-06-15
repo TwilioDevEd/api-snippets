@@ -10,7 +10,7 @@ except ImportError:
 
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token = "{{ auth_token }}"
+auth_token = "your_auth_token"
 client = TwilioLookupsClient(account_sid, auth_token)
 
 encoded_number = quote('(510) 867-5309')

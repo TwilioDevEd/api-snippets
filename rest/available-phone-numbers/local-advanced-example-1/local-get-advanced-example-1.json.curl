@@ -3,4 +3,4 @@ $ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXX
     -d "Distance=50" \
     -d "Contains=555" \
     -d "InRegion=CA" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

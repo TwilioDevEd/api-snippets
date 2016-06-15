@@ -2,4 +2,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
     -d "Body=Hey%20Mr%20Nugget%2C%20you%20the%20bomb%21" \
     -d "To=%2B15005550009" \
     -d "From=%2B15005550006" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

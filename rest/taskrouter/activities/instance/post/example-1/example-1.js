@@ -3,7 +3,7 @@
 var twilio = require('twilio');
 
 var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "{{ auth_token }}";
+var authToken = "your_auth_token";
 var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var activitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 

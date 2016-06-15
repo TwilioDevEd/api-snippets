@@ -4,7 +4,7 @@ require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = '{{ auth_token }}'
+auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 @domain = @client.account.sip.domains.get("SD32a3c49700934481addd5ce1659f04d2")

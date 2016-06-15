@@ -8,7 +8,7 @@ class Example
   {
     // Find your Account Sid and Auth Token at client.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "{{ auth_token }}";
+    string AuthToken = "your_auth_token";
     var client = new MonitorClient(AccountSid, AuthToken);
 
     var alerts = client.ListAlerts("warning", new DateTime(2015, 4, 1),

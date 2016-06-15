@@ -3,7 +3,7 @@ from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "{{ auth_token }}"
+auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 numbers = client.phone_numbers.search(area_code="800",

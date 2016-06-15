@@ -8,7 +8,7 @@ class Example
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "{{ auth_token }}";
+    const string authToken = "your_auth_token";
     var lookupsClient = new LookupsClient(accountSid, authToken);
 
     // Look up a phone number in E.164 format

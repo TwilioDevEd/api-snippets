@@ -3,4 +3,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
     -d "VoiceUrl=https://dundermifflin.example.com/twilio/app.php" \
     -d "AuthType=IP_ACL" \
     -d "DomainName=dunder-mifflin-scranton.sip.twilio.com" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

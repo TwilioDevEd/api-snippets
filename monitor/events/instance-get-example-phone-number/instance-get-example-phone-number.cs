@@ -7,7 +7,7 @@ class Example
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "{{ auth_token }}";
+    string AuthToken = "your_auth_token";
     var monitor = new MonitorClient(AccountSid, AuthToken);
 
     var e = monitor.GetEvent("AE21f24380625e4aa4abec76e39b14458d");

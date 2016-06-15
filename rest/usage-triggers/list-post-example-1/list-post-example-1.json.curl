@@ -2,4 +2,4 @@ $ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
     -d "TriggerValue=1000" \
     -d "UsageCategory=sms" \
     -d "CallbackUrl=http://www.example.com/" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

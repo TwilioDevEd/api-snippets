@@ -8,7 +8,7 @@ import com.twilio.sdk.resource.notifications.v1.service.Notification;
 public class CreateDetailedNotification {
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "{{ auth_token }}";
+  public static final String AUTH_TOKEN = "your_auth_token";
 
   public static void main(String args[]) {
     // Initialize the client

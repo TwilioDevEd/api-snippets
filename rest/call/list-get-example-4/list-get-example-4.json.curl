@@ -2,4 +2,4 @@ $ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXX
     -d "Status=in-progress" \
     -d "StartTime>=2009-07-04" \
     -d "StartTime<=2009-07-06" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:{{ auth_token }}'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
