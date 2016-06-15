@@ -5,10 +5,8 @@ from twilio.rest import TwilioRestClient
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
-old_account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-new_account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+new_sub_account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 number_sid = "PN2a0747eba6abf96b7e3c3ff0b4530f6e"
 
-subaccount = client.accounts.get(old_account)
-number = subaccount.phone_numbers.update(number_sid, account_sid=new_account)
+number = client.phone_numbers.update(number_sid, account_sid=new_sub_account)
 print(number.phone_number)

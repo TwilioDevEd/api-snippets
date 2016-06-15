@@ -4,7 +4,7 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Account Sid and Auth token for your new subaccount
 $sa_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$sa_token = "your_auth_token";  
+$sa_token = "your_auth_token";
 $sa_client = new Services_Twilio($sa_sid, $sa_token);
 $subaccount = $sa_client->account;
 
@@ -15,12 +15,17 @@ $time_to_bill = 0;
 $date = strtotime('-1 month');
 
 // Get all calls for the last 30 days
-foreach ($sa_client->calls->getIterator(0, 1000, array(
-    "StartTime" => "{$date->format('Y-m-d')}"
-    )) as $call
-) {
-  # Get time of call in minutes
-  $time_to_bill += ceil((float) $call->duration);
+$callIterator = $sa_client->account->calls->getIterator(
+    0,
+    1000,
+    array(
+        "StartTime" => date('Y-m-d', $date)
+    )
+);
+
+foreach ($callIterator as $call) {
+    // Get time of call in minutes
+    $time_to_bill += ceil((float) $call->duration);
 }
 
-echo "User {{$user->username}} used {$time_to_bill} minutes.";
+echo "Account $sa_sid used {$time_to_bill} minutes.";
