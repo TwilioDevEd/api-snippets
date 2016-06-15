@@ -1,17 +1,17 @@
 {
-  "sid": "WWe7d15ec6d23b584b65702aa4d02aec60",
-  "friendly_name": "blah",
+  "sid": "WWd42d9fcb655eea2fc0c6210d1b775205",
+  "friendly_name": "Sales, Marketing, Support Workflow",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+  "workspace_sid": "WS0b37cb82ee097132c15cc5295dbe42a1",
   "assignment_callback_url": "http://example.com",
-  "fallback_assignment_callback_url": "http://example.com",
+  "fallback_assignment_callback_url": "http://example2.com",
   "document_content_type": null,
-  "configuration": "{\"task_routing\":{\"filters\":[{\"queue\":\"WQ3264f1ece8f6c9dcaba5b19ff6f6cf81\"}],\"default_filter\":{\"queue\":\"WQ3264f1ece8f6c9dcaba5b19ff6f6cf81\"}}}",
-  "task_reservation_timeout": 120,
-  "date_created": "2015-01-16T19:23:21Z",
-  "date_updated": "2015-01-16T19:37:48Z",
-  "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Workflows/WWe7d15ec6d23b584b65702aa4d02aec60",
+  "configuration": "{\"task_routing\":{\"filters\":[{\"expression\":\"type == \"sales\"\",\"targets\":[{\"queue\":\"WQ09a6cafb64290711064322147e209a12\"}]},{\"expression\":\"type == \"marketing\"\",\"targets\":[{\"queue\":\"WQ18856a16c74745e28bf99e8352ecde14\"}]},{\"expression\":\"type == \"support\"\",\"targets\":[{\"queue\":\"WQ2423be93a1c6026f7fcb6daed71a9fd7\"}]}],\"default_filter\":{\"queue\":\"WQ3168ffe8bcdb0764cdd5f1d16dd08a9f\"}}}",
+  "task_reservation_timeout": 30,
+  "date_created": "2015-06-18T02:17:18Z",
+  "date_updated": "2015-08-03T17:55:26Z",
+  "url": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1/Workflows/WWd42d9fcb655eea2fc0c6210d1b775205",
   "links": {
-    "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960"
+    "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS0b37cb82ee097132c15cc5295dbe42a1"
   }
 }

@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Workflow;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class UpdateWorkflow { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -18,14 +18,20 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException {
     TwilioTaskRouterClient client = new TwilioTaskRouterClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workflow workflow = client.getWorkflow(WORKSPACE_SID, WORKSPACE_SID);
+    Workflow workflow = client.getWorkflow(WORKSPACE_SID, WORKFLOW_SID);
     Map<String, String> params = new HashMap<String, String>();
     params.put("TaskReservationTimeout", "20");
     workflow.update(params);
 
-    //alternatively
+    System.out.println(workflow.getFriendlyName() + "\t" + workflow.getTaskReservationTimeout());
+    
+    // alternatively
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
     workflow = workspace.getWorkflow(WORKFLOW_SID);
-    workflow.update(params);
+    Map<String, String> params2 = new HashMap<String, String>();
+    params2.put("TaskReservationTimeout", "120");
+    workflow.update(params2);
+    
+    System.out.println(workflow.getFriendlyName() + "\t" + workflow.getTaskReservationTimeout());
   }
 }
