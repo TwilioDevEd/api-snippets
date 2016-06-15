@@ -5,7 +5,7 @@ var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
 client.outgoingCallerIds.list(function(err, data) {
-    data.callerIds.forEach(function(callerId) {
-        console.log(callerId.PhoneNumber);
+    data.outgoingCallerIds.forEach(function(callerId) {
+        console.log(callerId.phoneNumber);
     });
 });
