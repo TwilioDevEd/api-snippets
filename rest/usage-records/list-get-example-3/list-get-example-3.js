@@ -6,8 +6,9 @@ var client = require('twilio')(accountSid, authToken);
 
 client.usage.records.list({ category: "calls-inbound",
     startDate: "2012-09-01",
-    endDate: "2012-09-30" }, function(err, data) {
-    data.records.forEach(function(record) {
-        console.log(record.Price);
+    endDate: "2012-09-30"
+  }, function(err, data) {
+    data.usageRecords.forEach(function(record) {
+      console.log(record.price);
     });
 });
