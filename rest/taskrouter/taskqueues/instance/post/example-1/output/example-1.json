@@ -1,20 +1,20 @@
 {
-  "sid": "WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
+  "sid": "WQ1ec4bfe80e9dca0f3d77e2369d18176a",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
-  "friendly_name": "Everyone",
-  "target_workers": "1==1",
-  "max_reserved_workers": 1,
-  "reservation_activity_sid": "WA7208808f8a0460f4a38c17375767716c",
+  "friendly_name": "English",
+  "target_workers": "languages HAS 'english'",
+  "max_reserved_workers": 5,
+  "reservation_activity_sid": "WAff7cbfeb6e4994492f3c2488515bc406",
   "reservation_activity_name": "Reserved",
-  "assignment_activity_sid": "WAe29fd962395b0ce5da1fa6b3e24f834f",
+  "assignment_activity_sid": "WAaa6f6f4332496c3b53b489fd581c8633",
   "assignment_activity_name": "Busy",
   "date_created": "2014-10-11T05:15:31Z",
   "date_updated": "2014-10-13T20:57:34Z",
-  "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/TaskQueues/WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
+  "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/TaskQueues/WQ1ec4bfe80e9dca0f3d77e2369d18176a",
   "links": {
-    "assignment_activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WAe29fd962395b0ce5da1fa6b3e24f834f",
-    "reservation_activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WA7208808f8a0460f4a38c17375767716c",
+    "assignment_activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WAaa6f6f4332496c3b53b489fd581c8633",
+    "reservation_activity": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Activities/WAff7cbfeb6e4994492f3c2488515bc406",
     "workspace": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960"
   }
 }

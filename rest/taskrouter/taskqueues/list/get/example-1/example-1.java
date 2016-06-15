@@ -5,7 +5,7 @@ import com.twilio.sdk.resource.instance.taskrouter.TaskQueue;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 import com.twilio.sdk.resource.list.taskrouter.TaskQueueList;
 
-public class Example { 
+public class ListAllTaskQueues { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";

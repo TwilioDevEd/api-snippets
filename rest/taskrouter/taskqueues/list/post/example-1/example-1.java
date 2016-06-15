@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.TaskQueue;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class CreateTaskQueue { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -19,8 +19,8 @@ public class Example {
 
     Map<String, String> params = new HashMap<String, String>();
     params.put("FriendlyName", "English");
-    params.put("ReservationActivitySid", "WAxxxx");
-    params.put("AssignmentActivitySid", "WAyyyy");
+    params.put("ReservationActivitySid", "WAff7cbfeb6e4994492f3c2488515bc406");
+    params.put("AssignmentActivitySid", "WAaa6f6f4332496c3b53b489fd581c8633");
     params.put("TargetWorkers", "languages HAS 'english'");
     TaskQueue taskQueue = client.createTaskQueue(WORKSPACE_SID, params);
 
@@ -28,8 +28,14 @@ public class Example {
 
     // alternatively
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
-    taskQueue = workspace.createTaskQueue(params);
+    Map<String, String> params2 = new HashMap<String, String>();
+    params2.put("FriendlyName", "Spanish");
+    params2.put("ReservationActivitySid", "WAff7cbfeb6e4994492f3c2488515bc406");
+    params2.put("AssignmentActivitySid", "WAaa6f6f4332496c3b53b489fd581c8633");
+    params2.put("TargetWorkers", "languages HAS 'spanish'");
 
-    System.out.println(taskQueue.getFriendlyName());
+    TaskQueue taskQueue2 = workspace.createTaskQueue(params2);
+
+    System.out.println(taskQueue2.getFriendlyName());
   }
 }
