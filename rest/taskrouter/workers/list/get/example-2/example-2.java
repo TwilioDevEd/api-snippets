@@ -8,7 +8,7 @@ import com.twilio.sdk.resource.instance.taskrouter.Worker;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 import com.twilio.sdk.resource.list.taskrouter.WorkerList;
 
-public class Example { 
+public class ListAllWorkersWithFilter { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";

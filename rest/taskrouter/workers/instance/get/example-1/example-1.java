@@ -1,10 +1,13 @@
-// Install the Java helper library from twilio.com/docs/java/install
+//Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Worker;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+import java.util.Map;
+import org.json.simple.parser.ParseException;
+
+public class GetWorker { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -20,11 +23,11 @@ public class Example {
 
     // alternatively
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
-    worker = workspace.getWorker(WORKER_SID);
-    System.out.println(worker.getAttributes());
-
+    Worker worker2 = workspace.getWorker(WORKER_SID);
+    System.out.println(worker2.getAttributes());
+    
     // alternative to fetching attributes
-    Map<String, String> attributes = worker.parseAttributes();
+    Map<String, Object> attributes = worker2.parseAttributes();
     System.out.println(attributes.get("foo"));
   }
 }

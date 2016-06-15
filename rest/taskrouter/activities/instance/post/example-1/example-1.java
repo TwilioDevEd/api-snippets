@@ -5,9 +5,8 @@ import java.util.Map;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Activity;
-import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class UpdateActivity { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -20,12 +19,6 @@ public class Example {
 
     Activity activity = client.getActivity(WORKSPACE_SID, ACTIVITY_SID);
     Map<String, String> params = new HashMap<String, String>();
-    params.put("FriendlyName", "NewAvailableFriendlyName");
+    params.put("FriendlyName", "NewActivityFriendlyName");
     activity.update(params);
-
-    //alternatively
-    Workspace workspace = client.getWorkspace(WORKSPACE_SID);
-    activity = workspace.getActivity(ACTIVITY_SID);
-    activity.update(params);
-  }
 }

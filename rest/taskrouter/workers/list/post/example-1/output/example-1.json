@@ -1,11 +1,11 @@
 {
   "sid": "WKa0f24176fee1938e495760b1122995b6",
-  "friendly_name": "Cases Worker",
+  "friendly_name": "Support Worker 1",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "activity_sid": "WAc568c96375feb0d4fce47f6975a3eed8",
   "activity_name": "Ready",
   "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
-  "attributes": "{\"type\":\"cases\"}",
+  "attributes": "{\"type\":\"support\"}",
   "available": true,
   "date_created": "2014-10-11T05:36:19Z",
   "date_updated": "2015-01-20T19:19:08Z",

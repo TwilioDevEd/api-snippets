@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Worker;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class CreateWorker { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -26,15 +26,18 @@ public class Example {
 
     // alternatively
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
-    worker = workspace.createWorker(params);
+    Map<String, String> params2 = new HashMap<String, String>();
+    params2.put("FriendlyName", "Support Worker 2");
+    params2.put("Attributes", "{\"type\":\"support\"}");
+    Worker worker2 = workspace.createWorker(params2);
 
-    System.out.println(worker.getFriendlyName());
+    System.out.println(worker2.getFriendlyName());
 
     // alternate #2 using attributes as a map
     Map<String, String> attributes = new HashMap<String, String>();
     attributes.put("type", "support");
-    worker = workspace.createWorker("Support Worker 1", attributes, null);
+    Worker worker3 = workspace.createWorker("Support Worker 3", attributes, null);
 
-    System.out.println(worker.getFriendlyName());
+    System.out.println(worker3.getFriendlyName());
   }
 }

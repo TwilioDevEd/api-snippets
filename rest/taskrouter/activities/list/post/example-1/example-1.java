@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Activity;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class CreateActivity { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -26,8 +26,12 @@ public class Example {
 
     // alternatively
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
-    activity = workspace.createActivity(params);
+    Map<String, String> params2 = new HashMap<String, String>();
+    params2.put("FriendlyName", "NewUnAvailableActivity");
+    params2.put("Available", "false");
 
-    System.out.println(activity.getFriendlyName());
+    Activity activity2 = workspace.createActivity(params2);
+
+    System.out.println(activity2.getFriendlyName());
   }
 }
