@@ -1,13 +1,13 @@
-// Install the Java helper library from twilio.com/docs/java/install
-import java.util.HashMap;
-import java.util.Map;
-
+//Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Task;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+import java.util.HashMap;
+import java.util.Map;
+
+public class UpdateTask { 
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "{{ account_sid }}";
@@ -21,24 +21,24 @@ public class Example {
     // update a task's attributes
     Task task = client.getTask(WORKSPACE_SID, TASK_SID);
     Map<String, String> params = new HashMap<String, String>();
-    params.put("Attributes", "{\"type\":\"support\"}");
+    params.put("Attributes", "{\"type\":\"marketing\"}");
     task.update(params);
-
+    
     // update a task's attributes #2
     Workspace workspace = client.getWorkspace(WORKSPACE_SID);
     task = workspace.getTask(TASK_SID);
     task.update(params);
-
+    
     // update a task's attributes with map
-    Map<String, String> attributes = new HashMap<String, String();
-    attributes.put("type", "support");
+    Map<String, String> attributes = new HashMap<String, String>();
+    attributes.put("type", "support");    
     task.update(attributes, null);
-
+    
     // cancel a task
-    Map<String, String> params = new HashMap<String, String>();
-    params.put("AssignmentStatus", "canceled");
-    params.put("Reason", "waiting too long");
-    task.update(params);
+    Map<String, String> params2 = new HashMap<String, String>();
+    params2.put("AssignmentStatus", "canceled");
+    params2.put("Reason", "waiting too long");
+    task.update(params2);
 
     // cancel a task #2
     task.cancel("waiting too long");

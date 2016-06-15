@@ -15,7 +15,7 @@
       "workflow_sid": "WWb630832558964d981afe7e370df6985b",
       "workflow_friendly_name": "Default Fifo Workflow",
       "task_queue_sid": "WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
-      "task_queue_friendly_name": "Everyone",
+      "task_queue_friendly_name": "MyQueue",
       "url": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/Tasks/WTd480a09f869b59812e7690af3e7cf23c",
       "links": {
         "task_queue": "https://taskrouter.twilio.com/v1/Workspaces/WS7d4813fc78909747b773945352c5b960/TaskQueues/WQ3264f1ece8f6c9dcaba5b19ff6f6cf81",
