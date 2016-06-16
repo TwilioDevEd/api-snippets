@@ -10,28 +10,29 @@ class SnippetTester
 
   def initialize(parent_source_folder)
     @parent_source_folder = parent_source_folder.nil? ? Dir.pwd : parent_source_folder
+    @running_folder = Dir.pwd
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
     @test_models = [Model::TestSessionModel.new(@parent_source_folder)]
     @language_handlers = {
-      'java'      => LanguageHandler::JavaLanguageHandler.new(@parent_source_folder),
-      'rb'        => LanguageHandler::RubyLanguageHandler.new(@parent_source_folder),
-      'js'        => LanguageHandler::NodeLanguageHandler.new(@parent_source_folder),
-      'php'       => LanguageHandler::PhpLanguageHandler.new(@parent_source_folder),
-      'py'        => LanguageHandler::PythonLanguageHandler.new(@parent_source_folder),
-      'curl'      => LanguageHandler::CurlLanguageHandler.new(@parent_source_folder),
-      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new(@parent_source_folder),
-      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new(@parent_source_folder),
+      'java'      => LanguageHandler::JavaLanguageHandler.new(@running_folder),
+      'rb'        => LanguageHandler::RubyLanguageHandler.new(@running_folder),
+      'js'        => LanguageHandler::NodeLanguageHandler.new(@running_folder),
+      'php'       => LanguageHandler::PhpLanguageHandler.new(@running_folder),
+      'py'        => LanguageHandler::PythonLanguageHandler.new(@running_folder),
+      'curl'      => LanguageHandler::CurlLanguageHandler.new(@running_folder),
+      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new(@running_folder),
+      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new(@running_folder),
       'cs'        => LanguageHandler::CsharpLanguageHandler.new(
-        @parent_source_folder,
+        @running_folder,
         [
-          'nuget/Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
-          'nuget/Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-          'nuget/Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
-          'nuget/Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-          'nuget/Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
-          'nuget/JWT.1.1/lib/3.5/JWT.dll'
+          'Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
+          'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+          'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+          'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
+          'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+          'JWT.1.1/lib/3.5/JWT.dll'
         ]
       )
     }

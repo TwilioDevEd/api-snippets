@@ -181,7 +181,7 @@ $ gem install twilio-ruby
 $ gem install json
 $ gem install colorize
 $ sudo npm install -g twilio
-$ composer install
+$ composer require twilio/sdk:4.\*
 $ mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
 $ mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
 $ mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget

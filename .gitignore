@@ -49,4 +49,6 @@ nbactions.xml
 /.env
 /vendor/
 /nuget/
-/testable_snippets/
+testable_snippets/
+/composer.json
+/composer.lock

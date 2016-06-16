@@ -9,10 +9,13 @@ module LanguageHandler
     end
 
     def execute(file)
-      command = dependencies.inject('mcs') do |cmd, path|
-        cmd << " -r:#{path}"
+      execute_with_suppressed_output("#{compile_command} #{file}")
+    end
+
+    def compile_command
+      @compile_command ||= dependencies.inject('mcs') do |cmd, path|
+        cmd << " -r:#{source_folder}/nuget/#{path}"
       end
-      execute_with_suppressed_output("#{command} #{file}")
     end
   end
 end
