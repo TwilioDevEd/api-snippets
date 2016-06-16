@@ -10,5 +10,10 @@ $taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$statistics = $client->getTaskQueueStatistics($workspaceSid, $taskQueueSid);
+$statistics = $client->getTaskQueueStatistics(
+    $taskQueueSid,
+    array(
+        'Minutes' => 60
+    )
+);
 echo $statistics->cumulative->reservations_accepted;

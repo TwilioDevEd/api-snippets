@@ -10,7 +10,12 @@ $workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$statistics = $client->getWorkflowStatistics($workspaceSid, $workflowSid);
+$statistics = $client->getWorkflowStatistics(
+    $workflowSid,
+    array(
+        'Minutes' => 60
+    )
+);
 echo $statistics->cumulative->avg_task_acceptance_time;
 echo $statistics->realtime->tasks_by_status->pending;
 echo $statistics->realtime->tasks_by_status->assigned;

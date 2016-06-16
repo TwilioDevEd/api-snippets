@@ -10,7 +10,7 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 capability = TaskRouterWorkspaceCapability(account_sid, auth_token, workspace_sid)
 capability.allow_fetch_subresources()
 capability.allow_updates_subresources()
-capability.allow_deletes_subresources()
+capability.allow_delete_subresources()
 token = capability.generate_token()
 
 # By default, tokens are good for one hour.

@@ -13,7 +13,11 @@ class Example
     string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
-    TaskQueueStatistics stats = client.GetTaskQueueStatistics(WorkspaceSid, TaskQueueSid);
+    StatisticsRequest request = new StatisticsRequest();
+    request.Minutes = 500;
+    request.EndDate = DateTime.Now;
+
+    TaskQueueStatistics stats = client.GetTaskQueueStatistics(WorkspaceSid, TaskQueueSid, request);
     Console.WriteLine(stats.Cumulative.ReservationsAccepted);
   }
 }

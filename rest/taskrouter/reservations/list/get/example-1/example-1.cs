@@ -13,7 +13,7 @@ class Example
     string TaskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
-    ReservationResult reservationResult = client.ListReservations(WorkspaceSid, TaskSid)
+    ReservationResult reservationResult = client.ListReservations(WorkspaceSid, TaskSid);
     foreach(Reservation reservation in reservationResult.Reservations) {
         Console.WriteLine(reservation.ReservationStatus);
         Console.WriteLine(reservation.WorkerName);

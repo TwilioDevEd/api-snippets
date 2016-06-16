@@ -13,7 +13,7 @@ class Example
     string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
-    TaskQueue taskQueue = client.UpdateTaskQueue(WorkspaceSid, TaskQueueSid, null, null, null, "languages HAS 'english'", null);
+    TaskQueue taskQueue = client.UpdateTaskQueue(WorkspaceSid, TaskQueueSid, null, null, null, "languages HAS 'english'", 100);
     Console.WriteLine(taskQueue.FriendlyName);
     Console.WriteLine(taskQueue.TargetWorkers);
   }

@@ -12,9 +12,9 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 // accept a reservation
-$reservation = $client->workspace->tasks->get($taskSid)->reservations($reservationSid);
+$reservation = $client->workspace->tasks->get($taskSid)->reservations->get($reservationSid);
 $reservation->update(
-	array(
-		'ReservationStatus' => 'accepted'
-	)
+    array(
+        'ReservationStatus' => 'accepted'
+    )
 );

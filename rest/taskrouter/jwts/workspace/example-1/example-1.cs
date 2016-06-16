@@ -14,7 +14,7 @@ class Example
     TaskRouterWorkspaceCapability capability = new TaskRouterWorkspaceCapability(AccountSid, AuthToken, WorkspaceSid);
     capability.AllowFetchSubresources();
     capability.AllowUpdatesSubresources();
-    capability.AllowDeletesSubresources();
+    capability.AllowDeleteSubresources();
     var token = capability.GenerateToken();
 
     // By default, tokens are good for one hour.

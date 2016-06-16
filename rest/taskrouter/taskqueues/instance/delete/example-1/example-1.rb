@@ -10,5 +10,5 @@ taskqueue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 
-taskqueue = client.workspace.taskqueues.get(taskqueue_sid)
+taskqueue = client.workspace.task_queues.get(taskqueue_sid)
 taskqueue.delete

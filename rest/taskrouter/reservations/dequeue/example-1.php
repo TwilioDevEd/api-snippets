@@ -12,10 +12,10 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 // dequeue a reservation
-$reservation = $client->workspace->tasks->get($taskSid)->reservations($reservationSid);
+$reservation = $client->workspace->tasks->get($taskSid)->reservations->get($reservationSid);
 $reservation->update(
-	array(
-		'Instruction' => 'dequeue',
-		'DequeueFrom' => '+18001231234'
-	)
+    array(
+        'Instruction' => 'dequeue',
+        'DequeueFrom' => '+18001231234'
+    )
 );

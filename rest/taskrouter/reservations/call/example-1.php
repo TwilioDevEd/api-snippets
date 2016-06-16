@@ -12,13 +12,13 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 // call using a reservation
-$reservation = $client->workspace->tasks->get($taskSid)->reservations($reservationSid);
+$reservation = $client->workspace->tasks->get($taskSid)->reservations->get($reservationSid);
 $reservation->update(
-	array(
-		'Instruction' => 'call',
-		'CallFrom' => '+15558675309',
-		'CallUrl' => 'http://example.com/agent_answer',
-		'CallStatusCallbackUrl' => 'http://example.com/agent_answer_status_callback',
-		'CallAccept' => 'true'
-	)
+    array(
+        'Instruction' => 'call',
+        'CallFrom' => '+15558675309',
+        'CallUrl' => 'http://example.com/agent_answer',
+        'CallStatusCallbackUrl' => 'http://example.com/agent_answer_status_callback',
+        'CallAccept' => 'true'
+    )
 );

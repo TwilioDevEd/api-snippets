@@ -9,5 +9,5 @@ taskqueue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
-taskqueue = client.taskqueues(workspace_sid).get(taskqueue_sid)
+taskqueue = client.task_queues(workspace_sid).get(taskqueue_sid)
 print(taskqueue.friendly_name)
