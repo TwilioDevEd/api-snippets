@@ -9,7 +9,7 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "your_auth_token";
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string WorkflowSid = "WFXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    string WorkflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     Task task = client.AddTask(WorkspaceSid, "{\"type\":\"support\"}", WorkflowSid, null);

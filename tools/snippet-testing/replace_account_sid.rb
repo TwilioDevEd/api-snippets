@@ -1,7 +1,7 @@
 def replace_account_sid(file_path)
   file = File.open(File.expand_path(file_path), 'r')
   original = file.read
-  replaced = original.gsub('{{ account_sid }}', 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  replaced = original.gsub('WFXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
   unless original == replaced
     puts "replaced: #{file_path}"
