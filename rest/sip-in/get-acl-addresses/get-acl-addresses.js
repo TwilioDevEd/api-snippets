@@ -5,7 +5,7 @@ var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
 client.sip.ipAccessControlLists("AL32a3c49700934481addd5ce1659f04d2").ipAddresses.list(function(err, data) {
-    data.ipAddresss.forEach(function(ipAddress) {
-        console.log(ipAddress.FriendlyName);
+    data.ipAddresses.forEach(function(ipAddress) {
+        console.log(ipAddress.friendlyName);
     });
 });

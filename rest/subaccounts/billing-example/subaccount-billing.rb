@@ -11,7 +11,7 @@ sub_auth_token = 'your_auth_token'
 time_to_bill = 0
 
 # 30 days ago
-start_time = Time.now - ( 30 * 24 * 60 * 60 ) 
+start_time = Time.now - ( 30 * 24 * 60 * 60 )
 
 # Get all calls for the last 30 days
 @subaccount.calls.list({:page => 0, :page_size => 1000, :start_time => ">#{start_time.strftime('%Y-%m-%d')}"}).each do |call|
@@ -19,4 +19,4 @@ start_time = Time.now - ( 30 * 24 * 60 * 60 )
   time_to_bill += (call.duration.to_f/60).ceil
 end
 
-puts "User {{@user.username}} used #{time_to_bill} minutes."
+puts "Account #{sub_account_sid} used #{time_to_bill} minutes."

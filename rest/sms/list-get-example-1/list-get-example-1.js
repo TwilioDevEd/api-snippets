@@ -5,7 +5,7 @@ var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
 client.sms.messages.list(function(err, data) {
-    data.smss.forEach(function(sms) {
-        console.log(sms.To);
+    data.smsMessages.forEach(function(sms) {
+        console.log(sms.to);
     });
 });

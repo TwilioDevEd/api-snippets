@@ -12,7 +12,7 @@ class Example
 
     string sid = "MM5ef8732a3c49700934481addd5ce1659";
 
-    var message = twilio.RedactMessage(MessageSid);
+    var message = twilio.RedactMessage(sid);
 
     Console.WriteLine(message.Body); // will be empty
   }

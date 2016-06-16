@@ -6,7 +6,7 @@ var client = require('twilio')(accountSid, authToken);
 
 client.usage.triggers.list({ recurring: "daily",
     usageCategory: "calls" }, function(err, data) {
-    data.triggers.forEach(function(trigger) {
-        console.log(trigger.CurrentValue);
+    data.usageTriggers.forEach(function(trigger) {
+        console.log(trigger.currentValue);
     });
 });

@@ -25,7 +25,7 @@ module LanguageHandler
 
     def text_with_break_loops(file_content)
       file_content.gsub(
-        /foreach\s?\((.+)\)\s?\{(.+)\}/m,
+        /foreach\s?\((.+)\)\s?\{(.+)\}$/m,
         "foreach(\\1) {\\2    break;\n}"
       )
     end

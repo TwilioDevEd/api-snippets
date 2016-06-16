@@ -5,7 +5,7 @@ var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
 client.queues('QU5ef8732a3c49700934481addd5ce1659').members.list(function(err, data) {
-    data.members.forEach(function(member) {
-        console.log(member.Position);
+    data.queueMembers.forEach(function(member) {
+        console.log(member.position);
     });
 });
