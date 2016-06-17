@@ -38,7 +38,7 @@ module LanguageHandler
     end
 
     def text_without_bash_symbol(file_content)
-      file_content.gsub(/\A\$\s/, '')
+      file_content.gsub(/^\$\s/, '')
     end
   end
 end

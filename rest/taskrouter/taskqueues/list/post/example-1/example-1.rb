@@ -9,5 +9,10 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 
-taskqueue = client.workspace.taskqueues.create(friendly_name: 'English', reservation_activity_sid: 'WAxxxx', assignment_activity_sid: 'WAyyyy', target_workers: 'languages HAS "english"')
+taskqueue = client.workspace.task_queues.create(
+  friendly_name: 'English',
+  reservation_activity_sid: 'WAxxxx',
+  assignment_activity_sid: 'WAyyyy',
+  target_workers: 'languages HAS "english"'
+)
 puts taskqueue.friendly_name

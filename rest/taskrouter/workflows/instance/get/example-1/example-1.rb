@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 workflow_sid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
+client = Twilio::REST::TaskRouterClient.new(account_sid, auth_token, workspace_sid)
 
 workflow = client.workspace.workflows.get(workflow_sid)
-puts workflow_sid.friendly_name
+puts workflow.friendly_name

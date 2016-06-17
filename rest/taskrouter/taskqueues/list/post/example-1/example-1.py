@@ -8,7 +8,7 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
-taskqueue = client.taskqueues(workspace_sid).create(
+taskqueue = client.task_queues(workspace_sid).create(
     friendly_name='English',
     reservation_activity_sid='WAxxxx',
     assignment_activity_sid='WAyyyy',

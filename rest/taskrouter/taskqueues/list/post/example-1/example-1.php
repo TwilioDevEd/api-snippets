@@ -7,10 +7,11 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-$client = new TaskRouter_Services_Twilio($accountSid, $authToken, null);
+$client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$params = array();
-$params['TargetWorkers'] = 'languages HAS "english"';
+$params = array(
+    'TargetWorkers' => 'languages HAS "english"'
+);
 
 $taskQueue = $client->workspace->task_queues->create("English", "WAxxxx", "WAyyyy", $params);
 echo $taskQueue->friendly_name;

@@ -1,9 +1,11 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using System.Collections.Generic;
 using Twilio.TaskRouter;
-class Example 
+
+class Example
 {
-  static void Main(string[] args) 
+  static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -13,7 +15,7 @@ class Example
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     // update a task's attributes
-    Task task = client.UpdateTask(WorkspaceSid, TaskSid, "{\"type\":\"support\"}", null, null);
+    Task task = client.UpdateTask(WorkspaceSid, TaskSid, "{\"type\":\"support\"}", null, null, null);
     Console.WriteLine(task.Attributes);
     Console.WriteLine(task.Age);
 
@@ -25,7 +27,7 @@ class Example
     Console.WriteLine(task.Age);
 
     // cancel a task
-    task = client.UpdateTask(WorkspaceSid, TaskSid, null, "canceled", "waiting too long");
+    task = client.UpdateTask(WorkspaceSid, TaskSid, null, null, "canceled", "waiting too long");
     Console.WriteLine(task.AssignmentStatus);
     Console.WriteLine(task.Reason);
 
