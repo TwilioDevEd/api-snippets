@@ -5,8 +5,7 @@ import com.twilio.sdk.resource.instance.taskrouter.TaskQueueStatistics;
 import com.twilio.sdk.resource.instance.taskrouter.TaskQueue;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
@@ -16,7 +15,7 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException {
     TwilioTaskRouterClient client = new TwilioTaskRouterClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    TaskQueueStatistics statistics = client.getTaskQueueStatistics(WORKSPACE_SID, TASKQUEUE_SID);
+    TaskQueueStatistics statistics = client.getQueueStatistics(WORKSPACE_SID, TASKQUEUE_SID);
     System.out.println("Reservations Accepted: "+statistics.getReservationsAccepted());
 
     //alternatively

@@ -7,8 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Task;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
@@ -30,12 +29,12 @@ public class Example {
     task.update(params);
 
     // update a task's attributes with map
-    Map<String, String> attributes = new HashMap<String, String();
+    Map<String, String> attributes = new HashMap<String, String>();
     attributes.put("type", "support");
     task.update(attributes, null);
 
     // cancel a task
-    Map<String, String> params = new HashMap<String, String>();
+    params = new HashMap<String, String>();
     params.put("AssignmentStatus", "canceled");
     params.put("Reason", "waiting too long");
     task.update(params);

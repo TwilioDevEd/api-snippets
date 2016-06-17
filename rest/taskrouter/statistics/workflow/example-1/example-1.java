@@ -5,8 +5,7 @@ import com.twilio.sdk.resource.instance.taskrouter.WorkflowStatistics;
 import com.twilio.sdk.resource.instance.taskrouter.Workflow;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
@@ -18,7 +17,7 @@ public class Example {
 
     WorkflowStatistics statistics = client.getWorkflowStatistics(WORKSPACE_SID, WORKFLOW_SID);
     System.out.println("Avg Task Acceptance Time: "+statistics.getAverageTaskAcceptanceTime());
-    System.out.println("Tasks Created: "+statistics.getTasksCreated());
+    System.out.println("Tasks Entered: "+statistics.getTasksEntered());
     System.out.println("Pending Tasks: "+statistics.getPendingTasks());
     System.out.println("Assigned Tasks: "+statistics.getAssignedTasks());
 
@@ -26,7 +25,7 @@ public class Example {
     Workflow workflow = client.getWorkflow(WORKSPACE_SID, WORKFLOW_SID);
     statistics = workflow.getStatistics();
     System.out.println("Avg Task Acceptance Time: "+statistics.getAverageTaskAcceptanceTime());
-    System.out.println("Tasks Created: "+statistics.getTasksCreated());
+    System.out.println("Tasks Entered: "+statistics.getTasksEntered());
     System.out.println("Pending Tasks: "+statistics.getPendingTasks());
     System.out.println("Assigned Tasks: "+statistics.getAssignedTasks());
   }
