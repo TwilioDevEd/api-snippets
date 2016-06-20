@@ -1,19 +1,18 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import com.twilio.sdk.taskrouter.TaskRouterWorkerCapability;
+import com.twilio.sdk.taskrouter.TaskRouterWorkspaceCapability;
+import com.twilio.sdk.CapabilityToken.DomainException;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
   private static final String WORKSPACE_SID = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-  public static void main(String[] args) {
-
+  public static void main(String[] args) throws DomainException {
     TaskRouterWorkspaceCapability capability = new TaskRouterWorkspaceCapability(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID);
     capability.allowFetchSubresources();
     capability.allowUpdatesSubresources();
-    capability.allowDeletesSubresources();
+    capability.allowDeleteSubresources();
     String token = capability.generateToken();
 
     // By default, tokens are good for one hour.

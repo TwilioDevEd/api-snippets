@@ -5,15 +5,16 @@ var twilio = require('twilio');
 var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var authToken = "your_auth_token";
 var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-var capability = new twilio.TaskRouterTaskQueueCapability(accountSid, authToken, workspaceSid);
+var capability = new twilio.TaskRouterTaskQueueCapability(accountSid, authToken, workspaceSid, workerSid);
 capability.allowFetchSubresources();
 capability.allowUpdatesSubresources();
-capability.allowDeletesSubresources();
-var token = capability.generateToken();
+capability.allowDeleteSubresources();
+var token = capability.generate();
 
 // By default, tokens are good for one hour.
 // Override this default timeout by specifiying a new value (in seconds).
 // For example, to generate a token good for 8 hours:
 
-var token = capability.generateToken(28800);  // 60 * 60 * 8
+var token = capability.generate(28800);  // 60 * 60 * 8
