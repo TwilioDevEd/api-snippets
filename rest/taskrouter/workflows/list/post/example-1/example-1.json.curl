@@ -3,5 +3,5 @@ $ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Workflo
     -d "AssignmentCallbackUrl=http://example.com" \
     -d "FallbackAssignmentCallbackUrl=http://example2.com" \
     -d "TaskReservationTimeout=30" \
-    --data-urlencode Configuration='{"task_routing":{"filters":[{\"targets":[{"queue":"SalesQueueSid"}],"expression":"type == \"sales\""},{"targets":[{"queue":"MarketingQueueSid"}],"expression":"type == \"marketing\""},{"targets":[{"queue":"SupportQueueSid"}],"expression":"type == \"support\""}],"default_filter":{"queue":"EveryoneQueueSid"}}}' \
+    --data-urlencode Configuration='{"task_routing":{"filters":[{\"targets":[{"queue":"WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}],"expression":"type == \"sales\""},{"targets":[{"queue":"WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}],"expression":"type == \"marketing\""},{"targets":[{"queue":"WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}],"expression":"type == \"support\""}],"default_filter":{"queue":"WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}}}' \
     -u "{account_sid}:{auth_token}"

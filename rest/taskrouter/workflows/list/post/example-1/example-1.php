@@ -12,10 +12,10 @@ $client = new TaskRouter_Services_Twilio($accountSid, $authToken, null);
 $rules = array();
 
 
-$salesQueue = "YourSalesQueueSid";
-$marketingQueue = "YourMarketingQueueSid";
-$supportQueue = "YourSupportQueueSid";
-$everyoneQueue = "YourMarketingQueueSid";
+$salesQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$marketingQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$supportQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$everyoneQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $defaultTarget = new WorkflowRuleTarget($everyoneQueue);
 

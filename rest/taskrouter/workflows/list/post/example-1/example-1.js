@@ -8,10 +8,10 @@ var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-var salesQueue = "YourSalesQueueSid";
-var marketingQueue = "YourMarkingQueueSid";
-var supportQueue = "YourSupportQueueSid";
-var everyoneQueue = "YourEveryoneQueueSid";
+var salesQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var marketingQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var supportQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var everyoneQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var configuration = {
     "task_routing":{
