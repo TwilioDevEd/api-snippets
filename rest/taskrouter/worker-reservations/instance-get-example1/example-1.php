@@ -11,6 +11,6 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$reservation = $client->workspace->workers->get($workerSid)->reservations($reservationSid);
+$reservation = $client->workspace->workers->get($workerSid)->reservations->get($reservationSid);
 echo $reservation->reservation_status;
 echo $reservation->worker_name;

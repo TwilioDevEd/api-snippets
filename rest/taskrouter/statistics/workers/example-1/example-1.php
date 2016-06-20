@@ -6,8 +6,14 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$statistics = $client->getWorkersStatistics($workspaceSid);
+$statistics = $client->getWorkerStatistics(
+    $workerSid,
+    array(
+        'Minutes' => 60
+    )
+);
 echo $statistics->cumulative->reservations_accepted;

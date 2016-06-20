@@ -7,7 +7,7 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-$client = new TaskRouter_Services_Twilio($accountSid, $authToken, null);
+$client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 $params = array();
 $params['Attributes'] = '{"type":"support"}';

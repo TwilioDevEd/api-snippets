@@ -8,7 +8,7 @@ import com.twilio.sdk.resource.instance.taskrouter.Reservation;
 import com.twilio.sdk.resource.instance.taskrouter.Task;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -28,7 +28,7 @@ public class Example {
     }
 
     // accept a reservation #2
-    Task task = client.getTask(WORKSPACE_SID, TASK_SID);
+    task = client.getTask(WORKSPACE_SID, TASK_SID);
     for(Reservation reservation : task.getReservations()) {
         reservation.accept();
     }

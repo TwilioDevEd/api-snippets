@@ -1,9 +1,9 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 using Twilio.TaskRouter;
-class Example 
+class Example
 {
-  static void Main(string[] args) 
+  static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -12,7 +12,7 @@ class Example
     var client = new TaskRouterClient(AccountSid, AuthToken);
 
     TaskQueueResult taskQueueResult = client.ListTaskQueues(WorkspaceSid);
-    foreach(TaskQueue taskQueue in taskQueueResult.TaskQueues) {
+    foreach(TaskQueue taskQueue in taskQueueResult.taskQueues) {
         Console.WriteLine(taskQueue.FriendlyName);
     }
   }

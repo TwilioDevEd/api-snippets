@@ -9,7 +9,7 @@ var taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.taskqueues(taskQueueSid).statistics.get({}, function(err, responseData) {
+client.workspace.taskQueues(taskQueueSid).statistics.get({}, function(err, responseData) {
     if(!err) {
         console.log(responseData.cumulative.reservations_accepted);
     }

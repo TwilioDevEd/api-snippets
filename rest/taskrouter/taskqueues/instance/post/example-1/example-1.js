@@ -9,8 +9,8 @@ var taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.taskqueues(taskQueueSid).update({
+client.workspace.taskQueues(taskQueueSid).update({
     target_workers: 'languages HAS "english"'
-}, function(err, taskqueue) {
-    console.log(taskqueue.target_workers);
+}, function(err, taskQueue) {
+    console.log(taskQueue.targetWorkers);
 });

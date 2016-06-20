@@ -5,7 +5,8 @@ from twilio.rest import TwilioTaskRouterClient
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-task_sid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+reservation_sid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 

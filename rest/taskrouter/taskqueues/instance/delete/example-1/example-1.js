@@ -9,4 +9,4 @@ var taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.taskqueues(taskQueueSid).delete();
+client.workspace.taskQueues(taskQueueSid).delete();

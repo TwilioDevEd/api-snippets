@@ -6,9 +6,9 @@ require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$workflowSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-$client = new TaskRouter_Services_Twilio($accountSid, $authToken, null);
+$client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 $attributes = '{"type":"support"}';
 

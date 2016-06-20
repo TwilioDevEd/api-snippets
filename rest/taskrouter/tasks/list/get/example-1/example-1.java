@@ -5,8 +5,7 @@ import com.twilio.sdk.resource.instance.taskrouter.Task;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 import com.twilio.sdk.resource.list.taskrouter.TaskList;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
@@ -15,7 +14,7 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException {
     TwilioTaskRouterClient client = new TwilioTaskRouterClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    TaskList workers = client.getTask(WORKSPACE_SID);
+    TaskList tasks = client.getTasks(WORKSPACE_SID);
     for(Task task : tasks) {
         System.out.println(task.getAttributes());
     }

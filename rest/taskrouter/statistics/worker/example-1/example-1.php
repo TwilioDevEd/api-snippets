@@ -10,5 +10,10 @@ $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-$statistics = $client->getWorkerStatistics($workspaceSid, $workerSid);
+$statistics = $client->getWorkerStatistics(
+    $workerSid,
+    array(
+        'Minutes' => 60
+    )
+);
 echo $statistics->cumulative->reservations_accepted;

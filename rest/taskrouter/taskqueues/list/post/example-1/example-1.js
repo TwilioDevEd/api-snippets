@@ -8,7 +8,7 @@ var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.taskqueues.create({
+client.workspace.taskQueues.create({
     friendlyName: 'English',
     reservationActivitySid: 'WAxxxx',
     assignmentActivitySid: 'WAyyyy',
