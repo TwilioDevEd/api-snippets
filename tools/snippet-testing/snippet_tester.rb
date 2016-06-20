@@ -7,7 +7,6 @@ Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"]
   .each { |file| require File.expand_path(file) }
 
 class SnippetTester
-
   def initialize(parent_source_folder)
     @parent_source_folder = parent_source_folder.nil? ? Dir.pwd : parent_source_folder
     @running_folder = Dir.pwd
@@ -108,16 +107,9 @@ class SnippetTester
       @snippets_models << snippet_model
     end
   end
-
 end
 
-if __FILE__ == $0
-  tester = SnippetTester.new(ARGV[0])
-
-  tester.init
-  tester.setup
-  tester.run
-
+def print_errors_if_any
   if ErrorLogger.instance.build_failed?
     ErrorLogger.instance.print_errors
     exit(1)
@@ -128,4 +120,18 @@ if __FILE__ == $0
      "# Build Finished Successfully! #\n"\
      "#                              #\n"\
      "################################"
+end
+
+if __FILE__ == $0
+  begin
+    tester = SnippetTester.new(ARGV[0])
+
+    tester.init
+    tester.setup
+    tester.run
+
+    print_errors_if_any
+  rescue Interrupt
+    print_errors_if_any
+  end
 end
