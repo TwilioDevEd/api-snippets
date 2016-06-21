@@ -46,3 +46,6 @@ env:
 addons:
   hosts:
     - api.twilio.com
+    - taskrouter.twilio.com
+    - pricing.twilio.com
+    - lookups.twilio.com
