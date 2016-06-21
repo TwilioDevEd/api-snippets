@@ -43,6 +43,7 @@ env:
   - NODE_PATH=/usr/lib/node_modules
   - NODE_TLS_REJECT_UNAUTHORIZED=0
   - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
+  - GRADLE_OPTS="-Dorg.gradle.daemon=true"
 addons:
   hosts:
     - api.twilio.com
