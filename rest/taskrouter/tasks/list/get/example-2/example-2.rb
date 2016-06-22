@@ -9,10 +9,10 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 
-client.workspace.tasks.list({"TaskQueueSid":"WQf855e98ad280d0a0a325628e24ca9627"}).each do |task|
+client.workspace.tasks.list(TaskQueueSid: "WQf855e98ad280d0a0a325628e24ca9627").each do |task|
   puts task.attributes
 end
 
-client.workspace.tasks.list({"AssignmentStatus":"pending"}).each do |task|
+client.workspace.tasks.list(AssignmentStatus: "pending").each do |task|
   puts task.attributes
 end

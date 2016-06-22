@@ -13,10 +13,12 @@ $client = new Services_Twilio($apiKey, $apiSecret);
 $account = $client->accounts->get($accountSid);
 
 // Send a message for the main account
-$message = $account->messages->create([
-    'To' => '+15558675309', // destination phone number
-    'From' => '+15017250604', // twilio number in your account
-    'Body' => 'Never gonna give you up.'
-]);
+$message = $account->messages->create(
+    array(
+      'To' => '+15558675309', // destination phone number
+      'From' => '+15017250604', // twilio number in your account
+      'Body' => 'Never gonna give you up.'
+    )
+);
 
 echo $message->sid;

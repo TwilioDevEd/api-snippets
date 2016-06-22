@@ -91,6 +91,8 @@ Make sure you have the following dependencies installed on your system.
    ```bash
    $ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
    $ sudo apt-get install -y nodejs
+   $ sudo npm install -g n
+   $ sudo n lts
    ```
    On OSX:
    ```
