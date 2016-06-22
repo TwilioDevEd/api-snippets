@@ -23,7 +23,7 @@ install:
 - gem install colorize
 - sudo npm install -g twilio
 - composer require twilio/sdk:4.\*
-- sudo mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
+- sudo mono NuGet.exe install Twilio -Version 4.7.2 -OutputDirectory nuget
 - sudo mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
 - sudo mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
 - sudo mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
@@ -43,6 +43,10 @@ env:
   - NODE_PATH=/usr/lib/node_modules
   - NODE_TLS_REJECT_UNAUTHORIZED=0
   - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
+  - GRADLE_OPTS="-Dorg.gradle.daemon=true"
 addons:
   hosts:
     - api.twilio.com
+    - taskrouter.twilio.com
+    - pricing.twilio.com
+    - lookups.twilio.com

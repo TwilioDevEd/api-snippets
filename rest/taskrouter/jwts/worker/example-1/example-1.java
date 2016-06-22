@@ -1,15 +1,15 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.sdk.taskrouter.TaskRouterWorkerCapability;
+import com.twilio.sdk.CapabilityToken.DomainException;
 
-public class Example { 
-
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String AUTH_TOKEN = "your_auth_token";
   private static final String WORKSPACE_SID = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String WORKER_SID = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws DomainException {
 
     TaskRouterWorkerCapability capability = new TaskRouterWorkerCapability(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID, WORKER_SID);
     capability.allowActivityUpdates();

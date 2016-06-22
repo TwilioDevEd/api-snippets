@@ -26,7 +26,7 @@ class SnippetTester
       'cs'        => LanguageHandler::CsharpLanguageHandler.new(
         @running_folder,
         [
-          'Twilio.4.7.1/lib/3.5/Twilio.Api.dll',
+          'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
           'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
           'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
           'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
