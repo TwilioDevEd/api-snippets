@@ -3,6 +3,8 @@ language: csharp
 mono:
 - latest
 before_install:
+- rvm install ruby-2.2.1
+- rvm --default use 2.2.1
 - jdk_switcher use oraclejdk8
 - sudo apt-get install python-pip python2.7-dev build-essential
 - sudo pip install --upgrade pip

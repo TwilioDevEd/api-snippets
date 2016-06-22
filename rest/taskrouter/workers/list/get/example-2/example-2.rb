@@ -9,14 +9,14 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
 
-client.workspace.workers.list({"Available":"1"}).each do |worker|
+client.workspace.workers.list(Available: "1").each do |worker|
   puts worker.friendly_name
 end
 
-client.workspace.workers.list({"TaskQueueSid":"WQf855e98ad280d0a0a325628e24ca9627", "Available":"1"}).each do |worker|
+client.workspace.workers.list(TaskQueueSid: "WQf855e98ad280d0a0a325628e24ca9627", Available: "1").each do |worker|
   puts worker.friendly_name
 end
 
-client.workspace.workers.list({"TargetWorkersExpression":"type == 'leads'"}).each do |worker|
+client.workspace.workers.list(TargetWorkersExpression: "type == 'leads'").each do |worker|
   puts worker.friendly_name
 end
