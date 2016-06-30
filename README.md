@@ -166,30 +166,35 @@ Make sure you have the following dependencies installed on your system.
    $ brew install mono
    ```
 
-1. Install Nuget.
-
-   You don't need to actually install Nuget. Just download the .exe file to use it later.
-   ```bash
-   $ wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
-   ```
-
 #### Install Language Dependencies
 
-Run the following commands at the root of this directory.
+The testing and installation scripts use ruby. Before installing language
+dependencies you need to install the following gems:
 
 ```bash
-$ sudo pip install -U twilio
-$ gem install twilio-ruby
 $ gem install json
 $ gem install colorize
-$ sudo npm install -g twilio
-$ composer require twilio/sdk:4.\*
-$ mono NuGet.exe install Twilio -Version 4.7.1 -OutputDirectory nuget
-$ mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
-$ mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
-$ mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
-$ mono NuGet.exe install Twilio.TaskRouter -Version 2.3.0 -OutputDirectory nuget
 ```
+
+You can use the following command to install dependencies in your system:
+
+```bash
+$ ruby tools/snippet-testing/model/dependency_model.rb
+```
+
+This will download all the necessary dependencies for the snippets to run.
+You can also pass the `-i` flag to the testing command you'll use in the next step,
+like this:
+
+```bash
+$ ruby tools/snippet-testing/snippet_tester.rb -i
+```
+
+__Note:__ This will also install missing dependencies before running the tests. `sudo` will
+be used within the dependency installation script so you might need to enter your
+password.
+**Do not** run the whole script with `sudo` as it would install dependencies for
+the wrong user.
 
 #### Run the Tests
 

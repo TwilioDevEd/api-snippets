@@ -8,6 +8,8 @@ module Model
       'xml.curl',
       'json.curl',
       'php',
+      '4.php',
+      '5.php',
       'java',
       'cs'
     ].freeze
@@ -31,7 +33,10 @@ module Model
       Dir.glob("#{source_folder}/**") do |file|
         lang = File.extname(file)[1..-1]
         if lang == 'curl'
-          match = file.match(/\.(.+\.curl)/)
+          match = file.match(/\.(.+\.curl)$/)
+          lang = match.captures.first unless match.nil?
+        elsif lang == 'php'
+          match = file.match(/\.(.+\.php)$/)
           lang = match.captures.first unless match.nil?
         end
         @available_langs.merge!(lang => File.basename(file)) if @langs.include?(lang)

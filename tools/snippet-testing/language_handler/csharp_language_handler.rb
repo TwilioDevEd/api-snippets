@@ -14,7 +14,7 @@ module LanguageHandler
 
     def compile_command
       @compile_command ||= dependencies.inject('mcs') do |cmd, path|
-        cmd << " -r:#{source_folder}/nuget/#{path}"
+        cmd << " -r:#{dependencies_directory}/#{path}"
       end
     end
   end

@@ -20,22 +20,12 @@ before_install:
   --filename=composer
 - sudo add-apt-repository ppa:cwchien/gradle -y
 - sudo apt-get update
-- sudo apt-get install gradle
+- sudo apt-get install gradle -y --force-yes
 - sudo apt-get install ca-certificates
 - wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
 install:
-- sudo pip install -U twilio
-- gem install twilio-ruby
 - gem install json
 - gem install colorize
-- sudo npm install -g twilio
-- composer require twilio/sdk:4.\*
-- sudo mono NuGet.exe install Twilio -Version 4.7.2 -OutputDirectory nuget
-- sudo mono NuGet.exe install Twilio.Pricing -Version 1.1.0 -OutputDirectory nuget
-- sudo mono NuGet.exe install Twilio.Lookups -Version 1.1.0 -OutputDirectory nuget
-- sudo mono NuGet.exe install Twilio.IpMessaging -Version 1.2.0 -OutputDirectory nuget
-- sudo mono NuGet.exe install Twilio.TaskRouter -Version 2.3.0 -OutputDirectory nuget
-- sudo mono NuGet.exe install Twilio.Auth -Version 1.2.0 -OutputDirectory nuget
 - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
 - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
@@ -44,7 +34,7 @@ script:
 - sudo gradle run </dev/null &>/dev/null &
 - cd ..
 - sleep 25
-- ruby tools/snippet-testing/snippet_tester.rb
+- ruby tools/snippet-testing/snippet_tester.rb -i
 env:
   global:
   - NODE_PATH=/usr/local/lib/node_modules

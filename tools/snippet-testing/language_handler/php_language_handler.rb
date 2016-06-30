@@ -2,9 +2,9 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class PhpLanguageHandler < BaseLanguageHandler
-    def initialize(source_folder)
-      super(source_folder)
-      @autoload_path = "#{source_folder}/vendor/autoload.php"
+    def initialize(dependencies_directory)
+      super(dependencies_directory)
+      @autoload_path = "#{dependencies_directory}/vendor/autoload.php"
     end
 
     private
