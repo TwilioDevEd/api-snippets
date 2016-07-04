@@ -89,7 +89,7 @@ class SnippetTester
     php_4_language_handler = LanguageHandler::PhpLanguageHandler.new(
       Model::DependencyModel.php_4_path
     )
-    php_5_language_handler = LanguageHandler::PhpLanguageHandler.new(
+    php_5_language_handler = LanguageHandler::Php5LanguageHandler.new(
       Model::DependencyModel.php_5_path
     )
 
