@@ -14,6 +14,8 @@ $account = $client
     ->api
     ->accounts()
     ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+    ->update(
+        array('status' => 'suspended')
+    );
 
 echo $account->dateCreated->format('Y-m-d H:i:s');
