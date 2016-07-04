@@ -86,7 +86,10 @@ class SnippetTester
   end
 
   def get_language_handlers
-    php_4_language_handler = LanguageHandler::PhpLanguageHandler.new(
+    php_language_handler = LanguageHandler::PhpLanguageHandler.new(
+      Model::DependencyModel.php_4_path
+    )
+    php_4_language_handler = LanguageHandler::Php4LanguageHandler.new(
       Model::DependencyModel.php_4_path
     )
     php_5_language_handler = LanguageHandler::Php5LanguageHandler.new(
@@ -97,7 +100,7 @@ class SnippetTester
       'java'      => LanguageHandler::JavaLanguageHandler.new,
       'rb'        => LanguageHandler::RubyLanguageHandler.new,
       'js'        => LanguageHandler::NodeLanguageHandler.new,
-      'php'       => php_4_language_handler,
+      'php'       => php_language_handler,
       '4.php'     => php_4_language_handler,
       '5.php'     => php_5_language_handler,
       'py'        => LanguageHandler::PythonLanguageHandler.new,
