@@ -5,10 +5,10 @@ module LanguageHandler
   class BaseLanguageHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
 
-    attr_reader :source_folder, :dependencies
+    attr_reader :dependencies_directory, :dependencies
 
-    def initialize(source_folder, dependencies = [])
-      @source_folder = source_folder
+    def initialize(dependencies_directory = Dir.pwd, dependencies = [])
+      @dependencies_directory = dependencies_directory
       @dependencies = dependencies
     end
 

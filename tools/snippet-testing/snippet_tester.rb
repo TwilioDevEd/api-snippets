@@ -1,40 +1,27 @@
 require 'json'
+require 'optparse'
+require 'ostruct'
 require 'colorize'
 require_relative 'error_logger'
 require_relative 'model/snippet_model'
 require_relative 'model/test_session_model'
-Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"]
-  .each { |file| require File.expand_path(file) }
+require_relative 'model/dependency_model'
+Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"].each { |file| require File.expand_path(file) }
 
 class SnippetTester
+  def install_dependencies
+    puts 'Installing Dependencies, please wait'
+    Model::DependencyModel.install_dependencies
+    puts 'Dependencies installed!'
+  end
+
   def initialize(parent_source_folder)
-    @parent_source_folder = parent_source_folder.nil? ? Dir.pwd : parent_source_folder
-    @running_folder = Dir.pwd
+    @parent_source_folder = parent_source_folder
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
     @test_models = [Model::TestSessionModel.new(@parent_source_folder)]
-    @language_handlers = {
-      'java'      => LanguageHandler::JavaLanguageHandler.new(@running_folder),
-      'rb'        => LanguageHandler::RubyLanguageHandler.new(@running_folder),
-      'js'        => LanguageHandler::NodeLanguageHandler.new(@running_folder),
-      'php'       => LanguageHandler::PhpLanguageHandler.new(@running_folder),
-      'py'        => LanguageHandler::PythonLanguageHandler.new(@running_folder),
-      'curl'      => LanguageHandler::CurlLanguageHandler.new(@running_folder),
-      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new(@running_folder),
-      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new(@running_folder),
-      'cs'        => LanguageHandler::CsharpLanguageHandler.new(
-        @running_folder,
-        [
-          'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
-          'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-          'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
-          'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-          'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
-          'JWT.1.1/lib/3.5/JWT.dll'
-        ]
-      )
-    }
+    @language_handlers = get_language_handlers
   end
 
   # Try to recon which snippets are going to be tested in a given folder
@@ -74,9 +61,9 @@ class SnippetTester
   end
 
   def scan_folder_configs(folder_path)
-    #import yaml config
+    # import yaml config
     current_folder_has_config = import_existing_config(folder_path)
-    #import snippet json
+    # import snippet json
     import_existing_snippet(folder_path, current_config)
     Dir.glob(folder_path+"/*") do |folder|
       scan_folder_configs(folder) if File.directory?(folder)
@@ -96,6 +83,39 @@ class SnippetTester
 
   def erase_added_config
     test_models.pop
+  end
+
+  def get_language_handlers
+    php_4_language_handler = LanguageHandler::PhpLanguageHandler.new(
+      Model::DependencyModel.php_4_path
+    )
+    php_5_language_handler = LanguageHandler::PhpLanguageHandler.new(
+      Model::DependencyModel.php_5_path
+    )
+
+    {
+      'java'      => LanguageHandler::JavaLanguageHandler.new,
+      'rb'        => LanguageHandler::RubyLanguageHandler.new,
+      'js'        => LanguageHandler::NodeLanguageHandler.new,
+      'php'       => php_4_language_handler,
+      '4.php'     => php_4_language_handler,
+      '5.php'     => php_5_language_handler,
+      'py'        => LanguageHandler::PythonLanguageHandler.new,
+      'curl'      => LanguageHandler::CurlLanguageHandler.new,
+      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new,
+      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new,
+      'cs'        => LanguageHandler::CsharpLanguageHandler.new(
+        Model::DependencyModel.csharp_path,
+        [
+          'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
+          'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+          'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+          'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
+          'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+          'JWT.1.1/lib/3.5/JWT.dll'
+        ]
+      )
+    }
   end
 
   def import_existing_snippet(source_folder, test_model)
@@ -122,10 +142,36 @@ def print_errors_if_any
      "################################"
 end
 
+def parse_options(args)
+  options = OpenStruct.new
+  options.source_folder = Dir.pwd
+  options.install = false
+
+  opts = OptionParser.new do |opts|
+    opts.banner = 'Usage: snippet_tester.rb [options]'
+
+    opts.separator ''
+    opts.separator 'Specific options:'
+
+    opts.on('-i', '--[no-]install', 'Install dependencies before running tests') do |install|
+      options.install = install
+    end
+
+    opts.on("-dir D", String, "Specify a directory to be tested") do |dir|
+      options.source_folder = dir
+    end
+  end
+
+  opts.parse!(args)
+  options
+end
+
 if __FILE__ == $0
   begin
-    tester = SnippetTester.new(ARGV[0])
+    options = parse_options(ARGV)
+    tester = SnippetTester.new(options.source_folder)
 
+    tester.install_dependencies if options.install
     tester.init
     tester.setup
     tester.run

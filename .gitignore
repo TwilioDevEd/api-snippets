@@ -52,3 +52,4 @@ nbactions.xml
 testable_snippets/
 /composer.json
 /composer.lock
+/tools/dependencies/
