@@ -10,9 +10,13 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$number = $client->account
+    ->incomingPhoneNumbers("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
+    ->update(
+        array(
+            "voiceUrl" => "http://demo.twilio.com/docs/voice.xml",
+            "smsUrl" => "http://demo.twilio.com/docs/sms.xml"
+        )
+    );
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $number->voiceUrl;

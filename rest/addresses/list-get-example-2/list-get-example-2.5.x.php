@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
-
-echo $account->dateCreated->format('Y-m-d H:i:s');
+$addresses = $client->account->addresses->read(
+    array('customerName' => 'Customer 123'),
+    50
+);
+// Loop over the list of numbers and echo a property for each one
+foreach ($addresses as $address) {
+    echo $address->friendlyName;
+}

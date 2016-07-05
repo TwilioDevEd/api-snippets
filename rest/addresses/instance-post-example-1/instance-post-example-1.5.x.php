@@ -10,9 +10,14 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$address = $client
+    ->account
+    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
+    ->update(
+        array(
+            'customerName' => 'Customer 456',
+            'street' => '2 Hasselhoff Lane'
+        )
+    );
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $address->customerName;

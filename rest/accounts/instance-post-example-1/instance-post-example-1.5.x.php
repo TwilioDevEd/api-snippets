@@ -11,8 +11,7 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $account = $client
-    ->api
-    ->accounts()
+    ->accounts
     ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(
         array('status' => 'suspended')

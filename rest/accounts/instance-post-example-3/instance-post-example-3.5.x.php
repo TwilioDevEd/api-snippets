@@ -13,6 +13,8 @@ $client = new Client($sid, $token);
 $account = $client
     ->accounts
     ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+    ->update(
+        array('status' => 'closed')
+    );
 
 echo $account->dateCreated->format('Y-m-d H:i:s');

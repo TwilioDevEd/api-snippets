@@ -8,11 +8,13 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+// Create an address resource
+// create($customerName, $street, $city, $region, $postalCode, $isoCountry, array $options = array())
+$address = $client
+    ->account
+    ->addresses
+    ->create(
+        "Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE"
+    );
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $address->sid;

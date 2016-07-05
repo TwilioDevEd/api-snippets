@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$ipAccessControlLists = $client->account->sip
+    ->ipAccessControlLists
+    ->read();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+// Loop over the list of ip_access_control_lists and echo a property for each one
+foreach ($ipAccessControlLists as $ipAccessControlList) {
+    echo $ipAccessControlList->friendlyName;
+}

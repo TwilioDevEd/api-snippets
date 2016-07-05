@@ -8,11 +8,9 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$ipAddress = $client->account->sip
+    ->ipAccessControlLists("AL32a3c49700934481addd5ce1659f04d2")
+    ->ipAddresses
+    ->create("My office IP Address", "55.102.123.124");
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $ipAddress->sid;

@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
-
-echo $account->dateCreated->format('Y-m-d H:i:s');
+$conferences = $client->account->conferences->read(
+    array("status" => "completed", "dateCreated" => "2009-07-06"),
+    50
+);
+// Loop over the list of conferences and echo a property for each one
+foreach ($conferences as $conference) {
+    echo $conference->status;
+}
