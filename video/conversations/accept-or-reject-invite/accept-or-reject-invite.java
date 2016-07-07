@@ -1,6 +1,6 @@
 /* Create an AccessManager - this provides a single place to update your Twilio
 Access Token when using multiple Twilio SDKs */
-accessManager = AccessManager.create(ConversationActivity.this,
+accessManager = new AccessManager(ConversationActivity.this,
     TWILIO_ACCESS_TOKEN, accessManagerListener());
 
 // Create a Conversations Client and listen for IncomingInvites

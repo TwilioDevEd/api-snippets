@@ -20,7 +20,7 @@ import com.koushikdutta.ion.Ion;
                             String accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
                             accessManager =
-                                    AccessManager.create(ConversationActivity.this,
+                                    new AccessManager(ConversationActivity.this,
                                                     accessToken,
                                                     accessManagerListener());
                             conversationsClient =
