@@ -1,5 +1,5 @@
 // Create an AccessManager to manage our Access Token
-AccessManager accessManager = AccessManager.create(ConversationActivity.this,
+AccessManager accessManager = new AccessManager(ConversationActivity.this,
                                 ACCESS_TOKEN,
                                 accessManagerListener());
 
