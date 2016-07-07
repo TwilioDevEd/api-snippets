@@ -72,7 +72,7 @@ class SnippetTester
   end
 
   def import_existing_config(folder_path)
-    Dir.glob("#{folder_path}#{File::SEPARATOR}test.yaml") do |yaml_path|
+    Dir.glob("#{folder_path}#{File::SEPARATOR}test.yml") do |yaml_path|
       test_config = Model::TestSessionModel.new(yaml_path, current_config)
       test_models.push test_config
       puts test_config

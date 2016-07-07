@@ -1,5 +1,4 @@
 {
   "title": "Attaching data to a call using Task",
-  "type": "server",
-  "testable": "false"
+  "type": "server"
 }

@@ -8,11 +8,11 @@ module Model
 
     alias testable? testable
 
-    def initialize(meta_yaml_path="test.yaml", parent_model = nil)
+    def initialize(meta_yaml_path = "test.yml", parent_model = nil)
       yaml_exists = File.file?(meta_yaml_path)
       @source_folder = File.dirname(meta_yaml_path)
       @root_source_folder = parent_model.nil? ? Dir.pwd : parent_model.root_source_folder
-      @relative_folder =@source_folder.sub(root_source_folder,"")
+      @relative_folder =@source_folder.sub(root_source_folder, "")
       @testable = parent_model.nil? ? false : parent_model.testable
       @root_output_folder = OUTPUT_FOLDER
       if yaml_exists

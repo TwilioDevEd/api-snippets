@@ -49,7 +49,7 @@ If you want a snippet to be tested, there are two ways to mark it as testable:
 
    You can also mark entire directories as testable. If the marked directory
    contains several snippets, all of them will be marked as testable recursively.
-   To mark a directory for testing, create a `test.yaml` in the root of the directory
+   To mark a directory for testing, create a `test.yml` in the root of the directory
    you want to mark as testable with a `testable` field like this:
    ```
    testable: true
@@ -59,7 +59,7 @@ __Notes:__
 1. You can mark a directory or a snippet to be not testable too.
    ```
    meta.json -> "testable": false
-   test.yaml -> testable: false
+   test.yml -> testable: false
    ```
    This way, you can mark snippets or directories to be tested or not, by exception.
 1. For a snippet to be testable, it has to contain the basic things a program in

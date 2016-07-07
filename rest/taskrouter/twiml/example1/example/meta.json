@@ -1,5 +1,4 @@
 {
   "title": "Simple TaskRouter Enqueue",
-  "type": "server",
-  "testable": "false"
+  "type": "server"
 }
