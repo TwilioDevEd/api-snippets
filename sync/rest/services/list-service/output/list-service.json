@@ -1,0 +1,27 @@
+{
+  "services": [
+    {
+      "sid": "ISxxx",
+      "account_sid": "ACxxx",
+      "friendly_name": "FriendlyName",
+      "date_created": "2016-08-25T04:10:54Z",
+      "date_updated": "2016-08-25T04:10:54Z",
+      "webhook_url": "http://example.com/sync",
+      "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90",
+      "links": {
+        "maps": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Maps",
+        "documents": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Documents",
+        "lists": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Lists"
+      }
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://preview.twilio.com/Sync/Services?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://preview.twilio.com/Sync/Services?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "services"
+  }
+}
