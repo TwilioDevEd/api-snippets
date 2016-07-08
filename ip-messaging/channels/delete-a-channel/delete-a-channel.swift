@@ -1,5 +1,7 @@
 channel.destroyWithCompletion { result in
-  if result == .Success {
-    print("channel destroyed")
-  }
+    if result.isSuccessful() {
+        print("Channel destroyed.")
+    } else {
+        print("Channel NOT destroyed.")
+    }
 }

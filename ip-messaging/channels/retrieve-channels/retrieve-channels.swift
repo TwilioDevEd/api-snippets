@@ -1,13 +1,11 @@
-self.client?.channelsListWithCompletion { result, channels in
-  if (result == .Success) {
-    // Get a list of all channels available to a user
+let channels: TWMChannels? = client?.channelsList()
+if let channels = channels {
     for channel in channels.allObjects() {
-      print(channel.friendlyName)
+        print("Channel: \(channel.friendlyName)")
     }
-
-    // Get a specific channel by unique friendlyName
+    
+    // Get a specific channel by unique name
     if let channel = channels.channelWithUniqueName("general") {
-      print(channel.friendlyName)
+        print("Channel with unique name: \(channel.friendlyName)")
     }
-  }
 }
