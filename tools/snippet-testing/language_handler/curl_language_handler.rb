@@ -4,14 +4,12 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class CurlLanguageHandler < BaseLanguageHandler
+    LANG_CNAME = 'curl'.freeze
+
     private
 
     def execute(file)
       execute_with_suppressed_output("sh #{file}")
-    end
-
-    def lang_cname
-      'curl'
     end
 
     def execute_with_suppressed_output(command)

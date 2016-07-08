@@ -2,11 +2,9 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class CsharpLanguageHandler < BaseLanguageHandler
-    private
+    LANG_CNAME = 'cs'.freeze
 
-    def lang_cname
-      'cs'
-    end
+    private
 
     def execute(file)
       execute_with_suppressed_output("#{compile_command} #{file}")

@@ -2,6 +2,8 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class PythonLanguageHandler < BaseLanguageHandler
+    LANG_CNAME = 'py'.freeze
+
     private
 
     def text_with_specific_replacements(file_content)
@@ -16,10 +18,6 @@ module LanguageHandler
         "twilio.rest.resources.base.get_cert_file = lambda:  '#{cert_path}'\n"\
         "sys.modules['twilio.rest.base.resources'] = twilio.rest.resources.base\n"
       )
-    end
-
-    def lang_cname
-      'py'
     end
 
     def execute(file)

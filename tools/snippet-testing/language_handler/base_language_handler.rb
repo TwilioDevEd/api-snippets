@@ -4,6 +4,7 @@ require 'timeout'
 module LanguageHandler
   class BaseLanguageHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
+    LANG_CNAME = 'cname'.freeze
 
     attr_reader :dependencies_directory, :dependencies
 
@@ -23,6 +24,8 @@ module LanguageHandler
       path = snippet_model.get_output_file(lang_cname)
       ErrorLogger.instance.add_error(path) unless execute(path)
     end
+
+    private
 
     def execute(file)
       raise 'this method must be implemented in child clases'
@@ -50,12 +53,6 @@ module LanguageHandler
       Model::TestSessionModel::OUTPUT_FOLDER
     end
 
-    private
-
-    def lang_cname
-      raise 'undefined language name at #{__FILE__}'
-    end
-
     def text_with_replacements(file_content)
       replaced = text_without_placeholders(file_content)
       text_with_specific_replacements(replaced)
@@ -76,6 +73,10 @@ module LanguageHandler
       new_file = File.new(output_file, 'w+')
       new_file.write(content)
       new_file.close
+    end
+
+    def lang_cname
+      self.class::LANG_CNAME
     end
   end
 end

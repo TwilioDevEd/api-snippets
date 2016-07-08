@@ -1,17 +1,19 @@
+Dir["#{File.dirname(__FILE__)}/../language_handler/*.rb"].each { |file| require File.expand_path(file) }
+
 module Model
   class SnippetModel
     SERVER_LANGUAGES = [
-      'py',
-      'rb',
-      'js',
-      'curl',
-      'xml.curl',
-      'json.curl',
-      'php',
-      '4.php',
-      '5.php',
-      'java',
-      'cs'
+      LanguageHandler::JavaLanguageHandler::LANG_CNAME,
+      LanguageHandler::RubyLanguageHandler::LANG_CNAME,
+      LanguageHandler::NodeLanguageHandler::LANG_CNAME,
+      LanguageHandler::PhpLanguageHandler::LANG_CNAME,
+      LanguageHandler::Php4LanguageHandler::LANG_CNAME,
+      LanguageHandler::Php5LanguageHandler::LANG_CNAME,
+      LanguageHandler::PythonLanguageHandler::LANG_CNAME,
+      LanguageHandler::CurlLanguageHandler::LANG_CNAME,
+      LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME,
+      LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME,
+      LanguageHandler::CsharpLanguageHandler::LANG_CNAME
     ].freeze
 
     attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs
@@ -30,16 +32,12 @@ module Model
       @langs            = @type == 'server' ? SERVER_LANGUAGES : []
       @testable         = false unless @type == 'server'
       @available_langs  = {}
+
       Dir.glob("#{source_folder}/**") do |file|
-        lang = File.extname(file)[1..-1]
-        if lang == 'curl'
-          match = file.match(/\.(.+\.curl)$/)
-          lang = match.captures.first unless match.nil?
-        elsif lang == 'php'
-          match = file.match(/\.(.+\.php)$/)
-          lang = match.captures.first unless match.nil?
-        end
-        @available_langs.merge!(lang => File.basename(file)) if @langs.include?(lang)
+        file_name = File.basename(file)
+        match = file.match(/^[^\.]+\.(.+$)/)
+        lang = match.nil? ? '' : match.captures.first
+        @available_langs.merge!(lang => file_name) if @langs.include?(lang)
       end
     end
 

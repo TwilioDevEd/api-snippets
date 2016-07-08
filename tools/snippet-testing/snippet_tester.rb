@@ -96,28 +96,30 @@ class SnippetTester
       Model::DependencyModel.php_5_path
     )
 
+    csharp_language_handler = LanguageHandler::CsharpLanguageHandler.new(
+      Model::DependencyModel.csharp_path,
+      [
+        'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
+        'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+        'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+        'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
+        'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+        'JWT.1.1/lib/3.5/JWT.dll'
+      ]
+    )
+
     {
-      'java'      => LanguageHandler::JavaLanguageHandler.new,
-      'rb'        => LanguageHandler::RubyLanguageHandler.new,
-      'js'        => LanguageHandler::NodeLanguageHandler.new,
-      'php'       => php_language_handler,
-      '4.php'     => php_4_language_handler,
-      '5.php'     => php_5_language_handler,
-      'py'        => LanguageHandler::PythonLanguageHandler.new,
-      'curl'      => LanguageHandler::CurlLanguageHandler.new,
-      'xml.curl'  => LanguageHandler::CurlXmlLanguageHandler.new,
-      'json.curl' => LanguageHandler::CurlJsonLanguageHandler.new,
-      'cs'        => LanguageHandler::CsharpLanguageHandler.new(
-        Model::DependencyModel.csharp_path,
-        [
-          'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
-          'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-          'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
-          'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-          'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
-          'JWT.1.1/lib/3.5/JWT.dll'
-        ]
-      )
+      LanguageHandler::JavaLanguageHandler::LANG_CNAME     => LanguageHandler::JavaLanguageHandler.new,
+      LanguageHandler::RubyLanguageHandler::LANG_CNAME     => LanguageHandler::RubyLanguageHandler.new,
+      LanguageHandler::NodeLanguageHandler::LANG_CNAME     => LanguageHandler::NodeLanguageHandler.new,
+      LanguageHandler::PhpLanguageHandler::LANG_CNAME      => php_language_handler,
+      LanguageHandler::Php4LanguageHandler::LANG_CNAME     => php_4_language_handler,
+      LanguageHandler::Php5LanguageHandler::LANG_CNAME     => php_5_language_handler,
+      LanguageHandler::PythonLanguageHandler::LANG_CNAME   => LanguageHandler::PythonLanguageHandler.new,
+      LanguageHandler::CurlLanguageHandler::LANG_CNAME     => LanguageHandler::CurlLanguageHandler.new,
+      LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME  => LanguageHandler::CurlXmlLanguageHandler.new,
+      LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME => LanguageHandler::CurlJsonLanguageHandler.new,
+      LanguageHandler::CsharpLanguageHandler::LANG_CNAME   => csharp_language_handler
     }
   end
 

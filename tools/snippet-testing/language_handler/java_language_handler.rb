@@ -2,7 +2,7 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class JavaLanguageHandler < BaseLanguageHandler
-
+    LANG_CNAME      = 'java'.freeze
     TEST_CLASS_NAME = "Example".freeze
 
     def execute(file)
@@ -11,9 +11,7 @@ module LanguageHandler
       end
     end
 
-    def lang_cname
-      'java'
-    end
+    private
 
     def text_with_specific_replacements(file_content)
       text_with_example_class_name(file_content)

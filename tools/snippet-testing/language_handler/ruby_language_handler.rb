@@ -2,6 +2,8 @@ require_relative 'base_language_handler'
 
 module LanguageHandler
   class RubyLanguageHandler < BaseLanguageHandler
+    LANG_CNAME = 'rb'.freeze
+
     private
 
     def text_with_specific_replacements(file_content)
@@ -13,10 +15,6 @@ module LanguageHandler
         "require 'openssl'\n"\
         "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\n"
       )
-    end
-
-    def lang_cname
-      'rb'
     end
 
     def execute(file)
