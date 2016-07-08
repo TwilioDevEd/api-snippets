@@ -1,7 +1,11 @@
 - (void)ipMessagingClient:(TwilioIPMessagingClient *)client channelAdded:(TWMChannel *)channel {
     if(channel.status == TWMChannelStatusInvited) {
         [channel joinWithCompletion:^(TWMResult *result) {
-            NSLog(@"Invite accepted.");
+            if ([result isSuccessful]) {
+                NSLog(@"Successfully accepted invite.");
+            } else {
+                NSLog(@"Failed to accept invite.");
+            }
         }];
     }
 }

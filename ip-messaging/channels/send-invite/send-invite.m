@@ -1,7 +1,7 @@
-[self.channel.members inviteByIdentity:@"Juan" completion:^(TWMResult result) {
-    if(result == TWMResultSuccess) {
-        NSLog(@"Member Invited.");
+[self.channel.members inviteByIdentity:@"Juan" completion:^(TWMResult *result) {
+    if([result isSuccessful]) {
+        NSLog(@"User invited.");
     } else {
-        NSLog(@"Member not Invited.");
+        NSLog(@"User NOT invited.");
     }
 }];

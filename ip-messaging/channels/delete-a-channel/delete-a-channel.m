@@ -1,7 +1,7 @@
-[self.channel destroyWithCompletion:^(TWMResult result) {
-    if(result == TWMResultSuccess) {
-        NSLog(@"Channel deleted.");
+[self.channel destroyWithCompletion:^(TWMResult *result) {
+    if([result isSuccessful]) {
+        NSLog(@"Channel destroyed.");
     } else {
-        NSLog(@"Channel not deleted.");
+        NSLog(@"Channel NOT destroyed.");
     }
 }];
