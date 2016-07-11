@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
-
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
-}
+$client->account->messages->create(
+    "+16518675309",
+    "+14158141829",
+    array(
+        'body' => "Hey Jenny! Good luck on the bar exam!",
+        'mediaUrl' => "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",
+    )
+);

@@ -8,11 +8,12 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
+$participants = $client->account
+    ->conferences("CFbbe4632a3c49700934481addd5ce1659")
+    ->participants
+    ->read();
 
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
+// Loop over the list of participants and echo a property for each one
+foreach ($participants as $participant) {
+    echo $participant->muted;
 }

@@ -8,11 +8,12 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
+$credentials = $client->account->sip
+    ->credentialLists("CL32a3c49700934481addd5ce1659f04d2")
+    ->credentials
+    ->read();
 
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
+// Loop over the list of credentials and echo a property for each one
+foreach ($credentials as $credential) {
+    echo $credential->username;
 }
