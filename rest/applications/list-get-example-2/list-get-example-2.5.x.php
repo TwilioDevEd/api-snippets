@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
-
-echo $account->dateCreated->format('Y-m-d H:i:s');
+$applications = $client->account->applications->read(
+    array("friendlyName" => "MyApp"),
+    50
+);
+// Loop over the list of apps and echo a property for each one
+foreach ($applications as $app) {
+    echo $app->voiceUrl;
+}

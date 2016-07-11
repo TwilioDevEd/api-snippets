@@ -10,9 +10,8 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$domain = $client->account->sip
+    ->domains("SD27f0288630a668bdfbf177f8e22f5ccc")
     ->fetch();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $domain->voiceMethod;

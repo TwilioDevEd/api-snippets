@@ -10,9 +10,9 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$authorizedApp = $client
+    ->account
+    ->authorizedConnectApps("CN47260e643654388faabe8aaa18ea6756")
     ->fetch();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $authorizedApp->connectAppHomepageUrl;

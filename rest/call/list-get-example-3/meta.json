@@ -1,4 +1,5 @@
 {
   "title": "Retrieve Completed Calls After Date Example",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }

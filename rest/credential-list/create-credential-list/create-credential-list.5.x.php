@@ -8,11 +8,10 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$credentialList = $client
+    ->account
+    ->sip
+    ->credentialLists
+    ->create("Low Rises");
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $credentialList->sid;

@@ -10,9 +10,9 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$conference = $client
+    ->account
+    ->conferences("CFbbe46ff1274e283f7e3ac1df0072ab39")
     ->fetch();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $conference->status;

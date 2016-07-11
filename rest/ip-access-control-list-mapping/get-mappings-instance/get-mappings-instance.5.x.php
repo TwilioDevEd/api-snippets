@@ -10,9 +10,9 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$ipAccessControlListMapping = $client->account->sip
+    ->domains("SD32a3c49700934481addd5ce1659f04d2")
+    ->ipAccessControlListMappings("AL95a47094615fe05b7c17e62a7877836c")
     ->fetch();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $ipAccessControlListMapping->friendlyName;

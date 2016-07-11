@@ -10,9 +10,10 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$feedback = $client
+    ->account
+    ->calls("CAe03b7cd806070d1f32bdb7f1046a41c0")
+    ->feedback()
     ->fetch();
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $feedback->dateCreated->format('Y-m-d H:i:s');

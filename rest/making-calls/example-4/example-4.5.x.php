@@ -8,11 +8,14 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$call = $client->account->calls->create(
+    "+18668675309", "+14155551212",
+    array(
+        "url" => "http://demo.twilio.com/docs/voice.xml",
+        "method" => "GET",
+        "statusCallbackMethod" => "POST",
+        "statusCallback" => "https://www.myapp.com/events"
+    )
+);
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $call->sid;

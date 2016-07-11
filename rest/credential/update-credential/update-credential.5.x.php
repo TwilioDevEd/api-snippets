@@ -10,9 +10,11 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$credential = $client->account->sip
+    ->credentialLists("CL32a3c49700934481addd5ce1659f04d2")
+    ->credentials("SC32a3c49700934481addd5ce1659f04d2")
+    ->update(
+        array("password" => "other_password")
+    );
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $credential->username;

@@ -10,9 +10,16 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->fetch();
+$domain = $client
+    ->account
+    ->sip
+    ->domains
+    ->create(
+        "dunder-mifflin-scranton.sip.twilio.com",
+        array(
+            "friendlyName" => "Scranton Office",
+            "voiceUrl" => "https://dundermifflin.example.com/twilio/app.php"
+        )
+    );
 
-echo $account->dateCreated->format('Y-m-d H:i:s');
+echo $ipAccessControlListMapping->sid;
