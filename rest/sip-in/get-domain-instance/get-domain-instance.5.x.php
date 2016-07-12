@@ -8,11 +8,10 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
+// Get an object from its sid. If you do not have a sid,
+// check out the list resource examples on this page
+$domain = $client->account->sip
+    ->domains("SD27f0288630a668bdfbf177f8e22f5ccc")
+    ->fetch();
 
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
-}
+echo $domain->voiceMethod;

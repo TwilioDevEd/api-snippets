@@ -8,11 +8,6 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
-
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
-}
+$client->account
+    ->notifications("NO5a7a84730f529f0a76b3e30c01315d1a")
+    ->delete();

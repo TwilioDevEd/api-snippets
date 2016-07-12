@@ -8,11 +8,12 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
+// Get an object from its sid. If you do not have a sid,
+// check out the list resource examples on this page
+$queue = $client->account
+    ->queues("QU5ef8732a3c49700934481addd5ce1659")
+    ->update(
+        array("maxSize" => "123")
+    );
 
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
-}
+echo $queue->averageWaitTime;

@@ -8,11 +8,15 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$address = $client
-    ->account
-    ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e");
+$records = $client->account->usage->records->read(
+    array(
+        "category" => "calls-inbound",
+        "startDate" => "2012-09-01",
+        "endDate" => "2012-09-30"
+    )
+);
 
-// Loop over the list of numbers and echo a property for each one
-foreach ($address->dependentPhoneNumbers->read() as $number) {
-    echo $number->friendlyName;
+// Loop over the list of records and echo a property for each one
+foreach ($records as $record) {
+    echo $record->price;
 }
