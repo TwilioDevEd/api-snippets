@@ -22,7 +22,6 @@ before_install:
 - sudo apt-get update
 - sudo apt-get install gradle -y --force-yes
 - sudo apt-get install ca-certificates
-- wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
 install:
 - gem install json
 - gem install colorize
