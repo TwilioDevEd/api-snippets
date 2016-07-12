@@ -1,6 +1,5 @@
 require 'json'
 require 'optparse'
-require 'pry'
 require 'ostruct'
 require 'colorize'
 require_relative 'error_logger'
@@ -18,7 +17,6 @@ class SnippetTester
 
   def initialize(parent_source_folder)
     @parent_source_folder = parent_source_folder
-    binding.pry
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
