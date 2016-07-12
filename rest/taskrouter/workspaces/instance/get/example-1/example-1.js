@@ -8,4 +8,8 @@ var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-console.log(client.workspace.friendly_name);
+client.workspace.get(function(err, workspace) {
+    if(!err) {
+        console.log(workspace.friendly_name);
+    }
+});
