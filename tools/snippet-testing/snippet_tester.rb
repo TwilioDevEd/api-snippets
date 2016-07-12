@@ -1,5 +1,6 @@
 require 'json'
 require 'optparse'
+require 'pry'
 require 'ostruct'
 require 'colorize'
 require_relative 'error_logger'
@@ -17,6 +18,7 @@ class SnippetTester
 
   def initialize(parent_source_folder)
     @parent_source_folder = parent_source_folder
+    binding.pry
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippets_models = []
@@ -162,7 +164,7 @@ def parse_options(args)
       options.install = install
     end
 
-    opts.on("-dir D", String, "Specify a directory to be tested") do |dir|
+    opts.on("-d D", String, "Specify a directory to be tested") do |dir|
       options.source_folder = dir
     end
   end
