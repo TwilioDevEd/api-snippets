@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -12,17 +12,19 @@ $taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()->getContext($workspaceSid);
+$task = $client->taskrouter->workspaces()
+    ->getContext($workspaceSid)
+    ->tasks($taskSid);
 
 // update a task's attributes
-$task = $workspace->tasks($taskSid);
-
-$task->update(['attributes' => '{"type":"support"}']);
+$task->update(
+    array('attributes' => '{"type":"support"}')
+);
 
 // cancel a task
 $task->update(
-    [
+    array(
         'assignmentStatus' => 'canceled',
         'reason' => 'waiting too long'
-    ]
+    )
 );

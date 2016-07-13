@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -11,14 +11,14 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()->getContext($workspaceSid);
-
-$taskParams = array(
-    "AssignmentStatus" => "pending",
-    "TaskQueueSid" => "WQf855e98ad280d0a0a325628e24ca9627"
-);
-
-$tasks = $workspace->tasks->stream($taskParams);
+$tasks = $client->taskrouter->workspaces()
+    ->getContext($workspaceSid)
+    ->tasks->read(
+        array(
+            "assignmentStatus" => "pending",
+            "taskQueueSid" => "WQf855e98ad280d0a0a325628e24ca9627"
+        )
+    );
 
 foreach ($tasks as $task) {
     echo $task->attributes;

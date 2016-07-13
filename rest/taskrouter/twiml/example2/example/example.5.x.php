@@ -1,6 +1,6 @@
 <?php
 // Download the library and copy into the folder containing this file.
-require('twilio-php/Services/Twilio.php');
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Twiml;
 

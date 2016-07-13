@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -12,9 +12,9 @@ $workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()->getContext($workspaceSid);
-
-$attributes = '{"type":"support"}';
-$task = $workspace->tasks->create($attributes, $workflowSid);
+$task = $client->taskrouter->workspaces()
+    ->getContext($workspaceSid)
+    ->tasks
+    ->create('{"type":"support"}', $workflowSid);
 
 echo $task->attributes;

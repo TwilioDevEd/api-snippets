@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -11,12 +11,11 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()->getContext($workspaceSid);
-
-$params = [
-    'attributes' => '{"type":"support"}'
-];
-
-$worker = $workspace->workers->create("Support Worker 1", $params);
+$worker = $client->taskrouter->workspaces()
+    ->getContext($workspaceSid)
+    ->workers->create(
+        "Support Worker 1",
+        array('attributes' => '{"type":"support"}')
+    );
 
 echo $worker->friendlyName;

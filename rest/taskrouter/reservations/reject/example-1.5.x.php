@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -13,10 +13,9 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()->getContext($workspaceSid);
-
 // reject a reservation
-$reservation = $workspace->tasks($taskSid)
-    ->reservations($reservationSid);
-
-$reservation->update('rejected');
+$reservation = $client->taskrouter->workspaces()
+    ->getContext($workspaceSid)
+    ->tasks($taskSid)
+    ->reservations($reservationSid)
+    ->update('rejected');
