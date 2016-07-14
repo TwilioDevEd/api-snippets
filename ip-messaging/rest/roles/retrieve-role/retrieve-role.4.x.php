@@ -10,10 +10,7 @@ $token = "AUTH_TOKEN";
 // Initialize the client
 $client = new IPMessaging_Services_Twilio($sid, $token);
 
-// Retrieve the service
+// Retrieve the role
 $service = $client->services->get("SERVICE_SID");
-
-// Create the channel
-$channel = $service->channels->create(array(
-    'FriendlyName' => 'CHANNEL_NAME'));
-print $channel;
+$role = $service->roles->get("ROLE_SID");
+print $role;

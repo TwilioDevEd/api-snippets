@@ -13,11 +13,7 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 // Retrieve the service
 $service = $client->services->get("SERVICE_SID");
 
-// Retrieve the channel
-$channel = $service->channels->get("CHANNEL_ID");
-
-// Add the member
-$member = $channel->members.create(array(
-    "identity" => "IDENTITY",
-));
-print $member;
+// List the users
+$users = $service->users;
+$all_users = print_r($users,true);
+print $all_users;
