@@ -26,9 +26,9 @@
     // Step 4: make an array of people we know, to send them a message. 
     // Feel free to change/add your own phone number and name here.
     $people = array(
-        "+14158675309" => "Curious George",
-        "+14158675310" => "Boots",
-        "+14158675311" => "Virgil",
+        "+15558675309" => "Curious George",
+        "+15558675308" => "Boots",
+        "+15558675307" => "Virgil",
     );
 
     // Step 5: Loop over all our friends. $number is a phone number above, and 
@@ -39,7 +39,7 @@
 
             // Step 6: Change the 'From' number below to be a valid Twilio number 
             // that you've purchased
-            "YYY-YYY-YYYY", 
+            "+15017250604", 
 
             // the number we are sending to - Any phone number
             $number,
