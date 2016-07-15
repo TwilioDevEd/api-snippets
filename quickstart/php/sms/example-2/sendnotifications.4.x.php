@@ -1,6 +1,6 @@
 <?php
-	// Step 5: Loop over all our friends. $number is a phone number above, and 
-	// $name is the name next to it
+  // Step 5: Loop over all our friends. $number is a phone number above, and 
+  // $name is the name next to it
   foreach ($people as $number => $name) {
 
     $sms = $client->account->messages->sendMessage(
