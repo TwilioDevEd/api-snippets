@@ -16,11 +16,5 @@ class Example
 
     Task task = client.AddTask(WorkspaceSid, "{\"type\":\"support\"}", WorkflowSid, null, null);
     Console.WriteLine(task.Attributes);
-
-    // create a task with a dictionary to map to json
-    Dictionary<string,string> attributes = new Dictionary<string,string>();
-    attributes.Add("type", "support");
-    task = client.AddTask(WorkspaceSid, attributes, WorkflowSid, null, null);
-    Console.WriteLine(task.Attributes);
   }
 }

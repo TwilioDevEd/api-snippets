@@ -162,7 +162,7 @@ def parse_options(args)
       options.install = install
     end
 
-    opts.on("-dir D", String, "Specify a directory to be tested") do |dir|
+    opts.on("-d D", String, "Specify a directory to be tested") do |dir|
       options.source_folder = dir
     end
   end
