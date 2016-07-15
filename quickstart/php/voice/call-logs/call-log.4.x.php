@@ -1,11 +1,11 @@
 <?php
     /* Get Twilio call logs. You can run this file by saving it
      * as call-log.php and running:
-     *        php call.php
+     *        php call-log.php
      */
 
     // Step 1: Get the Twilio-PHP library from twilio.com/docs/libraries/php, 
-    // and move it into the folder containing this call.php file.
+    // and move it into the folder containing this call-log.php file.
     require "Services/Twilio.php";
 
     // Step 2: Set our AccountSid and AuthToken from https://twilio.com/console
