@@ -7,7 +7,6 @@ require_once '/path/to/vendor/autoload.php';
 use Twilio\Twiml;
 
 $response = new Twiml();
-
 $response->enqueue('Queue Demo');
 
 echo $response;

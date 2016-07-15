@@ -6,14 +6,17 @@ require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
-// Your Account Sid and Auth Token from twilio.com/user/account
+// Your Account SID from www.twilio.com/console
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// Your Auth Token from www.twilio.com/console
 $token = "your_auth_token";
 
-// Initialize the client
 $client = new Client($sid, $token);
 
-//Creates a token
-$token = $client->tokens->create();
-
-echo $token->username;
+$client->preview->wireless->commands->create(
+    array(
+        'device' => "524116518656369",
+        'command' => "wakeup",
+        'callbackUrl' => "https://devicemanager.mycompany.com/devices/524116518656369/commands"
+    )
+);

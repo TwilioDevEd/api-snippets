@@ -3,13 +3,16 @@
 // twilio.com/docs/libraries/php#installation-nextgen
 
 // Include dependencies from Composer's autoload (including Twilio library)
-include 'vendor/autoload.php';
+require_once '/path/to/vendor/autoload.php';
 
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";  // Your Account SID from www.twilio.com/console
 $token = "your_auth_token"; // Your Auth Token from www.twilio.com/console
 
 $client = new Twilio\Rest\Client($sid, $token);
 
-$cmd = $client->preview->wireless->commands("DCcb6aa7c620874dd98ba6c9c4108d0ed0")->fetch();
+$$usage = $client->preview->wireless->devices(
+  "DEb8eff34b248d066a31c4a953134e183e")->usage()->fetch();
 
-echo $cmd->command, "\n";
+echo $usage->period['start'], "\n";
+echo $usage->period['end'], "\n";
+echo $usage->dataCosts['total'], "\n";
