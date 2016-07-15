@@ -1,15 +1,28 @@
 <?php
+// Get the PHP helper library from twilio.com/docs/php/install
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
-$url = 'https://lookups.twilio.com/v1/PhoneNumbers/+16502530000/?AddOns=payfone_tcpa_compliance&AddOns.payfone_tcpa_compliance.RightPartyContactedDate=20160101';
+use Twilio\Rest\Client;
 
-$process = curl_init($url);
-curl_setopt($process, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-curl_setopt($process, CURLOPT_USERPWD, 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token');
-curl_setopt($process, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
-$response = curl_exec($process);
-curl_close($process);
+// Your Account Sid and Auth Token from twilio.com/user/account
+$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$token = "your_auth_token";
 
-echo $response;
+$client = new Client($sid, $token);
 
-?>
+$number = $client->lookups->phoneNumbers()
+    ->getContext("+15108675309")
+    ->fetch(
+        array(
+            "type" => "carrier",
+            "addOns" => "payfone_tcpa_compliance",
+            "addOnsData" => array(
+                "payfone_tcpa_compliance" => array(
+                    "RightPartyContactedDate" => "20160101"
+                )
+            )
+        )
+    );
+
+echo $number->carrier["type"] . "\r\n";
+echo $number->carrier["name"];

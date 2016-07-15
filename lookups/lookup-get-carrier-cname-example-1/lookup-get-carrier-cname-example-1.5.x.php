@@ -10,6 +10,13 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$number =  $client->pricing->voice()->numbers("+15108675309")->fetch();
+$number = $client->lookups->phoneNumbers()
+    ->getContext("+15108675309")
+    ->fetch(
+        array(
+            "type" => array("carrier", "caller-name")
+        )
+    );
 
-$number->outboundCallPrice["current_price"] . PHP_EOL;
+echo $number->carrier["type"] . "\r\n";
+echo $number->carrier["name"];

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 
 $url = 'https://lookups.twilio.com/v1/PhoneNumbers/+16502530000/?AddOns=payfone_tcpa_compliance&AddOns.payfone_tcpa_compliance.RightPartyContactedDate=20160101';
 

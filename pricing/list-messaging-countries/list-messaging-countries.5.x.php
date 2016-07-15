@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once '/path/to/twilio-php/Services/Twilio.php'; // Loads the library
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
 
@@ -13,5 +13,5 @@ $client = new Client($sid, $token);
 $messagingCountries = $client->pricing->messaging()->countries->stream();
 
 foreach ($messagingCountries as $c) {
-    echo $c->isoCountry . PHP_EOL;
+    echo $c->isoCountry;
 }
