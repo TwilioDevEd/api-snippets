@@ -1,7 +1,7 @@
 <?php
   /* Send an SMS using Twilio. You can run this file 3 different ways:
    *
-   * 2. Save it as sendnotifications.php and at the command line, run 
+   * 1. Save it as sendnotifications.php and at the command line, run 
    *        php sendnotifications.php
    *
    * 2. Upload it to a web host and load mywebhost.com/sendnotifications.php 
