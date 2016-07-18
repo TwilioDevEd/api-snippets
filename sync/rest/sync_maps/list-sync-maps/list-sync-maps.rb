@@ -1,4 +1,3 @@
-require 'http'
 require 'twilio-ruby'
 
 # Initialize the client
@@ -7,7 +6,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Retrieve the Service Instance
-service = client.preview.sync.services('SERVICE_SID')
+service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Traverse the sync_maps
 service.sync_maps.each do |map|
