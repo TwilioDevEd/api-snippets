@@ -10,7 +10,13 @@ $token = "AUTH_TOKEN";
 // Initialize the client
 $client = new IPMessaging_Services_Twilio($sid, $token);
 
-// Retrieve the role
+// Retrieve the service
 $service = $client->services->get("SERVICE_SID");
-$role = $service->roles->get("ROLE_SID");
-print $role
+
+// Retrieve the channel
+$channel = $service->channels->get("CHANNEL_ID");
+
+// Retrieve the message
+$message = $channel->messages->get("MESSAGE_ID");
+
+print $message;
