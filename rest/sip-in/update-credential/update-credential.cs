@@ -9,8 +9,6 @@ class Example
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
-
-    
     
     twilio.UpdateCredential("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2", null, "07");
   }
