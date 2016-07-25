@@ -12,7 +12,7 @@ class Example
     var authToken = "your_auth_token";
     var client = new TwilioRestClient(accountSid, authToken);
 
-    ServiceResource.Delete("IS3c87d60ee7f934f0030ad14d90c1974e")
+    ServiceResource.Delete("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
       .Execute(client);
 
     Console.WriteLine("Deleted");
