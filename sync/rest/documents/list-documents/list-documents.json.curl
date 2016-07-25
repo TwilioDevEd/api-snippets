@@ -1,0 +1,2 @@
+curl -X GET https://preview.twilio.com/Sync/Services/ISxx/Documents \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

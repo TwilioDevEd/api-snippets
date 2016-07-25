@@ -1,5 +1,5 @@
 {
-  "unique_name": "NOW_PLAYING",
+  "unique_name": "MyFirstDocument",
   "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Documents/ETab716edd6d2244568033cb3bdb0d6844",
   "created_by": "system",
   "account_sid": "AC38cf10e53d331ec9ce14db86deb3bf29",
@@ -7,6 +7,8 @@
   "sid": "ETab716edd6d2244568033cb3bdb0d6844",
   "date_created": "2016-07-07T20:53:38Z",
   "service_sid": "ISd23791d9d83be960b5ede4b8bffeeb90",
-  "data": null,
+  "data": {
+    "firstName": "alice"
+  },
   "revision": "0"
 }
