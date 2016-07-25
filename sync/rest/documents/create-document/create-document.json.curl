@@ -1,0 +1,4 @@
+curl -X POST https://preview.twilio.com/Sync/Services/ISxx/Documents \
+ -d 'UniqueName=MyFirstDocument' \
+ -d 'Data={firstName:alice}'  \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

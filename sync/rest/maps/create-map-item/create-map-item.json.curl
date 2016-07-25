@@ -1,0 +1,3 @@
+curl -X POST https://preview.twilio.com/Sync/Services/ISxx/Maps/MPxx/Items \
+ -d 'Key=steph_curry&Data={name:"Stephen Curry", level:30, username:"spicy_curry"}'  \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
