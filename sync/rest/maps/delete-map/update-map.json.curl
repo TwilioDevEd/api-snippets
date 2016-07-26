@@ -1,0 +1,2 @@
+curl -X DELETE https://preview.twilio.com/Sync/Services/ISxx/Maps/MPxx \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

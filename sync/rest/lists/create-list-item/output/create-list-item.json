@@ -1,0 +1,14 @@
+{
+  "index": 0,
+  "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Lists/ES9ca4371f3e424012aa0d241935e75443/Items/0",
+  "created_by": "system",
+  "account_sid": "AC38cf10e53d331ec9ce14db86deb3bf29",
+  "date_updated": "2016-07-11T19:24:43Z",
+  "date_created": "2016-07-11T19:24:43Z",
+  "service_sid": "ISd23791d9d83be960b5ede4b8bffeeb90",
+  "data": {
+    "text": "welcome!"
+  },
+  "list_sid": "ES9ca4371f3e424012aa0d241935e75443",
+  "revision": "0"
+}

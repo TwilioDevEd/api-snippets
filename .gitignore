@@ -53,3 +53,7 @@ testable_snippets/
 /composer.json
 /composer.lock
 /tools/dependencies/
+
+# Custom Ruby Gems
+Gemfile*
+jreyes-example.*

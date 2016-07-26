@@ -1,0 +1,3 @@
+curl -X POST https://preview.twilio.com/Sync/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+ -d 'FriendlyName=MyNewSyncServiceInstance' \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

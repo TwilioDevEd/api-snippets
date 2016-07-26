@@ -1,0 +1,3 @@
+curl -X POST https://preview.twilio.com/Sync/Services/ISxx/Documents/ETxx \
+ -d 'Data={firstName:bob}'  \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
