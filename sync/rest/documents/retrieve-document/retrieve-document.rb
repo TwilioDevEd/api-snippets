@@ -9,5 +9,5 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Retrieve the Document
-response = service.documents("UNIQUE_NAME")
+response = service.documents("MyFirstDocument")
 puts response
