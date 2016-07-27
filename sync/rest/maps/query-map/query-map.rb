@@ -8,6 +8,11 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 # Create the service
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-# Retrieve a List Item
-response = service.sync_lists('UniqueName').sync_list_items(0).fetch()
-puts response
+# Query for a map item
+items = service.sync_maps('Players').sync_map_items.stream(
+	from: 'steph_curry',
+    direction: 'forward'
+)
+items.each do |mapItem|
+	puts mapItem.key
+end
