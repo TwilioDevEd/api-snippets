@@ -13,16 +13,20 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
+$data = (object) array(
+    'dateUpdated' => date("c"),
+    'movieTitle' => "On The Line",
+    'showtimes' => array("12:30:00Z", "14:45:00Z", "15:30:00Z", "17:45:00Z", "20:30:00Z"),
+    'starring' => array("Lance Bass", "Joey Fatone"),
+    'genre' => "Romance"
+);
+
 $doc = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->documents->create(
         array(
             'uniqueName' => "MyFirstDocument",
-            'data' => '{ "date_updated": "2016-07-06T12:46:38Z", 
-                "movie_title": "On The Line", 
-                "showtimes": ["12:30:00Z", "14:45:00Z", "15:30:00Z", "17:45:00Z", "20:30:00Z"], 
-                "starring": ["Lance Bass", "Joey Fatone"], 
-                "genre": "Romance"}'
+            'data' => json_encode($data)
         )
     );
 

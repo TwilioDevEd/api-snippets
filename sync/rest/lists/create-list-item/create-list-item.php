@@ -13,12 +13,18 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
+$data = (object) array(
+    'number' => "001",
+    'name' => "Bulbasaur",
+    'attack' => 49
+);
+
 $item = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncLists("MyCollection")
     ->syncListItems->create(
         array(
-            'data' => '{ "number": "001", "name": "Bulbasaur", "attack": 49}'
+            'data' => json_encode($data)
         )
     );
 
