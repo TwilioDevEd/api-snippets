@@ -15,5 +15,5 @@ $ipAccessControlListMappings = $client->account->sip
 
 // Loop over the list of ipAccessControlListMappings and echo a property for each one
 foreach ($ipAccessControlListMappings as $ipAccessControlListMapping) {
-    echo $ipAccessControlListMappings->friendlyName;
+    echo $ipAccessControlListMapping->friendlyName;
 }
