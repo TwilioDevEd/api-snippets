@@ -8,6 +8,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 # Create the service
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-# Retrieve a List Item
-response = service.sync_lists('UniqueName').sync_list_items(0).fetch()
+# Retrieve a List
+response = service.sync_lists('UniqueName').fetch()
 puts response
