@@ -11,7 +11,7 @@ service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 # Query Sync List
 items = service.sync_lists('MyCollection').sync_list_items.stream(
 	from: '10',
-	directions: 'forward'
+	direction: 'forward'
 )
 items.each do |listItem|
 	puts listItem.data
