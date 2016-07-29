@@ -32,21 +32,40 @@ module LanguageHandler
     end
 
     def execute_with_suppressed_output(command)
-      pid = Process.spawn("#{command} > /dev/null 2>&1")
-      exit_code = 0
-      begin
-        Timeout.timeout(20) do
-          _id, status = Process.wait2(pid)
-          exit_code = status.exitstatus
-        end
-      rescue Timeout::Error
-        puts 'process not finished in time, killing it'
-        Process.kill('KILL', pid)
-        exit_code = 1
+      rout, wout = IO.pipe
+      rerr, werr = IO.pipe
+      pid = Process.spawn(command, out: wout, err: werr)
+      exit_code = check_process_success(pid)
+      wout.close
+      werr.close
+      success = exit_code == 0 && language_conditional(rout)
+
+      if success
+        puts "success [#{lang_cname}]".green
+      else
+        puts "failure [#{lang_cname}]".red
+        puts 'Error output: ---------------------------------------------------'
+        puts rerr.read
+        puts '-----------------------------------------------------------------'
       end
-      success = exit_code == 0
-      puts success ? "success [#{lang_cname}]".green : "failure [#{lang_cname}]".red
+      rout.close
+      rerr.close
       success
+    end
+
+    def check_process_success(pid)
+      Timeout.timeout(20) do
+        _id, status = Process.wait2(pid)
+        return status.exitstatus
+      end
+    rescue Timeout::Error
+      puts 'process not finished in time, killing it'
+      Process.kill('KILL', pid)
+      return 1
+    end
+
+    def language_conditional(_rout)
+      true
     end
 
     def output_folder
