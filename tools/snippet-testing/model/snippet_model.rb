@@ -4,6 +4,8 @@ module Model
   class SnippetModel
     SERVER_LANGUAGES = [
       LanguageHandler::JavaLanguageHandler::LANG_CNAME,
+      LanguageHandler::Java6LanguageHandler::LANG_CNAME,
+      LanguageHandler::Java7LanguageHandler::LANG_CNAME,
       LanguageHandler::RubyLanguageHandler::LANG_CNAME,
       LanguageHandler::NodeLanguageHandler::LANG_CNAME,
       LanguageHandler::PhpLanguageHandler::LANG_CNAME,
