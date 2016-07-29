@@ -12,22 +12,15 @@ module LanguageHandler
       execute_with_suppressed_output("sh #{file}")
     end
 
-    def execute_with_suppressed_output(command)
-      stdout, _, status = Open3.capture3(command)
-      exit_code = status.exitstatus
-      if exit_code == 0
-        splitted_responses(stdout).each do |response|
-          begin
-            JSON.parse(response)
-          rescue JSON::ParserError
-            exit_code = 1
-            break
-          end
+    def language_conditional(rout)
+      stdout = rout.read
+      splitted_responses(stdout).each do |response|
+        begin
+          JSON.parse(response)
+        rescue JSON::ParserError
+          return false
         end
       end
-      success = exit_code == 0
-      puts success ? "success [#{lang_cname}]".green : "failure [#{lang_cname}]".red
-      success
     end
 
     def splitted_responses(output)

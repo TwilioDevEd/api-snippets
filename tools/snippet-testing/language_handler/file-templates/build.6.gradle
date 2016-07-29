@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.twilio.sdk:twilio-java-sdk:6.3.0'
+    compile group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0'
 }
 
 task wrapper(type: Wrapper) {

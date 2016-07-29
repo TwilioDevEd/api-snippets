@@ -110,6 +110,8 @@ class SnippetTester
 
     {
       LanguageHandler::JavaLanguageHandler::LANG_CNAME     => LanguageHandler::JavaLanguageHandler.new,
+      LanguageHandler::Java6LanguageHandler::LANG_CNAME     => LanguageHandler::Java6LanguageHandler.new,
+      LanguageHandler::Java7LanguageHandler::LANG_CNAME     => LanguageHandler::Java7LanguageHandler.new,
       LanguageHandler::RubyLanguageHandler::LANG_CNAME     => LanguageHandler::RubyLanguageHandler.new,
       LanguageHandler::NodeLanguageHandler::LANG_CNAME     => LanguageHandler::NodeLanguageHandler.new,
       LanguageHandler::PhpLanguageHandler::LANG_CNAME      => php_language_handler,
