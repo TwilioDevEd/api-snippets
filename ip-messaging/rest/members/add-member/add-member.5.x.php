@@ -1,5 +1,4 @@
 <?php
-
 // This line loads the library
 require '/path/to/vendor/autoload.php';
 

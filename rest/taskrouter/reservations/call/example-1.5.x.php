@@ -21,7 +21,6 @@ $reservation = $client->taskrouter->workspaces()
     ->fetch();
 
 $reservation->update(
-    $reservation->reservationStatus,
     array(
         'instruction' => 'call',
         'callFrom' => '+15558675309',
