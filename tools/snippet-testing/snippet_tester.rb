@@ -138,6 +138,7 @@ end
 
 def print_errors_if_any
   if ErrorLogger.instance.build_failed?
+    ErrorLogger.instance.print_error_messages
     ErrorLogger.instance.print_errors
     exit(1)
   end

@@ -22,7 +22,7 @@ module LanguageHandler
 
     def test_snippet(snippet_model)
       path = snippet_model.get_output_file(lang_cname)
-      ErrorLogger.instance.add_error(path) unless execute(path)
+      execute(path)
     end
 
     private
@@ -31,7 +31,7 @@ module LanguageHandler
       raise 'this method must be implemented in child clases'
     end
 
-    def execute_with_suppressed_output(command)
+    def execute_with_suppressed_output(command, file)
       rout, wout = IO.pipe
       rerr, werr = IO.pipe
       pid = Process.spawn(command, out: wout, err: werr)
@@ -44,9 +44,8 @@ module LanguageHandler
         puts "success [#{lang_cname}]".green
       else
         puts "failure [#{lang_cname}]".red
-        puts 'Error output: ---------------------------------------------------'
-        puts rerr.read
-        puts '-----------------------------------------------------------------'
+        error_message = rerr.read
+        ErrorLogger.instance.add_error(file, error_message)
       end
       rout.close
       rerr.close

@@ -21,7 +21,7 @@ module LanguageHandler
     end
 
     def execute(file)
-      execute_with_suppressed_output("python #{file}")
+      execute_with_suppressed_output("python #{file}", file)
     end
   end
 end

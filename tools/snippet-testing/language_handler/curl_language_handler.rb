@@ -9,7 +9,7 @@ module LanguageHandler
     private
 
     def execute(file)
-      execute_with_suppressed_output("sh #{file}")
+      execute_with_suppressed_output("sh #{file}", file)
     end
 
     def language_conditional(rout)

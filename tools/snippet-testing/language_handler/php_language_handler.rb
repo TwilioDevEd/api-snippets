@@ -14,7 +14,7 @@ module LanguageHandler
     attr_reader :autoload_path
 
     def execute(file)
-      execute_with_suppressed_output("php #{file}")
+      execute_with_suppressed_output("php #{file}", file)
     end
 
     def text_with_specific_replacements(file_content)

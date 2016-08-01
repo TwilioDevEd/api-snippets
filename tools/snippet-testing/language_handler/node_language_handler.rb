@@ -7,7 +7,7 @@ module LanguageHandler
     private
 
     def execute(file)
-      execute_with_suppressed_output("node #{file}")
+      execute_with_suppressed_output("node #{file}", file)
     end
   end
 end
