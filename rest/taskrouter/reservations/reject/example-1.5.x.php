@@ -18,4 +18,6 @@ $reservation = $client->taskrouter->workspaces()
     ->getContext($workspaceSid)
     ->tasks($taskSid)
     ->reservations($reservationSid)
-    ->update('rejected');
+    ->update(
+        array('reservationStatus' => 'rejected')
+    );

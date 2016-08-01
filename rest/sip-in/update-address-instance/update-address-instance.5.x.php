@@ -13,6 +13,8 @@ $client = new Client($sid, $token);
 $ipAddress = $client->account->sip
     ->ipAccessControlLists("AL32a3c49700934481addd5ce1659f04d2")
     ->ipAddresses("IP32a3c49700934481addd5ce1659f04d2")
-    ->update("192.168.2.1", "Orlandos Nightclub");
+    ->update(
+        array("friendlyName" => "Orlandos Nightclub")
+    );
 
 echo $ipAddress->friendlyName;

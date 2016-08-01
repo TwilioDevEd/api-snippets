@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account
-    ->messages
+$client->account->messages
     ->create(
-        "+15558675309", "+14158141829",
+        "+15558675309",
         array(
+            "from" => "+14158141829",
             "body" => "Jenny please?! I love you <3",
             "mediaUrl" => "http://www.example.com/hearts.png"
         )

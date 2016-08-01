@@ -11,6 +11,8 @@ $client = new Client($sid, $token);
 
 $credential = $client->notifications->credentials()
     ->getContext("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-    ->fetch();
+    ->update(
+        array("friendlyName" => "MyCredential")
+    );
 
 echo $credential->friendlyName;
