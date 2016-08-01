@@ -3,16 +3,20 @@
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; 
-$token = "your_auth_token"; 
+$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$token = "your_auth_token";
 $client = new Services_Twilio($sid, $token);
 
-$numbers = $client->account->available_phone_numbers->getList('US', 'Local', array(
+$numbers = $client->account->available_phone_numbers->getList(
+    'US',
+    'Local',
+    array(
         "NearLatLong" => "37.840699,-122.461853",
-    "Distance" => "50",
-    "Contains" => "555",
-    "InRegion" => "CA"
-    ));
-foreach($numbers->available_phone_numbers as $number) {
+        "Distance" => "50",
+        "Contains" => "555",
+        "InRegion" => "CA"
+    )
+);
+foreach ($numbers->available_phone_numbers as $number) {
     echo $number->phone_number;
 }
