@@ -15,6 +15,6 @@ public class Example {
     // check out the list resource examples on this page
     Call call = new CallFetcher("CA42ed11f93dc08b952027ffbc406d0868").execute();
 
-    System.out.println(call.getTo())
+    System.out.println(call.getTo());
   }
 }

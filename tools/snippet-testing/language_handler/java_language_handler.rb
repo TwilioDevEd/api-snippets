@@ -9,7 +9,7 @@ module LanguageHandler
     def execute(file)
       dir_name = File.dirname(file)
       Dir.chdir("#{dir_name}/#{base_output_path}") do
-        execute_with_suppressed_output('gradle build', dir_name)
+        execute_with_suppressed_output('gradle build', file)
       end
     end
 
