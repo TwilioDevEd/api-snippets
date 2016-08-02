@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>Record your message after the tone.</Say>
+    <Record maxLength="30" action="/voice/handle-recording" />
+</Response>
