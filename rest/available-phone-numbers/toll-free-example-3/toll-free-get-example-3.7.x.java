@@ -1,7 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
 import com.twilio.rest.creator.api.v2010.account.incomingphonenumber.TollFreeCreator;
-import com.twilio.rest.reader.api.v2010.account.availablephonenumbercountry.TollFreeReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.availablephonenumbercountry.TollFree;
 import com.twilio.rest.type.PhoneNumber;
@@ -15,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<TollFree> numbers =
-        new TollFreeReader("US").byContains("KYLO").byAreaCode(800).execute();
+        TollFree.read("US").byContains("KYLO").byAreaCode(800).execute();
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
     new TollFreeCreator(availableNumber).execute();

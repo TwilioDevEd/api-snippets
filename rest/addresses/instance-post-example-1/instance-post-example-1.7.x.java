@@ -1,7 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
 import com.twilio.rest.resource.api.v2010.account.Address;
-import com.twilio.rest.updater.api.v2010.account.AddressUpdater;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -13,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Address address = new AddressUpdater("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
+    Address address = Address.update("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
         .setCustomerName("Customer 456").setStreet("2 Hasselhoff Lane").execute();
 
     System.out.println(address.getDateUpdated());

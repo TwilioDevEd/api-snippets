@@ -1,12 +1,8 @@
 // Install the Java helper library from twilio.com/docs/java/install
-
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import com.google.common.collect.Range;
 import com.twilio.rest.Twilio;
-import com.twilio.rest.reader.api.v2010.account.CallReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.Call;
 
@@ -18,11 +14,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd");
-    DateTime lower = formatter.parseDateTime("2009-07-04");
-    DateTime upper = formatter.parseDateTime("2009-07-06");
+    DateTime lower = DateTime.parse("2009-07-04");
+    DateTime upper = DateTime.parse("2009-07-06");
 
-    ResourceSet<Call> calls = new CallReader().byStatus(Call.Status.IN_PROGRESS)
+    ResourceSet<Call> calls = Call.read().byStatus(Call.Status.IN_PROGRESS)
         .byStartTime(Range.closed(lower, upper)).execute();
 
     // Loop over calls and print out a property for each one.

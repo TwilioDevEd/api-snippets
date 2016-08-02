@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.reader.api.v2010.account.availablephonenumbercountry.MobileReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.availablephonenumbercountry.Mobile;
 
@@ -12,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Mobile> numbers = new MobileReader("GB").execute();
+    ResourceSet<Mobile> numbers = Mobile.read("GB").execute();
 
     for (Mobile number : numbers) {
       System.out.println(number.getPhoneNumber());

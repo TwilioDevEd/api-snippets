@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.fetcher.api.v2010.account.CallFetcher;
 import com.twilio.rest.resource.api.v2010.account.Call;
 
 public class Example {
@@ -13,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Call call = new CallFetcher("CA42ed11f93dc08b952027ffbc406d0868").execute();
+    Call call = Call.fetch("CA42ed11f93dc08b952027ffbc406d0868").execute();
 
     System.out.println(call.getTo());
   }

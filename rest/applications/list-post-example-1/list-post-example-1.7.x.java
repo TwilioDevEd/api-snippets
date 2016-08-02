@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.creator.api.v2010.account.ApplicationCreator;
 import com.twilio.rest.http.HttpMethod;
 import com.twilio.rest.resource.api.v2010.account.Application;
 
@@ -13,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Application app =
-        new ApplicationCreator("Phone Me").setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
+        Application.create("Phone Me").setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
             .setVoiceMethod(HttpMethod.GET).execute();
 
     System.out.println(app.getSid());

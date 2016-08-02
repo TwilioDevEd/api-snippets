@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.reader.api.v2010.account.CallReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.Call;
 import com.twilio.rest.type.PhoneNumber;
@@ -13,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Call> calls = new CallReader().byFrom(new PhoneNumber("client:tommy")).execute();
+    ResourceSet<Call> calls = Call.read().byFrom(new PhoneNumber("client:tommy")).execute();
 
     // Loop over calls and print out a property for each one.
     for (Call call : calls) {

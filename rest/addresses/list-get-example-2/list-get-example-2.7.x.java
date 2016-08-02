@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.reader.api.v2010.account.AddressReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.Address;
 
@@ -12,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Address> addresses = new AddressReader().byCustomerName("Customer 123").execute();
+    ResourceSet<Address> addresses = Address.read().byCustomerName("Customer 123").execute();
 
     // Loop over addresses and print out a property for each one.
     for (Address address : addresses) {

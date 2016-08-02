@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.creator.api.v2010.account.AddressCreator;
 import com.twilio.rest.resource.api.v2010.account.Address;
 
 public class Example {
@@ -11,9 +10,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Address address =
-        new AddressCreator("Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE")
-            .execute();
+    Address address = Address
+        .create("Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE").execute();
 
     System.out.println(address.getSid());
   }
