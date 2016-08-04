@@ -11,7 +11,6 @@ $workspaceSid = 'WS30d0414c1651d84e81b8501d9baa8197'; //'WSXXXXXXXXXXXXXXXXXXXXX
 
 $workerSid = $_REQUEST['WorkerSid'];
 
-// TODO: Need to update this for next-gen library version 5.x
 $workerCapability = new Twilio\Jwt\TaskRouter\WorkerCapability(
     $accountSid, $authToken, $workspaceSid, $workerSid);
 $workerCapability->allowActivityUpdates();
