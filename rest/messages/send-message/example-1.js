@@ -6,8 +6,8 @@ var authToken = '[AuthToken]';
 var client = require('twilio')(accountSid, authToken); 
  
 client.messages.create({ 
-    to: "+16518675309", 
-    from: "+14158141829", 
+    to: "+15558675309", 
+    from: "+15017250604", 
     body: "Hey Jenny! Good luck on the bar exam!", 
     mediaUrl: "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",  
 }, function(err, message) { 

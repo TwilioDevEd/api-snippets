@@ -29,7 +29,7 @@
     $people = array(
         "+15558675309" => "Curious George",
         "+15558675308" => "Boots",
-        "+15558675307" => "Virgil",
+        "+15558675307" => "Virgil"
     );
 
     // Step 5: Loop over all our friends. $number is a phone number above, and 
@@ -41,11 +41,11 @@
             // the number we are sending to - Any phone number
             $number,
 
-            // Step 6: Change the 'From' number below to be a valid Twilio number 
-            // that you've purchased
-            "+15017250604", 
-
             array(
+                // Step 6: Change the 'From' number below to be a valid Twilio number 
+                // that you've purchased
+                'from' => "+15017250604", 
+                
                 // the sms body
                 'body' => "Hey $name, Monkey Party at 6PM. Bring Bananas!"
             )

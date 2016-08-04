@@ -8,11 +8,11 @@
             // the number we are sending to - Any phone number
             $number,
 
-            // Step 6: Change the 'From' number below to be a valid Twilio number 
-            // that you've purchased
-            "YYY-YYY-YYYY", 
-
             array(
+                // Step 6: Change the 'From' number below to be a valid Twilio number 
+                // that you've purchased
+                'from' => "+15017250604", 
+
                 // the sms body
                 'body' => "Hey $name, Monkey Party at 6PM. Bring Bananas!",
                 
