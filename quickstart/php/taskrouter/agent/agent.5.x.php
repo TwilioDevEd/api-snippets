@@ -4,10 +4,10 @@
 require_once "vendor/autoload.php";
 
 // Your Account SID from www.twilio.com/console
-$accountSid = "AC1a44c7a9ac6ec9d03e67d0944a7a9f01"; //"ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 // Your Auth Token from www.twilio.com/console
-$authToken = "1ae5fc5de0aa5ccc6189a7e0d38a5faf"; //"your_auth_token";
-$workspaceSid = 'WS30d0414c1651d84e81b8501d9baa8197'; //'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$authToken = "your_auth_token";
+$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
 
 $workerSid = $_REQUEST['WorkerSid'];
 
