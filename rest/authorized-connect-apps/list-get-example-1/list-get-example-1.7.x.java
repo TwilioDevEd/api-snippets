@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.reader.api.v2010.account.AuthorizedConnectAppReader;
 import com.twilio.rest.resource.ResourceSet;
 import com.twilio.rest.resource.api.v2010.account.AuthorizedConnectApp;
 
@@ -12,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<AuthorizedConnectApp> authorizedApps = new AuthorizedConnectAppReader().execute();
+    ResourceSet<AuthorizedConnectApp> authorizedApps = AuthorizedConnectApp.read().execute();
 
     // Loop over authorizedApps and print out a property for each one.
     for (AuthorizedConnectApp authorizedApp : authorizedApps) {

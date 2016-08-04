@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.rest.Twilio;
-import com.twilio.rest.fetcher.api.v2010.AccountFetcher;
 import com.twilio.rest.resource.api.v2010.Account;
 
 public class Example {
@@ -13,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Account account = new AccountFetcher("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").execute();
+    Account account = Account.fetch("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").execute();
 
     System.out.println(account.getDateCreated());
   }
