@@ -1,15 +1,16 @@
 <?php
-require_once "vendor/autoload.php";
-use Twilio\Client\Capability;
+include "vendor/autoload.php";
+
+use Twilio\Jwt\ClientToken;
 
 // put your Twilio API credentials here
 $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
 
-// put your Twilio Application Sid here
-$appSid     = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+// put your TwiML Application Sid here
+$appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-$capability = new Capability($accountSid, $authToken);
+$capability = new ClientToken($accountSid, $authToken);
 $capability->allowClientOutgoing($appSid);
 $capability->allowClientIncoming('jenny');
 $token = $capability->generateToken();
