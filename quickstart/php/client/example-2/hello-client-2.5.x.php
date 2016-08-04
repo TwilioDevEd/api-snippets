@@ -6,9 +6,10 @@ use Twilio\Jwt\ClientToken;
 // put your Twilio API credentials here
 $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
+$appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 $capability = new ClientToken($accountSid, $authToken);
-$capability->allowClientOutgoing('APabe7650f654fc34655fc81ae71caa3ff');
+$capability->allowClientOutgoing($appSid);
 $token = $capability->generateToken();
 ?>
 
