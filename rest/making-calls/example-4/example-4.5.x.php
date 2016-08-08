@@ -14,7 +14,10 @@ $call = $client->account->calls->create(
         "url" => "http://demo.twilio.com/docs/voice.xml",
         "method" => "GET",
         "statusCallbackMethod" => "POST",
-        "statusCallback" => "https://www.myapp.com/events"
+        "statusCallback" => "https://www.myapp.com/events",
+        "statusCallbackEvent" => array(
+            "initiated", "ringing", "answered", "completed"
+        )
     )
 );
 

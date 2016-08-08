@@ -8,16 +8,14 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
+$records = $client->account->usage
+    ->records
+    ->today
+    ->read(
+        array("category" => "calls")
+    );
 
-$numbers = $client->account->availablePhoneNumbers('US')->local->read(
-    array(
-        "nearLatLong" => "37.840699,-122.461853",
-        "distance" => "50",
-        "contains" => "555",
-        "inRegion" => "CA"
-    )
-);
-
-foreach ($numbers as $number) {
-    echo $number->phoneNumber;
+// Loop over the list of records and echo a property for each one
+foreach ($records as $record) {
+    echo $record->count;
 }

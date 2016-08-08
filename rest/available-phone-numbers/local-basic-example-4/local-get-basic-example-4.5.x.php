@@ -10,12 +10,7 @@ $client = new Client($sid, $token);
 
 
 $numbers = $client->account->availablePhoneNumbers('US')->local->read(
-    array(
-        "nearLatLong" => "37.840699,-122.461853",
-        "distance" => "50",
-        "contains" => "555",
-        "inRegion" => "CA"
-    )
+    array("inRegion" => "AR")
 );
 
 foreach ($numbers as $number) {

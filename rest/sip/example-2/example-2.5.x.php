@@ -8,16 +8,13 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-
-$numbers = $client->account->availablePhoneNumbers('US')->local->read(
+$call = $client->account->calls->create(
+    "sip:kate@example.com", "Jack",
     array(
-        "nearLatLong" => "37.840699,-122.461853",
-        "distance" => "50",
-        "contains" => "555",
-        "inRegion" => "CA"
+        "url" => "http://www.example.com/sipdial.xml",
+        "sipAuthUsername" => "jack",
+        "sipAuthPassword" => "secret"
     )
 );
 
-foreach ($numbers as $number) {
-    echo $number->phoneNumber;
-}
+echo $call->sid;
