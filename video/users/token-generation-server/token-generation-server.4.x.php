@@ -8,10 +8,10 @@ $identity = randomUsername();
 
 // Create access token, which we will serialize and send to the client
 $token = new Services_Twilio_AccessToken(
-    $TWILIO_ACCOUNT_SID, 
-    $TWILIO_API_KEY, 
-    $TWILIO_API_SECRET, 
-    3600, 
+    $TWILIO_ACCOUNT_SID,
+    $TWILIO_API_KEY,
+    $TWILIO_API_SECRET,
+    3600,
     $identity
 );
 
