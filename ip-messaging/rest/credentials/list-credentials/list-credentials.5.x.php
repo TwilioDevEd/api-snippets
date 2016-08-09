@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // List the Credentials
-$credentials = $client->ipMessaging->credentials()->read();
+$credentials = $client->ipMessaging->credentials->read();
 
 foreach ($credentials as $credential) {
     print $credential->friendlyName;

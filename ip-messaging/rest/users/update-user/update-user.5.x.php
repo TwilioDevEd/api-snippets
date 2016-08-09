@@ -13,9 +13,11 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Update the user
-$user = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$user = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->users("USER_SID")
-    ->update("NEW_ROLE_SID");
+    ->update(
+        array("roleSid" => "NEW_ROLE_SID")
+    );
 
 echo $user->identity;

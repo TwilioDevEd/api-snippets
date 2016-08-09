@@ -13,7 +13,14 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Create the Credential
-$credential = $client->ipMessaging->credentials()
-    ->create("credendial_name", "credential_type");
+$credential = $client->ipMessaging
+    ->credentials
+    ->create(
+        "gcm",
+        array(
+            "friendlyName" => "credendial_name",
+            "apiKey" => "your_api_key"
+        )
+    );
 
 echo $credential->friendlyName;

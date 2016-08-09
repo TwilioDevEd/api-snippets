@@ -12,9 +12,10 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the channel and Add the member
-$member = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$member = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->channels("CHANNEL_ID")
-    ->members->create("IDENTITY");
+    ->members
+    ->create("IDENTITY");
 
 echo $member->identity;

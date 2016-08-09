@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the Credential
-$credential = $client->ipMessaging->credentials()
-    ->getContext("CREDENTIAL_SID")
+$credential = $client->ipMessaging
+    ->credentials("CREDENTIAL_SID")
     ->fetch();
 
 print $credential->friendlyName;

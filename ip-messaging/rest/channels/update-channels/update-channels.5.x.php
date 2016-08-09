@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve and Update the Channel
-$channel = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$channel = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->update(
         array("friendlyName" => "NEW_FRIENDLY_NAME")

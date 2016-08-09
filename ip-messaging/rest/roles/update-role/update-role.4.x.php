@@ -1,5 +1,4 @@
 <?php
-
 // This line loads the library
 require('Services/Twilio.php');
 
@@ -13,10 +12,12 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 // Update the role
 $service = $client->services->get("SERVICE_SID");
 $role = $service->roles->get("ROLE_SID");
-$response = $role->update(array(
-    "FriendlyName" => "RoleName",
-    "Permission" => "sendMessage",
-    "Permission" => "leaveChannel"
-));
+$response = $role->update(
+    array(
+        "FriendlyName" => "RoleName",
+        "Permission" => "sendMessage",
+        "Permission" => "leaveChannel"
+    )
+);
 
-print $response
+print $response;

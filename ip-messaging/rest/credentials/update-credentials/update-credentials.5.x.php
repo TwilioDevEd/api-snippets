@@ -13,11 +13,13 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Update the credential
-$credential = $client->ipMessaging->credentials()
-    ->getContext("CREDENTIAL_SID")
+$credential = $client->ipMessaging
+    ->credentials("CREDENTIAL_SID")
     ->update(
-        $credential->friendlyName,
-        "NEW_CREDENTIAL_TYPE"
+        array(
+            "type" => "gcm",
+            "apiKey" => "xxxxxxxx"
+        )
     );
 
 print $credential->friendlyName;

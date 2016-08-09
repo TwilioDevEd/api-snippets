@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Delete the role
-$client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$client->ipMessaging
+    ->services("SERVICE_SID")
     ->roles("ROLE_SID")
     ->delete();

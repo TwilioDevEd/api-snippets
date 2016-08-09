@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Update the service
-$service = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$service = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->update(
         array("friendlyName" => "NEW_FRIENDLY_NAME")
     );
