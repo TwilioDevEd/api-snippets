@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Create the user
-$user = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$user = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->users
     ->create("IDENTITY", "ROLE_SID");
 

@@ -10,6 +10,6 @@ $authToken = "your_auth_token";
 
 $client = new Client($accountSid, $authToken);
 
-foreach ($client->taskrouter->workspaces()->read() as $workspace) {
+foreach ($client->taskrouter->workspaces->read() as $workspace) {
     echo $workspace->friendlyName;
 }

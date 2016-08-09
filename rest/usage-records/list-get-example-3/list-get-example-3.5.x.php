@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$records = $client->account->usage->records->read(
+$records = $client->usage->records->read(
     array(
         "category" => "calls-inbound",
         "startDate" => "2012-09-01",

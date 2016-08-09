@@ -12,8 +12,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Delete the message
-$message = $client->ipMessaging->services()
-    ->getContext("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+$message = $client->ipMessaging
+    ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->messages("IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(

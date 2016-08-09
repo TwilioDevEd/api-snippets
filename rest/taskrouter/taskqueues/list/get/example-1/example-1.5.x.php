@@ -11,8 +11,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$taskQueues = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$taskQueues = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->taskQueues
     ->read();
 

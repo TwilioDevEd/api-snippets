@@ -14,7 +14,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Create a service
-$service = $client->notifications->services()
+$service = $client->notifications
+    ->services
     ->create(
         array(
             "friendlyName" => "My Awesome Service"

@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Delete the member
-$member = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$client->ipMessaging
+    ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->members("MEMBER_SID")
     ->delete();

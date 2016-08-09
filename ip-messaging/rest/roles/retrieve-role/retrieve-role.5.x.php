@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the role
-$role = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$role = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->roles("ROLE_SID")
     ->fetch();
 

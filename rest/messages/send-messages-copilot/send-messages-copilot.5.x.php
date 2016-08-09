@@ -9,7 +9,7 @@ $account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $auth_token = 'your_auth_token';
 $client = new Client($account_sid, $auth_token);
 
-$client->account->messages->create(
+$client->messages->create(
     "+15558675309",
     array(
         'messagingServiceSid' => "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",

@@ -9,8 +9,8 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$event = $client->monitor->events()
-    ->getContext("AE21f24380625e4aa4abec76e39b14458d")
+$event = $client->monitor
+    ->events("AE21f24380625e4aa4abec76e39b14458d")
     ->fetch();
 
 echo $event->description;

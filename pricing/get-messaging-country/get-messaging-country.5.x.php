@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$country = $client->pricing->messaging()->countries("EE")->fetch();
+$country = $client->pricing->messaging->countries("EE")->fetch();
 
 foreach ($country->inboundSmsPrices as $p) {
     echo "{$p["number_type"]} {$p["current_price"]}\n";

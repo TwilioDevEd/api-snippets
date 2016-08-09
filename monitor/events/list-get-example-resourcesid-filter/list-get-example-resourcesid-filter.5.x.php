@@ -9,7 +9,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$events = $client->monitor->events()->read(
+$events = $client->monitor->events->read(
     array('resourceSid' => 'PN4aa51b930717ea83c91971b86d99018f')
 );
 

@@ -12,8 +12,8 @@ $taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$reservations = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$reservations = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->tasks($taskSid)
     ->reservations
     ->read();

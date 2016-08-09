@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ipAccessControlListMapping = $client->account->sip
+$ipAccessControlListMapping = $client->sip
     ->domains("SD32a3c49700934481addd5ce1659f04d2")
     ->ipAccessControlListMappings
     ->create("AL32a3c49700934481addd5ce1659f04d2");

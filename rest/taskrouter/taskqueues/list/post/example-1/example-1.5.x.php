@@ -11,8 +11,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$taskQueue = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$taskQueue = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->taskQueues
     ->create(
         "English", "WAxxxx", "WAyyyy",

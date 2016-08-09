@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$sms = $client->account->sms->messages->create(
+$sms = $client->sms->messages->create(
     "+15005550009", "+15005550006",
     array("body" => "Hey Mr Nugget, you the bomb!")
 );

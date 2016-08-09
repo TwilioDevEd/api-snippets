@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of records and echo a property for each one
-foreach ($client->account->usage->records->read() as $record) {
+foreach ($client->usage->records->read() as $record) {
     echo $record->count;
 }

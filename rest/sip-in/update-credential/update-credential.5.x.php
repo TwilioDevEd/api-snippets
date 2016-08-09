@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$credential = $client->account->sip
+$credential = $client->sip
     ->credentialLists("CL32a3c49700934481addd5ce1659f04d2")
     ->credentials("SC32a3c49700934481addd5ce1659f04d2")
     ->update(

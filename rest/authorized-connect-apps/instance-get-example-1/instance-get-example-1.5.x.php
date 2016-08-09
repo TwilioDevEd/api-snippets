@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $authorizedApp = $client
-    ->account
     ->authorizedConnectApps("CN47260e643654388faabe8aaa18ea6756")
     ->fetch();
 

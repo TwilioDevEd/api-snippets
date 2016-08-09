@@ -10,9 +10,11 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
+// You can call $client->account to access the authenticated account
+// you used to initialize the client.
+// Use $client->account->fetch() to get the instance
 $account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    ->accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->fetch();
 
 echo $account->dateCreated->format('Y-m-d H:i:s');

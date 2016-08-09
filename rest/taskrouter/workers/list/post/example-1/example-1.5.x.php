@@ -11,9 +11,10 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$worker = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
-    ->workers->create(
+$worker = $client->taskrouter
+    ->workspaces($workspaceSid)
+    ->workers
+    ->create(
         "Support Worker 1",
         array('attributes' => '{"type":"support"}')
     );

@@ -8,9 +8,8 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$conferences = $client->account->conferences->read(
-    array("status" => "in-progress", "friendlyName" => "MyRoom"),
-    50
+$conferences = $client->conferences->read(
+    array("status" => "in-progress", "friendlyName" => "MyRoom")
 );
 // Loop over the list of conferences and echo a property for each one
 foreach ($conferences as $conference) {

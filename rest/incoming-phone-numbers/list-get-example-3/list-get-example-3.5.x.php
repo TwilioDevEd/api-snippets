@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$numbers = $client->account->incomingPhoneNumbers->read(
+$numbers = $client->incomingPhoneNumbers->read(
     array("phoneNumber" => "867")
 );
 // Loop over the list of numbers and echo a property for each one

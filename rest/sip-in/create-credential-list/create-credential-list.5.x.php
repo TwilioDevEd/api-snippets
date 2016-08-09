@@ -9,7 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $credentialList = $client
-    ->account
     ->sip
     ->credentialLists
     ->create("Low Rises");

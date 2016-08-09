@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account->sip
+$client->sip
     ->domains("SD32a3c49700934481addd5ce1659f04d2")
     ->ipAccessControlListMappings("AL95a47094615fe05b7c17e62a7877836c")
     ->delete();

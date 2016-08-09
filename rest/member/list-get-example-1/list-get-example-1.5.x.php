@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$members = $client->account
+$members = $client
     ->queues("QU5ef8732a3c49700934481addd5ce1659")
     ->members
     ->read();

@@ -8,12 +8,11 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$events = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$events = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->events
     ->read();
 

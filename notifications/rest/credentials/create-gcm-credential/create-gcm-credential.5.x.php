@@ -8,10 +8,12 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credential = $client->notifications->credentials()
+$credential = $client->notifications
+    ->credentials
     ->create(
-        "MyGCMCredential", "gcm",
+        "gcm",
         array(
+            "friendlyName" => "MyGCMCredential",
             "apiKey" => "api_key_here"
         )
     );

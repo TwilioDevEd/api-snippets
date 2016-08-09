@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the service
-$channel = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$channel = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->fetch();
 

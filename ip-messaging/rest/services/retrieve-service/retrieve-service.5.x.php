@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the service
-$service = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$service = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->fetch();
 
 print $service->friendlyName;

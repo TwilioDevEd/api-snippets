@@ -12,8 +12,8 @@ $token = "AUTH_TOKEN";
 // Initialize the client
 $client = new Client($sid, $token);
 
-$roles = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$roles = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->roles
     ->read();
 

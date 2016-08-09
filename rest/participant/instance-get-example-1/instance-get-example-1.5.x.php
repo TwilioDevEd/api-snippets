@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$participant = $client->account
+$participant = $client
     ->conferences("CFbbe4632a3c49700934481addd5ce1659")
     ->participants("CA386025c9bf5d6052a1d1ea42b4d16662")
     ->fetch();

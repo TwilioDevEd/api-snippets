@@ -10,8 +10,11 @@ $token = "AUTH_TOKEN";
 // Initialize the client
 $client = new IPMessaging_Services_Twilio($sid, $token);
 
+// Retrieve the Credential
+$credential = $client->credentials->get("CREDENTIAL_SID");
+
 // Update the credential
-$response = $credential->update(array(
-    "type" => "NEW_TYPE",
-));
+$response = $credential->update(
+    array("Type" => "NEW_TYPE")
+);
 print $response;

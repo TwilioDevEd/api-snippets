@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$country = $client->pricing->phoneNumbers()->countries("US")->fetch();
+$country = $client->pricing->phoneNumbers->countries("US")->fetch();
 
 foreach ($country->phoneNumberPrices as $p) {
     echo "{$p["number_type"]} {$p["current_price"]}\n";

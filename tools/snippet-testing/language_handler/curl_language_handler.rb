@@ -13,8 +13,10 @@ module LanguageHandler
     end
 
     def language_conditional(rout)
-      stdout = rout.read
-      splitted_responses(stdout).each do |response|
+      responses = splitted_responses(rout.read)
+      return false if responses.empty?
+
+      responses.each do |response|
         begin
           JSON.parse(response)
         rescue JSON::ParserError
@@ -25,7 +27,7 @@ module LanguageHandler
 
     def splitted_responses(output)
       responses = output.split('}{')
-      return responses if responses.count == 1
+      return responses if responses.count == 1 || responses.empty?
 
       first_response = [responses.first + '}']
       last_response = ['{' + responses.last]

@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of caller_ids and echo a property for each one
-foreach ($client->account->outgoingCallerIds->read() as $callerId) {
+foreach ($client->outgoingCallerIds->read() as $callerId) {
     echo $callerId->phoneNumber;
 }

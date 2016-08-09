@@ -11,8 +11,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$activity = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$activity = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->activities
     ->create("NewAvailableActivity", true);
 

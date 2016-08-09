@@ -8,10 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credential = $client->notifications->credentials()
+$credential = $client->notifications->credentials
     ->create(
-        "MyAPNCredential", "apn",
+        "apn",
         array(
+            "friendlyName" => "MyAPNCredential",
             "certificate" => "cert.pem_content",
             "privateKey" => "key.pem_content",
             "sandbox" => "true"

@@ -8,6 +8,4 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account
-    ->outgoingCallerIds("PNe536d32a3c49700934481addd5ce1659")
-    ->delete();
+$client->outgoingCallerIds("PNe536d32a3c49700934481addd5ce1659")->delete();

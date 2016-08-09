@@ -13,7 +13,7 @@ $secondAccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$number = $client->accounts->getContext($firstAccountSid)
+$number = $client->accounts($firstAccountSid)
     ->incomingPhoneNumbers("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
     ->update(
         array("accountSid" => $secondAccountSid)

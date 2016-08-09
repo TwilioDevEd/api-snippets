@@ -9,6 +9,6 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$client->monitor->alerts()
-    ->getContext("NO5a7a84730f529f0a76b3e30c01315d1a")
+$client->monitor
+    ->alerts("NO5a7a84730f529f0a76b3e30c01315d1a")
     ->delete();

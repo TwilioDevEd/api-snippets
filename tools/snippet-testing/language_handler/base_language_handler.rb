@@ -72,12 +72,7 @@ module LanguageHandler
     end
 
     def text_with_replacements(file_content)
-      replaced = text_without_placeholders(file_content)
-      text_with_specific_replacements(replaced)
-    end
-
-    def text_without_placeholders(file_content)
-      file_content.gsub(/\{\{[^\{\}]+\}\}/, DEFAULT_PLACEHOLDER_REPLACEMENT)
+      text_with_specific_replacements(file_content)
     end
 
     def text_with_specific_replacements(file_content)

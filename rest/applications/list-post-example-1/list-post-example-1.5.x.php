@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$app = $client->account->applications->create(
+$app = $client->applications->create(
     "Phone Me",
     array(
         "voiceUrl" => "http://demo.twilio.com/docs/voice.xml",

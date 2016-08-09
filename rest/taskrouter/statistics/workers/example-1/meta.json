@@ -1,4 +1,5 @@
 {
   "title": "Retrieve All Workers Statistics",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }

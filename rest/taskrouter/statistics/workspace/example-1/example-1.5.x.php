@@ -11,8 +11,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$statistics = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$statistics = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->statistics()
     ->fetch(
         array('minutes' => 60)

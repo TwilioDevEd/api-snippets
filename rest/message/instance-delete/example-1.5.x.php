@@ -8,6 +8,5 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account
-    ->messages("MM5ef8732a3c49700934481addd5ce1659")
+$client->messages("MM5ef8732a3c49700934481addd5ce1659")
     ->delete(); // Deletes entire message record

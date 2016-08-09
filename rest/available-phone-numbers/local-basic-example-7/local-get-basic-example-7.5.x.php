@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 
-$numbers = $client->account->availablePhoneNumbers('US')->local->read(
+$numbers = $client->availablePhoneNumbers('US')->local->read(
     array("excludeAllAddressRequired" => "true")
 );
 

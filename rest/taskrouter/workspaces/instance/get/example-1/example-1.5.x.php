@@ -11,8 +11,6 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
-    ->fetch();
+$workspace = $client->taskrouter->workspaces($workspaceSid)->fetch();
 
 echo $workspace->friendlyName;

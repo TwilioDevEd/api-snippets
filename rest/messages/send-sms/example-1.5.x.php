@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account->messages->create(
+$client->messages->create(
     '+16518675309',
     array(
         'from' => '+14158141829',

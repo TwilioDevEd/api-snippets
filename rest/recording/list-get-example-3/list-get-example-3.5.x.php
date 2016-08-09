@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$recordings = $client->account->recordings->read(
+$recordings = $client->recordings->read(
     array("datecreatedAfter" => "2009-07-06")
 );
 // Loop over the list of recordings and echo a property for each one

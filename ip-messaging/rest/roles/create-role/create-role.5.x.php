@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Create the role
-$role = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$role = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->roles
     ->create(
         'ROLE_NAME',

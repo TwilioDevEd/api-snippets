@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$messagingCountries = $client->pricing->messaging()->countries->stream();
+$messagingCountries = $client->pricing->messaging->countries->stream();
 
 foreach ($messagingCountries as $c) {
     echo $c->isoCountry;

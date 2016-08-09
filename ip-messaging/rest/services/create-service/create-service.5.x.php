@@ -13,7 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Create the service
-$service = $client->ipMessaging->services()
+$service = $client->ipMessaging
+    ->services
     ->create("NEW_SERVICE");
 
 print $service->friendlyName;

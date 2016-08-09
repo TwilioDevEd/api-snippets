@@ -12,8 +12,8 @@ $workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workflow = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$workflow = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->workflows($workflowSid)
     ->update(
         array('taskReservationTimeout' => '20')

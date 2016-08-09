@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credentialLists = $client->account->sip
+$credentialLists = $client->sip
     ->credentialLists
     ->read();
 

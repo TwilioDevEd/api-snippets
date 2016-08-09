@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $call = $client
-    ->account
     ->calls("CAe1644a7eed5088b159577c5802d8be38")
     ->update(
         array("status" => "completed")

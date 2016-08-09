@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$number = $client->account->incomingPhoneNumbers
+$number = $client->incomingPhoneNumbers
     ->create(
         array(
             "friendlyName" => "My Company Line",

@@ -13,8 +13,8 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieves all users
-$users = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$users = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->users
     ->read();
 

@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of apps and echo a property for each one
-foreach ($client->account->keys->read() as $key) {
+foreach ($client->keys->read() as $key) {
     echo $key->friendlyName;
 }

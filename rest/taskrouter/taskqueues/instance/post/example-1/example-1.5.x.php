@@ -12,8 +12,8 @@ $taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$client->taskrouter
+    ->workspaces($workspaceSid)
     ->taskQueues($taskQueueSid)
     ->update(
         array('targetWorkers' => 'languages HAS "english"')

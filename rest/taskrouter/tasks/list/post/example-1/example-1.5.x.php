@@ -12,8 +12,8 @@ $workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$task = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$task = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->tasks
     ->create('{"type":"support"}', $workflowSid);
 

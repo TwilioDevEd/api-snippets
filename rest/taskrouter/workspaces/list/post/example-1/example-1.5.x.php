@@ -10,7 +10,7 @@ $authToken = "your_auth_token";
 
 $client = new Client($accountSid, $authToken);
 
-$workspace = $client->taskrouter->workspaces()
+$workspace = $client->taskrouter->workspaces
     ->create(
         "NewWorkspace",
         array(

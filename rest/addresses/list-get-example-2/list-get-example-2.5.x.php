@@ -8,9 +8,8 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$addresses = $client->account->addresses->read(
-    array('customerName' => 'Customer 123'),
-    50
+$addresses = $client->addresses->read(
+    array('customerName' => 'Customer 123')
 );
 // Loop over the list of numbers and echo a property for each one
 foreach ($addresses as $address) {

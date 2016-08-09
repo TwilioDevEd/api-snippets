@@ -9,7 +9,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$events = $client->monitor->events()->read(
+$events = $client->monitor->events->read(
     array(
         'sourceIpAddress' => '104.14.155.29',
         'startDate' => '2015-04-25T00:00:00Z',

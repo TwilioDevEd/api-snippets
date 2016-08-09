@@ -12,6 +12,6 @@ $subAccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$account = $client->accounts->getContext($subAccountSid)->fetch();
+$account = $client->accounts($subAccountSid)->fetch();
 
 echo $account->status;

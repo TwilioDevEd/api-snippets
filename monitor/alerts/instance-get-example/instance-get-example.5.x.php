@@ -11,8 +11,8 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$alert = $client->monitor->alerts()
-    ->getContext("NO5a7a84730f529f0a76b3e30c01315d1a")
+$alert = $client->monitor
+    ->alerts("NO5a7a84730f529f0a76b3e30c01315d1a")
     ->fetch();
 
 echo $alert->alertText;

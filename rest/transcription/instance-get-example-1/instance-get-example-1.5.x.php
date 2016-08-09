@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$transcription = $client->account
+$transcription = $client
     ->transcriptions("TR8c61027b709ffb038236612dc5af8723")
     ->fetch();
 

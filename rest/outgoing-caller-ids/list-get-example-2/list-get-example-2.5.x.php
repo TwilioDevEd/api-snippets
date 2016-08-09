@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$outgoingCallerIds = $client->account->outgoingCallerIds->read(
+$outgoingCallerIds = $client->outgoingCallerIds->read(
     array("phoneNumber" => "+14158675309")
 );
 // Loop over the list of caller_ids and echo a property for each one

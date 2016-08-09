@@ -13,6 +13,6 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Delete a Credential
-$client->ipMessaging->credentials()
-    ->getContext("CREDENTIAL_SID")
+$client->ipMessaging
+    ->credentials("CREDENTIAL_SID")
     ->delete();

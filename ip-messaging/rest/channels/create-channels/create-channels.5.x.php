@@ -13,9 +13,14 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Create the channel
-$channel = $client->ipMessaging->services()
-    ->getContext("SERVICE_SID")
+$channel = $client->ipMessaging
+    ->services("SERVICE_SID")
     ->channels
-    ->create('CHANNEL_NAME', "unique_channel_name");
+    ->create(
+        array(
+            'friendlyName' => 'CHANNEL_NAME',
+            'uniqueName' => 'unique_channel_name'
+        )
+    );
 
 echo $channel->friendlyName;

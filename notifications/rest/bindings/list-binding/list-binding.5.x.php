@@ -14,8 +14,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // List all bindings
-$bindings = $client->notifications->services()
-    ->getContext("ISxxx")
+$bindings = $client->notifications
+    ->services("ISxxx")
     ->bindings
     ->read();
 

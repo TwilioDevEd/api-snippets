@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 
-$numbers = $client->account->availablePhoneNumbers('GB')->mobile->read();
+$numbers = $client->availablePhoneNumbers('GB')->mobile->read();
 
 foreach ($numbers as $number) {
     echo $number->phoneNumber;
