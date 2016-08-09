@@ -1,6 +1,5 @@
 require 'open3'
 require 'json'
-require 'pry'
 require_relative 'base_language_handler'
 
 module LanguageHandler
