@@ -8,8 +8,9 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$records = $client->account->usage
-    ->records->today
+$records = $client->usage
+    ->records
+    ->today
     ->read(
         array(
             "category" => "calls-inbound",

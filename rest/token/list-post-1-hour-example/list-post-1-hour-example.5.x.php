@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$token = $client->account->tokens->create(
+$token = $client->tokens->create(
     array("ttl" => 3600)
 );
 

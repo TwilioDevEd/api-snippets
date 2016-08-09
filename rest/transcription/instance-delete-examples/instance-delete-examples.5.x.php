@@ -8,6 +8,4 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account
-    ->transcriptions("TR8c61027b709ffb038236612dc5af8723")
-    ->delete();
+$client->transcriptions("TR8c61027b709ffb038236612dc5af8723")->delete();

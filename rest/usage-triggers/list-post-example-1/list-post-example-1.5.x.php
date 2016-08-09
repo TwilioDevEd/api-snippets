@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$trigger = $client->account->usage->triggers->create(
+$trigger = $client->usage->triggers->create(
     "http://www.example.com/", "1000", "sms"
 );
 

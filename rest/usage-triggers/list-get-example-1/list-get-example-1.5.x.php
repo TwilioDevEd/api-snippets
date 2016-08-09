@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$triggers = $client->account->usage->triggers->read(
+$triggers = $client->usage->triggers->read(
     array(
         "Recurring" => "daily",
         "UsageCategory" => "calls"

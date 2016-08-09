@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$number = $client->account->incomingPhoneNumbers->create(
+$number = $client->incomingPhoneNumbers->create(
     array(
         "voiceUrl" => "http://demo.twilio.com/docs/voice.xml",
         "phoneNumber" => "+15005550006"

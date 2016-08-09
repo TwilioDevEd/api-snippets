@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of transcriptions and echo a property for each one
-foreach ($client->account->transcriptions->read() as $transcription) {
+foreach ($client->transcriptions->read() as $transcription) {
     echo $transcription->transcriptionText;
 }
