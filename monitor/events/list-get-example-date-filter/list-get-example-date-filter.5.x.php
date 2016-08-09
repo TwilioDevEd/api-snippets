@@ -9,7 +9,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$events = $client->monitor->events()->read(
+$events = $client->monitor->events->read(
     array(
         'startDate' => '2015-03-01T00:00:00Z',
         'endDate' => '2015-04-01T00:00:00Z'

@@ -9,7 +9,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$alerts = $client->monitor->alerts()->read();
+$alerts = $client->monitor->alerts->read();
 
 // Loop over the list of alerts and echo a property for each one
 foreach ($alerts as $alert) {

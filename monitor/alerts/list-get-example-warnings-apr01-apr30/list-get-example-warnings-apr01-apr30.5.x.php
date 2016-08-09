@@ -9,7 +9,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$alerts = $client->monitor->alerts()->read(
+$alerts = $client->monitor->alerts->read(
     array(
         "startDate" => "2015-04-01T00:00:00Z",
         "endDate" => "2015-04-30T23:59:59Z",
