@@ -9,8 +9,8 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credential = $client->notifications->credentials()
-    ->getContext("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+$credential = $client->notifications
+    ->credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
     ->fetch();
 
 echo $credential->friendlyName;

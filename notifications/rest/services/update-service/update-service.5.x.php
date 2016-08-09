@@ -14,8 +14,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Update the service
-$service = $client->notifications->services()
-    ->getContext("ISxxx")
+$service = $client->notifications
+    ->services("ISxxx")
     ->update(
         array(
             "friendlyName" => "NewFlowHipSlackChatDock",
