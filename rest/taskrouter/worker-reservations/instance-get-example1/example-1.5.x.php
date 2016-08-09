@@ -8,13 +8,16 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$task = $client->taskrouter
+$reservation = $client->taskrouter
     ->workspaces($workspaceSid)
-    ->tasks($taskSid)
+    ->workers($workerSid)
+    ->reservations($reservationSid)
     ->fetch();
 
-echo $task->attributes;
+echo $reservation->reservationStatus;
+echo $reservation->workerName;

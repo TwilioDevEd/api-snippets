@@ -8,16 +8,22 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-// reject a reservation
-$reservation = $client->taskrouter
+// call using a reservation
+$client->taskrouter
     ->workspaces($workspaceSid)
-    ->tasks($taskSid)
+    ->workers($workerSid)
     ->reservations($reservationSid)
     ->update(
-        array('reservationStatus' => 'rejected')
+        array(
+            'instruction' => 'call',
+            'callFrom' => '+15558675309',
+            'callUrl' => 'http://example.com/agent_answer',
+            'callStatusCallbackUrl' => 'http://example.com/agent_answer_status_callback',
+            'callAccept' => 'true'
+        )
     );

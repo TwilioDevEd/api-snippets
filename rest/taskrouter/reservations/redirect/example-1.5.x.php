@@ -14,8 +14,8 @@ $reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new Client($accountSid, $authToken);
 
 // redirect using a reservation
-$reservation = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$reservation = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->tasks($taskSid)
     ->reservations($reservationSid)
     ->fetch();

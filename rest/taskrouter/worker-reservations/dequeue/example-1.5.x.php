@@ -8,13 +8,19 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$task = $client->taskrouter
+// dequeue a reservation
+$client->taskrouter
     ->workspaces($workspaceSid)
-    ->tasks($taskSid)
-    ->fetch();
-
-echo $task->attributes;
+    ->workers($workerSid)
+    ->reservations($reservationSid)
+    ->update(
+        array(
+            'instruction' => 'dequeue',
+            'dequeueFrom' => '+18001231234'
+        )
+    );

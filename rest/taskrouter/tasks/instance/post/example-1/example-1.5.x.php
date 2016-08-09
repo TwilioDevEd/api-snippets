@@ -12,8 +12,8 @@ $taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$task = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$task = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->tasks($taskSid);
 
 // update a task's attributes

@@ -11,8 +11,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$tasks = $client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
+$tasks = $client->taskrouter
+    ->workspaces($workspaceSid)
     ->tasks->read(
         array(
             "assignmentStatus" => "pending",

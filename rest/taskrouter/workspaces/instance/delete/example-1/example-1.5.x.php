@@ -11,6 +11,4 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$client->taskrouter->workspaces()
-    ->getContext($workspaceSid)
-    ->delete();
+$client->taskrouter->workspaces($workspaceSid)->delete();
