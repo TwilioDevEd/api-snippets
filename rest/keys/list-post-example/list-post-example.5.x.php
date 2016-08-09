@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$key = $client->account->newKeys->create(
+$key = $client->newKeys->create(
     array('friendlyName' => 'User Jenny')
 );
 

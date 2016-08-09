@@ -8,6 +8,4 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->account
-    ->recordings("RE557ce644e5ab84fa21cc21112e22c485")
-    ->delete();
+$client->recordings("RE557ce644e5ab84fa21cc21112e22c485")->delete();

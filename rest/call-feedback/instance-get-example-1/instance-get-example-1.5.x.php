@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $feedback = $client
-    ->account
     ->calls("CAe03b7cd806070d1f32bdb7f1046a41c0")
     ->feedback()
     ->fetch();

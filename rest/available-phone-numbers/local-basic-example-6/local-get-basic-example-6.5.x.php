@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 
-$numbers = $client->account->availablePhoneNumbers('GB')->local->read(
+$numbers = $client->availablePhoneNumbers('GB')->local->read(
     array("voiceEnabled" => "true")
 );
 

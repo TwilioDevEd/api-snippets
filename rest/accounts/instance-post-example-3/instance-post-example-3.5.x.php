@@ -10,9 +10,10 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
+// You can call $client->account to access the authenticated account
+// you used to initialize the client and call update() on that object.
 $account = $client
-    ->accounts
-    ->getContext("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    ->accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(
         array('status' => 'closed')
     );

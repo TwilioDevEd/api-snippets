@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of numbers and echo a property for each one
-foreach ($client->account->addresses->read() as $address) {
+foreach ($client->addresses->read() as $address) {
     echo $address->friendlyName;
 }

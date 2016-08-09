@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of conferences and echo a property for each one
-foreach ($client->account->conferences->read() as $conference) {
+foreach ($client->conferences->read() as $conference) {
     echo $conference->status;
 }

@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$shortCodes = $client->account->sms->shortCodes->read(
+$shortCodes = $client->sms->shortCodes->read(
     array("shortCode" => "67898")
 );
 
-// Loop over the list of short_codes and echo a property for each one
+// Loop over the list of shortCodes and echo a property for each one
 foreach ($shortCodes as $shortCode) {
     echo $shortCode->smsMethod;
 }

@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $address = $client
-    ->account
     ->addresses("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
     ->fetch();
 

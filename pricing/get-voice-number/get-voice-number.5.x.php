@@ -10,6 +10,6 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$number =  $client->pricing->voice()->numbers("+15108675309")->fetch();
+$number =  $client->pricing->voice->numbers("+15108675309")->fetch();
 
 $number->outboundCallPrice["current_price"] . PHP_EOL;

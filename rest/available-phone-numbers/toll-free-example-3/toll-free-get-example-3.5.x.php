@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 
-$numbers = $client->account->availablePhoneNumbers('US')->tollFree->read(
+$numbers = $client->availablePhoneNumbers('US')->tollFree->read(
     array("contains" => "KYLO", "areaCode" => "800")
 );
 

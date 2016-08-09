@@ -8,7 +8,7 @@ $sAsid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $sAtoken = "your_auth_token";
 $sAClient = new Client($sAsid, $sAtoken);
 
-$sAClient->account->calls->create(
+$sAClient->calls->create(
     '+16518675309', // The visitor's phone number
     '+14158141829', // A Twilio number in your subaccount
     array(

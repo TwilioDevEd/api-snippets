@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $connectApp = $client
-    ->account
     ->connectApps("CNb989fdd207b04d16aee578018ef5fd93")
     ->fetch();
 

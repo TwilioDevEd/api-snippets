@@ -11,7 +11,6 @@ $client = new Client($sid, $token);
 // Create an address resource
 // create($customerName, $street, $city, $region, $postalCode, $isoCountry, array $options = array())
 $address = $client
-    ->account
     ->addresses
     ->create(
         "Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE"

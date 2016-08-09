@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$shortCode = $client->account->sms
+$shortCode = $client->sms
     ->shortCodes("SC6b20cb705c1e8f00210049b20b70fce2")
     ->update(
         array("smsUrl" => "http://demo.twilio.com/docs/sms.xml")

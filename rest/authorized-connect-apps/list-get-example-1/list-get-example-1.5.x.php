@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of authorized_apps and echo a property for each one
-foreach ($client->account->authorizedConnectApps->read() as $authorizedApp) {
+foreach ($client->authorizedConnectApps->read() as $authorizedApp) {
     echo $authorizedApp->connectAppHomepageUrl;
 }

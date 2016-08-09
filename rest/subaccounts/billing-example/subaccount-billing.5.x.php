@@ -14,7 +14,7 @@ $timeToBill = 0;
 // 30 days ago
 $date = strtotime('-1 month');
 
-$calls = $client->account
+$calls = $client
     ->calls
     ->read(
         array("startTime" => date('Y-m-d', $date))

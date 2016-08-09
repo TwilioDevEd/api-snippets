@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$queue = $client->account->queues->create(
+$queue = $client->queues->create(
     array("friendlyName" => "newqueue")
 );
 

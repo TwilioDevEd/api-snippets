@@ -11,7 +11,7 @@ $apiSecret = 'your_api_secret';
 $client = new Client($apiKey, $apiSecret, $accountSid);
 
 // Send a message for the main account
-$message = $client->account->messages->create(
+$message = $client->messages->create(
     '+15558675309', // destination phone number
     array(
         'from' => '+15017250604', // twilio number in your account

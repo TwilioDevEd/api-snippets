@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$member = $client->account
+$member = $client
     ->queues("QU5ef8732a3c49700934481addd5ce1659")
     ->members("CA5ef8732a3c49700934481addd5ce1659")
     ->update(

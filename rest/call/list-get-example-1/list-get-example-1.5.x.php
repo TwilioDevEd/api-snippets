@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of calls and echo a property for each one
-foreach ($client->account->calls->read() as $call) {
+foreach ($client->calls->read() as $call) {
     echo $call->direction;
 }

@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ipAccessControlLists = $client->account->sip
+$ipAccessControlLists = $client->sip
     ->ipAccessControlLists
     ->read();
 

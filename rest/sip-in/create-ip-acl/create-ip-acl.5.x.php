@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ipAccessControlList = $client->account->sip
+$ipAccessControlList = $client->sip
     ->ipAccessControlLists
     ->create("My new acl");
 

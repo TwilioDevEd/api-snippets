@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$message = $client->account
+$message = $client
     ->messages("MM800f449d0399ed014aae2bcc0cc2f2ec")
     ->update(
         array("body" => "")

@@ -8,11 +8,11 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-// Loop over the list of accounts and echo a property for each one
 $accounts = $client->accounts->read(
-    array('status' => 'active'),
-    50
+    array('status' => 'active')
 );
+
+// Loop over the list of accounts and echo a property for each one
 foreach ($accounts as $account) {
     echo $account->friendlyName;
 }

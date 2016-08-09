@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$callerId = $client->account
+$callerId = $client
     ->outgoingCallerIds("PNe905d7e6b410746a0fb08c57e5a186f3")
     ->fetch();
 

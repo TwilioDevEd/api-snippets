@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$phoneNumberCountries = $client->pricing->phoneNumbers()->countries->read();
+$phoneNumberCountries = $client->pricing->phoneNumbers->countries->read();
 
 foreach ($phoneNumberCountries as $c) {
     echo $c->isoCountry . PHP_EOL;
