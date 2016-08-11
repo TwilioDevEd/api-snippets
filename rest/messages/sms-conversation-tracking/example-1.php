@@ -35,5 +35,5 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <Response>
-    <Sms><?php echo $name ?> has messaged <?php echo $_REQUEST['To']." ".$counter ?> times</Sms>
+    <Message><?php echo $name ?> has messaged <?php echo $_REQUEST['To']." ".$counter ?> times</Message>
 </Response>

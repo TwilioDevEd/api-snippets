@@ -30,5 +30,5 @@
 }
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Sms>@name has messaged @Request["To"] @counter times</Sms>
+    <Message>@name has messaged @Request["To"] @counter times</Message>
 </Response>

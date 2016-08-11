@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 import com.twilio.sdk.verbs.TwiMLResponse;
 import com.twilio.sdk.verbs.TwiMLException;
-import com.twilio.sdk.verbs.Sms;
+import com.twilio.sdk.verbs.Message;
 
 public class TwilioServlet extends HttpServlet {
 
@@ -45,7 +45,7 @@ public class TwilioServlet extends HttpServlet {
 
         // Create a TwiML response and add our friendly message.
         TwiMLResponse twiml = new TwiMLResponse();
-        Sms sms = new Sms(message);
+        Message sms = new Message(message);
         try {
             twiml.append(sms);
         } catch (TwiMLException e) {
