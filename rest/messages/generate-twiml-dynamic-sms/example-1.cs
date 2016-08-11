@@ -1,14 +1,24 @@
-using System;
-using Twilio;
-class TwilioAutoRespond {
-    static void Main(string[] args) {
-        Response.ContentType = "text/xml";
-        var twiml = new Twilio.TwiML.TwilioResponse();
-        var body = Request["Body"];
-        if( body == "hello" ){
-            twiml.Message("Hi!");
-        }else if( body == "bye" ){
-            twiml.Message("Goodbye");
-        }
-    }
+// In Package Manager, run:
+// Install-Package Twilio.Mvc -DependencyVersion HighestMinor
+
+using Twilio.Mvc;
+using Twilio.TwiML;
+using Twilio.TwiML.Mvc;
+
+public class HelloWorldController : TwilioController
+{
+  [HttpPost]
+  public ActionResult Index(SmsRequest request)
+  {
+      var response = new TwilioResponse();
+      if(request.body == "hello")
+      {
+        response.Message("Hi!");
+      }
+      else if(request.body == "bye")
+      {
+        response.Message("Goodbye");
+      }
+      return TwiML(response);
+  }
 }
