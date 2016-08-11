@@ -51,7 +51,6 @@ $workflow = $client->taskrouter
         "Sales, Marketing, Support Workflow",
         $json,
         "http://example.com"
-        $params)
-    );
+        $params);
 
 echo $workflow->friendlyName;
