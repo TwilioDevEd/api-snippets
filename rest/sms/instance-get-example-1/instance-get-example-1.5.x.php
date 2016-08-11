@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$sms = $client->sms
+$sms = $client
     ->messages("SM800f449d0399ed014aae2bcc0cc2f2ec")
     ->fetch();
 

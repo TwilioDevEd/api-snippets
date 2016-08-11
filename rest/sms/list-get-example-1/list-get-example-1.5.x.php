@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of smss and echo a property for each one
-foreach ($client->sms->messages->read() as $sms) {
+foreach ($client->messages->read() as $sms) {
     echo $sms->to;
 }

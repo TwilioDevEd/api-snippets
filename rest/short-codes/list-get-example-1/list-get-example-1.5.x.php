@@ -9,6 +9,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Loop over the list of short_codes and echo a property for each one
-foreach ($client->sms->shortCodes->read() as $shortCode) {
+foreach ($client->shortCodes->read() as $shortCode) {
     echo $shortCode->shortCode;
 }
