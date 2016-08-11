@@ -1,0 +1,5 @@
+{
+  "title": "Send SMS during voice call",
+  "type": "server",
+  "testable": false
+}
