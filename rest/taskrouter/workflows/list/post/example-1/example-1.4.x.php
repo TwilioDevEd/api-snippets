@@ -44,4 +44,4 @@ $params["FallbackAssignmentCallbackUrl"] = "http://example2.com";
 $params["TaskReservationTimeout"] = 30;
 
 $workflow = $client->workspace->workflows->create("Sales, Marketing, Support Workflow", $json, "http://example.com", $params);
-echo $workflow->friendlyName;
+echo $workflow->friendly_name;

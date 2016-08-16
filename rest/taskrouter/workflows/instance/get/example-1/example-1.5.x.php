@@ -17,4 +17,4 @@ $workflow = $client->taskrouter
     ->workflows($workflowSid)
     ->fetch();
 
-echo $workflow->friendlyName;
+echo $workflow->friendly_name;
