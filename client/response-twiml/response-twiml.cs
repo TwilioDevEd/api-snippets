@@ -5,7 +5,7 @@ using Twilio.Mvc;
 using Twilio.TwiML;
 using Twilio.TwiML.Mvc;
 
-public class HelloWorldController : TwilioController
+public class VoiceController : TwilioController
 {
   [HttpPost]
   public ActionResult Index(VoiceRequest request)

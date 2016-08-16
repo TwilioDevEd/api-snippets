@@ -21,6 +21,6 @@ public class TokenController : Controller
     capability.AllowClientIncoming("jenny");
     string token = capability.GenerateToken();
 
-    return Content(token);
+    return Content(token, "application/jwt");
   }
 }

@@ -7,4 +7,4 @@ use Twilio\Twiml;
 
 $response = new Twiml;
 $response->say("Thanks for calling!");
-print $response;
+echo $response;
