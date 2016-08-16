@@ -1,0 +1,1 @@
+_phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:nil];
