@@ -1,22 +1,30 @@
-// New File: handle-gather.cshtml
-@{
-    // otherwise, if 1 was pressed we <Dial> +13105551212. If 2 
-    // we make an audio recording up to 30 seconds long.
-    Response.ContentType = "text/xml";
+// In Package Manager, run:
+// Install-Package Twilio.Mvc -DependencyVersion HighestMinor
+
+using Twilio.Mvc;
+using Twilio.TwiML;
+using Twilio.TwiML.Mvc;
+
+public class VoiceController : TwilioController
+{
+  // /Voice/HandleGather
+  public TwiMLResult HandleGather(VoiceRequest request)
+  {
+    var response = new TwilioResponse();
+    switch (request.Digits)
+    {
+      case "1":
+        response.Dial("+13105551212");
+        response.Say("The call failed or the remote party hung up.  Goodbye.");
+        break;
+      case "2":
+        response.Say("Record your message after the tone.");
+        response.Record(new {maxLength = "30", action = "/Voice/HandleRecord"});
+        break;
+      default:
+        response.Redirect("/Voice");
+        break;
+    }
+    return TwiML(response);
+  }
 }
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-    @if (Request["Digits"] == "1")
-    {
-        <Dial>+13105551212</Dial>
-        <Say>The call failed or the remote party hung up.  Goodbye.</Say>
-    } 
-    else if (Request["Digits"] == "2") 
-    {
-        <Say>Record your message after the tone.</Say>
-        <Record maxLength="30" action="handle-recording.cshtml" />
-    }
-    else {
-        <Redirect>/</Redirect>
-    }
-</Response>

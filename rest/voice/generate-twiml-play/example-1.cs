@@ -1,5 +1,18 @@
-Response.ContentType = "text/xml";
-var twiml = new Twilio.TwiML.TwilioResponse();
+// In Package Manager, run:
+// Install-Package Twilio.Mvc -DependencyVersion HighestMinor
 
-twiml.Say("Hello. It's me.")
-twiml.Play("http://ia600303.us.archive.org/4/items/Wednesdy-tuesdy-ramblinSound/Wednesdy-tuesdyRamblinSound.mp3")
+using Twilio.Mvc;
+using Twilio.TwiML;
+using Twilio.TwiML.Mvc;
+
+public class VoiceController : TwilioController
+{
+  // /Voice
+  public TwiMLResult Index(VoiceRequest request)
+  {
+    var response = new TwilioResponse();
+    response.Say("Hello. It's me.");
+    response.Play("http://dpro.rocks/the-more-you-know.mp3");
+    return TwiML(response);
+  }
+}
