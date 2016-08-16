@@ -1,10 +1,7 @@
-var express = require('express');
-var http = require('http');
-var Twilio = require('twilio');
+var http = require('http'),
+    twilio = require('twilio');
 
-var app = express();
-
-app.get('/token', function(request, response) {
+http.createServer(function (req, res) {
   // put your Twilio API credentials here
   var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   var authToken = "your_auth_token";
@@ -12,15 +9,12 @@ app.get('/token', function(request, response) {
   // put your Twilio Application Sid here
   var appSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-  var capability = new Twilio.Capability(accountSid, authToken);
+  var capability = new twilio.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);
   capability.allowClientIncoming("jenny");
   var token = capability.generate();
 
-  response.send(token);
-});
+  res.end(token);
+}).listen(1337, '127.0.0.1');
 
-var port = process.env.port || 3000;
-http.createServer(app).listen(port, function() {
-    console.log('Node server listening on port ' + port);
-});
+console.log('Token servin\' server running at http://127.0.0.1:1337/');
