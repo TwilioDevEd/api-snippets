@@ -3,7 +3,13 @@ require 'sinatra'
 
 post '/voice' do
   twiml = Twilio::TwiML::Response.new do |r|
-    r.Say "Thanks for calling!"
+    if params['To']
+      r.Dial callerId: '+15017250604' do |d|
+        d.Number params['To']
+      end
+    else
+      r.Say "Thanks for calling!"
+    end
   end
   
   content_type 'text/xml'
