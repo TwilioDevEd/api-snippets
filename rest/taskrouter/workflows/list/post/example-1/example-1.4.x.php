@@ -1,7 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
-require_once('/path/to/twilio-php/Services/Twilio/WorkflowConfiguration.php'); // Loads the non-autoload class (due to class naming with this version)
 
 // Your Account Sid and Auth Token from twilio.com/user/account
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
