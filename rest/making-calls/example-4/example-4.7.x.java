@@ -1,11 +1,13 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.List;
 
-import com.twilio.rest.Twilio;
-import com.twilio.rest.http.HttpMethod;
-import com.twilio.rest.resource.api.v2010.account.Call;
-import com.twilio.rest.type.PhoneNumber;
+import com.twilio.Twilio;
+import com.twilio.http.HttpMethod;
+import com.twilio.rest.api.v2010.account.Call;
+import com.twilio.type.PhoneNumber;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -15,11 +17,13 @@ public class Example {
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
+    List<String> callbackEvents = Arrays.asList("initiated", "ringing", "answered", "completed");
+
     Call call = Call
         .create(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
             new URI("http://demo.twilio.com/docs/voice.xml"))
         .setMethod(HttpMethod.GET).setStatusCallback("https://www.myapp.com/events")
-        .setStatusCallbackMethod(HttpMethod.POST).execute();
+        .setStatusCallbackMethod(HttpMethod.POST).setStatusCallbackEvent(callbackEvents).execute();
 
     System.out.println(call.getSid());
   }

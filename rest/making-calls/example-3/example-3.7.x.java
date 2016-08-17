@@ -2,10 +2,10 @@
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import com.twilio.rest.Twilio;
-import com.twilio.rest.http.HttpMethod;
-import com.twilio.rest.resource.api.v2010.account.Call;
-import com.twilio.rest.type.PhoneNumber;
+import com.twilio.Twilio;
+import com.twilio.http.HttpMethod;
+import com.twilio.rest.api.v2010.account.Call;
+import com.twilio.type.PhoneNumber;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
