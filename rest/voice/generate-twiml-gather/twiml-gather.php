@@ -6,7 +6,7 @@
 ?>
 <Response>
     <Say>Hello. It's me.</Say>
-    <Play>http://ia600303.us.archive.org/4/items/Wednesdy-tuesdy-ramblinSound/Wednesdy-tuesdyRamblinSound.mp3</Play>
+    <Play>http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3</Play>
     <Gather numDigits="1" action="handle-gather.php" method="POST">
         <Say>
             To speak with a real person, press 1.  

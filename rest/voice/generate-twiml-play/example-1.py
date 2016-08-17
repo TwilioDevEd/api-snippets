@@ -9,7 +9,7 @@ def voice():
 
     resp = twilio.twiml.Response()
     resp.say("Hello. It's me.")
-    resp.play("http://ia600303.us.archive.org/4/items/Wednesdy-tuesdy-ramblinSound/Wednesdy-tuesdyRamblinSound.mp3")
+    resp.play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3")
     return str(resp)
 
 if __name__ == "__main__":

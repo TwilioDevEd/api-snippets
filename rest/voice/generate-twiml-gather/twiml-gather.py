@@ -11,7 +11,7 @@ def voice():
     # Greet the caller by name
     resp.say("Hello. It's me. ")
     # Play an mp3
-    resp.play("http://ia600303.us.archive.org/4/items/Wednesdy-tuesdy-ramblinSound/Wednesdy-tuesdyRamblinSound.mp3")
+    resp.play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3")
 
     # Gather digits.
     with resp.gather(numDigits=1, action="/handle-gather", method="POST") as g:
