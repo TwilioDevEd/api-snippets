@@ -1,0 +1,5 @@
+<Response>
+    <Say>Listen to your recorded message.</Say>
+    <Play>https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/REf0630a52f2c78ab5ed7381070b05a937.mp3</Play>
+    <Say>Goodbye.</Say>
+</Response>
