@@ -3,10 +3,10 @@
 	"date_created": "Thu, 19 Aug 2010 00:12:15 +0000",
 	"date_updated": "Thu, 19 Aug 2010 00:12:15 +0000",
 	"parent_call_sid": null,
-	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-	"to": "+14155551212",
+	"account_sid": "{{#accountSid}}{{accountSid}}{{/accountSid}}",
+	"to": "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}",
 	"formatted_to": "(415) 555-1212",
-	"from": "+18668675309",
+	"from": "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}",
 	"formatted_from": "(866) 867-5309",
 	"phone_number_sid": "PNd6b0e1e84f7b117332aed2fd2e5bbcab",
 	"status": "queued",
@@ -15,13 +15,13 @@
 	"duration": null,
 	"price": null,
 	"direction": "outbound-api",
-	"answered_by": null,
+	"{{#answeredCallEvent}}{{answeredCallEvent}}{{/answeredCallEvent}}_by": null,
 	"api_version": "2010-04-01",
 	"forwarded_from": null,
 	"caller_name": null,
-	"uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d.json",
+	"uri": "\/2010-04-01\/Accounts\/{{#accountSid}}{{accountSid}}{{/accountSid}}\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d.json",
 	"subresource_uris": {
-		"notifications": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d\/Notifications.json",
-		"recordings": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d\/Recordings.json"
+		"notifications": "\/2010-04-01\/Accounts\/{{#accountSid}}{{accountSid}}{{/accountSid}}\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d\/Notifications.json",
+		"recordings": "\/2010-04-01\/Accounts\/{{#accountSid}}{{accountSid}}{{/accountSid}}\/Calls\/CAc7a1fe47b14637f42fd94274d1907a1d\/Recordings.json"
 	}
 }

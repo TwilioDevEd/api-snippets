@@ -9,16 +9,16 @@ import com.twilio.type.PhoneNumber;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  public static final String ACCOUNT_SID = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+  public static final String AUTH_TOKEN = "{{#authToken}}{{authToken}}{{/authToken}}";
 
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .create(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
-            new URI("http://demo.twilio.com/docs/voice.xml"))
-        .setMethod(HttpMethod.GET).setSendDigits("1234#").execute();
+        .create(new PhoneNumber("{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}"), new PhoneNumber("{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}"),
+            new URI("{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}"))
+        .setMethod(HttpMethod.{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}).setSendDigits("{{#sendDigits}}{{sendDigits}}{{/sendDigits}}").execute();
 
     System.out.println(call.getSid());
   }

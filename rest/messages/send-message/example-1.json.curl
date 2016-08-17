@@ -1,6 +1,6 @@
-curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json' \
---data-urlencode 'To=+15558675309'  \
---data-urlencode 'From=+15017250604'  \
---data-urlencode 'Body=Hey Jenny! Good luck on the bar exam!'  \
--d 'MediaUrl=http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg' \
--u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:[AuthToken]
+curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/{{#accountSid}}{{accountSid}}{{/accountSid}}/Messages.json' \
+--data-urlencode 'To={{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}'  \
+--data-urlencode 'From={{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}'  \
+--data-urlencode 'Body={{#messageBody}}{{messageBody}}{{/messageBody}}'  \
+-d 'MediaUrl={{#messageMediaUrl}}{{messageMediaUrl}}{{/messageMediaUrl}}' \
+-u {{#accountSid}}{{accountSid}}{{/accountSid}}:{{#authToken}}{{authToken}}{{/authToken}}

@@ -12,19 +12,19 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  public static final String ACCOUNT_SID = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+  public static final String AUTH_TOKEN = "{{#authToken}}{{authToken}}{{/authToken}}";
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     // Build a filter for the CallList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("Url", "http://demo.twilio.com/docs/voice.xml"));
-    params.add(new BasicNameValuePair("To", "+14155551212"));
-    params.add(new BasicNameValuePair("SendDigits", "1234#"));
-    params.add(new BasicNameValuePair("From", "+18668675309"));
-    params.add(new BasicNameValuePair("Method", "GET"));
+    params.add(new BasicNameValuePair("Url", "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}"));
+    params.add(new BasicNameValuePair("To", "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}"));
+    params.add(new BasicNameValuePair("SendDigits", "{{#sendDigits}}{{sendDigits}}{{/sendDigits}}"));
+    params.add(new BasicNameValuePair("From", "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}"));
+    params.add(new BasicNameValuePair("Method", "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}"));
     
     
     CallFactory callFactory = client.getAccount().getCallFactory();

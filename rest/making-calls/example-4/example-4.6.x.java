@@ -12,24 +12,24 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  public static final String ACCOUNT_SID = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+  public static final String AUTH_TOKEN = "{{#authToken}}{{authToken}}{{/authToken}}";
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     // Build a filter for the CallList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("Url", "http://demo.twilio.com/docs/voice.xml"));
-    params.add(new BasicNameValuePair("To", "+14155551212"));
-    params.add(new BasicNameValuePair("From", "+18668675309"));
-    params.add(new BasicNameValuePair("Method", "GET"));
-    params.add(new BasicNameValuePair("StatusCallback", "https://www.myapp.com/events"));
-    params.add(new BasicNameValuePair("StatusCallbackMethod", "POST"));
-    params.add(new BasicNameValuePair("StatusCallbackEvent", "initiated"));
-    params.add(new BasicNameValuePair("StatusCallbackEvent", "ringing"));
-    params.add(new BasicNameValuePair("StatusCallbackEvent", "answered"));
-    params.add(new BasicNameValuePair("StatusCallbackEvent", "completed"));
+    params.add(new BasicNameValuePair("Url", "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}"));
+    params.add(new BasicNameValuePair("To", "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}"));
+    params.add(new BasicNameValuePair("From", "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}"));
+    params.add(new BasicNameValuePair("Method", "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}"));
+    params.add(new BasicNameValuePair("StatusCallback", "{{#voiceStatusCallbackUrl}}{{voiceStatusCallbackUrl}}{{/voiceStatusCallbackUrl}}"));
+    params.add(new BasicNameValuePair("StatusCallbackMethod", "{{#postHttpMethod}}{{postHttpMethod}}{{/postHttpMethod}}"));
+    params.add(new BasicNameValuePair("StatusCallbackEvent", "{{#initiatedCallEvent}}{{initiatedCallEvent}}{{/initiatedCallEvent}}"));
+    params.add(new BasicNameValuePair("StatusCallbackEvent", "{{#ringingCallEvent}}{{ringingCallEvent}}{{/ringingCallEvent}}"));
+    params.add(new BasicNameValuePair("StatusCallbackEvent", "{{#answeredCallEvent}}{{answeredCallEvent}}{{/answeredCallEvent}}"));
+    params.add(new BasicNameValuePair("StatusCallbackEvent", "{{#completedCallEvent}}{{completedCallEvent}}{{/completedCallEvent}}"));
 
 
     CallFactory callFactory = client.getAccount().getCallFactory();

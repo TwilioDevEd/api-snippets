@@ -6,14 +6,14 @@ class Example
   static void Main(string[] args) 
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "your_auth_token";
+    string AccountSid = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+    string AuthToken = "{{#authToken}}{{authToken}}{{/authToken}}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     var options = new CallOptions();
-    options.Url = "http://demo.twilio.com/docs/voice.xml";
-    options.To = "+14155551212";
-    options.From = "+15017250604";
+    options.Url = "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}";
+    options.To = "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}";
+    options.From = "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}";
     var call = twilio.InitiateOutboundCall(options);
     
     Console.WriteLine(call.Sid);

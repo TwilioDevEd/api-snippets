@@ -1,12 +1,12 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls \
-    -d "Url=http://demo.twilio.com/docs/voice.xml" \
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{#accountSid}}{{accountSid}}{{/accountSid}}/Calls \
+    -d "Url={{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}" \
     -d "To=%2B14155551212" \
     -d "From=%2B18668675309" \
-    -d "Method=GET" \
-    -d "StatusCallback=https://www.myapp.com/events" \
-    -d "StatusCallbackMethod=POST" \
-    -d "StatusCallbackEvent=initiated" \
-    -d "StatusCallbackEvent=ringing" \
-    -d "StatusCallbackEvent=answered" \
-    -d "StatusCallbackEvent=completed" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
+    -d "Method={{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}" \
+    -d "StatusCallback={{#voiceStatusCallbackUrl}}{{voiceStatusCallbackUrl}}{{/voiceStatusCallbackUrl}}" \
+    -d "StatusCallbackMethod={{#postHttpMethod}}{{postHttpMethod}}{{/postHttpMethod}}" \
+    -d "StatusCallbackEvent={{#initiatedCallEvent}}{{initiatedCallEvent}}{{/initiatedCallEvent}}" \
+    -d "StatusCallbackEvent={{#ringingCallEvent}}{{ringingCallEvent}}{{/ringingCallEvent}}" \
+    -d "StatusCallbackEvent={{#answeredCallEvent}}{{answeredCallEvent}}{{/answeredCallEvent}}" \
+    -d "StatusCallbackEvent={{#completedCallEvent}}{{completedCallEvent}}{{/completedCallEvent}}" \
+    -u '{{#accountSid}}{{accountSid}}{{/accountSid}}:{{#authToken}}{{authToken}}{{/authToken}}'

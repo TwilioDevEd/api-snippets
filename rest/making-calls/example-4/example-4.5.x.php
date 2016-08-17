@@ -4,19 +4,19 @@ require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "your_auth_token";
+$sid = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+$token = "{{#authToken}}{{authToken}}{{/authToken}}";
 $client = new Client($sid, $token);
 
 $call = $client->calls->create(
-    "+14155551212", "+18668675309",
+    "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}", "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}",
     array(
-        "url" => "http://demo.twilio.com/docs/voice.xml",
-        "method" => "GET",
-        "statusCallbackMethod" => "POST",
-        "statusCallback" => "https://www.myapp.com/events",
+        "url" => "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}",
+        "method" => "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}",
+        "statusCallbackMethod" => "{{#postHttpMethod}}{{postHttpMethod}}{{/postHttpMethod}}",
+        "statusCallback" => "{{#voiceStatusCallbackUrl}}{{voiceStatusCallbackUrl}}{{/voiceStatusCallbackUrl}}",
         "statusCallbackEvent" => array(
-            "initiated", "ringing", "answered", "completed"
+            "{{#initiatedCallEvent}}{{initiatedCallEvent}}{{/initiatedCallEvent}}", "{{#ringingCallEvent}}{{ringingCallEvent}}{{/ringingCallEvent}}", "{{#answeredCallEvent}}{{answeredCallEvent}}{{/answeredCallEvent}}", "{{#completedCallEvent}}{{completedCallEvent}}{{/completedCallEvent}}"
         )
     )
 );

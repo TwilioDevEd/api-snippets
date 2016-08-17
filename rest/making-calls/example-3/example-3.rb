@@ -3,13 +3,13 @@ require 'rubygems'          # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = 'your_auth_token'
+account_sid = '{{#accountSid}}{{accountSid}}{{/accountSid}}'
+auth_token = '{{#authToken}}{{authToken}}{{/authToken}}'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-call = @client.account.calls.create(:url => "http://demo.twilio.com/docs/voice.xml",
-    :to => "+14155551212",
-    :send_digits => "1234#",
-    :from => "+18668675309",
-    :method => "GET")
+call = @client.account.calls.create(:url => "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}",
+    :to => "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}",
+    :send_digits => "{{#sendDigits}}{{sendDigits}}{{/sendDigits}}",
+    :from => "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}",
+    :method => "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}")
 puts call.start_time
