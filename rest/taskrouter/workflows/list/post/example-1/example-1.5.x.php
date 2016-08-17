@@ -53,4 +53,4 @@ $workflow = $client->taskrouter
         "http://example.com"
         $params);
 
-echo $workflow->friendly_name;
+echo $workflow->friendlyName;
