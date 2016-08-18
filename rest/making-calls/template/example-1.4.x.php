@@ -18,7 +18,7 @@ $call = $client->account->calls->create(
         {{#callStatusCallbackMethod}}"StatusCallbackMethod" => "{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
         {{#callStatusCallbackEvent}}
         "StatusCallbackEvent" => array(
-            {{#callStatusCallbackEvents}}{{callStatusCallbackEvents}},{{/callStatusCallbackEvents}}
+            {{#callStatusCallbackEvents}}{{.}},{{/callStatusCallbackEvents}}
         ),
         {{/callStatusCallbackEvent}}
     )
