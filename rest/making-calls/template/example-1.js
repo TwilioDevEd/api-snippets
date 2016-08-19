@@ -16,7 +16,7 @@ client.calls.create({
     {{#callStatusCallbackEvent}}
     statusCallbackEvent: [
     {{#callStatusCallbackEvents}}
-        "{{.}}"
+        "{{.}}",
     {{/callStatusCallbackEvents}}
     ],
     {{/callStatusCallbackEvent}}
