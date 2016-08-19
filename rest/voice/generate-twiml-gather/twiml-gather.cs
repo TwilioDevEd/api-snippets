@@ -12,7 +12,7 @@ public class VoiceController : TwilioController
   {
     var response = new TwilioResponse();
     response.Say("Hello. It's me.", new {voice = "alice", language = "en-GB"});
-    response.Play("http://dpro.rocks/the-more-you-know.mp3");
+    response.Play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3");
     response.BeginGather(new {numDigits = "1", action = "/Voice/HandleGather"});
     response.Say("To speak to a real person, press 1.\n" +
       "Press 2 to record a message for a Twilio educator.\n" +

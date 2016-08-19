@@ -12,7 +12,7 @@ public class VoiceController : TwilioController
   {
     var response = new TwilioResponse();
     response.Say("Hello. It's me.");
-    response.Play("http://dpro.rocks/the-more-you-know.mp3");
+    response.Play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3");
     return TwiML(response);
   }
 }
