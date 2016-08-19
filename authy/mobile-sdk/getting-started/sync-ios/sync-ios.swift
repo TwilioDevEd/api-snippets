@@ -1,0 +1,3 @@
+self.authy?.sync({ (error: AUTError?) -> Void in
+    // ...
+})

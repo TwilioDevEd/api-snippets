@@ -1,0 +1,3 @@
+self.authy?.registerDevice(withRegistrationToken: registrationToken, andUniqueDeviceId: uniqueDeviceId, handler: { (error: AUTError?) -> Void in
+    // ...
+})
