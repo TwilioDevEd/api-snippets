@@ -3,8 +3,8 @@
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-{{#accountSid}}$sid = "{{accountSid}}";{{/accountSid}}
-{{#authToken}}$token = "{{authToken}}";{{/authToken}}
+$sid = "{{accountSid}}";
+$token = "{{authToken}}";
 $client = new Services_Twilio($sid, $token);
 
 $call = $client->account->calls->create(
@@ -12,8 +12,8 @@ $call = $client->account->calls->create(
     {{#toPhoneNumber}}"{{toPhoneNumber}}",{{/toPhoneNumber}}{{#toVoiceClient}}"{{toVoiceClient}}",{{/toVoiceClient}}
     {{#callUrl}}"{{callUrl}}",{{/callUrl}}
     array(
-        {{#sendDigitsVoice}}"SendDigits" => "{{#sendDigitsVoice}}",{{/sendDigitsVoice}}
-        {{#callMethod}}"Method" => "{{#callMethod}}",{{/callMethod}}
+        {{#sendDigitsVoice}}"SendDigits" => "{{sendDigitsVoice}}",{{/sendDigitsVoice}}
+        {{#callMethod}}"Method" => "{{callMethod}}",{{/callMethod}}
         {{#callStatusCallback}}"StatusCallback" => "{{callStatusCallback}}",{{/callStatusCallback}}
         {{#callStatusCallbackMethod}}"StatusCallbackMethod" => "{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
         {{#callStatusCallbackEvent}}

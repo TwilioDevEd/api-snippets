@@ -12,8 +12,8 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
-  {{#accountSid}}public static final String ACCOUNT_SID = "{{accountSid}}";{{/accountSid}}
-  {{#authToken}}public static final String AUTH_TOKEN = "{{authToken}}";{{/authToken}}
+  public static final String ACCOUNT_SID = "{{accountSid}}";
+  public static final String AUTH_TOKEN = "{{authToken}}";
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
@@ -24,8 +24,8 @@ public class Example {
     {{#toPhoneNumber}}params.add(new BasicNameValuePair("To", "{{toPhoneNumber}}"));{{/toPhoneNumber}}
     {{#toVoiceClient}}params.add(new BasicNameValuePair("To", "{{toVoiceClient}}"));{{/toVoiceClient}}
     {{#callUrl}}params.add(new BasicNameValuePair("Url", "{{callUrl}}"));{{/callUrl}}
-    {{#sendDigitsVoice}}params.add(new BasicNameValuePair("SendDigits", "{{#sendDigitsVoice}}"));{{/sendDigitsVoice}}
-    {{#callMethod}}params.add(new BasicNameValuePair("Method", "{{#callMethod}}"));{{/callMethod}}
+    {{#sendDigitsVoice}}params.add(new BasicNameValuePair("SendDigits", "{{sendDigitsVoice}}"));{{/sendDigitsVoice}}
+    {{#callMethod}}params.add(new BasicNameValuePair("Method", "{{callMethod}}"));{{/callMethod}}
     {{#callStatusCallback}}params.add(new BasicNameValuePair("StatusCallback", "{{callStatusCallback}}"));{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}params.add(new BasicNameValuePair("StatusCallbackMethod", "{{callStatusCallbackMethod}}"));{{/callStatusCallbackMethod}}
     {{#callStatusCallbackEvents}}

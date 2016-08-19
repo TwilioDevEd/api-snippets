@@ -6,8 +6,8 @@ class Example
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    {#accountSid}}string AccountSid = "{{accountSid}}";{{/accountSid}}
-    {{#authToken}}string AuthToken = "{{authToken}}";{{/authToken}}
+    string AccountSid = "{{accountSid}}";
+    string AuthToken = "{{authToken}}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     var options = new CallOptions();
@@ -15,8 +15,8 @@ class Example
     {{#toPhoneNumber}}options.To = "{{toPhoneNumber}}";{{/toPhoneNumber}}
     {{#toVoiceClient}}options.To = "{{toVoiceClient}}";{{/toVoiceClient}}
     {{#callUrl}}options.Url = "{{callUrl}}";{{/callUrl}}
-    {{#sendDigitsVoice}}options.SendDigits = "{{#sendDigitsVoice}}";{{/sendDigitsVoice}}
-    {{#callMethod}}options.Method = "{{#callMethod}}";{{/callMethod}}
+    {{#sendDigitsVoice}}options.SendDigits = "{{sendDigitsVoice}}";{{/sendDigitsVoice}}
+    {{#callMethod}}options.Method = "{{callMethod}}";{{/callMethod}}
     {{#callStatusCallback}}options.StatusCallback = "{{callStatusCallback}}";{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}options.StatusCallbackMethod = "{{callStatusCallbackMethod}}";{{/callStatusCallbackMethod}}
     {{#callStatusCallbackEvent}}options.StatusCallbackEvents = new string[] { {{#callStatusCallbackEvents}}{{.}}{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}

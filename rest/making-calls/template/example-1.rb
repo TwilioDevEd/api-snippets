@@ -3,8 +3,8 @@ require 'rubygems'          # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
-{{#accountSid}}account_sid = "{{accountSid}}"{{/accountSid}}
-{{#authToken}}auth_token = "{{authToken}}"{{/authToken}}
+account_sid = "{{accountSid}}"
+auth_token = "{{authToken}}"
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 call = @client.account.calls.create(
@@ -12,8 +12,8 @@ call = @client.account.calls.create(
     {{#toPhoneNumber}}to: "{{toPhoneNumber}}",{{/toPhoneNumber}}
     {{#toVoiceClient}}to: "{{toVoiceClient}}",{{/toVoiceClient}}
     {{#callUrl}}url: "{{callUrl}}",{{/callUrl}}
-    {{#sendDigitsVoice}}send_digits: "{{#sendDigitsVoice}}",{{/sendDigitsVoice}}
-    {{#callMethod}}method: "{{#callMethod}}",{{/callMethod}}
+    {{#sendDigitsVoice}}send_digits: "{{sendDigitsVoice}}",{{/sendDigitsVoice}}
+    {{#callMethod}}method: "{{callMethod}}",{{/callMethod}}
     {{#callStatusCallback}}status_callback: "{{callStatusCallback}}",{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}status_callback_method: "{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
     {{#callStatusCallbackEvent}}

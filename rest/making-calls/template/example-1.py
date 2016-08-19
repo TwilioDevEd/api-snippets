@@ -2,8 +2,8 @@
 from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-{{#accountSid}}account_sid = "{{accountSid}}"{{/accountSid}}
-{{#authToken}}auth_token = "{{authToken}}"{{/authToken}}
+account_sid = "{{accountSid}}"
+auth_token = "{{authToken}}"
 client = TwilioRestClient(account_sid, auth_token)
 
 call = client.calls.create(
@@ -11,8 +11,8 @@ call = client.calls.create(
     {{#toPhoneNumber}}to="{{toPhoneNumber}}",{{/toPhoneNumber}}
     {{#toVoiceClient}}to="{{toVoiceClient}}",{{/toVoiceClient}}
     {{#callUrl}}url="{{callUrl}}",{{/callUrl}}
-    {{#sendDigitsVoice}}send_digits="{{#sendDigitsVoice}}",{{/sendDigitsVoice}}
-    {{#callMethod}}method: "{{#callMethod}}",{{/callMethod}}
+    {{#sendDigitsVoice}}send_digits="{{sendDigitsVoice}}",{{/sendDigitsVoice}}
+    {{#callMethod}}method: "{{callMethod}}",{{/callMethod}}
     {{#callStatusCallback}}status_callback="{{callStatusCallback}}",{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}status_callback_method="{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
     {{#callStatusCallbackEvent}}
