@@ -1,0 +1,2 @@
+$ curl -XGET 'https://lookups.twilio.com/v1/PhoneNumbers/%2B15108675309' \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
