@@ -12,4 +12,4 @@ $capability = new ClientToken($accountSid, $authToken);
 $capability->allowClientOutgoing($appSid);
 $token = $capability->generateToken();
 
-echo $token
+echo $token;

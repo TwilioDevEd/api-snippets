@@ -1,0 +1,1 @@
+$token = $capability->generateToken(600);
