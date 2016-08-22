@@ -10,9 +10,8 @@ $client = new Services_Twilio($sid, $token);
 $call = $client->account->calls->create(
     {{#fromPhoneNumber}}"{{fromPhoneNumber}}",{{/fromPhoneNumber}}
     {{#toPhoneNumber}}"{{toPhoneNumber}}",{{/toPhoneNumber}}{{#toVoiceClient}}"{{toVoiceClient}}",{{/toVoiceClient}}
-    {{#callUrl}}"{{callUrl}}",{{/callUrl}}
+    {{#callUrl}}"{{callUrl}}",{{/callUrl}}{{#applicationSid}}"{{applicationSid}}",{{/applicationSid}}
     array(
-        {{#applicationSid}}"ApplicationSid" => "{{applicationSid}}",{{/applicationSid}}
         {{#sendDigitsVoice}}"SendDigits" => "{{sendDigitsVoice}}",{{/sendDigitsVoice}}
         {{#callMethod}}"Method" => "{{callMethod}}",{{/callMethod}}
         {{#callStatusCallback}}"StatusCallback" => "{{callStatusCallback}}",{{/callStatusCallback}}
