@@ -19,7 +19,7 @@ class Example
     {{#callMethod}}options.Method = "{{callMethod}}";{{/callMethod}}
     {{#callStatusCallback}}options.StatusCallback = "{{callStatusCallback}}";{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}options.StatusCallbackMethod = "{{callStatusCallbackMethod}}";{{/callStatusCallbackMethod}}
-    {{#callStatusCallbackEvent}}options.StatusCallbackEvents = new string[] { {{#callStatusCallbackEvents}}{{.}}{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}
+    {{#callStatusCallbackEvent}}options.StatusCallbackEvents = new string[] { {{#callStatusCallbackEvents}}{{.}},{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}
 
     var call = twilio.InitiateOutboundCall(options);
 

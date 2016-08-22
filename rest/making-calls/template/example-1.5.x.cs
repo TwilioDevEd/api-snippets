@@ -3,7 +3,8 @@ using System;
 using Twilio;
 using Twilio.Resources.Api.V2010.Account;
 using Twilio.Types;
-using Twilio.Http;
+{{#callMethod}}using Twilio.Http;{{/callMethod}}
+{{#callStatusCallbackMethod}}using Twilio.Http;{{/callStatusCallbackMethod}}
 
 class Example
 {
@@ -16,18 +17,18 @@ class Example
 
     {{#callUrl}}
       {{#toVoiceClient}}
-    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("from"), new Uri("{{callUrl}}"));
+    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("{{fromPhoneNumber}}"), new Uri("{{callUrl}}"));
       {{/toVoiceClient}}
       {{#toPhoneNumber}}
-    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("from"), new Uri("{{callUrl}}"));
+    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("{{fromPhoneNumber}}"), new Uri("{{callUrl}}"));
       {{/toPhoneNumber}}
     {{/callUrl}}
     {{#applicationSid}}
       {{#toVoiceClient}}
-    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("from"), "{{applicationSid}}");
+    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("{{fromPhoneNumber}}"), "{{applicationSid}}");
       {{/toVoiceClient}}
       {{#toPhoneNumber}}
-    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("from"), "applicationSid");
+    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("{{fromPhoneNumber}}"), "{{applicationSid}}");
       {{/toPhoneNumber}}
     {{/applicationSid}}
 
@@ -35,7 +36,7 @@ class Example
     {{#callMethod}}callCreator.setMethod(HttpMethod.{{callMethod}});{{/callMethod}}
     {{#callStatusCallback}}callCreator.setStatusCallback("{{callStatusCallback}}");{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}callCreator.setStatusCallbackMethod(HttpMethod.{{callStatusCallbackMethod}});{{/callStatusCallbackMethod}}
-    {{#callStatusCallbackEvent}}callCreator.setStatusCallbackEvent = new string[] { {{#callStatusCallbackEvents}}{{.}}{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}
+    {{#callStatusCallbackEvent}}callCreator.setStatusCallbackEvent = new string[] { {{#callStatusCallbackEvents}}{{.}},{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}
 
     var call = callCreator.Execute();
 
