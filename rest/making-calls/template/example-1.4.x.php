@@ -12,10 +12,21 @@ $call = $client->account->calls->create(
     {{#toPhoneNumber}}"{{toPhoneNumber}}",{{/toPhoneNumber}}{{#toVoiceClient}}"{{toVoiceClient}}",{{/toVoiceClient}}
     {{#callUrl}}"{{callUrl}}",{{/callUrl}}
     array(
+        {{#applicationSid}}"ApplicationSid" => "{{applicationSid}}",{{/applicationSid}}
         {{#sendDigitsVoice}}"SendDigits" => "{{sendDigitsVoice}}",{{/sendDigitsVoice}}
         {{#callMethod}}"Method" => "{{callMethod}}",{{/callMethod}}
         {{#callStatusCallback}}"StatusCallback" => "{{callStatusCallback}}",{{/callStatusCallback}}
         {{#callStatusCallbackMethod}}"StatusCallbackMethod" => "{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
+        {{#callFallbackUrl}}"FallbackUrl" => "{{callFallbackUrl}}",{{/callFallbackUrl}}
+        {{#callFallbackMethod}}"FallbackMethod" => "{{callFallbackMethod}}",{{/callFallbackMethod}}
+        {{#callIfMachine}}"IfMachine" => "{{callIfMachine}}",{{/callIfMachine}}
+        {{#callTimeout}}"Timeout" => "{{callTimeout}}",{{/callTimeout}}
+        {{#callRecord}}"Record" => "{{callRecord}}",{{/callRecord}}
+        {{#callRecordingChannels}}"RecordingChannels" => "{{callRecordingChannels}}",{{/callRecordingChannels}}
+        {{#callRecordingStatusCallback}}"RecordingStatusCallback" => "{{callRecordingStatusCallback}}",{{/callRecordingStatusCallback}}
+        {{#callRecordingStatusCallbackMethod}}"RecordingStatusCallbackMethod" => "{{callRecordingStatusCallbackMethod}}",{{/callRecordingStatusCallbackMethod}}
+        {{#callSipAuthUsername}}"SipAuthUsername" => "{{callSipAuthUsername}}",{{/callSipAuthUsername}}
+        {{#callSipAuthPassword}}"SipAuthPassword" => "{{callSipAuthPassword}}",{{/callSipAuthPassword}}
         {{#callStatusCallbackEvent}}
         "StatusCallbackEvent" => array(
             {{#callStatusCallbackEvents}}{{.}},{{/callStatusCallbackEvents}}

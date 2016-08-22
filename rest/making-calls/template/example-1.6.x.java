@@ -24,10 +24,21 @@ public class Example {
     {{#toPhoneNumber}}params.add(new BasicNameValuePair("To", "{{toPhoneNumber}}"));{{/toPhoneNumber}}
     {{#toVoiceClient}}params.add(new BasicNameValuePair("To", "{{toVoiceClient}}"));{{/toVoiceClient}}
     {{#callUrl}}params.add(new BasicNameValuePair("Url", "{{callUrl}}"));{{/callUrl}}
+    {{#applicationSid}}params.add(new BasicNameValuePair("ApplicationSid", "{{applicationSid}}")),{{/applicationSid}}
     {{#sendDigitsVoice}}params.add(new BasicNameValuePair("SendDigits", "{{sendDigitsVoice}}"));{{/sendDigitsVoice}}
     {{#callMethod}}params.add(new BasicNameValuePair("Method", "{{callMethod}}"));{{/callMethod}}
     {{#callStatusCallback}}params.add(new BasicNameValuePair("StatusCallback", "{{callStatusCallback}}"));{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}params.add(new BasicNameValuePair("StatusCallbackMethod", "{{callStatusCallbackMethod}}"));{{/callStatusCallbackMethod}}
+    {{#callFallbackUrl}}params.add(new BasicNameValuePair("FallbackUrl", "{{callFallbackUrl}}"));{{/callFallbackUrl}}
+    {{#callFallbackMethod}}params.add(new BasicNameValuePair("FallbackMethod", "{{callFallbackMethod}}"));{{/callFallbackMethod}}
+    {{#callIfMachine}}params.add(new BasicNameValuePair("IfMachine", "{{callIfMachine}}"));{{/callIfMachine}}
+    {{#callTimeout}}params.add(new BasicNameValuePair("Timeout", "{{callTimeout}}"));{{/callTimeout}}
+    {{#callRecord}}params.add(new BasicNameValuePair("Record", "{{callRecord}}"));{{/callRecord}}
+    {{#callRecordingChannels}}params.add(new BasicNameValuePair("RecordingChannels", "{{callRecordingChannels}}"));{{/callRecordingChannels}}
+    {{#callRecordingStatusCallback}}params.add(new BasicNameValuePair("RecordingStatusCallback", "{{callRecordingStatusCallback}}"));{{/callRecordingStatusCallback}}
+    {{#callRecordingStatusCallbackMethod}}params.add(new BasicNameValuePair("RecordingStatusCallbackMethod", "{{callRecordingStatusCallbackMethod}}"));{{/callRecordingStatusCallbackMethod}}
+    {{#callSipAuthUsername}}params.add(new BasicNameValuePair("SipAuthUsername", "{{callSipAuthUsername}}"));{{/callSipAuthUsername}}
+    {{#callSipAuthPassword}}params.add(new BasicNameValuePair("SipAuthPassword", "{{callSipAuthPassword}}"));{{/callSipAuthPassword}}
     {{#callStatusCallbackEvents}}
     params.add(new BasicNameValuePair("StatusCallbackEvent", "{{.}}"));
     {{/callStatusCallbackEvents}}

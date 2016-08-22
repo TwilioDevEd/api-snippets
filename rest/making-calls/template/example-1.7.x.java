@@ -8,6 +8,8 @@ import java.net.URISyntaxException;
 import com.twilio.Twilio;
 {{#callMethod}}import com.twilio.http.HttpMethod;{{/callMethod}}
 {{#callStatusCallbackMethod}}import com.twilio.http.HttpMethod;{{/callStatusCallbackMethod}}
+{{#callRecordingStatusCallbackMethod}}import com.twilio.http.HttpMethod;{{/callRecordingStatusCallbackMethod}}
+{{#callFallbackMethod}}import com.twilio.http.HttpMethod;{{/callFallbackMethod}}
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.rest.api.v2010.account.CallCreator;
 {{#toVoiceClient}}import com.twilio.type.Client;{{/toVoiceClient}}
@@ -43,6 +45,16 @@ public class Example {
     {{#callStatusCallback}}callCreator.setStatusCallback("{{callStatusCallback}}");{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}callCreator.setStatusCallbackMethod(HttpMethod.{{callStatusCallbackMethod}});{{/callStatusCallbackMethod}}
     {{#callStatusCallbackEvent}}callCreator.setStatusCallbackEvent(Arrays.asList({{#callStatusCallbackEvents}}"{{.}}",{{/callStatusCallbackEvents}}));{{/callStatusCallbackEvent}}
+    {{#callFallbackUrl}}callCreator.setFallbackUrl("{{callFallbackUrl}}");{{/callFallbackUrl}}
+    {{#callFallbackMethod}}callCreator.setFallbackMethod(HttpMethod.{{callFallbackMethod}});{{/callFallbackMethod}}
+    {{#callIfMachine}}callCreator.setIfMachine("{{callIfMachine}}");{{/callIfMachine}}
+    {{#callTimeout}}callCreator.setTimeout({{callTimeout}});{{/callTimeout}}
+    {{#callRecord}}callCreator.setRecord({{callRecord}});{{/callRecord}}
+    {{#callRecordingChannels}}callCreator.setRecordingChannels("{{callRecordingChannels}}");{{/callRecordingChannels}}
+    {{#callRecordingStatusCallback}}callCreator.setRecordingStatusCallback("{{callRecordingStatusCallback}}");{{/callRecordingStatusCallback}}
+    {{#callRecordingStatusCallbackMethod}}callCreator.setRecordingStatusCallbackMethod(HttpMethod.{{callRecordingStatusCallbackMethod}});{{/callRecordingStatusCallbackMethod}}
+    {{#callSipAuthUsername}}callCreator.setSipAuthUsername("{{callSipAuthUsername}}");{{/callSipAuthUsername}}
+    {{#callSipAuthPassword}}callCreator.setSipAuthPassword("{{callSipAuthPassword}}");{{/callSipAuthPassword}}
 
     Call call = callCreator.execute();
 

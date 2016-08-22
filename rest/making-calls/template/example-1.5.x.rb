@@ -12,10 +12,21 @@ call = @client.account.calls.create(
     {{#toPhoneNumber}}to: "{{toPhoneNumber}}",{{/toPhoneNumber}}
     {{#toVoiceClient}}to: "{{toVoiceClient}}",{{/toVoiceClient}}
     {{#callUrl}}url: "{{callUrl}}",{{/callUrl}}
+    {{#applicationSid}}application_sid: "{{applicationSid}}",{{/applicationSid}}
     {{#sendDigitsVoice}}send_digits: "{{sendDigitsVoice}}",{{/sendDigitsVoice}}
     {{#callMethod}}method: "{{callMethod}}",{{/callMethod}}
     {{#callStatusCallback}}status_callback: "{{callStatusCallback}}",{{/callStatusCallback}}
     {{#callStatusCallbackMethod}}status_callback_method: "{{callStatusCallbackMethod}}",{{/callStatusCallbackMethod}}
+    {{#callFallbackUrl}}fallback_url: "{{callFallbackUrl}}",{{/callFallbackUrl}}
+    {{#callFallbackMethod}}fallback_method: "{{callFallbackMethod}}",{{/callFallbackMethod}}
+    {{#callIfMachine}}if_machine: "{{callIfMachine}}",{{/callIfMachine}}
+    {{#callTimeout}}timeout: "{{callTimeout}}",{{/callTimeout}}
+    {{#callRecord}}record: "{{callRecord}}",{{/callRecord}}
+    {{#callRecordingChannels}}recording_channels: "{{callRecordingChannels}}",{{/callRecordingChannels}}
+    {{#callRecordingStatusCallback}}recording_status_callback: "{{callRecordingStatusCallback}}",{{/callRecordingStatusCallback}}
+    {{#callRecordingStatusCallbackMethod}}recording_status_callback_method: "{{callRecordingStatusCallbackMethod}}",{{/callRecordingStatusCallbackMethod}}
+    {{#callSipAuthUsername}}sip_auth_username: "{{callSipAuthUsername}}",{{/callSipAuthUsername}}
+    {{#callSipAuthPassword}}sip_auth_password: "{{callSipAuthPassword}}",{{/callSipAuthPassword}}
     {{#callStatusCallbackEvent}}
     status_callback_event: [
     {{#callStatusCallbackEvents}}
