@@ -2,13 +2,13 @@
 from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "your_auth_token"
+account_sid = "{{#accountSid}}{{accountSid}}{{/accountSid}}"
+auth_token  = "{{#authToken}}{{authToken}}{{/authToken}}"
 client = TwilioRestClient(account_sid, auth_token)
 
-call = client.calls.create(url="http://demo.twilio.com/docs/voice.xml",
-    to="+14155551212",
-    send_digits="1234#",
-    from_="+18668675309",
-    method="GET")
+call = client.calls.create(url="{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}",
+    to="{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}",
+    send_digits="{{#sendDigits}}{{sendDigits}}{{/sendDigits}}",
+    from_="{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}",
+    method="{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}")
 print(call.sid)

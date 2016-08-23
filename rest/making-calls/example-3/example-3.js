@@ -1,15 +1,15 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = "your_auth_token";
+var accountSid = '{{#accountSid}}{{accountSid}}{{/accountSid}}';
+var authToken = "{{#authToken}}{{authToken}}{{/authToken}}";
 var client = require('twilio')(accountSid, authToken);
 
 client.calls.create({
-    url: "http://demo.twilio.com/docs/voice.xml",
-    to: "+14155551212",
-    sendDigits: "1234#",
-    from: "+18668675309",
-    method: "GET"
+    url: "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}",
+    to: "{{#toPhoneNumber}}{{toPhoneNumber}}{{/toPhoneNumber}}",
+    sendDigits: "{{#sendDigits}}{{sendDigits}}{{/sendDigits}}",
+    from: "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}",
+    method: "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}"
 }, function(err, call) {
     process.stdout.write(call.sid);
 });

@@ -2,11 +2,11 @@
 from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "your_auth_token"
+account_sid = "{{#accountSid}}{{accountSid}}{{/accountSid}}"
+auth_token  = "{{#authToken}}{{authToken}}{{/authToken}}"
 client = TwilioRestClient(account_sid, auth_token)
 
-call = client.calls.create(url="http://demo.twilio.com/docs/voice.xml",
-    to="client:tommy",
-    from_="+15017250604")
+call = client.calls.create(url="{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}",
+    to="{{#voiceCallClient}}{{voiceCallClient}}{{/voiceCallClient}}",
+    from_="{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}")
 print(call.sid)

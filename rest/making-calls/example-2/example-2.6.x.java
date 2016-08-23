@@ -12,17 +12,17 @@ import org.apache.http.message.BasicNameValuePair;
 public class Example { 
 
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  public static final String ACCOUNT_SID = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+  public static final String AUTH_TOKEN = "{{#authToken}}{{authToken}}{{/authToken}}";
 
   public static void main(String[] args) throws TwilioRestException {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     // Build a filter for the CallList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("Url", "http://demo.twilio.com/docs/voice.xml"));
-    params.add(new BasicNameValuePair("To", "client:tommy"));
-    params.add(new BasicNameValuePair("From", "+15017250604"));
+    params.add(new BasicNameValuePair("Url", "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}"));
+    params.add(new BasicNameValuePair("To", "{{#voiceCallClient}}{{voiceCallClient}}{{/voiceCallClient}}"));
+    params.add(new BasicNameValuePair("From", "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}"));
     
     
     CallFactory callFactory = client.getAccount().getCallFactory();

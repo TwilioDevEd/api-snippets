@@ -6,17 +6,17 @@ class Example
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "your_auth_token";
+    string AccountSid = "{{#accountSid}}{{accountSid}}{{/accountSid}}";
+    string AuthToken = "{{#authToken}}{{authToken}}{{/authToken}}";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     var options = new CallOptions();
-    options.Url = "http://demo.twilio.com/docs/voice.xml";
-    options.From = "+18668675309";
-    options.Method = "GET";
-    options.StatusCallback = "https://www.myapp.com/events";
-    options.StatusCallbackMethod = "POST";
-    options.StatusCallbackEvents = new string[] { "initiated", "ringing", "answered", "completed" };
+    options.Url = "{{#voiceCallUrl}}{{voiceCallUrl}}{{/voiceCallUrl}}";
+    options.From = "{{#fromPhoneNumber}}{{fromPhoneNumber}}{{/fromPhoneNumber}}";
+    options.Method = "{{#getHttpMethod}}{{getHttpMethod}}{{/getHttpMethod}}";
+    options.StatusCallback = "{{#voiceStatusCallbackUrl}}{{voiceStatusCallbackUrl}}{{/voiceStatusCallbackUrl}}";
+    options.StatusCallbackMethod = "{{#postHttpMethod}}{{postHttpMethod}}{{/postHttpMethod}}";
+    options.StatusCallbackEvents = new string[] { "{{#initiatedCallEvent}}{{initiatedCallEvent}}{{/initiatedCallEvent}}", "{{#ringingCallEvent}}{{ringingCallEvent}}{{/ringingCallEvent}}", "{{#answeredCallEvent}}{{answeredCallEvent}}{{/answeredCallEvent}}", "{{#completedCallEvent}}{{completedCallEvent}}{{/completedCallEvent}}" };
 
     var call = twilio.InitiateOutboundCall(options);
 
