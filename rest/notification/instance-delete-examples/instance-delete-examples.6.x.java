@@ -3,7 +3,7 @@ import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.Notification;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -15,8 +15,8 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Notification notification = client.getAccount().getNotification("NO5a7a84730f529f0a76b3e30c01315d1a");
-    
+
     notification.delete();
-    
+
   }
 }

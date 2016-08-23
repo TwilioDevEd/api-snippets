@@ -4,7 +4,7 @@ import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.OutgoingCallerId;
 import com.twilio.sdk.resource.list.OutgoingCallerIdList;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -14,10 +14,10 @@ public class Example {
     TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
     OutgoingCallerIdList callerIds = client.getAccount().getOutgoingCallerIds();
-    
+
     // Loop over callerIds and print out a property for each one.
     for (OutgoingCallerId callerId : callerIds) {
       System.out.println(callerId.getPhoneNumber());
-    } 
+    }
   }
 }
