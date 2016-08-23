@@ -1,0 +1,8 @@
+{
+    "date_updated": "Wed, 11 Sep 2013 04:32:30 -0000",
+    "friendly_name": "My office IP Address",
+    "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL0c37d0be69a6a6fe1e270c5fa4a2cac7/Addresses/IP32a3c49700934481addd5ce1659f04d2.json",
+    "sid": "IP32a3c49700934481addd5ce1659f04d2",
+    "date_created": "Wed, 11 Sep 2013 04:32:30 -0000",
+    "ip_address": "55.102.123.124"
+}

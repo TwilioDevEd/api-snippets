@@ -3,7 +3,7 @@ import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.sip.IpAddress;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -14,9 +14,11 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    IpAddress ipAddress = client.getAccount().getIpAccessControlList("AL32a3c49700934481addd5ce1659f04d2").getIpAddress("IP32a3c49700934481addd5ce1659f04d2");
-    
+    IpAddress ipAddress = client.getAccount()
+        .getIpAccessControlList("AL32a3c49700934481addd5ce1659f04d2")
+        .getIpAddress("IP32a3c49700934481addd5ce1659f04d2");
+
     ipAddress.delete();
-    
+
   }
 }
