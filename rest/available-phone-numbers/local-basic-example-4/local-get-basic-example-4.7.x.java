@@ -13,13 +13,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = Local.read("US")
-        .byContains("555")
-        .byNearLatLong("37.840699,-122.461853")
-        .byDistance(50)
-        .byInRegion("CA")
-        .execute();
-
+    ResourceSet<Local> numbers = Local.read("US").byInRegion("AR").execute();
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
     new LocalCreator(availableNumber).execute();
