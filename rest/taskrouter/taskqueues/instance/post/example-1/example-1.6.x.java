@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.TaskQueue;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -20,7 +20,7 @@ public class Example {
 
     TaskQueue taskQueue = client.getTaskQueue(WORKSPACE_SID, TASKQUEUE_SID);
     Map<String, String> params = new HashMap<String, String>();
-    params.put("TargetWorkers", "languages HAS 'english'}");
+    params.put("TargetWorkers", "languages HAS 'english'");
     taskQueue.update(params);
 
     //alternatively
