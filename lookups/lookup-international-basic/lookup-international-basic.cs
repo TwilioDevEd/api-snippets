@@ -11,7 +11,7 @@ class Example
     const string authToken = "your_auth_token";
     var lookupsClient = new LookupsClient(accountSid, authToken);
 
-    var phoneNumber = lookupsClient.GetPhoneNumber("+15108675309", false);
+    var phoneNumber = lookupsClient.GetPhoneNumber("+4402077651182", false);
 
     Console.WriteLine(phoneNumber.NationalFormat);
   }

@@ -13,7 +13,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = TwilioLookupsClient(account_sid, auth_token)
 
-encoded_number = quote('+15108675309')
-number = client.phone_numbers.get(encoded_number, country_code="US")
+encoded_number = quote('+4402077651182')
+number = client.phone_numbers.get(encoded_number)
 
 print(number.national_format)

@@ -15,7 +15,7 @@ public class Example {
   public static void main(String[] args) throws TwilioRestException, UnsupportedEncodingException {
       LookupsClient client = new LookupsClient(ACCOUNT_SID, AUTH_TOKEN);
 
-      String internationalNumber = URLEncoder.encode("+15108675309", "UTF-8")
+      String internationalNumber = URLEncoder.encode("+4402077651182", "UTF-8")
               .replaceAll("\\++", "%2B");
       PhoneNumber number = client.getPhoneNumber(internationalNumber, false);
       

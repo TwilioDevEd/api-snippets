@@ -11,7 +11,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $number = $client->lookups
-    ->phoneNumbers("+15108675309")
+    ->phoneNumbers("+4402077651182")
     ->fetch();
 
 echo $number->nationalFormat;
