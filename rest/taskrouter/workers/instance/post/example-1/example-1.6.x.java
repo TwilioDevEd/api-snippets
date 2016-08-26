@@ -7,7 +7,7 @@ import com.twilio.sdk.TwilioTaskRouterClient;
 import com.twilio.sdk.resource.instance.taskrouter.Worker;
 import com.twilio.sdk.resource.instance.taskrouter.Workspace;
 
-public class Example { 
+public class Example {
 
   // Find your Account Sid and Token at twilio.com/user/account
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
