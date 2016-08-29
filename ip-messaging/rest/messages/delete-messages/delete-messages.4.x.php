@@ -14,8 +14,8 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("SERVICE_SID");
 
 // Retrieve the channel
-$channel = $service->channels->get("CHANNEL_ID");
+$channel = $service->channels->get("CHANNEL_SID");
 
 // Delete the message
-$response = $channel->messages->delete("MESSAGE_ID");
+$response = $channel->messages->delete("MESSAGE_SID");
 print $response;

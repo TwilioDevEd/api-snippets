@@ -14,7 +14,7 @@ public class TwilioTest {
         TwilioIPMessagingClient client = new TwilioIPMessagingClient(ACCOUNT_SID, AUTH_TOKEN);
 
         // Retrieve the credential
-        Credential credential = client.getCredential(CREDENTIAL_ID);
+        Credential credential = client.getCredential(CREDENTIAL_SID);
         System.out.println(credential);
     }
 }

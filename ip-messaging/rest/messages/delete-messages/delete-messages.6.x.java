@@ -1,8 +1,8 @@
 import com.twilio.sdk.TwilioIPMessagingClient;
+import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.ipmessaging.Service;
-import com.twilio.sdk.resource.instance.ipmessaging.User;
-import com.twilio.sdk.resource.list.ipmessaging.ServiceList;
-import com.twilio.sdk.resource.list.ipmessaging.UserList;
+import com.twilio.sdk.resource.instance.ipmessaging.Channel;
+import com.twilio.sdk.resource.instance.ipmessaging.Message;
 
 public class TwilioTest {
     // Find your Account Sid and Token at twilio.com/user/account
@@ -10,20 +10,20 @@ public class TwilioTest {
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
     public static final String SERVICE_SID = "SERVICE_SID";
-    public static final String USER_ID = "USER_ID";
+    public static final String CHANNEL_SID = "CHANNEL_SID";
+    public static final String MESSAGE_SID = "MESSAGE_SID";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
         TwilioIPMessagingClient client = new TwilioIPMessagingClient(ACCOUNT_SID, AUTH_TOKEN);
 
-        // Retrieve the service
+        // Retrieve the service, channel, and message
         Service service = client.getService(SERVICE_SID);
+        Channel channel = service.getChannel(CHANNEL_SID);
+        Message message = channel.getMessage(MESSAGE_SID);
 
-        // Update the user
-        final Map<String, String> userParams = new HashMap<String, String>();
-        userParams.put("RoleSid", "new_role_sid");
-        User user = service.getUser(USER_ID);
-        user.update(userParams);
-        System.out.println(user);
+        // Delete the message
+        boolean didDelete = message.delete();
+        System.out.println(didDelete);
     }
 }

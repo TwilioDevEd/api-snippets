@@ -5,7 +5,7 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('SERVICE_SID');
 
-service.channels('CHANNEL_ID').messages.create({
+service.channels('CHANNEL_SID').messages.create({
     body: 'MESSAGE'
 }).then(function(response) {
     console.log(response);

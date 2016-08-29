@@ -15,7 +15,7 @@ public class TwilioTest {
     Service service = client.getService(SERVICE_SID);
 
     // Get the channel
-    Channel channel = service.getChannel("CHANNEL_ID");
+    Channel channel = service.getChannel("CHANNEL_SID");
 
     // Delete the channel
     boolean didDelete = channel.delete();

@@ -13,9 +13,11 @@ public class TwilioTest {
         // Initialize the client
         TwilioIPMessagingClient client = new TwilioIPMessagingClient(ACCOUNT_SID, AUTH_TOKEN);
 
-        // Delete the credential
-        Credential credential = client.getCredential(CREDENTIAL_ID);
-        boolean didDelete = credential.delete();
-        System.out.println(didDelete);
+        // Update the credential
+        Credential credential = client.getCredential(CREDENTIAL_SID);
+        final Map<String, String> credParams = new HashMap<String, String>();
+        credParams.put("ApiKey", "NewApiKey");
+        credential.update(credParams);
+        System.out.println(credential);
     }
 }
