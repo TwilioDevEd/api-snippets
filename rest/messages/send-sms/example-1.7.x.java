@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(API_KEY, API_SECRET, ACCOUNT_SID);
 
-    Message message = Message.create(new PhoneNumber("+16518675309"),
-        new PhoneNumber("+14158141829"), "Hey Jenny! Good luck on the bar exam!").execute();
+    Message message = Message.create(new PhoneNumber("+15558675309"),
+        new PhoneNumber("+15017250604"), "Hey Jenny! Good luck on the bar exam!").execute();
 
     System.out.println(message.getSid());
   }

@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token 
  
 @client.account.messages.create({
-  :from => '+14158141829', 
-  :to => '+16518675309', 
+  :from => '+15017250604', 
+  :to => '+15558675309', 
   :body => 'Hey Jenny! Good luck on the bar exam!', 
 })

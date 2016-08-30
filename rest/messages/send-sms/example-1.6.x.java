@@ -19,8 +19,8 @@ public class TwilioTest {
 
    // Build the parameters
    List<NameValuePair> params = new ArrayList<NameValuePair>();
-   params.add(new BasicNameValuePair("To", "+16518675309"));
-   params.add(new BasicNameValuePair("From", "+14158141829"));
+   params.add(new BasicNameValuePair("To", "+15558675309"));
+   params.add(new BasicNameValuePair("From", "+15017250604"));
    params.add(new BasicNameValuePair("Body", "Hey Jenny! Good luck on the bar exam!"));
 
    MessageFactory messageFactory = client.getAccount().getMessageFactory();

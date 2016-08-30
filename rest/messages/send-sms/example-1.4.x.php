@@ -8,7 +8,7 @@ $auth_token = 'your_auth_token';
 $client = new Services_Twilio($account_sid, $auth_token); 
  
 $client->account->messages->create(array( 
-    'To' => "+16518675309", 
-    'From' => "+14158141829", 
+    'To' => "+15558675309", 
+    'From' => "+15017250604", 
     'Body' => "Hey Jenny! Good luck on the bar exam!", 
 ));

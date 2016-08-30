@@ -11,7 +11,7 @@ class Example
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     var message = twilio.SendMessage(
-        "+14158141829", "+16518675309",
+        "+15017250604", "+15558675309",
         "Hey Jenny! Good luck on the bar exam!"
     );
     Console.WriteLine(message.Sid);
