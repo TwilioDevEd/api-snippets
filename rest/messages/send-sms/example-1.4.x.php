@@ -4,7 +4,7 @@
 require('/path/to/twilio-php/Services/Twilio.php'); 
  
 $account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
-$auth_token = '[AuthToken]'; 
+$auth_token = 'your_auth_token'; 
 $client = new Services_Twilio($account_sid, $auth_token); 
  
 $client->account->messages->create(array( 
