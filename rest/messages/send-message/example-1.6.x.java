@@ -12,7 +12,7 @@ import org.apache.http.message.BasicNameValuePair;
 public class TwilioTest {
  // Find your Account Sid and Token at twilio.com/user/account
  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
- public static final String AUTH_TOKEN = "[AuthToken]";
+ public static final String AUTH_TOKEN = "your_auth_token";
 
  public static void main(String[]args) throws TwilioRestException {
   TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);

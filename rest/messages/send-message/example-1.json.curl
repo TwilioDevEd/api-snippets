@@ -3,4 +3,4 @@ curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXX
 --data-urlencode 'From=+15017250604'  \
 --data-urlencode 'Body=Hey Jenny! Good luck on the bar exam!'  \
 -d 'MediaUrl=http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg' \
--u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:[AuthToken]
+-u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token
