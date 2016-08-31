@@ -2,6 +2,7 @@
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.type.PhoneNumber;
+import com.twilio.type.Sip;
 
 public class Example {
   /// Find your Account Sid and Token at twilio.com/user/account
@@ -12,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .create(new PhoneNumber("sip:kate@example.com"), new PhoneNumber("Jack"),
+        .create(new Sip("sip:kate@example.com"), new PhoneNumber("Jack"),
             "http://www.example.com/sipdial.xml")
         .setSipAuthUsername("jack")
         .setSipAuthPassword("secret")

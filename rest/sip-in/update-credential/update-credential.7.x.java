@@ -12,8 +12,10 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Credential credential = Credential.update("CL32a3c49700934481addd5ce1659f04d2",
-        "SC32a3c49700934481addd5ce1659f04d2", "new_username", "07").execute();
+    Credential credential = Credential
+        .update("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2")
+        .setPassword("new_password")
+        .execute();
 
     System.out.println(credential.getDateUpdated());
   }
