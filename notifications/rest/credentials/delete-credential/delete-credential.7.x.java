@@ -1,11 +1,10 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
-import com.twilio.sdk.Twilio;
-import com.twilio.sdk.resource.notifications.v1.Service;
-import com.twilio.sdk.updater.notifications.v1.ServiceUpdater;
+import com.twilio.Twilio;
+import com.twilio.rest.notify.v1.Credential;
 
-public class UpdateService {
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   public static final String AUTH_TOKEN = "your_auth_token";
@@ -14,10 +13,8 @@ public class UpdateService {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    // Update the service
-    ServiceUpdater updater = Service.update("ISxxx");
-    updater.setFriendlyName("NewFlowHipSlackChatDock");
-    Service service = updater.execute();
-    System.out.println(service.toString());
+    boolean didDelete = Credential.delete("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").execute();
+
+    System.out.println(didDelete);
   }
 }

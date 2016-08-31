@@ -1,13 +1,10 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
-import com.twilio.sdk.Twilio;
-import com.twilio.sdk.resource.ResourceSet;
-import com.twilio.sdk.resource.notifications.v1.Service;
+import com.twilio.Twilio;
+import com.twilio.rest.notify.v1.Credential;
 
-import java.util.Iterator;
-
-public class ListService {
+public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
   public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   public static final String AUTH_TOKEN = "your_auth_token";
@@ -16,12 +13,13 @@ public class ListService {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    // List the services
-    ResourceSet<Service> services = Service.read().execute();
-    Iterator<Service> iterator = services.iterator();
-    while (iterator.hasNext()) {
-      Service service = iterator.next();
-      System.out.println(service.toString());
-    }
+    Credential credential = Credential.create(Credential.PushService.APN)
+        .setFriendlyName("MyAPNCredential")
+        .setCertificate("cert.pem_content")
+        .setPrivateKey("key.pem_content")
+        .setSandbox(true)
+        .execute();
+
+    System.out.println(credential.getSid());
   }
 }
