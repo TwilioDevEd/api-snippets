@@ -1,22 +1,23 @@
+// Install the Java helper library from twilio.com/docs/java/install
 import java.io.IOException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Say;
-import com.twilio.twiml.Sms;
+import com.twilio.twiml.Dial;
+import com.twilio.twiml.Queue;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
-public class TwilioServlet extends HttpServlet {
-  // service() responds to both GET and POST requests.
-  // You can also use doGet() or doPost()
-  public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Say say = new Say.Builder("Hello! You will get an SMS message soon.").build();
-    Sms sms = new Sms.Builder("This is the ship that made the Kessel Run in fourteen parsecs?").build();
+public class Example extends HttpServlet {
 
-    VoiceResponse twiml = new VoiceResponse.Builder().say(say).sms(sms).build();
+  @Override
+  public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    Queue queue = new Queue.Builder("Queue Demo").build();
+    Dial dial = new Dial.Builder().queue(queue).build();
+
+    VoiceResponse twiml = new VoiceResponse.Builder().dial(dial).build();
 
     response.setContentType("application/xml");
 

@@ -19,7 +19,7 @@ public class Example extends HttpServlet {
     } catch (final TwiMLException e) {
         e.printStackTrace();
     }
-
-    return twiml.toXML();
+    response.setContentType("application/xml");
+    response.getWriter().print(twiml.toXML());
   }
 }
