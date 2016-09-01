@@ -5,7 +5,7 @@ using Twilio.Mvc;
 using Twilio.TwiML;
 using Twilio.TwiML.Mvc;
 
-public class HelloWorldController : TwilioController
+public class SmsController : TwilioController
 {
   [HttpPost]
   public ActionResult Index(SmsRequest request)
