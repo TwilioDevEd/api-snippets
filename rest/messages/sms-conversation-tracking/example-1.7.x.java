@@ -26,16 +26,16 @@ public class TwilioServlet extends HttpServlet {
 
     // Create a dict of people we know.
     HashMap<String, String> callers = new HashMap<String, String>();
-    callers.put("+14158675309", "Curious George");
-    callers.put("+14158675310", "Boots");
-    callers.put("+14158675311", "Virgil");
+    callers.put("+14158675309", "Rey");
+    callers.put("+14158675310", "Finn");
+    callers.put("+14158675311", "Chewy");
 
     String fromNumber = request.getParameter("From");
     String toNumber = request.getParameter("To");
     String fromName = callers.get(fromNumber);
     if (fromName == null) {
       // Use the caller's name
-      fromName = "Monkey";
+      fromName = "Friend";
     }
 
     String message =

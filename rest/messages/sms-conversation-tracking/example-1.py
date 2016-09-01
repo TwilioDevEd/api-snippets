@@ -8,13 +8,13 @@ app.config.from_object(__name__)
 
 # Try adding your own number to this list!
 callers = {
-    "+14158675309": "Curious George",
-    "+14158675310": "Boots",
-    "+14158675311": "Virgil",
+    "+14158675309": "Rey",
+    "+14158675310": "Finn",
+    "+14158675311": "Chewy",
 }
 
 @app.route("/", methods=['GET', 'POST'])
-def hello_monkey():
+def hello():
     """Respond with the number of text messages sent between two parties."""
 
     counter = session.get('counter', 0)
@@ -29,7 +29,7 @@ def hello_monkey():
     if from_number in callers:
         name = callers[from_number]
     else:
-        name = "Monkey"
+        name = "Friend"
 
     message = "".join([name, " has messaged ", request.values.get('To'), " ", 
         str(counter), " times."])

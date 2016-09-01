@@ -1,34 +1,48 @@
-@{
-    int counter = 0;
+// In Package Manager, run:
+// Install-Package Twilio.Mvc -DependencyVersion HighestMinor
 
-    // get the session varible if it exists    
-    if (Session["counter"]!=null) { counter=(int)Session["counter"]; }
+using System.Collections.Generic;
+using System.Web.Mvc;
+using Twilio.Mvc;
+using Twilio.TwiML;
+using Twilio.TwiML.Mvc;
 
-    // increment it
-    counter++;
-
-    // save it
-    Session["counter"] = counter;
-
-    // make an associative array of senders we know, indexed by phone number
-    var people = new Dictionary<string,string>() { 
-        {"+14158675309","Curious George"},
-        {"+14158675310","Boots"},
-        {"+14158675311","Virgil"}
-    };
-
-    // if the sender is known, then greet them by name
-    // otherwise, consider them just another monkey
-    string name = "Monkey";
-    if (!string.IsNullOrEmpty(Request["From"]))
+public class SmsController : TwilioController
+{
+    [HttpPost]
+    public ActionResult Index(SmsRequest request)
     {
-        name = people[Request["From"]];
-    }
+        var counter = 0;
 
-    // output the counter response
-    Response.ContentType = "text/xml";
+        // get the session varible if it exists    
+        if (Session["counter"] != null)
+        {
+            counter = (int) Session["counter"];
+        }
+
+        // increment it
+        counter++;
+
+        // save it
+        Session["counter"] = counter;
+
+        // make an associative array of senders we know, indexed by phone number
+        var people = new Dictionary<string, string>()
+        {
+            {"+14158675309", "Rey"},
+            {"+14158675310", "Finn"},
+            {"+14158675311", "Chewy"}
+        };
+
+        // if the sender is known, then greet them by name
+        var name = "Friend";
+        if (people.ContainsKey(request.From))
+        {
+            name = people[request.From];
+        }
+
+        var response = new TwilioResponse();
+        response.Message($"{name} has messaged {request.To} {counter} times");
+        return TwiML(response);
+    }
 }
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-    <Message>@name has messaged @Request["To"] @counter times</Message>
-</Response>

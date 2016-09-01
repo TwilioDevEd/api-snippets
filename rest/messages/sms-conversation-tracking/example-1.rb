@@ -2,9 +2,11 @@ require 'rubygems'
 require 'twilio-ruby'
 require 'sinatra'
 
-enable :sessions
+use Rack::Session::Cookie, :key => 'rack.session',
+                           :path => '/',
+                           :secret => 'can-be-anything-but-keep-a-secret'
 
-get '/sms-quickstart' do
+post '/sms' do
   session["counter"] ||= 0
   sms_count = session["counter"]
   if sms_count == 0
@@ -16,5 +18,7 @@ get '/sms-quickstart' do
     r.Message message
   end
   session["counter"] += 1
+
+  content_type 'text/xml'
   twiml.text
 end
