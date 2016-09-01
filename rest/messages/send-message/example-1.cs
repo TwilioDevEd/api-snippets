@@ -12,8 +12,8 @@ class Example
 
     var message = twilio.SendMessage(
         "+15017250604", "+15558675309",
-        "Hey Jenny! Good luck on the bar exam!",
-        new string[] { "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg" }
+        "This is the ship that made the Kessel Run in fourteen parsecs?",
+        new string[] { "https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg" }
     );
     Console.WriteLine(message.Sid);
  }

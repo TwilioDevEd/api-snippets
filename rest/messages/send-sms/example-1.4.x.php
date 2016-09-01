@@ -10,5 +10,5 @@ $client = new Services_Twilio($account_sid, $auth_token);
 $client->account->messages->create(array( 
     'To' => "+15558675309", 
     'From' => "+15017250604", 
-    'Body' => "Hey Jenny! Good luck on the bar exam!", 
+    'Body' => "This is the ship that made the Kessel Run in fourteen parsecs?", 
 ));

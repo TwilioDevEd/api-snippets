@@ -11,6 +11,6 @@ auth_token = 'your_auth_token'
 @client.account.messages.create({
   :from => '+15017250604', 
   :to => '+15558675309', 
-  :body => 'Hey Jenny! Good luck on the bar exam!', 
-  :media_url => 'http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg', 
+  :body => 'This is the ship that made the Kessel Run in fourteen parsecs?', 
+  :media_url => 'https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg', 
 })

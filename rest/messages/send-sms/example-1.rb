@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 @client.account.messages.create({
   :from => '+15017250604', 
   :to => '+15558675309', 
-  :body => 'Hey Jenny! Good luck on the bar exam!', 
+  :body => 'This is the ship that made the Kessel Run in fourteen parsecs?', 
 })

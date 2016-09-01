@@ -12,7 +12,7 @@ $client->messages->create(
     "+15558675309",
     array(
         'from' => '+15017250604',
-        'body' => "Hey Jenny! Good luck on the bar exam!",
-        'mediaUrl' => "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",
+        'body' => "This is the ship that made the Kessel Run in fourteen parsecs?",
+        'mediaUrl' => "https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg",
     )
 );

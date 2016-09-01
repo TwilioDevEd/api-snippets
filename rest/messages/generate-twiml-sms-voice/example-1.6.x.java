@@ -16,8 +16,8 @@ public class TwilioServlet extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         TwiMLResponse twiml = new TwiMLResponse();
         try {
-            twiml.append(new Say("Hello Monkey! You will get an SMS message soon."));
-            twiml.append(new Sms("Here it is!"));
+            twiml.append(new Say("Hello! You will get an SMS message soon."));
+            twiml.append(new Sms("This is the ship that made the Kessel Run in fourteen parsecs?"));
         } catch (TwiMLException e) {
             e.printStackTrace();
         }

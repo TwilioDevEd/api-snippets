@@ -12,7 +12,7 @@ class Example
 
     var message = twilio.SendMessage(
         "+15017250604", "+15558675309",
-        "Hey Jenny! Good luck on the bar exam!"
+        "This is the ship that made the Kessel Run in fourteen parsecs?"
     );
     Console.WriteLine(message.Sid);
  }

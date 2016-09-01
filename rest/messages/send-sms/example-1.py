@@ -9,5 +9,5 @@ client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 client.messages.create(
     to="+15558675309", 
     from_="+15017250604", 
-    body="Hey Jenny! Good luck on the bar exam!", 
+    body="This is the ship that made the Kessel Run in fourteen parsecs?", 
 )

@@ -11,8 +11,8 @@ public class HelloWorldController : TwilioController
   public ActionResult Index(VoiceRequest request)
   {
     var response = new TwilioResponse();
-    response.Say("Hello Monkey! You will get an SMS message soon.");
-    response.Sms("Here it is!");
+    response.Say("Hello! You will get an SMS message soon.");
+    response.Sms("This is the ship that made the Kessel Run in fourteen parsecs?");
     return TwiML(response);
   }
 }

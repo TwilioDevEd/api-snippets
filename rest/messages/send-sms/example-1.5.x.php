@@ -12,6 +12,6 @@ $client->messages->create(
     '+15558675309',
     array(
         'from' => '+15017250604',
-        'body' => "Hey Jenny! Good luck on the bar exam!"
+        'body' => "This is the ship that made the Kessel Run in fourteen parsecs?"
     )
 );

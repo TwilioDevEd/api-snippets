@@ -4,8 +4,8 @@ var http = require('http'),
 http.createServer(function (req, res) {
     //Create TwiML response
     var twiml = new twilio.TwimlResponse();
-    twiml.say("Hello Monkey! You will get an SMS message soon.");
-    twiml.sms("Here it is!");
+    twiml.say("Hello! You will get an SMS message soon.");
+    twiml.sms("This is the ship that made the Kessel Run in fourteen parsecs?");
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());

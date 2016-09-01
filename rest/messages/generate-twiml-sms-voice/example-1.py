@@ -8,8 +8,8 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
 
     resp = twilio.twiml.Response()
-    resp.say("Hello Monkey! You will get an SMS message soon.")
-    resp.sms("Here it is!")
+    resp.say("Hello! You will get an SMS message soon.")
+    resp.sms("This is the ship that made the Kessel Run in fourteen parsecs?")
     return str(resp)
 
 if __name__ == "__main__":
