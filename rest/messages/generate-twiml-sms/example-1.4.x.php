@@ -3,7 +3,6 @@
 
 // this line loads the library 
 require('/path/to/twilio-php/Services/Twilio.php'); 
-use Services_Twilio_Twiml;
 
 $response = new Services_Twilio_Twiml;
 $response->message("The Robots are coming! Head for the hills!");
