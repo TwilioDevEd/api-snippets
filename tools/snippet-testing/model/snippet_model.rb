@@ -15,7 +15,9 @@ module Model
       LanguageHandler::CurlLanguageHandler::LANG_CNAME,
       LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME,
       LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME,
-      LanguageHandler::CsharpLanguageHandler::LANG_CNAME
+      LanguageHandler::CsharpLanguageHandler::LANG_CNAME,
+      LanguageHandler::Csharp4LanguageHandler::LANG_CNAME,
+      LanguageHandler::Csharp5LanguageHandler::LANG_CNAME
     ].freeze
 
     attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs

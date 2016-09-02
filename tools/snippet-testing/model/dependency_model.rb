@@ -8,7 +8,7 @@ module Model
     PHP_NAME        = 'php'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.7.2'],
+      CSHARP_NAME => ['4.x', '5.x'],
       PHP_NAME    => ['4.10', '5.2.0']
     }.freeze
 
@@ -19,6 +19,10 @@ module Model
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
         { name: 'Twilio.Auth', version: '1.2.0' }
+      ],
+      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
+        { name: 'Twilio', version: '5.0.0-rc6' },
+        { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
 
@@ -60,8 +64,13 @@ module Model
       "#{DEP_DIR_NAME}/#{PHP_NAME}/#{php_5_path}"
     end
 
-    def self.csharp_path
+    def self.csharp_4_path
       csharp_path = AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0]
+      "#{DEP_DIR_NAME}/#{CSHARP_NAME}/#{csharp_path}"
+    end
+
+    def self.csharp_5_path
+      csharp_path = AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1]
       "#{DEP_DIR_NAME}/#{CSHARP_NAME}/#{csharp_path}"
     end
 
@@ -97,18 +106,16 @@ module Model
 
     def install_csharp_dependencies
       unless File.exist?(NUGET_FILE_NAME)
-        system("wget https://dist.nuget.org/win-x86-commandline/v3.4.4/#{NUGET_FILE_NAME}")
+        system("wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe -O #{NUGET_FILE_NAME}")
       end
 
-      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME].each do |version|\
-        if version.match(/^4\../)
-          install_language_version(CSHARP_NAME, version) do
-            CSHARP_DEPENDENCIES[AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0]].each do |dependency|
-              next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
-              system(
-                "sudo mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
-              )
-            end
+      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME].each do |version|
+        install_language_version(CSHARP_NAME, version) do
+          CSHARP_DEPENDENCIES[version].each do |dependency|
+            next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
+            system(
+              "sudo mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
+            )
           end
         end
       end
