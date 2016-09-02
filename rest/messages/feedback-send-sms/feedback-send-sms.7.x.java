@@ -14,7 +14,7 @@ public class Example {
     // TODO: Confirm calling setProvideFeedback works
     Message message = Message.create(new PhoneNumber("+15558675309"),
         new PhoneNumber("+15017250604"), "Open to confirm: http://yourserver.com/confirm?id=1234567890")
-        setProvideFeedback(true)
+        .setProvideFeedback(true)
         .execute();
 
     System.out.println(message.getSid());
