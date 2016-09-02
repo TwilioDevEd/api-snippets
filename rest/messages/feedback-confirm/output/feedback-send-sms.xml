@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TwilioResponse>
+  <Feedback>
+    <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+    <MessageSid>SM6d4d807e10f24d83a1ab01da10ccc0f5</MessageSid>
+    <Outcome>confirmed</Outcome>
+    <DateCreated>Fri, 02 Sep 2016 18:19:59 +0000</DateCreated>
+    <DateUpdated>Fri, 02 Sep 2016 18:46:58 +0000</DateUpdated>
+    <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages/SM6d4d807e10f24d83a1ab01da10ccc0f5/Feedback</Uri>
+  </Feedback>
+</TwilioResponse>
