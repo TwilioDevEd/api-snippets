@@ -81,7 +81,9 @@ module Model
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
         'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
-        'JWT.1.1/lib/3.5/JWT.dll'
+        'JWT.1.1/lib/3.5/JWT.dll',
+        'RestSharp.105.2.2/lib/net35/RestSharp.dll',
+        'Newtonsoft.Json.3.5.8/lib/35/Newtonsoft.Json.dll'
       ]
     end
 
