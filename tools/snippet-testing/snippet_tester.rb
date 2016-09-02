@@ -98,17 +98,17 @@ class SnippetTester
 
     csharp_language_handler = LanguageHandler::CsharpLanguageHandler.new(
       Model::DependencyModel.csharp_4_path,
-      csharp_4_dependencies
+      Model::DependencyModel.csharp_4_dependencies
     )
 
     csharp_4_language_handler = LanguageHandler::Csharp4LanguageHandler.new(
       Model::DependencyModel.csharp_4_path,
-      csharp_4_dependencies
+      Model::DependencyModel.csharp_4_dependencies
     )
 
     csharp_5_language_handler = LanguageHandler::Csharp5LanguageHandler.new(
       Model::DependencyModel.csharp_5_path,
-      csharp_5_dependencies
+      Model::DependencyModel.csharp_5_dependencies
     )
 
     {
@@ -128,24 +128,6 @@ class SnippetTester
       LanguageHandler::Csharp4LanguageHandler::LANG_CNAME   => csharp_4_language_handler,
       LanguageHandler::Csharp5LanguageHandler::LANG_CNAME   => csharp_5_language_handler
     }
-  end
-
-  def csharp_4_dependencies
-    [
-      'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
-      'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
-      'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
-      'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-      'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
-      'JWT.1.1/lib/3.5/JWT.dll'
-    ]
-  end
-
-  def csharp_5_dependencies
-    [
-      'Twilio.5.0.0-rc6/lib/net35/Twilio35.dll',
-      'JWT.1.3.4/lib/3.5/JWT.dll'
-    ]
   end
 
   def import_existing_snippet(source_folder, test_model)

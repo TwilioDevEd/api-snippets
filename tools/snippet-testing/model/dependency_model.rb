@@ -74,6 +74,24 @@ module Model
       "#{DEP_DIR_NAME}/#{CSHARP_NAME}/#{csharp_path}"
     end
 
+    def self.csharp_4_dependencies
+      [
+        'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
+        'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+        'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
+        'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
+        'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+        'JWT.1.1/lib/3.5/JWT.dll'
+      ]
+    end
+
+    def self.csharp_5_dependencies
+      [
+        'Twilio.5.0.0-rc6/lib/net35/Twilio35.dll',
+        'JWT.1.3.4/lib/3.5/JWT.dll'
+      ]
+    end
+
     private
 
     def install_python_dependencies
