@@ -1,0 +1,5 @@
+{
+  "title": "Create a dynamic response to an incoming call",
+  "description": "Twilio sends POST parameters to your application with information about the call and caller. You can use this information to create a dynamic TwiML response.",
+  "type": "server"
+}
