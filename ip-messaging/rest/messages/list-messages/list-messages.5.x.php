@@ -15,7 +15,7 @@ $client = new Client($sid, $token);
 //Retrieve the messages
 $messages = $client->ipMessaging
     ->services("SERVICE_SID")
-    ->channels("CHANNEL_ID")
+    ->channels("CHANNEL_SID")
     ->messages
     ->read();
 
