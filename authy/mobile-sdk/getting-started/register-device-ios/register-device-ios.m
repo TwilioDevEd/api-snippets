@@ -1,0 +1,3 @@
+[self.authy registerDevice:@"" andUniqueDeviceId:@"" handler:^(AUTError *error) {
+	// ...
+}];
