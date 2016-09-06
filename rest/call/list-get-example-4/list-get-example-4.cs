@@ -14,8 +14,8 @@ class Example
     request.Status = "in-progress";
     request.StartTimeComparison = ComparisonType.GreaterThanOrEqualTo;
     request.StartTime = new DateTime(2009, 07, 04);
-    request.StartTimeComparison = ComparisonType.LessThanOrEqualTo;
-    request.StartTime = new DateTime(2009, 07, 06);
+    request.EndTimeComparison = ComparisonType.LessThanOrEqualTo;
+    request.EndTime = new DateTime(2009, 07, 06);
     var calls = twilio.ListCalls(request);
     
     foreach (var call in calls.Calls)

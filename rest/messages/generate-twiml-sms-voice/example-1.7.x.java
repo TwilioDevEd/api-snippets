@@ -1,8 +1,8 @@
-package com.twilio;
+import java.io.IOException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 import com.twilio.twiml.Say;
 import com.twilio.twiml.Sms;
@@ -16,12 +16,12 @@ public class TwilioServlet extends HttpServlet {
     Say say = new Say.Builder("Hello! You will get an SMS message soon.").build();
     Sms sms = new Sms.Builder("This is the ship that made the Kessel Run in fourteen parsecs?").build();
 
-    VoiceResponse response = new VoiceResponse.Builder().say(say).sms(sms).build();
+    VoiceResponse twiml = new VoiceResponse.Builder().say(say).sms(sms).build();
 
     response.setContentType("application/xml");
 
     try {
-      response.getWriter().print(response.toXml());
+      response.getWriter().print(twiml.toXml());
     } catch (TwiMLException e) {
       e.printStackTrace();
     }

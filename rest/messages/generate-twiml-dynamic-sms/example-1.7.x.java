@@ -1,9 +1,8 @@
-package com.twilio;
+import java.io.IOException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.HashMap;
 
 import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
@@ -15,21 +14,21 @@ public class TwilioServlet extends HttpServlet {
     String body = request.getParameter("Body");
     String message;
     if (body == "hello") {
-        // Use a generic message
-        message = "Hi there!";
+      // Use a generic message
+      message = "Hi there!";
     } else if (body == "bye") {
-        // Use the caller's name
-        message = "Goodbye!";
+      // Use the caller's name
+      message = "Goodbye!";
     }
 
     // Create a TwiML response and add our friendly message.
     Message sms = new Message.Builder().body(new Body(message)).build();
-    MessagingResponse response = new MessagingResponse.Builder().message(sms).build();
+    MessagingResponse twiml = new MessagingResponse.Builder().message(sms).build();
 
     response.setContentType("application/xml");
 
     try {
-      response.getWriter().print(response.toXml());
+      response.getWriter().print(twiml.toXml());
     } catch (TwiMLException e) {
       e.printStackTrace();
     }

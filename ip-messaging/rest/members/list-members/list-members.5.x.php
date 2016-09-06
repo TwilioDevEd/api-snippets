@@ -14,7 +14,7 @@ $client = new Client($sid, $token);
 //Retrieve the Channel's members
 $members = $client->ipMessaging
     ->services("SERVICE_SID")
-    ->channels("CHANNEL_ID")
+    ->channels("CHANNEL_SID")
     ->members
     ->read();
 

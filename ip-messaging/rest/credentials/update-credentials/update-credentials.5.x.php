@@ -17,7 +17,6 @@ $credential = $client->ipMessaging
     ->credentials("CREDENTIAL_SID")
     ->update(
         array(
-            "type" => "gcm",
             "apiKey" => "xxxxxxxx"
         )
     );
