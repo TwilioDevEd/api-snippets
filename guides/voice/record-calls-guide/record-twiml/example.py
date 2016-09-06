@@ -11,7 +11,11 @@ def record():
 
     # Use <Say> to give the caller some instructions
     response.say('Hello. Please leave a message after the beep.')
+
+    # Use <Record> to record the caller's message
     response.record()
+
+    # End the call with <Hangup>
     response.hangup()
 
     return str(response)
