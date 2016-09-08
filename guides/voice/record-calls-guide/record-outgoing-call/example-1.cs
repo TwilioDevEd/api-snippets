@@ -14,6 +14,7 @@ class Example
     options.Url = "http://demo.twilio.com/docs/voice.xml";
     options.To = "+14155551212";
     options.From = "+15017250604";
+    options.Record = true;
     var call = twilio.InitiateOutboundCall(options);
     
     Console.WriteLine(call.Sid);

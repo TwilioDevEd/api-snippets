@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
-// Download the Node helper library from twilio.com/docs/php/install
+// Download the PHP helper library from twilio.com/docs/php/install
 // These vars are your accountSid and authToken from twilio.com/user/account
 $account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $auth_token = 'your_auth_token';
