@@ -1,23 +1,24 @@
 from flask import Flask, request, redirect
-import twilio.twiml
+from twilio import twiml
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/sms", methods=['GET', 'POST'])
 def incoming_sms():
-    """Respond to incoming calls with a simple text message."""
-
-    from twilio import twiml
-
+    """Send a dynamic reply to an incoming text message"""
+    # Get the message the user sent our Twilio number
     body = request.values.get('Body', None)
 
-    r = twiml.Response()
+    # Start our TwiML response
+    resp = twiml.Response()
 
+    # Determine the right reply for this message
     if body == 'hello':
-        r.message("Hi!")
+        resp.message("Hi!")
     elif body == 'bye':
-        r.message("Goodbye")
-    print str(r)
+        resp.message("Goodbye")
+
+    return str(resp)
 
 if __name__ == "__main__":
     app.run(debug=True)
