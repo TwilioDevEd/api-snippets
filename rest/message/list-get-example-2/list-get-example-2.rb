@@ -7,9 +7,12 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
-
 # Loop over messages and print out a property for each one
-# TODO: Add To, From, DateSent> parameters
-@client.account.messages.list.each do |message|
+@client.account.messages.list({
+  :to   => 'to_number',
+  :from => 'from_number',
+  :date => '2015-04-01T00:00:00Z'
+}).each do |message|
     puts message.body
 end
+
