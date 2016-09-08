@@ -1,6 +1,6 @@
 <?php
-// Required if your envrionment does not handle autoloading
-require __DIR__ . '/vendor/autoload.php';
+// Get the PHP helper library from twilio.com/docs/php/install
+require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 // Use the REST API Client to make requests to the Twilio REST API
 use Twilio\Rest\Client;
@@ -14,11 +14,8 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
-$client->request(
-    'POST',
-    "https://api.twilio.com/2010-04-01/Accounts/{$accountSid}/Messages/{$messageSid}/Feedback",
-    null,
-    array('Outcome' => 'confirmed')
+$client->messages($messageSid)->feedback->create(
+    array("outcome" => "confirmed")
 );
 
 echo 'Thank you!';
