@@ -23,21 +23,21 @@ public class VoiceServlet extends HttpServlet {
                     try {
                         twiml.append(new Say("You selected sales. Good for you!"));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     break;
                 case "2":
                     try {
                         twiml.append(new Say("You need support. We will help!"));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     break;
                 default:
                     try {
                         twiml.append(new Say("Sorry, I don\'t understand that choice."));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
 
                     appendGather(twiml);
@@ -59,7 +59,7 @@ public class VoiceServlet extends HttpServlet {
             twiMLResponse.append(gather);
             twiMLResponse.append(new Redirect("/voice"));
         } catch (TwiMLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return twiMLResponse;

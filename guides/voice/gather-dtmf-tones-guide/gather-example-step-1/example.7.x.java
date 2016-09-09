@@ -34,7 +34,7 @@ public class VoiceServlet extends HttpServlet {
         try {
             response.getWriter().print(builder.build().toXml());
         } catch (TwiMLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

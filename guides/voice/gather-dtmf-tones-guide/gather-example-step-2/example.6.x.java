@@ -23,7 +23,7 @@ public class VoiceServlet extends HttpServlet {
             twiml.append(gather);
             twiml.append(new Redirect("/voice"));
         } catch (TwiMLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         response.setContentType("application/xml");

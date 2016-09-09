@@ -29,7 +29,7 @@ public class VoiceServlet extends HttpServlet {
         try {
             response.getWriter().print(twiml.toXml());
         } catch (TwiMLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

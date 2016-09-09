@@ -19,14 +19,14 @@ public class GatherServlet extends HttpServlet {
                     try {
                         twiml.append(new Say("You selected sales. Good for you!"));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     break;
                 case "2":
                     try {
                         twiml.append(new Say("You need support. We will help!"));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     break;
                 default:
@@ -34,7 +34,7 @@ public class GatherServlet extends HttpServlet {
                         twiml.append(new Say("Sorry, I don\'t understand that choice."));
                         twiml.append(new Redirect("/voice"));
                     } catch (TwiMLException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     break;
             }
@@ -42,7 +42,7 @@ public class GatherServlet extends HttpServlet {
             try {
                 twiml.append(new Redirect("/voice"));
             } catch (TwiMLException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
 
