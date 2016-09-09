@@ -27,7 +27,7 @@ public class Confirm extends HttpServlet {
     postParams.put("Outcome", "confirmed");
 
     try {
-      client.request("Accounts/" + ACCOUNT_SID + "/Messages/" + messageSid + "/Feedback.json",
+      client.request("/2010-04-01/Accounts/" + ACCOUNT_SID + "/Messages/" + sid + "/Feedback.json",
           "POST", postParams);
     } catch (TwilioRestException e) {
       e.printStackTrace();
