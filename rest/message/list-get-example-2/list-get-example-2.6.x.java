@@ -4,6 +4,9 @@ import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.Message;
 import com.twilio.sdk.resource.list.MessageList;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Example {
 
     // Find your Account Sid and Token at twilio.com/user/account
