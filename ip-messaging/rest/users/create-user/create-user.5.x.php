@@ -16,6 +16,6 @@ $client = new Client($sid, $token);
 $user = $client->ipMessaging
     ->services("SERVICE_SID")
     ->users
-    ->create("IDENTITY", "ROLE_SID");
+    ->create("IDENTITY");
 
 echo $user->identity;
