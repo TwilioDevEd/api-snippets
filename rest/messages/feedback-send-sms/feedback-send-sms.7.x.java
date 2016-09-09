@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    // TODO: Confirm calling setProvideFeedback works
-    Message message = Message.create(new PhoneNumber("+15558675309"),
-        new PhoneNumber("+15017250604"), "Open to confirm: http://yourserver.com/confirm?id=1234567890")
+    Message message = Message
+        .create(new PhoneNumber("+15558675309"), new PhoneNumber("+15017250604"),
+            "Open to confirm: http://yourserver.com/confirm?id=1234567890")
         .setProvideFeedback(true)
         .execute();
 

@@ -22,7 +22,6 @@ public class TwilioTest {
    params.add(new BasicNameValuePair("To", "+15558675309"));
    params.add(new BasicNameValuePair("From", "+15017250604"));
    params.add(new BasicNameValuePair("Body", "Open to confirm: http://yourserver.com/confirm?id=1234567890"));
-   // TODO: Confirm passing ProvideFeedback works
    params.add(new BasicNameValuePair("ProvideFeedback", "true"));
 
    MessageFactory messageFactory = client.getAccount().getMessageFactory();
