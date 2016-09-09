@@ -3,18 +3,19 @@ import com.twilio.sdk.TwilioRestClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.Message;
 
-public class Example { 
+public class Example {
 
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+    // Find your Account Sid and Token at twilio.com/user/account
+    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String AUTH_TOKEN = "your_auth_token";
 
-  public static void main(String[] args) throws TwilioRestException {
-    TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
+    public static void main(String[] args) throws TwilioRestException {
+        TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
-    // Get an object from its sid. If you do not have a sid,
-    // check out the list resource examples on this page
-    Message message = client.getAccount().getMessage("MM800f449d0399ed014aae2bcc0cc2f2ec");
-    System.out.println(message.getBody()); 
-  }
+        // Get an object from its sid. If you do not have a sid,
+        // check out the list resource examples on this page
+        Message message = client.getAccount().getMessage("MM800f449d0399ed014aae2bcc0cc2f2ec");
+        System.out.println(message.getBody());
+    }
 }
+
