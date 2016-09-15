@@ -6,10 +6,12 @@ module Model
     CSHARP_NAME     = 'csharp'.freeze
     NUGET_FILE_NAME = 'NuGet.exe'.freeze
     PHP_NAME        = 'php'.freeze
+    PYTHON_NAME     = 'python'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.3.0']
+      PHP_NAME    => ['4.10', '5.3.0'],
+      PYTHON_NAME => ['5.4.0', '6.0.0rc12']
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -32,10 +34,6 @@ module Model
 
     NODE_DEPENDENCIES = [
       { name: 'twilio', version: '2.9.1' }
-    ].freeze
-
-    PYTHON_DEPENDENCIES = [
-      { name: 'twilio', version: '5.4.0' }
     ].freeze
 
     def self.install_dependencies
@@ -94,13 +92,15 @@ module Model
       ]
     end
 
-    private
-
-    def install_python_dependencies
-      PYTHON_DEPENDENCIES.each do |dependency|
-        system("sudo pip install #{dependency[:name]}==#{dependency[:version]}")
-      end
+    def self.python_5_venv
+      AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][0]
     end
+
+    def self.python_6_venv
+      AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][1]
+    end
+
+    private
 
     def install_node_dependencies
       NODE_DEPENDENCIES.each do |dependency|
@@ -139,6 +139,22 @@ module Model
           end
         end
       end
+    end
+
+    def install_python_dependencies
+      system('sudo pip install virtualenvwrapper')
+
+      AVAILABLE_LIBRARY_VERSION[PYTHON_NAME].each do |version|
+        run_with_bash(
+          'source /usr/local/bin/virtualenvwrapper.sh &&'\
+          " mkvirtualenv #{version} &&"\
+          " pip install twilio==#{version}"
+        )
+      end
+    end
+
+    def run_with_bash(command)
+      system("bash -c '#{command}'")
     end
 
     def install_language_version(language, version)

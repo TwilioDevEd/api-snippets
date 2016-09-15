@@ -27,8 +27,8 @@ module LanguageHandler
 
     private
 
-    def execute(file)
-      raise 'this method must be implemented in child clases'
+    def execute(_file)
+      raise 'this method must be implemented in child classes'
     end
 
     def execute_with_suppressed_output(command, file)
@@ -86,6 +86,10 @@ module LanguageHandler
       new_file = File.new(output_file, 'w+')
       new_file.write(content)
       new_file.close
+    end
+
+    def bash_string_command(command)
+      "bash -c '#{command}'"
     end
 
     def lang_cname

@@ -6,8 +6,6 @@ before_install:
 - rvm install ruby-2.2.1
 - rvm --default use 2.2.1
 - jdk_switcher use oraclejdk8
-- sudo apt-get install python-pip python2.7-dev build-essential
-- sudo pip install --upgrade pip
 - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 - sudo apt-get install -y nodejs
 - sudo npm install -g n
@@ -20,6 +18,8 @@ before_install:
   --filename=composer
 - sudo add-apt-repository ppa:cwchien/gradle -y
 - sudo apt-get update
+- sudo apt-get install python-dev python-pip build-essential
+- sudo pip install --upgrade pip
 - sudo apt-get install gradle -y --force-yes
 - sudo apt-get install ca-certificates
 install:
@@ -40,6 +40,8 @@ env:
   - NODE_TLS_REJECT_UNAUTHORIZED=0
   - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
   - GRADLE_OPTS="-Dorg.gradle.daemon=true"
+  - BASH=/bin/bash
+  - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
 addons:
   hosts:
     - api.twilio.com

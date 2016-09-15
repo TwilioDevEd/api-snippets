@@ -12,6 +12,8 @@ module Model
       LanguageHandler::Php4LanguageHandler::LANG_CNAME,
       LanguageHandler::Php5LanguageHandler::LANG_CNAME,
       LanguageHandler::PythonLanguageHandler::LANG_CNAME,
+      LanguageHandler::Python5LanguageHandler::LANG_CNAME,
+      LanguageHandler::Python6LanguageHandler::LANG_CNAME,
       LanguageHandler::CurlLanguageHandler::LANG_CNAME,
       LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME,
       LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME,
