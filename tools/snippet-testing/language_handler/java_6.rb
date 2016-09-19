@@ -1,7 +1,7 @@
-require_relative 'java_language_handler'
+require_relative 'java'
 
 module LanguageHandler
-  class Java6LanguageHandler < JavaLanguageHandler
+  class Java6 < Java
     LANG_CNAME             = '6.x.java'.freeze
     TWILIO_LIBRARY_VERSION = '6'.freeze
   end

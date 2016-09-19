@@ -3,15 +3,15 @@ require 'optparse'
 require 'ostruct'
 require 'colorize'
 require_relative 'error_logger'
-require_relative 'model/snippet_model'
-require_relative 'model/test_session_model'
-require_relative 'model/dependency_model'
+require_relative 'model/snippet'
+require_relative 'model/test_session'
+require_relative 'model/dependency'
 Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"].each { |file| require File.expand_path(file) }
 
 class SnippetTester
   def install_dependencies
     puts 'Installing Dependencies, please wait'
-    Model::DependencyModel.install_dependencies
+    Model::Dependency.install_dependencies
     puts 'Dependencies installed!'
   end
 
@@ -19,8 +19,8 @@ class SnippetTester
     @parent_source_folder = parent_source_folder
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
-    @snippets_models = []
-    @test_models = [Model::TestSessionModel.new(@parent_source_folder)]
+    @snippet_models = []
+    @test_models = [Model::TestSession.new(@parent_source_folder)]
     @language_handlers = get_language_handlers
   end
 
@@ -32,7 +32,7 @@ class SnippetTester
 
   def setup
     puts '####### Generating test-enviroment for marked snippets #######'
-    @snippets_models.each do |snippet|
+    @snippet_models.each do |snippet|
       print "Generated #{snippet.output_folder} -> ["
       snippet.available_langs.each do |lang, _file_name|
         print " #{lang}"
@@ -44,7 +44,7 @@ class SnippetTester
 
   def run
     puts '####### Testing marked snippets #######'
-    @snippets_models.each do |snippet|
+    @snippet_models.each do |snippet|
       puts "Testing #{snippet.output_folder}"
       snippet.available_langs.each do |lang, _file_name|
         @language_handlers.fetch(lang).test_snippet(snippet)
@@ -73,7 +73,7 @@ class SnippetTester
 
   def import_existing_config(folder_path)
     Dir.glob("#{folder_path}#{File::SEPARATOR}test.yml") do |yaml_path|
-      test_config = Model::TestSessionModel.new(yaml_path, current_config)
+      test_config = Model::TestSession.new(yaml_path, current_config)
       test_models.push test_config
       puts test_config
       return true
@@ -86,71 +86,71 @@ class SnippetTester
   end
 
   def get_language_handlers
-    php_language_handler = LanguageHandler::PhpLanguageHandler.new(
-      Model::DependencyModel.php_4_path
+    php_language_handler = LanguageHandler::Php.new(
+      Model::Dependency.php_4_path
     )
-    php_4_language_handler = LanguageHandler::Php4LanguageHandler.new(
-      Model::DependencyModel.php_4_path
+    php_4_language_handler = LanguageHandler::Php4.new(
+      Model::Dependency.php_4_path
     )
-    php_5_language_handler = LanguageHandler::Php5LanguageHandler.new(
-      Model::DependencyModel.php_5_path
-    )
-
-    csharp_language_handler = LanguageHandler::CsharpLanguageHandler.new(
-      Model::DependencyModel.csharp_4_path,
-      Model::DependencyModel.csharp_4_dependencies
+    php_5_language_handler = LanguageHandler::Php5.new(
+      Model::Dependency.php_5_path
     )
 
-    csharp_4_language_handler = LanguageHandler::Csharp4LanguageHandler.new(
-      Model::DependencyModel.csharp_4_path,
-      Model::DependencyModel.csharp_4_dependencies
+    csharp_language_handler = LanguageHandler::Csharp.new(
+      Model::Dependency.csharp_4_path,
+      Model::Dependency.csharp_4_dependencies
     )
 
-    csharp_5_language_handler = LanguageHandler::Csharp5LanguageHandler.new(
-      Model::DependencyModel.csharp_5_path,
-      Model::DependencyModel.csharp_5_dependencies
+    csharp_4_language_handler = LanguageHandler::Csharp4.new(
+      Model::Dependency.csharp_4_path,
+      Model::Dependency.csharp_4_dependencies
     )
 
-    python_language_handler = LanguageHandler::PythonLanguageHandler.new(
-      Model::DependencyModel.python_5_venv
+    csharp_5_language_handler = LanguageHandler::Csharp5.new(
+      Model::Dependency.csharp_5_path,
+      Model::Dependency.csharp_5_dependencies
     )
 
-    python_5_language_handler = LanguageHandler::Python5LanguageHandler.new(
-      Model::DependencyModel.python_5_venv
+    python_language_handler = LanguageHandler::Python.new(
+      Model::Dependency.python_5_venv
     )
 
-    python_6_language_handler = LanguageHandler::Python6LanguageHandler.new(
-      Model::DependencyModel.python_6_venv
+    python_5_language_handler = LanguageHandler::Python5.new(
+      Model::Dependency.python_5_venv
+    )
+
+    python_6_language_handler = LanguageHandler::Python6.new(
+      Model::Dependency.python_6_venv
     )
 
     {
-      LanguageHandler::JavaLanguageHandler::LANG_CNAME     => LanguageHandler::JavaLanguageHandler.new,
-      LanguageHandler::Java6LanguageHandler::LANG_CNAME    => LanguageHandler::Java6LanguageHandler.new,
-      LanguageHandler::Java7LanguageHandler::LANG_CNAME    => LanguageHandler::Java7LanguageHandler.new,
-      LanguageHandler::RubyLanguageHandler::LANG_CNAME     => LanguageHandler::RubyLanguageHandler.new,
-      LanguageHandler::NodeLanguageHandler::LANG_CNAME     => LanguageHandler::NodeLanguageHandler.new,
-      LanguageHandler::PhpLanguageHandler::LANG_CNAME      => php_language_handler,
-      LanguageHandler::Php4LanguageHandler::LANG_CNAME     => php_4_language_handler,
-      LanguageHandler::Php5LanguageHandler::LANG_CNAME     => php_5_language_handler,
-      LanguageHandler::PythonLanguageHandler::LANG_CNAME   => python_language_handler,
-      LanguageHandler::Python5LanguageHandler::LANG_CNAME  => python_5_language_handler,
-      LanguageHandler::Python6LanguageHandler::LANG_CNAME  => python_6_language_handler,
-      LanguageHandler::CurlLanguageHandler::LANG_CNAME     => LanguageHandler::CurlLanguageHandler.new,
-      LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME  => LanguageHandler::CurlXmlLanguageHandler.new,
-      LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME => LanguageHandler::CurlJsonLanguageHandler.new,
-      LanguageHandler::CsharpLanguageHandler::LANG_CNAME   => csharp_language_handler,
-      LanguageHandler::Csharp4LanguageHandler::LANG_CNAME  => csharp_4_language_handler,
-      LanguageHandler::Csharp5LanguageHandler::LANG_CNAME  => csharp_5_language_handler
+      LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
+      LanguageHandler::Java6::LANG_CNAME    => LanguageHandler::Java6.new,
+      LanguageHandler::Java7::LANG_CNAME    => LanguageHandler::Java7.new,
+      LanguageHandler::Ruby::LANG_CNAME     => LanguageHandler::Ruby.new,
+      LanguageHandler::Node::LANG_CNAME     => LanguageHandler::Node.new,
+      LanguageHandler::Php::LANG_CNAME      => php_language_handler,
+      LanguageHandler::Php4::LANG_CNAME     => php_4_language_handler,
+      LanguageHandler::Php5::LANG_CNAME     => php_5_language_handler,
+      LanguageHandler::Python::LANG_CNAME   => python_language_handler,
+      LanguageHandler::Python5::LANG_CNAME  => python_5_language_handler,
+      LanguageHandler::Python6::LANG_CNAME  => python_6_language_handler,
+      LanguageHandler::Curl::LANG_CNAME     => LanguageHandler::Curl.new,
+      LanguageHandler::CurlXml::LANG_CNAME  => LanguageHandler::CurlXml.new,
+      LanguageHandler::CurlJson::LANG_CNAME => LanguageHandler::CurlJson.new,
+      LanguageHandler::Csharp::LANG_CNAME   => csharp_language_handler,
+      LanguageHandler::Csharp4::LANG_CNAME  => csharp_4_language_handler,
+      LanguageHandler::Csharp5::LANG_CNAME  => csharp_5_language_handler
     }
   end
 
   def import_existing_snippet(source_folder, test_model)
     Dir.glob("#{source_folder}#{File::SEPARATOR}meta.json") do |json_file|
-      snippet_model = Model::SnippetModel.new(json_file.to_s, test_model)
+      snippet_model = Model::Snippet.new(json_file.to_s, test_model)
       next unless snippet_model.testable?
       # Add this model to those to be tested
       puts snippet_model
-      @snippets_models << snippet_model
+      @snippet_models << snippet_model
     end
   end
 end
@@ -175,7 +175,7 @@ def parse_options(args)
   options.install = false
 
   opts = OptionParser.new do |opts|
-    opts.banner = 'Usage: snippet_tester.rb [options]'
+    opts.banner = 'Usage: ruby snippet_tester.rb [options]'
 
     opts.separator ''
     opts.separator 'Specific options:'

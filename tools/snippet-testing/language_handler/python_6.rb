@@ -1,7 +1,7 @@
-require_relative 'python_language_handler'
+require_relative 'python'
 
 module LanguageHandler
-  class Python6LanguageHandler < PythonLanguageHandler
+  class Python6 < Python
     LANG_CNAME = '6.x.py'.freeze
 
     private

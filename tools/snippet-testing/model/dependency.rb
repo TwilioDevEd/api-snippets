@@ -1,7 +1,7 @@
 require 'fileutils'
 
 module Model
-  class DependencyModel
+  class Dependency
     DEP_DIR_NAME    = "#{Dir.pwd}/tools/dependencies".freeze
     CSHARP_NAME     = 'csharp'.freeze
     NUGET_FILE_NAME = 'NuGet.exe'.freeze
@@ -169,5 +169,5 @@ module Model
 end
 
 if __FILE__ == $0
-  Model::DependencyModel.install_dependencies
+  Model::Dependency.install_dependencies
 end

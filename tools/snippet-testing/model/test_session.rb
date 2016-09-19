@@ -1,7 +1,7 @@
 require 'yaml'
 
 module Model
-  class TestSessionModel
+  class TestSession
     OUTPUT_FOLDER = 'testable_snippets'.freeze
 
     attr_reader :testable, :source_folder, :output_folder, :root_output_folder, :relative_folder, :root_source_folder
@@ -16,9 +16,9 @@ module Model
       @testable = parent_model.nil? ? false : parent_model.testable
       @root_output_folder = OUTPUT_FOLDER
       if yaml_exists
-       yaml_object = YAML.load(File.read(meta_yaml_path))
-       @testable = yaml_object.fetch("testable", @testable).to_s.downcase == 'true'
-       @root_output_folder = yaml_object.fetch("output", parent_model.root_output_folder)
+        yaml_object = YAML.load(File.read(meta_yaml_path))
+        @testable = yaml_object.fetch("testable", @testable).to_s.downcase == 'true'
+        @root_output_folder = yaml_object.fetch("output", parent_model.root_output_folder)
       end
       @output_folder = root_output_folder + @relative_folder
     end

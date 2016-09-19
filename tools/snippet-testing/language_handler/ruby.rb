@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class RubyLanguageHandler < BaseLanguageHandler
+  class Ruby < BaseHandler
     LANG_CNAME = 'rb'.freeze
 
     private
