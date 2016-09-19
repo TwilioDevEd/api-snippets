@@ -1,7 +1,8 @@
 // Download the **Next-Gen** twilio-java library from:
 // twilio.com/docs/libraries/java#installation-nextgen
-import com.twilio.sdk.Twilio;
-import com.twilio.sdk.resource.preview.wireless.Command;
+import com.twilio.Twilio;
+import com.twilio.base.ResourceSet;
+import com.twilio.rest.preview.wireless.Device;
 
 public class Example {
 
@@ -12,8 +13,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Command.create("524116518656369", "wakeup")
-      .setCallbackUrl("https://devicemanager.mycompany.com/devices/524116518656369/commands")
-      .execute();
+    ResourceSet<Device> devices = Device.read().execute();
+    for (Device d : devices) {
+      System.out.println(d.getFriendlyName());
+    }
   }
 }
