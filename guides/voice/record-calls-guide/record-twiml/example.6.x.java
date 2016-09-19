@@ -1,3 +1,13 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.twilio.sdk.verbs.*;
+
 @SuppressWarnings("serial")
 @WebServlet("/voice")
 public class RecordServlet extends HttpServlet {
@@ -7,8 +17,7 @@ public class RecordServlet extends HttpServlet {
       throws ServletException, IOException {
     // Create a TwiML builder object
     TwiMLResponse twiml = new TwiMLResponse();
-    
-    TwiMLResponse twiml = new TwiMLResponse();
+
     try {
       // Use <Say> to give the caller some instructions
       twiml.append(new Say("Hello. Please leave a message after the beep."));
@@ -21,7 +30,7 @@ public class RecordServlet extends HttpServlet {
     } catch (TwiMLException e) {
       e.printStackTrace();
     }
-    
+
     // Render TwiML as XML
     response.setContentType("text/xml");
     response.getWriter().print(twiml.toXML());
