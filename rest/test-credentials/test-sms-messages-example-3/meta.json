@@ -1,4 +1,4 @@
 {
-  "title": "Create a message",
+  "title": "Attempt to send a message with an empty SMS body",
   "type": "server"
 }
