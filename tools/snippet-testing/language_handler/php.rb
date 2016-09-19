@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class PhpLanguageHandler < BaseLanguageHandler
+  class Php < BaseHandler
     LANG_CNAME = 'php'.freeze
 
     def initialize(dependencies_directory)

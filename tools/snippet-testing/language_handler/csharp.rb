@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class CsharpLanguageHandler < BaseLanguageHandler
+  class Csharp < BaseHandler
     LANG_CNAME = 'cs'.freeze
 
     private

@@ -1,9 +1,9 @@
 require 'open3'
 require 'json'
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class CurlLanguageHandler < BaseLanguageHandler
+  class Curl < BaseHandler
     LANG_CNAME = 'curl'.freeze
 
     private

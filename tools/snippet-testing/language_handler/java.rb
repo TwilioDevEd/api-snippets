@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class JavaLanguageHandler < BaseLanguageHandler
+  class Java < BaseHandler
     LANG_CNAME             = 'java'.freeze
     TEST_CLASS_NAME        = 'Example'.freeze
     TWILIO_LIBRARY_VERSION = '6'.freeze

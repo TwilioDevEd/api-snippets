@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class NodeLanguageHandler < BaseLanguageHandler
+  class Node < BaseHandler
     LANG_CNAME = 'js'.freeze
 
     private

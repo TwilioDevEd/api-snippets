@@ -1,7 +1,7 @@
-require_relative 'base_language_handler'
+require_relative 'base_handler'
 
 module LanguageHandler
-  class PythonLanguageHandler < BaseLanguageHandler
+  class Python < BaseHandler
     LANG_CNAME = 'py'.freeze
 
     private

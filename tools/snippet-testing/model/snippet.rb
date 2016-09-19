@@ -1,25 +1,25 @@
 Dir["#{File.dirname(__FILE__)}/../language_handler/*.rb"].each { |file| require File.expand_path(file) }
 
 module Model
-  class SnippetModel
+  class Snippet
     SERVER_LANGUAGES = [
-      LanguageHandler::JavaLanguageHandler::LANG_CNAME,
-      LanguageHandler::Java6LanguageHandler::LANG_CNAME,
-      LanguageHandler::Java7LanguageHandler::LANG_CNAME,
-      LanguageHandler::RubyLanguageHandler::LANG_CNAME,
-      LanguageHandler::NodeLanguageHandler::LANG_CNAME,
-      LanguageHandler::PhpLanguageHandler::LANG_CNAME,
-      LanguageHandler::Php4LanguageHandler::LANG_CNAME,
-      LanguageHandler::Php5LanguageHandler::LANG_CNAME,
-      LanguageHandler::PythonLanguageHandler::LANG_CNAME,
-      LanguageHandler::Python5LanguageHandler::LANG_CNAME,
-      LanguageHandler::Python6LanguageHandler::LANG_CNAME,
-      LanguageHandler::CurlLanguageHandler::LANG_CNAME,
-      LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME,
-      LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME,
-      LanguageHandler::CsharpLanguageHandler::LANG_CNAME,
-      LanguageHandler::Csharp4LanguageHandler::LANG_CNAME,
-      LanguageHandler::Csharp5LanguageHandler::LANG_CNAME
+      LanguageHandler::Java::LANG_CNAME,
+      LanguageHandler::Java6::LANG_CNAME,
+      LanguageHandler::Java7::LANG_CNAME,
+      LanguageHandler::Ruby::LANG_CNAME,
+      LanguageHandler::Node::LANG_CNAME,
+      LanguageHandler::Php::LANG_CNAME,
+      LanguageHandler::Php4::LANG_CNAME,
+      LanguageHandler::Php5::LANG_CNAME,
+      LanguageHandler::Python::LANG_CNAME,
+      LanguageHandler::Python5::LANG_CNAME,
+      LanguageHandler::Python6::LANG_CNAME,
+      LanguageHandler::Curl::LANG_CNAME,
+      LanguageHandler::CurlXml::LANG_CNAME,
+      LanguageHandler::CurlJson::LANG_CNAME,
+      LanguageHandler::Csharp::LANG_CNAME,
+      LanguageHandler::Csharp4::LANG_CNAME,
+      LanguageHandler::Csharp5::LANG_CNAME
     ].freeze
 
     attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs

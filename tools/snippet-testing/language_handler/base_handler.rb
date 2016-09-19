@@ -2,7 +2,7 @@ require 'fileutils'
 require 'timeout'
 
 module LanguageHandler
-  class BaseLanguageHandler
+  class BaseHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
     LANG_CNAME = 'cname'.freeze
 
@@ -68,7 +68,7 @@ module LanguageHandler
     end
 
     def output_folder
-      Model::TestSessionModel::OUTPUT_FOLDER
+      Model::TestSession::OUTPUT_FOLDER
     end
 
     def text_with_replacements(file_content)
