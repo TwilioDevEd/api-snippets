@@ -1,7 +1,7 @@
 // Download the **Next-Gen** twilio-java library from:
 // twilio.com/docs/libraries/java#installation-nextgen
-import com.twilio.sdk.Twilio;
-import com.twilio.sdk.resource.preview.wireless.Device;
+import com.twilio.Twilio;
+import com.twilio.rest.preview.wireless.RatePlan;
 
 public class Example {
 
@@ -12,10 +12,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Device device = Device.update("DEb8eff34b248d066a31c4a953134e183e")
-      .setStatus("active")
+    RatePlan plan = RatePlan.fetch("us-automotive")
       .execute();
-      
-    System.out.println(device.getFriendlyName());
+    
+    System.out.println(plan.getSid());
+    System.out.println(plan.getAlias());
   }
 }

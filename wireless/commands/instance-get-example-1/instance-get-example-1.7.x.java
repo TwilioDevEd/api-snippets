@@ -1,7 +1,7 @@
 // Download the **Next-Gen** twilio-java library from:
 // twilio.com/docs/libraries/java#installation-nextgen
-import com.twilio.sdk.Twilio;
-import com.twilio.sdk.resource.preview.wireless.Command;
+import com.twilio.Twilio;
+import com.twilio.rest.preview.wireless.Command;
 
 public class Example {
 

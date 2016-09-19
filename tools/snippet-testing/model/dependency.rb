@@ -10,7 +10,7 @@ module Model
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.3.0'],
+      PHP_NAME    => ['4.10', '5.4.1-alpha1'],
       PYTHON_NAME => ['5.4.0', '6.0.0rc12']
     }.freeze
 
