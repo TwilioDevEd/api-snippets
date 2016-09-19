@@ -15,12 +15,14 @@ class SnippetTester
     puts 'Dependencies installed!'
   end
 
-  def initialize(parent_source_folder)
+  def initialize(parent_source_folder, test_default = false)
     @parent_source_folder = parent_source_folder
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippet_models = []
-    @test_models = [Model::TestSession.new(@parent_source_folder)]
+    @test_models = [
+      Model::TestSession.new(@parent_source_folder, nil, test_default)
+    ]
     @language_handlers = get_language_handlers
   end
 
@@ -173,6 +175,7 @@ def parse_options(args)
   options = OpenStruct.new
   options.source_folder = Dir.pwd
   options.install = false
+  options.test_default = nil
 
   opts = OptionParser.new do |opts|
     opts.banner = 'Usage: ruby snippet_tester.rb [options]'
@@ -184,8 +187,13 @@ def parse_options(args)
       options.install = install
     end
 
-    opts.on("-d D", String, "Specify a directory to be tested") do |dir|
-      options.source_folder = dir
+    opts.on('-t', '--[no-]test', 'Test: true as default behavior for directories') do |test_default|
+      options.test_default = test_default
+    end
+
+    opts.on('-d directory', String, 'Specify a directory to be tested') do |dir|
+      options.source_folder = File.expand_path(dir)
+      options.test_default = true if options.test_default.nil?
     end
   end
 
@@ -196,7 +204,7 @@ end
 if __FILE__ == $0
   begin
     options = parse_options(ARGV)
-    tester = SnippetTester.new(options.source_folder)
+    tester = SnippetTester.new(options.source_folder, options.test_default)
 
     tester.install_dependencies if options.install
     tester.init
