@@ -111,22 +111,36 @@ class SnippetTester
       Model::DependencyModel.csharp_5_dependencies
     )
 
+    python_language_handler = LanguageHandler::PythonLanguageHandler.new(
+      Model::DependencyModel.python_5_venv
+    )
+
+    python_5_language_handler = LanguageHandler::Python5LanguageHandler.new(
+      Model::DependencyModel.python_5_venv
+    )
+
+    python_6_language_handler = LanguageHandler::Python6LanguageHandler.new(
+      Model::DependencyModel.python_6_venv
+    )
+
     {
       LanguageHandler::JavaLanguageHandler::LANG_CNAME     => LanguageHandler::JavaLanguageHandler.new,
-      LanguageHandler::Java6LanguageHandler::LANG_CNAME     => LanguageHandler::Java6LanguageHandler.new,
-      LanguageHandler::Java7LanguageHandler::LANG_CNAME     => LanguageHandler::Java7LanguageHandler.new,
+      LanguageHandler::Java6LanguageHandler::LANG_CNAME    => LanguageHandler::Java6LanguageHandler.new,
+      LanguageHandler::Java7LanguageHandler::LANG_CNAME    => LanguageHandler::Java7LanguageHandler.new,
       LanguageHandler::RubyLanguageHandler::LANG_CNAME     => LanguageHandler::RubyLanguageHandler.new,
       LanguageHandler::NodeLanguageHandler::LANG_CNAME     => LanguageHandler::NodeLanguageHandler.new,
       LanguageHandler::PhpLanguageHandler::LANG_CNAME      => php_language_handler,
       LanguageHandler::Php4LanguageHandler::LANG_CNAME     => php_4_language_handler,
       LanguageHandler::Php5LanguageHandler::LANG_CNAME     => php_5_language_handler,
-      LanguageHandler::PythonLanguageHandler::LANG_CNAME   => LanguageHandler::PythonLanguageHandler.new,
+      LanguageHandler::PythonLanguageHandler::LANG_CNAME   => python_language_handler,
+      LanguageHandler::Python5LanguageHandler::LANG_CNAME  => python_5_language_handler,
+      LanguageHandler::Python6LanguageHandler::LANG_CNAME  => python_6_language_handler,
       LanguageHandler::CurlLanguageHandler::LANG_CNAME     => LanguageHandler::CurlLanguageHandler.new,
       LanguageHandler::CurlXmlLanguageHandler::LANG_CNAME  => LanguageHandler::CurlXmlLanguageHandler.new,
       LanguageHandler::CurlJsonLanguageHandler::LANG_CNAME => LanguageHandler::CurlJsonLanguageHandler.new,
       LanguageHandler::CsharpLanguageHandler::LANG_CNAME   => csharp_language_handler,
-      LanguageHandler::Csharp4LanguageHandler::LANG_CNAME   => csharp_4_language_handler,
-      LanguageHandler::Csharp5LanguageHandler::LANG_CNAME   => csharp_5_language_handler
+      LanguageHandler::Csharp4LanguageHandler::LANG_CNAME  => csharp_4_language_handler,
+      LanguageHandler::Csharp5LanguageHandler::LANG_CNAME  => csharp_5_language_handler
     }
   end
 
