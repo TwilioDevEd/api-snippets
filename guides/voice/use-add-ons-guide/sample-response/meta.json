@@ -1,0 +1,5 @@
+{
+  "title": "Sample data from the Whitepages Pro add-on",
+  "description": "This is a sample of the payload your application would receive when using the WhitePages Pro add-on",
+  "type": "output"
+}
