@@ -1,8 +1,8 @@
 from flask import Flask, request
 from twilio import twiml
 
-
 app = Flask(__name__)
+
 
 @app.route("/voice", methods=['GET', 'POST'])
 def voice():
@@ -18,6 +18,7 @@ def voice():
     resp.redirect('/voice')
 
     return str(resp)
+
 
 @app.route('/gather', methods=['GET', 'POST'])
 def gather():

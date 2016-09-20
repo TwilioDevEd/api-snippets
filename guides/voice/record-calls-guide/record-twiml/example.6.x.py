@@ -1,7 +1,8 @@
 from flask import Flask
+from twilio import twiml
+
 app = Flask(__name__)
 
-from twilio import twiml
 
 @app.route("/record", methods=['GET', 'POST'])
 def record():
@@ -10,10 +11,10 @@ def record():
     response = twiml.Response()
 
     # Use <Say> to give the caller some instructions
-    response.say('Hello. Please leave a message and I will transcribe it.')
+    response.say('Hello. Please leave a message after the beep.')
 
-    # Use <Record> to record and transcribe the caller's message
-    response.record(transcribe=True, maxLength=30)
+    # Use <Record> to record the caller's message
+    response.record()
 
     # End the call with <Hangup>
     response.hangup()

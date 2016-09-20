@@ -1,12 +1,28 @@
 from flask import Flask, request
 from twilio import twiml
 
-
 app = Flask(__name__)
+
 
 @app.route("/voice", methods=['GET', 'POST'])
 def voice():
     """Respond to incoming phone calls with a menu of options"""
+    # Start our TwiML response
+    resp = twiml.Response()
+
+    # Start our <Gather> verb
+    with resp.gather(numDigits=1, action='/gather') as gather:
+        gather.say('For sales, press 1. For support, press 2.')
+
+    # If the user doesn't select an option, redirect them into a loop
+    resp.redirect('/voice')
+
+    return str(resp)
+
+
+@app.route('/gather', methods=['GET', 'POST'])
+def gather():
+    """Processes results from the <Gather> prompt in /voice"""
     # Start our TwiML response
     resp = twiml.Response()
 
@@ -27,11 +43,7 @@ def voice():
             # If the caller didn't choose 1 or 2, apologize and ask them again
             resp.say("Sorry, I don't understand that choice.")
 
-    # Start our <Gather> verb
-    with resp.gather(numDigits=1) as gather:
-        gather.say('For sales, press 1. For support, press 2.')
-
-    # If the user doesn't select an option, redirect them into a loop
+    # If the user didn't choose 1 or 2 (or anything), send them back to /voice
     resp.redirect('/voice')
 
     return str(resp)

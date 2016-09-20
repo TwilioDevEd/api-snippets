@@ -1,7 +1,8 @@
 from flask import Flask
+from twilio import twiml
+
 app = Flask(__name__)
 
-from twilio import twiml
 
 @app.route("/record", methods=['GET', 'POST'])
 def record():
