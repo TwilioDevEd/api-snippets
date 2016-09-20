@@ -19,7 +19,7 @@ $items = $client->preview->sync
     ->syncMapItems->read(
         array(
             'from' => 'steph_curry',
-            'direction' => 'forward'
+            'order' => 'asc'
         )
     );
 
