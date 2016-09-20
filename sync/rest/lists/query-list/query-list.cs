@@ -15,7 +15,7 @@ class Example
     var items = SyncListItemResource.Read("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "MyCollection")
       .ByFrom("10")
-      .ByDirection(SyncListItemResource.QueryDirection.FORWARD)
+      .ByOrder(SyncListItemResource.QueryResultOrder.ASC)
       .Execute(client);
 
     foreach (var item in items)

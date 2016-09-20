@@ -16,7 +16,7 @@ class Example
     var items = SyncMapItemResource.Read("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "Players")
       .ByFrom("steph_curry")
-      .ByDirection(SyncMapItemResource.QueryDirection.FORWARD)
+      .ByOrder(SyncMapItemResource.QueryResultOrder.ASC)
       .Execute(client);
 
     foreach (var item in items)

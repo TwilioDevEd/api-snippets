@@ -11,7 +11,7 @@ service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 # Query for a map item
 items = service.sync_maps('Players').sync_map_items.stream(
 	from: 'steph_curry',
-    direction: 'forward'
+    order: 'asc'
 )
 items.each do |mapItem|
 	puts mapItem.key

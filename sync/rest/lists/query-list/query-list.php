@@ -19,7 +19,7 @@ $items = $client->preview->sync
     ->syncListItems->read(
         array(
             'from' => '10',
-            'direction' => 'forward'
+            'order' => 'asc'
         )
     );
 
