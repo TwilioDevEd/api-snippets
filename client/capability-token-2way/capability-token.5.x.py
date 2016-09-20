@@ -13,17 +13,13 @@ def get_capability_token():
 
     capability = TwilioCapability(account_sid, auth_token)
 
-    application_sid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' # Twilio Application Sid
+    # Twilio Application Sid
+    application_sid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     capability.allow_client_outgoing(application_sid)
     capability.allow_client_incoming(request.form["ClientName"])
     token = capability.generate()
 
     return Response(token, mimetype='application/jwt')
-
-
-# @app.route("/voice", methods=['POST'])
-# TODO: def get_voice_twiml():
-
 
 if __name__ == "__main__":
     app.run(debug=True)
