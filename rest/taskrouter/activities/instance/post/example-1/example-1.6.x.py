@@ -8,8 +8,16 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 activity_sid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(username=account_sid, password=auth_token)
+
 activity = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-                                      .activities(sid=activity_sid) \
-                                      .update(friendly_name='another_name')
+        .activities(sid=activity_sid).update(friendly_name='another_name')
+
+print(activity.friendly_name)
+
+# alternatively
+activity = client.taskrouter.v1.workspaces(sid=workspace_sid) \
+        .activities(sid=activity_sid).fetch()
+
+activity = activity.update(friendly_name='another_name')
 
 print(activity.friendly_name)

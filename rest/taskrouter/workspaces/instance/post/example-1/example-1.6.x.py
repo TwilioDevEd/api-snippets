@@ -13,3 +13,13 @@ workspace = client.taskrouter.v1.workspaces(sid=workspace_sid) \
                         event_callback_url='http://requestb.in/vh9reovh')
 
 print(workspace.friendly_name)
+
+# alternatively
+workspace = client.taskrouter.v1.workspaces(sid=workspace_sid).fetch()
+
+workspace = workspace.update(
+    friendly_name='NewFriendlyName',
+    event_callback_url='http://requestb.in/vh9reovh'
+).fetch()
+
+print(workspace.friendly_name)
