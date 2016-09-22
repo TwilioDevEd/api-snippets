@@ -5,13 +5,12 @@ from twilio.rest import Client
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
-call = client.api.v2010.accounts(sid=account_sid) \
-        .calls.create(url="http://demo.twilio.com/docs/voice.xml",
-                      to="+14155551212",
-                      send_digits="1234#",
-                      from_="+18668675309",
-                      method="GET")
+call = client.account.calls.create(url="http://demo.twilio.com/docs/voice.xml",
+                                   to="+14155551212",
+                                   send_digits="1234#",
+                                   from_="+18668675309",
+                                   method="GET")
 
 print(call.sid)
