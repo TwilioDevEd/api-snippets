@@ -6,6 +6,6 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
-workspace = client.taskrouter.v1.workspaces(sid=workspace_sid).delete()
+workspace = client.taskrouter.workspaces(workspace_sid).delete()

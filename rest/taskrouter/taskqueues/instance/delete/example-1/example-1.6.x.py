@@ -9,5 +9,5 @@ taskqueue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 
-taskqueue = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .task_queues(sid=taskqueue_sid).delete()
+taskqueue = client.taskrouter.workspaces(workspace_sid) \
+        .task_queues(taskqueue_sid).delete()

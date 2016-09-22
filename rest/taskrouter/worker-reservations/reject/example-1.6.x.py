@@ -8,11 +8,11 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
 # reject a reservation
-reservation = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .workers(sid=worker_sid).reservations(sid=reservation_sid) \
+reservation = client.taskrouter.workspaces(workspace_sid) \
+        .workers(worker_sid).reservations(reservation_sid) \
         .update(reservation_status='rejected')
 
 print(reservation.reservation_status)

@@ -8,10 +8,10 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 task_sid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 reservation_sid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
-reservation = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .tasks(sid=task_sid).reservations(sid=reservation_sid).fetch()
+reservation = client.taskrouter.workspaces(workspace_sid) \
+        .tasks(task_sid).reservations(reservation_sid).fetch()
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

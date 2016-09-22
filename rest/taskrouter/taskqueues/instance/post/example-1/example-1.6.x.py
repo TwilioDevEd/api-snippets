@@ -9,15 +9,15 @@ taskqueue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 
-taskqueue = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .task_queues(sid=taskqueue_sid) \
+taskqueue = client.taskrouter.workspaces(workspace_sid) \
+        .task_queues(taskqueue_sid) \
         .update(target_workers='languages HAS "english"')
 
 print(taskqueue.target_workers)
 
 # alternatively
-taskqueue = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .task_queues(sid=taskqueue_sid).fetch()
+taskqueue = client.taskrouter.workspaces(workspace_sid) \
+        .task_queues(taskqueue_sid).fetch()
 
 taskqueue = taskqueue.update(target_workers='languages HAS "english"')
 

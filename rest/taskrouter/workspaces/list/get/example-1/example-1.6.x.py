@@ -6,9 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
-workspaces = client.taskrouter.v1.workspaces.list()
+workspaces = client.taskrouter.workspaces.list()
 
 for workspace in workspaces:
     print(workspace.friendly_name)

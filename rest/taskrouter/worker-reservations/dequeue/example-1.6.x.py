@@ -8,11 +8,11 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 reservation_sid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
 # dequeue a reservation
-reservation = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-        .workers(sid=worker_sid).reservations(sid=reservation_sid) \
+reservation = client.taskrouter.workspaces(workspace_sid) \
+        .workers(worker_sid).reservations(reservation_sid) \
         .update(instruction='dequeue', dequeue_from='+18001231234')
 
 print(reservation.reservation_status)

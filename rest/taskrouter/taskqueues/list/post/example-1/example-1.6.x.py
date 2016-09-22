@@ -6,9 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
+client = Client(account_sid, auth_token)
 
-taskqueue = client.taskrouter.v1.workspaces(sid=workspace_sid) \
+taskqueue = client.taskrouter.workspaces(workspace_sid) \
         .task_queues.create(
     friendly_name='English',
     reservation_activity_sid='WAea296a56ebce4bfbff0e99abadf16934',

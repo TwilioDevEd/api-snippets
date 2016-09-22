@@ -7,7 +7,6 @@ auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 activity_sid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-client = Client(username=account_sid, password=auth_token)
-activity = client.taskrouter.v1.workspaces(sid=workspace_sid) \
-                                      .activities(sid=activity_sid) \
-                                      .delete()
+client = Client(account_sid, auth_token)
+activity = client.taskrouter.workspaces(workspace_sid) \
+        .activities(activity_sid).delete()

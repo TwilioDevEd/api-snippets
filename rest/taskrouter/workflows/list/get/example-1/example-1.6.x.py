@@ -8,7 +8,7 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 
-workflows = client.taskrouter.v1.workspaces(sid=workspace_sid).workflows.list()
+workflows = client.taskrouter.workspaces(workspace_sid).workflows.list()
 
 for workflow in workflows:
     print(workflow.friendly_name)
