@@ -12,6 +12,6 @@ $client = new Client($sid, $token);
 // check out the list resource examples on this page
 $notification = $client->account
     ->notifications("NO5a7a84730f529f0a76b3e30c01315d1a")
-    ->delete();
+    ->fetch();
 
 echo $notification->messageText;
