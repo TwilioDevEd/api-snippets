@@ -21,4 +21,4 @@ $domain = $client
         )
     );
 
-echo $ipAccessControlListMapping->sid;
+echo $domain->sid;
