@@ -17,7 +17,6 @@ $role = $client->ipMessaging
     ->services("SERVICE_SID")
     ->roles("ROLE_SID")
     ->update(
-        "RoleName",
         array("sendMessage", "leaveChannel")
     );
 

@@ -14,7 +14,6 @@ $service = $client->services->get("SERVICE_SID");
 $role = $service->roles->get("ROLE_SID");
 $response = $role->update(
     array(
-        "FriendlyName" => "RoleName",
         "Permission" => "sendMessage",
         "Permission" => "leaveChannel"
     )

@@ -19,7 +19,6 @@ public class TwilioTest {
 
         // Update the role
         final List<NameValuePair> roleParams = new ArrayList<NameValuePair>();
-        roleParams.add(new BasicNameValuePair("FriendlyName", "RoleName"));
         roleParams.add(new BasicNameValuePair("Permission", "sendMessage"));
         roleParams.add(new BasicNameValuePair("Permission", "leaveChannel"));
         role.update(roleparams);
