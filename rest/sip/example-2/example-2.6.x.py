@@ -1,0 +1,16 @@
+# Download the Python helper library from twilio.com/docs/python/install
+from twilio.rest import Client
+
+# Your Account Sid and Auth Token from twilio.com/user/account
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token = "your_auth_token"
+client = Client(account_sid, auth_token)
+
+call = client.calls \
+             .create("sip:kate@example.com",
+                     "Jack",
+                     url="http://www.example.com/sipdial.xml",
+                     sip_auth_username="jack",
+                     sip_auth_password="secret")
+
+print(call.sid)
