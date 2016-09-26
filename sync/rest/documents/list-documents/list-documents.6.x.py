@@ -6,5 +6,12 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-token = client.tokens.create()
-print(token.username)
+documents = client.preview \
+                  .sync \
+                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                  .documents \
+                  .list()
+
+for document in documents:
+    print(document.unique_name)
+    print(document.data)

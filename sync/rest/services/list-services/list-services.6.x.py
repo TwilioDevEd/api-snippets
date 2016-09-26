@@ -6,5 +6,8 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-token = client.tokens.create()
-print(token.username)
+services = client.preview.sync.services.list()
+
+for service in services:
+    print(service.sid)
+    print(service.friendly_name)
