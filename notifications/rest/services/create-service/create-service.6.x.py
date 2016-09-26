@@ -8,5 +8,5 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+service = client.notify.services.create(friendly_name="My Awesome Service")
 print(service)

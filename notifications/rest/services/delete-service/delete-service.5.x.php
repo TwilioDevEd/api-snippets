@@ -14,6 +14,6 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Delete the service
-$client->notifications
+$client->notify
     ->services("ISxxx")
     ->delete();

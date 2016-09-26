@@ -14,7 +14,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Retrieve a binding
-$binding = $client->notifications
+$binding = $client->notify
     ->services("ISxxx")
     ->bindings("BSxxx")
     ->fetch();

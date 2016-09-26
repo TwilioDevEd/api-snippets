@@ -8,7 +8,7 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
-service = client.notifications.v1.services.create(
+service = client.notify.v1.services.create(
   friendly_name: 'My Awesome Service'
 )
 

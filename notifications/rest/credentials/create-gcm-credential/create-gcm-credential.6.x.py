@@ -8,5 +8,8 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services.create(friendly_name="My Awesome Service")
-print(service)
+credential = client.notify.credentials.create(
+    type="gcm",
+    friendly_name="MyGCMCredential",
+    api_key="api_key_here"
+)

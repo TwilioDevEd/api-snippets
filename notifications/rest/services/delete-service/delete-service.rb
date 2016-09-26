@@ -9,6 +9,6 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 # Provide the SID for an existing service
-service = client.notifications.v1.services('ISxxx')
+service = client.notify.v1.services('ISxxx')
 response = service.delete
 puts response

@@ -14,7 +14,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Update the service
-$service = $client->notifications
+$service = $client->notify
     ->services("ISxxx")
     ->update(
         array(

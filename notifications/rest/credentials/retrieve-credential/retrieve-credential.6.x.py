@@ -8,9 +8,8 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+credential = client.notify \
+                   .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
+                   .fetch()
 
-start_date = datetime.strptime("2015-08-25","%Y-%m-%d")
-bindings = service.bindings.list(tag="premium", start_date=start_date)
-
-print(bindings)
+print(credential.friendly_name)

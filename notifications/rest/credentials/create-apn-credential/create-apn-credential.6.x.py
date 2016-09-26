@@ -8,12 +8,12 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+credential = client.notify.credentials.create(
+    type="apn",
+    friendly_name="MyAPNCredential",
+    certificate="cert.pem_content",
+    private_key="key.pem_content",
+    sandbox="true"
+)
 
-notification = service.notifications.create(
-    identity="Bob", title="Generic loooooooong title for all Bindings",
-    body="This is the body for all Bindings",
-    gcm='{"notification":{"tag":"MyTag"}}',
-    apn='{"aps":{"title":"Short title for Watch."}}')
-
-print(notification)
+print(credential.friendly_name)

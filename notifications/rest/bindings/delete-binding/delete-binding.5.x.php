@@ -14,7 +14,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Delete a binding
-$client->notifications
+$client->notify
     ->services("ISxxx")
     ->bindings("BSxxx")
     ->delete();

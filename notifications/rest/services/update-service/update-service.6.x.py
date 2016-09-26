@@ -8,8 +8,8 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+service = client.notify.services("ISxxx").update(
+    friendly_name="NewFlowHipSlackChatDock"
+)
 
-notification = service.notifications.create(identity="Bob", body="Hello Bob")
-
-print(notification)
+print(service.friendly_name)

@@ -8,6 +8,6 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$client->notifications
+$client->notify
     ->credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
     ->delete();

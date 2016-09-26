@@ -8,8 +8,6 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+service = client.notify.services("ISxxx").fetch()
 
-binding = service.bindings.create(endpoint="xxx", identity="bob", binding_type="gcm", address ="xxx", tag="premium")
-
-print(binding)
+print(service.sid)

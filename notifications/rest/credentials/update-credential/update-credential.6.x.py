@@ -8,8 +8,8 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notifications.v1.services("ISxxx")
+credential = client.notify \
+                   .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
+                   .update(friendly_name="MyCredential")
 
-response = service.bindings("BSxxx").delete()
-
-print(response)
+print(credential.friendly_name)

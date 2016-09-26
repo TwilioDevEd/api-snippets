@@ -14,7 +14,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // List all services
-$services = $client->notifications->services->read();
+$services = $client->notify->services->read();
 
 foreach ($services as $service) {
     echo $service->friendlyName . PHP_EOL;

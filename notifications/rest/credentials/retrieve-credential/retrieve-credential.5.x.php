@@ -9,7 +9,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credential = $client->notifications
+$credential = $client->notify
     ->credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
     ->fetch();
 

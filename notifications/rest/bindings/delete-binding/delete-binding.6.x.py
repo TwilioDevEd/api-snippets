@@ -8,5 +8,6 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-services = client.notifications.v1.services.list()
-print(services)
+response = client.notify.services("ISxxx").bindings("BSxxx").delete()
+
+print(response)
