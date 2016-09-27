@@ -1,14 +1,16 @@
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from faker import Factory
 from twilio.access_token import AccessToken, ConversationsGrant
 
 app = Flask(__name__)
 fake = Factory.create()
 
+
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+
 
 @app.route('/token')
 def token():
@@ -16,13 +18,13 @@ def token():
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     api_key = os.environ['TWILIO_API_KEY']
     api_secret = os.environ['TWILIO_API_SECRET']
-    
+
     # Create an Access Token
     token = AccessToken(account_sid, api_key, api_secret)
 
     # Set the Identity of this token
     token.identity = fake.user_name()
-    
+
     # Grant access to Conversations
     grant = ConversationsGrant()
     grant.configuration_profile_sid = os.environ['TWILIO_CONFIGURATION_SID']
