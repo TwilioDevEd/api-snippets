@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credentials = $client->notifications->credentials->read();
+$credentials = $client->notify->credentials->read();
 
 foreach ($credentials as $credential) {
     echo $credential->friendlyName;

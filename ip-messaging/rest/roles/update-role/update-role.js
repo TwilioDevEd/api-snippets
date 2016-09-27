@@ -6,7 +6,6 @@ var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('SERVICE_SID');
 
 service.roles('ROLE_SID').post({
-    friendlyName: 'RoleName',
     permission: 'sendMessage',
     permission: 'leaveChannel'
 }).then(function(response) {

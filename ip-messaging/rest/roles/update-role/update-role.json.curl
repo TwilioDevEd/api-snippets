@@ -1,5 +1,4 @@
 curl -XPOST https://ip-messaging.twilio.com/v1/Services/{service sid}/Roles/{role sid} \
-    -d "FriendlyName=RoleName" \
     -d "Permission=sendMessage" \
     -d "Permission=leaveChannel" \
     -u '{twilio account sid}:{twilio auth token}'

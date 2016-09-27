@@ -9,6 +9,6 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 # Provide a SID for an existing notification service
-service = client.notifications.v1.services('ISxxx')
+service = client.notify.v1.services('ISxxx')
 response = service.update(friendly_name: 'NewFlowHipSlackChatDock')
 puts response

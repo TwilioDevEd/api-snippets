@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$credential = $client->notifications->credentials
+$credential = $client->notify->credentials
     ->create(
         "apn",
         array(

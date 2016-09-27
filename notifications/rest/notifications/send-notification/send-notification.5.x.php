@@ -14,7 +14,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Create the notification
-$notification = $client->notifications
+$notification = $client->notify
     ->services("ISxxx")
     ->notifications->create(
         array(
