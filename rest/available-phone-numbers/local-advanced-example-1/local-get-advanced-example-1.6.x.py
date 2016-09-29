@@ -13,5 +13,7 @@ numbers = client.available_phone_numbers("US") \
                       contains="555",
                       in_region="CA")
 
-for number in numbers:
-    print number.phone_number
+number = client.incoming_phone_numbers \
+               .create(phone_number=numbers[0].phone_number)
+
+print(number.sid)

@@ -11,6 +11,12 @@ $client = new Client($sid, $token);
 
 $numbers = $client->availablePhoneNumbers('GB')->mobile->read();
 
-foreach ($numbers as $number) {
-    echo $number->phoneNumber;
-}
+// Purchase the first number on the list.
+$number = $client->incomingPhoneNumbers
+    ->create(
+        array(
+            "phoneNumber" => $numbers[0]->phoneNumber
+        )
+    );
+
+echo $number->sid;

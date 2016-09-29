@@ -4,12 +4,14 @@ var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
-client.availablePhoneNumbers("US").local.list({ excludeAllAddressRequired: "true" }, function(err, data) {
-    for (var number in data.availablePhoneNumbers) {
-        client.incomingPhoneNumbers.create({
-            phoneNumber: number.phone_number
-        }, function(err, purchasedNumber) {
-            console.log(purchasedNumber.sid);
-        });
-    }
+client.availablePhoneNumbers("US").local.list({
+  excludeAllAddressRequired: "true"
+}, function(err, data) {
+  var number = data.availablePhoneNumbers[0];
+
+  client.incomingPhoneNumbers.create({
+    phoneNumber: number.phone_number
+  }, function(err, purchasedNumber) {
+    console.log(purchasedNumber.sid);
+  });
 });

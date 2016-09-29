@@ -13,6 +13,12 @@ $numbers = $client->availablePhoneNumbers('GB')->local->read(
     array("contains" => "4420")
 );
 
-foreach ($numbers as $number) {
-    echo $number->phoneNumber;
-}
+// Purchase the first number on the list.
+$number = $client->incomingPhoneNumbers
+    ->create(
+        array(
+            "phoneNumber" => $numbers[0]->phoneNumber
+        )
+    );
+
+echo $number->sid;
