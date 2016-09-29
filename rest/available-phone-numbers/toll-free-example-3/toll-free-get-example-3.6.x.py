@@ -8,7 +8,9 @@ client = Client(account_sid, auth_token)
 
 numbers = client.available_phone_numbers("US") \
                 .toll_free \
-                .list(contains="KYLO")
+                .list(contains="KYLO", area_code="800")
 
-for number in numbers:
-    print number.phone_number
+number = client.incoming_phone_numbers \
+               .create(phone_number=numbers[0].phone_number)
+
+print(number.sid)

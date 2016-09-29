@@ -13,7 +13,7 @@ class Example
     
     var result = twilio.ListAvailableTollFreePhoneNumbers("US");
     
-    // Purchase the first number in the list
+    // Purchase the first number on the list
     var availableNumber = result.AvailablePhoneNumbers[0];
     var purchaseOptions = new PhoneNumberOptions();
     purchaseOptions.PhoneNumber = availableNumber.PhoneNumber;

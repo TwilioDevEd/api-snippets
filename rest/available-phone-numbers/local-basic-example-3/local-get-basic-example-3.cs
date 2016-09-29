@@ -1,9 +1,9 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 using Twilio;
-class Example 
+class Example
 {
-  static void Main(string[] args) 
+  static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -12,16 +12,15 @@ class Example
 
     var options = new AvailablePhoneNumberListRequest();
     options.Contains = "STORM";
-    
+
     var result = twilio.ListAvailableLocalPhoneNumbers("US", options);
-    
-    // Purchase the first number in the list
+
+    // Purchase the first number on the list
     var availableNumber = result.AvailablePhoneNumbers[0];
     var purchaseOptions = new PhoneNumberOptions();
     purchaseOptions.PhoneNumber = availableNumber.PhoneNumber;
-    
+
     var number = twilio.AddIncomingPhoneNumber(purchaseOptions);
     Console.WriteLine(number.Sid);
-    
   }
 }

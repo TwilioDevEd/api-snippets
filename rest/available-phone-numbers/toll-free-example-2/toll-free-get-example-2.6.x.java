@@ -27,7 +27,7 @@ public class Example {
     AvailablePhoneNumberList numbers = client.getAccount().getAvailablePhoneNumbers(params, "US", "TollFree");
     List<AvailablePhoneNumber> list = numbers.getPageData();
 
-    // Purchase the first number in the list.
+    // Purchase the first number on the list.
     List<NameValuePair> purchaseParams = new ArrayList<NameValuePair>();
     purchaseParams.add(new BasicNameValuePair("PhoneNumber", list.get(0).getPhoneNumber()));
     client.getAccount().getIncomingPhoneNumberFactory().create(purchaseParams);

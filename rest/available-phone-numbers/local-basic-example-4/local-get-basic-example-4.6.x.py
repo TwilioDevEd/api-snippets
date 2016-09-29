@@ -10,5 +10,7 @@ numbers = client.available_phone_numbers("US") \
                 .local \
                 .list(in_region="AR")
 
-for number in numbers:
-    print number.phone_number
+number = client.incoming_phone_numbers \
+               .create(phone_number=numbers[0].phone_number)
+
+print(number.sid)

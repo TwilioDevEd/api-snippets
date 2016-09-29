@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.api.v2010.account.incomingphonenumber.TollFreeCreator;
 import com.twilio.base.ResourceSet;
+import com.twilio.rest.api.v2010.account.IncomingPhoneNumber;
 import com.twilio.rest.api.v2010.account.availablephonenumbercountry.TollFree;
 import com.twilio.type.PhoneNumber;
 
@@ -15,8 +15,10 @@ public class Example {
 
     ResourceSet<TollFree> numbers =
         TollFree.read("US").byContains("KYLO").byAreaCode(800).execute();
+
+    // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    new TollFreeCreator(availableNumber).execute();
+    IncomingPhoneNumber.create(availableNumber).execute();
   }
 }

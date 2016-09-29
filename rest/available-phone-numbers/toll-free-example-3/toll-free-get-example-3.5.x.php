@@ -13,6 +13,12 @@ $numbers = $client->availablePhoneNumbers('US')->tollFree->read(
     array("contains" => "KYLO", "areaCode" => "800")
 );
 
-foreach ($numbers as $number) {
-    echo $number->phoneNumber;
-}
+// Purchase the first number on the list.
+$number = $client->incomingPhoneNumbers
+    ->create(
+        array(
+            "phoneNumber" => $numbers[0]->phoneNumber
+        )
+    );
+
+echo $number->sid;
