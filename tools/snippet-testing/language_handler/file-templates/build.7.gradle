@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.twilio.sdk', name: 'twilio', version: '7.0.0-rc-27'
+    compile group: 'com.twilio.sdk', name: 'twilio', version: '7.0.0-rc-29'
 }
 
 task wrapper(type: Wrapper) {
