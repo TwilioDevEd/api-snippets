@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Account subAccount = Account.create().setFriendlyName("Submarine").execute();
+    Account subAccount = Account.creator().setFriendlyName("Submarine").create();
 
     System.out.println(subAccount.getSid());
   }

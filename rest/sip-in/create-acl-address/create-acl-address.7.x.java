@@ -11,8 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     IpAddress ipAddress = IpAddress
-        .create("AL32a3c49700934481addd5ce1659f04d2", "My office IP Address", "55.102.123.124")
-        .execute();
+        .creator("AL32a3c49700934481addd5ce1659f04d2", "My office IP Address", "55.102.123.124")
+        .create();
 
     System.out.println(ipAddress.getSid());
   }

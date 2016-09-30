@@ -17,9 +17,9 @@ public class Example {
     DateTime lower = DateTime.parse("2009-07-04");
     DateTime upper = DateTime.parse("2009-07-06");
 
-    ResourceSet<Recording> recordings = Recording.read()
-        .byDateCreated(Range.closed(lower, upper))
-        .execute();
+    ResourceSet<Recording> recordings = Recording.reader()
+        .setDateCreated(Range.closed(lower, upper))
+        .read();
 
     // Loop over recordings and print out a property for each one.
     for (Recording recording : recordings) {

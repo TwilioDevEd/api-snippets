@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Credential> credentials =
-        Credential.read("CL32a3c49700934481addd5ce1659f04d2").execute();
+        Credential.reader("CL32a3c49700934481addd5ce1659f04d2").read();
 
     // Loop over credentials and print out a property for each one.
     for (Credential credential : credentials) {

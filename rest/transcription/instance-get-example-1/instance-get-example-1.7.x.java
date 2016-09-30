@@ -13,8 +13,8 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Transcription transcription = Transcription
-        .fetch("TR8c61027b709ffb038236612dc5af8723")
-        .execute();
+        .fetcher("TR8c61027b709ffb038236612dc5af8723")
+        .fetch();
 
     System.out.println(transcription.getTranscriptionText());
   }

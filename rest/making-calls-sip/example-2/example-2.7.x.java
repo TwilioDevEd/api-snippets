@@ -16,9 +16,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .create(new Sip("sip:kate@example.com"), new PhoneNumber("Jack"),
+        .creator(new Sip("sip:kate@example.com"), new PhoneNumber("Jack"),
             new URI("http://www.example.com/sipdial.xml"))
-        .setSipAuthPassword("secret").setSipAuthUsername("jack").execute();
+        .setSipAuthPassword("secret").setSipAuthUsername("jack").create();
 
     System.out.println(call.getSid());
   }

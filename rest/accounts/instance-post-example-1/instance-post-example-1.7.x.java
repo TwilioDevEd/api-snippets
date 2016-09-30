@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Account account = Account.update(ACCOUNT_SID).setStatus(Account.Status.SUSPENDED).execute();
+    Account account = Account.updater(ACCOUNT_SID).setStatus(Account.Status.SUSPENDED).update();
 
     System.out.println(account.getDateUpdated());
   }

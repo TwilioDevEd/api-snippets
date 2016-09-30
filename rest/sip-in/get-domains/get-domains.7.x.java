@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Domain> domains = Domain.read().execute();
+    ResourceSet<Domain> domains = Domain.reader().read();
 
     // Loop over domains and print out a property for each one.
     for (Domain domain : domains) {
