@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.google.common.collect.Range;
 import com.twilio.Twilio;
@@ -14,8 +14,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Conference> conferences = Conference.read().byStatus(Conference.Status.IN_PROGRESS)
-        .byDateCreated(Range.atLeast(DateTime.parse("2009-07-06"))).execute();
+    ResourceSet<Conference> conferences = Conference.reader()
+        .setStatus(Conference.Status.IN_PROGRESS)
+        .setDateCreated(Range.atLeast(LocalDate.parse("2009-07-06")))
+        .read();
 
     // Loop over conferences and print out a property for each one.
     for (Conference conference : conferences) {

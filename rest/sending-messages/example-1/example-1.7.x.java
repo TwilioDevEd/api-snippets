@@ -12,10 +12,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Message message = Message
-        .create(new PhoneNumber("+15558675309"), new PhoneNumber("+14158141829"),
+        .creator(new PhoneNumber("+15558675309"), new PhoneNumber("+14158141829"),
             "Jenny please?! I love you <3")
         .setMediaUrl("http://www.example.com/hearts.png")
-        .execute();
+        .create();
 
     System.out.println(message.getSid());
   }

@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Add a Member to the channel
-    Member member = Member.create(SERVICE_SID, CHANNEL_SID, "identity").execute();
+    Member member = Member.creator(SERVICE_SID, CHANNEL_SID, "identity").create();
 
     System.out.println(member.getDateCreated());
   }

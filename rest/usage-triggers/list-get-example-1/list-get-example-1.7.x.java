@@ -11,10 +11,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Trigger> triggers = Trigger.read()
-        .byUsageCategory(Trigger.UsageCategory.CALLS)
-        .byRecurring(Trigger.Recurring.DAILY)
-        .execute();
+    ResourceSet<Trigger> triggers = Trigger.reader()
+        .setUsageCategory(Trigger.UsageCategory.CALLS)
+        .setRecurring(Trigger.Recurring.DAILY)
+        .read();
 
     // Loop over triggers and print out a property for each one.
     for (Trigger trigger : triggers) {

@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<LastMonth> records = LastMonth.read().execute();
+    ResourceSet<LastMonth> records = LastMonth.reader().read();
 
     // Loop over records and print out a property for each one.
     for (LastMonth record : records) {

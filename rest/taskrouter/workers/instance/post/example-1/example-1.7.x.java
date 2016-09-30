@@ -12,9 +12,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Worker worker = Worker
-        .update(WORKSPACE_SID, WORKER_SID)
+        .updater(WORKSPACE_SID, WORKER_SID)
         .setAttributes("{\"type\":\"support\"}")
-        .execute();
+        .update();
 
     System.out.println(worker.getAttributes());
   }

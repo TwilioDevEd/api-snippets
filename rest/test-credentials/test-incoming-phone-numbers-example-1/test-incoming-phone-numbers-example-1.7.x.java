@@ -12,9 +12,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     IncomingPhoneNumber number = IncomingPhoneNumber
-        .create(new PhoneNumber("+15005550006"))
+        .creator(new PhoneNumber("+15005550006"))
         .setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
-        .execute();
+        .create();
 
     System.out.println(number.getSid());
   }

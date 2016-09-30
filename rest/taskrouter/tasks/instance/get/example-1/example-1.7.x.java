@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Task task = Task.fetch(WORKSPACE_SID, TASK_SID).execute();
+    Task task = Task.fetcher(WORKSPACE_SID, TASK_SID).fetch();
 
     System.out.println(task.getAttributes());
   }

@@ -19,6 +19,6 @@ public class Example {
     List<String> permissions = Arrays.asList("sendMessage", "leaveChannel");
 
     // Update the role
-    Role role = Role.update(SERVICE_SID, "ROLE_SID", permissions).execute();
+    Role role = Role.updater(SERVICE_SID, "ROLE_SID", permissions).update();
   }
 }

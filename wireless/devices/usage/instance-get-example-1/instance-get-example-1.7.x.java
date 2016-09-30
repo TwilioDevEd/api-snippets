@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Usage usage = Usage.fetch("DEb8eff34b248d066a31c4a953134e183e")
-      .execute();
+    Usage usage = Usage.fetcher("DEb8eff34b248d066a31c4a953134e183e")
+      .fetch();
     System.out.println(usage.getPeriod().get("start"));
     System.out.println(usage.getPeriod().get("end"));
     System.out.println(usage.getDataCosts().get("total"));

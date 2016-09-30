@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Event> events = Event.read()
-        .byResourceSid("PN4aa51b930717ea83c91971b86d99018f")
-        .execute();
+    ResourceSet<Event> events = Event.reader()
+        .setResourceSid("PN4aa51b930717ea83c91971b86d99018f")
+        .read();
 
     for (Event e : events) {
       System.out.println(e.getDescription());

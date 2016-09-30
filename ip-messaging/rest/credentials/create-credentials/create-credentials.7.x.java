@@ -13,10 +13,10 @@ public class Example {
 
     // Create a credential
     Credential credential = Credential
-        .create(Credential.PushService.GCM)
+        .creator(Credential.PushService.GCM)
         .setApiKey("XXX")
         .setFriendlyName("NAME")
-        .execute();
+        .create();
 
     System.out.println(credential.getFriendlyName());
   }

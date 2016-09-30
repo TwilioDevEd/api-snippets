@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete the role
-    boolean didDelete = Role.delete(SERVICE_SID, "ROLE_SID").execute();
+    boolean didDelete = Role.deleter(SERVICE_SID, "ROLE_SID").delete();
     System.out.println(didDelete);
   }
 }

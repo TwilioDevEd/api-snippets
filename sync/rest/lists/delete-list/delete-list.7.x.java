@@ -14,7 +14,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    boolean didDelete = SyncList.delete(SERVICE_SID, LIST_SID).execute();
+    boolean didDelete = SyncList.deleter(SERVICE_SID, LIST_SID).delete();
 
     System.out.println(didDelete);
   }

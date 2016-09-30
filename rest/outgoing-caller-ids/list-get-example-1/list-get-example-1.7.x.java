@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<OutgoingCallerId> callerIds = OutgoingCallerId.read().execute();
+    ResourceSet<OutgoingCallerId> callerIds = OutgoingCallerId.reader().read();
 
     // Loop over callerIds and print out a property for each one.
     for (OutgoingCallerId callerId : callerIds) {

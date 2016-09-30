@@ -11,9 +11,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Worker worker = Worker
-        .create(WORKSPACE_SID, "Support Worker 1")
+        .creator(WORKSPACE_SID, "Support Worker 1")
         .setAttributes("{\"type\":\"support\"}")
-        .execute();
+        .create();
 
     System.out.println(worker.getFriendlyName());
   }

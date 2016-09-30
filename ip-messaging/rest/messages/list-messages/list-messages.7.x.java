@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the messages in the channel
-    ResourceSet<Message> messages = Message.read(SERVICE_SID, CHANNEL_SID).execute();
+    ResourceSet<Message> messages = Message.reader(SERVICE_SID, CHANNEL_SID).read();
 
     for (Message message : messages) {
       System.out.println(message.getBody());

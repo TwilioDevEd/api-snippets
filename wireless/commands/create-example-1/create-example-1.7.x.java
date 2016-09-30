@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Command.create("524116518656369", "wakeup")
+    Command.creator("524116518656369", "wakeup")
       .setCallbackUrl("https://devicemanager.mycompany.com/devices/524116518656369/commands")
-      .execute();
+      .create();
   }
 }

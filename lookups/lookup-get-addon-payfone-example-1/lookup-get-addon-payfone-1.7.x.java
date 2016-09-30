@@ -21,11 +21,11 @@ public class Example {
     addOnData.put("payfone_tcpa_compliance", complianceData);
 
     PhoneNumber number = PhoneNumber
-        .fetch(new com.twilio.type.PhoneNumber("+15108675309"))
+        .fetcher(new com.twilio.type.PhoneNumber("+15108675309"))
         .setType("carrier")
         .setAddOns("payfone_tcpa_compliance")
         .setAddOnsData(addOnData)
-        .execute();
+        .fetch();
 
     System.out.println(number.getCarrier());
   }

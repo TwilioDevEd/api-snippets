@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
@@ -13,10 +13,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Event> events = Event.read()
-        .byStartDate(DateTime.parse("2015-03-01T00:00:00Z"))
-        .byEndDate(DateTime.parse("2015-04-01T00:00:00Z"))
-        .execute();
+    ResourceSet<Event> events = Event.reader()
+        .setStartDate(LocalDate.parse("2015-03-01"))
+        .setEndDate(LocalDate.parse("2015-04-01"))
+        .read();
 
     for (Event e : events) {
       System.out.println(e.getDescription());

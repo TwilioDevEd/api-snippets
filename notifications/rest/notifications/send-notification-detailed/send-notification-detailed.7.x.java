@@ -16,12 +16,12 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Notification notification = Notification
-        .create(SERVICE_SID)
+        .creator(SERVICE_SID)
         .setTitle("Generic loooooooong title for all Bindings")
         .setBody("This is the body for all Bindings").setIdentity("Bob")
         .setGcm("{\"notification\":{\"tag\":\"MyTag\"}}")
         .setApn("{\"aps\":{\"title\":\"Short title for Watch.\"}}")
-        .execute();
+        .create();
 
     System.out.println(notification.getSid());
   }

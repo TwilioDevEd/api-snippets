@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    FeedbackSummary.delete("FSa346467ca321c71dbd5e12f627deb854").execute();
+    FeedbackSummary.deleter("FSa346467ca321c71dbd5e12f627deb854").delete();
   }
 }

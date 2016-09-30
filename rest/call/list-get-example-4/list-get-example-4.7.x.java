@@ -17,8 +17,8 @@ public class Example {
     DateTime lower = DateTime.parse("2009-07-04");
     DateTime upper = DateTime.parse("2009-07-06");
 
-    ResourceSet<Call> calls = Call.read().byStatus(Call.Status.IN_PROGRESS)
-        .byStartTime(Range.closed(lower, upper)).execute();
+    ResourceSet<Call> calls = Call.reader().setStatus(Call.Status.IN_PROGRESS)
+        .setStartTime(Range.closed(lower, upper)).read();
 
     // Loop over calls and print out a property for each one.
     for (Call call : calls) {

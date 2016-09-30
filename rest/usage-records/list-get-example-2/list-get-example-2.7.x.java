@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Today> records = Today.read().byCategory(Today.Category.CALLS).execute();
+    ResourceSet<Today> records = Today.reader().setCategory(Today.Category.CALLS).read();
 
     // Loop over records and print out a property for each one.
     for (Today record : records) {

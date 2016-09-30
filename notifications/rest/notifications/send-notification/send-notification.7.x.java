@@ -16,10 +16,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Notification notification = Notification
-        .create(SERVICE_SID)
+        .creator(SERVICE_SID)
         .setBody("Hello Bob")
         .setIdentity("Bob")
-        .execute();
+        .create();
 
     System.out.println(notification.getSid());
   }

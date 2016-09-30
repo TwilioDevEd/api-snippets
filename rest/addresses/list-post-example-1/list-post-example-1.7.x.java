@@ -11,7 +11,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Address address = Address
-        .create("Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE").execute();
+        .creator("Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE").create();
 
     System.out.println(address.getSid());
   }
