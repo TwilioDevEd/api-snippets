@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    TaskQueue taskQueue = TaskQueue.update(WORKSPACE_SID, TASKQUEUE_SID)
+    TaskQueue taskQueue = TaskQueue.updater(WORKSPACE_SID, TASKQUEUE_SID)
         .setTargetWorkers("languages HAS 'english'")
-        .execute();
+        .update();
 
     System.out.println(taskQueue.getDateUpdated());
   }

@@ -13,8 +13,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // dequeue a reservation
-    Reservation.update(WORKSPACE_SID, WORKER_SID, RESERVATION_SID)
+    Reservation.updater(WORKSPACE_SID, WORKER_SID, RESERVATION_SID)
         .setReservationStatus(Reservation.Status.REJECTED)
-        .execute();
+        .update();
   }
 }

@@ -14,10 +14,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // dequeue a reservation
-    Reservation reservation = Reservation.update(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
+    Reservation reservation = Reservation.updater(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
         .setInstruction("Dequeue")
         .setDequeueFrom("+18001231234")
-        .execute();
+        .update();
 
     System.out.println(reservation.getDateUpdated());
   }

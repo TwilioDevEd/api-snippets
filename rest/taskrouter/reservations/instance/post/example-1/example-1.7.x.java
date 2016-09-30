@@ -19,9 +19,9 @@ public class Example {
     // accept a reservation
     for (Reservation reservation : reservations) {
       Reservation
-          .update(reservation.getWorkspaceSid(), reservation.getTaskSid(), reservation.getSid())
+          .updater(reservation.getWorkspaceSid(), reservation.getTaskSid(), reservation.getSid())
           .setReservationStatus(Reservation.Status.ACCEPTED)
-          .execute();
+          .update();
     }
   }
 }

@@ -13,10 +13,10 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Trigger trigger = Trigger
-        .update("UT33c6aeeba34e48f38d6899ea5b765ad4")
+        .updater("UT33c6aeeba34e48f38d6899ea5b765ad4")
         .setFriendlyName("Monthly Maximum Call Usage")
         .setCallbackUrl("https://www.example.com/monthly-usage-trigger")
-        .execute();
+        .update();
 
     System.out.println(trigger.getDateUpdated());
   }
