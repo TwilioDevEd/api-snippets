@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Notification.delete("NO5a7a84730f529f0a76b3e30c01315d1a").execute();
+    Notification.deleter("NO5a7a84730f529f0a76b3e30c01315d1a").delete();
   }
 }

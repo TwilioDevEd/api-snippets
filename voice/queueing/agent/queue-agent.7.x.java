@@ -1,28 +1,30 @@
 // Install the Java helper library from twilio.com/docs/java/install
+import java.io.IOException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.sdk.verbs.Dial;
-import com.twilio.sdk.verbs.Queue;
-import com.twilio.sdk.verbs.TwiMLException;
-import com.twilio.sdk.verbs.TwiMLResponse;
+import com.twilio.twiml.Dial;
+import com.twilio.twiml.Queue;
+import com.twilio.twiml.TwiMLException;
+import com.twilio.twiml.VoiceResponse;
 
 public class Example extends HttpServlet {
+  public void service(final HttpServletRequest request, final HttpServletResponse response)
+      throws IOException {
+    Dial dial = new Dial.Builder()
+        .queue(new Queue.Builder("Queue Demo").build())
+        .build();
 
-  @Override
-  public void service(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-    TwiMLResponse twiml = new TwiMLResponse();
-    Dial dial = new Dial();
-    Queue queueInDial = new Queue("Queue Demo");
+    VoiceResponse voiceResponse = new VoiceResponse.Builder()
+        .dial(dial)
+        .build();
 
     try {
-      twiml.append(dial);
-      dial.append(queueInDial);
-    } catch (final TwiMLException e) {
-        e.printStackTrace();
+      response.getWriter().print(voiceResponse.toXml());
+    } catch (TwiMLException e) {
+      e.printStackTrace();
     }
-
-    return twiml.toXML();
   }
 }

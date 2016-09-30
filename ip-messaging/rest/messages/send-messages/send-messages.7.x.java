@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create the message
-    Message message = Message.create(SERVICE_SID, CHANNEL_SID, "MESSAGE").execute();
+    Message message = Message.creator(SERVICE_SID, CHANNEL_SID, "MESSAGE").create();
 
     System.out.println(message.getFrom());
   }

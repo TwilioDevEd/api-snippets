@@ -13,10 +13,10 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Domain domain = Domain.update("SD32a3c49700934481addd5ce1659f04d2")
+    Domain domain = Domain.updater("SD32a3c49700934481addd5ce1659f04d2")
         .setFriendlyName("Little Kevin")
         .setVoiceMethod(HttpMethod.GET)
-        .execute();
+        .update();
 
     System.out.println(domain.getDateUpdated());
   }

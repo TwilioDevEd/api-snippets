@@ -12,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    WorkspaceStatistics statistics = WorkspaceStatistics.fetch(WORKSPACE_SID).execute();
+    WorkspaceStatistics statistics = WorkspaceStatistics.fetcher(WORKSPACE_SID).fetch();
 
     Map<String, Object> cumulative = statistics.getCumulative();
     Map<String, Object> realtime = statistics.getRealtime();

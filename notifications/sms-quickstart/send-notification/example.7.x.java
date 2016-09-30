@@ -14,11 +14,11 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Notification notification = Notification
-        .create(SERVICE_SID)
+        .creator(SERVICE_SID)
         .setBody("A new Rogue One trailer has been released!")
         .setTag("rogue_one")
         .setSms("{\"from\":\"+16516667788\"}")
-        .execute();
+        .create();
 
     System.out.println(notification.getSid());
   }

@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the role
-    Role role = Role.fetch(SERVICE_SID, "ROLE_SID").execute();
+    Role role = Role.fetcher(SERVICE_SID, "ROLE_SID").fetch();
 
     System.out.println(role.getFriendlyName());
   }

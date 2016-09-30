@@ -11,8 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     IpAccessControlListMapping ipAccessControlListMapping = IpAccessControlListMapping
-        .create("SD32a3c49700934481addd5ce1659f04d2", "AL32a3c49700934481addd5ce1659f04d2")
-        .execute();
+        .creator("SD32a3c49700934481addd5ce1659f04d2", "AL32a3c49700934481addd5ce1659f04d2")
+        .create();
 
     System.out.println(ipAccessControlListMapping.getSid());
   }

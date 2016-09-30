@@ -14,8 +14,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Trigger trigger = Trigger
-        .create(new URI("http://www.example.com/"), "1000", Trigger.UsageCategory.SMS)
-        .execute();
+        .creator(new URI("http://www.example.com/"), "1000", Trigger.UsageCategory.SMS)
+        .create();
 
     System.out.println(trigger.getSid());
   }

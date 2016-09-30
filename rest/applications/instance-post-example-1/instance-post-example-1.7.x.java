@@ -12,9 +12,9 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Application app = Application.update("AP2a0747eba6abf96b7e3c3ff0b4530f6e")
+    Application app = Application.updater("AP2a0747eba6abf96b7e3c3ff0b4530f6e")
         .setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
-        .setSmsUrl("http://demo.twilio.com/docs/sms.xml").execute();
+        .setSmsUrl("http://demo.twilio.com/docs/sms.xml").update();
 
     System.out.println(app.getDateUpdated());
   }

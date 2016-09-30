@@ -13,7 +13,7 @@ public class Example {
 
         // Get an object from its sid. If you do not have a sid,
         // check out the list resource examples on this page
-        Message message = Message.update("MM5ef8732a3c49700934481addd5ce1659").setBody("").execute();
+        Message message = Message.updater("MM5ef8732a3c49700934481addd5ce1659").setBody("").update();
 
         System.out.println(message.getBody()); // will be empty string
     }

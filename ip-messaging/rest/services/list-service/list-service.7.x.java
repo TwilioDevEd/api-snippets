@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the services
-    ResourceSet<Service> services = Service.read().execute();
+    ResourceSet<Service> services = Service.reader().read();
 
     for (Service service : services) {
       System.out.println(service.getFriendlyName());

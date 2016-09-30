@@ -16,10 +16,10 @@ public class Example {
     String nationalNumber = URLEncoder.encode("(510) 867-5309", "UTF-8").replaceAll("\\+", "%20");
 
     PhoneNumber number = PhoneNumber
-        .fetch(new com.twilio.type.PhoneNumber(nationalNumber))
+        .fetcher(new com.twilio.type.PhoneNumber(nationalNumber))
         .setType("carrier")
         .setCountryCode("US")
-        .execute();
+        .fetch();
 
     System.out.println(number.getCarrier().get("name"));
     System.out.println(number.getCarrier().get("type"));

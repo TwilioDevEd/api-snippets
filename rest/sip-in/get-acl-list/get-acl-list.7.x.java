@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     IpAccessControlList ipAccessControlList =
-        IpAccessControlList.fetch("AL32a3c49700934481addd5ce1659f04d2").execute();
+        IpAccessControlList.fetcher("AL32a3c49700934481addd5ce1659f04d2").fetch();
 
     System.out.println(ipAccessControlList.getFriendlyName());
   }

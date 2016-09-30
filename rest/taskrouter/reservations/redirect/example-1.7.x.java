@@ -13,9 +13,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Reservation reservation = Reservation.update(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
+    Reservation reservation = Reservation.updater(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
         .setInstruction("Redirect").setRedirectCallSid("CA123456789")
         .setRedirectUrl("http://example.com/assignment_redirect")
-        .execute();
+        .update();
   }
 }

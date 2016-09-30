@@ -12,13 +12,13 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Task> tasks =
-        Task.read(WORKSPACE_SID).byTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627").execute();
+        Task.reader(WORKSPACE_SID).setTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627").read();
 
     for (Task task : tasks) {
       System.out.println(task.getAttributes());
     }
 
-    tasks = Task.read(WORKSPACE_SID).byAssignmentStatus(Task.Status.PENDING).execute();
+    tasks = Task.reader(WORKSPACE_SID).setAssignmentStatus(Task.Status.PENDING).read();
 
     for (Task task : tasks) {
       System.out.println(task.getAttributes());

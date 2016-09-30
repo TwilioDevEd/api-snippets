@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get a list of countries where Twilio Messaging is available
-    ResourceSet<Country> messagingCountries = Country.read().execute();
+    ResourceSet<Country> messagingCountries = Country.reader().read();
 
     for (Country country : messagingCountries) {
       System.out.println(country.getIsoCountry());

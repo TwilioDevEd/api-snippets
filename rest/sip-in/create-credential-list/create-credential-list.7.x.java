@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    CredentialList credentialList = CredentialList.create("Low Rises").execute();
+    CredentialList credentialList = CredentialList.creator("Low Rises").create();
 
     System.out.println(credentialList.getSid());
   }

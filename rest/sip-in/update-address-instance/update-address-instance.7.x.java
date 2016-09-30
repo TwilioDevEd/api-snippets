@@ -13,9 +13,9 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     IpAddress ipAddress = IpAddress
-        .update("AL32a3c49700934481addd5ce1659f04d2", "IP32a3c49700934481addd5ce1659f04d2")
+        .updater("AL32a3c49700934481addd5ce1659f04d2", "IP32a3c49700934481addd5ce1659f04d2")
         .setFriendlyName("Orlandos Nightclub")
-        .execute();
+        .update();
 
     System.out.println(ipAddress.getFriendlyName());
   }

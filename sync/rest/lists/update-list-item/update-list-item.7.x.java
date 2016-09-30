@@ -22,7 +22,7 @@ public class Example {
     data.put("name", "'Bulbasaur");
     data.put("attack", 49);
 
-    SyncListItem item = SyncListItem.update(SERVICE_SID, LIST_SID, 0, data).execute();
+    SyncListItem item = SyncListItem.updater(SERVICE_SID, LIST_SID, 0, data).update();
 
     System.out.println(item.getData());
   }

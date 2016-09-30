@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workspace workspace = Workspace.fetch(WORKSPACE_SID).execute();
+    Workspace workspace = Workspace.fetcher(WORKSPACE_SID).fetch();
 
     System.out.println(workspace.getFriendlyName());
   }
