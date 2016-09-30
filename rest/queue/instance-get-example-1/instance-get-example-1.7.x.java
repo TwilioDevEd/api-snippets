@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Queue queue = Queue.fetch("QU5ef8732a3c49700934481addd5ce1659").execute();
+    Queue queue = Queue.fetcher("QU5ef8732a3c49700934481addd5ce1659").fetch();
 
     System.out.println(queue.getAverageWaitTime());
   }

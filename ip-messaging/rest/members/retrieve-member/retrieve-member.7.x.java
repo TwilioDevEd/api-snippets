@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the member
-    Member member = Member.fetch(SERVICE_SID, CHANNEL_SID, MEMBER_SID).execute();
+    Member member = Member.fetcher(SERVICE_SID, CHANNEL_SID, MEMBER_SID).fetch();
 
     System.out.println(member.getIdentity());
   }
