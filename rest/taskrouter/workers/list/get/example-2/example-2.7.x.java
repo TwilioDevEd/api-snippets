@@ -24,7 +24,7 @@ public class Example {
     }
 
     workers = workerReader
-      .byTargetWorkersExpression("type == 'leads'")
+      .setTargetWorkersExpression("type == 'leads'")
       .execute();
 
     for (Worker worker : workers) {

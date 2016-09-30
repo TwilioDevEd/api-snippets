@@ -13,7 +13,7 @@ public class Example {
 
     ResourceSet<Event> events = Event.reader()
         .byActorSid("USd0afd67cddff4ec7cb0022771a203cb1")
-        .byResourceSid("PN4aa51b930717ea83c91971b86d99018f")
+        .setResourceSid("PN4aa51b930717ea83c91971b86d99018f")
         .read();
 
     for (Event e : events) {

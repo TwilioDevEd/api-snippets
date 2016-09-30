@@ -16,7 +16,7 @@ public class Example {
     ResourceSet<Alert> alerts = Alert.reader()
         .byStartDate(DateTime.parse("2015-04-01T00:00:00Z"))
         .byEndDate(DateTime.parse("2015-04-30T23:59:59Z"))
-        .byLogLevel("warning")
+        .setLogLevel("warning")
         .read();
 
     // Loop over alerts and print out a property for each one.

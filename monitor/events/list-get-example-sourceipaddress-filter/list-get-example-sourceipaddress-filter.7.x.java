@@ -16,7 +16,7 @@ public class Example {
     ResourceSet<Event> events = Event.reader()
         .bySourceIpAddress("104.14.155.29")
         .byStartDate(DateTime.parse("2015-04-25T00:00:00Z"))
-        .byEndDate(DateTime.parse("2015-04-25T23:59:59Z"))
+        .setEndDate(DateTime.parse("2015-04-25T23:59:59Z"))
         .read();
 
     for (Event e : events) {

@@ -18,7 +18,7 @@ public class Example {
         .byContains("555")
         .byNearLatLong("37.840699,-122.461853")
         .byDistance(50)
-        .byInRegion("CA")
+        .setInRegion("CA")
         .read();
 
     // Purchase the first number on the list.

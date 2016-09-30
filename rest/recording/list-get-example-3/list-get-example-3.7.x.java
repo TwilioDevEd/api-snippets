@@ -17,7 +17,7 @@ public class Example {
     DateTime lower = DateTime.parse("2009-07-06");
 
     ResourceSet<Recording> recordings = Recording.reader()
-        .byDateCreated(Range.atLeast(lower))
+        .setDateCreated(Range.atLeast(lower))
         .read();
 
     // Loop over recordings and print out a property for each one.

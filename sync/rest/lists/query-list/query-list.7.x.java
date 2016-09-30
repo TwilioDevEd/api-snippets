@@ -18,7 +18,7 @@ public class Example {
     ResourceSet<SyncListItem> items = SyncListItem
         .reader(SERVICE_SID, LIST_SID)
         .byFrom("10")
-        .byOrder(SyncListItem.QueryResultOrder.ASC)
+        .setOrder(SyncListItem.QueryResultOrder.ASC)
         .read();
 
     for (SyncListItem item : items) {

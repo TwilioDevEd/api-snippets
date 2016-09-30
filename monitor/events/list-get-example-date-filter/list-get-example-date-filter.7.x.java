@@ -15,7 +15,7 @@ public class Example {
 
     ResourceSet<Event> events = Event.reader()
         .byStartDate(DateTime.parse("2015-03-01T00:00:00Z"))
-        .byEndDate(DateTime.parse("2015-04-01T00:00:00Z"))
+        .setEndDate(DateTime.parse("2015-04-01T00:00:00Z"))
         .read();
 
     for (Event e : events) {

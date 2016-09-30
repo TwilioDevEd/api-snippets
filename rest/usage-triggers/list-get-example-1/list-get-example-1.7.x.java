@@ -13,7 +13,7 @@ public class Example {
 
     ResourceSet<Trigger> triggers = Trigger.reader()
         .byUsageCategory(Trigger.UsageCategory.CALLS)
-        .byRecurring(Trigger.Recurring.DAILY)
+        .setRecurring(Trigger.Recurring.DAILY)
         .read();
 
     // Loop over triggers and print out a property for each one.

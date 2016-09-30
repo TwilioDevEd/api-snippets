@@ -18,7 +18,7 @@ public class Example {
 
     ResourceSet<Notification> notifications = Notification.reader()
         .byMessageDate(Range.atLeast(dateTime))
-        .byLog(1)
+        .setLog(1)
         .read();
 
     // Loop over notifications and print out a property for each one.

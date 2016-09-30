@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Account> accounts = Account.reader().byStatus(Account.Status.ACTIVE).read();
+    ResourceSet<Account> accounts = Account.reader().setStatus(Account.Status.ACTIVE).read();
 
     // Loop over accounts and print out a property for each one.
     for (Account account : accounts) {

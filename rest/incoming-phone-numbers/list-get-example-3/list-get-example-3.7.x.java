@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<IncomingPhoneNumber> numbers =
-        IncomingPhoneNumber.reader().byPhoneNumber(new PhoneNumber("867")).read();
+        IncomingPhoneNumber.reader().setPhoneNumber(new PhoneNumber("867")).read();
 
     // Loop over numbers and print out a property for each one.
     for (IncomingPhoneNumber number : numbers) {

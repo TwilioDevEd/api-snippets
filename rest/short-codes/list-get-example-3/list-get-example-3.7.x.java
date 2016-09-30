@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<ShortCode> shortCodes = ShortCode.reader()
-        .byShortCode("898")
+        .setShortCode("898")
         .read();
 
     // Loop over shortCodes and print out a property for each one.

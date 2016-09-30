@@ -13,7 +13,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = Local.reader("US").byContains("510555****").read();
+    ResourceSet<Local> numbers = Local.reader("US").setContains("510555****").read();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
