@@ -14,7 +14,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = Local.read("GB").byContains("4420").execute();
+    ResourceSet<Local> numbers = Local.reader("GB").byContains("4420").read();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();

@@ -13,9 +13,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Recording> recordings = Recording.read()
+    ResourceSet<Recording> recordings = Recording.reader()
         .byDateCreated(DateTime.parse("2009-07-06"))
-        .execute();
+        .read();
 
     // Loop over recordings and print out a property for each one.
     for (Recording recording : recordings) {

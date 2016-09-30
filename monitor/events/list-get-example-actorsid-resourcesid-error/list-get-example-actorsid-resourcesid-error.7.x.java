@@ -11,10 +11,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Event> events = Event.read()
+    ResourceSet<Event> events = Event.reader()
         .byActorSid("USd0afd67cddff4ec7cb0022771a203cb1")
         .byResourceSid("PN4aa51b930717ea83c91971b86d99018f")
-        .execute();
+        .read();
 
     for (Event e : events) {
       System.out.println(e.getDescription());

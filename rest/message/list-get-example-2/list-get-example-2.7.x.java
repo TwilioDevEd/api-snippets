@@ -15,10 +15,10 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         ResourceSet<Message> messages = Message
-                .read()
+                .reader()
                 .byTo(new PhoneNumber("to_number"))
                 .byFrom(new PhoneNumber("from_number"))
-                .byDateSent(DateTime.parse("2016-01-01'T'09:28:00Z")).execute();
+                .byDateSent(DateTime.parse("2016-01-01'T'09:28:00Z")).read();
 
         // Loop over messages and print out a property for each one.
         for (Message message : messages) {

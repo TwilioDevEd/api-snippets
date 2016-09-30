@@ -13,11 +13,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Record> records = Record.read()
+    ResourceSet<Record> records = Record.reader()
         .byCategory(Record.Category.CALLS_INBOUND)
         .byStartDate(DateTime.parse("2012-09-01"))
         .byEndDate(DateTime.parse("2012-09-30"))
-        .execute();
+        .read();
 
     // Loop over records and print out a property for each one.
     for (Record record : records) {

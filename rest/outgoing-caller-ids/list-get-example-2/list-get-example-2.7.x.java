@@ -12,9 +12,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<OutgoingCallerId> callerIds = OutgoingCallerId.read()
+    ResourceSet<OutgoingCallerId> callerIds = OutgoingCallerId.reader()
         .byPhoneNumber(new PhoneNumber("+14158675309"))
-        .execute();
+        .read();
 
     // Loop over callerIds and print out a property for each one.
     for (OutgoingCallerId callerId : callerIds) {

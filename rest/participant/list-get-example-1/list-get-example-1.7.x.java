@@ -12,8 +12,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Participant> participants = Participant
-        .read("CFbbe4632a3c49700934481addd5ce1659")
-        .execute();
+        .reader("CFbbe4632a3c49700934481addd5ce1659")
+        .read();
 
     // Loop over participants and print out a property for each one.
     for (Participant participant : participants) {

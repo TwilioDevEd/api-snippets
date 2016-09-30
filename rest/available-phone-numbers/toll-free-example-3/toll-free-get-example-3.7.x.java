@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<TollFree> numbers =
-        TollFree.read("US").byContains("KYLO").byAreaCode(800).execute();
+        TollFree.reader("US").byContains("KYLO").byAreaCode(800).read();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();

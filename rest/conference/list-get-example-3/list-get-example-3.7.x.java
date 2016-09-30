@@ -13,8 +13,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Conference> conferences = Conference.read().byStatus(Conference.Status.COMPLETED)
-        .byDateCreated(DateTime.parse("2009-07-06")).execute();
+    ResourceSet<Conference> conferences = Conference.reader().byStatus(Conference.Status.COMPLETED)
+        .byDateCreated(DateTime.parse("2009-07-06")).read();
 
     // Loop over conferences and print out a property for each one.
     for (Conference conference : conferences) {

@@ -13,11 +13,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Alert> alerts = Alert.read()
+    ResourceSet<Alert> alerts = Alert.reader()
         .byStartDate(DateTime.parse("2015-04-01T00:00:00Z"))
         .byEndDate(DateTime.parse("2015-04-30T23:59:59Z"))
         .byLogLevel("warning")
-        .execute();
+        .read();
 
     // Loop over alerts and print out a property for each one.
     for (Alert alert : alerts) {

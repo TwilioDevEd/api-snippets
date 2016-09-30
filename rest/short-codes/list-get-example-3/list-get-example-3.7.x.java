@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<ShortCode> shortCodes = ShortCode.read()
+    ResourceSet<ShortCode> shortCodes = ShortCode.reader()
         .byShortCode("898")
-        .execute();
+        .read();
 
     // Loop over shortCodes and print out a property for each one.
     for (ShortCode shortCode : shortCodes) {

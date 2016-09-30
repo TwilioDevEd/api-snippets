@@ -17,10 +17,10 @@ public class Example {
     DateTime lower = DateTime.parse("2009-07-06");
     DateTime higher = DateTime.parse("2009-07-08");
 
-    ResourceSet<Notification> notifications = Notification.read()
+    ResourceSet<Notification> notifications = Notification.reader()
         .byMessageDate(Range.closed(lower, higher))
         .byLog(1)
-        .execute();
+        .read();
 
     // Loop over notifications and print out a property for each one.
     for (Notification notification : notifications) {

@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<IpAccessControlList> ipAccessControlLists = IpAccessControlList.read().execute();
+    ResourceSet<IpAccessControlList> ipAccessControlLists = IpAccessControlList.reader().read();
 
     // Loop over ipAccessControlLists and print out a property for each one.
     for (IpAccessControlList ipAccessControlList : ipAccessControlLists) {

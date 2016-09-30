@@ -13,10 +13,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Event> events = Event.read()
+    ResourceSet<Event> events = Event.reader()
         .byStartDate(DateTime.parse("2015-03-01T00:00:00Z"))
         .byEndDate(DateTime.parse("2015-04-01T00:00:00Z"))
-        .execute();
+        .read();
 
     for (Event e : events) {
       System.out.println(e.getDescription());

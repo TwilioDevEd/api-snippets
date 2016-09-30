@@ -11,8 +11,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Conference> conferences = Conference.read().byStatus(Conference.Status.IN_PROGRESS)
-        .byFriendlyName("MyRoom").execute();
+    ResourceSet<Conference> conferences = Conference.reader().byStatus(Conference.Status.IN_PROGRESS)
+        .byFriendlyName("MyRoom").read();
 
     // Loop over conferences and print out a property for each one.
     for (Conference conference : conferences) {

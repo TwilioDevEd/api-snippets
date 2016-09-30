@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     //List the roles
-    ResourceSet<Role> roles = Role.read(SERVICE_SID).execute();
+    ResourceSet<Role> roles = Role.reader(SERVICE_SID).read();
 
     for (Role role : roles) {
       System.out.println(role.getFriendlyName());
