@@ -11,8 +11,6 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
 public class Example extends HttpServlet {
-
-  @Override
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Queue queue = new Queue.Builder("Queue Demo").build();
     Dial dial = new Dial.Builder().queue(queue).build();

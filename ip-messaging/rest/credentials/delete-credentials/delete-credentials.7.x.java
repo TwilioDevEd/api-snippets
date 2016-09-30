@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete the credential
-    boolean didDelete = Credential.delete(CREDENTIAL_SID).execute();
+    boolean didDelete = Credential.deleter(CREDENTIAL_SID).delete();
 
     System.out.println(didDelete);
   }

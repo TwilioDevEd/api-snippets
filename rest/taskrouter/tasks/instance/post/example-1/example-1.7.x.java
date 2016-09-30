@@ -12,12 +12,12 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // update a task's attributes
-    Task.update(WORKSPACE_SID, TASK_SID).setAttributes("{\"type\":\"support\"}").execute();
+    Task.updater(WORKSPACE_SID, TASK_SID).setAttributes("{\"type\":\"support\"}").update();
 
     // cancel a task
-    Task.update(WORKSPACE_SID, TASK_SID)
+    Task.updater(WORKSPACE_SID, TASK_SID)
         .setAssignmentStatus(Task.Status.CANCELED)
         .setReason("waiting too long")
-        .execute();
+        .update();
   }
 }

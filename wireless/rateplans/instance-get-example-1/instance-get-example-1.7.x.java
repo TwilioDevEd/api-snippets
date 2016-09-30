@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    RatePlan plan = RatePlan.fetch("WP467fb57a0aba9641a8209136d42545f8")
-      .execute();
+    RatePlan plan = RatePlan.fetcher("WP467fb57a0aba9641a8209136d42545f8")
+      .fetch();
     
     System.out.println(plan.getSid());
     System.out.println(plan.getAlias());

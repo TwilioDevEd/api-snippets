@@ -15,7 +15,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Binding binding = Binding.fetch(SERVICE_SID, "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").execute();
+    Binding binding = Binding.fetcher(SERVICE_SID, "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch();
 
     System.out.println(binding.getEndpoint());
   }

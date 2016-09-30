@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Worker worker = Worker.fetch(WORKSPACE_SID, WORKER_SID).execute();
+    Worker worker = Worker.fetcher(WORKSPACE_SID, WORKER_SID).fetch();
 
     System.out.println(worker.getAttributes());
   }

@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get Twilio PhoneNumber pricing information for a specific country
-    Country country = Country.fetch("US").execute();
+    Country country = Country.fetcher("US").fetch();
 
     for (PhoneNumberPrice p : country.getPhoneNumberPrices()) {
       // For each number type, print the type and its current price

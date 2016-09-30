@@ -15,9 +15,9 @@ public class Example {
 
     // Update the channel
     Channel channel = Channel
-        .update(SERVICE_SID, CHANNEL_SID)
+        .updater(SERVICE_SID, CHANNEL_SID)
         .setFriendlyName("ChannelName")
-        .execute();
+        .update();
 
     System.out.println(channel.getFriendlyName());
   }

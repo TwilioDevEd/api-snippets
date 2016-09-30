@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the message
-    Message message = Message.fetch(SERVICE_SID, CHANNEL_SID, MESSAGE_SID).execute();
+    Message message = Message.fetcher(SERVICE_SID, CHANNEL_SID, MESSAGE_SID).fetch();
 
     System.out.println(message.getBody());
   }

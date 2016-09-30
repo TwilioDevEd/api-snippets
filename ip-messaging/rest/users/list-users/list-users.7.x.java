@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the users
-    ResourceSet<User> users = User.read(SERVICE_SID).execute();
+    ResourceSet<User> users = User.reader(SERVICE_SID).read();
 
     for (User user : users) {
       System.out.println(user.getIdentity());

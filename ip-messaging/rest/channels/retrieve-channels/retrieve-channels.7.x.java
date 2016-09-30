@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the channel
-    Channel channel = Channel.fetch(SERVICE_SID, CHANNEL_SID).execute();
+    Channel channel = Channel.fetcher(SERVICE_SID, CHANNEL_SID).fetch();
 
     System.out.println(channel.getFriendlyName());
   }

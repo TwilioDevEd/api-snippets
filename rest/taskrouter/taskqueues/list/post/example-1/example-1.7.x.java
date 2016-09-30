@@ -11,10 +11,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     TaskQueue taskQueue = TaskQueue
-        .create(WORKSPACE_SID, "English", "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        .creator(WORKSPACE_SID, "English", "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setTargetWorkers("languages HAS 'english'")
-        .execute();
+        .create();
 
     System.out.println(taskQueue.getFriendlyName());
   }

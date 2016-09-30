@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete a a member from the channel
-    boolean deleted = Member.delete(SERVICE_SID, CHANNEL_SID, MEMBER_SID).execute();
+    boolean deleted = Member.deleter(SERVICE_SID, CHANNEL_SID, MEMBER_SID).delete();
 
     System.out.println(deleted);
   }

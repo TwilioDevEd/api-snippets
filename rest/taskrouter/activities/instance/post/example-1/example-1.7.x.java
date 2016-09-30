@@ -13,6 +13,6 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Activity activity =
-        Activity.update(WORKSPACE_SID, ACTIVITY_SID, "NewAvailableFriendlyName").execute();
+        Activity.updater(WORKSPACE_SID, ACTIVITY_SID, "NewAvailableFriendlyName").update();
   }
 }

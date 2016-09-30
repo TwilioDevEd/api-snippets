@@ -15,8 +15,8 @@ public class Example {
 
     // Update the service
     Service service = Service
-        .update("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        .updater("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setFriendlyName("NewFlowHipSlackChatDock")
-        .execute();
+        .update();
   }
 }

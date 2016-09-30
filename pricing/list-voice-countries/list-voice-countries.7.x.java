@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get a list of countries where Twilio Voice is available
-    ResourceSet<Country> countries = Country.read().execute();
+    ResourceSet<Country> countries = Country.reader().read();
 
     for (Country country : countries) {
       System.out.println(country.getIsoCountry());
