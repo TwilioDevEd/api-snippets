@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
@@ -14,9 +14,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Daily> records = Daily.reader()
-        .byCategory(Daily.Category.CALLS_INBOUND)
-        .byStartDate(DateTime.parse("2012-09-01"))
-        .setEndDate(DateTime.parse("2012-09-30"))
+        .setCategory(Daily.Category.CALLS_INBOUND)
+        .setStartDate(LocalDate.parse("2012-09-01"))
+        .setEndDate(LocalDate.parse("2012-09-30"))
         .read();
 
     // Loop over records and print out a property for each one.

@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Notification> notifications = Notification.reader()
-        .byMessageDate(DateTime.parse("2009-07-06"))
+        .setMessageDate(LocalDate.parse("2009-07-06"))
         .setLog(1)
         .read();
 

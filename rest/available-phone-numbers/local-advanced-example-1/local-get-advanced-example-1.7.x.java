@@ -15,9 +15,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Local> numbers = Local.reader("US")
-        .byContains("555")
-        .byNearLatLong("37.840699,-122.461853")
-        .byDistance(50)
+        .setContains("555")
+        .setNearLatLong("37.840699,-122.461853")
+        .setDistance(50)
         .setInRegion("CA")
         .read();
 

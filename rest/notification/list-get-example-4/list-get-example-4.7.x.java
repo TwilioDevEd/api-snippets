@@ -18,7 +18,7 @@ public class Example {
     DateTime higher = DateTime.parse("2009-07-08");
 
     ResourceSet<Notification> notifications = Notification.reader()
-        .byMessageDate(Range.closed(lower, higher))
+        .setMessageDate(Range.closed(lower, higher))
         .setLog(1)
         .read();
 

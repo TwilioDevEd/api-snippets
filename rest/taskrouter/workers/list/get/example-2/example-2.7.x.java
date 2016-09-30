@@ -15,8 +15,8 @@ public class Example {
     WorkerReader workerReader = Worker.reader(WORKSPACE_SID);
 
     ResourceSet<Worker> workers = workerReader
-        .byAvailable("1")
-        .byTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627")
+        .setAvailable("1")
+        .setTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627")
         .read();
 
     for (Worker worker : workers) {
@@ -24,8 +24,8 @@ public class Example {
     }
 
     workers = workerReader
-      .setTargetWorkersExpression("type == 'leads'")
-      .execute();
+        .setTargetWorkersExpression("type == 'leads'")
+        .read();
 
     for (Worker worker : workers) {
       System.out.println(worker.getFriendlyName());

@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Event> events = Event.reader()
-        .byActorSid("USd0afd67cddff4ec7cb0022771a203cb1")
+        .setActorSid("USd0afd67cddff4ec7cb0022771a203cb1")
         .setResourceSid("PN4aa51b930717ea83c91971b86d99018f")
         .read();
 

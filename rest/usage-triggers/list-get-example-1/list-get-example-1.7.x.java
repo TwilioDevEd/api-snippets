@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Trigger> triggers = Trigger.reader()
-        .byUsageCategory(Trigger.UsageCategory.CALLS)
+        .setUsageCategory(Trigger.UsageCategory.CALLS)
         .setRecurring(Trigger.Recurring.DAILY)
         .read();
 

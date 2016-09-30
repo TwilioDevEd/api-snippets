@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
@@ -14,8 +14,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Alert> alerts = Alert.reader()
-        .byStartDate(DateTime.parse("2015-04-01T00:00:00Z"))
-        .byEndDate(DateTime.parse("2015-04-30T23:59:59Z"))
+        .setStartDate(LocalDate.parse("2015-04-01"))
+        .setEndDate(LocalDate.parse("2015-04-30"))
         .setLogLevel("warning")
         .read();
 

@@ -16,8 +16,8 @@ public class Example {
 
         ResourceSet<Message> messages = Message
                 .reader()
-                .byTo(new PhoneNumber("to_number"))
-                .byFrom(new PhoneNumber("from_number"))
+                .setTo(new PhoneNumber("to_number"))
+                .setFrom(new PhoneNumber("from_number"))
                 .setDateSent(DateTime.parse("2016-01-01'T'09:28:00Z")).read();
 
         // Loop over messages and print out a property for each one.
