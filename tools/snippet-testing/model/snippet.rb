@@ -7,6 +7,8 @@ module Model
       LanguageHandler::Java6::LANG_CNAME,
       LanguageHandler::Java7::LANG_CNAME,
       LanguageHandler::Ruby::LANG_CNAME,
+      LanguageHandler::Ruby4::LANG_CNAME,
+      LanguageHandler::Ruby5::LANG_CNAME,
       LanguageHandler::Node::LANG_CNAME,
       LanguageHandler::Php::LANG_CNAME,
       LanguageHandler::Php4::LANG_CNAME,

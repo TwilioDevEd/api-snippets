@@ -125,11 +125,25 @@ class SnippetTester
       Model::Dependency.python_6_venv
     )
 
+    ruby_language_handler = LanguageHandler::Ruby.new(
+      Model::Dependency.ruby_4_gemset
+    )
+
+    ruby_4_language_handler = LanguageHandler::Ruby4.new(
+      Model::Dependency.ruby_4_gemset
+    )
+
+    ruby_5_language_handler = LanguageHandler::Ruby5.new(
+      Model::Dependency.ruby_5_gemset
+    )
+
     {
       LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
       LanguageHandler::Java6::LANG_CNAME    => LanguageHandler::Java6.new,
       LanguageHandler::Java7::LANG_CNAME    => LanguageHandler::Java7.new,
-      LanguageHandler::Ruby::LANG_CNAME     => LanguageHandler::Ruby.new,
+      LanguageHandler::Ruby::LANG_CNAME     => ruby_language_handler,
+      LanguageHandler::Ruby4::LANG_CNAME    => ruby_4_language_handler,
+      LanguageHandler::Ruby5::LANG_CNAME    => ruby_5_language_handler,
       LanguageHandler::Node::LANG_CNAME     => LanguageHandler::Node.new,
       LanguageHandler::Php::LANG_CNAME      => php_language_handler,
       LanguageHandler::Php4::LANG_CNAME     => php_4_language_handler,

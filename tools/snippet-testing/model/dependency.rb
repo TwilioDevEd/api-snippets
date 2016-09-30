@@ -7,11 +7,13 @@ module Model
     NUGET_FILE_NAME = 'NuGet.exe'.freeze
     PHP_NAME        = 'php'.freeze
     PYTHON_NAME     = 'python'.freeze
+    RUBY_NAME       = 'ruby'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
       PHP_NAME    => ['4.10', '5.4.1-alpha1'],
-      PYTHON_NAME => ['5.6.0', '6.0.0rc12']
+      PYTHON_NAME => ['5.6.0', '6.0.0rc12'],
+      RUBY_NAME   => ['4.13.0', '5.0.0.rc17']
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -27,10 +29,6 @@ module Model
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
-
-    RUBY_DEPENDENCIES = [
-      { name: 'twilio-ruby', version: '4.11.1' }
-    ].freeze
 
     NODE_DEPENDENCIES = [
       { name: 'twilio', version: '2.9.1' }
@@ -100,6 +98,14 @@ module Model
       AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][1]
     end
 
+    def self.ruby_4_gemset
+      AVAILABLE_LIBRARY_VERSION[RUBY_NAME][0]
+    end
+
+    def self.ruby_5_gemset
+      AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1]
+    end
+
     private
 
     def install_node_dependencies
@@ -109,8 +115,11 @@ module Model
     end
 
     def install_ruby_dependencies
-      RUBY_DEPENDENCIES.each do |dependency|
-        system("gem install #{dependency[:name]} -v #{dependency[:version]}")
+      AVAILABLE_LIBRARY_VERSION[RUBY_NAME].each do |version|
+        system(
+          "rvm gemset create #{version} &&"\
+          " rvm @#{version} do gem install twilio-ruby -v #{version}"
+        )
       end
     end
 
