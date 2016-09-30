@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the user
-    User user = User.fetcher(SERVICE_SID, USER_SID).fetch();
+    User user = User.fetch(SERVICE_SID, USER_SID).execute();
 
     System.out.println(user.getIdentity());
   }

@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Address address = Address.fetcher("AD2a0747eba6abf96b7e3c3ff0b4530f6e").fetch();
+    Address address = Address.fetch("AD2a0747eba6abf96b7e3c3ff0b4530f6e").execute();
 
     System.out.println(address.getCustomerName());
   }

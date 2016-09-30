@@ -12,8 +12,8 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    ShortCode shortCode = ShortCode.updater("SC6b20cb705c1e8f00210049b20b70fce3")
+    ShortCode shortCode = ShortCode.update("SC6b20cb705c1e8f00210049b20b70fce3")
         .setSmsUrl("http://demo.twilio.com/docs/sms.xml")
-        .update();
+        .execute();
   }
 }

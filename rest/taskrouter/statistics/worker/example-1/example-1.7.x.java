@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    WorkerStatistics statistics = WorkerStatistics.fetcher(WORKSPACE_SID, WORKER_SID).fetch();
+    WorkerStatistics statistics = WorkerStatistics.fetch(WORKSPACE_SID, WORKER_SID).execute();
 
     System.out.println(
         "Reservations Accepted: " + statistics.getCumulative().get("reservations_accepted"));

@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    ShortCode shortCode = ShortCode.fetcher("SC6b20cb705c1e8f00210049b20b70fce2").fetch();
+    ShortCode shortCode = ShortCode.fetch("SC6b20cb705c1e8f00210049b20b70fce2").execute();
 
     System.out.println(shortCode.getShortCode());
   }

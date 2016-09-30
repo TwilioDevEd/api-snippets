@@ -17,7 +17,7 @@ public class Example {
     DateTime dateTime = DateTime.parse("2009-07-06");
 
     ResourceSet<Call> calls =
-        Call.reader().setStatus(Call.Status.COMPLETED).setStartTime(Range.atLeast(dateTime)).read();
+        Call.read().byStatus(Call.Status.COMPLETED).byStartTime(Range.atLeast(dateTime)).execute();
 
     // Loop over calls and print out a property for each one.
     for (Call call : calls) {

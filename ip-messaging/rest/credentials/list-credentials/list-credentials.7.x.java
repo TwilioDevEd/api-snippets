@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the list of credentials
-    ResourceSet<Credential> credentials = Credential.reader().read();
+    ResourceSet<Credential> credentials = Credential.read().execute();
 
     for (Credential credential : credentials) {
       System.out.println(credential.getSid());

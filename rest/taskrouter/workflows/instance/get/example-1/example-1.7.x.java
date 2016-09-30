@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workflow workflow = Workflow.fetcher(WORKSPACE_SID, WORKFLOW_SID).fetch();
+    Workflow workflow = Workflow.fetch(WORKSPACE_SID, WORKFLOW_SID).execute();
 
     System.out.println(workflow.getFriendlyName());
   }

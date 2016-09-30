@@ -15,13 +15,13 @@ public class Example {
     public static void main(String[] args) throws URISyntaxException {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        Call call = Call.creator(
+        Call call = Call.create(
                 new PhoneNumber("+14155551212"),
                 new PhoneNumber("+15017250604"),
                 new URI("http://demo.twilio.com/docs/voice.xml")
                 )
                 .setRecord(true)
-                .create();
+                .execute();
 
         System.out.println(call.getSid());
     }

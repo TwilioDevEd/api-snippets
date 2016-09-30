@@ -16,9 +16,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Notification notification = Notification
-        .creator(SERVICE_SID).setBody("Hello New Users")
+        .create(SERVICE_SID).setBody("Hello New Users")
         .setTag("new_user")
-        .create();
+        .execute();
 
     System.out.println(notification.getSid());
   }

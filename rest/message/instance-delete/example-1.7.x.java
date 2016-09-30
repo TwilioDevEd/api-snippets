@@ -13,7 +13,7 @@ public class Example {
 
         // Get an object from its sid. If you do not have a sid,
         // check out the list resource examples on this page
-        Message.deleter("MM5ef8732a3c49700934481addd5ce1659").delete();
+        Message.delete("MM5ef8732a3c49700934481addd5ce1659").execute();
     }
 }
 

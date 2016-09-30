@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     OutgoingCallerId callerId =
-        OutgoingCallerId.fetcher("PNe905d7e6b410746a0fb08c57e5a186f3").fetch();
+        OutgoingCallerId.fetch("PNe905d7e6b410746a0fb08c57e5a186f3").execute();
 
     System.out.println(callerId.getPhoneNumber());
   }

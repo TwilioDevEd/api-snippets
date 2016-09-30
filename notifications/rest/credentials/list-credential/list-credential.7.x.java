@@ -14,7 +14,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Credential> credentials = Credential.reader().read();
+    ResourceSet<Credential> credentials = Credential.read().execute();
 
     for (Credential credential : credentials) {
       System.out.println(credential.getFriendlyName());

@@ -11,6 +11,6 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     boolean didDelete =
-        Document.deleter("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "MyFirstDocument").delete();
+        Document.delete("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "MyFirstDocument").execute();
   }
 }

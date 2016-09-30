@@ -14,8 +14,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // reject a reservation
-    Reservation reservation = Reservation.updater(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
+    Reservation reservation = Reservation.update(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
         .setReservationStatus(Reservation.Status.REJECTED)
-        .update();
+        .execute();
   }
 }

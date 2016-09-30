@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Transcription> transcriptions = Transcription.reader().read();
+    ResourceSet<Transcription> transcriptions = Transcription.read().execute();
 
     // Loop over transcriptions and print out a property for each one.
     for (Transcription transcription : transcriptions) {

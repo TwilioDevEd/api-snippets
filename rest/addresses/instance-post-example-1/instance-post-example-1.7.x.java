@@ -12,8 +12,8 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Address address = Address.updater("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
-        .setCustomerName("Customer 456").setStreet("2 Hasselhoff Lane").update();
+    Address address = Address.update("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
+        .setCustomerName("Customer 456").setStreet("2 Hasselhoff Lane").execute();
 
     System.out.println(address.getDateUpdated());
   }

@@ -12,9 +12,9 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    OutgoingCallerId callerId = OutgoingCallerId.updater("PNe536d32a3c49700934481addd5ce1659")
+    OutgoingCallerId callerId = OutgoingCallerId.update("PNe536d32a3c49700934481addd5ce1659")
         .setFriendlyName("My Second Line")
-        .update();
+        .execute();
 
     System.out.println(callerId.getFriendlyName());
   }

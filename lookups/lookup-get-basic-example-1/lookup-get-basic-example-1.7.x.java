@@ -14,9 +14,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     PhoneNumber number = PhoneNumber
-        .fetcher(new com.twilio.type.PhoneNumber("+15108675309"))
+        .fetch(new com.twilio.type.PhoneNumber("+15108675309"))
         .setType("carrier")
-        .fetch();
+        .execute();
 
     System.out.println(number.getCarrier().get("name"));
     System.out.println(number.getCarrier().get("type"));

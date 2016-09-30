@@ -14,7 +14,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    SyncList list = SyncList.fetcher(SERVICE_SID, LIST_SID).fetch();
+    SyncList list = SyncList.fetch(SERVICE_SID, LIST_SID).execute();
 
     System.out.println(list.getSid());
   }

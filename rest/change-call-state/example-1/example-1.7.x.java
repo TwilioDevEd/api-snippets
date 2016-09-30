@@ -13,8 +13,8 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Call call = Call.updater("CAe1644a7eed5088b159577c5802d8be38")
-        .setUrl("http://demo.twilio.com/docs/voice.xml").setMethod(HttpMethod.POST).update();
+    Call call = Call.update("CAe1644a7eed5088b159577c5802d8be38")
+        .setUrl("http://demo.twilio.com/docs/voice.xml").setMethod(HttpMethod.POST).execute();
 
     System.out.println(call.getDateUpdated());
   }

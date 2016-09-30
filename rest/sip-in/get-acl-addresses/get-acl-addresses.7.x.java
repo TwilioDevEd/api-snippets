@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<IpAddress> ipAddresses =
-        IpAddress.reader("AL32a3c49700934481addd5ce1659f04d2").read();
+        IpAddress.read("AL32a3c49700934481addd5ce1659f04d2").execute();
 
     // Loop over ipAddresses and print out a property for each one.
     for (IpAddress ipAddress : ipAddresses) {

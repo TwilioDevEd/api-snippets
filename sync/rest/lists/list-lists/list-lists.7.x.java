@@ -13,7 +13,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<SyncList> lists = SyncList.reader(SERVICE_SID).read();
+    ResourceSet<SyncList> lists = SyncList.read(SERVICE_SID).execute();
 
     for (SyncList list : lists) {
       System.out.println(list.getSid() + ": " + list.getUniqueName());

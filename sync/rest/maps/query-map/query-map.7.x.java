@@ -16,10 +16,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<SyncMapItem> items = SyncMapItem
-        .reader(SERVICE_SID, MAP_SID)
-        .setFrom("steph_curry")
-        .setOrder(SyncMapItem.QueryResultOrder.ASC)
-        .read();
+        .read(SERVICE_SID, MAP_SID)
+        .byFrom("steph_curry")
+        .byOrder(SyncMapItem.QueryResultOrder.ASC)
+        .execute();
 
     for (SyncMapItem item : items) {
       System.out.println(item.getSid() + ": " + item.getData());

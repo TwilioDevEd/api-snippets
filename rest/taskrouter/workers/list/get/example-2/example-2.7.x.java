@@ -12,20 +12,20 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    WorkerReader workerReader = Worker.reader(WORKSPACE_SID);
+    WorkerReader workerReader = Worker.read(WORKSPACE_SID);
 
     ResourceSet<Worker> workers = workerReader
-        .setAvailable("1")
-        .setTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627")
-        .read();
+        .byAvailable("1")
+        .byTaskQueueSid("WQf855e98ad280d0a0a325628e24ca9627")
+        .execute();
 
     for (Worker worker : workers) {
       System.out.println(worker.getFriendlyName());
     }
 
     workers = workerReader
-        .setTargetWorkersExpression("type == 'leads'")
-        .read();
+      .byTargetWorkersExpression("type == 'leads'")
+      .execute();
 
     for (Worker worker : workers) {
       System.out.println(worker.getFriendlyName());

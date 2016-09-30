@@ -17,13 +17,13 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
+        .create(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
             new URI("http://demo.twilio.com/docs/voice.xml"))
         .setMethod(HttpMethod.GET)
         .setStatusCallback("https://www.myapp.com/events")
         .setStatusCallbackMethod(HttpMethod.POST)
         .setStatusCallbackEvent(Arrays.asList("initiated", "ringing", "answered", "completed"))
-        .create();
+        .execute();
 
     System.out.println(call.getSid());
   }

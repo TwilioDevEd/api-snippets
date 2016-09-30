@@ -13,11 +13,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<TollFree> numbers = TollFree.reader("US").read();
+    ResourceSet<TollFree> numbers = TollFree.read("US").execute();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    IncomingPhoneNumber.creator(availableNumber).create();
+    IncomingPhoneNumber.create(availableNumber).execute();
   }
 }

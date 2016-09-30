@@ -12,9 +12,9 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    IncomingPhoneNumber number = IncomingPhoneNumber.updater("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
+    IncomingPhoneNumber number = IncomingPhoneNumber.update("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
         .setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
-        .setSmsUrl("http://demo.twilio.com/docs/sms.xml").update();
+        .setSmsUrl("http://demo.twilio.com/docs/sms.xml").execute();
 
     System.out.println(number.getDateUpdated());
   }

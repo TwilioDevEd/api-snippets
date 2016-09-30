@@ -13,11 +13,11 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .creator(new Sip("sip:kate@example.com"), new PhoneNumber("Jack"),
+        .create(new Sip("sip:kate@example.com"), new PhoneNumber("Jack"),
             "http://www.example.com/sipdial.xml")
         .setSipAuthUsername("jack")
         .setSipAuthPassword("secret")
-        .create();
+        .execute();
 
     System.out.println(call.getSid());
   }

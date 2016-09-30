@@ -13,10 +13,10 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Credential credential = Credential.creator(Credential.PushService.GCM)
+    Credential credential = Credential.create(Credential.PushService.GCM)
         .setFriendlyName("MyGCMCredential")
         .setApiKey("api_key_here")
-        .create();
+        .execute();
 
     System.out.println(credential.getSid());
   }

@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the service
-    Service service = Service.fetcher(SERVICE_SID).fetch();
+    Service service = Service.fetch(SERVICE_SID).execute();
 
     System.out.println(service.getFriendlyName());
   }

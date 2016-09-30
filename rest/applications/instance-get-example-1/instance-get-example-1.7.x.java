@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Application app = Application.fetcher("AP2a0747eba6abf96b7e3c3ff0b4530f6e").fetch();
+    Application app = Application.fetch("AP2a0747eba6abf96b7e3c3ff0b4530f6e").execute();
 
     System.out.println(app.getSmsUrl());
   }

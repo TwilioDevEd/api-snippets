@@ -17,8 +17,8 @@ public class Example {
 
     // Update the message
     Message message = Message
-        .updater(SERVICE_SID, CHANNEL_SID, MESSAGE_SID, "New message body!")
-        .update();
+        .update(SERVICE_SID, CHANNEL_SID, MESSAGE_SID, "New message body!")
+        .execute();
 
     System.out.println(message.getBody());
   }

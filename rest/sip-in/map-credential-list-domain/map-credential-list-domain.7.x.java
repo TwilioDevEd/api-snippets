@@ -11,8 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     CredentialListMapping credentialListMapping = CredentialListMapping
-        .creator("SD32a3c49700934481addd5ce1659f04d2", "CL32a3c49700934481addd5ce1659f04d2")
-        .create();
+        .create("SD32a3c49700934481addd5ce1659f04d2", "CL32a3c49700934481addd5ce1659f04d2")
+        .execute();
 
     System.out.println(credentialListMapping.getSid());
   }

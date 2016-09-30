@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Credential.deleter("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2")
-        .delete();
+    Credential.delete("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2")
+        .execute();
   }
 }

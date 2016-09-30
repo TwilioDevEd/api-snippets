@@ -25,10 +25,10 @@ public class Example {
     data.put("genre", "romance");
 
     Document document = Document
-        .creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        .create("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setUniqueName("MyFirstDocument")
         .setData(data)
-        .create();
+        .execute();
 
     System.out.println(document.getSid());
   }

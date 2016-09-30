@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Command cmd = Command.fetcher("DCcb6aa7c620874dd98ba6c9c4108d0ed0")
-      .fetch();
+    Command cmd = Command.fetch("DCcb6aa7c620874dd98ba6c9c4108d0ed0")
+      .execute();
 
       System.out.println(cmd.getCommand());
   }

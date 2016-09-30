@@ -13,8 +13,8 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     Credential credential = Credential
-        .fetcher("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2")
-        .fetch();
+        .fetch("CL32a3c49700934481addd5ce1659f04d2", "SC32a3c49700934481addd5ce1659f04d2")
+        .execute();
 
     System.out.println(credential.getUsername());
   }

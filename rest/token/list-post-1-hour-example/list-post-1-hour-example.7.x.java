@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Token token = Token.creator().setTtl(3600).create();
+    Token token = Token.create().setTtl(3600).execute();
 
     System.out.println(token.getUsername());
   }

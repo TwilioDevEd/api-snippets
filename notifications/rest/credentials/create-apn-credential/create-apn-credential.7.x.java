@@ -13,12 +13,12 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Credential credential = Credential.creator(Credential.PushService.APN)
+    Credential credential = Credential.create(Credential.PushService.APN)
         .setFriendlyName("MyAPNCredential")
         .setCertificate("cert.pem_content")
         .setPrivateKey("key.pem_content")
         .setSandbox(true)
-        .create();
+        .execute();
 
     System.out.println(credential.getSid());
   }

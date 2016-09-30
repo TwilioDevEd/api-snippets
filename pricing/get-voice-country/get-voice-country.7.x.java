@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get Twilio Voice pricing information for a specific country
-    Country voiceCountry = Country.fetcher("EE").fetch();
+    Country voiceCountry = Country.fetch("EE").execute();
 
     for (InboundCallPrice price : voiceCountry.getInboundCallPrices()) {
       // For each call pricing category, print number type and

@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Notification notification = Notification.fetcher("NO5a7a84730f529f0a76b3e30c01315d1a").fetch();
+    Notification notification = Notification.fetch("NO5a7a84730f529f0a76b3e30c01315d1a").execute();
 
     System.out.println(notification.getMessageText());
   }

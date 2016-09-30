@@ -11,7 +11,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Token token = Token.creator().create();
+    Token token = Token.create().execute();
 
     System.out.println(token.getUsername());
   }

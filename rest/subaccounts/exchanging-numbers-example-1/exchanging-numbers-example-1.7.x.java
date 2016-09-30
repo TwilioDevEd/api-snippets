@@ -14,9 +14,9 @@ public class Example {
     String secondSubAccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     IncomingPhoneNumber number = IncomingPhoneNumber
-        .updater(firstSubAccountSid, "PN2a0747eba6abf96b7e3c3ff0b4530f6e")
+        .update(firstSubAccountSid, "PN2a0747eba6abf96b7e3c3ff0b4530f6e")
         .setAccountSid(secondSubAccountSid)
-        .update();
+        .execute();
 
     System.out.println(number.getDateUpdated());
   }

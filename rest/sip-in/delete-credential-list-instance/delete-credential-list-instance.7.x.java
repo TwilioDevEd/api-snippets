@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    CredentialList.deleter("CL32a3c49700934481addd5ce1659f04d2").delete();
+    CredentialList.delete("CL32a3c49700934481addd5ce1659f04d2").execute();
   }
 }

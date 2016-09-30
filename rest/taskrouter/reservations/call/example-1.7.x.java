@@ -14,12 +14,12 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // call using a reservation
-    Reservation reservation = Reservation.updater(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
+    Reservation reservation = Reservation.update(WORKSPACE_SID, TASK_SID, RESERVATION_SID)
         .setInstruction("Call")
         .setCallFrom("+15558675309").setCallUrl("http://example.com/agent_answer")
         .setCallStatusCallbackUrl("http://example.com/agent_answer_status_callback")
         .setCallAccept(true)
-        .update();
+        .execute();
 
     System.out.println(reservation.getDateUpdated());
   }

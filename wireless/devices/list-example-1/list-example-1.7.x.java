@@ -13,7 +13,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Device> devices = Device.reader().read();
+    ResourceSet<Device> devices = Device.read().execute();
     for (Device d : devices) {
       System.out.println(d.getFriendlyName());
     }

@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Update the service
-    Service service = Service.updater(SERVICE_SID).setFriendlyName("NewServiceName").update();
+    Service service = Service.update(SERVICE_SID).setFriendlyName("NewServiceName").execute();
 
     System.out.println(service.getFriendlyName());
   }

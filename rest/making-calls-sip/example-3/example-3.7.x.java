@@ -15,8 +15,8 @@ public class Example {
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Call call = Call.creator(new Sip("sip:kate@example.com?hatchkey=4815162342"),
-        new PhoneNumber("Jack"), new URI("http://www.example.com/sipdial.xml")).create();
+    Call call = Call.create(new Sip("sip:kate@example.com?hatchkey=4815162342"),
+        new PhoneNumber("Jack"), new URI("http://www.example.com/sipdial.xml")).execute();
 
     System.out.println(call.getSid());
   }

@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create the service
-    Service service = Service.creator("ServiceName").create();
+    Service service = Service.create("ServiceName").execute();
 
     System.out.println(service.getFriendlyName());
   }

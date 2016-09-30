@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create the user
-    User user = User.creator(SERVICE_SID, "IDENTITY").create();
+    User user = User.create(SERVICE_SID, "IDENTITY").execute();
 
     System.out.println(user.getRoleSid());
   }
