@@ -14,8 +14,8 @@ public class Example {
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(SUBACCOUNT_SID, SUBACCOUNT_AUTH_TOKEN);
 
-    Call.create(new PhoneNumber("+16518675309"), new PhoneNumber("+14158141829"),
+    Call.creator(new PhoneNumber("+16518675309"), new PhoneNumber("+14158141829"),
         new URI("http://twimlets.com/message?Message%5B0%5D=Hello%20from%20your%20subaccount"))
-            .execute();
+            .create();
   }
 }

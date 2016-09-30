@@ -21,9 +21,9 @@ public class Example {
     List<String> tags = Arrays.asList("premium", "new user");
 
     Binding binding = Binding
-        .create(SERVICE_SID, "xxx", "bob", Binding.BindingType.GCM, "xxx")
+        .creator(SERVICE_SID, "xxx", "bob", Binding.BindingType.GCM, "xxx")
         .setTag(tags)
-        .execute();
+        .create();
 
     System.out.println(binding.getSid());
   }

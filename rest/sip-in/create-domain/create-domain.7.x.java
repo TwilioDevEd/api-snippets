@@ -10,11 +10,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Domain domain = Domain.create("marlo.sip.twilio.com")
+    Domain domain = Domain.creator("marlo.sip.twilio.com")
         .setFriendlyName("My Domain")
         .setVoiceUrl("https://demo.twilio.com/welcome")
         .setAuthType("IP_ACL")
-        .execute();
+        .create();
 
     System.out.println(domain.getSid());
   }

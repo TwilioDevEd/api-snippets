@@ -19,6 +19,6 @@ public class Example {
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    IncomingPhoneNumber.create(availableNumber).execute();
+    IncomingPhoneNumber.creator(availableNumber).create();
   }
 }

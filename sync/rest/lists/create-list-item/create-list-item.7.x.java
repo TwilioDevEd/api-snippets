@@ -21,7 +21,7 @@ public class Example {
     data.put("name", "'Bulbasaur");
     data.put("attack", 49);
 
-    SyncListItem item = SyncListItem.create(SERVICE_SID, LIST_SID, data).execute();
+    SyncListItem item = SyncListItem.creator(SERVICE_SID, LIST_SID, data).create();
 
     System.out.println(item);
   }

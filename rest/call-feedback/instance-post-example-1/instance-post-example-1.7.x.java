@@ -12,8 +12,8 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Feedback feedback = Feedback.create("CAe03b7cd806070d1f32bdb7f1046a41c0", 3)
-        .setIssue(Feedback.Issues.IMPERFECT_AUDIO).execute();
+    Feedback feedback = Feedback.creator("CAe03b7cd806070d1f32bdb7f1046a41c0", 3)
+        .setIssue(Feedback.Issues.IMPERFECT_AUDIO).create();
 
     System.out.println(feedback.getDateCreated());
   }

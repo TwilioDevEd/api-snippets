@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ValidationRequest validationRequest = ValidationRequest.create(new PhoneNumber("+14158675309"))
+    ValidationRequest validationRequest = ValidationRequest.creator(new PhoneNumber("+14158675309"))
         .setFriendlyName("My Home Phone Number")
-        .execute();
+        .create();
 
     System.out.println(validationRequest.getValidationCode());
   }

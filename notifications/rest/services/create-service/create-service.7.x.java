@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create the service
-    Service service = Service.create().setFriendlyName("My Awesome Service").execute();
+    Service service = Service.creator().setFriendlyName("My Awesome Service").create();
 
     System.out.println(service.getSid());
   }
