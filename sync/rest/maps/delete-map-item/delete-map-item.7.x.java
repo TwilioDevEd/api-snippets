@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete a Map Item
-    boolean didDelete = SyncMapItem.delete(SERVICE_SID, MAP_SID, "steph_curry").execute();
+    boolean didDelete = SyncMapItem.deleter(SERVICE_SID, MAP_SID, "steph_curry").delete();
 
     System.out.println(didDelete);
   }

@@ -11,6 +11,6 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    TaskQueue.delete(WORKSPACE_SID, TASKQUEUE_SID).execute();
+    TaskQueue.deleter(WORKSPACE_SID, TASKQUEUE_SID).delete();
   }
 }

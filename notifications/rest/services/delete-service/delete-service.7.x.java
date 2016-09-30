@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete the service
-    boolean didDelete = Service.delete("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").execute();
+    boolean didDelete = Service.deleter("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete();
 
     System.out.println(didDelete);
   }
