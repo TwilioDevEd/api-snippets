@@ -1,19 +1,21 @@
 /* The CameraCapturer is a default video capturer provided by Twilio which can
-capture video from the front or rear-facing device camera */
-@property (nonatomic, strong) TWCCameraCapturer *camera;
-// Video Tracks (local or remote) can be attached to any UIView
-@property (weak, nonatomic) IBOutlet UIView *localVideoContainer;
+capture video from the front or rear-facing device camera  */
+@property (nonatomic, strong) TVICameraCapturer *camera;
+
+// Video Tracks (local or remote) can be attached to any UIView 
+@property (weak, nonatomic) IBOutlet UIView *previewView;
 
 /* LocalMedia represents our local camera and microphone (media) configuration
-that can be sent to other Conversation Participants, or previewed locally */
-TWCLocalMedia *localMedia = [[TWCLocalMedia alloc] initWithDelegate:self];
-#if !TARGET_IPHONE_SIMULATOR
-	// On the simulator, there is no camera available. Microphone is enabled by default.
-	self.camera = [self.localMedia addCameraTrack];
-#else
+that can be sent to other Participants in Rooms, or previewed locally */
+@property (nonatomic, strong) TVILocalMedia *localMedia;
 
-// We can attach our local camera Video Track to a UIView immediately
-if (self.camera) {
-	[self.camera.videoTrack attach:self.localVideoContainer];
-	self.camera.videoTrack.delegate = self;
+// Create a local video track, and render it in the preview view
+self.localMedia = [[TVILocalMedia alloc] init];
+self.camera = [[TVICameraCapturer alloc] init];
+self.localVideoTrack = [self.localMedia addVideoTrack:YES capturer:self.camera];
+if (!self.localVideoTrack) {
+	NSLog(@"Failed to add video track");
+} else {
+	// Attach view to video track for local preview
+	[self.localVideoTrack attach:self.previewView];
 }
