@@ -10,10 +10,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workspace workspace = Workspace.creator("NewWorkspace")
+    Workspace workspace = Workspace.create("NewWorkspace")
         .setEventCallbackUrl("http://requestb.in/vh9reovh")
         .setTemplate("FIFO")
-        .create();
+        .execute();
 
     System.out.println(workspace.getFriendlyName());
   }

@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    IpAccessControlList ipAccessControlList = IpAccessControlList.creator("My new acl").create();
+    IpAccessControlList ipAccessControlList = IpAccessControlList.create("My new acl").execute();
 
     System.out.println(ipAccessControlList.getSid());
   }

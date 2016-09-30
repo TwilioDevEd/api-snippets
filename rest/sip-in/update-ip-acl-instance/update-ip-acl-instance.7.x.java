@@ -13,8 +13,8 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     IpAccessControlList ipAccessControlList = IpAccessControlList
-        .updater("AL32a3c49700934481addd5ce1659f04d2", "Avons Lieutenants")
-        .update();
+        .update("AL32a3c49700934481addd5ce1659f04d2", "Avons Lieutenants")
+        .execute();
 
     System.out.println(ipAccessControlList.getDateUpdated());
   }

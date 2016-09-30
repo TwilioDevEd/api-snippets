@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Notification> notifications = Notification.reader().read();
+    ResourceSet<Notification> notifications = Notification.read().execute();
 
     // Loop over notifications and print out a property for each one.
     for (Notification notification : notifications) {

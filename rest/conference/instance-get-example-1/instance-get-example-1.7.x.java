@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Conference conference = Conference.fetcher("CFbbe46ff1274e283f7e3ac1df0072ab39").fetch();
+    Conference conference = Conference.fetch("CFbbe46ff1274e283f7e3ac1df0072ab39").execute();
 
     System.out.println(conference.getStatus());
   }

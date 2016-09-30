@@ -11,9 +11,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workflow workflow = Workflow.updater(WORKSPACE_SID, WORKFLOW_SID)
+    Workflow workflow = Workflow.update(WORKSPACE_SID, WORKFLOW_SID)
         .setTaskReservationTimeout(20)
-        .update();
+        .execute();
 
     System.out.println(workflow.getDateUpdated());
   }

@@ -20,8 +20,8 @@ public class Example {
 
     // Create a role
     Role role = Role
-        .creator(SERVICE_SID, "RoleName", Role.RoleType.DEPLOYMENT, permissions)
-        .create();
+        .create(SERVICE_SID, "RoleName", Role.RoleType.DEPLOYMENT, permissions)
+        .execute();
 
     System.out.println(role.getSid());
   }

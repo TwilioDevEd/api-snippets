@@ -12,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    boolean didDelete = Service.deleter(SERVICE_SID).delete();
+    boolean didDelete = Service.delete(SERVICE_SID).execute();
 
     System.out.println(didDelete);
   }

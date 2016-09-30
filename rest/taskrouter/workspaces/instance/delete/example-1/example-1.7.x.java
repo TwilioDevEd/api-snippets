@@ -10,6 +10,6 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workspace.deleter(WORKSPACE_SID).delete();
+    Workspace.delete(WORKSPACE_SID).execute();
   }
 }

@@ -17,9 +17,9 @@ public class Example {
       .replaceAll("\\+", "%20");
 
     PhoneNumber number = PhoneNumber
-        .fetcher(new com.twilio.type.PhoneNumber("+4402077651182"))
+        .fetch(new com.twilio.type.PhoneNumber("+4402077651182"))
         .setCountryCode("US")
-        .fetch();
+        .execute();
 
     System.out.println(number.getNationalFormat());
   }

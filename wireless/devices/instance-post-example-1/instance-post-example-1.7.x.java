@@ -12,9 +12,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Device device = Device.updater("DEb8eff34b248d066a31c4a953134e183e")
+    Device device = Device.update("DEb8eff34b248d066a31c4a953134e183e")
       .setStatus("active")
-      .update();
+      .execute();
       
     System.out.println(device.getFriendlyName());
   }

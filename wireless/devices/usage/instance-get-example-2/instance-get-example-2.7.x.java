@@ -12,10 +12,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Usage usage = Usage.fetcher("524116518656369")
+    Usage usage = Usage.fetch("524116518656369")
       .setStart("2016-05-01")
       .setEnd("2016-05-31")
-      .fetch();
+      .execute();
     System.out.println(usage.getPeriod().get("start"));
     System.out.println(usage.getPeriod().get("end"));
     System.out.println(usage.getDataCosts().get("total"));

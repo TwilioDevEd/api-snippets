@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Message sms = Message.fetcher("SM800f449d0399ed014aae2bcc0cc2f2ec").fetch();
+    Message sms = Message.fetch("SM800f449d0399ed014aae2bcc0cc2f2ec").execute();
 
     System.out.println(sms.getBody());
   }

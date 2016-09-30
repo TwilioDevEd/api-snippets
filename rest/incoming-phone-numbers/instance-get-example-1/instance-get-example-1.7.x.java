@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     IncomingPhoneNumber number =
-        IncomingPhoneNumber.fetcher("PN2a0747eba6abf96b7e3c3ff0b4530f6e").fetch();
+        IncomingPhoneNumber.fetch("PN2a0747eba6abf96b7e3c3ff0b4530f6e").execute();
 
     System.out.println(number.getPhoneNumber());
   }

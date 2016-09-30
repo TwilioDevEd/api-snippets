@@ -11,8 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     PhoneNumber number = PhoneNumber
-        .fetcher(new com.twilio.type.PhoneNumber("+4402077651182"))
-        .fetch();
+        .fetch(new com.twilio.type.PhoneNumber("+4402077651182"))
+        .execute();
 
     System.out.println(number.getNationalFormat());
   }

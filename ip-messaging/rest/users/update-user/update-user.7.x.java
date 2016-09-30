@@ -15,9 +15,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Update the user
-    User user = User.updater(SERVICE_SID, USER_SID)
+    User user = User.update(SERVICE_SID, USER_SID)
         .setRoleSid("new_role_sid")
-        .update();
+        .execute();
 
     System.out.println(user.getRoleSid());
   }

@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     AuthorizedConnectApp authorizedApp =
-        AuthorizedConnectApp.fetcher("CN47260e643654388faabe8aaa18ea6756").fetch();
+        AuthorizedConnectApp.fetch("CN47260e643654388faabe8aaa18ea6756").execute();
 
     System.out.println(authorizedApp.getConnectAppHomepageUrl());
   }

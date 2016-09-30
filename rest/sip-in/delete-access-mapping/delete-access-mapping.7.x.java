@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     IpAccessControlListMapping
-        .deleter("SD32a3c49700934481addd5ce1659f04d2", "AL95a47094615fe05b7c17e62a7877836c")
-        .delete();
+        .delete("SD32a3c49700934481addd5ce1659f04d2", "AL95a47094615fe05b7c17e62a7877836c")
+        .execute();
   }
 }

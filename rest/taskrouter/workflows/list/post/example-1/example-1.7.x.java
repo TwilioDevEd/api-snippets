@@ -66,10 +66,10 @@ public class Example {
     }
 
     Workflow workflow =
-        Workflow.creator(WORKSPACE_SID, "Sales, Marketing, Support Workflow", workflowJSON)
+        Workflow.create(WORKSPACE_SID, "Sales, Marketing, Support Workflow", workflowJSON)
             .setAssignmentCallbackUrl("http://example.com")
             .setFallbackAssignmentCallbackUrl("http://example2.com")
             .setTaskReservationTimeout(30)
-            .create();
+            .execute();
   }
 }

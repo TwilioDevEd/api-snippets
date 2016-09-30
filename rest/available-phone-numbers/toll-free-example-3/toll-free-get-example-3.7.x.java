@@ -14,11 +14,11 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<TollFree> numbers =
-        TollFree.reader("US").setContains("KYLO").setAreaCode(800).read();
+        TollFree.read("US").byContains("KYLO").byAreaCode(800).execute();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    IncomingPhoneNumber.creator(availableNumber).create();
+    IncomingPhoneNumber.create(availableNumber).execute();
   }
 }

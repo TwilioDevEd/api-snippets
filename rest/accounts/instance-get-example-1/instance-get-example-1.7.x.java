@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Account account = Account.fetcher("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch();
+    Account account = Account.fetch("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").execute();
 
     System.out.println(account.getDateCreated());
   }

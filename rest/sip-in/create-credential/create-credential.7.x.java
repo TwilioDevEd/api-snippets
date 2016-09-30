@@ -11,8 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Credential credential = Credential
-        .creator("CL32a3c49700934481addd5ce1659f04d2", "WeeBey", "05")
-        .create();
+        .create("CL32a3c49700934481addd5ce1659f04d2", "WeeBey", "05")
+        .execute();
 
     System.out.println(credential.getSid());
   }

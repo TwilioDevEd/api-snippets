@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<CredentialListMapping> credentialListMappings =
-        CredentialListMapping.reader("SD32a3c49700934481addd5ce1659f04d2").read();
+        CredentialListMapping.read("SD32a3c49700934481addd5ce1659f04d2").execute();
 
     // Loop over credentialListMappings and print out a property for each one.
     for (CredentialListMapping credentialListMapping : credentialListMappings) {

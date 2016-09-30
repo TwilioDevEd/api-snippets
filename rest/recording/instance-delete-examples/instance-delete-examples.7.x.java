@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Recording.deleter("RE557ce644e5ab84fa21cc21112e22c485").delete();
+    Recording.delete("RE557ce644e5ab84fa21cc21112e22c485");
   }
 }

@@ -12,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Activity activity = Activity.fetcher(WORKSPACE_SID, ACTIVITY_SID).fetch();
+    Activity activity = Activity.fetch(WORKSPACE_SID, ACTIVITY_SID).execute();
 
     System.out.println(activity.getFriendlyName());
   }

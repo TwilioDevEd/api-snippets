@@ -11,6 +11,6 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workflow.deleter(WORKSPACE_SID, WORKFLOW_SID).delete();
+    Workflow.delete(WORKSPACE_SID, WORKFLOW_SID).execute();
   }
 }

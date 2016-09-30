@@ -16,8 +16,8 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Member member = Member.updater("QU5ef8732a3c49700934481addd5ce1659", "Front",
-        new URI("http://demo.twilio.com/docs/voice.xml"), HttpMethod.POST).update();
+    Member member = Member.update("QU5ef8732a3c49700934481addd5ce1659", "Front",
+        new URI("http://demo.twilio.com/docs/voice.xml"), HttpMethod.POST).execute();
 
     System.out.println(member.getDateEnqueued());
   }

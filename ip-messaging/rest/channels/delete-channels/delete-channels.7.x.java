@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete the channel
-    boolean didDelete = Channel.deleter(SERVICE_SID, "CHANNEL_SID").delete();
+    boolean didDelete = Channel.delete(SERVICE_SID, "CHANNEL_SID").execute();
 
     System.out.println(didDelete);
   }

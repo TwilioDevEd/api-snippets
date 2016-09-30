@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the list of channels
-    ResourceSet<Channel> channels = Channel.reader(SERVICE_SID).read();
+    ResourceSet<Channel> channels = Channel.read(SERVICE_SID).execute();
 
     for (Channel channel : channels) {
       System.out.println(channel.getFriendlyName());

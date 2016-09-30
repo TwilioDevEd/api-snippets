@@ -12,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Document document = Document.fetcher(SERVICE_SID, "MyFirstDocument").fetch();
+    Document document = Document.fetch(SERVICE_SID, "MyFirstDocument").execute();
 
     System.out.println(document.getUniqueName());
   }

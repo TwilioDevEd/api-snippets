@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Trigger trigger = Trigger.fetcher("UT33c6aeeba34e48f38d6899ea5b765ad4").fetch();
+    Trigger trigger = Trigger.fetch("UT33c6aeeba34e48f38d6899ea5b765ad4").execute();
 
     System.out.println(trigger.getCurrentValue());
   }

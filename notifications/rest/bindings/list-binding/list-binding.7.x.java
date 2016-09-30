@@ -17,7 +17,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the bindings
-    ResourceSet<Binding> bindings = Binding.reader(SERVICE_SID).read();
+    ResourceSet<Binding> bindings = Binding.read(SERVICE_SID).execute();
 
     for (Binding binding : bindings) {
       System.out.println(binding.getEndpoint());

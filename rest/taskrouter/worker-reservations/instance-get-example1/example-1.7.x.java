@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Reservation reservation =
-        Reservation.fetcher(WORKSPACE_SID, WORKER_SID, RESERVATION_SID).fetch();
+        Reservation.fetch(WORKSPACE_SID, WORKER_SID, RESERVATION_SID).execute();
 
     System.out.println(reservation.getReservationStatus());
     System.out.println(reservation.getWorkerName());

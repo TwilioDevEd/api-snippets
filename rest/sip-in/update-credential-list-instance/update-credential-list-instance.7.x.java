@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     CredentialList credentialList =
-        CredentialList.updater("CL32a3c49700934481addd5ce1659f04d2", "Marlos Lieutenants").update();
+        CredentialList.update("CL32a3c49700934481addd5ce1659f04d2", "Marlos Lieutenants").execute();
 
     System.out.println(credentialList.getDateUpdated());
   }

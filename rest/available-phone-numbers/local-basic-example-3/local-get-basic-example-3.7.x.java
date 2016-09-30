@@ -14,11 +14,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = Local.reader("US").setContains("STORM").read();
+    ResourceSet<Local> numbers = Local.read("US").byContains("STORM").execute();
 
     // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    IncomingPhoneNumber.creator(availableNumber).create();
+    IncomingPhoneNumber.create(availableNumber).execute();
   }
 }

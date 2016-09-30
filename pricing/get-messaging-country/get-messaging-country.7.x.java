@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get Twilio Messaging pricing information for a specific country
-    Country messagingCountry = Country.fetcher("EE").fetch();
+    Country messagingCountry = Country.fetch("EE").execute();
 
     for (InboundSmsPrice price : messagingCountry.getInboundSmsPrices()) {
       // For each message pricing category, print number type and

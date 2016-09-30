@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete a binding
-    boolean response = Binding.deleter("ISxxx", "BSxxx").delete();
+    boolean response = Binding.delete("ISxxx", "BSxxx").execute();
     System.out.println("Success deleting Binding: " + response);
   }
 }

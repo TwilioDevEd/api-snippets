@@ -14,7 +14,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    SyncMap map = SyncMap.fetcher(SERVICE_SID, MAP_SID).fetch();
+    SyncMap map = SyncMap.fetch(SERVICE_SID, MAP_SID).execute();
 
     System.out.println(map.getSid());
   }

@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.LocalDate;
+import org.joda.time.DateTime;
 
 import com.google.common.collect.Range;
 import com.twilio.Twilio;
@@ -14,10 +14,12 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Notification> notifications = Notification.reader()
-        .setMessageDate(Range.atLeast(LocalDate.parse("2009-07-06")))
-        .setLog(1)
-        .read();
+    DateTime dateTime = DateTime.parse("2009-07-06");
+
+    ResourceSet<Notification> notifications = Notification.read()
+        .byMessageDate(Range.atLeast(dateTime))
+        .byLog(1)
+        .execute();
 
     // Loop over notifications and print out a property for each one.
     for (Notification notification : notifications) {

@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the list of members on that channel
-    ResourceSet<Member> members = Member.reader(SERVICE_SID, CHANNEL_SID).read();
+    ResourceSet<Member> members = Member.read(SERVICE_SID, CHANNEL_SID).execute();
 
     for (Member member : members) {
       System.out.println(member.getIdentity());

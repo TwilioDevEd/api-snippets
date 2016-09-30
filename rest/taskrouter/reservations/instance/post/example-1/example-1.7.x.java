@@ -14,14 +14,14 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Reservation> reservations = Reservation.reader(WORKSPACE_SID, TASK_SID).read();
+    ResourceSet<Reservation> reservations = Reservation.read(WORKSPACE_SID, TASK_SID).execute();
 
     // accept a reservation
     for (Reservation reservation : reservations) {
       Reservation
-          .updater(reservation.getWorkspaceSid(), reservation.getTaskSid(), reservation.getSid())
+          .update(reservation.getWorkspaceSid(), reservation.getTaskSid(), reservation.getSid())
           .setReservationStatus(Reservation.Status.ACCEPTED)
-          .update();
+          .execute();
     }
   }
 }

@@ -12,7 +12,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Service service = Service.updater(SERVICE_SID).setFriendlyName("NEW_FRIENDLY_NAME").update();
+    Service service = Service.update(SERVICE_SID).setFriendlyName("NEW_FRIENDLY_NAME").execute();
 
     System.out.println(service.getFriendlyName());
   }

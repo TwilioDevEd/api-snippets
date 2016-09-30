@@ -12,8 +12,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Device device = Device.fetcher("524116518656369")
-      .fetch();
+    Device device = Device.fetch("524116518656369")
+      .execute();
     
     System.out.println(device.getFriendlyName());
   }

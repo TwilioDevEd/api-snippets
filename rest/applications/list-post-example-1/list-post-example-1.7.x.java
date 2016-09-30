@@ -12,8 +12,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Application app =
-        Application.creator("Phone Me").setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
-            .setVoiceMethod(HttpMethod.GET).create();
+        Application.create("Phone Me").setVoiceUrl("http://demo.twilio.com/docs/voice.xml")
+            .setVoiceMethod(HttpMethod.GET).execute();
 
     System.out.println(app.getSid());
   }

@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Application> apps = Application.reader().setFriendlyName("MyApp").read();
+    ResourceSet<Application> apps = Application.read().byFriendlyName("MyApp").execute();
 
     // Loop over apps and print out a property for each one.
     for (Application app : apps) {

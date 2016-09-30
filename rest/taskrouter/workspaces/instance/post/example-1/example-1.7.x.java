@@ -10,10 +10,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Workspace workspace = Workspace.updater(WORKSPACE_SID)
+    Workspace workspace = Workspace.update(WORKSPACE_SID)
         .setFriendlyName("NewFriendlyName")
         .setEventCallbackUrl("http://requestb.in/vh9reovh")
-        .update();
+        .execute();
 
     System.out.println(workspace.getDateUpdated());
   }

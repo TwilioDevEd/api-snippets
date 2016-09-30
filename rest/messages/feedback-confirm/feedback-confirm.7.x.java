@@ -15,6 +15,6 @@ public class Confirm extends HttpServlet {
     String messageSid = "SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     Feedback feedback =
-        Feedback.creator(messageSid).setOutcome(Feedback.Outcome.CONFIRMED).create();
+        Feedback.create(messageSid).setOutcome(Feedback.Outcome.CONFIRMED).execute();
   }
 }

@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<IpAccessControlListMapping> ipAccessControlListMappings =
-        IpAccessControlListMapping.reader("SD32a3c49700934481addd5ce1659f04d2").read();
+        IpAccessControlListMapping.read("SD32a3c49700934481addd5ce1659f04d2").execute();
 
     // Loop over ipAccessControlListMappings and print out a property for each one.
     for (IpAccessControlListMapping ipAccessControlListMapping : ipAccessControlListMappings) {

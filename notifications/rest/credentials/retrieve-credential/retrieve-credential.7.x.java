@@ -13,7 +13,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Credential credential = Credential.fetcher("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").fetch();
+    Credential credential = Credential.fetch("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").execute();
 
     System.out.println(credential.getFriendlyName());
   }

@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Event event = Event.fetcher("AE21f24380625e4aa4abec76e39b14458d").fetch();
+    Event event = Event.fetch("AE21f24380625e4aa4abec76e39b14458d").execute();
 
     System.out.println(event.getDescription());
   }

@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Queue queue = Queue.updater("QU32a3c49700934481addd5ce1659f04d2").setMaxSize(123).update();
+    Queue queue = Queue.update("QU32a3c49700934481addd5ce1659f04d2").setMaxSize(123).execute();
 
     System.out.println(queue.getAverageWaitTime());
   }

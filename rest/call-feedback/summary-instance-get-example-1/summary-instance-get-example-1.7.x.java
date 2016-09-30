@@ -13,7 +13,7 @@ public class Example {
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
     FeedbackSummary feedbackSummary =
-        FeedbackSummary.fetcher("FSa346467ca321c71dbd5e12f627deb854").fetch();
+        FeedbackSummary.fetch("FSa346467ca321c71dbd5e12f627deb854").execute();
 
     System.out.println(feedbackSummary.getDateCreated());
   }

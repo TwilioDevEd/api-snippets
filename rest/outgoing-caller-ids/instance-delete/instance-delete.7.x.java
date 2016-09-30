@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    OutgoingCallerId.deleter("PNe536d32a3c49700934481addd5ce1659").delete();
+    OutgoingCallerId.delete("PNe536d32a3c49700934481addd5ce1659").execute();
   }
 }

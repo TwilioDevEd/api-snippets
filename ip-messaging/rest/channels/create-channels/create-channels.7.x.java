@@ -13,10 +13,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create the channel
-    Channel channel = Channel.creator(SERVICE_SID)
+    Channel channel = Channel.create(SERVICE_SID)
         .setFriendlyName("General")
         .setUniqueName("general")
-        .create();
+        .execute();
 
     System.out.println(channel.getAttributes());
   }

@@ -12,6 +12,6 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Transcription.deleter("TR8c61027b709ffb038236612dc5af8723").delete();
+    Transcription.delete("TR8c61027b709ffb038236612dc5af8723").execute();
   }
 }

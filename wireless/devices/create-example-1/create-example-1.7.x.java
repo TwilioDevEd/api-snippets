@@ -12,10 +12,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Device device = Device.creator("{{ rate_plan_sid }}")
+    Device device = Device.create("{{ rate_plan_sid }}")
       .setAlias("996224413905003")
       .setFriendlyName("Charlie's SmartMeter")
-      .create();
+      .execute();
     
     System.out.println(device.getFriendlyName());
   }

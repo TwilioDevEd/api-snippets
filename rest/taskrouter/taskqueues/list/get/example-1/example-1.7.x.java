@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<TaskQueue> taskQueues = TaskQueue.reader(WORKSPACE_SID).read();
+    ResourceSet<TaskQueue> taskQueues = TaskQueue.read(WORKSPACE_SID).execute();
 
     for (TaskQueue taskQueue : taskQueues) {
       System.out.println(taskQueue.getFriendlyName());

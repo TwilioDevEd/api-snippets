@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     TaskQueueStatistics statistics =
-        TaskQueueStatistics.fetcher(WORKSPACE_SID, TASKQUEUE_SID).fetch();
+        TaskQueueStatistics.fetch(WORKSPACE_SID, TASKQUEUE_SID).execute();
 
     System.out.println(
         "Reservations Accepted: " + statistics.getCumulative().get("reservations_accepted"));
