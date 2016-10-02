@@ -18,7 +18,10 @@ module LanguageHandler
     end
 
     def execute(file)
-      execute_with_suppressed_output("ruby #{file}", file)
+      execute_with_suppressed_output(
+        "rvm @#{dependencies_directory} do ruby #{file}",
+        file
+      )
     end
   end
 end
