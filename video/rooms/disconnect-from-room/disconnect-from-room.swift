@@ -1,4 +1,4 @@
-// To disconnect from a ConverRoomsation, we call:
+// To disconnect from a Room, we call:
 room.disconnect()
 
 // This results in a callback to TVIRoomDelegate#room:didDisconnectWithError
