@@ -29,7 +29,7 @@ public class Webapp {
       String identity =
           faker.name().firstName() + faker.name().lastName() + faker.address().zipCode();
 
-      // Create Conversations messaging grant
+      // Create Twilio Video grant
       ConversationsGrant grant =
           new ConversationsGrant().setConfigurationProfileSid(TWILIO_CONFIGURATION_SID);
 

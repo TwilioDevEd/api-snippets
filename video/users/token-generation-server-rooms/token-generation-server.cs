@@ -29,7 +29,7 @@ namespace VideoQuickstart.Controllers
             var token = new AccessToken(accountSid, apiKey, apiSecret);
             token.Identity = identity;
 
-            // Create a video (Conversations SDK) grant for this token
+            // Create a video grant for this token
             var grant = new ConversationsGrant();
             token.AddGrant(grant);
 

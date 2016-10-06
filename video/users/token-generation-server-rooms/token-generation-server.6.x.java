@@ -24,7 +24,7 @@ public class Webapp {
       // Generate a random username for the connecting client
       String identity = faker.firstName() + faker.lastName() + faker.zipCode();
       
-      // Create Conversations messaging grant
+      // Create Twilio Video messaging grant
       ConversationsGrant grant = new ConversationsGrant();
       grant.configurationProfileSid = System.getenv("TWILIO_CONFIGURATION_SID");
       

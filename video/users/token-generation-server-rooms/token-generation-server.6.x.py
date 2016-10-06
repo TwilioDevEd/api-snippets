@@ -25,7 +25,7 @@ def token():
     # Set the Identity of this token
     token.identity = fake.user_name()
 
-    # Grant access to Conversations
+    # Grant access to Twilio Video
     grant = ConversationsGrant()
     grant.configuration_profile_sid = os.environ['TWILIO_CONFIGURATION_SID']
     token.add_grant(grant)
