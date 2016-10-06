@@ -1,25 +1,15 @@
-private Conversation.Listener conversationListener() {
-  return new Conversation.Listener() {
+private Room.Listener roomListener() {
+  return new Room.Listener() {
+
     @Override
-    public void onParticipantConnected(Conversation conversation,
-                       Participant participant) {
+    public void onParticipantConnected(Room room, Participant participant) {
       Log.v(TAG, "Participant connected: " + participant.getIdentity());
     }
 
     @Override
-    public void onFailedToConnectParticipant(Conversation conversation,
-                         Participant participant,
-                         ConversationException e) {
-      Log.e(TAG, "Participant failed to connect: " + e.getMessage());
-    }
-
-    @Override
-    public void onParticipantDisconnected(Conversation conversation,
-                        Participant participant) {
+    public void onParticipantDisconnected(Room room, Participant participant) {
       Log.v(TAG, "Participant disconnected: " + participant.getIdentity());
     }
-
-    ...
-
   };
 }
+

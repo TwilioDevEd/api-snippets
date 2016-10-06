@@ -1,23 +1,18 @@
 /* The CameraCapturer is a default video capturer provided by Twilio which can
-capture video from the front or rear-facing device camera */
+   capture video from the front or rear-facing device camera */
 private CameraCapturer cameraCapturer;
 
-// Retrieve the FrameLayout that we will preview our camera on
-private FrameLayout previewFrameLayout;
-previewFrameLayout = (FrameLayout) findViewById(R.id.previewFrameLayout);
+/* A VideoView receives frames from a local or remote video track and renders them
+   to an associated view. */
+private VideoView primaryVideoView;
+
+/*  LocalMedia represents our local camera and microphone (media) configuration
+    that can be sent to other Participants in Rooms, or previewed locally */
+private LocalMedia localMedia = LocalMedia.create(this);
 
 // Initialize the camera capturer and start the camera preview
-cameraCapturer = CameraCapturer.create(ConversationActivity.this,
-                          CameraCapturer.CameraSource.CAMERA_SOURCE_FRONT_CAMERA,
-                          capturerErrorListener());
-startPreview(previewFrameLayout);
+cameraCapturer = new CameraCapturer(this, CameraSource.FRONT_CAMERA, null);
+LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(true, cameraCapturer);
+primaryVideoView.setMirror(true);
+localVideoTrack.addRenderer(primaryVideoView);
 
-// Handle Camera Capturer errors
-private CapturerErrorListener capturerErrorListener() {
-  return new CapturerErrorListener() {
-    @Override
-    public void onError(CapturerException e) {
-      Log.e(TAG, "Camera capturer error: " + e.getMessage());
-    }
-  };
-}

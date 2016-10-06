@@ -1,11 +1,8 @@
-// To disconnect from a Conversation, we call:
-self.conversation?.disconnect()
+// To disconnect from a Room, we call:
+room.disconnect()
 
-
-// This results in a call to TWCConversationDelegate#conversationEnded
-
-// MARK: TWCConversationDelegate  
-func conversationEnded(conversation: TWCConversation) {
-	print(@"Disconnected from the Conversation.")
-    self.conversation = nil
+// This results in a callback to TVIRoomDelegate#room:didDisconnectWithError
+// MARK: TVIRoomDelegate
+func room(_ room: TVIRoom, didDisconnectWithError error: Error?) {
+    print("Disconnected from room \(room.name)")
 }

@@ -1,17 +1,8 @@
-// MARK: TWCConversationDelegate
-
-func conversation(conversation: TWCConversation, 
-		didConnectParticipant participant: TWCParticipant) {
-    print("Participant connected: " + participant.identity)
+// MARK: TVIParticipantDelegate
+func participant(_ participant: TVIParticipant, addedVideoTrack videoTrack: TVIVideoTrack) {
+    NSLog("Participant \(participant.identity) added video track")
 }
 
-func conversation(conversation: TWCConversation, 
-		didFailToConnectParticipant participant: TWCParticipant, error: NSError) {
-    print("Participant failed to connect: " + participant.identity)
-    print("With error: " + error.localizedDescription)
-}
-
-func conversation(conversation: TWCConversation, 
-		didDisconnectParticipant participant: TWCParticipant) {
-    print("Participant disconnected: " + participant.identity)
+func participant(_ participant: TVIParticipant, removedVideoTrack videoTrack: TVIVideoTrack) {
+    NSLog("Participant \(participant.identity) removed video track")
 }

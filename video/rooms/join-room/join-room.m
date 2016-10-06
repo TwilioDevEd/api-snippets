@@ -1,31 +1,12 @@
-- (void)sendConversationInvite
-{
-	if (self.client) {
-		/* See the "Specify Local Media Constraints when Creating a
-		Conversation" guide for instructions on constructing LocalMedia */
-		outgoingInvite = [self.client inviteToConversation:@"alice"
-												localMedia:localMedia
-												   handler:[self acceptHandler]];
-	}
+-(void)joinRoom {
+	// Join an existing room 
+	TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithBlock:^(TVIConnectOptionsBuilder * _Nonnull builder) {
+		builder.name = @"existing-room";
+	}];
+	TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
 }
 
-- (TWCInviteAcceptanceBlock)acceptHandler
-{
-	return ^(TWCConversation * _Nullable conversation, NSError * _Nullable error) {
-		if (conversation) {
-			NSLog(@"Successfully connected to Conversation: %@", conversation.sid)
-			conversation.delegate = self;
-		}
-		else {
-			NSLog(@"Unable to connect to Conversation: %@", [error localizedDescription]);
-		}
-	};
-}
-
-#pragma mark - TWCConversationDelegate
-
-- (void)conversation:(TWCConversation *)conversation 
-	didConnectParticipant:(TWCParticipant *)participant
-{
-	NSLog(@"A remote Participant connected: %@", participant.sid);
+#pragma mark - TVIRoomDelegate
+- (void)room:(TVIRoom *)room participantDidConnect:(TVIParticipant *)participant {
+	NSLog(@"Participant did connect:%@", participant.identity);
 }
