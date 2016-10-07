@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@sms = @client.account.sms.messages.get("SM800f449d0399ed014aae2bcc0cc2f2ec")
+@sms = @client.account.messages.get("SM800f449d0399ed014aae2bcc0cc2f2ec")
 puts @sms.body
