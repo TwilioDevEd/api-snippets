@@ -1,0 +1,88 @@
+{
+  "channels": [
+    {
+      "sid": "WC3ff2dfb30125f534f80778a491a8d7d6",
+      "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+      "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+      "task_channel_sid": "TC3c1f1befe23ebd7cbc7ba6a2450d6018",
+      "task_channel_unique_name": "voice",
+      "configured_capacity": 1,
+      "available": true,
+      "assigned_tasks": 0,
+      "available_capacity_percentage": 100,
+      "date_created": "2016-08-22T22:41:41Z",
+      "date_updated": "2016-08-22T22:41:41Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WC3ff2dfb30125f534f80778a491a8d7d6"
+    },
+    {
+      "sid": "WC47ba34a00611e7a045dd1b0afef66b8c",
+      "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+      "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+      "task_channel_sid": "TC5037c472ab6aadd49128ba63174f4a1e",
+      "task_channel_unique_name": "default",
+      "configured_capacity": 1,
+      "available": true,
+      "assigned_tasks": 0,
+      "available_capacity_percentage": 100,
+      "date_created": "2016-08-22T22:41:41Z",
+      "date_updated": "2016-08-22T22:41:41Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WC47ba34a00611e7a045dd1b0afef66b8c"
+    },
+    {
+      "sid": "WC8835211e1d1e0cdfda4069b84ba8f9d5",
+      "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+      "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+      "task_channel_sid": "TC8e49fb688f72cdde853f99c10e03c146",
+      "task_channel_unique_name": "video",
+      "configured_capacity": 1,
+      "available": true,
+      "assigned_tasks": 0,
+      "available_capacity_percentage": 100,
+      "date_created": "2016-08-22T22:41:41Z",
+      "date_updated": "2016-08-22T22:41:41Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WC8835211e1d1e0cdfda4069b84ba8f9d5"
+    },
+    {
+      "sid": "WCc07ca004c35a198c23617ac14abf76f7",
+      "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+      "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+      "task_channel_sid": "TCa8f17e7b774c3451aa2b89fc1604a9f5",
+      "task_channel_unique_name": "ipm",
+      "configured_capacity": 1,
+      "available": true,
+      "assigned_tasks": 0,
+      "available_capacity_percentage": 100,
+      "date_created": "2016-08-22T22:41:41Z",
+      "date_updated": "2016-08-22T22:41:41Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WCc07ca004c35a198c23617ac14abf76f7"
+    },
+    {
+      "sid": "WCf0558f3b88ccda4466549d86f0f6a339",
+      "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+      "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+      "task_channel_sid": "TCcddd94529e3a5589d3a431188b307f4a",
+      "task_channel_unique_name": "sms",
+      "configured_capacity": 1,
+      "available": true,
+      "assigned_tasks": 0,
+      "available_capacity_percentage": 100,
+      "date_created": "2016-08-22T22:41:41Z",
+      "date_updated": "2016-08-22T22:41:41Z",
+      "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WCf0558f3b88ccda4466549d86f0f6a339"
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "channels"
+  }
+}

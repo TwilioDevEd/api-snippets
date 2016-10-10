@@ -1,0 +1,15 @@
+{
+  "sid": "WC3ff2dfb30125f534f80778a491a8d7d6",
+  "account_sid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "workspace_sid": "WSbe0184a8fb478195e8bd199c4eed712c",
+  "worker_sid": "WK5de00310a22b8289ff50a2ac424e8b07",
+  "task_channel_sid": "TC3c1f1befe23ebd7cbc7ba6a2450d6018",
+  "task_channel_unique_name": "voice",
+  "configured_capacity": 2,
+  "available": true,
+  "assigned_tasks": 0,
+  "available_capacity_percentage": 100,
+  "date_created": "2016-08-22T22:41:41Z",
+  "date_updated": "2016-08-22T22:41:41Z",
+  "url": "https://taskrouter.twilio.com/v1/Workspaces/WSbe0184a8fb478195e8bd199c4eed712c/Workers/WK5de00310a22b8289ff50a2ac424e8b07/Channels/WC3ff2dfb30125f534f80778a491a8d7d6"
+}
