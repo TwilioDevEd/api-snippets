@@ -1,4 +1,4 @@
 {
-  "title": "get-domain-instance",
+  "title": "Retrieve an instance of SIP Domain",
   "type": "server"
 }
