@@ -18,9 +18,9 @@ TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
 }
 
 - (void)room:(nonnull TVIRoom *)room participantDidConnect:(nonnull TVIParticipant *)participant {
-    NSLog("Participant %@ has joined Room %@", participant.identity, room.name);
+    NSLog(@"Participant %@ has joined Room %@", participant.identity, room.name);
 }
 
 - (void)room:(nonnull TVIRoom *)room participantDidDisconnect:(nonnull TVIParticipant *)participant {
-    NSLog("Participant %@ has left Room %@", participant.identity, room.name);
+    NSLog(@"Participant %@ has left Room %@", participant.identity, room.name);
 }

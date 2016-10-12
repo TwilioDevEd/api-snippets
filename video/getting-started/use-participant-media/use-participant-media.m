@@ -8,12 +8,12 @@ participant.delegate = self;
 
 - (void)participant:(nonnull TVIParticipant *)participant addedVideoTrack:(nonnull TVIVideoTrack *)videoTrack {
     // Attach remoteView on video track to render video
-    [videoTrack attach:remoteView];
+    [videoTrack attach:self.remoteView];
 }
 
 - (void)participant:(nonnull TVIParticipant *)participant removedVideoTrack:(nonnull TVIVideoTrack *)videoTrack {
     // To stop rendering simply call detach
-    [videoTrack detach:remoteView];
+    [videoTrack detach:self.remoteView];
 }
 - (void)participant:(nonnull TVIParticipant *)participant addedAudioTrack:(nonnull TVIAudioTrack *)audioTrack {
     // A Participant added an Audio Track
@@ -26,6 +26,7 @@ participant.delegate = self;
 - (void)participant:(nonnull TVIParticipant *)participant enabledTrack:(nonnull TVITrack *)track {
     // A Participant enabled a Track
 }
+
 - (void)participant:(nonnull TVIParticipant *)participant disabledTrack:(nonnull TVITrack *)track {
     // A Participante disabled a Track
 }

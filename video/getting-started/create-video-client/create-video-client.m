@@ -1,1 +1,1 @@
-TVIVideoClient *client = [TVIVideoClient clientWithToken:accessToken];
+TVIVideoClient *videoClient = [TVIVideoClient clientWithToken:accessToken];

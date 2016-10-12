@@ -2,14 +2,14 @@ let connectOptions = TVIConnectOptions { (builder) in
     builder.name = "my-room"
     builder.localMedia = self.localMedia
 }
-room = client.connect(with: connectOptions, delegate: self)
+room = videoClient.connect(with: connectOptions, delegate: self)
 
 // MARK: TVIRoomDelegate
 
 func didConnect(to room: TVIRoom) {    
     // The Local Participant
     let localParticipant = room.localParticipant;
-    print("Local identity \(localParticipant.identity)")
+    print("Local identity \(localParticipant!.identity)")
     
     // Connected participants
     let participants = room.participants;
