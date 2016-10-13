@@ -6,5 +6,5 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-sms = client.sms.messages.get("SM800f449d0399ed014aae2bcc0cc2f2ec")
+sms = client.messages.get("SM800f449d0399ed014aae2bcc0cc2f2ec")
 print(sms.body)

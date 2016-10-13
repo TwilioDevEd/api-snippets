@@ -7,4 +7,4 @@ auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 # A list of sms objects with the properties described above
-smss = client.sms.messages.list()
+smss = client.messages.list()

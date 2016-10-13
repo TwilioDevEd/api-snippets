@@ -9,6 +9,6 @@ auth_token = 'your_auth_token'
 
 
 # Loop over smss and print out a property for each one
-@client.account.sms.messages.list.each do |sms|
+@client.account.messages.list.each do |sms|
     puts sms.to
 end
