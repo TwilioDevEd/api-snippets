@@ -10,6 +10,8 @@ module Model
       LanguageHandler::Ruby4::LANG_CNAME,
       LanguageHandler::Ruby5::LANG_CNAME,
       LanguageHandler::Node::LANG_CNAME,
+      LanguageHandler::Node2::LANG_CNAME,
+      LanguageHandler::Node3::LANG_CNAME,
       LanguageHandler::Php::LANG_CNAME,
       LanguageHandler::Php4::LANG_CNAME,
       LanguageHandler::Php5::LANG_CNAME,
