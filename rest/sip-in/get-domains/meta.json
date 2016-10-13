@@ -1,4 +1,4 @@
 {
-  "title": "get-domains",
+  "title": "Retrieve all SIP Domains",
   "type": "server"
 }
