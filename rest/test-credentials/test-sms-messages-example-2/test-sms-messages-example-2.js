@@ -4,7 +4,7 @@ var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = "your_auth_token";
 var client = require('twilio')(accountSid, authToken);
 
-client.sms.messages.create({
+client.messages.create({
     body: "Hey Mr Nugget, you the bomb!",
     to: "+15005550009",
     from: "+15005550006"
