@@ -8,12 +8,14 @@ module Model
     PHP_NAME        = 'php'.freeze
     PYTHON_NAME     = 'python'.freeze
     RUBY_NAME       = 'ruby'.freeze
+    NODE_NAME       = 'node'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
       PHP_NAME    => ['4.10', '5.4.1-alpha1'],
       PYTHON_NAME => ['5.6.0', '6.0.0rc12'],
-      RUBY_NAME   => ['4.13.0', '5.0.0.rc17']
+      RUBY_NAME   => ['4.13.0', '5.0.0.rc17'],
+      NODE_NAME   => ['2.11.0', '3.0.0-rc.13']
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -29,10 +31,6 @@ module Model
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
-
-    NODE_DEPENDENCIES = [
-      { name: 'twilio', version: '2.9.1' }
-    ].freeze
 
     def self.install_dependencies
       new.install_dependencies
@@ -106,11 +104,25 @@ module Model
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1]
     end
 
+    def self.node_2_path
+      node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][0]
+      "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
+    end
+
+    def self.node_3_path
+      node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][1]
+      "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
+    end
+
     private
 
     def install_node_dependencies
-      NODE_DEPENDENCIES.each do |dependency|
-        system("sudo npm install -g #{dependency[:name]}@#{dependency[:version]}")
+      AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
+        install_language_version(NODE_NAME, version) do
+          unless Dir.exist?('node_modules')
+            system("npm install twilio@#{version}")
+          end
+        end
       end
     end
 

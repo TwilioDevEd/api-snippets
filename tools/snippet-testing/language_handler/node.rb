@@ -7,7 +7,10 @@ module LanguageHandler
     private
 
     def execute(file)
-      execute_with_suppressed_output("node #{file}", file)
+      execute_with_suppressed_output(
+        "NODE_PATH=#{dependencies_directory} node #{file}",
+        file
+      )
     end
   end
 end

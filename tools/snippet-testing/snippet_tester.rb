@@ -137,6 +137,18 @@ class SnippetTester
       Model::Dependency.ruby_5_gemset
     )
 
+    node_language_handler = LanguageHandler::Node.new(
+      Model::Dependency.node_2_path
+    )
+
+    node_2_language_handler = LanguageHandler::Node2.new(
+      Model::Dependency.node_2_path
+    )
+
+    node_3_language_handler = LanguageHandler::Node3.new(
+      Model::Dependency.node_3_path
+    )
+
     {
       LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
       LanguageHandler::Java6::LANG_CNAME    => LanguageHandler::Java6.new,
@@ -144,7 +156,9 @@ class SnippetTester
       LanguageHandler::Ruby::LANG_CNAME     => ruby_language_handler,
       LanguageHandler::Ruby4::LANG_CNAME    => ruby_4_language_handler,
       LanguageHandler::Ruby5::LANG_CNAME    => ruby_5_language_handler,
-      LanguageHandler::Node::LANG_CNAME     => LanguageHandler::Node.new,
+      LanguageHandler::Node::LANG_CNAME     => node_language_handler,
+      LanguageHandler::Node2::LANG_CNAME    => node_2_language_handler,
+      LanguageHandler::Node3::LANG_CNAME    => node_3_language_handler,
       LanguageHandler::Php::LANG_CNAME      => php_language_handler,
       LanguageHandler::Php4::LANG_CNAME     => php_4_language_handler,
       LanguageHandler::Php5::LANG_CNAME     => php_5_language_handler,
