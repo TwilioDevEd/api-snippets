@@ -24,7 +24,7 @@ app.get('/token', function(request, response) {
     //assign the generated identity to the token
     token.identity = identity;
         
-    //grant the access token Twilio Video capabilities
+    //grant access to Video
     var grant = new VideoGrant();
     grant.configurationProfileSid = process.env.TWILIO_CONFIGURATION_SID;
     token.addGrant(grant);
