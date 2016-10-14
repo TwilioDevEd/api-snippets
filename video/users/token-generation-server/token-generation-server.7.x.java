@@ -30,8 +30,8 @@ public class Webapp {
           faker.name().firstName() + faker.name().lastName() + faker.address().zipCode();
 
       // Create Conversations messaging grant
-      ConversationsGrant grant =
-          new ConversationsGrant().setConfigurationProfileSid(TWILIO_CONFIGURATION_SID);
+      VideoGrant grant =
+          new VideoGrant().setConfigurationProfileSid(TWILIO_CONFIGURATION_SID);
 
       // Create access token
       AccessToken token = new AccessToken.Builder(ACCOUNT_SID, API_KEY, API_SECRET)
