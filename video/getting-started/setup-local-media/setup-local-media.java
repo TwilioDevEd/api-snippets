@@ -12,13 +12,6 @@ CameraCapturer cameraCapturer = new CameraCapturer(context,
 // Add a video track
 LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(enable, cameraCapturer);
 
-// Rendering a local video track requires an implementation of VideoRenderer
-// Let's assume we have added a VideoView in our view hierarchy
-VideoView videoView = (VideoView) findViewById(R.id.video_view);
-
-// Render a local video track to preview your camera
-localVideoTrack.addRenderer(videoView);
-
 // Remove audio track
 localMedia.removeAudioTrack(localAudioTrack);
 

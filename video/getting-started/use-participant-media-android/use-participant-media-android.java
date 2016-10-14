@@ -45,7 +45,8 @@ Media.Listener mediaListener = new Media.Listener() {
 Media media = participant.getMedia();
 media.setListener(mediaListener);
 
-// Like a LocalVideoTrack, a VideoTrack can be rendered with a VideoRenderer 
+// Rendering a video track requires an implementation of VideoRenderer
+// Let's assume we have added a VideoView in our view hierarchy
 VideoView videoView = (VideoView) findViewById(R.id.video_view);
 
 // Render the first video track
