@@ -88,64 +88,44 @@ class SnippetTester
   end
 
   def get_language_handlers
-    php_language_handler = LanguageHandler::Php.new(
+    php4_language_handler = LanguageHandler::Php4.new(
       Model::Dependency.php_4_path
     )
-    php_4_language_handler = LanguageHandler::Php4.new(
-      Model::Dependency.php_4_path
-    )
-    php_5_language_handler = LanguageHandler::Php5.new(
+    php5_language_handler = LanguageHandler::Php5.new(
       Model::Dependency.php_5_path
     )
 
-    csharp_language_handler = LanguageHandler::Csharp.new(
+    csharp4_language_handler = LanguageHandler::Csharp4.new(
       Model::Dependency.csharp_4_path,
       Model::Dependency.csharp_4_dependencies
     )
 
-    csharp_4_language_handler = LanguageHandler::Csharp4.new(
-      Model::Dependency.csharp_4_path,
-      Model::Dependency.csharp_4_dependencies
-    )
-
-    csharp_5_language_handler = LanguageHandler::Csharp5.new(
+    csharp5_language_handler = LanguageHandler::Csharp5.new(
       Model::Dependency.csharp_5_path,
       Model::Dependency.csharp_5_dependencies
     )
 
-    python_language_handler = LanguageHandler::Python.new(
+    python5_language_handler = LanguageHandler::Python5.new(
       Model::Dependency.python_5_venv
     )
 
-    python_5_language_handler = LanguageHandler::Python5.new(
-      Model::Dependency.python_5_venv
-    )
-
-    python_6_language_handler = LanguageHandler::Python6.new(
+    python6_language_handler = LanguageHandler::Python6.new(
       Model::Dependency.python_6_venv
     )
 
-    ruby_language_handler = LanguageHandler::Ruby.new(
+    ruby4_language_handler = LanguageHandler::Ruby4.new(
       Model::Dependency.ruby_4_gemset
     )
 
-    ruby_4_language_handler = LanguageHandler::Ruby4.new(
-      Model::Dependency.ruby_4_gemset
-    )
-
-    ruby_5_language_handler = LanguageHandler::Ruby5.new(
+    ruby5_language_handler = LanguageHandler::Ruby5.new(
       Model::Dependency.ruby_5_gemset
     )
 
-    node_language_handler = LanguageHandler::Node.new(
+    node2_language_handler = LanguageHandler::Node2.new(
       Model::Dependency.node_2_path
     )
 
-    node_2_language_handler = LanguageHandler::Node2.new(
-      Model::Dependency.node_2_path
-    )
-
-    node_3_language_handler = LanguageHandler::Node3.new(
+    node3_language_handler = LanguageHandler::Node3.new(
       Model::Dependency.node_3_path
     )
 
@@ -153,24 +133,24 @@ class SnippetTester
       LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
       LanguageHandler::Java6::LANG_CNAME    => LanguageHandler::Java6.new,
       LanguageHandler::Java7::LANG_CNAME    => LanguageHandler::Java7.new,
-      LanguageHandler::Ruby::LANG_CNAME     => ruby_language_handler,
-      LanguageHandler::Ruby4::LANG_CNAME    => ruby_4_language_handler,
-      LanguageHandler::Ruby5::LANG_CNAME    => ruby_5_language_handler,
-      LanguageHandler::Node::LANG_CNAME     => node_language_handler,
-      LanguageHandler::Node2::LANG_CNAME    => node_2_language_handler,
-      LanguageHandler::Node3::LANG_CNAME    => node_3_language_handler,
-      LanguageHandler::Php::LANG_CNAME      => php_language_handler,
-      LanguageHandler::Php4::LANG_CNAME     => php_4_language_handler,
-      LanguageHandler::Php5::LANG_CNAME     => php_5_language_handler,
-      LanguageHandler::Python::LANG_CNAME   => python_language_handler,
-      LanguageHandler::Python5::LANG_CNAME  => python_5_language_handler,
-      LanguageHandler::Python6::LANG_CNAME  => python_6_language_handler,
+      LanguageHandler::Ruby::LANG_CNAME     => LanguageHandler::Ruby.new,
+      LanguageHandler::Ruby4::LANG_CNAME    => ruby4_language_handler,
+      LanguageHandler::Ruby5::LANG_CNAME    => ruby5_language_handler,
+      LanguageHandler::Node::LANG_CNAME     => LanguageHandler::Node.new,
+      LanguageHandler::Node2::LANG_CNAME    => node2_language_handler,
+      LanguageHandler::Node3::LANG_CNAME    => node3_language_handler,
+      LanguageHandler::Php::LANG_CNAME      => LanguageHandler::Php.new,
+      LanguageHandler::Php4::LANG_CNAME     => php4_language_handler,
+      LanguageHandler::Php5::LANG_CNAME     => php5_language_handler,
+      LanguageHandler::Python::LANG_CNAME   => LanguageHandler::Python.new,
+      LanguageHandler::Python5::LANG_CNAME  => python5_language_handler,
+      LanguageHandler::Python6::LANG_CNAME  => python6_language_handler,
       LanguageHandler::Curl::LANG_CNAME     => LanguageHandler::Curl.new,
       LanguageHandler::CurlXml::LANG_CNAME  => LanguageHandler::CurlXml.new,
       LanguageHandler::CurlJson::LANG_CNAME => LanguageHandler::CurlJson.new,
-      LanguageHandler::Csharp::LANG_CNAME   => csharp_language_handler,
-      LanguageHandler::Csharp4::LANG_CNAME  => csharp_4_language_handler,
-      LanguageHandler::Csharp5::LANG_CNAME  => csharp_5_language_handler
+      LanguageHandler::Csharp::LANG_CNAME   => LanguageHandler::Csharp.new,
+      LanguageHandler::Csharp4::LANG_CNAME  => csharp4_language_handler,
+      LanguageHandler::Csharp5::LANG_CNAME  => csharp5_language_handler
     }
   end
 

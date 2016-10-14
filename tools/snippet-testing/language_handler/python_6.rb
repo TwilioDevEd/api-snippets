@@ -6,6 +6,10 @@ module LanguageHandler
 
     private
 
+    def execute(file)
+      execute_command(file)
+    end
+
     def text_with_custom_header(file_content)
       cert_path = ENV['FAKE_CERT_PATH']
       file_content.prepend(
