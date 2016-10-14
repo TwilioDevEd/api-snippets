@@ -4,7 +4,7 @@ module LanguageHandler
   class Php < BaseHandler
     LANG_CNAME = 'php'.freeze
 
-    def initialize(dependencies_directory)
+    def initialize(dependencies_directory = nil)
       super(dependencies_directory)
       @autoload_path = "#{dependencies_directory}/vendor/autoload.php"
     end
@@ -13,7 +13,7 @@ module LanguageHandler
 
     attr_reader :autoload_path
 
-    def execute(file)
+    def execute_command(file)
       execute_with_suppressed_output("php #{file}", file)
     end
 
