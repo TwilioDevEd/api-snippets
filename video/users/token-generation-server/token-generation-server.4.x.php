@@ -16,7 +16,7 @@ $token = new Services_Twilio_AccessToken(
 );
 
 // Grant access to Conversations
-$grant = new Services_Twilio_Auth_ConversationsGrant();
+$grant = new Services_Twilio_Auth_VideoGrant();
 $grant->setConfigurationProfileSid($TWILIO_CONFIGURATION_SID);
 $token->addGrant($grant);
 
