@@ -21,8 +21,8 @@ get '/token' do
   token = Twilio::Util::AccessToken.new ENV['TWILIO_ACCOUNT_SID'],
     ENV['TWILIO_API_KEY'], ENV['TWILIO_API_SECRET'], 3600, identity
 
-  # Grant access to Conversations
-  grant = Twilio::Util::AccessToken::ConversationsGrant.new
+  # Grant access to Video
+  grant = Twilio::Util::AccessToken::VideoGrant.new
   grant.configuration_profile_sid = ENV['TWILIO_CONFIGURATION_SID']
   token.add_grant grant
 
