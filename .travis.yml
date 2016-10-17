@@ -10,7 +10,7 @@ before_install:
 - sudo apt-get install -y nodejs
 - sudo npm install -g n
 - sudo n lts
-- . $HOME/.nvm/nvm.sh
+- ". $HOME/.nvm/nvm.sh"
 - nvm install stable
 - nvm use stable
 - sudo apt-get install curl php5-cli git php5-curl
@@ -44,7 +44,13 @@ env:
   - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
 addons:
   hosts:
-    - api.twilio.com
-    - taskrouter.twilio.com
-    - pricing.twilio.com
-    - lookups.twilio.com
+  - api.twilio.com
+  - taskrouter.twilio.com
+  - pricing.twilio.com
+  - lookups.twilio.com
+notifications:
+  slack:
+    rooms:
+      secure: Lbt/FIOBmBxqSH4aj4cctd+ygAWWN+IoEGRC1f7Wn1mgciSAWCGs6krUAqsxDCO+mU0bV0EdO2SNaB5vlmMCBA0tti6KYzR4M4OgkM/KwIUk1MBJcaD2gpMMbMK66xG74b5arPuO7GIWMjHgScKo04LGGeYOcw7RJZwB6CY+3eyFo4HLVkuWizNC2Qw2yq/2F///QywljWMbvJy1dUs0Ax3KG6NW8aRhj98TN/vnVAwC7BKCWYD0QQY+8qKf4Cbmt6W4riNufqm8ZQdLdgbRnLdKKxHUCEkARPzLvJhLrR4fB70hXI8iWcms0CcLPf2kjG8+iJso9MCai1SGdi4+duAoBUxHzCQTK2Q+8t7LKrfaOm9j0p46tk9VcI9GLUzVgE5XZpqssv+dqvf1tB/d+XTZu2M4I1fmZm0O7uo3XSWO25Vob6sqHKoRe1E0Ums4yCv5ZiMWuzvFan4CPIoC2Gxn1ZFWPU+//SDHolKIAG5j6bx9v+66UOv7EkBQVlW9CbZmK+12mRL0+gNxfWmFW23tgJhnuEYmJHqEGi3GWjzBY8YTQ5eiUJQXxV/NZknwAB4d/cHDEvbBlVrURqXG/E60ecKNw6QqTO8HMZXP8ROBPzKPSnwsY6TDPf1rrH3D9N4o9JyEhquuWG4NSovOcrzopgoNyfaEWbj0cLwxxs8=
+    on_failure: always
+    on_success: change
