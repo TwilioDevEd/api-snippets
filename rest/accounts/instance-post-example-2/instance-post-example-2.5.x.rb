@@ -11,6 +11,8 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @account = @client.api.v2010.accounts(account_sid).fetch
 
-@account.update({status: 'active'})
+# Update account status
+@account.update(status: 'active')
 
+# Print status for selected account
 puts @account.status

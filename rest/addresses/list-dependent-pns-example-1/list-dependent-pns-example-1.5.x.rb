@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Loop over addresses and print out a property for each one
+# Get address by sid
 @address = @client.account.addresses('AD2a0747eba6abf96b7e3c3ff0b4530f6e').fetch
 
 # Print friendly_name for each phone number
