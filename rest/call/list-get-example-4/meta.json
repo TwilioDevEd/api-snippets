@@ -1,5 +1,5 @@
 {
   "title": "Retrieve Completed Calls in Period Example",
   "type": "server",
-  "testable": false
+  "testable": true
 }
