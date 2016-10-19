@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TwilioResponse>
+<Message>
+  <Sid>MMc781610ec0b3400c9e0cab8e757da937</Sid>
+  <DateCreated>Mon, 19 Oct 2015 07:09:09 +0000</DateCreated>
+  <DateUpdated>Mon, 19 Oct 2015 07:09:09 +0000</DateUpdated>
+  <DateSent/>
+  <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+  <To>+15558675309</To>
+  <From>+15017250604</From>
+  <Body>This is the ship that made the Kessel Run in fourteen parsecs?</Body>
+  <Status>queued</Status>
+  <NumSegments>1</NumSegments>
+  <NumMedia>0</NumMedia>
+  <Direction>outbound-api</Direction>
+  <ApiVersion>2010-04-01</ApiVersion>
+  <Price/>
+  <PriceUnit>USD</PriceUnit>
+  <ErrorCode/>
+  <ErrorMessage/>
+  <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MMf1150fe5baf04104a39c3f311a053e4e.xml</Uri>
+  <SubresourceUris/>
+</Message>
+</TwilioResponse>
