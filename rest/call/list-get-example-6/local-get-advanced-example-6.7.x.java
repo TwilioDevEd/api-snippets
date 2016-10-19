@@ -14,9 +14,9 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = new LocalReader("US").setAreaCode(619).setContains("555").execute();
+    ResourceSet<Local> numbers = new LocalReader("US").setAreaCode(619).setContains("555").read();
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    new LocalCreator(availableNumber).execute();
+    new LocalCreator(availableNumber).create();
   }
 }
