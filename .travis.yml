@@ -48,9 +48,9 @@ env:
   - SNIPPET_LANGUAGE=python
   - SNIPPET_LANGUAGE=ruby
   - SNIPPET_LANGUAGE=node
-  - SNIPPET_LANGUAGE=curl
   - SNIPPET_LANGUAGE=csharp
   - SNIPPET_LANGUAGE=php
+  - SNIPPET_LANGUAGE=curl
 addons:
   hosts:
   - api.twilio.com
