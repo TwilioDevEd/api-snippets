@@ -42,15 +42,21 @@ module Model
         php:    lambda { install_php_dependencies },
         ruby:   lambda { install_ruby_dependencies },
         node:   lambda { install_node_dependencies },
-        python: lambda { install_python_dependencies }
+        python: lambda { install_python_dependencies },
+        java:   lambda { puts 'nothing else to install' },
+        curl:   lambda { puts 'nothing else to install' }
       }
 
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
-        snippet_language_key = ENV['SNIPPET_LANGUAGE'].to_s.to_sym
-        if dependencies.key?(snippet_language_key)
-          dependencies[snippet_language_key].call
+        snippet_language_key = ENV['SNIPPET_LANGUAGE']
+        if (!snippet_language_key.nil?)
+          dependencies.fetch(snippet_language_key.to_sym).call
+        else
+          dependencies.each do |dependency|
+            dependency.call
+          end
         end
       end
     end
