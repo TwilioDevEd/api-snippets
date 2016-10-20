@@ -12,7 +12,7 @@ reservation_sid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Twilio::REST::Client.new account_sid, auth_token
 
 reservation = client.taskrouter.v1.workspaces(workspace_sid).tasks(task_sid).reservations(reservation_sid)
-reservation.update(instruction: 'Redirect',
+reservation = reservation.update(instruction: 'Redirect',
                    redirect_call_sid: 'CA123456789',
                    redirect_url: 'http://example.com/assignment_redirect')
 
