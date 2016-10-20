@@ -43,13 +43,13 @@ env:
   - BASH=/bin/bash
   - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
   matrix:
-  - SNIPPET_LANGUAGE=php
   - SNIPPET_LANGUAGE=java
+  - SNIPPET_LANGUAGE=python
   - SNIPPET_LANGUAGE=ruby
   - SNIPPET_LANGUAGE=node
-  - SNIPPET_LANGUAGE=csharp
-  - SNIPPET_LANGUAGE=python
   - SNIPPET_LANGUAGE=curl
+  - SNIPPET_LANGUAGE=csharp
+  - SNIPPET_LANGUAGE=php
 addons:
   hosts:
   - api.twilio.com
