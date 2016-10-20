@@ -37,14 +37,21 @@ module Model
     end
 
     def install_dependencies
+      dependencies = {
+        csharp: lambda { install_csharp_dependencies },
+        php:    lambda { install_php_dependencies },
+        ruby:   lambda { install_ruby_dependencies },
+        node:   lambda { install_node_dependencies },
+        python: lambda { install_python_dependencies }
+      }
+
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
-        install_csharp_dependencies
-        install_php_dependencies
-        install_ruby_dependencies
-        install_node_dependencies
-        install_python_dependencies
+        snippet_language_key = ENV['SNIPPET_LANGUAGE'].to_s.to_sym
+        if dependencies.key?(snippet_language_key)
+          dependencies[snippet_language_key].call
+        end
       end
     end
 
