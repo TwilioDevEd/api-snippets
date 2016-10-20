@@ -3,16 +3,17 @@ Dir["#{File.dirname(__FILE__)}/../language_handler/*.rb"].each { |file| require 
 module Model
   class Snippet
     LANGUAGES = {
-      'php': [ LanguageHandler::Php::LANG_CNAME, LanguageHandler::Php4::LANG_CNAME, LanguageHandler::Php5::LANG_CNAME ],
-      'java': [ LanguageHandler::Java::LANG_CNAME, LanguageHandler::Java6::LANG_CNAME, LanguageHandler::Java7::LANG_CNAME ],
-      'ruby': [ LanguageHandler::Ruby::LANG_CNAME, LanguageHandler::Ruby4::LANG_CNAME, LanguageHandler::Ruby5::LANG_CNAME ],
-      'node': [ LanguageHandler::Node::LANG_CNAME, LanguageHandler::Node2::LANG_CNAME, LanguageHandler::Node3::LANG_CNAME ],
-      'csharp': [ LanguageHandler::Csharp::LANG_CNAME, LanguageHandler::Csharp4::LANG_CNAME, LanguageHandler::Csharp5::LANG_CNAME ],
-      'python': [ LanguageHandler::Python::LANG_CNAME, LanguageHandler::Python5::LANG_CNAME, LanguageHandler::Python6::LANG_CNAME ],
-      'curl': [ LanguageHandler::Curl::LANG_CNAME, LanguageHandler::CurlXml::LANG_CNAME, LanguageHandler::CurlJson::LANG_CNAME ]
+      php:    [LanguageHandler::Php::LANG_CNAME, LanguageHandler::Php4::LANG_CNAME, LanguageHandler::Php5::LANG_CNAME],
+      java:   [LanguageHandler::Java::LANG_CNAME, LanguageHandler::Java6::LANG_CNAME, LanguageHandler::Java7::LANG_CNAME],
+      ruby:   [LanguageHandler::Ruby::LANG_CNAME, LanguageHandler::Ruby4::LANG_CNAME, LanguageHandler::Ruby5::LANG_CNAME],
+      node:   [LanguageHandler::Node::LANG_CNAME, LanguageHandler::Node2::LANG_CNAME, LanguageHandler::Node3::LANG_CNAME],
+      csharp: [LanguageHandler::Csharp::LANG_CNAME, LanguageHandler::Csharp4::LANG_CNAME, LanguageHandler::Csharp5::LANG_CNAME],
+      python: [LanguageHandler::Python::LANG_CNAME, LanguageHandler::Python5::LANG_CNAME, LanguageHandler::Python6::LANG_CNAME],
+      curl:   [LanguageHandler::Curl::LANG_CNAME, LanguageHandler::CurlXml::LANG_CNAME, LanguageHandler::CurlJson::LANG_CNAME]
     }
 
-    SERVER_LANGUAGES = (ENV['SNIPPET_LANGUAGE'] ? LANGUAGES[ENV['SNIPPET_LANGUAGE']]: LANGUAGES.values.flatten ).freeze
+    snippet_language = ENV['SNIPPET_LANGUAGE']
+    SERVER_LANGUAGES = (snippet_language ? LANGUAGES.fetch(snippet_language.to_sym) : LANGUAGES.values.flatten ).freeze
 
     attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs
 
