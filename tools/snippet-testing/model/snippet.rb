@@ -3,8 +3,9 @@ Dir["#{File.dirname(__FILE__)}/../language_handler/*.rb"].each { |file| require 
 module Model
   class Snippet
     LANGUAGES = {
+      java6:  [LanguageHandler::Java::LANG_CNAME, LanguageHandler::Java6::LANG_CNAME],
+      java7:  [LanguageHandler::Java::LANG_CNAME, LanguageHandler::Java7::LANG_CNAME],
       php:    [LanguageHandler::Php::LANG_CNAME, LanguageHandler::Php4::LANG_CNAME, LanguageHandler::Php5::LANG_CNAME],
-      java:   [LanguageHandler::Java::LANG_CNAME, LanguageHandler::Java6::LANG_CNAME, LanguageHandler::Java7::LANG_CNAME],
       ruby:   [LanguageHandler::Ruby::LANG_CNAME, LanguageHandler::Ruby4::LANG_CNAME, LanguageHandler::Ruby5::LANG_CNAME],
       node:   [LanguageHandler::Node::LANG_CNAME, LanguageHandler::Node2::LANG_CNAME, LanguageHandler::Node3::LANG_CNAME],
       csharp: [LanguageHandler::Csharp::LANG_CNAME, LanguageHandler::Csharp4::LANG_CNAME, LanguageHandler::Csharp5::LANG_CNAME],

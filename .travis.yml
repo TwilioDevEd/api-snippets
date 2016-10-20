@@ -43,7 +43,8 @@ env:
   - BASH=/bin/bash
   - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
   matrix:
-  - SNIPPET_LANGUAGE=java
+  - SNIPPET_LANGUAGE=java6
+  - SNIPPET_LANGUAGE=java7
   - SNIPPET_LANGUAGE=python
   - SNIPPET_LANGUAGE=ruby
   - SNIPPET_LANGUAGE=node

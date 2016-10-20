@@ -43,7 +43,8 @@ module Model
         ruby:   -> { install_ruby_dependencies },
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
-        java:   -> { puts 'nothing else to install' },
+        java6:   -> { puts 'nothing else to install' },
+        java7:   -> { puts 'nothing else to install' },
         curl:   -> { puts 'nothing else to install' }
       }
 
