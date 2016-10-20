@@ -25,10 +25,12 @@ before_install:
 install:
 - gem install json
 - gem install colorize
+- gem install rubocop
 - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
 - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
 script:
+- rubocop
 - cd twilio-api-faker
 - sudo gradle run </dev/null &>/dev/null &
 - cd ..
