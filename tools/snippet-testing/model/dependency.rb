@@ -38,25 +38,23 @@ module Model
 
     def install_dependencies
       dependencies = {
-        csharp: lambda { install_csharp_dependencies },
-        php:    lambda { install_php_dependencies },
-        ruby:   lambda { install_ruby_dependencies },
-        node:   lambda { install_node_dependencies },
-        python: lambda { install_python_dependencies },
-        java:   lambda { puts 'nothing else to install' },
-        curl:   lambda { puts 'nothing else to install' }
+        csharp: -> { install_csharp_dependencies },
+        php:    -> { install_php_dependencies },
+        ruby:   -> { install_ruby_dependencies },
+        node:   -> { install_node_dependencies },
+        python: -> { install_python_dependencies },
+        java:   -> { puts 'nothing else to install' },
+        curl:   -> { puts 'nothing else to install' }
       }
 
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
         snippet_language_key = ENV['SNIPPET_LANGUAGE']
-        if (!snippet_language_key.nil?)
+        unless snippet_language_key.nil?
           dependencies.fetch(snippet_language_key.to_sym).call
         else
-          dependencies.each do |dependency|
-            dependency.call
-          end
+          dependencies.each(&:call)
         end
       end
     end
