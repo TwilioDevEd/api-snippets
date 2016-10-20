@@ -35,13 +35,13 @@ script:
 - sleep 25
 - ruby tools/snippet-testing/snippet_tester.rb -i
 env:
-  - SNIPPET_LANGUAGE=php
-  - SNIPPET_LANGUAGE=java
-  - SNIPPET_LANGUAGE=ruby
-  - SNIPPET_LANGUAGE=node
-  - SNIPPET_LANGUAGE=csharp
-  - SNIPPET_LANGUAGE=python
-  - SNIPPET_LANGUAGE=curl
+- SNIPPET_LANGUAGE=php
+- SNIPPET_LANGUAGE=java
+- SNIPPET_LANGUAGE=ruby
+- SNIPPET_LANGUAGE=node
+- SNIPPET_LANGUAGE=csharp
+- SNIPPET_LANGUAGE=python
+- SNIPPET_LANGUAGE=curl
   global:
   - NODE_PATH=/usr/local/lib/node_modules
   - NODE_TLS_REJECT_UNAUTHORIZED=0
