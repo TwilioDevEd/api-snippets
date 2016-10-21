@@ -206,6 +206,7 @@ dependencies you need to install the following gems:
 ```bash
 $ gem install json
 $ gem install colorize
+$ gem install rubocop
 ```
 
 You can use the following command to install dependencies in your system:
@@ -227,6 +228,13 @@ be used within the dependency installation script so you might need to enter you
 password.
 **Do not** run the whole script with `sudo` as it would install dependencies for
 the wrong user.
+
+#### Linting
+
+  - Ruby
+  ```bash
+  $ rubocop
+  ```
 
 #### Run the Tests
 
