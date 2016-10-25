@@ -52,7 +52,7 @@ module Model
 
       Dir.chdir(DEP_DIR_NAME) do
         snippet_language_key = ENV['SNIPPET_LANGUAGE']
-        unless snippet_language_key.nil?
+        if !snippet_language_key.nil?
           dependencies.fetch(snippet_language_key.to_sym).call
         else
           dependencies.values.each(&:call)
