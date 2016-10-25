@@ -55,7 +55,7 @@ module Model
         unless snippet_language_key.nil?
           dependencies.fetch(snippet_language_key.to_sym).call
         else
-          dependencies.each(&:call)
+          dependencies.values.each(&:call)
         end
       end
     end
