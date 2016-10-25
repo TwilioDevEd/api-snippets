@@ -8,10 +8,13 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create a message and provide a message status callback
-@client.account.messages.create(
+# Send a message with a media url
+@message = @client.account.messages.create(
   from: '+15017250604',
   to: '+15558675309',
-  body: 'McAvoy or Stewart? These timelines can get so confusing.',
-  status_callback: 'http://requestb.in/1234abcd'
+  body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+  media_url: 'https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg'
 )
+
+# Print sub resource uris
+puts @message.subresource_uris

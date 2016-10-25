@@ -8,10 +8,12 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create a message and provide a message status callback
-@client.account.messages.create(
+# Send sms message
+@message = @client.account.messages.create(
   from: '+15017250604',
   to: '+15558675309',
-  body: 'McAvoy or Stewart? These timelines can get so confusing.',
-  status_callback: 'http://requestb.in/1234abcd'
+  body: 'This is the ship that made the Kessel Run in fourteen parsecs?'
 )
+
+# Print message status
+puts @message.status

@@ -132,7 +132,7 @@ module Model
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
         install_language_version(NODE_NAME, version) do
           unless Dir.exist?('node_modules')
-            system("npm install twilio@#{version}")
+            system("npm install twilio@#{version} express body-parser")
           end
         end
       end
@@ -142,7 +142,8 @@ module Model
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME].each do |version|
         system(
           "rvm gemset create #{version} &&"\
-          " rvm @#{version} do gem install twilio-ruby -v #{version}"
+          " rvm @#{version} do gem install twilio-ruby -v #{version} &&"\
+          " rvm @#{version} do gem install sinatra"
         )
       end
     end
