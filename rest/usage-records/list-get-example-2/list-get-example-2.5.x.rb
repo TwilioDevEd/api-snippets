@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over records and print out a property for each one
-@client.account.usage.records.today.list(
+@client.usage.records.today.list(
   :category => 'calls').each do |record|
     puts record.count
   end
