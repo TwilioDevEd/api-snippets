@@ -14,7 +14,7 @@ public class TwilioServlet extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Say message =
         new Say.Builder(
-          "Hello. It's me. I've been wondering if after this guide you'd like to meet.").build();
+          "Hello from your pals at Twilio! Have fun.").build();
     VoiceResponse twiml = new VoiceResponse.Builder().say(message).build();
 
     response.setContentType("application/xml");

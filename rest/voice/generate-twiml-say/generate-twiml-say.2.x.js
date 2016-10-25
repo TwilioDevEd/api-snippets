@@ -4,7 +4,7 @@ var http = require('http'),
 http.createServer(function (req, res) {
     //Create TwiML response
     var twiml = new twilio.TwimlResponse();
-    twiml.say("Hello. It's me. I've been wondering if after this guide you'd like to meet.");
+    twiml.say("Hello from your pals at Twilio! Have fun.");
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());

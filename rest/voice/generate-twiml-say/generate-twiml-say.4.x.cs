@@ -11,7 +11,7 @@ public class VoiceController : TwilioController
   public TwiMLResult Index(VoiceRequest request)
   {
     var response = new TwilioResponse();
-    response.Say("Hello. It's me. I've been wondering if after this guide you'd like to meet.");
+    response.Say("Hello from your pals at Twilio! Have fun.");
     return TwiML(response);
   }
 }

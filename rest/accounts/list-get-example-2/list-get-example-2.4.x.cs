@@ -7,7 +7,7 @@ class Example
 {
   static void Main(string[] args)
   {
-    // Find your Account Sid and Auth Token at twilio.com/user/account
+    // Find your Account Sid and Auth Token at twilio.com/console
     string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);

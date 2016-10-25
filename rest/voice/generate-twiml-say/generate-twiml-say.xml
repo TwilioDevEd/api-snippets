@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say>Hello. It's me.</Say>
+    <Say>Hello from your pals at Twilio! Have fun.</Say>
 </Response>

@@ -8,7 +8,7 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
 
     resp = twilio.twiml.Response()
-    resp.say("Hello. It's me. I've been wondering if after this guide you'd like to meet.")
+    resp.say("Hello from your pals at Twilio! Have fun.")
     return str(resp)
 
 if __name__ == "__main__":

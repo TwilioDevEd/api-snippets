@@ -1,4 +1,4 @@
 {
-  "title": "Send an SMS using Programmable SMS API",
-  "type": "server"
+  "type": "server",
+  "title": "Send an SMS using the Programmable SMS API"
 }
