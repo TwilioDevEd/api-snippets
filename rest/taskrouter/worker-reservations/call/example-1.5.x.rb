@@ -18,5 +18,4 @@ reservation.update(instruction: 'call',
                    call_status_callback_url: 'http://example.com/agent_answer_status_callback',
                    call_accept: 'true')
 
-puts reservation.reservation_status
-puts reservation.worker_name
+puts reservation
