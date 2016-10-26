@@ -1,8 +1,5 @@
 // Create a Video Client and connect to Twilio's backend.
-AccessManager accessManager = new AccessManager(VideoActivity.this,
-                token,
-                accessManagerListener());
-VideoClient videoClient = new VideoClient(VideoActivity.this, accessManager);
+VideoClient videoClient = new VideoClient(VideoActivity.this, token);
 
 // Connect to a room
 ConnectOptions connectOptions = new ConnectOptions.Builder()
