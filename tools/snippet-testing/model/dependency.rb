@@ -142,8 +142,7 @@ module Model
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME].each do |version|
         system(
           "rvm gemset create #{version} &&"\
-          " rvm @#{version} do gem install twilio-ruby -v #{version} &&"\
-          " rvm @#{version} do gem install sinatra"
+          " rvm @#{version} do gem install twilio-ruby -v #{version}"
         )
       end
     end
