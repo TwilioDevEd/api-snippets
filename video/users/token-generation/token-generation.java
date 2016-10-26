@@ -19,15 +19,8 @@ import com.koushikdutta.ion.Ion;
                             String identity = result.get("identity").getAsString();
                             String accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
-                            accessManager =
-                                    new AccessManager(ConversationActivity.this,
-                                                    accessToken,
-                                                    accessManagerListener());
-                            conversationsClient =
-                                    TwilioConversationsClient
-                                            .create(accessManager,
-                                                    conversationsClientListener());
 
+                            videoClient = new VideoClient(VideoActivity.this, accessToken);
                             // Listen for incoming Invites
                             conversationsClient.listen();
                         } else {
