@@ -23,7 +23,7 @@ import com.koushikdutta.ion.Ion;
                             videoClient = new VideoClient(VideoActivity.this, accessToken);
                         } else {
                             Log.i(TAG, "error fetching token from server");
-                            Toast.makeText(ConversationActivity.this,
+                            Toast.makeText(VideoActivity.this,
                                     R.string.error_retrieving_access_token, Toast.LENGTH_SHORT)
                                     .show();
                         }
