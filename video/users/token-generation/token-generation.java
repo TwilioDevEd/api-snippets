@@ -21,8 +21,6 @@ import com.koushikdutta.ion.Ion;
                             Log.i(TAG, "Token found: " + accessToken);
 
                             videoClient = new VideoClient(VideoActivity.this, accessToken);
-                            // Listen for incoming Invites
-                            conversationsClient.listen();
                         } else {
                             Log.i(TAG, "error fetching token from server");
                             Toast.makeText(ConversationActivity.this,
