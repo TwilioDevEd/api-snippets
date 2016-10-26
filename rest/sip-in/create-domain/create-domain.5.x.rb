@@ -8,11 +8,13 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@ip_acl_sid = 'AL32a3c49700934481addd5ce1659f04d2'
+# Create a new sip domain
+domain = @client.account.sip.domains.create(
+  friendly_name: 'My Domain',
+  voice_url: 'https://demo.twilio.com/welcome',
+  auth_type: 'IP_ACL',
+  domain_name: 'marlo.sip.twilio.com'
+)
 
-# Get ip acl list with given sid
-@ip_access_control_list = @client.account.sip
-                                 .ip_access_control_lists(@ip_acl_sid)
-
-# Delete ip acl list
-@ip_access_control_list.delete
+# Print new domain name
+puts domain.domain_name

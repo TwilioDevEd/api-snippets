@@ -8,11 +8,10 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@ip_acl_sid = 'AL32a3c49700934481addd5ce1659f04d2'
+# Create a new credential list with the given friendly name
+credential_list = @client.account.sip.credential_lists.create(
+  friendly_name: 'Low Rises'
+)
 
-# Get ip acl list with given sid
-@ip_access_control_list = @client.account.sip
-                                 .ip_access_control_lists(@ip_acl_sid)
-
-# Delete ip acl list
-@ip_access_control_list.delete
+# Print the sid for new list
+puts credential_list.sid

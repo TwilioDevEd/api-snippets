@@ -8,11 +8,14 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@ip_acl_sid = 'AL32a3c49700934481addd5ce1659f04d2'
+# Create all call
+call = @client.account.calls.create(
+  url: 'http://www.example.com/sipdial.xml',
+  to: 'sip:kate@example.com',
+  from: 'Jack',
+  sip_auth_password: 'secret',
+  sip_auth_username: 'jack'
+)
 
-# Get ip acl list with given sid
-@ip_access_control_list = @client.account.sip
-                                 .ip_access_control_lists(@ip_acl_sid)
-
-# Delete ip acl list
-@ip_access_control_list.delete
+# Print the `to` field
+puts call.to
