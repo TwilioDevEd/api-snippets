@@ -6,10 +6,10 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-activity = client.taskrouter.v1.workspaces(workspace_sid).activities
-           .create(friendly_name: 'NewAvailableActivity', available: 'true')
+activity = client.taskrouter.v1.workspaces(workspace_sid)
+  .activities
+  .create(friendly_name: 'NewAvailableActivity', available: 'true')
 
 puts activity.friendly_name
