@@ -14,8 +14,6 @@ auth_token = 'your_auth_token'
                   .accounts(account_sid)
                   .fetch
 
-# Update account status
 @account.update(status: 'suspended')
 
-# print date_created for selected account
 puts @account.date_created

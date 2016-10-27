@@ -12,5 +12,4 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @account = @client.api.v2010.accounts(account_sid).fetch
 
-# Print date_created for selected account
 puts @account.date_created

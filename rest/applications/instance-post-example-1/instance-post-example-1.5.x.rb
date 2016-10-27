@@ -15,8 +15,6 @@ auth_token = 'your_auth_token'
 voice_url = 'http://demo.twilio.com/docs/voice.xml'
 sms_url = 'http://demo.twilio.com/docs/sms.xml'
 
-# Update voice_url as well as sms_url
 @app.update(voice_url: voice_url, sms_url: sms_url)
 
-# Print voice_url to verify the change
 puts @app.voice_url

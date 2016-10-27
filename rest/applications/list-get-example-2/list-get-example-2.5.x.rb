@@ -8,7 +8,6 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get all apps from server filtered by friendly_name
 apps = @client.account.applications.list(friendly_name: 'MyApp')
 
 # Loop over apps and print out the voice_url property for each one

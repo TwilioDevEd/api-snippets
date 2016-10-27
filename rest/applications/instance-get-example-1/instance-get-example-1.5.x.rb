@@ -12,5 +12,4 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @app = @client.account.applications('AP2a0747eba6abf96b7e3c3ff0b4530f6e').fetch
 
-# Print sms_url for the selected app
 puts @app.sms_url

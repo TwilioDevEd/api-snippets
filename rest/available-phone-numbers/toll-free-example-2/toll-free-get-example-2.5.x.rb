@@ -8,15 +8,9 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
+@numbers = @client.account.available_phone_numbers('US').toll_free
+                  .list(contains: 'STORM')
 
-# Get all available toll free phone numbers which contain the string `STORM`
-@numbers = @accounts.available_phone_numbers('US').toll_free
-                    .list(contains: 'STORM')
-
-# Get the first number
 @number = @numbers[0].phone_number
 
-# Purchase the number
-@accounts.incoming_phone_numbers.create(phone_number: @number)
+@client.account.incoming_phone_numbers.create(phone_number: @number)
