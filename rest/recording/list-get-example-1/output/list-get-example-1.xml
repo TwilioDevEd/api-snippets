@@ -1,13 +1,18 @@
 <TwilioResponse>
-	<Recordings page="0" pagesize="50" uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings" firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings?Page=0&amp;PageSize=50" previouspageuri="" nextpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings?Page=1&amp;PageSize=50">
+	<Recordings page="0" pagesize="50" uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings?Page=0&amp;PageSize=50" firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings?Page=0&amp;PageSize=50" previouspageuri="" nextpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings?Page=1&amp;PageSize=50">
 		<Recording>
 			<Sid>RE557ce644e5ab84fa21cc21112e22c485</Sid>
 			<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 			<CallSid>CA8dfedb55c129dd4d6bd1f59af9d11080</CallSid>
-			<Duration>1</Duration>
-			<DateCreated>Fri, 17 Jul 2009 01:52:49 +0000</DateCreated>
-			<ApiVersion>2008-08-01</ApiVersion>
-			<DateUpdated>Fri, 17 Jul 2009 01:52:49 +0000</DateUpdated>
+			<Duration>53</Duration>
+      <DateCreated>Tue, 18 Oct 2016 21:55:38 +0000</DateCreated>
+      <ApiVersion>2010-04-01</ApiVersion>
+      <DateUpdated>Tue, 18 Oct 2016 21:56:34 +0000</DateUpdated>
+      <Status>completed</Status>
+		  <Source>DialVerb</Source>
+      <Channels>1</Channels>
+      <Price>-0.00250</Price>
+      <PriceUnit>USD</PriceUnit>
 			<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab84fa21cc21112e22c485</Uri>
 		</Recording>
 		...
