@@ -14,7 +14,7 @@ before_install:
   - sudo add-apt-repository ppa:cwchien/gradle -y
   - sudo apt-get update
   - sudo apt-get install -y --force-yes nodejs python-dev python-pip build-essential gradle ca-certificates curl php5-cli git php5-curl
-  - sudo pip install --upgrade pip setuptools wheel --quiet
+  - sudo pip install --upgrade --quiet pip wheel
   - sudo npm install -g n
   - sudo n lts
   - ". $HOME/.nvm/nvm.sh"
