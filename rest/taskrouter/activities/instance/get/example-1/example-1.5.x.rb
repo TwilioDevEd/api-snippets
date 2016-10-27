@@ -1,5 +1,4 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
@@ -8,7 +7,10 @@ auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 activity_sid = 'WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::Client.new account_sid, auth_token
 
-activity = client.taskrouter.v1.workspaces(workspace_sid).activities(activity_sid).fetch()
+client = Twilio::REST::Client.new(account_sid, auth_token)
+
+activity = client.taskrouter.v1.workspaces(workspace_sid)
+           .activities(activity_sid).fetch
+
 puts activity.friendly_name
