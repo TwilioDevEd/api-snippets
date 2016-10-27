@@ -1,7 +1,7 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
 require 'twilio-ruby'
 
-# Get your Account Sid and Auth Token from twilio.com/user/account
+# Get your Account Sid and Auth Token from https://www.twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 api_key = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 api_secret = 'your_api_secret'
