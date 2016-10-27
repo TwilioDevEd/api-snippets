@@ -9,7 +9,9 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Get sip domain with given sid
-@domain = @client.account.sip.domains.get('SD32a3c49700934481addd5ce1659f04d2')
+@domain = @client.account.sip
+                 .domains('SD32a3c49700934481addd5ce1659f04d2')
+                 .fetch
 
 # Delete sip domain
 @domain.delete
