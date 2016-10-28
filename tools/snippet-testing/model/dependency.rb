@@ -143,7 +143,7 @@ module Model
         system(
           "rvm gemset create #{version} &&"\
           " rvm @#{version} do gem install twilio-ruby -v #{version} &&"\
-          " rvm @#{version} do gem install sinatra"
+          " rvm @#{version} do gem install sinatra --no-ri --no-rdoc"
         )
       end
     end
