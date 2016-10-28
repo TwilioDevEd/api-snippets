@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 
 # A list of recording objects with the properties described above
 recordings = client.recordings \
-                   .list(date_created=date(2009, 7, 6))
+                   .list(date_created=date(2016, 10, 18))
 
 for recording in recordings:
     print(recording.call_sid)

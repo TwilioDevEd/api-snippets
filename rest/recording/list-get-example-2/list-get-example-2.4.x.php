@@ -9,7 +9,7 @@ $client = new Services_Twilio($sid, $token);
 
 // Loop over the list of recordings and echo a property for each one
 foreach ($client->account->recordings->getIterator(0, 50, array(
-        "DateCreated" => "2009-07-06"
+        "DateCreated" => "2016-10-18"
     )) as $recording
 ) {
     echo $recording->call_sid;

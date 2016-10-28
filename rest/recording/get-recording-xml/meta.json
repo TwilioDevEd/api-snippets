@@ -1,4 +1,4 @@
 {
-  "title": "Get Recordings in XML Format",
-  "type": "output"
+  "title": "Get Recording in XML Format",
+  "type": "server"
 }

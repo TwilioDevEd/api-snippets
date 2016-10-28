@@ -7,4 +7,4 @@ auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 # A list of recording objects with the properties described above
-recordings = client.recordings.list(date_created="2009-07-06")
+recordings = client.recordings.list(date_created="2016-10-18")

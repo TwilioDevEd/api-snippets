@@ -10,8 +10,8 @@ $client = new Client($sid, $token);
 
 $recordings = $client->recordings->read(
     array(
-        "datecreatedBefore" = "2009-07-06"
-        "datecreatedAfter" => "2009-07-04"
+        "datecreatedBefore" = "2016-10-15"
+        "datecreatedAfter" => "2016-10-12"
     )
 );
 // Loop over the list of recordings and echo a property for each one

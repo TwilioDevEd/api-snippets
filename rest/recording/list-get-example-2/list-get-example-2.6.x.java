@@ -18,7 +18,7 @@ public class Example {
     // Build a filter for the RecordingList
     Map<String, String> params = new HashMap<String, String>();
     
-    params.put("DateCreated", "2009-07-06");
+    params.put("DateCreated", "2016-10-18");
     
     RecordingList recordings = client.getAccount().getRecordings(params);
     

@@ -10,7 +10,7 @@ class Example
     string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
-    var recordings = twilio.ListRecordings(null, new DateTime(2009, 07, 06), null, null);
+    var recordings = twilio.ListRecordings(null, new DateTime(2016, 10, 18), null, null);
     
     foreach (var recording in recordings.Recordings)
     {
