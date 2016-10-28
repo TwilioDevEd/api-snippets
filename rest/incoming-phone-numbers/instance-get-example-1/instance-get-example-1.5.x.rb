@@ -8,12 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
+@number = @client.account.incoming_phone_numbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
+                 .fetch
 
-# Get the incoming phone number by sid
-@number = @accounts.incoming_phone_numbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
-                   .fetch
-
-# Print incoming number
 puts @number.phone_number

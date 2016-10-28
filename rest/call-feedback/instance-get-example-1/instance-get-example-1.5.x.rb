@@ -8,11 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
+@feedback = @client.account.calls('CAe03b7cd806070d1f32bdb7f1046a41c0')
+                   .feedback.fetch
 
-# Get feedback for call with given sid
-@feedback = @accounts.calls('CAe03b7cd806070d1f32bdb7f1046a41c0').feedback.fetch
-
-# Print date on which feedback was created
 puts @feedback.date_created

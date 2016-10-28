@@ -12,11 +12,9 @@ auth_token = 'your_auth_token'
 @member = @client.account.queues('QU5ef8732a3c49700934481addd5ce1659')
                  .members('CA5ef8732a3c49700934481addd5ce1659').fetch
 
-# Update the url and method for the member
 @member.update(
   url: 'http://demo.twilio.com/docs/voice.xml',
   method: 'POST'
 )
 
-# Print the member position
 puts @member.position

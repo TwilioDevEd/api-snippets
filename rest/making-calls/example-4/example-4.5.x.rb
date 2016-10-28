@@ -8,11 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-# Create a call that makes use of a webhook to publish call events
-@call = @accounts.calls.create(
+@call = @client.account.calls.create(
   url: 'http://demo.twilio.com/docs/voice.xml',
   to: '+14155551212',
   from: '+18668675309',
@@ -22,5 +18,4 @@ auth_token = 'your_auth_token'
   status_callback_event: %w(initiated ringing answered completed)
 )
 
-# Print the call start time
 puts @call.start_time

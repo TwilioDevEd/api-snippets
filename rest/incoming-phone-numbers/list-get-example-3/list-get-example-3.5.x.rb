@@ -8,10 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-@accounts.incoming_phone_numbers.list(phone_number: '867')
-         .each do |number|
-           puts number.voice_url
-         end
+@client.account.incoming_phone_numbers.list(phone_number: '867')
+       .each do |number|
+         puts number.voice_url
+       end

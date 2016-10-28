@@ -58,7 +58,7 @@ class SnippetTester
         test_folder(snippet)
       end
     else
-      Parallel.each(@snippet_models, in_processes: parallel) do |snippet|
+      Parallel.each(@snippet_models, in_threads: parallel) do |snippet|
         test_folder(snippet)
       end
     end

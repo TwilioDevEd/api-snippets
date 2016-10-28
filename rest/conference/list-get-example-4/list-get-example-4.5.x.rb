@@ -8,15 +8,9 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-# Get all conference instances that have the `in-progress` status
-# and created on `2009-07-06`
-@accounts.conferences.list(
+@client.account.conferences.list(
   status: 'in-progress',
   date_created: Time.parse('2009-07-06')
 ).each do |conference|
-  # Print the status for each conference call
   puts conference.status
 end

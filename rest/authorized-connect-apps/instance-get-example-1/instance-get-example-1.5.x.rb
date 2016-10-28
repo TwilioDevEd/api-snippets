@@ -12,7 +12,6 @@ connect_app_sid = 'CN47260e643654388faabe8aaa18ea6756'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@authorized_app = @client.api.v2010.accounts(account_sid)
-                         .authorized_connect_apps(connect_app_sid).fetch
+@authorized_app = @client.account.authorized_connect_apps(connect_app_sid).fetch
 
 puts @authorized_app.connect_app_homepage_url

@@ -11,12 +11,12 @@ auth_token = 'your_auth_token'
 # Retrieve available phone numbers in near specified latitude and longitude
 # for the given account sid
 @numbers = @client.account.available_phone_numbers('US')
-                   .local.list(
-                     near_lat_long: '37.840699,-122.461853',
-                     distance: '50',
-                     contains: '555',
-                     in_region: 'CA'
-                   )
+                  .local.list(
+                    near_lat_long: '37.840699,-122.461853',
+                    distance: '50',
+                    contains: '555',
+                    in_region: 'CA'
+                  )
 
 @number = @numbers[0].phone_number
 

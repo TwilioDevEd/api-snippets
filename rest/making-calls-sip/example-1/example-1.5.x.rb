@@ -8,15 +8,10 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-# Create a call w/ sip alias
-@call = @accounts.calls.create(
+@call = @client.account.calls.create(
   url: 'http://www.example.com/sipdial.xml',
   to: 'sip:kate@example.com',
   from: 'Jack'
 )
 
-# Print call direction
 puts @call.direction

@@ -8,7 +8,6 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the messsage with the given sid
 message = @client.account.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
 
-message.delete # Removes the entire Message record
+message.delete

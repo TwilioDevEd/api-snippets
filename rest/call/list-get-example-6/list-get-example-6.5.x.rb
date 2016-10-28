@@ -8,14 +8,9 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-# Find all calls which are busy
-@accounts.calls.list(
+@client.account.calls.list(
   status: 'busy',
-  to: '+15558675309'
+    to: '+15558675309'
 ).each do |call|
-  # print the start time for each call
   puts call.start_time
 end

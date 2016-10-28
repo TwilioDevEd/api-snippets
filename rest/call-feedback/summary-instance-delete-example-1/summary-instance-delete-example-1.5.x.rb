@@ -8,13 +8,8 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
+@feedback = @client.account.calls
+                   .feedback_summaries('FSa346467ca321c71dbd5e12f627deb854')
+                   .fetch
 
-# Get feedback with given sid
-@feedback = @accounts.calls
-                     .feedback_summaries('FSa346467ca321c71dbd5e12f627deb854')
-                     .fetch
-
-# Delete feedback
 @feedback.delete

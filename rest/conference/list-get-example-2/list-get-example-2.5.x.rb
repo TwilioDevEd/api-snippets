@@ -8,14 +8,9 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
-# Get all conference instances that have the given status and friendly name
-@accounts.conferences.list(
+@client.account.conferences.list(
   status: 'in-progress',
   friendly_name: 'MyRoom'
 ).each do |conference|
-  # Print the status for each conference call
   puts conference.status
 end

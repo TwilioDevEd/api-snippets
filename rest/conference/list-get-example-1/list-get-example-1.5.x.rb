@@ -8,10 +8,8 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Get the accounts with the given sid
-@accounts = @client.api.v2010.accounts(account_sid)
-
 # Loop over conferences and print out a property for each one
-@accounts.conferences.list.each do |conference|
-  puts conference.status
-end
+@client.account.conferences.list
+       .each do |conference|
+         puts conference.status
+       end
