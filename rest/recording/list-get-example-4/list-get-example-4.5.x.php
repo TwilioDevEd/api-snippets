@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 $recordings = $client->recordings->read(
     array(
-        "datecreatedBefore" = "2016-10-15"
+        "datecreatedBefore" => "2016-10-15",
         "datecreatedAfter" => "2016-10-12"
     )
 );
