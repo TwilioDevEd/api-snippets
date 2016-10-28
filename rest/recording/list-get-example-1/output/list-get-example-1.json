@@ -10,7 +10,7 @@
 			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 			"api_version": "2010-04-01",
 			"call_sid": "CA8dfedb55c129dd4d6bd1f59af9d11080",
-			"channels": 1,
+			"channels": 2,
 			"date_created": "Tue, 18 Oct 2016 21:55:38 +0000",
 			"date_updated": "Tue, 18 Oct 2016 21:56:34 +0000",
 			"duration": "53",
