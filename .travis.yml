@@ -46,7 +46,7 @@ env:
   - GRADLE_OPTS="-Dorg.gradle.daemon=true"
   - BASH=/bin/bash
   - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-  - PARALLEL=6
+  - PARALLEL=2
   matrix:
     - SNIPPET_LANGUAGE=java6
     - SNIPPET_LANGUAGE=java7
