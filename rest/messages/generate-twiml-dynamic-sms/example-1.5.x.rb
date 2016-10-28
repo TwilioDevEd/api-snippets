@@ -16,6 +16,5 @@ post '/sms' do
     end
   end
 
-  # Return twiml string
   twiml.text
 end

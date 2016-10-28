@@ -12,5 +12,4 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @message = @client.account.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
 
-# Print the message body
 puts @message.body

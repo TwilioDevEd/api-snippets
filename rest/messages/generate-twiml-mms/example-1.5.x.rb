@@ -11,5 +11,6 @@ post '/sms' do
   end
 
   content_type 'text/xml'
+  
   twiml.text
 end

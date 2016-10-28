@@ -8,7 +8,6 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Send a message
 message = @client.account.messages.create(
   body: 'Jenny please?! I love you <3',
   to: '+15558675309',

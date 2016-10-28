@@ -8,7 +8,6 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# create a message with additional provide_feedback attribute
 @client.account.messages.create(
   from: '+15017250604',
   to: '+15558675309',

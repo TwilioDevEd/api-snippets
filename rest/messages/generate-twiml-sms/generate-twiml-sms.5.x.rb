@@ -8,6 +8,6 @@ post '/sms' do
   end
 
   content_type 'text/xml'
-  # Return twml string
+
   twiml.text
 end

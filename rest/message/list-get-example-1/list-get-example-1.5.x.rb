@@ -11,7 +11,6 @@ auth_token = 'your_auth_token'
 # Get message with the given sid
 @message = @client.account.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
 
-# Loop over messages and print out a property for each one
 @client.account.messages.list.each do |message|
   puts message.body
 end

@@ -8,7 +8,6 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create all call
 call = @client.account.calls.create(
   url: 'http://www.example.com/sipdial.xml',
   to: 'sip:kate@example.com',
@@ -17,5 +16,4 @@ call = @client.account.calls.create(
   sip_auth_username: 'jack'
 )
 
-# Print the `to` field
 puts call.to

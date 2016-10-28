@@ -14,8 +14,6 @@ auth_token = 'your_auth_token'
                      .short_codes('SC6b20cb705c1e8f00210049b20b70fce3')
                      .fetch
 
-# Update short code sms url
 @short_code.update(sms_url: 'http://demo.twilio.com/docs/sms.xml')
 
-# Print the short code
 puts @short_code.short_code

@@ -10,7 +10,6 @@ post '/confirm' do
   # Initialize Twilio Client
   @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-  # Lookup variable `unique_id` in a database to find message_sid
   message_sid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
   @client.account.messages(message_sid)
