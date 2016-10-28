@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $recordings = $client->recordings->read(
-    array("dateCreated" => "2009-07-06")
+    array("dateCreated" => "2016-10-18")
 );
 // Loop over the list of recordings and echo a property for each one
 foreach ($recordings as $recording) {
