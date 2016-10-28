@@ -1,0 +1,26 @@
+{
+	"page": 0,
+	"page_size": 50,
+	"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?DateCreated=2016-10-18&Page=0&PageSize=50",
+	"first_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?Page=0&PageSize=50",
+	"previous_page_uri": null,
+	"next_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?Page=1&PageSize=50",
+	"recordings": [
+		{
+			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"api_version": "2010-04-01",
+			"call_sid": "CA8dfedb55c129dd4d6bd1f59af9d11080",
+			"channels": 2,
+			"date_created": "Tue, 18 Oct 2016 21:55:38 +0000",
+			"date_updated": "Tue, 18 Oct 2016 21:56:34 +0000",
+			"price": "-0.00250",
+			"price_unit": "USD",
+			"duration": "53",
+			"sid": "RE557ce644e5ab84fa21cc21112e22c485",
+			"source": "DialVerb",
+			"status": "completed",
+			"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab84fa21cc21112e22c485.json"
+		},
+		...
+	]
+}
