@@ -11,10 +11,8 @@ auth_token = 'your_auth_token'
 @cred_list_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 @cred_sid = 'SC32a3c49700934481addd5ce1659f04d2'
 
-# Get credentials with given sid from given credential list
 @credential = @client.account.sip
                      .credential_lists(@cred_list_sid)
                      .credentials(@cred_sid).fetch
 
-# Print the credential username
 puts @credential.username

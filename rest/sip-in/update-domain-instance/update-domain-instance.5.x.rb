@@ -13,7 +13,6 @@ auth_token = 'your_auth_token'
 @domain = @client.account.sip
                  .domains('SD32a3c49700934481addd5ce1659f04d2').fetch
 
-# Update friendly name and voice method
 @domain.update(
   friendly_name: 'Little Kevin',
   voice_method: 'GET'

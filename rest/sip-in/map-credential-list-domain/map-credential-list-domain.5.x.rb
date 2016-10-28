@@ -16,5 +16,4 @@ cred_list_mapping = @client.account.sip
                            .credential_list_mappings
                            .create(credential_list_sid: @cred_list_sid)
 
-# Print credential list friendly name
 puts cred_list_mapping.friendly_name

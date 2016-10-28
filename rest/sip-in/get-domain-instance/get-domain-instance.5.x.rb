@@ -13,5 +13,4 @@ auth_token = 'your_auth_token'
 @domain = @client.account.sip
                  .domains('SD32a3c49700934481addd5ce1659f04d2').fetch
 
-# Print the voice method for the given sip domain
 puts @domain.voice_method

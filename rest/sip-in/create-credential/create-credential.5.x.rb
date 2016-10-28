@@ -10,12 +10,10 @@ auth_token = 'your_auth_token'
 
 @credential_list_sip = 'CL32a3c49700934481addd5ce1659f04d2'
 
-# Add a new credential to the credential list with the given sid
 @credential = @client.account.sip.credential_lists(@credential_list_sip)
                      .credentials.create(
                        username: 'WeeBey',
                        password: '05'
                      )
 
-# Print the username for given credential
 puts @credential.username

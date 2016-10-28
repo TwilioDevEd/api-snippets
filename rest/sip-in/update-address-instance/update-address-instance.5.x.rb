@@ -17,7 +17,6 @@ auth_token = 'your_auth_token'
                      .ip_addresses('IP32a3c49700934481addd5ce1659f04d2')
                      .fetch
 
-# Update ip address friendly name
 @ip_address.update(friendly_name: 'Orlandos Nightclub')
 
 puts @ip_address.friendly_name

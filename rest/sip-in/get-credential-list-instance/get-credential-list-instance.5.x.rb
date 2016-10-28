@@ -10,10 +10,8 @@ auth_token = 'your_auth_token'
 
 @credential_list_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 
-# Get credential list with given sid
 @credential_list = @client.account.sip
                           .credential_lists(@credential_list_sid)
                           .fetch
 
-# Print friendly name for credential list instance
 puts @credential_list.friendly_name

@@ -15,7 +15,6 @@ auth_token = 'your_auth_token'
 @credential_list = @client.account.sip
                           .credential_lists(@cred_list_sid).fetch
 
-# Update credential list friendly name
 @credential_list.update(friendly_name: 'Marlos Lieutenants')
 
 puts @credential_list.friendly_name

@@ -8,9 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create new acl list with the given friendly name
 ip_access_control_list = @client.account.sip.ip_access_control_lists
                                 .create(friendly_name: 'My new acl')
 
-# Print new acl list friendly name
 puts ip_access_control_list.friendly_name

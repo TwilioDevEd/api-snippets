@@ -17,5 +17,4 @@ auth_token = 'your_auth_token'
                           .ip_access_control_list_mappings(@ip_acl_list_map_sid)
                           .fetch
 
-# Print ip acl list map friendly name
 puts @ip_acl_list_map.friendly_name

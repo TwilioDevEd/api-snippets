@@ -15,7 +15,6 @@ auth_token = 'your_auth_token'
                      .credentials('SC32a3c49700934481addd5ce1659f04d2')
                      .fetch
 
-# Update credential password
 @credential.update(password: '07')
 
 puts @credential.username

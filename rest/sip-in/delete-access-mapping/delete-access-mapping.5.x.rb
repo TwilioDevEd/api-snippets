@@ -11,9 +11,7 @@ auth_token = 'your_auth_token'
 @sip_domain_sid = 'SD32a3c49700934481addd5ce1659f04d2'
 @ip_acl_list_sid = 'AL95a47094615fe05b7c17e62a7877836c'
 
-# Get the ip acl for the given sip domain
 @ip_acl_mapping = @client.account.sip.domains(@sip_domain_sid)
                          .ip_access_control_list_mappings(@ip_acl_list_sid)
 
-# Delete the ip acl mapping
 @ip_acl_mapping.delete
