@@ -7,10 +7,10 @@ auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 workflow_sid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-workflow = client.taskrouter.v1.workspaces(workspace_sid).workflows(workflow_sid)
+workflow = client.taskrouter.v1.workspaces(workspace_sid)
+  .workflows(workflow_sid)
 
 workflow = workflow.update(task_reservation_timeout: '20')
 

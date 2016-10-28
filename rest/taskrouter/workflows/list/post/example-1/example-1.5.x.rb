@@ -8,11 +8,10 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-sales_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-marketing_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-support_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-everyone_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-
+sales_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+marketing_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+support_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+everyone_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 config = {
     'task_routing': {
@@ -35,7 +34,6 @@ config = {
         }
     }
 }
-
 
 json = config.to_json()
 

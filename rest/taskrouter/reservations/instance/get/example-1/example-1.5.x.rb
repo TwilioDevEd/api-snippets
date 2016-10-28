@@ -8,11 +8,10 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 task_sid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 reservation = client.taskrouter.v1.workspaces(workspace_sid)
-              .tasks(task_sid).reservations(reservation_sid).fetch
+  .tasks(task_sid).reservations(reservation_sid).fetch
 
 puts reservation.reservation_status
 

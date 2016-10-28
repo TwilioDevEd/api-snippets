@@ -7,10 +7,9 @@ auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
-             .workers(worker_sid).statistics.fetch
+  .workers(worker_sid).statistics.fetch
 
 puts statistics.cumulative["reservations_accepted"]
