@@ -28,6 +28,8 @@ install:
 - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
 - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
 - sudo update-ca-certificates
+
+
 script:
   - cd twilio-api-faker
   - sudo gradle run </dev/null &>/dev/null &
@@ -44,7 +46,7 @@ env:
   - GRADLE_OPTS="-Dorg.gradle.daemon=true"
   - BASH=/bin/bash
   - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-  - PARALLEL=4
+  - PARALLEL=6
   matrix:
     - SNIPPET_LANGUAGE=java6
     - SNIPPET_LANGUAGE=java7
