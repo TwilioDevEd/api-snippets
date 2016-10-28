@@ -1,4 +1,4 @@
 $ curl -G https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings \
-    -d "DateCreated<=2009-07-06" \
-    -d "DateCreated>=2009-07-04" \
+    -d "DateCreated<=2016-10-15" \
+    -d "DateCreated>=2016-10-12" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

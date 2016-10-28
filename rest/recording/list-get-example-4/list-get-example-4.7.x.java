@@ -14,8 +14,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    DateTime lower = DateTime.parse("2009-07-04");
-    DateTime upper = DateTime.parse("2009-07-06");
+    DateTime lower = DateTime.parse("2016-10-12");
+    DateTime upper = DateTime.parse("2016-10-15");
 
     ResourceSet<Recording> recordings = Recording.reader()
         .setDateCreated(Range.closed(lower, upper))
