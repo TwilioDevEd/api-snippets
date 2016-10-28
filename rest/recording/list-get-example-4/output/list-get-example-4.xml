@@ -15,21 +15,6 @@
 		  <PriceUnit>USD</PriceUnit>
 		  <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE20d7f32989e54e22920075f45174f6bb</Uri>
 		</Recording>
-		<Recording>
-		  <Sid>REfefc9fe8770db0eac5b02d06072548a9</Sid>
-		  <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
-		  <CallSid>CA6e1fd6c0af78ff13e3f17d79c785d7e7</CallSid>
-		  <Duration>53</Duration>
-		  <DateCreated>Tue, 12 Oct 2016 17:55:38 +0000</DateCreated>
-		  <ApiVersion>2010-04-01</ApiVersion>
-		  <DateUpdated>Tue, 12 Oct 2016 17:56:34 +0000</DateUpdated>
-		  <Status>completed</Status>
-		  <Source>DialVerb</Source>
-		  <Channels>2</Channels>
-		  <Price>-0.00250</Price>
-		  <PriceUnit>USD</PriceUnit>
-		  <Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/REfefc9fe8770db0eac5b02d06072548a9</Uri>
-		</Recording>
 		...
 	</Recordings>
 </TwilioResponse>
