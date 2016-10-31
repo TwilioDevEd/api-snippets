@@ -1,16 +1,15 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
 require 'twilio-ruby'
 
-# Get your Account Sid and Auth Token from twilio.com/user/account
+# Get your Account Sid and Auth Token from https://www.twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::LookupsClient.new(account_sid, auth_token)
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
-number = @client.phone_numbers.get(
-  '(510) 867-5309',
-  country_code: 'US',
-  type: 'carrier'
-)
+encoded_phone_number = URI.encode('(510) 867-5309')
+number = @client.lookups.v1
+                .phone_numbers(encoded_phone_number)
+                .fetch(country_code: 'US', type: 'carrier')
 
 puts number.carrier['type']
 puts number.carrier['name']
