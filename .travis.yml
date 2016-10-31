@@ -24,10 +24,10 @@ before_install:
 
 
 install:
-- gem install json colorize parallel
-- git clone https://github.com/TwilioDevEd/twilio-api-faker.git
-- sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
-- sudo update-ca-certificates
+  - gem install json colorize parallel
+  - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
+  - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
+  - sudo update-ca-certificates
 
 
 script:
@@ -40,13 +40,13 @@ script:
 
 env:
   global:
-  - NODE_PATH=/usr/local/lib/node_modules
-  - NODE_TLS_REJECT_UNAUTHORIZED=0
-  - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
-  - GRADLE_OPTS="-Dorg.gradle.daemon=true"
-  - BASH=/bin/bash
-  - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-  - PARALLEL=2
+    - NODE_PATH=/usr/local/lib/node_modules
+    - NODE_TLS_REJECT_UNAUTHORIZED=0
+    - FAKE_CERT_PATH=~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
+    - GRADLE_OPTS="-Dorg.gradle.daemon=true"
+    - BASH=/bin/bash
+    - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
+    - PARALLEL=2
   matrix:
     - SNIPPET_LANGUAGE=java6
     - SNIPPET_LANGUAGE=java7
