@@ -6,11 +6,7 @@ require 'sinatra'
 set :port, 8080
 
 post '/enqueue_call' do
-  attributes = '{"account_number":"12345abcdef"}'
-
   Twilio::TwiML::Response.new do |r|
-    r.Enqueue :workflowSid => "WW0123456789abcdef0123456789abcdef", :waitUrl => "/hold_music.php", :action => "/post_bridge_survey.php" do |e|
-      e.Task attributes
-    end
+    r.Enqueue :workflowSid => "WW0123456789abcdef0123456789abcdef"
   end.text
 end
