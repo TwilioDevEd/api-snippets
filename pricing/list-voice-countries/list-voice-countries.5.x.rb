@@ -1,12 +1,12 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
 require 'twilio-ruby'
 
-# Get your Account Sid and Auth Token from twilio.com/user/account
+# Get your Account Sid and Auth Token from https://www.twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::PricingClient.new account_sid, auth_token
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@countries = @client.voice.countries.list
-@countries.each do |c|
+countries = @client.pricing.voice.countries.list
+countries.each do |c|
   puts c.iso_country
 end
