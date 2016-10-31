@@ -5,10 +5,10 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 
-@client = Twilio::REST::Client.new account_sid, auth_token
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
-plan = @client.preview.wireless.rate_plans(
-  'WP467fb57a0aba9641a8209136d42545f8').fetch()
+plan = @client.preview.wireless
+  .rate_plans('WP467fb57a0aba9641a8209136d42545f8').fetch
 
 puts plan.sid
 puts plan.alias_

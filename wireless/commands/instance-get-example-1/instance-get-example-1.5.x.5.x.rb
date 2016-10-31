@@ -5,7 +5,9 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 
-@client = Twilio::REST::Client.new account_sid, auth_token
-cmd = @client.preview.wireless.commands('DCcb6aa7c620874dd98ba6c9c4108d0ed0').fetch()
+@client = Twilio::REST::Client.new(account_sid, auth_token)
+
+cmd = @client.preview.wireless
+  .commands('DCcb6aa7c620874dd98ba6c9c4108d0ed0').fetch
 
 puts cmd.command
