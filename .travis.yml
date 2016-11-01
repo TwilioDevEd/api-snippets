@@ -3,7 +3,6 @@ sudo: required
 rvm:
   - 2.2.1
 
-
 before_install:
   - jdk_switcher use oraclejdk8
   - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
@@ -18,13 +17,11 @@ before_install:
   - nvm use stable
   - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-
 install:
   - gem install json colorize parallel
   - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
   - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
   - sudo update-ca-certificates
-
 
 script:
   - cd twilio-api-faker
@@ -32,7 +29,6 @@ script:
   - cd ..
   - sleep 25
   - ruby tools/snippet-testing/snippet_tester.rb -i
-
 
 env:
   global:
@@ -46,19 +42,14 @@ env:
   matrix:
     - SNIPPET_LANGUAGE=java6
     - SNIPPET_LANGUAGE=java7
-    - SNIPPET_LANGUAGE=python
-    - SNIPPET_LANGUAGE=ruby
-    - SNIPPET_LANGUAGE=node
-    - SNIPPET_LANGUAGE=php
-    - SNIPPET_LANGUAGE=curl
-
+    - SNIPPET_LANGUAGE=python:curl
+    - SNIPPET_LANGUAGE=php:ruby
 
 matrix:
   include:
     - language: csharp
       mono: latest
-      env: SNIPPET_LANGUAGE=csharp
-
+      env: SNIPPET_LANGUAGE=csharp:node
 
 addons:
   hosts:
@@ -67,14 +58,12 @@ addons:
     - pricing.twilio.com
     - lookups.twilio.com
 
-
 notifications:
   slack:
     rooms:
       secure: Lbt/FIOBmBxqSH4aj4cctd+ygAWWN+IoEGRC1f7Wn1mgciSAWCGs6krUAqsxDCO+mU0bV0EdO2SNaB5vlmMCBA0tti6KYzR4M4OgkM/KwIUk1MBJcaD2gpMMbMK66xG74b5arPuO7GIWMjHgScKo04LGGeYOcw7RJZwB6CY+3eyFo4HLVkuWizNC2Qw2yq/2F///QywljWMbvJy1dUs0Ax3KG6NW8aRhj98TN/vnVAwC7BKCWYD0QQY+8qKf4Cbmt6W4riNufqm8ZQdLdgbRnLdKKxHUCEkARPzLvJhLrR4fB70hXI8iWcms0CcLPf2kjG8+iJso9MCai1SGdi4+duAoBUxHzCQTK2Q+8t7LKrfaOm9j0p46tk9VcI9GLUzVgE5XZpqssv+dqvf1tB/d+XTZu2M4I1fmZm0O7uo3XSWO25Vob6sqHKoRe1E0Ums4yCv5ZiMWuzvFan4CPIoC2Gxn1ZFWPU+//SDHolKIAG5j6bx9v+66UOv7EkBQVlW9CbZmK+12mRL0+gNxfWmFW23tgJhnuEYmJHqEGi3GWjzBY8YTQ5eiUJQXxV/NZknwAB4d/cHDEvbBlVrURqXG/E60ecKNw6QqTO8HMZXP8ROBPzKPSnwsY6TDPf1rrH3D9N4o9JyEhquuWG4NSovOcrzopgoNyfaEWbj0cLwxxs8=
     on_failure: always
     on_success: change
-
 
 cache:
   apt: true

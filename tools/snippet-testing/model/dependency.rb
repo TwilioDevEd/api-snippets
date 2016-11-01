@@ -43,17 +43,19 @@ module Model
         ruby:   -> { install_ruby_dependencies },
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
-        java6:   -> { puts 'nothing else to install' },
-        java7:   -> { puts 'nothing else to install' },
+        java6:  -> { puts 'nothing else to install' },
+        java7:  -> { puts 'nothing else to install' },
         curl:   -> { puts 'nothing else to install' }
       }
 
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
-        snippet_language_key = ENV['SNIPPET_LANGUAGE']
-        if !snippet_language_key.nil?
-          dependencies.fetch(snippet_language_key.to_sym).call
+        snippet_languages = ENV['SNIPPET_LANGUAGE']
+        if !snippet_languages.nil?
+          snippet_languages.split(':').each do |language|
+            dependencies.fetch(language.to_sym).call
+          end
         else
           dependencies.values.each(&:call)
         end
