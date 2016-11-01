@@ -1,14 +1,10 @@
 sudo: required
 
-language: csharp
-
-mono:
-  - latest
+rvm:
+  - 2.2.1
 
 
 before_install:
-  - rvm install ruby-2.2.1
-  - rvm --default use 2.2.1
   - jdk_switcher use oraclejdk8
   - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
   - sudo add-apt-repository ppa:cwchien/gradle -y
@@ -53,9 +49,15 @@ env:
     - SNIPPET_LANGUAGE=python
     - SNIPPET_LANGUAGE=ruby
     - SNIPPET_LANGUAGE=node
-    - SNIPPET_LANGUAGE=csharp
     - SNIPPET_LANGUAGE=php
     - SNIPPET_LANGUAGE=curl
+
+
+matrix:
+  include:
+    - language: csharp
+      mono: latest
+      env: SNIPPET_LANGUAGE=csharp
 
 
 addons:
