@@ -1,16 +1,13 @@
 require 'http'
 require 'twilio-ruby'
 
-# Initialize the client
+# Get your Account Sid and Auth Token from https://www.twilio.com/console
 account_sid = 'ACCOUNT_SID'
 auth_token = 'AUTH_TOKEN'
-ip_messaging_client = Twilio::REST::IpMessagingClient.new(
-  account_sid,
-  auth_token
-)
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Update the channel
-service = ip_messaging_client.services.get('SERVICE_SID')
+service = @client.ip_messaging.v1.services('SERVICE_SID')
 channel = service.channels.create
-channel_updated = channel.update('NEW_SID')
+channel_updated = channel.update(unique_name: 'NEW_SID')
 puts channel_updated
