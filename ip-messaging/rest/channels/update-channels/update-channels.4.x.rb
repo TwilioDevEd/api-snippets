@@ -9,5 +9,5 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 # Update the channel
 service = ip_messaging_client.services.get('SERVICE_SID')
 channel = service.channels.create()
-channel_updated = channel.update('NEW_SID')
+channel_updated = channel.update(unique_name: 'NEW_SID')
 puts channel_updated

@@ -8,6 +8,6 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Update the user
 service = ip_messaging_client.services.get('SERVICE_SID')
-user = service.users.create(id:'IDENTITY')
-response = user.update('NEW_SID')
+user = service.users.create(identity:'IDENTITY')
+response = user.update(role_sid: 'NEW_SID')
 puts response

@@ -7,7 +7,7 @@ auth_token = 'AUTH_TOKEN'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Retrieve the member
-service = @client.ip_messaging.v1.services('SERVICE_SID').fetch
-channel = service.channels('CHANNEL_SID').fetch
+service = @client.ip_messaging.v1.services('SERVICE_SID')
+channel = service.channels('CHANNEL_SID')
 member = channel.members('MEMBER_SID').fetch
 puts member
