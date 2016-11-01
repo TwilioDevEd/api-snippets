@@ -1,4 +1,3 @@
-require "http"
 require 'twilio-ruby'
 
 #initialize the client

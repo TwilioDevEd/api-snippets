@@ -1,4 +1,3 @@
-require 'http'
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from https://www.twilio.com/console
