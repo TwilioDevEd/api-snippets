@@ -9,5 +9,8 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a Sync List Item
-response = service.sync_lists('MyCollection').sync_list_items.update(data: "{ 'number': '001', 'name': 'Bulbasaur', 'attack':'185'}")
+response = service.sync_lists('MyCollection').sync_list_items.update(
+  data: "{ 'number': '001', 'name': 'Bulbasaur', 'attack':'185'}"
+)
+
 puts response

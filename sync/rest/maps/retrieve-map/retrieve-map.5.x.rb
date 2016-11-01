@@ -9,5 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Retrieve a Map Item
-response = service.sync_maps('Players').fetch()
+response = service.sync_maps('Players').fetch
+
 puts response

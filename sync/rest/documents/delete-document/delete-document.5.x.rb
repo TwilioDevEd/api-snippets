@@ -9,5 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Delete the Document
-response = service.documents("MyFirstDocument").delete()
+response = service.documents('MyFirstDocument').delete
+
 puts response

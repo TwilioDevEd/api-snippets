@@ -9,9 +9,12 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Update the Document, data can be any JSON
-response = service.documents("MyFirstDocument").update(data: '{ "date_updated": "2016-07-06T15:46:38Z",
+response = service.documents('MyFirstDocument').update(
+  data: '{ "date_updated": "2016-07-06T15:46:38Z",
       "movie_title": "On The Line",
       "showtimes": null,
       "starring": ["Lance Bass", "Joey Fatone"],
-      "genre": "Romance"}')
+      "genre": "Romance"}'
+)
+
 puts response

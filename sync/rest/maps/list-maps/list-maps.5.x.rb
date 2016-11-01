@@ -14,6 +14,6 @@ service.sync_maps.each do |map|
 end
 
 # List the sync_maps
-response = service.sync_maps.list()
+response = service.sync_maps.list
 
 puts response
