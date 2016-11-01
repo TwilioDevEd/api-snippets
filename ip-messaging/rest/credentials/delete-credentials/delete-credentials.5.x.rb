@@ -1,14 +1,12 @@
 require 'http'
 require 'twilio-ruby'
 
-# Initialize the client
+# Get your Account Sid and Auth Token from https://www.twilio.com/console
 account_sid = 'ACCOUNT_SID'
 auth_token = 'AUTH_TOKEN'
-ip_messaging_client = Twilio::REST::IpMessagingClient.new(
-  account_sid,
-  auth_token
-)
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Delete the credential
-response = ip_messaging_client.credentials.delete
+credentials = @client.ip_messaging.v1.credentials('SID').fetch
+response = credentials.delete
 puts response
