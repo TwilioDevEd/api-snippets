@@ -4,18 +4,7 @@ rvm:
   - 2.2.1
 
 before_install:
-  - jdk_switcher use oraclejdk8
-  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-  - sudo add-apt-repository ppa:cwchien/gradle -y
-  - sudo apt-get update
-  - sudo apt-get install -y --force-yes nodejs python-dev python-pip build-essential gradle ca-certificates curl php5-cli git php5-curl
-  - sudo pip install --upgrade pip wheel --quiet
-  - sudo npm install -g n
-  - sudo n lts
-  - ". $HOME/.nvm/nvm.sh"
-  - nvm install stable
-  - nvm use stable
-  - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  - ./install_travis_dependencies.sh
 
 install:
   - gem install json colorize parallel
@@ -24,10 +13,7 @@ install:
   - sudo update-ca-certificates
 
 script:
-  - cd twilio-api-faker
-  - sudo gradle run </dev/null &>/dev/null &
-  - cd ..
-  - sleep 25
+  - ./run_twilio_api_faker.sh
   - ruby tools/snippet-testing/snippet_tester.rb -i
 
 env:
