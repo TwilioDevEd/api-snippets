@@ -10,9 +10,10 @@ service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Query Sync List
 items = service.sync_lists('MyCollection').sync_list_items.stream(
-	from: '10',
-	order: 'asc'
+  from:  '10',
+  order: 'asc'
 )
+
 items.each do |listItem|
-	puts listItem.data
+  puts listItem.data
 end

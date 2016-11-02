@@ -264,6 +264,7 @@ the wrong user.
    127.0.0.1 lookups.twilio.com
    127.0.0.1 pricing.twilio.com
    127.0.0.1 monitor.twilio.com
+   127.0.0.1 ip-messaging.twilio.com
    ```
 
 1. Export Necessary Environment Variables.

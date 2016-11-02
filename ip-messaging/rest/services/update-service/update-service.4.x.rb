@@ -8,5 +8,5 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Update the service
 service = ip_messaging_client.services.get('FRIENDLY_NAME')
-response = service.update('NEW_SID')
+response = service.update(friendly_name: 'NEW_SID')
 puts response

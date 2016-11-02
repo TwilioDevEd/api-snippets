@@ -10,4 +10,5 @@ service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a List
 response = service.sync_lists.create(unique_name: 'MyCollection')
+
 puts response

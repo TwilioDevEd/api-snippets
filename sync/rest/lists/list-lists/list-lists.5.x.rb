@@ -14,6 +14,6 @@ service.sync_lists.each do |list|
 end
 
 # List the Sync Lists
-response = service.sync_lists.list()
+response = service.sync_lists.list
 
 puts response

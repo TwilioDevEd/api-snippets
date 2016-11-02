@@ -9,5 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Delete a Map
-response = service.sync_maps('Players').delete()
+response = service.sync_maps('Players').delete
+
 puts response

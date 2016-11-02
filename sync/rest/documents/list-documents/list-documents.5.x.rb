@@ -9,5 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # List Documents
-response = service.documents.list()
+response = service.documents.list
+
 puts response
