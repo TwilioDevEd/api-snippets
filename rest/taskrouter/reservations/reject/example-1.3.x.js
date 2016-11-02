@@ -7,15 +7,13 @@ const taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const reservationSid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
-// redirect using a reservation
+// reject a reservation
 client.taskrouter.v1
   .workspaces(workspaceSid)
   .tasks(taskSid)
   .reservations(reservationSid)
   .update({
-    Instruction: 'Redirect',
-    RedirectCallSid: 'CA123456789',
-    RedirectUrl: 'http://example.com/assignment_redirect',
+    reservationStatus: 'rejected',
   })
   .then((reservation) => {
     console.log(reservation.reservation_status);

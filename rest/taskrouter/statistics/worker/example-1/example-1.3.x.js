@@ -3,17 +3,14 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
   .workspaces(workspaceSid)
-  .tasks(taskSid)
-  .reservations
-  .list()
-  .then((data) => {
-    data.reservations.forEach((reservation) => {
-        console.log(reservation.reservation_status);
-        console.log(reservation.worker_name);
-    });
-  });
+  .workers(workerSid)
+  .statistics()
+  .fetch()
+  .then((responseData) => {
+     console.log(responseData.cumulative.reservations_accepted);
+   });

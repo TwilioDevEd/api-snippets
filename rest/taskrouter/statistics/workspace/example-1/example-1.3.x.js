@@ -3,17 +3,15 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
   .workspaces(workspaceSid)
-  .tasks(taskSid)
-  .reservations
-  .list()
-  .then((data) => {
-    data.reservations.forEach((reservation) => {
-        console.log(reservation.reservation_status);
-        console.log(reservation.worker_name);
-    });
+  .statistics()
+  .fetch()
+  .then((responseData) => {
+      console.log(responseData.cumulative.avg_task_acceptance_time);
+      console.log(responseData.cumulative.tasks_created);
+      console.log(responseData.realtime.tasks_by_status.pending);
+      console.log(responseData.realtime.tasks_by_status.assigned);
   });
