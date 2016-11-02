@@ -6,7 +6,4 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.accounts
-  .list({status: 'active'})
-  .then((data) => {
-    return data.forEach((account) => console.log(account.friendlyName));
-  });
+  .each({status: 'active'}, (account) => console.log(account.friendlyName));
