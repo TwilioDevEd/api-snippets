@@ -24,6 +24,6 @@ client.taskrouter.v1
     reason: 'waiting too long',
   })
   .then((task) => {
-    console.log(task.assignment_status);
+    console.log(task.assignmentStatus);
     console.log(task.reason);
   });

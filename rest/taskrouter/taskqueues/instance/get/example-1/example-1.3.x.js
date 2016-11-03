@@ -10,4 +10,4 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .taskQueues(taskQueueSid)
   .fetch()
-  .then((taskQueue) => console.log(taskQueue.friendly_name));
+  .then((taskQueue) => console.log(taskQueue.friendlyName));

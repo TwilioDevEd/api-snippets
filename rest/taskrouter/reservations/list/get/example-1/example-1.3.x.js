@@ -13,7 +13,7 @@ client.taskrouter.v1
   .list()
   .then((data) => {
     data.reservations.forEach((reservation) => {
-        console.log(reservation.reservation_status);
-        console.log(reservation.worker_name);
+        console.log(reservation.reservationStatus);
+        console.log(reservation.workerName);
     });
   });

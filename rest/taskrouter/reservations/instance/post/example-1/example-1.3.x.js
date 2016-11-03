@@ -16,6 +16,6 @@ client.taskrouter.v1
     reservationStatus: 'accepted',
   })
   .then((reservation) => {
-    console.log(reservation.reservation_status);
-    console.log(reservation.worker_name);
+    console.log(reservation.reservationStatus);
+    console.log(reservation.workerName);
   });

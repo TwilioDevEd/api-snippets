@@ -10,8 +10,8 @@ client.taskrouter.v1
   .statistics()
   .fetch()
   .then((responseData) => {
-      console.log(responseData.cumulative.avg_task_acceptance_time);
-      console.log(responseData.cumulative.tasks_created);
-      console.log(responseData.realtime.tasks_by_status.pending);
-      console.log(responseData.realtime.tasks_by_status.assigned);
+    console.log(responseData.cumulative.avg_task_acceptance_time);
+    console.log(responseData.cumulative.tasks_created);
+    console.log(responseData.realtime.tasks_by_status.pending);
+    console.log(responseData.realtime.tasks_by_status.assigned);
   });
