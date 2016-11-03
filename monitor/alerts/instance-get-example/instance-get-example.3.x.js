@@ -4,7 +4,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
 const MonitorClient = require('twilio').MonitorClient;
-let client = new MonitorClient(accountSid, authToken);
+const client = new MonitorClient(accountSid, authToken);
 
 client.alerts('NO5a7a84730f529f0a76b3e30c01315d1a').get(function(err, alert) {
     console.log(alert.alertText);

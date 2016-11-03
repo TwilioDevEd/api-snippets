@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/voice', function(req, res) {
     // Create TwiML response
-    let twiml = new twilio.TwimlResponse();
+    const twiml = new twilio.TwimlResponse();
 
     if(req.body.To) {
       twiml.dial({callerId: '+15017250604'}, function() {

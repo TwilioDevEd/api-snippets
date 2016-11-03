@@ -6,7 +6,7 @@ const app = express();
 
 app.post('/voice', function(req, res) {
     // Create TwiML response
-    let twiml = new twilio.TwimlResponse();  // FIXME: hows the class now?
+    const twiml = new twilio.TwimlResponse();  // FIXME: hows the class now?
     twiml.say('Thanks for calling!');
 
     res.set('Content-Type', 'text/xml');

@@ -5,8 +5,8 @@ const path = require('path');
 
 const AccessToken = require('twilio').AccessToken;
 const ConversationsGrant = AccessToken.ConversationsGrant;
-let express = require('express');
-let randomUsername = require('./randos');
+const express = require('express');
+const randomUsername = require('./randos');
 
 // Create Express webapp
 let app = express();
@@ -39,7 +39,7 @@ app.get('/token', function(request, response) {
 });
 
 // Create http server and run it
-let server = http.createServer(app);
+const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 server.listen(port, function() {
     console.log('Express server running on *:' + port);

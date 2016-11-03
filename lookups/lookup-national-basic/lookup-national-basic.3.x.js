@@ -5,7 +5,7 @@ const LookupsClient = require('twilio').LookupsClient;
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-let client = new LookupsClient(accountSid, authToken);
+const client = new LookupsClient(accountSid, authToken);
 
 client.phoneNumbers('(510) 867-5309').get({
   countryCode: 'US',

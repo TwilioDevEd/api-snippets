@@ -3,8 +3,8 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-let LookupsClient = require('twilio').LookupsClient;
-let client = new LookupsClient(accountSid, authToken);
+const LookupsClient = require('twilio').LookupsClient;
+const client = new LookupsClient(accountSid, authToken);
 
 client.phoneNumbers('+15108675309').get({
   type: 'carrier',

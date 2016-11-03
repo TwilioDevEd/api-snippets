@@ -12,7 +12,7 @@ app.get('/token', function(req, res) {
   // put your Twilio Application Sid here
   const appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-  let capability = new twilio.jwt.Capability(accountSid, authToken);
+  const capability = new twilio.jwt.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);
   const token = capability.generate();
 
