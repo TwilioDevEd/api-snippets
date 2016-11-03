@@ -16,7 +16,8 @@ class SnippetTester
     puts 'Dependencies installed!'
   end
 
-  def initialize(parent_source_folder, test_default = false)
+  def initialize(parent_source_folder, test_default = false, output_to_console = false)
+    @output_to_console = output_to_console
     @parent_source_folder = parent_source_folder
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
@@ -68,7 +69,7 @@ class SnippetTester
     puts "Testing #{snippet.output_folder}"
 
     snippet.available_langs.each do |lang, _file_name|
-      @language_handlers.fetch(lang).test_snippet(snippet)
+      @language_handlers.fetch(lang).test_snippet(snippet, @output_to_console)
     end
   end
 
@@ -221,6 +222,12 @@ def parse_options(args)
       options.source_folder = File.expand_path(dir)
       options.test_default = true if options.test_default.nil?
     end
+
+    # Please not this option is only useful with one
+    # or very few snippets if they are run in parallel
+    opts.on('-o', '--[output-]to-console', 'Writes commando output to console') do |install|
+      options.output_to_console = true
+    end
   end
 
   opts.parse!(args)
@@ -230,7 +237,7 @@ end
 if __FILE__ == $0
   begin
     options = parse_options(ARGV)
-    tester = SnippetTester.new(options.source_folder, options.test_default)
+    tester = SnippetTester.new(options.source_folder, options.test_default, options.output_to_console)
 
     tester.install_dependencies if options.install
     tester.init

@@ -12,7 +12,7 @@ module LanguageHandler
         " workon #{dependencies_directory} &&"\
         " python #{file}"
       )
-      execute_with_suppressed_output(command, file)
+      execute_with_output_options(command, file)
     end
 
     def text_with_specific_replacements(file_content)

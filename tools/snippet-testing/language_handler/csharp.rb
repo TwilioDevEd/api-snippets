@@ -7,7 +7,7 @@ module LanguageHandler
     private
 
     def execute_command(file)
-      execute_with_suppressed_output("#{compile_command} #{file}", file)
+      execute_with_output_options("#{compile_command} #{file}", file)
     end
 
     def compile_command
