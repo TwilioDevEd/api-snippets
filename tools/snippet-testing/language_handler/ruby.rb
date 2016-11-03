@@ -7,7 +7,7 @@ module LanguageHandler
     private
 
     def execute_command(file)
-      execute_with_output_options(
+      execute_with_suppressed_output(
         "rvm @#{dependencies_directory} do ruby #{file}",
         file
       )

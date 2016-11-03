@@ -26,8 +26,7 @@ module LanguageHandler
       write_content(content, output_file)
     end
 
-    def test_snippet(snippet_model, output_to_console = false)
-      @output_to_console = output_to_console
+    def test_snippet(snippet_model)
       path = snippet_model.get_output_file(lang_cname)
       execute(path)
     end
@@ -47,14 +46,10 @@ module LanguageHandler
       raise 'This method must me implemented in sub classes'
     end
 
-    def execute_with_output_options(command, file)
+    def execute_with_suppressed_output(command, file)
       rout, wout = IO.pipe
       rerr, werr = IO.pipe
-      pid = if @output_to_console
-              Process.spawn(command)
-            else
-              Process.spawn(command, out: wout, err: werr)
-            end
+      pid = Process.spawn(command, out: wout, err: werr)
       exit_code = check_process_success(pid)
       wout.close
       werr.close
