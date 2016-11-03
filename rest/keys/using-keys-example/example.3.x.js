@@ -1,6 +1,6 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These identifiers are your accountSid and authToken from
-// twilio.com/user/account
+// https://www.twilio.com/console
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const apiSecret = 'your_api_secret';
 const client = require('twilio')(accountSid, apiSecret);
