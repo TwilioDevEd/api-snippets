@@ -13,7 +13,7 @@ app.use(urlencoded({extended: false}));
 app.post('/voice', (request, response) => {
   // Get information about the incoming call, like the city associated
   // with the phone number (if Twilio can discover it)
-  let city = request.body.FromCity;
+  const city = request.body.FromCity;
 
   // Use the Twilio Node.js SDK to build an XML response
   let twiml = new twilio.TwimlResponse();

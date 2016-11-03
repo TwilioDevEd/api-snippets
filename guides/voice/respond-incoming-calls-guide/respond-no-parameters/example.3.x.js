@@ -8,7 +8,7 @@ let app = express();
 // HTTP POST to /twiml in our application
 app.post((request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.say('hello world!', {voice: 'alice'});
 
   // Render the response as XML in reply to the webhook request
