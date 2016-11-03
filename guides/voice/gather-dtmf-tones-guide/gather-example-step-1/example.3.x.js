@@ -2,7 +2,7 @@ app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
   let twiml = new twilio.TwimlResponse();
 
-// helper function to set up a <Gather>
+  /** helper function to set up a <Gather> */
   function gather() {
     twiml.gather({numDigits: 1}, (gatherNode) => {
       gatherNode.say('For sales, press 1. For support, press 2.');
