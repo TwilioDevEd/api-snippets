@@ -1,5 +1,5 @@
 // Download the Node helper library from twilio.com/docs/node/install
-// These consts are your accountSid and authToken from twilio.com/user/account
+// These consts are your accountSid and authToken from https://www.twilio.com/console
 const twilio = require('twilio');
 
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
