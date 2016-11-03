@@ -2,13 +2,12 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
+
 let client = require('twilio')(accountSid, authToken);
 
 client.calls.create({
     url: 'http://demo.twilio.com/docs/voice.xml',
     to: '+14155551212',
     from: '+15017250604',
-    record: true,
-}, function(err, call) {
-    process.stdout.write(call.sid);
-});
+    record: 'true',
+}).then((call) => console.log(call.sid));
