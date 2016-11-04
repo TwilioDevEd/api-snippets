@@ -3,7 +3,7 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-let client = require('twilio')(accountSid, authToken);
+const client = require('twilio')(accountSid, authToken);
 
 client.calls.create({
     url: 'http://demo.twilio.com/docs/voice.xml',

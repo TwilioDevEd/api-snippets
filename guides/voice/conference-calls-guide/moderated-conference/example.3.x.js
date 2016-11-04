@@ -6,7 +6,7 @@ const urlencoded = require('body-parser').urlencoded;
 // Update with your own phone number in E.164 format
 const MODERATOR = '+15558675309';
 
-let app = express();
+const app = express();
 
 // Parse incoming POST params with Express middleware
 app.use(urlencoded({extended: false}));
@@ -15,7 +15,7 @@ app.use(urlencoded({extended: false}));
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
 
   // Start with a <Dial> verb
   twiml.dial(function(dialNode) {

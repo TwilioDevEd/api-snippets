@@ -2,12 +2,12 @@
 const express = require('express');
 const twilio = require('twilio');
 
-let app = express();
+const app = express();
 
 // Returns TwiML which prompts the caller to record a message
 app.post('/record', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.say('Hello. Please leave a message after the beep.');
 
   // Use <Record> to record and transcribe the caller's message

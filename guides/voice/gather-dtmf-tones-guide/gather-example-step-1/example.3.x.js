@@ -1,6 +1,6 @@
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
 
   /** helper function to set up a <Gather> */
   function gather() {

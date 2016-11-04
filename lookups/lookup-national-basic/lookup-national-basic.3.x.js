@@ -5,5 +5,7 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.lookups.v1.phoneNumbers('(510) 867-5309').fetch({countryCode: 'US'})
+client.lookups.v1
+  .phoneNumbers('(510) 867-5309')
+  .fetch({countryCode: 'US'})
   .then((number) => console.log(number.phoneNumber));

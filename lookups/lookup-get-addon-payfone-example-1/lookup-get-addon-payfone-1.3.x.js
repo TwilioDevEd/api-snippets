@@ -5,7 +5,7 @@ url.auth = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token';
 
 https.get(url, (res) => {
   res.on('data', (jsonString) => {
-    let lookup = JSON.parse(jsonString);
+    const lookup = JSON.parse(jsonString);
     console.log(`Phone Number ${lookup.phone_number} is currently owned : ${lookup.add_ons.results.payfone_tcpa_compliance.result.Response.NumberMatch}`);
   });
 }).on('error', (e) => {
