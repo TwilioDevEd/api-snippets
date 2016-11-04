@@ -1,9 +1,9 @@
 // Download the Node helper library from twilio.com/docs/node/install
-// These vars are your accountSid and authToken from twilio.com/user/account
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var LookupsClient = require('twilio').LookupsClient;
-var client = new LookupsClient(accountSid, authToken);
+// These consts are your accountSid and authToken from twilio.com/user/account
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const LookupsClient = require('twilio').LookupsClient;
+const client = new LookupsClient(accountSid, authToken);
 
 client.phoneNumbers('(510) 867-5309').get({
   countryCode: 'US',
@@ -11,4 +11,5 @@ client.phoneNumbers('(510) 867-5309').get({
 }, function(error, number) {
   console.log(number.carrier.type);
   console.log(number.carrier.name);
+});
 });
