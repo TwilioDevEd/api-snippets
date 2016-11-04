@@ -4,16 +4,16 @@ const twilio = require('twilio');
 
 const app = express();
 
-app.post('/voice', function(req, res) {
-    // Create TwiML response
-    const twiml = new twilio.TwimlResponse();  // FIXME: hows the class now?
-    twiml.say('Thanks for calling!');
+app.post('/voice', (req, res) => {
+  // Create TwiML response
+  const twiml = new twilio.TwimlResponse();  // FIXME: hows the class now?
+  twiml.say('Thanks for calling!');
 
-    res.set('Content-Type', 'text/xml');
-    res.send(twiml.toString());
+  res.set('Content-Type', 'text/xml');
+  res.send(twiml.toString());
 });
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // TODO: generate token
 });
 

@@ -1,3 +1,4 @@
+
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -6,11 +7,11 @@ const twilio = require('twilio');
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.post('/voice', function(req, res) {
+app.post('/voice', (req, res) => {
     // Create TwiML response
     const twiml = new twilio.TwimlResponse();
 
-    if(req.body.To) {
+    if (req.body.To) {
       twiml.dial({callerId: '+15017250604'}, function() {
         // wrap the phone number or client name in the appropriate TwiML verb
         // by checking if the number given has only digits and format symbols
@@ -28,7 +29,7 @@ app.post('/voice', function(req, res) {
     res.send(twiml.toString());
 });
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // TODO: generate token
 });
 

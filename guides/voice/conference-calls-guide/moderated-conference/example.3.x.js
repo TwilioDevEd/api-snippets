@@ -18,7 +18,7 @@ app.post('/voice', (request, response) => {
   const twiml = new twilio.TwimlResponse();
 
   // Start with a <Dial> verb
-  twiml.dial(function(dialNode) {
+  twiml.dial((dialNode) => {
     // If the caller is our MODERATOR, then start the conference when they
     // join and end the conference when they leave
     if(request.body.From == MODERATOR) {

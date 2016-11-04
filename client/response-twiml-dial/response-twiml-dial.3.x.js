@@ -6,23 +6,23 @@ const twilio = require('twilio');
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.post('/voice', function(req, res) {
-    // Create TwiML response
-    const twiml = new twilio.TwimlResponse();
+app.post('/voice', (req, res) => {
+  // Create TwiML response
+  const twiml = new twilio.TwimlResponse();
 
-    if(req.body.To) {
-      twiml.dial({callerId: '+15017250604'}, function() {
-        this.number(req.body.To);
-      });
-    } else {
-      twiml.say('Thanks for calling!');
-    }
+  if (req.body.To) {
+    twiml.dial({callerId: '+15017250604'}, function() {
+      this.number(req.body.To);
+    });
+  } else {
+    twiml.say('Thanks for calling!');
+  }
 
-    res.set('Content-Type', 'text/xml');
-    res.send(twiml.toString());
+  res.set('Content-Type', 'text/xml');
+  res.send(twiml.toString());
 });
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // TODO: generate token
 });
 

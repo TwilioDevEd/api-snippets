@@ -4,12 +4,12 @@ const twilio = require('twilio');
 
 const app = express();
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // put your Twilio API credentials here
   const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
   const authToken = 'your_auth_token';
 
-  let capability = new twilio.jwt.Capability(accountSid, authToken);
+  const capability = new twilio.jwt.Capability(accountSid, authToken);
   capability.allowClientIncoming('jenny');
   const token = capability.generate();
 
@@ -17,8 +17,8 @@ app.get('/token', function(req, res) {
   res.send(token);
 });
 
-app.post('/voice', function(req, res) {
-    // TODO: Create TwiML response
+app.post('/voice', (req, res) => {
+  // TODO: Create TwiML response
 });
 
 http.createServer(app).listen(1337, '127.0.0.1');
