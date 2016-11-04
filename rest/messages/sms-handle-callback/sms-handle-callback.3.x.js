@@ -6,7 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post('/MessageStatus', function(req, res) {
+app.post('/MessageStatus', (req, res) => {
   const messageSid = req.body.MessageSid;
   const messageStatus = req.body.MessageStatus;
 

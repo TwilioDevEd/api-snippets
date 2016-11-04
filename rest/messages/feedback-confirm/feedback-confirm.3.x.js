@@ -10,7 +10,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/confirm', function(req, res) {
+app.get('/confirm', (req, res) => {
   const uniqueId = req.query.id;
 
   // Lookup constiable `uniqueId` in a database to find messageSid
@@ -36,5 +36,5 @@ app.get('/confirm', function(req, res) {
 });
 
 http.createServer(app).listen(1337, () => {
-    console.log('Express server listening on port 1337');
+  console.log('Express server listening on port 1337');
 });

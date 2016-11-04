@@ -4,7 +4,7 @@ const twilio = require('twilio');
 
 const app = express();
 
-app.post('/', function(req, res) {
+app.post('/', (req, res) => {
   const twiml = new twilio.TwimlResponse();
 
   twiml.message('The Robots are coming! Head for the hills!');
@@ -13,6 +13,6 @@ app.post('/', function(req, res) {
   res.end(twiml.toString());
 });
 
-http.createServer(app).listen(1337, function() {
+http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });
