@@ -5,7 +5,9 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.monitor.v1.alerts('NO5a7a84730f529f0a76b3e30c01315d1a').remove()
+client.monitor.v1
+  .alerts('NO5a7a84730f529f0a76b3e30c01315d1a')
+  .remove()
   .then((data) =>
     console.log('Sid NO5a7a84730f529f0a76b3e30c01315d1a deleted successfully.'))
   .catch((error) => console.log(error));

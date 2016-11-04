@@ -12,7 +12,7 @@ const randomUsername = require('./randos');
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/token', function(request, response) {
+app.get('/token', (request, response) => {
   const identity = randomUsername();
 
   // Create an access token which we will sign and return to the client,
