@@ -5,8 +5,8 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.sip.ipAccessControlLists.create({
-    friendlyName: 'My new acl'
+  friendlyName: 'My new acl'
 })
 .then((ipAccessControlList) => {
-    process.stdout.write(ipAccessControlList.sid);
+  process.stdout.write(ipAccessControlList.sid);
 });
