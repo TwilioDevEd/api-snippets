@@ -5,10 +5,10 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.calls.create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com',
-    from: 'Jack',
-    sipAuthPassword: 'secret',
-    sipAuthUsername: 'jack'
-  })
-  .then((call) => process.stdout.write(call.sid));
+  url: 'http://www.example.com/sipdial.xml',
+  to: 'sip:kate@example.com',
+  from: 'Jack',
+  sipAuthPassword: 'secret',
+  sipAuthUsername: 'jack'
+})
+.then((call) => process.stdout.write(call.sid));
