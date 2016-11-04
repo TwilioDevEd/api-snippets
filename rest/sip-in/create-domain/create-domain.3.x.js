@@ -8,7 +8,7 @@ client.sip.domains.create({
     friendlyName: 'My Domain',
     voiceUrl: 'https://demo.twilio.com/welcome',
     authType: 'IP_ACL',
-    domainName: 'marlo.sip.twilio.com'
+    domainName: 'marlo.sip.twilio.com',
 })
 .then((domain) => {
     process.stdout.write(domain.sid);

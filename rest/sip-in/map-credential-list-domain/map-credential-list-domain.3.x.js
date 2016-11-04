@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 client.sip.domains('SD32a3c49700934481addd5ce1659f04d2')
   .credentialListMappings
   .create({
-    credentialListSid: 'CL32a3c49700934481addd5ce1659f04d2'
+    credentialListSid: 'CL32a3c49700934481addd5ce1659f04d2',
   })
   .then((credentialListMapping) => {
     process.stdout.write(credentialListMapping.sid);

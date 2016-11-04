@@ -9,6 +9,6 @@ client.calls.create({
   to: 'sip:kate@example.com',
   from: 'Jack',
   sipAuthPassword: 'secret',
-  sipAuthUsername: 'jack'
+  sipAuthUsername: 'jack',
 })
 .then((call) => process.stdout.write(call.sid));

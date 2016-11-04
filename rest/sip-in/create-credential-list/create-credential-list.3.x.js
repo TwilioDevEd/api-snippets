@@ -6,7 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sip.credentialLists
   .create({
-    friendlyName: 'Low Rises'
+    friendlyName: 'Low Rises',
   })
   .then((credentialList) => {
     process.stdout.write(credentialList.sid);

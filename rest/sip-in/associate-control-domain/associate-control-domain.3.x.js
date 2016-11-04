@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 client.sip.domains('SD32a3c49700934481addd5ce1659f04d2')
   .ipAccessControlListMappings
   .create({
-    ipAccessControlListSid: 'AL32a3c49700934481addd5ce1659f04d2'
+    ipAccessControlListSid: 'AL32a3c49700934481addd5ce1659f04d2',
   })
   .then((ipAccessControlListMapping) => {
     process.stdout.write(ipAccessControlListMapping.sid);

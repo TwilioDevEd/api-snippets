@@ -8,7 +8,7 @@ client.sip.credentialLists('CL32a3c49700934481addd5ce1659f04d2')
   .credentials
   .create({
     username: 'WeeBey',
-    password: '05'
+    password: '05',
   })
   .then((credential) => {
     process.stdout.write(credential.sid);

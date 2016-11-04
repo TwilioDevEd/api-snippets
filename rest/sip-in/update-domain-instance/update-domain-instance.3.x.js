@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 client.sip.domains('SD32a3c49700934481addd5ce1659f04d2')
   .update({
     friendlyName: 'Little Kevin',
-    voiceMethod: 'GET'
+    voiceMethod: 'GET',
   })
   .then((domain) => {
     console.log(domain.domainName);
