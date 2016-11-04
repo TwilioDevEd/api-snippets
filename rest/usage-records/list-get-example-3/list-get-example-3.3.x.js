@@ -4,5 +4,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.transcriptions
-  .each((transcription) => console.log(transcription.transcriptionText));
+const filterOpts = {
+  category: 'calls-inbound',
+  startDate: '2012-09-01',
+  endDate: '2012-09-30',
+};
+
+client.usage.records.each(filterOpts, (record) => console.log(record.price));

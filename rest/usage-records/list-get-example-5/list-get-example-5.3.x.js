@@ -4,5 +4,4 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.transcriptions
-  .each((transcription) => console.log(transcription.transcriptionText));
+client.usage.records.each((record) => console.log(record.count));
