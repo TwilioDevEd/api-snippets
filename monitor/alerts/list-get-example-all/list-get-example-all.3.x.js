@@ -5,5 +5,4 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.monitor.v1.alerts.list()
-  .then((alerts) => alerts.forEach((alert) => console.log(alert.alertText)));
+client.monitor.v1.alerts.each((alert) => console.log(alert.alertText));
