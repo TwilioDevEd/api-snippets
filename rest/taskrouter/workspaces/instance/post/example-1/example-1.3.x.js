@@ -9,6 +9,6 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .update({
     friendlyName: 'NewFriendlyName',
-    eventCallbackUrl: 'http://requestb.in/vh9reovh'
+    eventCallbackUrl: 'http://requestb.in/vh9reovh',
   })
   .then((workspace) => console.log(workspace.friendlyName));
