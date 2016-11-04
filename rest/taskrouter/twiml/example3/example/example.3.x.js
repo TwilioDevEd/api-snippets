@@ -11,8 +11,7 @@ app.post('/enqueue_call', function(request, response) {
     const json = JSON.stringify(arr);
 
     resp.enqueue(
-      {workflowSid: 'WW0123456789abcdef0123456789abcdef'},
-      (node) => {
+      {workflowSid: 'WW0123456789abcdef0123456789abcdef'}, (node) => {
         node.task(json, {
             priority: '5',
             timeout: '200',
