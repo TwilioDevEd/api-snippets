@@ -3,12 +3,7 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-const LookupsClient = require('twilio').LookupsClient;
-const client = new LookupsClient(accountSid, authToken);
+const client = require('twilio')(accountSid, authToken);
 
-client.phoneNumbers('+15108675309').get({
-  type: 'carrier',
-}, function(error, number) {
-  console.log(number.carrier.type);
-  console.log(number.carrier.name);
-});
+client.lookups.v1.phoneNumbers('+15108675309').fetch()
+  .then((number) => console.log(number.carrier.type, number.carrier.name));

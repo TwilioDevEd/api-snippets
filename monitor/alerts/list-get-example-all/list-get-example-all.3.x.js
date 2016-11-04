@@ -3,11 +3,7 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-const MonitorClient = require('twilio').MonitorClient;
-const client = new MonitorClient(accountSid, authToken);
+const client = require('twilio')(accountSid, authToken);
 
-client.alerts.list(function(err, data) {
-    data.alerts.forEach(function(alert) {
-        console.log(alert.alertText);
-    });
-});
+client.monitor.v1.alerts.list()
+  .then((alerts) => alerts.forEach((alert) => console.log(alert.alertText)));
