@@ -4,10 +4,5 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+client.shortCodes.each({shortCode: '67898'},
+                       (shortCode) => console.log(shortCode.smsMethod));

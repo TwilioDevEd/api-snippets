@@ -4,10 +4,9 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+const notificationSid = 'NO5a7a84730f529f0a76b3e30c01315d1a';
+
+client.notifications(notificationSid)
+  .remove()
+  .then(() => console.log(`Sid ${notificationSid} deleted successfully.`))
+  .catch((err) => console.log(err.status));

@@ -4,10 +4,12 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+const recordingSid = 'RE557ce644e5ab84fa21cc21112e22c485';
+
+client.recordings(recordingSid)
+  .remove()
+  .then(() => console.log(`Sid ${recordingSid} deleted successfully.`))
+  .catch((err) => {
+    console.log(err.status);
+    throw err;
+  });

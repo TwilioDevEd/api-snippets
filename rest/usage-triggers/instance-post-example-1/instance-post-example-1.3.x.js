@@ -4,10 +4,9 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
+client.usage.triggers('UT33c6aeeba34e48f38d6899ea5b765ad4')
+  .update({
+    friendlyName: 'Monthly Maximum Call Usage',
+    callbackUrl: 'https://www.example.com/monthly-usage-trigger',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then((trigger) => console.log(trigger.dateFired));

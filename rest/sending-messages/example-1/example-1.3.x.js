@@ -4,10 +4,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+client.messages.create({
+  body: 'Jenny please?! I love you <3',
+  to: '+15558675309',
+  from: '+14158141829',
+  mediaUrl: 'http://www.example.com/hearts.png',
+})
+.then((message) => process.stdout.write(message.sid));

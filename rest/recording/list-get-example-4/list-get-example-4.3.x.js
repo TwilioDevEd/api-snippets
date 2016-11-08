@@ -4,10 +4,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+const filterOpts = {
+  dateCreatedBefore: '2016-10-15',
+  dateCreatedAfter: '2016-10-12',
+};
+
+client.recordings
+  .each(filterOpts, (recording) => console.log(recording.duration));

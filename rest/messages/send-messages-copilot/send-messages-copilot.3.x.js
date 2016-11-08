@@ -4,10 +4,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
+client.messages
   .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
+    messagingServiceSid: 'MG9752274e9e519418a7406176694466fa',
+    to: '+16518675309',
+    body: 'Phantom Menace was clearly the best of the prequel trilogy.',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then((message) => console.log(message));

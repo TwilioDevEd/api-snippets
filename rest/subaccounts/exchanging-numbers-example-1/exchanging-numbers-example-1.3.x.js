@@ -4,10 +4,9 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
+client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .incomingPhoneNumbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
+  .update({
+    accountSid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then((number) => console.log(number));

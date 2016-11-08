@@ -4,10 +4,12 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls
-  .create({
-    url: 'http://www.example.com/sipdial.xml',
-    to: 'sip:kate@example.com?hatchkey=4815162342',
-    from: 'Jack',
-  })
-  .then((call) => process.stdout.write(call.sid));
+const particantSid = 'CA386025c9bf5d6052a1d1ea42b4d16662';
+
+client.conferences('CFbbe4632a3c49700934481addd5ce1659')
+  .participants(particantSid)
+  .remove(() => console.log(`Sid ${particantSid} deleted successfully.`))
+  .catch((err) => {
+    console.log(err.status);
+    throw err;
+  });
