@@ -3,8 +3,8 @@
 		<CallSid>CA386025c9bf5d6052a1d1ea42b4d16662</CallSid>
 		<ConferenceSid>CFbbe46ff1274e283f7e3ac1df0072ab39</ConferenceSid>
 		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
-		<Muted>true</Muted>
-		<Hold>false</Hold>
+		<Muted>false</Muted>
+		<Hold>true</Hold>
 		<EndConferenceOnExit>true</EndConferenceOnExit>
 		<StartConferenceOnEnter>true</StartConferenceOnEnter>
 		<DateCreated>Wed, 18 Aug 2010 20:20:10 +0000</DateCreated>
