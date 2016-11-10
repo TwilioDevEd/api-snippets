@@ -4,6 +4,7 @@
 		<ConferenceSid>CFbbe46ff1274e283f7e3ac1df0072ab39</ConferenceSid>
 		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 		<Muted>false</Muted>
+		<Hold>false</Hold>
 		<EndConferenceOnExit>true</EndConferenceOnExit>
 		<StartConferenceOnEnter>true</StartConferenceOnEnter>
 		<DateCreated>Wed, 18 Aug 2010 20:20:10 +0000</DateCreated>
