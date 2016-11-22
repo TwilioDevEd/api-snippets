@@ -27,7 +27,7 @@ module Model
         { name: 'Twilio.Auth', version: '1.2.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.0.0-rc6' },
+        { name: 'Twilio', version: '5.0.0-rca1' },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
