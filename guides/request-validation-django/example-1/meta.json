@@ -1,0 +1,5 @@
+{
+  "title": "Custom decorator for Django projects to validate Twilio requests",
+  "description": "Confirm incoming requests to your Django views are genuine with this custom decorator.",
+  "type": "server"
+}
