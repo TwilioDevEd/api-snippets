@@ -1,0 +1,5 @@
+{
+  "title": "Custom decorator for Flask apps to validate Twilio requests",
+  "description": "Confirm incoming requests to your Flask views are genuine with this custom decorator.",
+  "type": "server"
+}

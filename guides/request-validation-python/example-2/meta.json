@@ -1,0 +1,5 @@
+{
+  "title": "Apply the request validation decorator to a Flask view",
+  "description": "Apply a custom Twilio request validation decorator to a Flask view used for Twilio webhooks.",
+  "type": "server"
+}

@@ -1,0 +1,5 @@
+{
+  "title": "An improved Flask request validation decorator, useful for testing",
+  "description": "Use this version of the custom Flask decorator if you test your Flask views.",
+  "type": "server"
+}
