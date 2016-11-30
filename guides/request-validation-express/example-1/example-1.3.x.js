@@ -1,4 +1,7 @@
+var app = require('express')();
+var bodyParser = require('body-parser');
 var twilio = require('twilio');
+var TwimlResponse = twilio.TwimlResponse;
 // You can find your Twilio Auth Token here: https://www.twilio.com/console
 // Which can be set at runtime as follows:
 // $ TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXX node index.js
@@ -44,10 +47,6 @@ function validateTwilioRequest() {
   };
 }
 
-var app = require('express')();
-var bodyParser = require('body-parser');
-// var twilio = require('twilio');
-var TwimlResponse = twilio.TwimlResponse;
 
 app.use(bodyParser.urlencoded({extended: false}));
 
