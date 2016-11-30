@@ -2,17 +2,17 @@
 // Which can be set at runtime as follows:
 // $ TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXX node index.js
 // Please note that this will not work unless you set the TWILIO_AUTH_TOKEN
-// environment variable.
-var twilio = require('twilio');
-var app = require('express')();
-var bodyParser = require('body-parser');
-var TwimlResponse = twilio.TwimlResponse;
+// environment constiable.
+const twilio = require('twilio');
+const app = require('express')();
+const bodyParser = require('body-parser');
+const TwimlResponse = twilio.TwimlResponse;
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.post('/voice', twilio.webhook(), function(req, res) {
+app.post('/voice', twilio.webhook(), (req, res) => {
   // Twilio Voice URL - receives incoming calls from Twilio
-  var response = new TwimlResponse();
+  const response = new TwimlResponse();
 
   response.say(
     `Thanks for calling!
@@ -23,9 +23,9 @@ app.post('/voice', twilio.webhook(), function(req, res) {
   res.send(response.toString());
 });
 
-app.post('/message', twilio.webhook(), function(req, res) {
+app.post('/message', twilio.webhook(), (req, res) => {
   // Twilio Messaging URL - receives incoming messages from Twilio
-  var response = new TwimlResponse();
+  const response = new TwimlResponse();
 
   response.message(`Your text to me was ${req.body.Body.length} characters long. Webhooks are neat :)`);
 
