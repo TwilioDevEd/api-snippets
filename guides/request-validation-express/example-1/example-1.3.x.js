@@ -20,6 +20,8 @@ app.post('/voice', twilio.webhook(), (req, res) => {
      Goodbye!`
   );
 
+  response.set('Content-Type', 'text/xml');
+
   res.send(response.toString());
 });
 
@@ -28,6 +30,8 @@ app.post('/message', twilio.webhook(), (req, res) => {
   const response = new TwimlResponse();
 
   response.message(`Your text to me was ${req.body.Body.length} characters long. Webhooks are neat :)`);
+
+  response.set('Content-Type', 'text/xml');
 
   res.send(response.toString());
 });
