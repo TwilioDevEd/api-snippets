@@ -1,0 +1,5 @@
+{
+  "title": "Apply the request validation filter to a set of Servlets",
+  "description": "Apply a custom Twilio request validation filter to a set of Servlets used for Twilio webhooks.",
+  "type": "server"
+}
