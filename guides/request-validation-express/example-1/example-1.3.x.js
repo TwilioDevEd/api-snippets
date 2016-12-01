@@ -17,7 +17,9 @@ app.post('/voice', twilio.webhook(), (req, res) => {
 
   response.say(
     `Thanks for calling!
-     Your phone number is ${req.body.From}. I got your call because of Twilio´s webhook.
+     Your phone number is ${req.body.From}. I got your call because of Twilio´s
+     webhook.
+
      Goodbye!`
   );
   response.set('Content-Type', 'text/xml');
@@ -29,11 +31,12 @@ app.post('/message', twilio.webhook(), (req, res) => {
   // Twilio Messaging URL - receives incoming messages from Twilio
   const response = new TwimlResponse();
 
-  response.message(`Your text to me was ${req.body.Body.length} characters long. Webhooks are neat :)`);
+  response.message(`Your text to me was ${req.body.Body.length} characters long.
+                    Webhooks are neat :)`);
+
   response.set('Content-Type', 'text/xml');
 
   res.send(response.toString());
 });
 
 app.listen(3000);
-
