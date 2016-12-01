@@ -7,6 +7,9 @@
 
 require 'sinatra'
 require 'twilio-ruby'
+require 'rack'
+
+use Rack::TwilioWebhookAuthentication, ENV['TWILIO_AUTH_TOKEN'], '/'
 
 post '/' do
   content_type 'text/xml'
