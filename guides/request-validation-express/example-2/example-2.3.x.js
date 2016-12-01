@@ -2,7 +2,7 @@
 // Which can be set at runtime as follows:
 // $ TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXX node index.js
 // Please note that this will not work unless you set the TWILIO_AUTH_TOKEN
-// environment constiable.
+// environment variable.
 const twilio = require('twilio');
 const app = require('express')();
 const bodyParser = require('body-parser');
