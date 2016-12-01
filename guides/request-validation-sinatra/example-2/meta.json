@@ -1,0 +1,5 @@
+{
+  "title":       "Use Twilio webhook middleware for Sinatra app that validates Twilio requests",
+  "description": "Confirm incoming requests to your Sinatra app are genuine with this validation.",
+  "type":        "server"
+}
