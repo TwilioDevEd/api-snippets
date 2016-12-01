@@ -1,9 +1,6 @@
 require 'sinatra'
 require 'twilio-ruby'
 require 'rack'
-require 'dotenv'
-
-Dotenv.load
 
 use Rack::TwilioWebhookAuthentication, ENV['TWILIO_AUTH_TOKEN'], '/'
 
