@@ -3,12 +3,13 @@
 // $ TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXX node index.js
 // Please note that this will not work unless you set the TWILIO_AUTH_TOKEN
 // environment variable.
+
 const twilio = require('twilio');
 const app = require('express')();
 const bodyParser = require('body-parser');
 const TwimlResponse = twilio.TwimlResponse;
 
-const shouldValidate = process.env.NODE_ENV === 'test';
+const shouldValidate = process.env.NODE_ENV !== 'test';
 
 app.use(bodyParser.urlencoded({extended: false}));
 
