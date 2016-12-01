@@ -31,13 +31,13 @@ public class TwilioRequestValidatorFilter implements Filter {
 
             // Concatenates the request URL with the query string
             String pathAndQueryUrl = getRequestUrlAndQueryString(httpRequest);
-            // Extracts only the form parameters and converts the parameters Map type
-            Map<String, String> formParams = extractPostParams(httpRequest);
+            // Extracts only the POST parameters and converts the parameters Map type
+            Map<String, String> postParams = extractPostParams(httpRequest);
             String signatureHeader = httpRequest.getHeader("X-Twilio-Signature");
 
             isValidRequest = requestValidator.validate(
                     pathAndQueryUrl,
-                    formParams,
+                    postParams,
                     signatureHeader);
         }
 
