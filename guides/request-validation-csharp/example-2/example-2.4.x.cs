@@ -1,41 +1,35 @@
-using System;
-using System.Configuration;
-using System.Web;
 using System.Web.Mvc;
 using Twilio.TwiML;
 using Twilio.TwiML.Mvc;
+using ValidateRequestExample.Filters;
 
-namespace helloworldcsharp.Controllers
+namespace ValidateRequestExample.Controllers
 {
-	public class IncomingController : Controller
-	{
-		[RequestValidatorFilter]
-		public ActionResult Voice (string From)
-		{
-			var response = new TwilioResponse();
-			var message = @"
-				Thanks for calling!
+    public class IncomingController : TwilioController
+    {
+        [ValidateTwilioRequest]
+        public ActionResult Voice(string from)
+        {
+            var response = new TwilioResponse();
+            const string message = "Thanks for calling! " +
+                "Your phone number is {0}. I got your call because of Twilio's webhook. " +
+                "Goodbye!";
 
-    			Your phone number is {0}. I got your call because of Twilio's webhook.
+            response.Say(string.Format(message, from));
+            response.Hangup();
 
-    			Goodbye!
-			";
-			response.Say(string.Format(message, From));
-			response.Hangup();
+            return TwiML(response);
+        }
 
-			return new TwiMLResult(response);
-		}
+        [ValidateTwilioRequest]
+        public ActionResult Message(string body)
+        {
+            var response = new TwilioResponse();
 
-		[RequestValidatorFilter]
-		public ActionResult Message (string Body)
-		{
-			var response = new TwilioResponse();
-			var message = "Your text to me was {0} characters long. Webhooks are neat :)";
+            response.Say($"Your text to me was {body.Length} characters long. Webhooks are neat :)");
+            response.Hangup();
 
-			response.Say(string.Format(message, Body.Length));
-			response.Hangup();
-
-			return new TwiMLResult(response);
-		}
-	}
+            return TwiML(response);
+        }
+    }
 }

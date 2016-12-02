@@ -3,28 +3,38 @@ using System.Configuration;
 using System.Web;
 using System.Net;
 using System.Web.Mvc;
-using Twilio;
 using Twilio.TwiML;
 
-namespace helloworldcsharp
+namespace ValidateRequestExample.Filters
 {
-	public class RequestValidatorFilterAttribute : ActionFilterAttribute
-	{
+    [AttributeUsage(AttributeTargets.Method)]
+    public class ValidateTwilioRequestAttribute : ActionFilterAttribute
+    {
+        private readonly RequestValidator _requestValidator = new RequestValidator();
+        private readonly string _twilioAuthTokenKey;
 
-		private static readonly Lazy<RequestValidator> TwilioRequestValidator
-			= new Lazy<RequestValidator>(() => new RequestValidator());
+        public ValidateTwilioRequestAttribute(string twilioAuthTokenKey)
+        {
+            _twilioAuthTokenKey = twilioAuthTokenKey;
+        }
 
-		public override void OnActionExecuting(ActionExecutingContext filterContext)
-		{
-			var twilioAuthToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
-			var context = ((HttpApplication)filterContext.HttpContext.GetService(typeof(HttpApplication))).Context;
-			var isValidRequest = TwilioRequestValidator.Value.IsValidRequest(context, twilioAuthToken);
+        public ValidateTwilioRequestAttribute()
+        {
+            _twilioAuthTokenKey = "TwilioAuthToken";
+        }
 
-			if (!isValidRequest)
-			{
-				filterContext.Result = new System.Web.Mvc.HttpStatusCodeResult(HttpStatusCode.Forbidden);
-			}
-			base.OnActionExecuting(filterContext);
-		}
-	}
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            var twilioAuthToken = ConfigurationManager.AppSettings[_twilioAuthTokenKey];
+            var context = ((HttpApplication)filterContext.HttpContext.GetService(typeof(HttpApplication))).Context;
+            var isValidRequest = _requestValidator.IsValidRequest(context, twilioAuthToken);
+
+            if(!isValidRequest)
+            {
+                filterContext.Result = new System.Web.Mvc.HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
+            base.OnActionExecuting(filterContext);
+        }
+    }
 }

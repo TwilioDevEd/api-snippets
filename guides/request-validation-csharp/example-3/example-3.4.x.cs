@@ -3,35 +3,41 @@ using System.Configuration;
 using System.Web;
 using System.Net;
 using System.Web.Mvc;
-using Twilio;
 using Twilio.TwiML;
 
-namespace helloworldcsharp
+namespace ValidateRequestExample.Filters
 {
-	public class RequestValidatorFilterAttribute : ActionFilterAttribute
-	{
+    [AttributeUsage(AttributeTargets.Method)]
+    public class ValidateTwilioRequestAttribute : ActionFilterAttribute
+    {
+        private readonly RequestValidator _requestValidator = new RequestValidator();
+        private readonly bool _isTestEnvironment;
+        private readonly string _twilioAuthTokenKey;
 
-		private static readonly Lazy<RequestValidator> TwilioRequestValidator
-			= new Lazy<RequestValidator>(() => new RequestValidator());
+        public ValidateTwilioRequestAttribute(string twilioAuthTokenKey, string isTestEnvironmentKey)
+        {
+            _twilioAuthTokenKey = twilioAuthTokenKey;
+            _isTestEnvironment = bool.Parse(ConfigurationManager.AppSettings[isTestEnvironmentKey]);
+        }
 
-		private readonly bool IsTestEnvironment;
+        public ValidateTwilioRequestAttribute()
+        {
+            _twilioAuthTokenKey = "TwilioAuthToken";
+            _isTestEnvironment = bool.Parse(ConfigurationManager.AppSettings["IsTestEnvironment"]);
+        }
 
-		public RequestValidatorFilterAttribute ()
-		{
-			this.IsTestEnvironment = bool.Parse(ConfigurationManager.AppSettings["IsTestEnvironment"]);
-		}
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            var twilioAuthToken = ConfigurationManager.AppSettings[_twilioAuthTokenKey];
+            var context = ((HttpApplication)filterContext.HttpContext.GetService(typeof(HttpApplication))).Context;
+            var isValidRequest = _requestValidator.IsValidRequest(context, twilioAuthToken);
 
-		public override void OnActionExecuting(ActionExecutingContext filterContext)
-		{
-			var twilioAuthToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
-			var context = ((HttpApplication)filterContext.HttpContext.GetService(typeof(HttpApplication))).Context;
-			var isValidRequest = TwilioRequestValidator.Value.IsValidRequest(context, twilioAuthToken);
+            if(!isValidRequest && !_isTestEnvironment)
+            {
+                filterContext.Result = new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
 
-			if (!isValidRequest && !IsTestEnvironment)
-			{
-				filterContext.Result = new System.Web.Mvc.HttpStatusCodeResult(HttpStatusCode.Forbidden);
-			}
-			base.OnActionExecuting(filterContext);
-		}
-	}
+            base.OnActionExecuting(filterContext);
+        }
+    }
 }
