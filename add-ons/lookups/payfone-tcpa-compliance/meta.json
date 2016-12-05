@@ -1,5 +1,4 @@
 {
-  "description": "Use the Payfone TCPA Add-on ([`payfone_tcpa_compliance`](https://www.twilio.com/marketplace/add-ons/payfone-tcpa-compliance)) to retrieve additional information about a phone number.",
   "type": "server",
   "title": "Lookups with Payfone TCPA Compliance Add-on"
 }
