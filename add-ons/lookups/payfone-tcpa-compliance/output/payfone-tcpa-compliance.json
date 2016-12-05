@@ -1,0 +1,24 @@
+{
+  "code": null,
+  "message": null,
+  "results": {
+    "payfone_tcpa_compliance": {
+      "code": null,
+      "message": null,
+      "request_sid": "XRbf6b302b9ba37726eb04bf590e937d3c",
+      "result": {
+        "Description": "Success.",
+        "RequestId": "XRbf6b302b9ba37726eb04bf590e937d3c",
+        "Response": {
+          "MSISDNType": "Landline",
+          "NumberMatch": "I",
+          "PayfoneAlias": null,
+          "VerifyNumberTransactionId": "1154411284"
+        },
+        "Status": 0
+      },
+      "status": "successful"
+    }
+  },
+  "status": "successful"
+}
