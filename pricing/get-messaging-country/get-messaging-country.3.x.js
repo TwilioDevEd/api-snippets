@@ -6,12 +6,12 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken).pricing;
 
 client.messaging.countries('EE').fetch()
-  .then(country => {
+  .then((country) => {
     country.inboundSmsPrices.forEach(
-      price => console.log(`${price.number_type} ${price.current_price}`)
+      (price) => console.log(`${price.number_type} ${price.current_price}`)
     );
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
     throw err;
   });
