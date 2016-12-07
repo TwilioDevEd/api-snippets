@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over records and print out a property for each one
 @client.account.usage.records.list.each do |record|
-    puts record.count
+  puts record.count
 end

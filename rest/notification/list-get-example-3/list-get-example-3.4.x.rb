@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Loop over notifications and print out a property for each one
 @client.account.notifications.list({
-    :"message_date>" => "2009-07-06",
-    :log => "1"}).each do |notification|
-    puts notification.request_url
+  :"message_date>" => "2009-07-06",
+  :log => "1"}).each do |notification|
+  puts notification.request_url
 end

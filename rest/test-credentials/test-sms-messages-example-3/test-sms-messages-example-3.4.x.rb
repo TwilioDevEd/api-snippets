@@ -12,4 +12,3 @@ message = @client.account.messages.create(
   :from => '+15005550006')
 
 puts message.sid
-

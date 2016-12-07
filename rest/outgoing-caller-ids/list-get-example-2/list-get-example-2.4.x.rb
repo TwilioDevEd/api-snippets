@@ -10,6 +10,6 @@ auth_token = 'your_auth_token'
 
 # Loop over caller_ids and print out a property for each one
 @client.account.outgoing_caller_ids.list({
-    :phone_number => "+14158675309"}).each do |caller_id|
-    puts caller_id.phone_number
+  :phone_number => "+14158675309"}).each do |caller_id|
+  puts caller_id.phone_number
 end

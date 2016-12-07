@@ -13,6 +13,5 @@ auth_token = 'your_auth_token'
   :from => 'from_number',
   :date => '2015-04-01T00:00:00Z'
 }).each do |message|
-    puts message.body
+  puts message.body
 end
-
