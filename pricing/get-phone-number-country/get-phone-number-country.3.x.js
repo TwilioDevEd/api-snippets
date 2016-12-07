@@ -5,10 +5,10 @@ const authToken = 'your_auth_token';
 // Get twilio-node from twilio.com/docs/libraries/node
 const client = require('twilio')(accountSid, authToken).pricing;
 
-client.voice.countries('US').fetch()
+client.phoneNumbers.countries('US').fetch()
   .then((country) => {
-    country.inboundCallPrices.forEach((price) => {
-        console.log(`Base:${price.base_price} Current:${price.current_price}`);
+    country.phoneNumberPrices.forEach((price) => {
+        console.log(`${price.number_type} ${price.current_price}`);
     });
   })
   .catch((error) => {
