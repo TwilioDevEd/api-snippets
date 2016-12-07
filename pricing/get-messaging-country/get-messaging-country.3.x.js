@@ -7,11 +7,11 @@ const client = require('twilio')(accountSid, authToken).pricing;
 
 client.messaging.countries('EE').fetch()
   .then((country) => {
-    country.inboundSmsPrices.forEach(
-      (price) => console.log(`${price.number_type} ${price.current_price}`)
-    );
+    country.inboundSmsPrices.forEach((price) => {
+      console.log(`${price.number_type} ${price.current_price}`);
+    });
   })
-  .catch((err) => {
-    console.log(err);
-    throw err;
+  .catch((error) => {
+    console.log(error);
+    throw error;
   });

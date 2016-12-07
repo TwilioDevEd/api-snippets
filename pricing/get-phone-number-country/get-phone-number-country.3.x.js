@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken).pricing;
 client.phoneNumbers.countries('US').fetch()
   .then((country) => {
     country.phoneNumberPrices.forEach((price) => {
-        console.log(`${price.number_type} ${price.current_price}`);
+      console.log(`${price.number_type} ${price.current_price}`);
     });
   })
   .catch((error) => {
