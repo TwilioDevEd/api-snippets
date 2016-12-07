@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @address = @client.account.addresses.get("AD2a0747eba6abf96b7e3c3ff0b4530f6e")
 @address.update(customer_name: "Customer 456",
-    street: "2 Hasselhoff Lane")
+  street: "2 Hasselhoff Lane")
 puts @address.customer_name

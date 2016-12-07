@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over authorized_apps and print out a property for each one
 @client.account.authorized_connect_apps.list.each do |authorized_app|
-    puts authorized_app.connect_app_homepage_url
+  puts authorized_app.connect_app_homepage_url
 end

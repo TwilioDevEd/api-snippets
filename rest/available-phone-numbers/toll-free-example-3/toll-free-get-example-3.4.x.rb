@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 @numbers = @client.account.available_phone_numbers.get('US').toll_free.list(:area_code => "800",
-    :contains => "KYLO")
+:contains => "KYLO")
 
 # Purchase the number
 @number = @numbers[0].phone_number

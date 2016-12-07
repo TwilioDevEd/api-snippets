@@ -1,6 +1,4 @@
-# NOTE: This example uses the next generation Twilio helper library - for more
-# information on how to download and install this version, visit
-# https://www.twilio.com/docs/libraries/ruby
+# Download the Ruby helper library from twilio.com/docs/libraries/ruby
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account

@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @member = @client.account.queues.get('QU5ef8732a3c49700934481addd5ce1659').members.get("CA5ef8732a3c49700934481addd5ce1659")
 @member.update(:url => "http://demo.twilio.com/docs/voice.xml",
-    :method => "POST")
+               :method => "POST")
 puts @member.position

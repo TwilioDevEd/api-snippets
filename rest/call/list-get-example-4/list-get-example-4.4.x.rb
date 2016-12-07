@@ -10,8 +10,8 @@ auth_token = 'your_auth_token'
 
 # Loop over calls and print out a property for each one
 @client.account.calls.list({
-    :status => "in-progress",
-    :"start_time>" => "2009-07-04",
-    :"start_time<" => "2009-07-06"}).each do |call|
-    puts call.to
+  :status => "in-progress",
+  :"start_time>" => "2009-07-04",
+  :"start_time<" => "2009-07-06"}).each do |call|
+  puts call.to
 end

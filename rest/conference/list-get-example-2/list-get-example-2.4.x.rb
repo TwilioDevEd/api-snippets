@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Loop over conferences and print out a property for each one
 @client.account.conferences.list({
-    :status => "in-progress",
-    :friendly_name => "MyRoom"}).each do |conference|
-    puts conference.status
+  :status => "in-progress",
+  :friendly_name => "MyRoom"}).each do |conference|
+  puts conference.status
 end

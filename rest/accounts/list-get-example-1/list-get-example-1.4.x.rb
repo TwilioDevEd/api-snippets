@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over accounts and print out a property for each one
 @client.accounts.list.each do |account|
-    puts account.date_created
+  puts account.date_created
 end
