@@ -1,14 +1,12 @@
-// Download the Node helper library from twilio.com/docs/node/install
-// These are your accountSid and authToken from https://www.twilio.com/console
+// Get your Account SID and Auth Token from twilio.com/console
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
-const PricingClient = require('twilio').PricingClient;
-const client = new PricingClient(accountSid, authToken);
+// Get twilio-node from twilio.com/docs/libraries/node
+const client = require('twilio')(accountSid, authToken).pricing;
 
-client.messaging.countries.list((error, response) => {
-    const cList = response.countries;
-    for (let i = 0; i < cList.length; i++) {
-        console.log(cList[i].isoCountry);
-    }
+client.messaging.countries.list().then((countriesList) => {
+    countriesList.forEach((country) => {
+        console.log(country.isoCountry);
+    });
 });
