@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 app = @client.account.applications.create(:friendly_name => "Phone Me",
-    :voice_url => "http://demo.twilio.com/docs/voice.xml",
-    :voice_method => "GET")
+                                          :voice_url => "http://demo.twilio.com/docs/voice.xml",
+                                          :voice_method => "GET")
 puts app.voice_url

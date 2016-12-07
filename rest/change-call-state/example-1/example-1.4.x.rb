@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @call = @client.account.calls.get("CAe1644a7eed5088b159577c5802d8be38")
 @call.update(:url => "http://demo.twilio.com/docs/voice.xml",
-    :method => "POST")
+             :method => "POST")
 puts @call.to

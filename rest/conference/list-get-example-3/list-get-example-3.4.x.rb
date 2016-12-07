@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Loop over conferences and print out a property for each one
 @client.account.conferences.list({
-    :status => "completed",
-    :date_created => "2009-07-06"}).each do |conference|
-    puts conference.status
+  :status => "completed",
+  :date_created => "2009-07-06"}).each do |conference|
+  puts conference.status
 end

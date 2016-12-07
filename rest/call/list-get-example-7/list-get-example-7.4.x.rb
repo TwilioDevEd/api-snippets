@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 
 
 # Loop over calls and print out a property for each one
-@client.account.calls.list({
-    :from => "client:tommy"}).each do |call|
-    puts call.direction
+@client.account.calls.list(
+  :from => "client:tommy").each do |call|
+  puts call.direction
 end
