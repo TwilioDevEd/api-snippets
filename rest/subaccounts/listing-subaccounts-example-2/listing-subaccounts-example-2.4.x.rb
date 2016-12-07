@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 
 
 # Loop over accounts and print out a property for each one
-@client.accounts.list({:friendly_name => "MySubaccount"}).each do |account|
-    puts account.status
+@client.accounts.list(:friendly_name => "MySubaccount").each do |account|
+  puts account.status
 end

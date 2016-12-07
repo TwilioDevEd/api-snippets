@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over transcriptions and print out a property for each one
 @client.account.transcriptions.list.each do |transcription|
-    puts transcription.transcription_text
+  puts transcription.transcription_text
 end

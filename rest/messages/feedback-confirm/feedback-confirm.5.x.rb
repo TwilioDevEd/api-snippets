@@ -3,7 +3,7 @@ require 'twilio-ruby'
 require 'sinatra'
 
 post '/confirm' do
-  # Get your Account Sid and Auth Token from https://www.twilio.com/console
+  # Get your Account SID and Auth Token from twilio.com/console
   account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   auth_token = 'your_auth_token'
 

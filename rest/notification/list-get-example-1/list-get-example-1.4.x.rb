@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over notifications and print out a property for each one
 @client.account.notifications.list.each do |notification|
-    puts notification.message_text
+  puts notification.message_text
 end
