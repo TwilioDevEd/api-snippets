@@ -4,10 +4,7 @@ Content-Type: application/json
       "commands": {
         "enabled": true
       },
-      "renewal": {
-        "period": 1,
-        "units": "months"
-      },
+      "renewal": "monthly",
       "date_updated": "2016-09-01T08:21:09Z",
       "friendly_name" : "Data-only US automotive rate plan",
       "account_sid": "AC697be68cf818dfef7fec68c390fa3e1e",
