@@ -32,5 +32,11 @@ default_target = Twilio::TaskRouter::WorkflowRuleTarget.new everyone_queue_sid
 config = Twilio::TaskRouter::WorkflowConfiguration.new rules, default_target
 json = config.to_json
 
-workflow = client.workspace.workflows.create(friendly_name: 'Sales, Marketing, Support Workflow', assignment_callback_url: 'http://example.com', fallback_assignment_callback_url: 'http://example.2com', task_reservation_timeout: '30', configuration: json)
+workflow = client.workspace.workflows.create(
+  friendly_name: 'Sales, Marketing, Support Workflow',
+  assignment_callback_url: 'http://example.com',
+  fallback_assignment_callback_url: 'http://example.2com',
+  task_reservation_timeout: '30',
+  configuration: json)
+  
 puts workflow.friendly_name

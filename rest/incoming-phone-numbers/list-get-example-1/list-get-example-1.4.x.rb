@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over numbers and print out a property for each one
 @client.account.incoming_phone_numbers.list.each do |number|
-    puts number.phone_number
+  puts number.phone_number
 end

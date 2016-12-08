@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Loop over members and print out a property for each one
 @client.account.queues.get('QU5ef8732a3c49700934481addd5ce1659').members.list.each do |member|
-    puts member.position
+  puts member.position
 end

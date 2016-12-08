@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over connect_apps and print out a property for each one
 @client.account.connect_apps.list.each do |connect_app|
-    puts connect_app.friendly_name
+  puts connect_app.friendly_name
 end

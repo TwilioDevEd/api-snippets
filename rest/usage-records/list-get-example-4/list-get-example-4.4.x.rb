@@ -10,8 +10,8 @@ auth_token = 'your_auth_token'
 
 # Loop over records and print out a property for each one
 @client.account.usage.records.daily.list({
-    :category => "calls-inbound",
-    :start_date => "2012-09-01",
-    :end_date => "2012-09-30"}).each do |record|
+  :category => "calls-inbound",
+  :start_date => "2012-09-01",
+  :end_date => "2012-09-30"}).each do |record|
     puts record.price
-end
+  end

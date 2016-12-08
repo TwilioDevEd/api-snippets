@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @trigger = @client.account.usage.triggers.get("UT33c6aeeba34e48f38d6899ea5b765ad4")
 @trigger.update(:friendly_name => "Monthly Maximum Call Usage",
-    :callback_url => "https://www.example.com/monthly-usage-trigger")
+                :callback_url => "https://www.example.com/monthly-usage-trigger")
 puts @trigger.date_fired

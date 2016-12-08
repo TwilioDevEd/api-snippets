@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over apps and print out a property for each one
 @client.account.keys.list.each do |key|
-    puts key.friendly_name
+  puts key.friendly_name
 end

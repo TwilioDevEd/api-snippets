@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over messages and print out a property for each one
 @client.account.messages.list.each do |message|
-    puts message.body
+  puts message.body
 end

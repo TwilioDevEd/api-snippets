@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over participants and print out a property for each one
 @client.account.conferences.get('CFbbe4632a3c49700934481addd5ce1659').participants.list.each do |participant|
-    puts participant.muted
+  puts participant.muted
 end
