@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over recordings and print out a property for each one
 @client.account.recordings.list.each do |recording|
-    puts recording.duration
+  puts recording.duration
 end

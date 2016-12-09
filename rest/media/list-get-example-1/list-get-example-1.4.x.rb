@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over medias and print out a property for each one
 @client.account.messages.get('MM800f449d0399ed014aae2bcc0cc2f2ec').media.list.each do |media|
-    puts media.content_type
+  puts media.content_type
 end
