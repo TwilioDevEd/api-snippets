@@ -5,8 +5,14 @@ from twilio.rest import TwilioRestClient
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
-new_sub_account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-number_sid = "PN2a0747eba6abf96b7e3c3ff0b4530f6e"
 
-number = client.phone_numbers.update(number_sid, account_sid=new_sub_account)
+# In the case you want to transfer numbers between subaccounts, you need to 
+# know three things - the account SID of the phone number's current owner, 
+# the account SID of the account you'd like to transfer the number to, and 
+# the SID of the phone number you'd like to transfer
+current_owner_sid = "ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+new_owner_sid = "ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+number_sid = "PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+
+number = client.phone_numbers.update(number_sid, account_sid=new_owner_sid)
 print(number.phone_number)
