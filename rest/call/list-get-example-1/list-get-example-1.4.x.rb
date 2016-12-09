@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over calls and print out a property for each one
 @client.account.calls.list.each do |call|
-    puts call.direction
+  puts call.direction
 end

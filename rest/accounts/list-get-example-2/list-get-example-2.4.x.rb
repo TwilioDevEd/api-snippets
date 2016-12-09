@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 
 
 # Loop over accounts and print out a property for each one
-@client.accounts.list({
-    :status => "active"}).each do |account|
-    puts account.friendly_name
+@client.accounts.list(
+  :status => "active").each do |account|
+  puts account.friendly_name
 end

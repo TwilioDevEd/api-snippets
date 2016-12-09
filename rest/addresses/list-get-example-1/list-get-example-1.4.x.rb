@@ -10,5 +10,5 @@ auth_token = 'your_auth_token'
 
 # Loop over addresses and print out a property for each one
 @client.account.addresses.list.each do |address|
-    puts address.friendly_name
+  puts address.friendly_name
 end

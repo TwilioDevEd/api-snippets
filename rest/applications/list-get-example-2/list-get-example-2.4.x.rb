@@ -10,6 +10,6 @@ auth_token = 'your_auth_token'
 
 # Loop over apps and print out a property for each one
 @client.account.applications.list({
-    :friendly_name => "MyApp"}).each do |app|
-    puts app.voice_url
+  :friendly_name => "MyApp"}).each do |app|
+  puts app.voice_url
 end

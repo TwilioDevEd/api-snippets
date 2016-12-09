@@ -11,5 +11,5 @@ auth_token = 'your_auth_token'
 # check out the list resource examples on this page
 @number = @client.account.incoming_phone_numbers.get("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
 @number.update(:voice_url => "http://demo.twilio.com/docs/voice.xml",
-    :sms_url => "http://demo.twilio.com/docs/sms.xml")
+               :sms_url => "http://demo.twilio.com/docs/sms.xml")
 puts @number.voice_url
