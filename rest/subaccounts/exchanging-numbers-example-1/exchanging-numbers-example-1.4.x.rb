@@ -6,8 +6,17 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
+
+# In the case you want to transfer numbers between subaccounts, you need to 
+# know three things - the account SID of the phone number's current owner, 
+# the account SID of the account you'd like to transfer the number to, and 
+# the SID of the phone number you'd like to transfer
+current_owner_sid = 'ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
+new_owner_sid = 'ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
+phone_number_sid = 'PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
  
-@subaccount = @client.accounts.get("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-@number = @subaccount.incoming_phone_numbers.get("PN2a0747eba6abf96b7e3c3ff0b4530f6e")
-@number.update(:account_sid => "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+# Update the number
+@subaccount = @client.accounts.get(current_owner_sid)
+@number = @subaccount.incoming_phone_numbers.get(phone_number_sid)
+@number.update(:account_sid => new_owner_sid)
 puts @number.phone_number

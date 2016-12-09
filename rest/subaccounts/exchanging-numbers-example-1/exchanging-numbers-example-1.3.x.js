@@ -4,9 +4,17 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .incomingPhoneNumbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
-  .update({
-    accountSid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+// In the case you want to transfer numbers between accounts, you need to know
+// three things - the account SID of the phone number's current owner, the
+// account SID of the account you'd like to transfer the number to, and the SID
+// of the phone number you'd like to transfer
+const currentNumberOwnerAccountSid = 'ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy';
+const newNumberOwnerAccountSid = 'ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
+const phoneNumberSid = 'PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy';
+
+client.accounts(currentNumberOwnerAccountSid)
+  .incomingPhoneNumbers(phoneNumberSid)
+  .update({ 
+    accountSid: newNumberOwnerAccountSid // specify new account owner
   })
   .then((number) => console.log(number));
