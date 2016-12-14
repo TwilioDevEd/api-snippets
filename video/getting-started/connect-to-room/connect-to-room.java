@@ -13,12 +13,12 @@ Room.Listener roomListener = new Room.Listener() {
     }
 
     @Override
-    public void onConnectFailure(Room room, VideoException e) {
+    public void onConnectFailure(Room room, TwilioException e) {
         // Notifies you that a failure occurred when attempting to the connect to the room
     }
 
     @Override
-    public void onDisconnected(Room room, VideoException e) {
+    public void onDisconnected(Room room, TwilioException e) {
         // Notifies you that you were disconnected from the Room
     }
 

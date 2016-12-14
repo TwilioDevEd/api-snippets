@@ -4,10 +4,10 @@ Room room = videoClient.connect(connectOptions, new Room.Listener() {
     public void onConnected(Room room) {}
 
     @Override
-    public void onConnectFailure(Room room, VideoException e) {}
+    public void onConnectFailure(Room room, TwilioException e) {}
 
     @Override
-    public void onDisconnected(Room room, VideoException e) {}
+    public void onDisconnected(Room room, TwilioException e) {}
 
     @Override
     public void onParticipantConnected(Room room, Participant participant) {
