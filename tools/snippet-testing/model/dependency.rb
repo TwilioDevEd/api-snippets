@@ -27,7 +27,7 @@ module Model
         { name: 'Twilio.Auth', version: '1.2.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.0.0-rca1' },
+        { name: 'Twilio', version: '5.0.0-rca2' },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
@@ -97,7 +97,7 @@ module Model
 
     def self.csharp_5_dependencies
       [
-        'Twilio.5.0.0-rc6/lib/net35/Twilio35.dll',
+        'Twilio.5.0.0-rca2/lib/net35/Twilio35.dll',
         'JWT.1.3.4/lib/3.5/JWT.dll'
       ]
     end
