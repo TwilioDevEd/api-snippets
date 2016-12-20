@@ -11,7 +11,6 @@ class Example
     string authToken = "your_auth_token";
     TwilioClient.Init(accountSid, authToken);
 
-
     var address = AddressResource.Create("Customer 123",
                                          "2 Hasselhoff Lane",
                                          "Berlin",
