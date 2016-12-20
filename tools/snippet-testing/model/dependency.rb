@@ -98,7 +98,8 @@ module Model
     def self.csharp_5_dependencies
       [
         'Twilio.5.0.0-rca2/lib/net35/Twilio35.dll',
-        'JWT.1.3.4/lib/3.5/JWT.dll'
+        'JWT.1.3.4/lib/3.5/JWT.dll',
+        'Newtonsoft.Json.9.0.1/lib/net35/Newtonsoft.Json.dll'
       ]
     end
 
