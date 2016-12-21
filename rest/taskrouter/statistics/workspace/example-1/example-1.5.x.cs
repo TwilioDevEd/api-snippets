@@ -19,12 +19,15 @@ class Example
 
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-        Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]);
-        Console.WriteLine(cumulativeStats["tasks_entered"]);
+        Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]
+            .Value<DateTime>());
+        Console.WriteLine(cumulativeStats["tasks_entered"]
+            .Value<int>());
 
-        var taskByStatusStats = JObject.FromObject(stats.Realtime)["tasks_by_status"];
+        var taskByStatusStats = JObject.FromObject(stats.Realtime)["tasks_by_status"]
+                                    .Value<JObject>();
 
-        Console.WriteLine(taskByStatusStats["pending"]);
-        Console.WriteLine(taskByStatusStats["assigned"]);
+        Console.WriteLine(taskByStatusStats["pending"].Value<int>());
+        Console.WriteLine(taskByStatusStats["assigned"].Value<int>());
     }
 }

@@ -19,6 +19,6 @@ class Example
 
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-        Console.WriteLine(cumulativeStats["reservations_accepted"]);
+        Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
     }
 }
