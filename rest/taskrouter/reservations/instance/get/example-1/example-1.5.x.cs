@@ -12,12 +12,12 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string TaskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string ReservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         TwilioClient.Init(accountSid, authToken);
 
-        var reservation = ReservationResource.Fetch(workspaceSid, TaskSid, ReservationSid);
+        var reservation = ReservationResource.Fetch(workspaceSid, taskSid, ReservationSid);
         Console.WriteLine(reservation.ReservationStatus);
         Console.WriteLine(reservation.WorkerName);
     }
