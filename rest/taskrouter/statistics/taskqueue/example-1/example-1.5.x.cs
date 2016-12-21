@@ -13,11 +13,11 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioClient.Init(accountSid, authToken);
 
         var stats = TaskQueueStatisticsResource.Fetch(
-                        workspaceSid, TaskQueueSid, DateTime.Now, 500);
+                        workspaceSid, taskQueueSid, DateTime.Now, 500);
 
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 

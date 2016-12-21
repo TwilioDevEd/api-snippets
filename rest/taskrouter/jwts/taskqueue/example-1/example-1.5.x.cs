@@ -12,10 +12,10 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         var capability = new TaskRouterTaskQueueCapability(
-                             accountSid, authToken, workspaceSid, TaskQueueSid);
+                             accountSid, authToken, workspaceSid, taskQueueSid);
 
         capability.AllowFetchSubresources();
         capability.AllowUpdates();

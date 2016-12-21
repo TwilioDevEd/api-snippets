@@ -13,9 +13,9 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string TaskQueueSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string taskQueueSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioClient.Init(accountSid, authToken);
 
-        TaskQueueResource.Delete(workspaceSid, TaskQueueSid);
+        TaskQueueResource.Delete(workspaceSid, taskQueueSid);
     }
 }

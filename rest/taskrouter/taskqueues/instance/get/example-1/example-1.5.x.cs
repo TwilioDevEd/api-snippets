@@ -12,10 +12,10 @@ static void Main(string[] args)
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string TaskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioClient.Init(accountSid, authToken);
 
-        var taskQueue = TaskQueueResource.Fetch(workspaceSid, TaskQueueSid);
+        var taskQueue = TaskQueueResource.Fetch(workspaceSid, taskQueueSid);
         Console.WriteLine(taskQueue.FriendlyName);
     }
 }
