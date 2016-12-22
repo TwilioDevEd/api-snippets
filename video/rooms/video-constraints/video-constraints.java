@@ -12,4 +12,4 @@ VideoConstraints videoConstraints = new VideoConstraints.Builder()
     .build();
 
 // Add a video track with constraints
-LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(enable, cameraCapturer, videoConstraints);
+LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(true, cameraCapturer, videoConstraints);
