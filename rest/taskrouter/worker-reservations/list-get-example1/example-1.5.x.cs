@@ -18,7 +18,7 @@ class Example
 
         var reservations = ReservationResource.Read(workspaceSid, WorkerSid);
 
-        foreach(ReservationResource reservation in reservations) {
+        foreach(var reservation in reservations) {
             Console.WriteLine(reservation.ReservationStatus);
             Console.WriteLine(reservation.WorkerName);
         }

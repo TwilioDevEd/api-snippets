@@ -15,8 +15,8 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var tasks = TaskResource.Read(workspaceSid);
-        
-        foreach(TaskResource task in tasks) {
+
+        foreach(var task in tasks) {
             Console.WriteLine(task.Attributes);
         }
     }

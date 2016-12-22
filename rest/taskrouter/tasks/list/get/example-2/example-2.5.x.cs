@@ -16,14 +16,14 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var tasks = TaskResource.Read(workspaceSid, taskQueueSid: taskQueueSid);
-        foreach(TaskResource task in tasks) {
+        foreach(var task in tasks) {
             Console.WriteLine(task.Attributes);
         }
 
         var pendingTasks = TaskResource.Read(
            workspaceSid, assignmentStatus: TaskResource.StatusEnum.Pending);
 
-        foreach(TaskResource task in pendingTasks) {
+        foreach(var task in pendingTasks) {
             Console.WriteLine(task.Attributes);
         }
     }

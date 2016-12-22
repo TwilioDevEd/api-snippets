@@ -16,7 +16,7 @@ class Example
 
         var taskQueues = TaskQueueResource.Read(workspaceSid);
         
-        foreach(TaskQueueResource taskQueue in taskQueues) {
+        foreach(var taskQueue in taskQueues) {
             Console.WriteLine(taskQueue.FriendlyName);
         }
     }

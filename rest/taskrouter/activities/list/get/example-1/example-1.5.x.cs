@@ -16,7 +16,7 @@ class Example
 
         var Activities = ActivityResource.Read(workspaceSid);
 
-        foreach(ActivityResource activity in Activities) {
+        foreach(var activity in Activities) {
             Console.WriteLine(activity.FriendlyName);
         }
     }

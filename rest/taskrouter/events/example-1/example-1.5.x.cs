@@ -16,7 +16,7 @@ class Example
 
         var events = EventResource.Read(workspaceSid);
 
-        foreach(EventResource trEvent in events) {
+        foreach(var trEvent in events) {
             Console.WriteLine(trEvent.EventType);
         }
     }
