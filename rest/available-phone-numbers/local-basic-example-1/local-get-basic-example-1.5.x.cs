@@ -3,23 +3,25 @@ using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Rest.Api.V2010.Account.AvailablePhoneNumberCountry;
+using System.Linq;
+
 class Example
 {
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/console
-    string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string authToken = "your_auth_token";
+    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    const string authToken = "your_auth_token";
     TwilioClient.Init(accountSid, authToken);
 
-    var localResourceResultSet = LocalResource.Read("US",
-                                                    areaCode: 510);
+    var localAvailableNumber = LocalResource.Read("US",
+                                                  areaCode: 510);
 
     // Purchase the first number on the list
-    var localResourceEnumerator = localResourceResultSet.GetEnumerator();
-    if (localResourceEnumerator.MoveNext()) {
-        var availableNumber = localResourceEnumerator.Current.PhoneNumber;
-        var incomingPhoneNumber = IncomingPhoneNumberResource.Create(phoneNumber: availableNumber);
+    var firstNumber = localAvailableNumber.FirstOrDefault();
+    if (firstNumber != null) {
+        var incomingPhoneNumber = IncomingPhoneNumberResource.Create(
+          phoneNumber: firstNumber.PhoneNumber);
         Console.WriteLine(incomingPhoneNumber.Sid);
     }
   }

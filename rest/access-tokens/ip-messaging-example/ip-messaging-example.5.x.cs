@@ -6,14 +6,14 @@ class Example
 	static void Main(string[] args)
 	{
     // These values are necessary for any access token
-    var twilioAccountSid = "ACxxxxxxxxxxxx";
-    var twilioApiKey = "SKxxxxxxxxxxxx";
-    var twilioApiSecret = "xxxxxxxxxxxxxx";
+    const string twilioAccountSid = "ACxxxxxxxxxxxx";
+    const string twilioApiKey = "SKxxxxxxxxxxxx";
+    const string twilioApiSecret = "xxxxxxxxxxxxxx";
 
     // These are specific to IP Messaging
-    var ipmServiceSid = "ISxxxxxxxxxxxx";
-    var identity = "user@example.com";
-    var deviceId = "someiosdevice";
+    const string ipmServiceSid = "ISxxxxxxxxxxxx";
+    const string identity = "user@example.com";
+    const string deviceId = "someiosdevice";
 
     // Create an Access Token generator
     var token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);

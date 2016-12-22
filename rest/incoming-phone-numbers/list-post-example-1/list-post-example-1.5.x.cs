@@ -3,19 +3,21 @@ using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
+using Twilio.Http;
+
 class Example
 {
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/console
-    string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string authToken = "your_auth_token";
+    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    const string authToken = "your_auth_token";
     TwilioClient.Init(accountSid, authToken);
 
-    var friendlyName = "My Company Line";
+    const string friendlyName = "My Company Line";
     var voiceUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
     var phoneNumber = new PhoneNumber("+15105647903");
-    var voiceMethod = "GET";
+    var voiceMethod = HttpMethod.Get;
     var number = IncomingPhoneNumberResource.Create(friendlyName: friendlyName,
                                                     voiceUrl: voiceUrl,
                                                     phoneNumber: phoneNumber,

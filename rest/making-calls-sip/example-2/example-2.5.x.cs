@@ -3,20 +3,21 @@ using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
+
 class Example
 {
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/console
-    string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string authToken = "your_auth_token";
+    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    const string authToken = "your_auth_token";
     TwilioClient.Init(accountSid, authToken);
 
     var url = new Uri("http://demo.twilio.com/sipdial.xml");
     var to = new PhoneNumber("sip:kate@example.com");
     var from = new PhoneNumber("Jack");
-    var sipAuthPassword = "secret";
-    var sipAuthUsername = "jack";
+    const string sipAuthPassword = "secret";
+    const string sipAuthUsername = "jack";
 
     var call = CallResource.Create(to,
                                    from,
