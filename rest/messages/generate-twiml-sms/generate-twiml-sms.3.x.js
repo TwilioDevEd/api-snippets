@@ -4,7 +4,7 @@ const twilio = require('twilio');
 
 const app = express();
 
-app.post('/', (req, res) => {
+app.post('/sms', (req, res) => {
   const twiml = new twilio.TwimlResponse();
 
   twiml.message('The Robots are coming! Head for the hills!');
