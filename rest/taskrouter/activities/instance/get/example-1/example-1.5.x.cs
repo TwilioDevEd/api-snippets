@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from 
+// Download the twilio-csharp library from
 // https://www.twilio.com/docs/libraries/csharp#installation
 using System;
 using Twilio;
@@ -13,6 +13,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string ActivitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var activity = ActivityResource.Fetch(workspaceSid, ActivitySid);

@@ -13,10 +13,10 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var workflows = WorkflowResource.Read(workspaceSid);
-
         foreach(var workflow in workflows) {
             Console.WriteLine(workflow.FriendlyName);
         }

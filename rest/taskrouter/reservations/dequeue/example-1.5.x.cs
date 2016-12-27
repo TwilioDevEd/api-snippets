@@ -14,15 +14,18 @@ class Example
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         // Update a Reservation with a Dequeue instruction
-        var reservation = ReservationResource.Fetch(workspaceSid, taskSid, reservationSid);
+        var reservation = ReservationResource.Fetch(
+                              workspaceSid, taskSid, reservationSid);
+
         Console.WriteLine(reservation.ReservationStatus);
         Console.WriteLine(reservation.WorkerName);
 
-        ReservationResource.Update(workspaceSid, taskSid, reservationSid,
-            instruction: "dequeue",
+        ReservationResource.Update(
+            workspaceSid, taskSid, reservationSid, instruction: "dequeue",
             dequeueFrom: "+18001231234");
     }
 }

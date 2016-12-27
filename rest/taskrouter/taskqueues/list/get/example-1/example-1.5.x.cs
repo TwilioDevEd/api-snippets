@@ -12,10 +12,11 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var taskQueues = TaskQueueResource.Read(workspaceSid);
-        
+
         foreach(var taskQueue in taskQueues) {
             Console.WriteLine(taskQueue.FriendlyName);
         }

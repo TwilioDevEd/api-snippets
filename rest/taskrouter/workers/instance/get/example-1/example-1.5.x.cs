@@ -15,6 +15,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var worker = WorkerResource.Fetch(workspaceSid, WorkerSid);
@@ -22,7 +23,6 @@ class Example
 
         // alternatively
         var attributes = JObject.Parse(worker.Attributes);
-
         string value = attributes["foo"].Value<string>();
         Console.WriteLine(value);
     }

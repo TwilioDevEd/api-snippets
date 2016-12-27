@@ -13,9 +13,11 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
-        var task = TaskResource.Create(workspaceSid, "{\"type\":\"support\"}", workflowSid, null, null);
+        var task = TaskResource.Create(
+            workspaceSid, "{\"type\":\"support\"}", workflowSid);
 
         Console.WriteLine(task.Attributes);
     }

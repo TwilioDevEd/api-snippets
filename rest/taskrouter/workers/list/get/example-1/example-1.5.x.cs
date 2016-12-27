@@ -13,10 +13,10 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var workers = WorkerResource.Read(workspaceSid);
-
         foreach(var worker in workers) {
             Console.WriteLine(worker.FriendlyName);
         }

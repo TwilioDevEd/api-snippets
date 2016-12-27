@@ -15,6 +15,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        
         TwilioClient.Init(accountSid, authToken);
 
         WorkerResource.Delete(workspaceSid, WorkerSid);

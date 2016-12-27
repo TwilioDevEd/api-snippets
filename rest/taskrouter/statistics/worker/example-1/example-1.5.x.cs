@@ -7,19 +7,19 @@ using Twilio.Rest.Taskrouter.V1.Workspace.Worker;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-   const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-   const string authToken = "your_auth_token";
-   const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-   const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    TwilioClient.Init(accountSid, authToken);
+    static void Main(string[] args)
+    {
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-    var stats = WorkerStatisticsResource.Fetch(workspaceSid, WorkerSid);
+        TwilioClient.Init(accountSid, authToken);
 
-    var cumulativeStats = JObject.FromObject(stats.Cumulative);
+        var stats = WorkerStatisticsResource.Fetch(workspaceSid, WorkerSid);
+        var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-    Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
-  }
+        Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
+    }
 }

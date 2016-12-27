@@ -15,15 +15,18 @@ class Example
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         // Update a Reservation with a Redirect instruction
-        var reservation = ReservationResource.Fetch(workspaceSid, taskSid, reservationSid);
+        var reservation = ReservationResource.Fetch(
+                              workspaceSid, taskSid, reservationSid);
+
         Console.WriteLine(reservation.ReservationStatus);
         Console.WriteLine(reservation.WorkerName);
 
-        ReservationResource.Update(workspaceSid, taskSid, reservationSid,
-            instruction: "Redirect",
+        ReservationResource.Update(
+            workspaceSid, taskSid, reservationSid, instruction: "Redirect",
             redirectCallSid: "CA123456789",
             redirectUrl: new Uri("http://example.com/assignment_redirect"));
     }

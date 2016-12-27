@@ -14,16 +14,17 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskQueueSid = "WQf855e98ad280d0a0a325628e24ca9627";
+
         TwilioClient.Init(accountSid, authToken);
 
         var workers = WorkerResource.Read(workspaceSid, taskQueueSid);
-
         foreach(var worker in workers) {
             Console.WriteLine(worker.FriendlyName);
         }
 
         workers = WorkerResource.Read(
-            workspaceSid, taskQueueSid, targetWorkersExpression: "type == 'leads'");
+            workspaceSid, taskQueueSid,
+            targetWorkersExpression: "type == 'leads'");
 
         foreach(var worker in workers) {
             Console.WriteLine(worker.FriendlyName);

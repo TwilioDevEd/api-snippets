@@ -13,11 +13,12 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var taskQueue = TaskQueueResource.Update(
-                            workspaceSid, taskQueueSid, null, null,
-                            "languages HAS 'english'", maxReservedWorkers: 100);
+            workspaceSid, taskQueueSid, null, null, "languages HAS 'english'",
+            maxReservedWorkers: 100);
 
         Console.WriteLine(taskQueue.FriendlyName);
         Console.WriteLine(taskQueue.TargetWorkers);

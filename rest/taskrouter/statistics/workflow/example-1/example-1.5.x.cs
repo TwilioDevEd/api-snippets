@@ -14,6 +14,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var stats = WorkflowStatisticsResource.Fetch(workspaceSid, workflowSid);
@@ -22,6 +23,7 @@ class Example
 
         Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]
             .Value<DateTime>());
+
         Console.WriteLine(cumulativeStats["tasks_entered"]
             .Value<int>());
 

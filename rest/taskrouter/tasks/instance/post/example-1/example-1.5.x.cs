@@ -18,26 +18,26 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         // update a task's attributes
-        var task = TaskResource.Update(workspaceSid, taskSid, "{\"type\":\"support\"}", null, null, null);
+        var task = TaskResource.Update(workspaceSid, taskSid, "{\"type\":\"support\"}");
         Console.WriteLine(task.Attributes);
         Console.WriteLine(task.Age);
 
-        // update a task attributes with a dictionary to map to json
-        Dictionary<string,string> attributes = new Dictionary<string,string>();
-        attributes.Add("type", "support");
+        // update a task attributes
+        var attributes = JObject.FromObject(task.Attributes);
+        attributes["type"] = "support";
 
-        // task = TaskResource.Update(workspaceSid, taskSid, attributes, null);
-        // Console.WriteLine(task.Attributes);
-        // Console.WriteLine(task.Age);
-        //
-        // // cancel a task
-        // task = TaskResource.Update(workspaceSid, taskSid, null, null, TaskResource.StatusEnum.Canceled, "waiting too long");
-        // Console.WriteLine(task.AssignmentStatus);
-        // Console.WriteLine(task.Reason);
-        //
-        // // cancel a task #2
-        // task = client.CancelTask(workspaceSid, taskSid, "waiting too long", TaskResource.StatusEnum.Canceled);
-        // Console.WriteLine(task.AssignmentStatus);
-        // Console.WriteLine(task.Reason);
+        task = TaskResource.Update(workspaceSid, taskSid, attributes.ToString());
+        Console.WriteLine(task.Attributes);
+        Console.WriteLine(task.Age);
+
+        // cancel a task
+        task = TaskResource.Update(workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
+        Console.WriteLine(task.AssignmentStatus);
+        Console.WriteLine(task.Reason);
+
+        // cancel a task #2
+        task = TaskResource.Update(workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
+        Console.WriteLine(task.AssignmentStatus);
+        Console.WriteLine(task.Reason);
     }
 }

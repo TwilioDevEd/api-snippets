@@ -13,19 +13,21 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
-        var stats = WorkspaceStatisticsResource.Fetch(workspaceSid);
 
+        var stats = WorkspaceStatisticsResource.Fetch(workspaceSid);
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
         Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]
             .Value<DateTime>());
+
         Console.WriteLine(cumulativeStats["tasks_entered"]
             .Value<int>());
 
         var taskByStatusStats = JObject.FromObject(stats.Realtime)["tasks_by_status"]
-                                    .Value<JObject>();
+                                       .Value<JObject>();
 
         Console.WriteLine(taskByStatusStats["pending"].Value<int>());
         Console.WriteLine(taskByStatusStats["assigned"].Value<int>());

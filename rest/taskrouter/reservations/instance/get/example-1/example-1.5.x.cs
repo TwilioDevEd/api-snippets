@@ -17,7 +17,9 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var reservation = ReservationResource.Fetch(workspaceSid, taskSid, reservationSid);
+        var reservation = ReservationResource.Fetch(
+                              workspaceSid, taskSid, reservationSid);
+
         Console.WriteLine(reservation.ReservationStatus);
         Console.WriteLine(reservation.WorkerName);
     }

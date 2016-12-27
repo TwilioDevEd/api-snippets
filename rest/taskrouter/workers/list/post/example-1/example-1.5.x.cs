@@ -14,6 +14,7 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var worker = WorkerResource.Create(
@@ -22,7 +23,6 @@ class Example
         Console.WriteLine(worker.FriendlyName);
 
         var attributes = JObject.Parse(worker.Attributes);
-
         attributes["type"] = "support";
 
         worker = WorkerResource.Update(

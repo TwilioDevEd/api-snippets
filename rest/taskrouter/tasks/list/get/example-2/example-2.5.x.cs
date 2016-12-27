@@ -13,6 +13,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskQueueSid = "WQf855e98ad280d0a0a325628e24ca9627";
+
         TwilioClient.Init(accountSid, authToken);
 
         var tasks = TaskResource.Read(workspaceSid, taskQueueSid: taskQueueSid);
@@ -21,7 +22,7 @@ class Example
         }
 
         var pendingTasks = TaskResource.Read(
-           workspaceSid, assignmentStatus: TaskResource.StatusEnum.Pending);
+            workspaceSid, assignmentStatus: TaskResource.StatusEnum.Pending);
 
         foreach(var task in pendingTasks) {
             Console.WriteLine(task.Attributes);

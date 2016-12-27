@@ -14,10 +14,10 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var reservations = ReservationResource.Read(workspaceSid, WorkerSid);
-
         foreach(var reservation in reservations) {
             Console.WriteLine(reservation.ReservationStatus);
             Console.WriteLine(reservation.WorkerName);
