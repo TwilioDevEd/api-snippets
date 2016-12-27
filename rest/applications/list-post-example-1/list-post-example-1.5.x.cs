@@ -6,20 +6,20 @@ using Twilio.Http;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "your_auth_token";
-    TwilioClient.Init(accountSid, authToken);
+    static void Main(string[] args)
+    {
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        TwilioClient.Init(accountSid, authToken);
 
-    var voiceUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
-    var voiceMethod = HttpMethod.Get;
+        var voiceUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
+        var voiceMethod = HttpMethod.Get;
 
-    var app = ApplicationResource.Create("Phone Me",
-                                         voiceUrl: voiceUrl,
-                                         voiceMethod: voiceMethod);
+        var app = ApplicationResource.Create("Phone Me",
+                                             voiceUrl: voiceUrl,
+                                             voiceMethod: voiceMethod);
 
-    Console.WriteLine(app.Sid);
-  }
+        Console.WriteLine(app.Sid);
+    }
 }
