@@ -5,18 +5,18 @@ using Twilio.Rest.Api.V2010;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "your_auth_token";
-    TwilioClient.Init(accountSid, authToken);
-
-    var accounts = AccountResource.Read("MySubaccount");
-
-    foreach (var account in accounts)
+    static void Main(string[] args)
     {
-      Console.WriteLine(account.Status);
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        TwilioClient.Init(accountSid, authToken);
+
+        var accounts = AccountResource.Read("MySubaccount");
+
+        foreach (var account in accounts)
+        {
+            Console.WriteLine(account.Status);
+        }
     }
-  }
 }

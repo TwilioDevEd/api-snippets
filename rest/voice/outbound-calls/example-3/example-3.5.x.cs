@@ -7,24 +7,24 @@ using Twilio.Http;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "your_auth_token";
-    TwilioClient.Init(accountSid, authToken);
+    static void Main(string[] args)
+    {
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        TwilioClient.Init(accountSid, authToken);
 
-    var url = new Uri("http://demo.twilio.com/docs/voice.xml");
-    var to = new PhoneNumber("+14155551212");
-    var from = new PhoneNumber("+18668675309");
-    var sendDigits = "1234#";
-    var method = HttpMethod.Get;
-    var call = CallResource.Create(to,
-                                   from,
-                                   url: url,
-                                   sendDigits: sendDigits,
-                                   method: method);
+        var url = new Uri("http://demo.twilio.com/docs/voice.xml");
+        var to = new PhoneNumber("+14155551212");
+        var from = new PhoneNumber("+18668675309");
+        var sendDigits = "1234#";
+        var method = HttpMethod.Get;
+        var call = CallResource.Create(to,
+                                       from,
+                                       url: url,
+                                       sendDigits: sendDigits,
+                                       method: method);
 
-    Console.WriteLine(call.Sid);
-  }
+        Console.WriteLine(call.Sid);
+    }
 }

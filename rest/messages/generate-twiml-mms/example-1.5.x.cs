@@ -9,13 +9,13 @@ public class SmsController : Controller
     [HttpPost]
     public ActionResult Index()
     {
-      var message = new Message();
-      message.Body("The Robots are coming! Head for the hills!");
-      message.Media("https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg");
+        var message = new Message();
+        message.Body("The Robots are coming! Head for the hills!");
+        message.Media("https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg");
 
-      var messagingResponse = new MessagingResponse();
-      messagingResponse.Message(message);
+        var messagingResponse = new MessagingResponse();
+        messagingResponse.Message(message);
 
-      return Content(messagingResponse.ToString(), "text/xml");
+        return Content(messagingResponse.ToString(), "text/xml");
     }
 }

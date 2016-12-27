@@ -5,13 +5,13 @@ using Twilio.Rest.Api.V2010.Account;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "your_auth_token";
-    TwilioClient.Init(accountSid, authToken);
+    static void Main(string[] args)
+    {
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        TwilioClient.Init(accountSid, authToken);
 
-    OutgoingCallerIdResource.Delete("PNe536d32a3c49700934481addd5ce1659");
-  }
+        OutgoingCallerIdResource.Delete("PNe536d32a3c49700934481addd5ce1659");
+    }
 }

@@ -6,19 +6,19 @@ using Twilio.Types;
 
 class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    const string authToken = "your_auth_token";
-    TwilioClient.Init(accountSid, authToken);
-
-    var phoneNumber = new PhoneNumber("+14158675309");
-    var callerIds = OutgoingCallerIdResource.Read(phoneNumber: phoneNumber);
-
-    foreach (var callerId in callerIds)
+    static void Main(string[] args)
     {
-      Console.WriteLine(callerId.PhoneNumber);
+        // Find your Account Sid and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        TwilioClient.Init(accountSid, authToken);
+
+        var phoneNumber = new PhoneNumber("+14158675309");
+        var callerIds = OutgoingCallerIdResource.Read(phoneNumber: phoneNumber);
+
+        foreach (var callerId in callerIds)
+        {
+            Console.WriteLine(callerId.PhoneNumber);
+        }
     }
-  }
 }
