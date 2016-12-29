@@ -1,4 +1,4 @@
 curl -G https://preview.twilio.com/insights \
   /Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Events \
-  -d "Level=debug" \
+  -d "Level=DEBUG" \
   -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token"
