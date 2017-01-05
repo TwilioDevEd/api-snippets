@@ -1,32 +1,23 @@
-// Download the **Next-Gen** twilio-csharp library from:
-// twilio.com/docs/libraries/csharp#installation-nextgen
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using System.Threading.Tasks;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Wireless;
+using Twilio;
+using Twilio.Rest.Preview.Wireless;
 
-namespace TwilioApp
+public class Example
 {
-  class Program
-  {
-    static async Task DoTask()
+    public static void Main(string[] args)
     {
-      var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-      var authToken = "your_auth_token";
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
 
-      var restClient = new TwilioRestClient(accountSid, authToken);
+        TwilioClient.Init(accountSid, authToken);
 
-      var devices = await Device.Read().ExecuteAsync();
-      foreach (var d in devices) {
-        Console.WriteLine(d.FriendlyName);
-      }
+        var devices = DeviceResource.Read();
+
+        foreach (var device in devices)
+        {
+            Console.WriteLine(device.FriendlyName);
+        }
     }
-
-    static void Main(string[] args)
-    {
-      DoTask().Wait();
-      Console.Write("Press any key to continue.");
-      Console.ReadKey();
-    }
-  }
 }
