@@ -1,26 +1,28 @@
-// Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service.SyncList;
+using Twilio;
+using Twilio.Rest.Preview.Sync.Service.SyncList;
 
-class Example
+public class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
-
-    var items = SyncListItemResource.Read("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "MyCollection")
-      .ByFrom("10")
-      .ByOrder(SyncListItemResource.QueryResultOrder.ASC)
-      .Execute(client);
-
-    foreach (var item in items)
+    public static void Main(string[] args)
     {
-      Console.WriteLine(item.GetData());
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var items = SyncListItemResource.Read(
+            serviceSid,
+            "MyCollection",
+            from: "10",
+            order: SyncListItemResource.QueryResultOrderEnum.Asc);
+
+        foreach (var item in items)
+        {
+            Console.WriteLine(item.Data);
+        }
     }
-  }
 }

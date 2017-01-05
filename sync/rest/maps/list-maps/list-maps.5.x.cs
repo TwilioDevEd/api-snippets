@@ -1,23 +1,24 @@
-// Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service;
+using Twilio;
+using Twilio.Rest.Preview.Sync.Service;
 
-class Example
+public class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
-
-    var maps = SyncMapResource.Read("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-      .Execute(client);
-
-    foreach (var map in maps)
+    public static void Main(string[] args)
     {
-      Console.WriteLine($"{map.GetSid()}: {map.GetUniqueName()}");
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var maps = SyncMapResource.Read(serviceSid);
+
+        foreach (var map in maps)
+        {
+            Console.WriteLine($"{map.Sid}: {map.UniqueName}");
+        }
     }
-  }
 }

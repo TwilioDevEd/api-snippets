@@ -1,32 +1,33 @@
-// Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Newtonsoft.Json;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service;
+using Twilio;
+using Twilio.Rest.Preview.Sync.Service;
 
-class Example
+public class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
-
-    var data = new
+    public static void Main(string[] args)
     {
-      DateUpdated = DateTime.UtcNow,
-      MovieTitle = "On The Line",
-      ShowTimes = new [] {"12:30:00Z", "14:45:00Z", "15:30:00Z", "17:45:00Z", "20:30:00Z"},
-      Starring = new [] {"Lance Bass", "Joey Fatone"},
-      Genre = "Romance"
-    };
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-    var doc = DocumentResource.Create("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-      .setUniqueName("MyFirstDocument")
-      .setData(JsonConvert.SerializeObject(data))
-      .Execute(client);
+        TwilioClient.Init(accountSid, authToken);
 
-    Console.WriteLine(doc.GetSid());
-  }
+        var data = new
+        {
+            DateUpdated = DateTime.UtcNow,
+            MovieTitle = "On The Line",
+            ShowTimes = new[] { "12:30:00Z", "14:45:00Z", "15:30:00Z", "17:45:00Z", "20:30:00Z" },
+            Starring = new[] { "Lance Bass", "Joey Fatone" },
+            Genre = "Romance"
+        };
+
+        var doc = DocumentResource.Create(serviceSid,
+                                          "MyFirstDocument",
+                                          JsonConvert.SerializeObject(data));
+
+        Console.WriteLine(doc.Sid);
+    }
 }

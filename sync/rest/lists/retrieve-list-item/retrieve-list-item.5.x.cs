@@ -1,22 +1,21 @@
-// Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service.SyncList;
+using Twilio;
+using Twilio.Rest.Preview.Sync.Service.SyncList;
 
-class Example
+public class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
+    public static void Main(string[] args)
+    {
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-    var item = SyncListItemResource.Fetch("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "MyCollection", 0)
-      .Execute(client);
+        TwilioClient.Init(accountSid, authToken);
 
-    Console.WriteLine(item.GetData());
-    Console.ReadKey();
-  }
+        var item = SyncListItemResource.Fetch(serviceSid, "MyCollection", 0);
+
+        Console.WriteLine(item.Data);
+    }
 }

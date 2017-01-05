@@ -1,29 +1,31 @@
-// Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Newtonsoft.Json;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service.SyncList;
+using Twilio;
+using Twilio.Rest.Preview.Sync.Service.SyncList;
 
-class Example
+public class Example
 {
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
-
-    var data = new
+    public static void Main(string[] args)
     {
-      Number = "001",
-      Name = "Bulbasaur",
-      Attack = 49
-    };
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-    var item = SyncListItemResource.Create("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "MyCollection", JsonConvert.SerializeObject(data))
-      .Execute(client);
+        TwilioClient.Init(accountSid, authToken);
 
-    Console.WriteLine(item.GetIndex());
-  }
+        var data = new
+        {
+            Number = "001",
+            Name = "Bulbasaur",
+            Attack = 49
+        };
+
+        var item = SyncListItemResource.Create(serviceSid,
+                                               "MyCollection",
+                                               JsonConvert.SerializeObject(data));
+
+        Console.WriteLine(item.Index);
+    }
 }
