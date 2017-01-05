@@ -11,10 +11,10 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $number = $client->lookups
-    ->phoneNumbers("+15108675309")
+    ->phoneNumbers("+14157012311")
     ->fetch(
         array("type" => "caller-name")
     );
 
-echo $number->carrier["type"] . "\r\n";
-echo $number->carrier["name"];
+echo $number->callerName['caller_type'] . "\r\n";
+echo $number->callerName['caller_name'];
