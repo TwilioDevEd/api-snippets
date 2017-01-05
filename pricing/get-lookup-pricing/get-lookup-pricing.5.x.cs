@@ -1,0 +1,43 @@
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
+using System;
+using System.Collections.Generic;
+using Twilio;
+using Twilio.Rest.Lookups.V1;
+using Twilio.Rest.Pricing.V1.Messaging;
+using Twilio.Types;
+
+public class Example
+{
+    public static void Main(string[] args)
+    {
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var phoneNumber = PhoneNumberResource.Fetch(
+            new PhoneNumber("+15108675309"),
+            type: new List<string> {"carrier"});
+
+        var mcc = phoneNumber.Carrier["mobile_country_code"];
+        var mnc = phoneNumber.Carrier["mobile_network_code"];
+
+        var countryCode = phoneNumber.CountryCode;
+        var countries = CountryResource.Fetch(countryCode);
+
+        foreach (var country in countries.OutboundSmsPrices)
+        {
+            if (country.Mcc.Equals(mcc) && country.Mnc.Equals(mnc))
+            {
+                foreach (var price in country.Prices)
+                {
+                    if (price.Type.Equals(InboundSmsPrice.TypeEnum.Local))
+                    {
+                        Console.WriteLine($"Current price {10}");
+                    }
+                }
+            }
+        }
+    }
+}
