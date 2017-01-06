@@ -1,18 +1,23 @@
-let deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+let deviceId = UIDevice.current.identifierForVendor!.uuidString
 let urlString = "http://localhost:8000/token.php?device=\(deviceId)"
 
-// Get JSON from server
-let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-let session = NSURLSession(configuration: config, delegate: nil, delegateQueue: nil)
-let url = NSURL(string: urlString)
-let request  = NSMutableURLRequest(URL: url!)
-request.HTTPMethod = "GET"
-
 // Make HTTP request
-session.dataTaskWithRequest(request, completionHandler: { data, response, error in
-  if (data != nil) {
-    // Parse result JSON
-    let json = JSON(data: data!)
-    let token = json["token"].stringValue
-  }
-}).resume()
+if let requestURL = URL(string: urlString) {
+  let session = URLSession(configuration: URLSessionConfiguration.default)
+  let task = session.dataTask(with: requestURL, completionHandler: { (data, response, error) in
+      if let data = data {
+          do {
+              let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String:String]
+              let token = json["token"]
+              let identity = json["identity"]
+          }
+          catch let error as NSError {
+            print ("Error with json, error = \(error)")
+          }
+          
+      } else {
+        print ("Error fetching json, error = \(error)")
+      }
+  })
+  task.resume()
+}
