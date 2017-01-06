@@ -1,1 +1,1 @@
-self.client = TwilioIPMessagingClient.ipMessagingClientWithToken(token, delegate: self)
+self.client = TwilioChatClient(token: token, properties: nil, delegate: self)
