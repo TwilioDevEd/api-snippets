@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Twilio;
 using Twilio.Rest.Lookups.V1;
 using Twilio.Rest.Pricing.V1.Messaging;
@@ -17,8 +18,8 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var phoneNumber = PhoneNumberResource.Fetch(
-            new PhoneNumber("+15108675309"),
-            type: new List<string> {"carrier"});
+                new PhoneNumber("+15108675309"),
+                type: new List<string> { "carrier" });
 
         var mcc = phoneNumber.Carrier["mobile_country_code"];
         var mnc = phoneNumber.Carrier["mobile_network_code"];
@@ -26,18 +27,18 @@ public class Example
         var countryCode = phoneNumber.CountryCode;
         var countries = CountryResource.Fetch(countryCode);
 
-        foreach (var country in countries.OutboundSmsPrices)
+        var prices = countries
+            .OutboundSmsPrices
+            .Where(price => price.Mcc.Equals(mcc) && price.Mnc.Equals(mnc))
+            .SelectMany(price => price.Prices)
+            .Where(price => price.Type.Equals(InboundSmsPrice.TypeEnum.Local));
+
+
+        foreach (var price in prices)
         {
-            if (country.Mcc.Equals(mcc) && country.Mnc.Equals(mnc))
-            {
-                foreach (var price in country.Prices)
-                {
-                    if (price.Type.Equals(InboundSmsPrice.TypeEnum.Local))
-                    {
-                        Console.WriteLine($"Current price {10}");
-                    }
-                }
-            }
+            Console.WriteLine($"Country {countryCode}");
+            Console.WriteLine($"Current price {price.BasePrice}");
+            Console.WriteLine($"Current price {price.CurrentPrice}");
         }
     }
 }

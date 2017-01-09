@@ -11,11 +11,9 @@ class Example
         const string accountSid = "accountSid";
         const string authToken = "authToken";
         const string serviceSid = "serviceSid";
-        const string channelType = "public";
-
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
 
         TwilioClient.Init(accountSid, authToken);
+
         // Create a channel
         var channel = ChannelResource.Create(serviceSid, type: ChannelResource.ChannelTypeEnum.Public);
 

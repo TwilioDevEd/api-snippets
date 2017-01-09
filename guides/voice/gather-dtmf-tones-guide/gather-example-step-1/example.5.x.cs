@@ -36,7 +36,6 @@ public class VoiceController : Controller
 		return Content(response.ToString(), "text/xml");
 	}
 
-	// helper function to set up a <Gather>
 	private static void RenderMainMenu(VoiceResponse response)
 	{
 		response.Gather(

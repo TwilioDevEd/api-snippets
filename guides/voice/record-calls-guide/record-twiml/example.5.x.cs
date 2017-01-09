@@ -6,7 +6,7 @@ using Twilio.TwiML;
 
 public class RecordController : Controller
 {
-    // [HttpPost]
+    [HttpPost]
     public ActionResult Index()
     {
         var response = new VoiceResponse();
