@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account.Address;
@@ -13,12 +13,11 @@ class Example
         const string addressSid = "AD2a0747eba6abf96b7e3c3ff0b4530f6e";
         TwilioClient.Init(accountSid, authToken);
 
-        var dependentNumbers = DependentPhoneNumberResource.Read(
-            addressSid);
+        var dependentNumbers = DependentPhoneNumberResource.Read(addressSid);
 
         foreach (var number in dependentNumbers)
         {
-                Console.WriteLine(number.FriendlyName);
+            Console.WriteLine(number.FriendlyName);
         }
     }
 }

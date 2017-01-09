@@ -10,19 +10,17 @@ class Example
         const string twilioApiKey = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string twilioApiSecret = "your_secret";
 
-        // These are specific to IP Messaging
-        const string ipmServiceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string identity = "user@example.com";
-        const string deviceId = "someiosdevice";
+        // These are specific to Video
+        const string configurationProfileSid = "VSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string identity = "user";
 
         // Create an Access Token generator
         var token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);
         token.Identity = identity;
 
-        // Create an IP messaging grant for this token
-        var grant = new IpMessagingGrant();
-        grant.EndpointId = $"HipFlowSlackDockRC:{identity}:{deviceId}";
-        grant.ServiceSid = ipmServiceSid;
+        // Create a Video grant for this token
+        var grant = new VideoGrant();
+        grant.ConfigurationProfileSid = configurationProfileSid;
         token.AddGrant(grant);
 
         Console.WriteLine(token.ToJwt());

@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010;
@@ -15,9 +15,9 @@ class Example
 
         var readOptions = new ReadAccountOptions{
             Status = AccountResource.StatusEnum.Active };
-        var accountsResourceSet = AccountResource.Read(readOptions);
+        var accounts = AccountResource.Read(readOptions);
 
-        foreach (AccountResource account in accountsResourceSet) {
+        foreach (var account in accounts) {
             Console.WriteLine(account.DateCreated);
         }
     }

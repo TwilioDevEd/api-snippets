@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -13,12 +13,10 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var voiceUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
-        var voiceMethod = HttpMethod.Get;
-
-        var app = ApplicationResource.Create("Phone Me",
-                                             voiceUrl: voiceUrl,
-                                             voiceMethod: voiceMethod);
+        var app = ApplicationResource.Create(
+            "Phone Me",
+            voiceUrl: new Uri("http://demo.twilio.com/docs/voice.xml"),
+            voiceMethod: HttpMethod.Get);
 
         Console.WriteLine(app.Sid);
     }

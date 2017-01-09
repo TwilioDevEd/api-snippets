@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -13,8 +13,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var fromParameter = new PhoneNumber("client:tommy");
-        var calls = CallResource.Read(from: fromParameter);
+        var calls = CallResource.Read(from: new PhoneNumber("client:tommy"));
 
         foreach (var call in calls)
         {

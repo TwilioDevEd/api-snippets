@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -14,15 +14,13 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var mobileAvailableNumber = MobileResource.Read("GB");
+        var mobileAvailableNumbers = MobileResource.Read("GB");
 
         // Purchase the first number on the list
-        var firstNumber = mobileAvailableNumber.FirstOrDefault();
-        if (firstNumber != null) {
-                var incomingPhoneNumber = IncomingPhoneNumberResource.Create(
-                    phoneNumber: firstNumber.PhoneNumber);
-                Console.WriteLine(incomingPhoneNumber.Sid);
-        }
+        var firstNumber = mobileAvailableNumbers.First();
+        var incomingPhoneNumber = IncomingPhoneNumberResource.Create(
+            phoneNumber: firstNumber.PhoneNumber);
 
+        Console.WriteLine(incomingPhoneNumber.Sid);
     }
 }

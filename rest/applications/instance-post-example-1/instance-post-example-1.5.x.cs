@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,11 +12,9 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var voiceUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
-        var smsUrl = new Uri("http://demo.twilio.com/docs/sms.xml");
-
-        ApplicationResource.Update("AP2a0747eba6abf96b7e3c3ff0b4530f6e",
-                                   voiceUrl: voiceUrl,
-                                   smsUrl: smsUrl);
+        ApplicationResource.Update(
+            "AP2a0747eba6abf96b7e3c3ff0b4530f6e",
+            voiceUrl: new Uri("http://demo.twilio.com/docs/voice.xml"),
+            smsUrl: new Uri("http://demo.twilio.com/docs/sms.xml"));
     }
 }

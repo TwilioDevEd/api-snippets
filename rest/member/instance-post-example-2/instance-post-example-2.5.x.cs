@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account.Queue;
@@ -13,9 +13,12 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        MemberResource.Update("QU5ef8732a3c49700934481addd5ce1659",
-                              "CA5ef8732a3c49700934481addd5ce1659",
-                              new Uri("http://demo.twilio.com/docs/voice.xml"),
+        const string queueSid = "QU5ef8732a3c49700934481addd5ce1659";
+        const string callSid = "CA5ef8732a3c49700934481addd5ce1659";
+        var twimlUrl = new Uri("http://demo.twilio.com/docs/voice.xml");
+        MemberResource.Update(queueSid,
+                              callSid,
+                              twimlUrl,
                               HttpMethod.Post);
     }
 }

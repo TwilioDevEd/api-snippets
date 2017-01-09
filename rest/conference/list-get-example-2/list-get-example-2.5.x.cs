@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,9 +12,9 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var status = ConferenceResource.StatusEnum.InProgress;
-        var conferences = ConferenceResource.Read(status: status,
-                                                  friendlyName: "MyRoom");
+        var conferences = ConferenceResource.Read(
+            status: ConferenceResource.StatusEnum.InProgress,
+            friendlyName: "MyRoom");
 
         foreach (var conference in conferences)
         {
