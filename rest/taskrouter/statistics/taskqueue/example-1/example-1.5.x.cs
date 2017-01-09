@@ -14,6 +14,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         var stats = TaskQueueStatisticsResource.Fetch(
@@ -21,6 +22,6 @@ class Example
 
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-        Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
+        Console.WriteLine(cumulativeStats["reservations_accepted"]);
     }
 }

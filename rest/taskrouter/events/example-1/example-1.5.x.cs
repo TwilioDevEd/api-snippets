@@ -16,8 +16,8 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var events = EventResource.Read(workspaceSid);
-        foreach(var trEvent in events) {
-            Console.WriteLine(trEvent.EventType);
+        foreach(var e in events) {
+            Console.WriteLine(e.EventType);
         }
     }
 }

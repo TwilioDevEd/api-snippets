@@ -18,7 +18,7 @@ class Example
         var twiml = new VoiceResponse();
 
         twiml.Enqueue("{\"account_number\":\"12345abcdef\"}",
-            "/post_bridge_survey.php", waitUrl: "/hold_music.php",
+            "/post_bridge_survey", waitUrl: "/hold_music",
             workflowSid: "WW0123456789abcdef0123456789abcdef");
 
         response.StatusDescription = twiml.ToString();

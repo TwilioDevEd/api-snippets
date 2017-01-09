@@ -16,9 +16,9 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        WorkersStatistics stats = WorkerStatisticsResource.Fetch(workspaceSid);
+        var stats = WorkerStatisticsResource.Fetch(workspaceSid);
 
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
-        Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
+        Console.WriteLine(cumulativeStats["reservations_accepted"];
     }
 }

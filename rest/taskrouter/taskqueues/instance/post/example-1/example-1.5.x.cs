@@ -17,7 +17,8 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var taskQueue = TaskQueueResource.Update(
-            workspaceSid, taskQueueSid, null, null, "languages HAS 'english'",
+            workspaceSid, taskQueueSid,
+            targetWorkers: "languages HAS 'english'",
             maxReservedWorkers: 100);
 
         Console.WriteLine(taskQueue.FriendlyName);

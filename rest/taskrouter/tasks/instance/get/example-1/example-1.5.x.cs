@@ -23,7 +23,6 @@ class Example
 
         // alternatively
         var attributes = JObject.FromObject(task.Attributes);
-        const string someValue = attributes["foo"].Value<string>();
-        Console.WriteLine(someValue);
+        Console.WriteLine(attributes["foo"]);
     }
 }
