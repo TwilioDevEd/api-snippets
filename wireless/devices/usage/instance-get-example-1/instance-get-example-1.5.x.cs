@@ -1,35 +1,26 @@
-// Download the **Next-Gen** twilio-csharp library from:
-// twilio.com/docs/libraries/csharp#installation-nextgen
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using System.Threading.Tasks;
-using Twilio.Clients;
-using Twilio.Resources.Preview.Wireless;
+using Newtonsoft.Json.Linq;
+using Twilio;
+using Twilio.Rest.Preview.Wireless.Device;
 
-namespace TwilioApp
+public class Example
 {
-  class Program
-  {
-    static async Task DoTask()
+    public static void Main(string[] args)
     {
-      var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-      var authToken = "your_auth_token";
+        // Find your Account SID and Auth Token at twilio.com/console
+        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string authToken = "your_auth_token";
+        const string deviceSid = "DEb8eff34b248d066a31c4a953134e183e";
 
-      var restClient = new TwilioRestClient(accountSid, authToken);
+        TwilioClient.Init(accountSid, authToken);
 
-      var usage = await
-        Usage.Fetch("DEb8eff34b248d066a31c4a953134e183e")
-          .ExecuteAsync(restClient);
+        var usage = UsageResource.Fetch(deviceSid);
+        var period = JObject.FromObject(usage.Period);
+        var dataCosts = JObject.FromObject(usage.DataCosts);
 
-      Console.WriteLine(usage.Period['start']);
-      Console.WriteLine(usage.Period['end']);
-      Console.WriteLine(usage.DataCosts['total']);
+        Console.WriteLine(period["start"]);
+        Console.WriteLine(period["end"]);
+        Console.WriteLine(dataCosts["total"]);
     }
-
-    static void Main(string[] args)
-    {
-      DoTask().Wait();
-      Console.Write("Press any key to continue.");
-      Console.ReadKey();
-    }
-  }
 }

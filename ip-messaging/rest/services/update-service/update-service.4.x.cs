@@ -12,7 +12,7 @@ class Example {
         const string defaultServiceRoleSid = "defaultServiceRoleSid";
         const string defaultChannelRoleSid = "defaultChannelRoleSid";
         const string defaultChannelCreatorRoleSid = "defaultChannelCreatorRoleSid";
-        const int typingIndicatorTimeout = "typingIndicatorTimeout";
+        const int typingIndicatorTimeout = 5;
         Dictionary<string, string> webhooksParams;
 
         // Update a service
