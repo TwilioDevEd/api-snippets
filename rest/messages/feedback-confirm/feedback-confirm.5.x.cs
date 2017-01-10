@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System.Web.Mvc;
 using Twilio.Rest.Api.V2010.Account.Message;
 using Twilio;

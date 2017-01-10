@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -15,19 +15,17 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var url = new Uri("http://demo.twilio.com/docs/voice.xml");
         var to = new PhoneNumber("+14155551212");
         var from = new PhoneNumber("+18668675309");
-        var method = HttpMethod.Get;
-        var statusCallback = new Uri("https://www.myapp.com/events");
-        var statusCallbackMethod = HttpMethod.Post;
-        var statusCallbackEvents = new List<string>() { "initiated", "ringing", "answered", "completed" };
-        var call = CallResource.Create(to,
-                                       from,
-                                       url: url,
-                                       statusCallback: statusCallback,
-                                       statusCallbackMethod: statusCallbackMethod,
-                                       statusCallbackEvent: statusCallbackEvents);
+        var statusCallbackEvents = new List<string>() {
+            "initiated", "ringing", "answered", "completed" };
+        var call = CallResource.Create(
+            to,
+            from,
+            url: new Uri("http://demo.twilio.com/docs/voice.xml"),
+            statusCallback: new Uri("https://www.myapp.com/events"),
+            statusCallbackMethod: HttpMethod.Post,
+            statusCallbackEvent: statusCallbackEvents);
 
         Console.WriteLine(call.Sid);
     }

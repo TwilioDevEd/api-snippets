@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -14,9 +14,10 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var to = new PhoneNumber("+15005550006");
-        var from = new PhoneNumber("+15005550009");
-        const string body = "Hey Mr Nugget, you the bomb!";
-        var message = MessageResource.Create(to, from: from, body: body);
+        var message = MessageResource.Create(
+            to,
+            from: new PhoneNumber("+15005550009"),
+            body: "Hey Mr Nugget, you the bomb!");
 
         Console.WriteLine(message.Sid);
     }

@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -13,14 +13,10 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-
-        var to = new PhoneNumber("+15558675309");
-        var from = new PhoneNumber("+15017250604");
-        var dateSentAfter = new DateTime(2016, 8, 31);
-
-        var messages = MessageResource.Read(to: to,
-                                            from: from,
-                                            dateSentAfter: dateSentAfter);
+        var messages = MessageResource.Read(
+            to: new PhoneNumber("+15558675309"),
+            from: new PhoneNumber("+15017250604"),
+            dateSentAfter: new DateTime(2016, 8, 31));
 
         foreach (var message in messages)
         {

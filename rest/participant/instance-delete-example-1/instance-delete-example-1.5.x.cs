@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account.Conference;
@@ -12,7 +12,8 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        ParticipantResource.Delete("CFbbe4632a3c49700934481addd5ce1659",
-                                   "CA386025c9bf5d6052a1d1ea42b4d16662");
+        const string conferenceSid = "CFbbe4632a3c49700934481addd5ce1659";
+        const string callSid = "CA386025c9bf5d6052a1d1ea42b4d16662";
+        ParticipantResource.Delete(conferenceSid, callSid);
     }
 }

@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account.Usage.Record;
@@ -12,10 +12,10 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var category = DailyResource.CategoryEnum.CallsInbound;
-        var records = DailyResource.Read(category: category,
-                                         startDate: new DateTime(2012, 09, 01),
-                                         endDate: new DateTime(2012, 09, 30));
+        var records = DailyResource.Read(
+            category: DailyResource.CategoryEnum.CallsInbound,
+            startDate: new DateTime(2012, 09, 01),
+            endDate: new DateTime(2012, 09, 30));
 
         foreach (var record in records)
         {

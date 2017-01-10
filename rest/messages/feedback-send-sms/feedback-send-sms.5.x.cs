@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -15,14 +15,12 @@ class Example
 
         // Generate a random, unique code
         const string uniqueCode = "1234567890";
-
-        var from = new PhoneNumber("+15017250604");
         var to = new PhoneNumber("+15558675309");
-        var body = $"Open to confirm: http://yourserver.com/confirm?id={uniqueCode}";
-        var message = MessageResource.Create(to,
-                                             from: from,
-                                             body: body,
-                                             provideFeedback: true);
+        var message = MessageResource.Create(
+            to,
+            from: new PhoneNumber("+15017250604"),
+            body: $"Open to confirm: http://yourserver.com/confirm?id={uniqueCode}",
+            provideFeedback: true);
 
         Console.WriteLine("We should save this to a database:");
         Console.WriteLine("Unique Code = " + uniqueCode);

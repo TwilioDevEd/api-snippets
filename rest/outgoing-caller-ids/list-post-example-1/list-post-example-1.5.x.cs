@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -14,9 +14,9 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var phoneNumber = new PhoneNumber("+14158675309");
-        const string friendlyName = "My Home Phone Number";
-        var validationRequest = ValidationRequestResource.Create(phoneNumber,
-                                                                 friendlyName: friendlyName);
+        var validationRequest = ValidationRequestResource.Create(
+            phoneNumber,
+            friendlyName: "My Home Phone Number");
 
         Console.WriteLine(validationRequest.ValidationCode);
     }

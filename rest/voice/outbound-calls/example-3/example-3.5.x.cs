@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -14,16 +14,14 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var url = new Uri("http://demo.twilio.com/docs/voice.xml");
         var to = new PhoneNumber("+14155551212");
         var from = new PhoneNumber("+18668675309");
-        var sendDigits = "1234#";
-        var method = HttpMethod.Get;
-        var call = CallResource.Create(to,
-                                       from,
-                                       url: url,
-                                       sendDigits: sendDigits,
-                                       method: method);
+        var call = CallResource.Create(
+            to,
+            from,
+            url: new Uri("http://demo.twilio.com/docs/voice.xml"),
+            sendDigits: "1234#",
+            method: HttpMethod.Get);
 
         Console.WriteLine(call.Sid);
     }

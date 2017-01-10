@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,9 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        const string sid = "MM5ef8732a3c49700934481addd5ce1659";
-
-        var status = MessageResource.Delete(sid);
+        var status = MessageResource.Delete("MM5ef8732a3c49700934481addd5ce1659");
 
         Console.WriteLine(status);
     }

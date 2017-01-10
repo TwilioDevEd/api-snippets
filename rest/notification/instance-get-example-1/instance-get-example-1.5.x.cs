@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,8 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var notification = NotificationResource.Fetch(
-            "NO5a7a84730f529f0a76b3e30c01315d1a");
+        var notification = NotificationResource.Fetch("NO5a7a84730f529f0a76b3e30c01315d1a");
 
         Console.WriteLine(notification.MessageText);
     }

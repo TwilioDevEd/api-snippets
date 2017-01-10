@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -13,11 +13,11 @@ class Example
         const string authToken = "[AuthToken]";
         TwilioClient.Init(accountSid, authToken);
 
-        const string messagingServiceSid = "MG9752274e9e519418a7406176694466fa";
-        const string body = "Phantom Menace was clearly the best of the prequel trilogy.";
-        var message = MessageResource.Create(new PhoneNumber("+16518675309"),
-                                             messagingServiceSid: messagingServiceSid,
-                                             body: body);
+        var to = new PhoneNumber("+16518675309");
+        var message = MessageResource.Create(
+            to,
+            messagingServiceSid: "MG9752274e9e519418a7406176694466fa",
+            body: "Phantom Menace was clearly the best of the prequel trilogy.");
 
         Console.WriteLine(message.Sid);
    }

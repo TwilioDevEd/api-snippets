@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account.Usage;
@@ -12,8 +12,10 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var trigger = TriggerResource.Create(new Uri("http://www.example.com/"),
-                                             "1000",
+        var callbackUrl = new Uri("http://www.example.com/");
+        const string triggerValue = "1000";
+        var trigger = TriggerResource.Create(callbackUrl,
+                                             triggerValue,
                                              TriggerResource.UsageCategoryEnum.Sms);
 
         Console.WriteLine(trigger.Sid);

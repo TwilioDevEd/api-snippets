@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,9 +12,9 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var messageDate = new DateTime(2009, 07, 06);
-        var notifications = NotificationResource.Read(log: 1,
-                                                      messageDate: messageDate);
+        var notifications = NotificationResource.Read(
+            log: 1,
+            messageDate: new DateTime(2009, 07, 06));
 
         foreach (var notification in notifications)
         {

@@ -1,4 +1,4 @@
-// Download the twilio-csharp library from twilio.com/docs/csharp/install
+// Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -12,8 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var recordings = RecordingResource.Read(
-            dateCreated: new DateTime(2016, 10, 18));
+        var recordings = RecordingResource.Read(dateCreated: new DateTime(2016, 10, 18));
 
         foreach (var recording in recordings)
         {
