@@ -4,30 +4,6 @@ using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
 
-class VoiceCountry
-{
-    public string Country { get; set; }
-    public string IsoCountry { get; set; }
-    public Uri Url { get; set; }
-}
-
-class VoiceCountriesResponse
-{
-    public List<VoiceCountry> Countries { get; set; }
-    public Meta Meta { get; set; }
-}
-
-class Meta
-{
-    public int Page { get; set; }
-    public int PageSize { get; set; }
-    public Uri FirstPageUrl { get; set; }
-    public Uri PreviousPageUrl { get; set; }
-    public Uri Url { get; set; }
-    public Uri NextPageUrl { get; set; }
-    public string Key { get; set; }
-}
-
 class Example
 {
     public static void Main(string[] args)
@@ -55,4 +31,29 @@ class Example
             response = client.Execute<VoiceCountriesResponse>(request);
         }
     }
+}
+
+
+class VoiceCountry
+{
+    public string Country { get; set; }
+    public string IsoCountry { get; set; }
+    public Uri Url { get; set; }
+}
+
+class VoiceCountriesResponse
+{
+    public List<VoiceCountry> Countries { get; set; }
+    public Meta Meta { get; set; }
+}
+
+class Meta
+{
+    public int Page { get; set; }
+    public int PageSize { get; set; }
+    public Uri FirstPageUrl { get; set; }
+    public Uri PreviousPageUrl { get; set; }
+    public Uri Url { get; set; }
+    public Uri NextPageUrl { get; set; }
+    public string Key { get; set; }
 }

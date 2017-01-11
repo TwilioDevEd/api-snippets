@@ -5,40 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class LookupPhoneNumberResponse
-{
-    public string CountryCode { get; set; }
-    public string PhoneNumber { get; set; }
-    public CarrierInfo Carrier { get; set; }
-}
-
-class CarrierInfo
-{
-    public string MobileCountryCode { get; set; }
-    public string MobileNetworkCode { get; set; }
-}
-
-class PricingMessagingCountry
-{
-    public string PriceUnit { get; set; }
-    public List<SmsPriceInfo> OutboundSmsPrices { get; set; }
-}
-
-class SmsPriceInfo
-{
-    public string Mcc { get; set; }
-    public string Mnc { get; set; }
-    public string Carrier { get; set; }
-    public List<SmsPrice> Prices { get; set; }
-}
-
-class SmsPrice
-{
-    public string NumberType { get; set; }
-    public string BasePrice { get; set; }
-    public string CurrentPrice { get; set; }
-}
-
 class Example
 {
     public static void Main(string[] args)
@@ -77,4 +43,39 @@ class Example
             Console.WriteLine($"Current price {price.CurrentPrice} {country.PriceUnit}");
         }
     }
+}
+
+
+class LookupPhoneNumberResponse
+{
+    public string CountryCode { get; set; }
+    public string PhoneNumber { get; set; }
+    public CarrierInfo Carrier { get; set; }
+}
+
+class CarrierInfo
+{
+    public string MobileCountryCode { get; set; }
+    public string MobileNetworkCode { get; set; }
+}
+
+class PricingMessagingCountry
+{
+    public string PriceUnit { get; set; }
+    public List<SmsPriceInfo> OutboundSmsPrices { get; set; }
+}
+
+class SmsPriceInfo
+{
+    public string Mcc { get; set; }
+    public string Mnc { get; set; }
+    public string Carrier { get; set; }
+    public List<SmsPrice> Prices { get; set; }
+}
+
+class SmsPrice
+{
+    public string NumberType { get; set; }
+    public string BasePrice { get; set; }
+    public string CurrentPrice { get; set; }
 }
