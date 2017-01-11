@@ -15,6 +15,7 @@
         "premium", 
         "new user"
       ],
+      "credential_sid":null,
       "url": "https://notify.twilio.com/v1/Services/ISxxx/Bindings/BSxxx"
     },
     {
@@ -32,6 +33,7 @@
         "normal",
         "new user"
       ],
+      "credential_sid":null,
       "url": "https://notify.twilio.com/v1/Services/ISxxx/Bindings/BSxxx"
 }
   ],
