@@ -12,5 +12,5 @@ $client->account->messages->create(array(
     'To' => "+15558675309", 
     'From' => "+15017250604", 
     'Body' => "Open to confirm: http://yourserver.com/confirm?id=1234567890",
-    'ProvideFeedback' => $true
+    'ProvideFeedback' => true
 ));
