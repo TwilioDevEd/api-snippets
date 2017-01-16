@@ -13,7 +13,7 @@ class Example
         HttpListenerResponse response = ctx.Response;
 
         response.StatusCode = (int)HttpStatusCode.OK;
-        response.ContentType = "application/xml";
+        response.ContentType = "text/xml";
 
         var twiml = new VoiceResponse();
 

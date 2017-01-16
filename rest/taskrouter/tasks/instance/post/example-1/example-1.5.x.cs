@@ -15,6 +15,7 @@ class Example
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
         // update a task's attributes
@@ -31,12 +32,14 @@ class Example
         Console.WriteLine(task.Age);
 
         // cancel a task
-        task = TaskResource.Update(workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
+        task = TaskResource.Update(
+            workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
         Console.WriteLine(task.AssignmentStatus);
         Console.WriteLine(task.Reason);
 
         // cancel a task #2
-        task = TaskResource.Update(workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
+        task = TaskResource.Update(
+            workspaceSid, taskSid, null, TaskResource.StatusEnum.Canceled, "waiting too long");
         Console.WriteLine(task.AssignmentStatus);
         Console.WriteLine(task.Reason);
     }

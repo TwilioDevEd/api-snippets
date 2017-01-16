@@ -15,8 +15,8 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var Activities = ActivityResource.Read(workspaceSid);
-        foreach(var activity in Activities) {
+        var activities = ActivityResource.Read(workspaceSid);
+        foreach(var activity in activities) {
             Console.WriteLine(activity.FriendlyName);
         }
     }

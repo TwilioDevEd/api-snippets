@@ -14,16 +14,15 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         TwilioClient.Init(accountSid, authToken);
 
-        var worker = WorkerResource.Fetch(workspaceSid, WorkerSid);
+        var worker = WorkerResource.Fetch(workspaceSid, workerSid);
         Console.WriteLine(worker.Attributes);
 
         // alternatively
         var attributes = JObject.Parse(worker.Attributes);
-        string value = attributes["foo"].Value<string>();
-        Console.WriteLine(value);
+        Console.WriteLine(attributes["foo"]);
     }
 }

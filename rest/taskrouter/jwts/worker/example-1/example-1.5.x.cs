@@ -12,15 +12,14 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         var capability = new TaskRouterWorkerCapability(
-                             accountSid, authToken, workspaceSid, WorkerSid);
+                             accountSid, authToken, workspaceSid, workerSid);
 
         capability.AllowUpdatesSubresources();
 
         var token = capability.GenerateToken();
-
         // By default, tokens are good for one hour.
         // Override this default timeout by specifiying a new value (in seconds).
         // For example, to generate a token good for 8 hours:

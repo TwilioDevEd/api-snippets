@@ -12,10 +12,10 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string ActivitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string activitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         TwilioClient.Init(accountSid, authToken);
 
-        ActivityResource.Delete(workspaceSid, ActivitySid);
+        ActivityResource.Delete(workspaceSid, activitySid);
     }
 }

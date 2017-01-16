@@ -16,20 +16,16 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-
         var stats = WorkspaceStatisticsResource.Fetch(workspaceSid);
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-        Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]
-            .Value<DateTime>());
+        Console.WriteLine(cumulativeStats["avg_task_acceptance_time"]);
+        Console.WriteLine(cumulativeStats["tasks_entered"]);
 
-        Console.WriteLine(cumulativeStats["tasks_entered"]
-            .Value<int>());
+        var tasksByStatus =
+            JObject.FromObject(stats.Realtime)["tasks_by_status"].Value<JObject>();
 
-        var taskByStatusStats = JObject.FromObject(stats.Realtime)["tasks_by_status"]
-                                       .Value<JObject>();
-
-        Console.WriteLine(taskByStatusStats["pending"].Value<int>());
-        Console.WriteLine(taskByStatusStats["assigned"].Value<int>());
+        Console.WriteLine(tasksByStatus["pending"]);
+        Console.WriteLine(tasksByStatus["assigned"]);
     }
 }

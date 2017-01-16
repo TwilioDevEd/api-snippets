@@ -16,8 +16,11 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var taskQueue = TaskQueueResource.Create(
-            workspaceSid, "English", "WAxxxx", "WAyyyy",
-            "languages HAS 'english'");
+            workspaceSid,
+            friendlyName: "English",
+            reservationActivitySid: "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            assignmentActivitySid: "WAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+            targetWorkers: "languages HAS 'english'");
 
         Console.WriteLine(taskQueue.FriendlyName);
     }

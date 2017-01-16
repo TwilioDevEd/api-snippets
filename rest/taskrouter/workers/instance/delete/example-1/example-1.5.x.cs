@@ -5,7 +5,6 @@ using System.Net;
 using Twilio;
 using Twilio.Rest.Taskrouter.V1.Workspace;
 
-
 class Example
 {
     static void Main(string[] args)
@@ -14,10 +13,10 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        
+        const string workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
         TwilioClient.Init(accountSid, authToken);
 
-        WorkerResource.Delete(workspaceSid, WorkerSid);
+        WorkerResource.Delete(workspaceSid, workerSid);
     }
 }

@@ -23,7 +23,6 @@ class Example
 
         var pendingTasks = TaskResource.Read(
             workspaceSid, assignmentStatus: TaskResource.StatusEnum.Pending);
-
         foreach(var task in pendingTasks) {
             Console.WriteLine(task.Attributes);
         }

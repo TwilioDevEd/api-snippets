@@ -13,13 +13,13 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         TwilioClient.Init(accountSid, authToken);
 
-        var stats = WorkerStatisticsResource.Fetch(workspaceSid, WorkerSid);
+        var stats = WorkerStatisticsResource.Fetch(workspaceSid, workerSid);
         var cumulativeStats = JObject.FromObject(stats.Cumulative);
 
-        Console.WriteLine(cumulativeStats["reservations_accepted"].Value<int>());
+        Console.WriteLine(cumulativeStats["reservations_accepted"]);
     }
 }
