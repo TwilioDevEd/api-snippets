@@ -1,22 +1,22 @@
 {
   "services": [
     {
-      "sid": "ISxxx",
-      "account_sid": "ACxxx",
-      "service_sid": "ISxxx",
+      "sid": "{Service Instance SID}",
+      "account_sid": "{Account SID}",
+      "service_sid": "{Service Instance SID}",
       "friendly_name": "My Awesome Service",
       "date_created": "2015-08-24T15:28:32Z",
       "date_updated": "2015-08-24T15:28:32Z",
-      "apn_credential_sid": "CRxxx",
-      "gcm_credential_sid": "CRxxx",
+      "apn_credential_sid": "{Credential SID}",
+      "gcm_credential_sid": "{Credential SID}",
       "default_apn_notification_protocol_version":"3",
       "default_gcm_notification_protocol_version":"3",
       "facebook_messenger_page_id": null,
       "messaging_service_sid": null,
-      "url": "https://notify.twilio.com/v1/Services/ISxxx",
+      "url": "https://notify.twilio.com/v1/Services/{Service Instance SID}",
       "links": {
-        "bindings": "https://notify.twilio.com/v1/Services/ISxxx/Bindings",
-        "notifications": "https://notify.twilio.com/v1/Services/ISxxx/Notifications"
+        "bindings": "https://notify.twilio.com/v1/Services/{Service Instance SID}/Bindings",
+        "notifications": "https://notify.twilio.com/v1/Services/{Service Instance SID}/Notifications"
       }
     }
   ],

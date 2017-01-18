@@ -1,5 +1,5 @@
-curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications' \
---data-urlencode 'Tag=rogue_one'  \
---data-urlencode 'Sms={"from":"+16516667788"}'  \
---data-urlencode 'Body=A new Rogue One trailer has been released!'  \
--u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
+curl -X POST 'https://notify.twilio.com/v1/Services/ISa57b73b2285b7f321daf5b542c13331e/Notifications' \
+--data-urlencode 'Identity=00000001'  \
+--data-urlencode 'Sms={"from":"+442299999999"}'  \
+--data-urlencode 'Body=Knok-Knok! This is your first Notify SMS'  \
+-u 'AC508a4ee84f404aa26e4e5b1c72b064f2:c93b6118c1afa91a49ec174f1cdf7fcf'
