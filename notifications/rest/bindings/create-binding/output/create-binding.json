@@ -1,17 +1,17 @@
 {
-  "sid": "BSxxx",
-  "account_sid": "ACxxx",
-  "service_sid": "ISxxx",
+  "sid": "{Binding SID}",
+  "account_sid": "{Account SID}",
+  "service_sid": "{Service Instance SID}",
   "date_created": "2016-03-16T10:14:20Z",
   "date_updated": "2016-03-16T10:14:20Z",
   "notification_protocol_version": "3",
-  "endpoint": "xxx",
+  "endpoint": "{endpoint ID}",
   "identity": "bob",
   "binding_type": "gcm",
-  "address": "xxx",
+  "address": "{address}",
   "tags": [
     "premium",
     "new user"
   ],
-  "url": "https://notify.twilio.com/v1/Services/ISxxx/Bindings/BSxxx"
+  "url": "https://notify.twilio.com/v1/Services/{Service Instance SID}/Bindings/{Binding SID}"
 }
