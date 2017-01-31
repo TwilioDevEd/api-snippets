@@ -1,5 +1,5 @@
-curl -XGET https://notify.twilio.com/v1/Services/ISxxx/Bindings \
-    -d 'BindingType=gcm' \
-    -d 'Tag=new user' \
-    -d 'StartDate=2015-08-25' \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
+curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
+    -d 'StartDate=2017-01-17' \
+    -d 'Tag=preferred device' \
+    -d 'Tag='new user' \
+	-u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
