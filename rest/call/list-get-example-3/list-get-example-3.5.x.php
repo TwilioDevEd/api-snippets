@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $calls = $client->calls->read(
-    array("status" => "completed", "starttimeAfter" => "2009-07-06")
+    array("status" => "completed", "startTimeAfter" => "2009-07-06")
 );
 // Loop over the list of calls and echo a property for each one
 foreach ($calls as $call) {
