@@ -1,6 +1,6 @@
 curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
---data-urlencode 'Endpoint=00000001:sms'  \ 
---data-urlencode 'Identity=00000001'  \ # We recommend using a GUID or other anonymized identifier for Identity.
+--data-urlencode 'Endpoint=00000001:sms'  \
+--data-urlencode 'Identity=00000001'  \
 --data-urlencode 'BindingType=sms'  \
 --data-urlencode 'Address=+1651000000000'  \
 -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
