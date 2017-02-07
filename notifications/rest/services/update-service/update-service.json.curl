@@ -1,3 +1,5 @@
-curl -XPOST https://notify.twilio.com/v1/Services/ISxxx \
-    -d "FriendlyName=NewFlowHipSlackChatDock" \
+curl -XPOST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    -d "FriendlyName=Another Awesome Service" \
+    -d "FacebookMessengerPageId=your_page_id" \
+    -d "MessagingServiceSid=your_twilio_messaging_service_sid"
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
