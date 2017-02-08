@@ -10,6 +10,12 @@ Room room = videoClient.connect(connectOptions, new Room.Listener() {
     public void onDisconnected(Room room, TwilioException e) {}
 
     @Override
+    public void onRecordingStarted(Room room) {}
+
+    @Override
+    public void onRecordingStopped(Room room) {}
+
+    @Override
     public void onParticipantConnected(Room room, Participant participant) {
         Log.i("Room.Listener", participant.getIdentity() + " has joined the room.");
     }

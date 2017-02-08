@@ -31,6 +31,16 @@ Room.Listener roomListener = new Room.Listener() {
     public void onParticipantDisconnected(Room room, Participant participant) {
         // A participant left the Room
     }
+
+    @Override
+    public void onRecordingStarted(Room room) {
+        // Notifies you that the media being shared to a room is being recorded.
+    }
+
+    @Override
+    public void onRecordingStopped(Room room) {
+        // Notifies you that the media being shared to a room is no longer being recorded.
+    }
 };
 
 // Connect to the room
