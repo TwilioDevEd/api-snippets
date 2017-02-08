@@ -5,16 +5,14 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-const bindingOpts = {
-  endpoint: 'endpoint_id',
-  identity: '00000001',
-  bindingType: 'apn',
-  address: 'apn_device_token',
-  tag: ['preferred device', 'new user']
+const credentialOpts = {
+  ApiKey: 'gcm_api_key',
+  friendlyName: 'MyGCMCredential',
+  type: 'gcm',
 };
 
 client.notify.v1
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .bindings.create(bindingOpts)
-  .then(binding => console.log(binding.sid))
+  .credentials.create(credentialOpts)
+  .then(credential => console.log(credential.sid))
   .catch(error => console.log(error));

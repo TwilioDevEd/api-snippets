@@ -6,11 +6,10 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const bindingOpts = {
-  endpoint: 'endpoint_id',
-  identity: '00000001',
-  bindingType: 'apn',
-  address: 'apn_device_token',
-  tag: ['preferred device', 'new user']
+  endpoint: '00000001:sms',
+  identity: '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
+  bindingType: 'sms',
+  address: '+1651000000000',
 };
 
 client.notify.v1

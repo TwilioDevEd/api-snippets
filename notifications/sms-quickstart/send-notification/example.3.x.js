@@ -5,16 +5,15 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-const bindingOpts = {
-  endpoint: 'endpoint_id',
-  identity: '00000001',
-  bindingType: 'apn',
-  address: 'apn_device_token',
-  tag: ['preferred device', 'new user']
+const notificationOpts = {
+  identity: '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
+  bindingType: 'sms',
+  body: 'Knok-Knok! This is your first Notify SMS',
 };
 
 client.notify.v1
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .bindings.create(bindingOpts)
-  .then(binding => console.log(binding.sid))
+  .notifications
+  .create(notificationOpts)
+  .then(notification => console.log(notification.sid))
   .catch(error => console.log(error));
