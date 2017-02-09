@@ -11,16 +11,17 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$bindingSid = "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
-// Retrieve a binding
-$binding = $client
-    ->notify
-    ->services($serviceSid)
-    ->bindings($bindingSid)
-    ->fetch();
+// Create a notification
+$notification = $client
+    ->notify->services($serviceSid)
+    ->notifications->create([
+        'identity' => '00000001',
+        'body' => 'Hello Bob',
+        'tag' => 'preferred_device'
+    ]);
 
-echo $binding->sid;
+echo $notification->sid;
