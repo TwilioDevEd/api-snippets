@@ -8,8 +8,8 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services.create(
-  friendly_name: 'My Awesome Service'
-)
+credentials = client.notify.v1.credentials.list()
 
-puts service
+credentials.each do |credential|
+  puts credential.sid
+end

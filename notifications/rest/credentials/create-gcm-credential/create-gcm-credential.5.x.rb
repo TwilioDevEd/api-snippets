@@ -8,8 +8,11 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services.create(
-  friendly_name: 'My Awesome Service'
+# Create a credential for a given identity
+credential = client.notify.v1.credentials.create(
+  friendly_name: 'MyGCMCredential',
+  type: 'gcm',
+  # secret: 'gcm_api_key'
 )
 
-puts service
+puts credential.sid

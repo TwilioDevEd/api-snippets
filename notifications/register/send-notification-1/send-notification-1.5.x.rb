@@ -8,8 +8,13 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services.create(
-  friendly_name: 'My Awesome Service'
+# Retrieve a valid notification service
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+
+# Create a notification for a given identity
+notification = service.notifications.create(
+  body: 'Hello Bob',
+  tag: 'new_user'
 )
 
-puts service
+puts notification.sid
