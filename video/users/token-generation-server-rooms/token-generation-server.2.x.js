@@ -2,7 +2,7 @@ require('dotenv').load();
 var http = require('http');
 var path = require('path');
 var AccessToken = require('twilio').AccessToken;
-var ConversationsGrant = AccessToken.ConversationsGrant;
+var VideoGrant = AccessToken.VideoGrant;
 var express = require('express');
 var randomUsername = require('./randos');
 
@@ -25,7 +25,7 @@ app.get('/token', function(request, response) {
     token.identity = identity;
         
     //grant the access token Twilio Video capabilities
-    var grant = new ConversationsGrant();
+    var grant = new VideoGrant();
     grant.configurationProfileSid = process.env.TWILIO_CONFIGURATION_SID;
     token.addGrant(grant);
 
