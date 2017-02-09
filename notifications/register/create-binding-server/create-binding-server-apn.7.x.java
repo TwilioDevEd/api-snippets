@@ -18,14 +18,14 @@ public class Example {
 
     List<String> tags = Arrays.asList("premium", "new user");
 
-    String endpoint = "xxx";
-    String identity = "bob";
-    String address = "xxx";
+    String endpoint = "endpoint_id";
+    String identity = "00000001";
+    String address = "apn_device_token";
     Binding binding = Binding
             .creator(SERVICE_SID,
                      endpoint,
                      identity,
-                     Binding.BindingType.GCM,
+                     Binding.BindingType.APN,
                      address)
             .setTag(tags)
             .create();
