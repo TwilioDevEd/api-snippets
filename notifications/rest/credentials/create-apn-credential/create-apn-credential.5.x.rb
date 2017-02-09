@@ -7,10 +7,8 @@ auth_token = 'your_auth_token'
 certificate_from_file = 'certificate_contents'
 private_key_from_file = 'private_key_contents'
 
-# set up a client to talk to the Twilio REST API
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create a credential for a given identity
 credential = client.notify.v1.credentials.create(
   friendly_name: 'MyAPNCredential',
   type: 'apn',
