@@ -12,7 +12,7 @@ module Model
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.4.1-alpha1'],
+      PHP_NAME    => ['4.10', '5.4.2-alpha1'],
       PYTHON_NAME => ['5.6.0', '6.0.0rc12'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc17'],
       NODE_NAME   => ['2.11.0', '3.0.0-rc.13']
