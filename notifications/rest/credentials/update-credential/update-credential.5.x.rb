@@ -7,6 +7,11 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx').fetch
+credential = client.notify.v1
+                   .credentials('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                   .update(
+                     friendly_name: 'MyCredential',
+                     sandbox: true
+                   )
 
-puts service
+puts credential.friendly_name

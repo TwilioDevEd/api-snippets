@@ -7,6 +7,14 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx').fetch
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-puts service
+binding = service.bindings.create(
+  identity: '00000001',
+  endpoint: 'endpoint_id',
+  binding_type: 'apn',
+  address: 'apn_device_token',
+  tag: 'preferred device, new user'
+)
+
+puts binding.sid

@@ -7,6 +7,5 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx').fetch
-
-puts service
+client.notify.v1.credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+      .delete()

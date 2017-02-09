@@ -7,6 +7,12 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx').fetch
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-puts service
+notification = service.notifications.create(
+  body: 'Hello Bob',
+  identity: '00000001',
+  tag: 'preferred_device'
+)
+
+puts notification.sid

@@ -7,6 +7,13 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx').fetch
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-puts service
+binding = service.bindings.create(
+  endpoint: '00000001:sms',
+  identity: '00000001',
+  binding_type: 'sms',
+  address: 'Address=+1651000000000'
+)
+
+puts binding.sid
