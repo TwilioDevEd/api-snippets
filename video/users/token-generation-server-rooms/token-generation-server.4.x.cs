@@ -30,7 +30,7 @@ namespace VideoQuickstart.Controllers
             token.Identity = identity;
 
             // Create a video grant for this token
-            var grant = new ConversationsGrant();
+            var grant = new VideoGrant();
             token.AddGrant(grant);
 
             return Json(new
