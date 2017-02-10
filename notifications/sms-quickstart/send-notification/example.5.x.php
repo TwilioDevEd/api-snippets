@@ -11,16 +11,16 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$bindingSid = "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
-// Retrieve a binding
-$binding = $client
-    ->notify
-    ->services($serviceSid)
-    ->bindings($bindingSid)
-    ->fetch();
+// Create a notification
+$notification = $client
+    ->notify->services($serviceSid)
+    ->notifications->create([
+        'identity' => '00000001', # We recommend using a GUID or other anonymized identifier for Identity.
+        'body' => 'Knok-Knok! This is your first Notify SMS'
+    ]);
 
-echo $binding->sid;
+echo $notification->body; // => Knok-Knok! This is your first Notify SMS
