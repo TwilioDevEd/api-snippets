@@ -13,7 +13,6 @@ const credentialOpts = {
 };
 
 client.notify.v1
-  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .credentials.create(credentialOpts)
   .then(credential => console.log(credential.sid))
   .catch(error => console.log(error));
