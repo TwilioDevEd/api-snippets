@@ -7,7 +7,7 @@ var authToken = "your_auth_token";
 var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-var capability = new twilio.TaskRouterTaskQueueCapability(accountSid, authToken, workspaceSid, workerSid);
+var capability = new twilio.TaskRouterWorkspaceCapability(accountSid, authToken, workspaceSid, workerSid);
 capability.allowFetchSubresources();
 capability.allowUpdatesSubresources();
 capability.allowDeleteSubresources();

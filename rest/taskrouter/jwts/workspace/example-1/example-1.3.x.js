@@ -7,7 +7,7 @@ const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-const capability = new twilio.jwt.TaskRouterTaskQueueCapability(accountSid,
+const capability = new twilio.jwt.TaskRouterWorkspaceCapability(accountSid,
   authToken,
   workspaceSid,
   workerSid);
