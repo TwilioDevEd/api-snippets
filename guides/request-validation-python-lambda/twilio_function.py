@@ -8,17 +8,17 @@ use of the Twilio Python helper library.
 from __future__ import print_function
 
 import os
-import twilio
 import urllib
 from twilio import twiml
 from twilio.util import RequestValidator
 
 twilio_master_number = os.environ['MASTER_NUMBER']
 
-def handler(event, context):
 
+def handler(event, context):
+    """Lambda function handler for Twilio response."""
     resp = twiml.Response()
-    print("Event:",event)
+    print("Event:", event)
     if u'twilioSignature' in event and u'Body' in event \
             and event['Body'].lower() == "secret":
 
@@ -26,7 +26,6 @@ def handler(event, context):
             k: urllib.unquote(v) for k, v in event.items()
             if k != u'twilioSignature'
         }
-
 
         validator = RequestValidator(os.environ['AUTH_TOKEN'])
         request_valid = validator.validate(
@@ -59,7 +58,6 @@ def handler(event, context):
             secret_message = "I'm sorry, Dave. I'm afraid I can't do that."
             resp.message(secret_message)
             return str(resp)
-
 
     else:
         resp.message("Hello world! -Lambda")
