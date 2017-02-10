@@ -11,16 +11,18 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$bindingSid = "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
-// Retrieve a binding
+// Create a binding
 $binding = $client
-    ->notify
-    ->services($serviceSid)
-    ->bindings($bindingSid)
-    ->fetch();
+    ->notify->services($serviceSid)
+    ->bindings->create(
+        '00000001:sms',
+        '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
+        'sms',
+        '+1651000000000'
+    );
 
 echo $binding->sid;

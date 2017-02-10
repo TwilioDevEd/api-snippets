@@ -2,7 +2,7 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/php
-require_once '/path/to/vendor/autoload.php';
+require_once('/path/to/twilio-php/Rest/Client.php');
 
 use Twilio\Rest\Client;
 
@@ -11,16 +11,16 @@ $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$bindingSid = "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
-// Retrieve a binding
-$binding = $client
-    ->notify
-    ->services($serviceSid)
-    ->bindings($bindingSid)
-    ->fetch();
+// Create a notification
+$notification = $client
+    ->notify->services($serviceSid)
+    ->notifications->create([
+        'tag' => 'new_user',
+        'body' => 'Hello New Users'
+    ]);
 
-echo $binding->sid;
+echo $notification->sid;
