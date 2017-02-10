@@ -6,5 +6,4 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.notify.v1
-  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .credentials.list();
