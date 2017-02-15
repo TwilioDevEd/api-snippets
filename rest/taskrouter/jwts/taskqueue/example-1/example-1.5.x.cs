@@ -1,8 +1,9 @@
 // Download the twilio-csharp library from
 // https://www.twilio.com/docs/libraries/csharp#installation
 using System;
-using Twilio;
-using Twilio.JWT;
+using System.Collections.Generic;
+using Twilio.Http;
+using Twilio.Jwt.Taskrouter;
 
 class Example
 {
@@ -14,17 +15,52 @@ class Example
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-        var capability = new TaskRouterTaskQueueCapability(
-                             accountSid, authToken, workspaceSid, taskQueueSid);
+        var urls = new PolicyUrlUtils(workspaceSid, taskQueueSid);
 
-        capability.AllowFetchSubresources();
-        capability.AllowUpdates();
+        var allowFetchSubresources = new Policy($"{urls.TaskQueue}/**",
+                                                HttpMethod.Get);
 
-        var token = capability.GenerateToken();
+        var allowUpdates = new Policy(urls.TaskQueue, HttpMethod.Post);
+
+        var policies = new List<Policy>
+        {
+            allowFetchSubresources,
+            allowUpdates
+        };
 
         // By default, tokens are good for one hour.
         // Override this default timeout by specifiying a new value (in seconds).
         // For example, to generate a token good for 8 hours:
-        token = capability.GenerateToken(28800);  // 60 * 60 * 8
+        var capability = new TaskRouterCapability(
+            accountSid,
+            authToken,
+            workspaceSid,
+            null,
+            policies: policies,
+            expiration: DateTime.UtcNow.AddSeconds(28800) // 60 * 60 * 8
+            );
+
+        Console.WriteLine(capability.ToJwt());
     }
+}
+
+
+class PolicyUrlUtils
+{
+    const string taskRouterBaseUrl = "https://taskrouter.twilio.com";
+    const string taskRouterVersion = "v1";
+
+    readonly string _workspaceSid;
+    readonly string _taskQueueSid;
+
+    public PolicyUrlUtils(string workspaceSid, string taskQueueSid)
+    {
+        _workspaceSid = workspaceSid;
+        _taskQueueSid = taskQueueSid;
+    }
+
+    public string TaskQueue => $"{Workspace}/TaskQueue/{_taskQueueSid}";
+
+    string Workspace =>
+        $"{taskRouterBaseUrl}/{taskRouterVersion}/Workspaces/{_workspaceSid}";
 }
