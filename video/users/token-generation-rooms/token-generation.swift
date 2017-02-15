@@ -14,5 +14,6 @@ session.dataTaskWithRequest(request, completionHandler: { data, response, error 
     // Parse result JSON
     let json = JSON(data: data!)
     let token = json["token"].stringValue
+    let identity = json["identity"].stringValue
   }
 }).resume()

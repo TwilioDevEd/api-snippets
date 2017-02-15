@@ -1,7 +1,8 @@
 // Install the Java helper library from twilio.com/docs/java/install
+
 import com.twilio.Twilio;
-import com.twilio.rest.api.v2010.account.incomingphonenumber.LocalCreator;
 import com.twilio.base.ResourceSet;
+import com.twilio.rest.api.v2010.account.IncomingPhoneNumber;
 import com.twilio.rest.api.v2010.account.availablephonenumbercountry.Local;
 import com.twilio.type.PhoneNumber;
 
@@ -13,9 +14,11 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Local> numbers = Local.read("GB").byContains("4420").execute();
+    ResourceSet<Local> numbers = Local.reader("GB").setContains("4420").read();
+
+    // Purchase the first number on the list.
     PhoneNumber availableNumber = numbers.iterator().next().getPhoneNumber();
 
-    new LocalCreator(availableNumber).execute();
+    IncomingPhoneNumber.creator(availableNumber).create();
   }
 }

@@ -1,0 +1,5 @@
+{
+  "title": "The TwiML used to make the outbound call",
+  "description": "This XML document uses the <Say> and the <Play> TwiML tags to read a message and play an MP3 file for the user.",
+  "type": "output"
+}

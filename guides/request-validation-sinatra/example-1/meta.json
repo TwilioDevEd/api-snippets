@@ -1,0 +1,5 @@
+{
+  "title":       "A Sinatra app without Twilio requests validation",
+  "description": "A simple Sinatra application responding TwiML.",
+  "type":        "server"
+}

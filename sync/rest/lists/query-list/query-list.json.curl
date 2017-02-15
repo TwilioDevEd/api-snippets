@@ -1,2 +1,2 @@
-curl -X GET 'https://preview.twilio.com/Sync/Services/ISxx/Lists/ESxx/Items?From=10&Direction=forward' \
+curl -X GET 'https://preview.twilio.com/Sync/Services/ISxx/Lists/ESxx/Items?From=10&Order=asc' \
  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

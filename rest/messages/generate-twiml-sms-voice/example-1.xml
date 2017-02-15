@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say>Hello Monkey! You will get an SMS message soon.</Say>
-    <Sms>Here it is!</Sms>
+    <Say>Hello! You will get an SMS message soon.</Say>
+    <Sms>This is the ship that made the Kessel Run in fourteen parsecs?</Sms>
 </Response>

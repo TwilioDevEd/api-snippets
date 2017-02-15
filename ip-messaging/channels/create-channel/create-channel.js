@@ -1,5 +1,5 @@
 // Create a Channel
-messagingClient.createChannel({
+chatClient.createChannel({
     uniqueName: 'general',
     friendlyName: 'General Chat Channel'
 }).then(function(channel) {

@@ -11,4 +11,4 @@ $capability = new ClientToken($accountSid, $authToken);
 $capability->allowClientIncoming("jenny");
 $token = $capability->generateToken();
 
-echo $token
+echo $token;

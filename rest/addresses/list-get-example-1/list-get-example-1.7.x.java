@@ -11,7 +11,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    ResourceSet<Address> addresses = Address.read().execute();
+    ResourceSet<Address> addresses = Address.reader().read();
 
     // Loop over addresses and print out a property for each one.
     for (Address address : addresses) {

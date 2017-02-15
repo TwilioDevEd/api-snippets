@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Call call = Call.fetch("CA42ed11f93dc08b952027ffbc406d0868").execute();
+    Call call = Call.fetcher("CA42ed11f93dc08b952027ffbc406d0868").fetch();
 
     System.out.println(call.getTo());
   }

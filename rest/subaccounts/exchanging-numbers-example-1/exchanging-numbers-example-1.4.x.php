@@ -7,11 +7,20 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token"; 
 $client = new Services_Twilio($sid, $token);
 
+// In the case you want to transfer numbers between subaccounts, you need to 
+// know three things - the account SID of the phone number's current owner, 
+// the account SID of the account you'd like to transfer the number to, and 
+// the SID of the phone number you'd like to transfer
+$currentNumberOwnerAccountSid = "ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
+$newNumberOwnerAccountSid = "ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+$phoneNumberSid = "PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
+
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
-$number = $client->accounts->get("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->incoming_phone_numbers->get("PN2a0747eba6abf96b7e3c3ff0b4530f6e");
+$number = $client->accounts->get($currentNumberOwnerAccountSid)
+    ->incoming_phone_numbers->get($phoneNumberSid);
+
 $number->update(array(
-    "AccountSid" => "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "AccountSid" => $newNumberOwnerAccountSid,
 ));
 echo $number->phone_number;

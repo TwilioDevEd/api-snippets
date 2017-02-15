@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://preview.twilio.com/insights/Calls/Report/Aspects/Clients?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://preview.twilio.com/insights/Calls/Report/Aspects/Clients?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "response"
+  },
+  "response": []
+}

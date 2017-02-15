@@ -1,0 +1,25 @@
+<TwilioResponse>
+	<Messages page="0" pagesize="50" uri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages" firstpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages?Page=0&amp;PageSize=50" previouspageuri="" nextpageuri="/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages?Page=1&amp;PageSize=50">
+		<Message>
+			<Sid>MM800f449d0399ed014aae2bcc0cc2f2ec</Sid>
+			<DateCreated>Wed, 31 Aug 2016 03:45:01 +0000</DateCreated>
+			<DateUpdated>Wed, 31 Aug 2016 03:45:03 +0000</DateUpdated>
+			<DateSent>Wed, 31 Aug 2016 03:45:03 +0000</DateSent>
+			<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+			<To>+15558675309</To>
+			<From>+15017250604</From>
+			<Body>Hey Jenny why aren't you returning my calls?</Body>
+			<NumSegments>1</NumSegments>
+			<NumMedia>0</NumMedia>
+			<Status>sent</Status>
+			<Direction>outbound-api</Direction>
+			<Price>-0.02000</Price>
+			<PriceUnit>USD</PriceUnit>
+			<ErrorCode/>
+			<ErrorMessage/>
+			<ApiVersion>2010-04-01</ApiVersion>
+			<Uri>/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec</Uri>
+		</Message>
+		...
+	</Messages>
+</TwilioResponse>

@@ -1,0 +1,5 @@
+{
+  "title": "Use <Gather> to collect user input via the keypad (DTMF tones)",
+  "description": "This example returns TwiML containing a <Say> tag nested within a <Gather> tag. The user will be prompted to choose sales or support.",
+  "type": "server"
+}

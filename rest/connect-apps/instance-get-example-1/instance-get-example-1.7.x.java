@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    ConnectApp connectApp = ConnectApp.fetch("CNb989fdd207b04d16aee578018ef5fd93").execute();
+    ConnectApp connectApp = ConnectApp.fetcher("CNb989fdd207b04d16aee578018ef5fd93").fetch();
 
     System.out.println(connectApp.getHomepageUrl());
   }

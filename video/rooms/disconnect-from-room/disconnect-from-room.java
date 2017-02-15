@@ -1,18 +1,12 @@
-// To disconnect from a Conversation, we call:
-conversation.disconnect();
+// To disconnect from a Room, we call:
+room.disconnect();
 
-
-// This results in a call to ConversationListener#onConversationEnded
-private Conversation.Listener conversationListener() {
-  return new Conversation.Listener() {
-
-    ...
-
+// This results in a call to Room.Listener#onDisconnected
+private Room.Listener roomListener() {
+  return new Room.Listener() {
     @Override
-    public void onConversationEnded(Conversation conversation,
-                                    TwilioConversationsException e) {
-      // Dispose of the Conversation after disconnecting
-      conversation = null;
-    }
+    public void onDisconnected(Room room, TwilioException e) {
+        Log.d(TAG,"Disconnected from " + room.getName());
+    } 
   };
 }

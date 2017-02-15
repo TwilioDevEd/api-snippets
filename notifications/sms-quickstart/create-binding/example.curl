@@ -1,8 +1,6 @@
 curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
---data-urlencode 'Endpoint=your_user@example.com:sms'  \
---data-urlencode 'Identity=your_user@example.com'  \
+--data-urlencode 'Endpoint=00000001:sms'  \
+--data-urlencode 'Identity=00000001'  \
 --data-urlencode 'BindingType=sms'  \
---data-urlencode 'Address=+1651555667777'  \
---data-urlencode 'Tag=rogue_one'  \
---data-urlencode 'Tag=han_solo_spinoff'  \
+--data-urlencode 'Address=+1651000000000'  \
 -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

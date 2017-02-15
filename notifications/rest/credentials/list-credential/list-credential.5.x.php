@@ -1,14 +1,22 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// NOTE: This example uses the next generation Twilio helper library - for more
+// information on how to download and install this version, visit
+// https://www.twilio.com/docs/libraries/php
+require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
-// Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "your_auth_token";
-$client = new Client($sid, $token);
+// Your Account SID and Auth Token from https://www.twilio.com/console
+$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$authToken = "your_auth_token";
 
-$credentials = $client->notifications->credentials->read();
+// Initialize the client
+$client = new Client($accountSid, $authToken);
+
+$credentials = $client
+    ->notify
+    ->credentials
+    ->read();
 
 foreach ($credentials as $credential) {
     echo $credential->friendlyName;

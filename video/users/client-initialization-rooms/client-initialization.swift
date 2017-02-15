@@ -1,17 +1,11 @@
-// Create an AccessManager to manage our Access Token
-var accessManager = TwilioAccessManager(token:accessToken, delegate:self);
+// Create a Video Client and connect to Twilio's backend.
+var client = TVIVideoClient(token: accessToken)
 
-// Create a Conversations Client and connect to Twilio's backend.
-var client = TwilioConversationsClient(accessManager: accessManager!,
-									   delegate: self);
-client!.listen()
+// Connect to a room
+let connectOptions = TVIConnectOptions { (builder) in
+    builder.name = "my-room"
+}
 
-/* See the "Working with Conversations" guide for instructions on implementing
-a TwilioConversationsClientDelegate */ 
-
-// MARK: TwilioConversationsClientDelegate
-
-func conversationsClientDidStartListeningForInvites(conversationsClient: TwilioConversationsClient) {
-    print("Connected to Twilio!")
-    ...
+if let client = client {
+    room = client.connect(with: connectOptions, delegate: self)
 }

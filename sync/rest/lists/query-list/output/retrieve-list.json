@@ -18,9 +18,9 @@
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Lists/ES2dc3eca055314f338ddbc8e523df575f/Items?Direction=forward&From=0&PageSize=50&Page=0",
+    "first_page_url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Lists/ES2dc3eca055314f338ddbc8e523df575f/Items?Order=asc&From=0&PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Lists/ES2dc3eca055314f338ddbc8e523df575f/Items?Direction=forward&From=0&PageSize=50&Page=0",
+    "url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Lists/ES2dc3eca055314f338ddbc8e523df575f/Items?Order=asc&From=0&PageSize=50&Page=0",
     "next_page_url": null,
     "key": "items"
   }

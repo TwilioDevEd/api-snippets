@@ -2,7 +2,7 @@
 // Get the PHP helper library from twilio.com/docs/php/install
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Jwt\AccessToken;
-use Twilio\Jwt\Grants\ConversationsGrant;
+use Twilio\Jwt\Grants\VideoGrant;
 
 // Required for all Twilio access tokens
 $twilioAccountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
@@ -21,8 +21,8 @@ $token = new AccessToken(
     $identity
 );
 
-// Grant access to Conversations
-$grant = new ConversationsGrant();
+// Grant access to Twilio Video
+$grant = new VideoGrant();
 $grant->setConfigurationProfileSid($TwilioConfigurationSid);
 $token->addGrant($grant);
 

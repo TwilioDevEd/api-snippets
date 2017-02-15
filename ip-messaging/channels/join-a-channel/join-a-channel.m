@@ -1,9 +1,9 @@
 // Where "client" is an authenticated client obtained with
-// [TwilioIPMessagingClient ipMessagingClientWithAccessManager:properties:delegate:]
-// and the callback for ipMessagingClient:synchronizationStatusChanged: has been called with TWMClientSynchronizationStatusChannelsListCompleted
-TWMChannel *channel = [[self.client channelsList] channelWithUniqueName:@"general"];
+// [TwilioChatClient chatClientWithToken:properties:delegate:]
+// and the callback for chatClient:synchronizationStatusChanged: has been called with TCHClientSynchronizationStatusChannelsListCompleted
+TCHChannel *channel = [[self.client channelsList] channelWithUniqueName:@"general"];
 if (channel) {
-    [channel joinWithCompletion:^(TWMResult *result) {
+    [channel joinWithCompletion:^(TCHResult *result) {
         if ([result isSuccessful]) {
             NSLog(@"Channel joined.");
         } else {

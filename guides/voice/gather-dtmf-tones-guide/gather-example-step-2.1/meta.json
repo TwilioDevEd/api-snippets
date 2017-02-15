@@ -1,0 +1,5 @@
+{
+  "title": "Implement an 'action' URL to handle user input",
+  "description": "This technique creates a separate route to handle user input.",
+  "type": "server"
+}

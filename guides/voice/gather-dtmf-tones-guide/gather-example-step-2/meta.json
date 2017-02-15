@@ -1,0 +1,5 @@
+{
+  "title": "Add another route to handle the input from the user",
+  "description": "This technique creates a separate route to handle user input.",
+  "type": "server"
+}

@@ -1,0 +1,71 @@
+{
+    "status": "successful",
+    "message": null,
+    "code": null,
+    "results": {
+        "whitepages_pro_caller_id": {
+            "request_sid": "XR09b87c86c4ad4f293e407790dbd4630b",
+            "status": "successful",
+            "message": null,
+            "code": null,
+            "result": {
+                "results": [
+                    {
+                        "id": {
+                            "key": "Phone.0a036fef-a2e0-4b08-cfe3-bc7128b7ef2f.Durable",
+                            "type": "Phone"
+                        },
+                        "line_type": "NonFixedVOIP",
+                        "belongs_to": [
+                            {
+                                "id": {
+                                    "key": "Business.a6a9de0e-acbd-4fba-ab71-8bbf2875f957.Durable",
+                                    "type": "Business"
+                                },
+                                "name": "Twilio Inc",
+                                "locations": null,
+                                "phones": null
+                            }
+                        ],
+                        "associated_locations": [
+                            {
+                                "id": {
+                                    "key": "Location.4d4449fe-87e1-452e-94d8-5464c93450b7.Durable",
+                                    "type": "Location"
+                                },
+                                "type": "Address",
+                                "valid_for": null,
+                                "legal_entities_at": null,
+                                "city": "San Francisco",
+                                "postal_code": "94107",
+                                "zip4": "3624",
+                                "state_code": "CA",
+                                "country_code": "US",
+                                "is_receiving_mail": true,
+                                "not_receiving_mail_reason": null,
+                                "usage": "Business",
+                                "delivery_point": "MultiUnit",
+                                "address_type": "Highrise",
+                                "lat_long": {
+                                    "latitude": 37.783382,
+                                    "longitude": -122.395714,
+                                    "accuracy": "RoofTop"
+                                },
+                                "is_deliverable": true,
+                                "standard_address_line1": "123 Main Street",
+                                "standard_address_line2": "",
+                                "is_historical": false
+                            }
+                        ],
+                        "is_valid": true,
+                        "phone_number": "5558675309",
+                        "country_calling_code": "1",
+                        "carrier": "Twilio",
+                        "is_prepaid": null
+                    }
+                ],
+                "messages": []
+            }
+        }
+    }
+}

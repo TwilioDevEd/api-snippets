@@ -13,4 +13,4 @@ $capability->allowClientOutgoing($appSid);
 $capability->allowClientIncoming('jenny');
 $token = $capability->generateToken();
 
-echo $token
+echo $token;

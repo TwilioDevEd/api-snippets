@@ -6,20 +6,19 @@ require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
-// Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "your_auth_token";
+// Your Account SID and Auth Token from https://www.twilio.com/console
+$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$authToken = "your_auth_token";
+
+$serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
 // Update the service
-$service = $client->notifications
-    ->services("ISxxx")
-    ->update(
-        array(
-            "friendlyName" => "NewFlowHipSlackChatDock",
-        )
-    );
+$service = $client
+    ->notify
+    ->services($serviceSid)
+    ->update(["friendlyName" => "NewFlowHipSlackChatDock"]);
 
-echo $service->friendlyName;
+echo $service->friendlyName; // => NewFlowHipSlackChatDock

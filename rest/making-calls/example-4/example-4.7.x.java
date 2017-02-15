@@ -20,10 +20,10 @@ public class Example {
     List<String> callbackEvents = Arrays.asList("initiated", "ringing", "answered", "completed");
 
     Call call = Call
-        .create(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
+        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
             new URI("http://demo.twilio.com/docs/voice.xml"))
         .setMethod(HttpMethod.GET).setStatusCallback("https://www.myapp.com/events")
-        .setStatusCallbackMethod(HttpMethod.POST).setStatusCallbackEvent(callbackEvents).execute();
+        .setStatusCallbackMethod(HttpMethod.POST).setStatusCallbackEvent(callbackEvents).create();
 
     System.out.println(call.getSid());
   }

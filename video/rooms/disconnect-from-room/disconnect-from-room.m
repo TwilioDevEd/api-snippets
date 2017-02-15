@@ -1,12 +1,8 @@
-// To disconnect from a Conversation, we call:
-[self.conversation disconnect];
+// To disconnect from a room, we call:
+[self.room disconnect];
 
-
-// This results in a call to TWCConversationDelegate#conversationEnded
-
-#pragma mark - TWCConversationDelegate
-
-- (void)conversationEnded:(TWCConversation *)conversation {
-	NSLog(@"Disconnected from the Conversation.");
-	self.conversation = nil;
+// This results in a callback to TVIRoomDelegate#room:didDisconnectWithError
+#pragma mark - TVIRoomDelegate methods
+- (void)room:(TVIRoom *)room didDisconnectWithError:(NSError *)error {
+    NSLog(@"Did disconnect from room");
 }

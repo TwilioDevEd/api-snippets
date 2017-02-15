@@ -1,0 +1,6 @@
+{
+  "title": "Python 2.7 on Amazon Lambda with Request Validation",
+  "description": "Using the Twilio Python helper library on Lambda, and validating incoming requests.",
+  "type": "server"
+}
+

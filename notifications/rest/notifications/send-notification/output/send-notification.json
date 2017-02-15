@@ -1,9 +1,9 @@
 {
-  "sid": "NOxxx",
-  "account_sid": "ACxxx",
-  "service_sid": "ISxxx",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2015-08-26T00:07:12Z",
-  "identities": ["Bob"],
+  "identities": ["00000001"],
   "tags": [],
   "priority": "high",
   "ttl": 2419200,
@@ -14,5 +14,6 @@
   "data": null,
   "apn": null,
   "gcm": null,
-  "sms": null
+  "sms": null,
+  "fcm": null
 }

@@ -1,0 +1,8 @@
+{
+	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+	"message_sid": "SM6d4d807e10f24d83a1ab01da10ccc0f5",
+	"outcome": "confirmed",
+	"date_created": "Fri, 02 Sep 2016 18:19:59 +0000",
+	"date_updated": "Fri, 02 Sep 2016 18:42:40 +0000",
+	"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages/SM6d4d807e10f24d83a1ab01da10ccc0f5/Feedback.json"
+}

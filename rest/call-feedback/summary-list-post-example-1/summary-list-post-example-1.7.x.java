@@ -13,8 +13,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     FeedbackSummary summary = FeedbackSummary
-        .create(LocalDate.parse("2014-06-01"), LocalDate.parse("2014-06-30"))
-        .setIncludeSubaccounts(true).setStatusCallback("http://www.example.com/feedback").execute();
+        .creator(LocalDate.parse("2014-06-01"), LocalDate.parse("2014-06-30"))
+        .setIncludeSubaccounts(true).setStatusCallback("http://www.example.com/feedback").create();
 
     System.out.println(summary.getStatus());
   }

@@ -1,5 +1,0 @@
-curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json' \
---data-urlencode 'To=+16518675309'  \
---data-urlencode 'From=+14158141829'  \
---data-urlencode 'Body=Hey Jenny! Good luck on the bar exam!'  \
--u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:[AuthToken]

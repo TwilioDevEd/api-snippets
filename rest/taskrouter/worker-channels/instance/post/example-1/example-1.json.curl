@@ -1,0 +1,3 @@
+$ curl -X POST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Workers/WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Channels/voice \
+		-d 'Capacity=2&Available=true' \
+    -u '{account_sid}:{auth_token}'

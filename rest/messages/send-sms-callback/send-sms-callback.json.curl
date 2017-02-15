@@ -1,0 +1,6 @@
+curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json' \
+--data-urlencode 'To=+15558675309'  \
+--data-urlencode 'From=+15017250604'  \
+--data-urlencode 'Body=McAvoy or Stewart? These timelines can get so confusing.'  \
+--data-urlencode 'StatusCallback=http://requestb.in/1234abcd'  \
+-u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

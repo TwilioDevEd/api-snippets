@@ -14,7 +14,7 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("SERVICE_SID");
 
 //Retrieve the channel
-$channel = $service->channels->get("CHANNEL_ID");
+$channel = $service->channels->get("CHANNEL_SID");
 
 //List the messages
 $messages = $channel->messages;

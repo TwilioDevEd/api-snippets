@@ -1,2 +1,2 @@
-$ curl https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid} \
+$ curl https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Workflows/WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
     -u '{account_sid}:{auth_token}'

@@ -1,0 +1,33 @@
+{
+  "issue_type_counts": {
+    "dropped_call": 0,
+    "audio_latency": 0,
+    "one_way_audio": 0,
+    "noisy_call": 0,
+    "choppy_audio": 0
+  },
+  "call_stats": {
+    "total_calls": 0
+  },
+  "start_time": "2016-09-19T17:29:11Z",
+  "account_sid": "AC308ac9a994b1bd8b73ca0166442236c7",
+  "feedback_score_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+  },
+  "end_time": "2016-09-19T18:29:11Z",
+  "warning_counts": {
+    "high_packet_loss": 0,
+    "constant_audio_input_level": 0,
+    "high_jitter": 0,
+    "low_mos": 0,
+    "constant_audio_output_level": 0,
+    "high_rtt": 0
+  },
+  "links": {
+    "aspects": "https://preview.twilio.com/insights/Calls/Report/Aspects"
+  }
+}
