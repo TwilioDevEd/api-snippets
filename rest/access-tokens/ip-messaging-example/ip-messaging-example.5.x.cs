@@ -1,5 +1,6 @@
 using System;
-using Twilio.JWT;
+using System.Collections.Generic;
+using Twilio.Jwt.AccessToken;
 
 class Example
 {
@@ -15,15 +16,23 @@ class Example
         const string identity = "user@example.com";
         const string deviceId = "someiosdevice";
 
-        // Create an Access Token generator
-        var token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);
-        token.Identity = identity;
-
         // Create an IP messaging grant for this token
         var grant = new IpMessagingGrant();
         grant.EndpointId = $"HipFlowSlackDockRC:{identity}:{deviceId}";
         grant.ServiceSid = ipmServiceSid;
-        token.AddGrant(grant);
+
+        var grants = new HashSet<IGrant>
+        {
+            { grant }
+        };
+
+        // Create an Access Token generator
+        var token = new Token(
+            twilioAccountSid,
+            twilioApiKey,
+            twilioApiSecret,
+            identity,
+            grants: grants);
 
         Console.WriteLine(token.ToJwt());
     }

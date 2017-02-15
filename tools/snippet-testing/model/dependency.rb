@@ -24,10 +24,10 @@ module Model
         { name: 'Twilio.Pricing', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
-        { name: 'Twilio.Auth', version: '1.2.0' }
+        { name: 'Twilio.Auth', version: '1.4.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.0.0-rca2' },
+        { name: 'Twilio', version: '5.0.0-rca4' },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
@@ -88,7 +88,7 @@ module Model
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-        'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+        'Twilio.Auth.1.4.0/lib/3.5/Twilio.Auth.dll',
         'JWT.1.1/lib/3.5/JWT.dll',
         'RestSharp.105.2.2/lib/net35/RestSharp.dll',
         'Newtonsoft.Json.3.5.8/lib/35/Newtonsoft.Json.dll'
@@ -97,7 +97,7 @@ module Model
 
     def self.csharp_5_dependencies
       [
-        'Twilio.5.0.0-rca2/lib/net35/Twilio35.dll',
+        'Twilio.5.0.0-rca4/lib/net35/Twilio.dll',
         'JWT.1.3.4/lib/3.5/JWT.dll',
         'Newtonsoft.Json.9.0.1/lib/net35/Newtonsoft.Json.dll'
       ]
@@ -162,7 +162,7 @@ module Model
 
     def install_csharp_dependencies
       unless File.exist?(NUGET_FILE_NAME)
-        system("wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe -O #{NUGET_FILE_NAME}")
+        system("wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O #{NUGET_FILE_NAME}")
       end
 
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME].each do |version|
