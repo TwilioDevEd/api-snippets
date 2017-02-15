@@ -1,7 +1,10 @@
-var statusOptions: [AUTApprovalRequestStatusOption] = []
-let pendingRequests: AUTApprovalRequestStatusOption = AUTApprovalRequestStatusOption(status: .Pending)
-statusOptions.append(pendingRequests)
+let statuses = [AUTApproveStatus, AUTDenyStatus, AUTPendingStatus, AUTExpiredStatus]
+let timeInterval = AUTTimeInterval()
+let since = ... // lower limit
+let until = ... // upper limit
+timeInterval.setSinceTimestamp(since)
+timeInterval.setUntilTimestamp(until)
 
-self.authy?.getApprovalRequests(withOptions: statusOptions, completion: { (approvalRequests: [AUTApprovalRequest]?, error: AUTError?) -> Void in
-    // ...
-})
+sharedAuthy.getApprovalRequests(withStatuses: statuses, timeInterval: timeInterval) { (requests, error) in
+	// ...	
+}

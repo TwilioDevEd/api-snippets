@@ -1,7 +1,7 @@
-self.authy?.approveRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
+sharedAuthy.approveRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
     // ...
 })
 
-self.authy?.denyRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
+sharedAuthy.denyRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
     // ...
 })

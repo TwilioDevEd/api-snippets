@@ -1,3 +1,0 @@
-[self.authy sync:^(AUTError *error) {
-	// ...
-}];

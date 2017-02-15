@@ -1,7 +1,7 @@
-[self.authy approveRequest:approvalRequest completion:^(AUTError *error) {
-
+[sharedAuthy approveRequest:approvalRequest completion:^(BOOL success, NSError *error) {
+	// ...
 }];
 
-[self.authy denyRequest:approvalRequest completion:^(AUTError *error) {
-
+[sharedAuthy denyRequest:approvalRequest completion:^(BOOL success, NSError *error) {
+	// ...
 }];
