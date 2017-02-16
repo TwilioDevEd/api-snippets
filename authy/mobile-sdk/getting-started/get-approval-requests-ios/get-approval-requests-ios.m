@@ -2,8 +2,8 @@ NSArray *statuses = @[AUTApproveStatus, AUTDenyStatus, AUTPendingStatus, AUTExpi
 AUTTimeInterval *timeInterval = [[AUTTimeInterval alloc] init];
 long since = ... // lower limit
 long until = ... // upper limit
-[timeInterval setSinceTimestamp:since];
-[timeInterval setUntilTimestamp:until];
+timeInterval.sinceTimestamp = since;
+timeInterval.untilTimestamp = until;
 
 [sharedAuthy getApprovalRequestsWithStatuses:statuses timeInterval:timeInterval completion:^(AUTApprovalRequests *approvalRequests, NSError *error) {
 	// ...

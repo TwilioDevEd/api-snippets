@@ -2,8 +2,8 @@ let statuses = [AUTApproveStatus, AUTDenyStatus, AUTPendingStatus, AUTExpiredSta
 let timeInterval = AUTTimeInterval()
 let since = ... // lower limit
 let until = ... // upper limit
-timeInterval.setSinceTimestamp(since)
-timeInterval.setUntilTimestamp(until)
+timeInterval.sinceTimestamp = since
+timeInterval.untilTimestamp = until
 
 sharedAuthy.getApprovalRequests(withStatuses: statuses, timeInterval: timeInterval) { (requests, error) in
 	// ...	
