@@ -1,6 +1,8 @@
+
 // Download the twilio-csharp library from
 // https://www.twilio.com/docs/libraries/csharp#installation
 using System;
+using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Taskrouter.V1.Workspace;
 
@@ -17,13 +19,15 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var tasks = TaskResource.Read(workspaceSid, taskQueueSid: taskQueueSid);
-        foreach(var task in tasks) {
+        foreach (var task in tasks)
+        {
             Console.WriteLine(task.Attributes);
         }
 
         var pendingTasks = TaskResource.Read(
-            workspaceSid, assignmentStatus: TaskResource.StatusEnum.Pending);
-        foreach(var task in pendingTasks) {
+            workspaceSid, assignmentStatus: new List<string> { "pending" });
+        foreach (var task in pendingTasks)
+        {
             Console.WriteLine(task.Attributes);
         }
     }

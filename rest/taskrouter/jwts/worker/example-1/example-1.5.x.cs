@@ -1,8 +1,9 @@
 // Download the twilio-csharp library from
 // https://www.twilio.com/docs/libraries/csharp#installation
 using System;
-using Twilio;
-using Twilio.JWT;
+using System.Collections.Generic;
+using Twilio.Http;
+using Twilio.Jwt.Taskrouter;
 
 class Example
 {
@@ -14,15 +15,63 @@ class Example
         const string workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-        var capability = new TaskRouterWorkerCapability(
-                             accountSid, authToken, workspaceSid, workerSid);
+        var updateActivityFilter = new Dictionary<string, Policy.FilterRequirement>
+        {
+            { "ActivitySid", Policy.FilterRequirement.Required }
+        };
 
-        capability.AllowUpdatesSubresources();
+        var urls = new PolicyUrlUtils(workspaceSid, workerSid);
 
-        var token = capability.GenerateToken();
+        var allowActivityUpdates = new Policy(urls.Worker,
+                                              HttpMethod.Post,
+                                              postFilter: updateActivityFilter);
+
+        var allowTasksUpdate = new Policy(urls.AllTasks, HttpMethod.Post);
+
+        var allowReservationUpdate = new Policy(urls.AllReservations, HttpMethod.Post);
+
+        var policies = new List<Policy>
+        {
+            allowActivityUpdates,
+            allowTasksUpdate,
+            allowReservationUpdate
+        };
+
         // By default, tokens are good for one hour.
         // Override this default timeout by specifiying a new value (in seconds).
         // For example, to generate a token good for 8 hours:
-        token = capability.GenerateToken(28800);  // 60 * 60 * 8
+        var capability = new TaskRouterCapability(
+            accountSid,
+            authToken,
+            workspaceSid,
+            null,
+            policies: policies,
+            expiration: DateTime.UtcNow.AddSeconds(28800)); // 60 * 60 * 8
+
+        Console.WriteLine(capability.ToJwt());
     }
+}
+
+class PolicyUrlUtils
+{
+    const string taskRouterBaseUrl = "https://taskrouter.twilio.com";
+    const string taskRouterVersion = "v1";
+
+    readonly string _workspaceSid;
+    readonly string _workerSid;
+
+    public PolicyUrlUtils(string workspaceSid, string workerSid)
+    {
+        _workspaceSid = workspaceSid;
+        _workerSid = workerSid;
+    }
+
+    public string AllTasks => $"{Workspace}/Tasks/**";
+
+    public string Worker => $"{Workspace}/Workers/{_workerSid}";
+
+    public string AllReservations => $"{Worker}/Reservations/**";
+
+    string Workspace =>
+        $"{taskRouterBaseUrl}/{taskRouterVersion}/Workspaces/{_workspaceSid}";
 }

@@ -1,5 +1,6 @@
 using System;
-using Twilio.JWT;
+using System.Collections.Generic;
+using Twilio.Jwt.AccessToken;
 
 class Example
 {
@@ -14,14 +15,22 @@ class Example
         const string configurationProfileSid = "VSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user";
 
-        // Create an Access Token generator
-        var token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);
-        token.Identity = identity;
-
         // Create a Video grant for this token
         var grant = new VideoGrant();
         grant.ConfigurationProfileSid = configurationProfileSid;
-        token.AddGrant(grant);
+
+        var grants = new HashSet<IGrant>
+        {
+            { grant }
+        };
+
+        // Create an Access Token generator
+        var token = new Token(
+            twilioAccountSid,
+            twilioApiKey,
+            twilioApiSecret,
+            identity,
+            grants: grants);
 
         Console.WriteLine(token.ToJwt());
     }

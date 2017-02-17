@@ -17,7 +17,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var task = TaskResource.Create(
-            workspaceSid, "{\"type\":\"support\"}", workflowSid);
+            workspaceSid, attributes: "{\"type\":\"support\"}", workflowSid: workflowSid);
 
         Console.WriteLine(task.Attributes);
     }
