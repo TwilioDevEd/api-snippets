@@ -15,9 +15,9 @@ $client = new Client($accountSid, $authToken);
 $task = $client->taskrouter
     ->workspaces($workspaceSid)
     ->tasks
-    ->create([
+    ->create(array(
       'workflowSid' => $workflowSid,
-      'attributes' => json_encode(['type' => 'support'])
-      ]);
+      'attributes' => json_encode(array('type' => 'support'))
+      ));
 
 echo $task->attributes;
