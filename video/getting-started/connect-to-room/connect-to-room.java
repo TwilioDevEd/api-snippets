@@ -44,4 +44,4 @@ Room.Listener roomListener = new Room.Listener() {
 };
 
 // Connect to the room
-Room room = VideoClient.connect(connectOptions, roomListener);
+Room room = VideoClient.connect(context, connectOptions, roomListener);

@@ -3,7 +3,7 @@ public void connectToRoom(String roomName) {
     .roomName(roomName)
     .localMedia(localMedia)
     .build();
-  room = VideoClient.connect(connectOptions, this);
+  room = VideoClient.connect(context, connectOptions, this);
 }
 
 private Room.Listener roomListener() {

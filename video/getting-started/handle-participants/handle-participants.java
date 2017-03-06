@@ -1,5 +1,5 @@
 // Connect to room
-Room room = VideoClient.connect(connectOptions, new Room.Listener() {
+Room room = VideoClient.connect(context, connectOptions, new Room.Listener() {
     @Override
     public void onConnected(Room room) {}
 
