@@ -1,12 +1,13 @@
 -(void)createARoom {
-	// Create a room 
-	TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithBlock:^(TVIConnectOptionsBuilder * _Nonnull builder) {
-		builder.name = @"my-new-room";
-	}];
-	TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
+    // Create a room 
+    TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
+                                                                      block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
+        builder.name = @"my-new-room";
+    }];
+    TVIRoom *room = [TVIVideoClient connectWithOptions:connectOptions delegate:self];
 }
 
 #pragma mark - TVIRoomDelegate
-- (void)room:(TVIRoom *)room participantDidConnect:(TVIParticipant *)participant {
-	NSLog(@"Participant did connect:%@", participant.identity);
+func didConnect(to room: TVIRoom) {
+    NSLog(@"Did connect to Room");
 }

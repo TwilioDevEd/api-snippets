@@ -1,8 +1,9 @@
-TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithBlock:^(TVIConnectOptionsBuilder * _Nonnull builder) {
+TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
+                                                                  block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
     builder.name = @"my-room";
     builder.localMedia = self.localMedia;
 }];
-TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
+TVIRoom *room = [TVIVideoClient connectWithOptions:connectOptions delegate:self];
 
 #pragma mark - TVIRoomDelegate
 
