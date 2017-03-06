@@ -17,10 +17,8 @@ import com.koushikdutta.ion.Ion;
                         if (e == null) {
                             // The identity can be used to receive calls
                             String identity = result.get("identity").getAsString();
-                            String accessToken = result.get("token").getAsString();
+                            VideoActivity.this.accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
-
-                            videoClient = new VideoClient(VideoActivity.this, accessToken);
                         } else {
                             Log.i(TAG, "error fetching token from server");
                             Toast.makeText(VideoActivity.this,
