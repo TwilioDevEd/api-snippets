@@ -1,6 +1,6 @@
 // Specify the room you would like to join
 String roomName = "my-room";
-ConnectOptions connectOptions = new ConnectOptions.Builder()
+ConnectOptions connectOptions = new ConnectOptions.Builder(accessToken)
     .roomName(roomName)
     .localMedia(localMedia)
     .build();
@@ -44,4 +44,4 @@ Room.Listener roomListener = new Room.Listener() {
 };
 
 // Connect to the room
-Room room = videoClient.connect(connectOptions, roomListener);
+Room room = VideoClient.connect(connectOptions, roomListener);
