@@ -6,6 +6,7 @@
 }
 
 // MARK: TVIRoomDelegate
+
 func didConnectToRoom(room: TVIRoom) {
     print("Did connect to Room")
 }

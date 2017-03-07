@@ -7,6 +7,7 @@
 }
 
 #pragma mark - TVIRoomDelegate
+
 - (void)room:(TVIRoom *)room participantDidConnect:(TVIParticipant *)participant {
 	NSLog(@"Participant did connect:%@", participant.identity);
 }

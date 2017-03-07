@@ -8,6 +8,7 @@
 }
 
 #pragma mark - TVIRoomDelegate
-func didConnect(to room: TVIRoom) {
+
+- (void)didConnectedToRoom:(nonnull TVIRoom *)room {
     NSLog(@"Did connect to Room");
 }

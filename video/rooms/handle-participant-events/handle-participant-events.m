@@ -1,4 +1,5 @@
-#pragma mark - TVIParticipantDelegate methods
+#pragma mark - TVIParticipantDelegate
+
 - (void)participant:(TVIParticipant *)participant addedVideoTrack:(TVIVideoTrack *)videoTrack {
     NSLog(@"Participant %@ added a video track",participant.identity);
 }

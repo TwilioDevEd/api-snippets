@@ -1,4 +1,4 @@
-#pragma mark - TVIRoomDelegate methods
+#pragma mark - TVIRoomDelegate
 
 // First, we set a Participant Delegate when a Participant first connects: 
 - (void)room:(TVIRoom *)room participantDidConnect:(TVIParticipant *)participant {
@@ -9,7 +9,8 @@
 /* In the Participant Delegate, we can respond when the Participant adds a Video
 Track by rendering it on screen:*/
 
-#pragma mark - TVIParticipantDelegate methods
+#pragma mark - TVIParticipantDelegate
+
 - (void)participant:(TVIParticipant *)participant addedVideoTrack:(TVIVideoTrack *)videoTrack {
     NSLog(@"Participant %@ added a video track",participant.identity);
     videoTrack.delegate = self;
@@ -17,7 +18,9 @@ Track by rendering it on screen:*/
 }
 
 // Lastly, we can subscribe to important events on the Video Track
-#pragma mark - TVIVideoTrackDelegate methods
+
+#pragma mark - TVIVideoTrackDelegate 
+
 - (void)videoTrack:(TVIVideoTrack *)track dimensionsDidChange:(CMVideoDimensions)dimensions {
     NSLog(@"Dimensions changed to: %d x %d", dimensions.width, dimensions.height);
     [self.view setNeedsUpdateConstraints];
