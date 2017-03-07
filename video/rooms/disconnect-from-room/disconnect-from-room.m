@@ -2,7 +2,9 @@
 [self.room disconnect];
 
 // This results in a callback to TVIRoomDelegate#room:didDisconnectWithError
-#pragma mark - TVIRoomDelegate methods
+
+#pragma mark - TVIRoomDelegate
+
 - (void)room:(TVIRoom *)room didDisconnectWithError:(NSError *)error {
     NSLog(@"Did disconnect from room");
 }

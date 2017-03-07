@@ -1,8 +1,8 @@
-let connectOptions = TVIConnectOptions { (builder) in
+let connectOptions = TVIConnectOptions.init(token: accessToken) { (builder) in
     builder.name = "my-room"
     builder.localMedia = self.localMedia
 }
-room = videoClient.connect(with: connectOptions, delegate: self)
+room = TVIVideoClient.connect(with: connectOptions, delegate: self)
 
 // MARK: TVIRoomDelegate
 
