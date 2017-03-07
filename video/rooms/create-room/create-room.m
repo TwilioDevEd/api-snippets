@@ -2,7 +2,7 @@
     // Create a room 
     TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
                                                                       block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
-        builder.name = @"my-new-room";
+        builder.roomName = @"my-new-room";
     }];
     TVIRoom *room = [TVIVideoClient connectWithOptions:connectOptions delegate:self];
 }
