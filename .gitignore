@@ -44,6 +44,7 @@ node_modules
 .gradle
 nbactions.xml
 *.class
+*.sw[op]
 
 # Testing
 /.env
