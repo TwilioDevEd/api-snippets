@@ -1,0 +1,1 @@
+boolean isDeviceRegistered = authy.isDeviceRegistered()
