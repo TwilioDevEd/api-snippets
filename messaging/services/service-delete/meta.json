@@ -1,0 +1,6 @@
+{
+  "title": "Delete a Messaging Service",
+  "type": "server",
+  "description": "Delete an instance of a Messaging Service",
+  "tags": ["messaging"]
+}

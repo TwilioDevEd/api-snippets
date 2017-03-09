@@ -1,0 +1,6 @@
+{
+  "title": "List all Alpha Senders in a Messaging Service",
+  "type": "server",
+  "description": "List all Alpha Senders in a Messaging Service",
+  "tags": ["messaging"]
+}

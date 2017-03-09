@@ -1,0 +1,6 @@
+{
+  "title": "Delete a Phone Number from a Messaging Service",
+  "type": "server",
+  "description": "Delete a Phone Number from a Messaging Service",
+  "tags": ["messaging"]
+}

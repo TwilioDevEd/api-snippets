@@ -1,0 +1,6 @@
+{
+  "title": "List all Phone Numbers in a Messaging Service",
+  "type": "server",
+  "description": "List all Phone Numbers in a Messaging Service",
+  "tags": ["messaging"]
+}
