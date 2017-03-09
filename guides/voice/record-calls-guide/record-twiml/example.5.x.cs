@@ -2,9 +2,10 @@
 // Install-Package Twilio.Mvc -Pre
 
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class RecordController : Controller
+public class RecordController : TwilioController
 {
     [HttpPost]
     public ActionResult Index()
@@ -20,6 +21,6 @@ public class RecordController : Controller
         // End the call with <Hangup>
         response.Hangup();
 
-        return Content(response.ToString(), "text/xml")
+        return TwiML(response);
     }
 }

@@ -2,9 +2,10 @@
 // Install-Package Twilio.Mvc -Pre
 
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class VoiceController : Controller
+public class VoiceController : TwilioController
 {
     [HttpPost]
     public ActionResult Index(string fromCity)
@@ -17,6 +18,6 @@ public class VoiceController : Controller
         response.Say($"Never gonna give you up {city}", voice: "alice");
         response.Play("https://demo.twilio.com/docs/classic.mp3");
 
-        return Content(response.ToString(), "text/xml")
+        return TwiML(response)
     }
 }

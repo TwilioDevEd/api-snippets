@@ -2,9 +2,10 @@
 // Install-Package Twilio.Mvc -Pre
 
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class VoiceController : Controller
+public class VoiceController : TwilioController
 {
     private const string Moderator = "+15558675309";
 
@@ -31,6 +32,6 @@ public class VoiceController : Controller
 
         response.Dial(dial);
 
-        return Content(response.ToString(), "text/xml");
+        return TwiML(response);
     }
 }
