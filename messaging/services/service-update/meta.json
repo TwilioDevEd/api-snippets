@@ -1,0 +1,6 @@
+{
+  "title": "Update a Messaging Service",
+  "type": "server",
+  "description": "Update an instance of a Messaging Service",
+  "tags": ["messaging"]
+}

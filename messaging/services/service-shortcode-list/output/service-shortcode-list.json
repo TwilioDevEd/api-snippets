@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "page": 0,
+        "page_size": 50,
+        "first_page_url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "next_page_url": null,
+        "key": "short_codes",
+        "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes?PageSize=50&Page=0"
+                    },
+    "short_codes": [
+        {
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "service_sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+            "sid": "SC3f94c94562ac88dccf16f8859a1a8b25",
+            "date_created": "2017-03-14T20:12:31Z",
+            "date_updated": "2017-03-14T20:12:33Z",
+            "short_code": "12345",
+            "country_code": "US",
+            "capabilities": ["sms", "mms"],
+            "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88dccf16f8859a1a8b25"
+        }
+    ]
+}

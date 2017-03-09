@@ -1,0 +1,6 @@
+{
+  "title": "Delete an Alpha Sender ID from a Messaging Service",
+  "type": "server",
+  "description": "Delete an Alpha Sender ID from a Messaging Service",
+  "tags": ["messaging"]
+}

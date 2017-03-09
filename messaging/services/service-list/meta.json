@@ -1,0 +1,6 @@
+{
+  "title": "List all Messaging Services",
+  "type": "server",
+  "description": "List all Messaging Services",
+  "tags": ["messaging"]
+}

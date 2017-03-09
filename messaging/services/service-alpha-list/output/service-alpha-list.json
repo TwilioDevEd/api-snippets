@@ -1,0 +1,23 @@
+{
+    "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "next_page_url": null,
+    "key": "alpha_senders",
+    "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders?PageSize=50&Page=0"
+    },
+    "alpha_senders": [
+        {
+        "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "service_sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+        "sid": "AIc781610ec0b3400c9e0cab8e757da937",
+        "date_created": "2017-03-14T20:12:31Z",
+        "date_updated": "2017-03-14T20:12:33Z",
+        "alpha_sender": "My Company",
+        "capabilities": ["sms"],
+        "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b3400c9e0cab8e757da937"
+        }
+    ]
+}

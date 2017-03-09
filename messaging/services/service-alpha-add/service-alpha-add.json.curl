@@ -1,0 +1,3 @@
+curl 'https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders' -X POST \
+    --data-urlencode 'AlphaSender=My Company' \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

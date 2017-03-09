@@ -1,0 +1,6 @@
+{
+  "title": "List all Short Codes in a Messaging Service",
+  "type": "server",
+  "description": "List all Short Codes in a Messaging Service",
+  "tags": ["messaging"]
+}

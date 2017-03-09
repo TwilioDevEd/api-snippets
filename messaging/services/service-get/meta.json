@@ -1,0 +1,6 @@
+{
+  "title": "View a Messaging Service",
+  "type": "server",
+  "description": "Get an instance of a Messaging Service",
+  "tags": ["messaging"]
+}
