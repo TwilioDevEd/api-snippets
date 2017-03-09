@@ -1,6 +1,5 @@
 {
   "title": "Delete a Short Code from a Messaging Service",
   "type": "server",
-  "description": "Delete a Short Code from a Messaging Service",
   "tags": ["messaging"]
 }
