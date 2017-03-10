@@ -1,5 +1,5 @@
 // In Package Manager, run:
-// Install-Package Twilio.Mvc -Pre
+// Install-Package Twilio.AspNet.Mvc -DependencyVersion HighestMinor
 
 using System.Web.Mvc;
 using Twilio.AspNet.Mvc;
