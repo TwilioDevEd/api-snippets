@@ -2,11 +2,11 @@
 // Install-Package Twilio.Mvc -Pre
 
 using System.Web.Mvc;
-using Twilio.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 using Twilio.TwiML.Mvc;
 
-public class VoiceController : Controller
+public class VoiceController : TwilioController
 {
     [HttpPost]
     public ActionResult Index()
@@ -14,6 +14,6 @@ public class VoiceController : Controller
         var response = new VoiceResponse();
         response.Say("hello world!", voice: "alice");
 
-        return Content(response.ToString(), "text/xml")
+        return TwiML(response);
     }
 }

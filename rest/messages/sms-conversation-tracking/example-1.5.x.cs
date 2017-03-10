@@ -3,9 +3,10 @@
 
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class SmsController : Controller
+public class SmsController : TwilioController
 {
     [HttpPost]
     public ActionResult Index()
@@ -43,6 +44,7 @@ public class SmsController : Controller
 
         var response = new MessagingResponse();
         response.Message($"{name} has messaged {to} {counter} times");
-        return Content(response.ToString(), "text/xml");
+
+        return TwiML(response);
     }
 }

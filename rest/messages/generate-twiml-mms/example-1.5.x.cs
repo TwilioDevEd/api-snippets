@@ -2,9 +2,10 @@
 // Install-Package Twilio.Mvc -DependencyVersion HighestMinor
 
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class SmsController : Controller
+public class SmsController : TwilioController
 {
     [HttpPost]
     public ActionResult Index()
@@ -16,6 +17,6 @@ public class SmsController : Controller
         var messagingResponse = new MessagingResponse();
         messagingResponse.Message(message);
 
-        return Content(messagingResponse.ToString(), "text/xml");
+        return TwiML(messagingResponse);
     }
 }
