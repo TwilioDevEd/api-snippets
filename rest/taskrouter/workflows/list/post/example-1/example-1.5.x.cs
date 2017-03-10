@@ -25,45 +25,45 @@ class Example
 
         // sales
         var salesRule = new {
-            FriendlyName = "Sales",
-            Expression = "type == 'sales'",
-            Targets = new List<object>() {
+            friendlyName = "Sales",
+            expression = "type == 'sales'",
+            targets = new List<object>() {
                 new {
-                    Queue = salesQueue
+                    queue = salesQueue
                 }
             }
         };
 
         // marketing
         var marketingRule = new {
-            FriendlyName = "Marketing",
-            Expression = "type == 'marketing'",
-            Targets = new List<object>() {
+            friendlyName = "Marketing",
+            expression = "type == 'marketing'",
+            targets = new List<object>() {
                 new {
-                    Queue = marketingQueue
+                    queue = marketingQueue
                 }
             }
         };
 
         // support
         var supportRule = new {
-            FriendlyName = "Support",
-            Expression = "type == 'support'",
-            Targets = new List<object>() {
+            friendlyName = "Support",
+            expression = "type == 'support'",
+            targets = new List<object>() {
                 new {
-                    Queue = supportQueue
+                    queue = supportQueue
                 }
             }
         };
 
         var workflowConfiguration = new {
-          Filters = new List<object>() {
+          filters = new List<object>() {
             salesRule,
             marketingRule,
             supportRule
           },
-          DefaultFilter = new {
-            Queue = everyoneQueue
+          default_filter = new {
+            queue = everyoneQueue
           }
         };
 
