@@ -1,18 +1,30 @@
-public class Listener implements AccessManager.Listener, AccessManager.TokenUpdateListener {
+public class Listener
+  implements
+    AccessManager.Listener,
+    AccessManager.TokenUpdateListener {
 
   // AccessManager.Listener - handle token lifecycle
 
   @Override
   public void onTokenWillExpire(AccessManager accessManager)
   {
-    // Token will soon expire. Get new token.
+    // Token will soon expire.
+    // ...
+    // Get new token here.
+    // ...
+
     accessManager.updateToken(NEW_VALID_TOKEN);
+    // accessManager will then update token and call onTokenUpdated()
   }
 
   @Override
   public void onTokenExpired(AccessManager accessManager)
   {
-    // Token expired. Get new token.
+    // Token expired.
+    // ...
+    // Get new token here.
+    // ...
+
     accessManager.updateToken(NEW_VALID_TOKEN);
   }
 
@@ -29,7 +41,7 @@ public class Listener implements AccessManager.Listener, AccessManager.TokenUpda
   @Override
   public void onTokenUpdated(String token)
   {
-    // Here we update chat sdk client
+    // Update Twilio client(s) in this callback
     chatClient.updateToken(token, tokenUpdateListener);
   }
 
