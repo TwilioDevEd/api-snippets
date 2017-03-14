@@ -21,7 +21,7 @@
             "inbound_method": "POST",
             "fallback_url": null,
             "fallback_method": "POST",
-            "status_callback": "https://www.example.com",
+            "status_callback": "http://requestb.in/1234abcd",
             "links": {
             "phone_numbers": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers",
             "short_codes": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes",

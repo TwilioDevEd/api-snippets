@@ -9,7 +9,7 @@
      "inbound_method": "POST",
      "fallback_url": null,
      "fallback_method": "POST",
-     "status_callback": "https://www.example.com",
+     "status_callback": "http://requestb.in/1234abcd",
      "sticky_sender": true,
      "mms_converter": true,
      "links": {
