@@ -1,0 +1,1 @@
+Authy authy = Authy.getInstance(this);
