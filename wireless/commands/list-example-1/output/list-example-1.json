@@ -1,3 +1,4 @@
+CODE  OUTPUT      
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -5,8 +6,8 @@ Content-Type: application/json
   "commands": [
     {
       "sid": "DC17d3b4990bc837308eb589f3c543838c",
-      "command": "Hello, Device!",
-      "device_sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",
+      "command": "Hello, Sim!",
+      "sim_sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",
       "status": "delivered",
       "date_updated": "2016-05-13T16:34:14Z",
       "date_created": "2016-05-13T16:34:11Z",
@@ -16,7 +17,7 @@ Content-Type: application/json
     {
       "sid": "DCfc7f46499afd87ce6ac91fd6cb20beea",
       "command": "Oh, hi.",
-      "device_sid": "DE99421b66197ec022384d2cb9431a8667",
+      "sim_sid": "DE99421b66197ec022384d2cb9431a8667",
       "status": "delivered",
       "date_updated": "2016-05-15T21:03:52Z",
       "date_created": "2016-05-15T21:03:51Z",
