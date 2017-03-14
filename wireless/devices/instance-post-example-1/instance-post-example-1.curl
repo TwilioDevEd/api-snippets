@@ -1,5 +1,0 @@
-$ curl -X POST https://preview.twilio.com/wireless/Devices/DEd3f4ec6c85ded1a5f64f10afc067895c \
-    -d 'Status=active' \
-    -d 'CallbackUrl=https://devicemanager.mycompany.com/device/524116518656369' \
-    -d 'CallbackMethod=POST' \
-    -u 'AC8caa2afb9d5279926619c458dc65be78:{AuthToken}'
