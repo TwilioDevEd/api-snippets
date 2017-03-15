@@ -19,7 +19,7 @@ public class TwilioTest {
 
     // Build the parameters
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("To", "+16518675309"));
+    params.add(new BasicNameValuePair("To", "+441632960675"));
     params.add(new BasicNameValuePair("MessagingServiceSid", "MG9752274e9e519418a7406176694466fa"));
     params.add(new BasicNameValuePair("Body",
       "Phantom Menace was clearly the best of the prequel trilogy."));

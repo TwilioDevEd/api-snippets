@@ -1,2 +1,2 @@
 curl 'https://messaging.twilio.com/v1/Services' \
-    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:[AuthToken]
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token
