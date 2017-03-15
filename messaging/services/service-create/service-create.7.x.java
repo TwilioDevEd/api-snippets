@@ -10,6 +10,6 @@ public class Example {
         // Initialize the client
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        Service service = Service.creator("My Company").create();
+        Service service = Service.creator("My First Service").create();
     }
 }
