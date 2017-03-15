@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
   "sid": "DCcb6aa7c620874dd98ba6c9c4108d0ed0",
-  "command": "Hello, Device!",
-  "device_sid": "DEb8eff34b248d066a31c4a953134e183e",
+  "command": "Hello, Sim!",
+  "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
   "status": "delivered",
   "date_updated": "2016-05-13T16:34:14Z",
   "date_created": "2016-05-13T16:34:11Z",

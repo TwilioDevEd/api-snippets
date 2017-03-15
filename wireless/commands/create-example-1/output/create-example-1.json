@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "sid": "DC04a2aaa500367976bbb8294ec8082bab",
-  "device_sid": "DE99421b66197ec022384d2cb9431a8667",
+  "sim_sid": "DE99421b66197ec022384d2cb9431a8667",
   "command": "wakeup",
   "status": "queued",
   "date_created": "2016-05-16T15:42:04Z",
