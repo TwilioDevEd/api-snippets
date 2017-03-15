@@ -1,0 +1,1 @@
+Authy *sharedAuthy = [Authy sharedAuthy];

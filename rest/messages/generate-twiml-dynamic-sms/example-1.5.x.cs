@@ -1,7 +1,11 @@
+// In Package Manager, run:
+// Install-Package Twilio.Mvc -DependencyVersion HighestMinor
+
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class HelloWorldController : Controller
+public class HelloWorldController : TwilioController
 {
   [HttpPost]
   public ActionResult Index()
@@ -16,6 +20,7 @@ public class HelloWorldController : Controller
       {
         response.Message("Goodbye");
       }
-      return Content(response.ToString(), "text/xml");
+
+      return TwiML(response);
   }
 }
