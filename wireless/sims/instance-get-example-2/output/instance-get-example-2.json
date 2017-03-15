@@ -11,7 +11,7 @@ Content-Type: application/json
   "status" : "inactive",
   "friendly_name" : "Alice's SmartMeter",
   "sid" : "DEd3f4ec6c85ded1a5f64f10afc067895c",
-  "account_sid" : "AC8caa2afb9d5279926619c458dc7099a8",
+  "account_sid" : "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "links" : {
     "rate_plan" : "https://preview.twilio.com/wireless/RatePlans/WP4ff4de42eb7e4969f6c81782165bd62a",
     "usage" : "https://preview.twilio.com/wireless/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c/Usage"

@@ -1,2 +1,2 @@
 $ curl -G https://preview.twilio.com/wireless/Sims/AliceSmithSmartMeter \
-    -u 'AC8caa2afb9d5279926619c458dc7099a8:your_auth_token'
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
