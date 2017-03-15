@@ -1,7 +1,7 @@
 if (self.updatedPushToken) {
-    [self.ipMessagingClient registerWithToken:self.updatedPushToken];
+    [self.chatClient registerWithToken:self.updatedPushToken];
 }
 
 if (self.receivedNotification) {
-    [self.ipMessagingClient handleNotification:self.receivedNotification];
+    [self.chatClient handleNotification:self.receivedNotification];
 }

@@ -1,7 +1,7 @@
 if let updatedPushToken = updatedPushToken {
-    ipMessagingClient.registerWithToken(updatedPushToken)
+    chatClient.registerWithToken(updatedPushToken)
 }
 
 if let receivedNotification = receivedNotification {
-    ipMessagingClient.handleNotification(receivedNotification)
+    chatClient.handleNotification(receivedNotification)
 }
