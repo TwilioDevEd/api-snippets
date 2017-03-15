@@ -2,7 +2,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "url": "https://preview.twilio.com/wireless/Devices/DEb8eff34b248d066a31c4a953134e183e/Usage",
+  "url": "https://preview.twilio.com/wireless/Sims/DEb8eff34b248d066a31c4a953134e183e/Usage",
   "period": {
     "start": "2016-05-01T00:00:00Z",
     "end": "2016-05-19T22:33:54Z"
@@ -30,6 +30,6 @@ Content-Type: application/json
     "received": 231,
     "total": 1231
   },
-  "device_sid": "DEb8eff34b248d066a31c4a953134e183e",
-  "device_alias": "524116518656369"
+  "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
+  "sim_unique_name": "AliceSmithSmartMeter"
 }
