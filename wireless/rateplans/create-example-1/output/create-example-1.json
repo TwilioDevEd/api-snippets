@@ -1,0 +1,18 @@
+{
+  "commands": {
+    "enabled": false
+  },
+  "renewal": "monthly",
+  "date_updated": "2016-11-16T20:12:57Z",
+  "friendly_name": "10GB Data-only per Month",
+  "account_sid": "AC697be68cf818dfef7fec68c390fa3e1e",
+  "alias": "10gb-data-per-month",
+  "url": "https://preview.twilio.com/wireless/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
+  "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
+  "date_created": "2016-11-16T20:12:57Z",
+  "roaming": [],
+  "data": {
+    "limit": 10000,
+    "metering": "pooled"
+  }
+}
