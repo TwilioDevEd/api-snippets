@@ -12,4 +12,3 @@ public void onMessageChange(Message message) {
 public void onMessageDelete(Message message) {
   Log.d(TAG, "Message deleted");
 }
-
