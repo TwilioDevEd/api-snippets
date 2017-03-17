@@ -1,5 +1,5 @@
 @Override
-public void onMessageAdd(final Message message) {
+public void onMessageAdd(Message message) {
   Log.d(TAG, "Message added: " + message.getMessageBody());
 }
 
