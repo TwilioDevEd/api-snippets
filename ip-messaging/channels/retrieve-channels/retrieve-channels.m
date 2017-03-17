@@ -1,11 +1,8 @@
-TWMChannels *channels = [self.client channelsList];
-if (channels) {
-    for (TWMChannel *channel in channels.allObjects) {
-        NSLog(@"Channel: %@", channel.friendlyName);
+[[self.client channelsList] userChannelsWithCompletion:^(TCHResult *result, 
+  TCHChannelPaginator *paginator) {
+  if ([result isSuccessful]) {
+    for (TCHChannel *channel in paginator.items) {
+      NSLog(@"Channel: %@", channel.friendlyName);
     }
-    
-    TWMChannel *channel = [channels channelWithUniqueName:@"general"];
-    if (channel) {
-        NSLog(@"Channel with unique name: %@", channel.friendlyName);
-    }
-}
+  }
+}];
