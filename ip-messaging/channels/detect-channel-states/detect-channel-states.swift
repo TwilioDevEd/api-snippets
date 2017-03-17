@@ -1,21 +1,13 @@
-extension ViewController: TwilioIPMessagingClientDelegate {
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           channelAdded channel: TWMChannel!) {
+extension ViewController: TwilioChatClientDelegate {
+    func chatClient(client: TwilioChatClient!, channelAdded channel: TCHChannel!) {
         print("Channel added: \(channel.friendlyName)")
     }
     
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           channelChanged channel: TWMChannel!) {
+    func chatClient(client: TwilioChatClient!, channelChanged channel: TCHChannel!) {
         print("Channel changed: \(channel.friendlyName)")
     }
     
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           channelDeleted channel: TWMChannel!) {
+    func chatClient(client: TwilioChatClient!, channelDeleted channel: TCHChannel!) {
         print("Channel deleted: \(channel.friendlyName)")
-    }
-    
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           channelHistoryLoaded channel: TWMChannel!) {
-        print("Channel history loaded: \(channel.friendlyName)")
     }
 }
