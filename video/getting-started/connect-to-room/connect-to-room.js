@@ -1,4 +1,4 @@
-client.connect({
+Twilio.Video.connect({
   to: 'my-room',
   localMedia: localMedia
 }).then(room => {
