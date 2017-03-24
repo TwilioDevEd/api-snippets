@@ -1,34 +1,47 @@
-// If you are requiring twilio-video from CommonJS,
-//
-//     const Video = require('twilio-video');
-//
-//  If you are including twilio-video.js from a <script> tag,
-//
-//     const Video = Twilio.Video;
-//
+const {
+  createLocalTracks,
+  createLocalAudioTrack,
+  createLocalVideoTrack
+} = require('twilio-video');
 
-const localMedia = new Video.LocalMedia();
+var localTracks;
 
-// You can call getUserMedia and add the resulting MediaStream to localMedia.
-Video.getUserMedia().then(mediaStream => {
-  localMedia.addStream(mediaStream);
+// Create default local audio and video tracks
+createLocalTracks().then(localTracks => {
+  console.log('Got default audio and video tracks:', localTracks);
 });
 
-// Or you can add the microphone and camera independently.
-localMedia.addMicrophone().then(() => {
-  return localMedia.addCamera();
+// Create local tracks using constraints
+createLocalTracks({
+  audio: true,
+  video: { width: 640, height: 360 }
+}).then(localTracks => {
+  console.log('Got audio and video tracks with constraints:', localTracks);
 });
 
-// Remove the microphone.
-localMedia.removeMicrophone();
-
-// Remove the camera.
-localMedia.removeCamera();
-
-// Remove any tracks on the localMedia.
-localMedia.tracks.forEach(track => {
-  localMedia.removeTrack(track);
+// Local track events
+function trackEventListener(track, event) {
+  return () => console.log('Track ' + track.id + ' ' + event);
+}
+localTracks.forEach(track => {
+  track.on('started', trackEventListener(track, 'started'));
+  track.on('stopped', trackEventListener(track, 'stopped'));
+  track.on('enabled', trackEventListener(track, 'enabled'));
+  track.on('disabled', trackEventListener(track, 'disabled'));
 });
 
-// Stop localMedia and all Tracks on it.
-localMedia.stop();
+// Create default local track of a particular kind
+createLocalAudioTrack().then(audioTrack => {
+  console.log('Got default local audio track:', audioTrack);
+});
+createLocalVideoTrack().then(videoTrack => {
+  console.log('Got default local video track:', videoTrack);
+});
+
+// Create local track of a particular kind with constraints
+createLocalAudioTrack({ deviceId: 'audio-input-device-id' }).then(audioTrack => {
+  console.log('Got local audio track with constraints:', audioTrack);
+});
+createLocalVideoTrack({ width: 640, height: 360 }).then(videoTrack => {
+  console.log('Got local video track with constraints:', videoTrack);
+});
