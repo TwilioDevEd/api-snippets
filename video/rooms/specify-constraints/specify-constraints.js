@@ -1,11 +1,23 @@
-// Create LocalMedia with a camera track and no microphone track
-var localMedia = new Twilio.Video.LocalMedia();
-localMedia.addCamera().then(function() {
-  return client.connect('my-room', { localMedia: localMedia });
+const { connect, createLocalTracks } = require('twilio-video');
+
+// Option 1
+createLocalTracks({
+  audio: true,
+  video: { width: 640 }
+}).then(localTracks => {
+  return connect('$TOKEN', {
+    name: 'my-room-name',
+    tracks: localTracks
+  });
+}).then(room => {
+  console.log('Connected to Room:', room.name);
 });
 
-
-// Or, more simply:
-return client.connect('my-room', {
-  localStreamConstraints: { audio: false }
+// Option 2
+connect('$TOKEN', {
+  audio: true,
+  name: 'my-room-name',
+  video: { width: 640 }
+}).then(room => {
+  console.log('Connected to Room:', room.name);
 });
