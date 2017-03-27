@@ -6,6 +6,6 @@ var client = require('twilio')(accountSid, authToken);
 
 client.accounts.list(function(err, data) {
     data.accounts.forEach(function(account) {
-        console.log(account.DateCreated);
+        console.log(account.dateCreated);
     });
 });
