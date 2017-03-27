@@ -1,6 +1,5 @@
-client.connect({
-  to: 'my-room',
-  localMedia: localMedia
+Twilio.Video.connect('$TOKEN', {
+  name: 'my-room'
 }).then(room => {
   console.log('Connected to the Room "%s"', room.name);
 }, error => {
