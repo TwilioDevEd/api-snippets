@@ -8,8 +8,7 @@ $.getJSON('/token', function(data) {
 
     // Since the quickstart app doesn't implement authentication, the server
     // sends back a randomly generated username for the current client, which is
-    // how they will be identified when sending and receiving Conversation
-    // invites. If your app has an existing authentication system, you can use
-    // the e-mail address or username that uniquely identifies a user instead.
+    // how they will be identified. If your app has an existing authentication system, 
+    // you can use the e-mail address or username that uniquely identifies a user instead.
     console.log(data.identity);
 });
