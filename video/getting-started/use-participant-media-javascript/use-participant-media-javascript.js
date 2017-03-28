@@ -30,20 +30,15 @@ participant.on('trackDisabled', track => {
   }
 });
 
-// You can attach a Participant's Media directly to a DOM element,
-participant.media.attach(document.getElementById('#my-view'));
 
-// You can pass the query selector directly,
-participant.media.attach('#media-view');
+// You can attach Tracks to the DOM in the following manner
+participant.tracks.forEach(track => {
+  var mediaElement = track.attach();
+  document.getElementById('track-view').appendChild(mediaElement);
+});
 
-// Or you can create a default element.
-const element = participant.media.attach();
-document.body.appendChild(element);
-
-// In all three of these scenarios, as Tracks are added and removed, the
-// attached element will be updated with the appropriate <audio> and <video>
-// tags. If you would like to manage Track attachment yourself, you can always
-// attach them manually. For example,
-participant.media.tracks.forEach(track => {
-  track.attach('#track-view');
+// You can detach Tracks from the DOM in the following manner
+participant.tracks.forEach(track => {
+  var trackElements = track.detach();
+  trackElements.forEach(element => element.remove());
 });
