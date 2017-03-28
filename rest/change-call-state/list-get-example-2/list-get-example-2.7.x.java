@@ -12,7 +12,7 @@ public class Example {
 
     // Get an object from its sid. If you do not have a sid,
     // check out the list resource examples on this page
-    Call call = Call.updater("CAe1644a7eed5088b159577c5802d8be38").setStatus(Call.Status.COMPLETED)
+    Call call = Call.updater("CAe1644a7eed5088b159577c5802d8be38").setStatus(Call.UpdateStatus.COMPLETED)
         .update();
 
     System.out.println(call.getDateUpdated());
