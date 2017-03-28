@@ -16,7 +16,7 @@ capability.allowFetchSubresources();
 capability.allowUpdatesSubresources();
 capability.allowDeleteSubresources();
 
-const token = capability.generate();
+var token = capability.generate();
 
 // By default, tokens are good for one hour.
 // Override this default timeout by specifiying a new value (in seconds).
