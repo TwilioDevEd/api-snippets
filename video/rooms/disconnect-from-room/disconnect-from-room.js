@@ -1,7 +1,9 @@
-room.on('disconnected', function(room) {
-  /* Release the local camera and microphone if we're no longer using this 
-  LocalMedia instance in another Room */
-  room.localParticipant.media.detach();
+room.on('disconnected', room => {
+  // Detach the local media elements
+  room.localParticipant.tracks.forEach(track => {
+    var attachedElements = track.detach();
+    attachedElements.forEach(element => element.remove());
+  });
 });
 
 // To disconnect from a Room
