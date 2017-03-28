@@ -1,1 +1,0 @@
-let sharedAuthy = Authy.sharedAuthy()
