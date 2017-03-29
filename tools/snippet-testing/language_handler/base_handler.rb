@@ -50,7 +50,7 @@ module LanguageHandler
       rout, wout = IO.pipe
       rerr, werr = IO.pipe
       pid = Process.spawn(command, out: wout, err: werr)
-      exit_code = check_process_success(pid)
+      exit_code = check_process_success(pid, command)
       wout.close
       werr.close
       success = exit_code.zero? && language_conditional(rout)
@@ -67,13 +67,14 @@ module LanguageHandler
       success
     end
 
-    def check_process_success(pid)
+    def check_process_success(pid, command)
       Timeout.timeout(20) do
         _id, status = Process.wait2(pid)
         return status.exitstatus
       end
     rescue Timeout::Error
       puts 'process not finished in time, killing it'
+      puts(command)
       Process.kill('KILL', pid)
       return PROCESS_TIMEOUT_EXIT_CODE
     end

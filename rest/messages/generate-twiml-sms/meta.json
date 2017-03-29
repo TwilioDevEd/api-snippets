@@ -1,5 +1,6 @@
 {
   "description": "When your phone number receives an incoming message, Twilio will send an HTTP request to your server. This code shows how your server should respond to reply with a text message (using TwiML).",
   "type": "server",
-  "title": "Respond to an incoming text message"
+  "title": "Respond to an incoming text message",
+  "testable": "false"
 }
