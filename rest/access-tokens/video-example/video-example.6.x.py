@@ -1,4 +1,5 @@
-from twilio.jwt.access_token import AccessToken, VideoGrant
+from twilio.jwt.access_token import AccessToken
+from twilio.jwt.access_token.grants import VideoGrant
 
 # required for all twilio access tokens
 account_sid = 'ACxxxxxxxxxxxx'
@@ -10,7 +11,7 @@ configuration_profile_sid = 'VSxxxxxxxxxxxx'
 identity = 'user'
 
 # Create access token with credentials
-token = AccessToken(account_sid, api_key, api_secret, identity)
+token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
 # Create a Video grant and add to token
 video_grant = VideoGrant(configuration_profile_sid=configuration_profile_sid)

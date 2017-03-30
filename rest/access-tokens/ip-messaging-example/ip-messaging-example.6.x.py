@@ -1,4 +1,5 @@
-from twilio.jwt.access_token import AccessToken, IpMessagingGrant
+from twilio.jwt.access_token import AccessToken
+from twilio.jwt.access_token.grants import IpMessagingGrant
 
 # required for all twilio access tokens
 account_sid = 'ACxxxxxxxxxxxx'
@@ -12,7 +13,7 @@ device_id = 'someiosdevice'
 endpoint_id = "HipFlowSlackDockRC:{0}:{1}".format(identity, device_id)
 
 # Create access token with credentials
-token = AccessToken(account_sid, api_key, api_secret, identity)
+token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
 # Create an IP Messaging grant and add to token
 ipm_grant = IpMessagingGrant(
