@@ -7,6 +7,8 @@ auth_token = "your_auth_token"
 
 client = Client(account_sid, auth_token)
 
-number = client.account.incoming_phone_numbers.create(phone_number="33")
+number = client.api.v2010.account.incoming_phone_numbers.create(
+    phone_number="33"
+)
 
 print(number.sid)
