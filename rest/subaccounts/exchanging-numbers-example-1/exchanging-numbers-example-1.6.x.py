@@ -14,7 +14,7 @@ current_owner_sid = "ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 new_owner_sid = "ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
 number_sid = "PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 
-number = client.accounts(current_owner_sid).incoming_phone_numbers(number_sid).update(
+number = client.api.v2010.accounts(current_owner_sid).incoming_phone_numbers(number_sid).update(
     account_sid=new_owner_sid)
 
 print(number.phone_number)
