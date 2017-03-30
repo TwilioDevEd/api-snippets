@@ -1,5 +1,5 @@
 # Download the twilio-python library from twilio.com/docs/python/install
-from twilio.security import RequestValidator
+from twilio.request_validator import RequestValidator
 
 # Your Auth Token from twilio.com/user/account
 auth_token = '12345'
