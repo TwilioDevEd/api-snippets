@@ -1,9 +1,10 @@
 # Download the Python helper library from twilio.com/docs/python/install
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse, Dial
 
-r = twiml.Response()
+r = VoiceResponse()
 r.say("You will now be connected to the first caller in the queue.")
-with r.dial() as d:
-    d.queue("Queue Demo")
-r.redirect()
+d = Dial()
+d.queue("Queue Demo")
+r.append(d)
+r.redirect('http://example.org')
 print(str(r))
