@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-account = client.accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+account = client.api.v2010.accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .update(status="closed")
 
 print(account.date_created)

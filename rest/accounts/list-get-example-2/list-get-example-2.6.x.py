@@ -7,5 +7,5 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 # A list of account objects with the properties described above
-for account in client.accounts.list(status="active"):
+for account in client.api.v2010.accounts.list(status="active"):
     print(account.date_created)

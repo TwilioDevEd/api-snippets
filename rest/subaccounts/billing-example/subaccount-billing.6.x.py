@@ -7,7 +7,7 @@ import datetime
 sub_account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 sub_auth_token = "your_auth_token"
 sub_account_client = Client(sub_account_sid, sub_auth_token)
-sub_account = sub_account_client.account
+sub_account = sub_account_client.api.v2010.account
 
 # Place to store the billable usage
 time_to_bill = 0
