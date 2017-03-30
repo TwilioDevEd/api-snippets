@@ -1,5 +1,5 @@
 from flask import Flask, Response
-from twilio.jwt.client import CapabilityToken
+from twilio.jwt.client import ClientCapabilityToken
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def get_capability_token():
     account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     auth_token = 'your_auth_token'
 
-    capability = CapabilityToken(account_sid, auth_token)
+    capability = ClientCapabilityToken(account_sid, auth_token)
 
     capability.allow_client_incoming("jenny")
     token = capability.generate()
