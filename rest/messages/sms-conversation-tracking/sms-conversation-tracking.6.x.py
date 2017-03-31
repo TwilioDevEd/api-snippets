@@ -1,5 +1,5 @@
 from flask import Flask, request, session
-from twilio import twiml
+from twilio.twiml.messaging_response import MessagingResponse
 
 # The session object makes use of a secret key.
 SECRET_KEY = 'a secret key'
@@ -34,7 +34,7 @@ def hello():
         .format(name, request.values.get('To'), counter)
 
     # Put it in a TwiML response
-    resp = twiml.Response()
+    resp = MessagingResponse()
     resp.message(message)
 
     return str(resp)
