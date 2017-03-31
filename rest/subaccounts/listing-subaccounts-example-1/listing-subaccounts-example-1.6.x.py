@@ -7,6 +7,6 @@ auth_token = "your_auth_token"
 
 client = Client(account_sid, auth_token)
 
-account = client.api.v2010.accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch()
+account = client.api.accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch()
 
 print(account.status)

@@ -6,5 +6,5 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-account = client.api.v2010.accounts(account_sid).fetch()
+account = client.api.accounts(account_sid).fetch()
 print(account.date_created)
