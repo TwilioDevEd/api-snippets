@@ -1,1 +1,1 @@
-#import <TwilioAuthy/TwilioAuthy.h>
+#import <TwilioAuth/TwilioAuth.h>
