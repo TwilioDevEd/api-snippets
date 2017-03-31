@@ -1,5 +1,5 @@
 from flask import Flask, Response, request
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
@@ -8,9 +8,9 @@ app = Flask(__name__)
 def get_voice_twiml():
     """Respond to incoming calls with a simple text message."""
 
-    resp = twiml.Response()
+    resp = VoiceResponse()
     if "To" in request.form:
-        resp.dial(callerId="+15017250604").number(request.form["To"])
+        resp.dial(request.form["To"], callerId="+15017250604")
     else:
         resp.say("Thanks for calling!")
 
