@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect
-from twilio import twiml
+from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def incoming_sms():
     body = request.values.get('Body', None)
 
     # Start our TwiML response
-    resp = twiml.Response()
+    resp = MessagingResponse()
 
     # Determine the right reply for this message
     if body == 'hello':
