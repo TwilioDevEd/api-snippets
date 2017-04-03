@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.twilio.Twilio;
-import com.twilio.rest.notify.v1.service.Binding;
+import com.twilio.rest.notify.service.Binding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -19,10 +19,11 @@ public class Example {
     List<String> tags = Arrays.asList("premium", "new user");
 
     String endpoint = "xxx";
-    String identity = "bob";
+    String identity = "00000001";
     String address = "xxx";
     Binding binding = Binding
-            .creator(SERVICE_SID,
+            .creator(
+                     SERVICE_SID,
                      endpoint,
                      identity,
                      Binding.BindingType.GCM,

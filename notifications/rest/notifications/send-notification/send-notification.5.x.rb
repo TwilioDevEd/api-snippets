@@ -9,6 +9,9 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 service = client.notify.services('ISxxx')
 
-notification = service.notifications.create(identity: 'Bob', body: 'Hello Bob')
+notification = service.notifications.create(
+  identity: '00000001',
+  body: 'Hello Bob'
+)
 
 puts notification

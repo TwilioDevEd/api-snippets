@@ -20,10 +20,16 @@ public class Example {
 
     List<String> tags = Arrays.asList("premium", "new user");
 
-    Binding binding = Binding
-        .creator(SERVICE_SID, "xxx", "bob", Binding.BindingType.GCM, "xxx")
-        .setTag(tags)
-        .create();
+    Binding binding = Binding.creator
+    (
+      SERVICE_SID,
+      "endpoint_id",
+      "00000001",
+      Binding.BindingType.GCM,
+      "device_token"
+    )
+    .setTag(tags)
+    .create();
 
     System.out.println(binding.getSid());
   }

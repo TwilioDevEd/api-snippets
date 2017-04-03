@@ -10,7 +10,7 @@ var service = client.notify.services('ISxxx');
 
 service.bindings.create({
     endpoint: 'xxx',
-    identity: 'bob',
+    identity: "00000001",
     bindingType: 'gcm',
     address: 'xxx',
     tag: ['premium', 'new user']

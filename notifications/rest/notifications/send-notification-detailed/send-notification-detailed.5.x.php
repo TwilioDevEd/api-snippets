@@ -19,7 +19,7 @@ $client = new Client($accountSid, $authToken);
 $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
-        "identity" => "Bob",
+        "identity" => "00000001",
         "title" => "Generic loooooooong title for all Bindings",
         "body" => "This is the body for all Bindings",
         "gcm" => '{"notification":{"tag":"MyTag"}}',

@@ -18,7 +18,8 @@ public class Example {
     Notification notification = Notification
         .creator(SERVICE_SID)
         .setTitle("Generic loooooooong title for all Bindings")
-        .setBody("This is the body for all Bindings").setIdentity("Bob")
+        .setBody("This is the body for all Bindings")
+        .setIdentity("00000001")
         .setGcm("{\"notification\":{\"tag\":\"MyTag\"}}")
         .setApn("{\"aps\":{\"title\":\"Short title for Watch.\"}}")
         .create();

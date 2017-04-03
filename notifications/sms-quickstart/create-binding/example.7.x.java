@@ -14,7 +14,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Binding binding = Binding.creator
-    ( SERVICE_SID,
+    (
+      SERVICE_SID,
       "your_user@example.com:sms",
       "your_user@example.com",
       Binding.BindingType.SMS,

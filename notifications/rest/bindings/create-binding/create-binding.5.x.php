@@ -23,7 +23,7 @@ $binding = $client
         "identity",
         "type",
         "address",
-        ["tag" => "premium"]
+        ["tag" => "preferred device"]
     );
 
 echo $binding->sid;

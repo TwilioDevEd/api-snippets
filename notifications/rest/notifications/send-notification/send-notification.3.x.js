@@ -9,11 +9,13 @@ var client = new Twilio(accountSid, authToken);
 
 var service = client.notify.services('ISxxx');
 
-service.notifications.create({
-  'identity':'Bob',
-  'body':'Hello Bob'
-}).then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+service.notifications
+  .create({
+    'identity':'00000001',
+    'body':'Hello Bob'
+  }).then(function(notification) {
+    console.log(notification);
+  }).catch(function(error) {
+    console.log(error);
+  })
+  .done();

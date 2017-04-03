@@ -11,4 +11,4 @@ service = client.notify.services.create(
   friendly_name: 'My Awesome Service'
 )
 
-puts service
+puts service.friendly_name

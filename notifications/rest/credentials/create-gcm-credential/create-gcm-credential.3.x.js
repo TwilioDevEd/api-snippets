@@ -14,4 +14,5 @@ const credentialOpts = {
 client.notify
   .credentials.create(credentialOpts)
   .then(credential => console.log(credential.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done();

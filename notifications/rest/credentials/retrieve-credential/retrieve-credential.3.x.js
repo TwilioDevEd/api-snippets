@@ -8,4 +8,5 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
-  .then(credential => console.log(credential.friendlyName));
+  .then(credential => console.log(credential.friendlyName))
+  .done();

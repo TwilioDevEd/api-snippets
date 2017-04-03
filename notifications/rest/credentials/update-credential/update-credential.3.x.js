@@ -11,4 +11,5 @@ client.notify
     friendlyName: 'MyCredential',
     sandbox: 'true',
   })
-  .then(credential => console.log(credential.friendlyName));
+  .then(credential => console.log(credential.friendlyName))
+  .done();

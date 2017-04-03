@@ -17,11 +17,11 @@ public class Example
 
         var binding = BindingResource.Create(
             serviceSid,
-            "xxx",
-            "bob",
+            "endpoint",
+            "00000001",
             BindingResource.BindingTypeEnum.Gcm,
-            "xxx",
-            new List<string> { "premium", "new user" });
+            "device_token",
+            new List<string> { "preferred device", "new user" });
 
         Console.WriteLine(binding.Sid);
     }

@@ -15,8 +15,8 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var status = BindingResource.Delete(serviceSid, bindingSid);
+        var wasRemoved = BindingResource.Delete(serviceSid, bindingSid);
 
-        Console.WriteLine(status);
+        Console.WriteLine(wasRemoved);
     }
 }

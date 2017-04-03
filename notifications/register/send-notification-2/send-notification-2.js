@@ -8,13 +8,13 @@ var twilio = require('twilio');
 var client = new twilio(env.TWILIO_ACCOUNT_SID,  env.TWILIO_AUTH_TOKEN);
 
 // Create a reference to the user notification service
-var service = client.notifications.v1.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
+var service = client.notifications.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
 
-// Send a notification 
+// Send a notification
 service.notifications.create({
-  'identity':'Bob',
-  'tags':'preferred_device',
-  'body':'Hello Bob'
+  'identity': '00000001',
+  'tags': 'preferred_device',
+  'body': 'Hello Bob'
 }).then(function(response) {
   console.log(response);
 }).catch(function(error) {

@@ -18,6 +18,9 @@ $client = new Client($accountSid, $authToken);
 $credential = $client
     ->notify
     ->credentials($credentialSid)
-    ->update(["friendlyName" => "MyCredential"]);
+    ->update([
+      "friendlyName" => "MyCredential",
+      "sandbox" => true
+    ]);
 
 echo $credential->friendlyName; // => MyCredential
