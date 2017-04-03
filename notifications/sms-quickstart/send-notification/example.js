@@ -10,13 +10,14 @@ var service = client.notifications.v1.services('ISxxx');
 
 // Send a notification to all users who have subscribed for Rogue One updates
 service.notifications.create({
-  tag: 'rogue_one', 
-  body: 'A new Rogue One trailer has been released!',
-  sms: JSON.stringify({
-    from: '+16516667788' // a Twilio number in your account
+    tag: 'rogue_one',
+    body: 'A new Rogue One trailer has been released!',
+    sms: JSON.stringify({
+      from: '+16516667788' // a Twilio number in your account
+    })
+  }).then(function(notification) {
+    console.log(notification);
+  }).catch(function(error) {
+    console.log(error);
   })
-}).then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+  .done();

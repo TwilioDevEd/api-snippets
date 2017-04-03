@@ -16,12 +16,14 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var binding = BindingResource.Create(
-            serviceSid,
-            endpoint: "your_user@example.com:sms",
-            identity: "your_user@example.com",
-            bindingType: BindingResource.BindingTypeEnum.Sms,
-            address: "+1651555667777",
-            tag: new List<string> { "rogue_one", "han_solo_spinoff" });
+                        serviceSid,
+                        endpoint: "your_user@example.com:sms",
+                        identity: "your_user@example.com",
+                        bindingType: BindingResource.BindingTypeEnum.Sms,
+                        address: "+1651555667777",
+                        tag: new List<string> {
+                          "rogue_one", "han_solo_spinoff"
+                          });
 
         Console.WriteLine(binding.Sid);
     }
