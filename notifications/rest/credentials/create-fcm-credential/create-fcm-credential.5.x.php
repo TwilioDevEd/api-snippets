@@ -17,10 +17,10 @@ $credential = $client
     ->notify
     ->credentials
     ->create(
-        "gcm",
+        "fcm",
         [
-            "friendlyName" => "MyGCMCredential",
-            "apiKey" => "api_key_here"
+            "friendlyName" => "MyFCMCredential",
+            "secret" => "fcm_secret"
         ]
     );
 

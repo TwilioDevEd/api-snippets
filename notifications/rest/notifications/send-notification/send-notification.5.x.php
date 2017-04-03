@@ -19,7 +19,7 @@ $client = new Client($accountSid, $authToken);
 $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
-        "identity" => "Bob",
+        "identity" => "00000001",
         "body" => "Hello Bob"
     ]);
 

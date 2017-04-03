@@ -13,8 +13,9 @@ const bindingOpts = {
   tag: ['preferred device', 'new user']
 };
 
-client.notify.v1
+client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .bindings.create(bindingOpts)
   .then(binding => console.log(binding.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done();

@@ -9,6 +9,10 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 service = client.notify.services('ISxxx')
 
-response = service.update(friendly_name: 'NewFlowHipSlackChatDock')
+service = service.update(
+  friendly_name: 'NewFlowHipSlackChatDock',
+  FacebookMessengerPageId: 'your_page_id',
+  MessagingServiceSid: 'your_twilio_messaging_service_sid'
+)
 
-puts response
+puts service

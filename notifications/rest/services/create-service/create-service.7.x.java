@@ -18,6 +18,6 @@ public class Example {
     // Create the service
     Service service = Service.creator().setFriendlyName("My Awesome Service").create();
 
-    System.out.println(service.getSid());
+    System.out.println(service.getFriendlyName());
   }
 }

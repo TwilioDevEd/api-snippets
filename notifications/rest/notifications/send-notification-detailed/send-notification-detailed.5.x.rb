@@ -10,7 +10,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.notify.services('ISxxx')
 
 notification = service.notifications.create(
-  identity: 'Bob',
+  identity: '00000001',
   title: 'Generic loooooooong title for all Bindings',
   body: 'This is the body for all Bindings',
   gcm: '{"notification":{"tag":"MyTag"}}',

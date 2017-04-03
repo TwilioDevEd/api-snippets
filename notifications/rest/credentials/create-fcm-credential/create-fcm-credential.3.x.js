@@ -6,8 +6,7 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const credentialOpts = {
-  friendlyName: 'MyGCMCredential',
-  sandbox: true,
+  friendlyName: 'MyFCMCredential',
   secret: 'fcm_secret',
   type: 'fcm',
 };
@@ -15,4 +14,5 @@ const credentialOpts = {
 client.notify
   .credentials.create(credentialOpts)
   .then(credential => console.log(credential.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done()

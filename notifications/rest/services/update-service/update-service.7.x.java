@@ -17,6 +17,8 @@ public class Example {
     Service service = Service
         .updater("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setFriendlyName("NewFlowHipSlackChatDock")
+        .setFacebookMessengerPageId("your_page_id")
+        .setMessagingServiceSid("your_twilio_messaging_service_sid")
         .update();
   }
 }

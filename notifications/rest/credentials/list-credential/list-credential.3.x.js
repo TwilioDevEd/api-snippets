@@ -6,4 +6,9 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.notify
-  .credentials.list();
+  .credentials
+  .list()
+  .then((credentials) => {
+    credentials.forEach(credential => console.log(credential.sid));
+  })
+  .done()

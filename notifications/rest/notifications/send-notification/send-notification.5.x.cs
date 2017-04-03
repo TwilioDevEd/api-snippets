@@ -15,9 +15,10 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var notification = NotificationResource.Create(serviceSid,
-                                                       identity: new List<string> { "Bob" },
-                                                       body: "Hello Bob");
+        var notification = NotificationResource.Create(
+            serviceSid,
+            identity: new List<string> { "00000001" },
+            body: "Hello Bob");
 
         Console.WriteLine(notification.Sid);
     }

@@ -11,7 +11,7 @@ const notificationOpts = {
   Body: 'Hello Bob',
 };
 
-client.notify.v1
+client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .notifications.create(notificationOpts)
   .then(notification => console.log(notification.sid))

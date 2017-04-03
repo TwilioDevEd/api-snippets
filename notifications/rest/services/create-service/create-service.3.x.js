@@ -7,10 +7,12 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-client.notify.services.create({
-  friendlyName: 'My Awesome Service'
-}).then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+client.notify.services
+  .create({
+    friendlyName: 'My Awesome Service'
+  }).then(function(service) {
+    console.log(service.friendlyName);
+  }).catch(function(error) {
+    console.log(error);
+  })
+  .done()

@@ -10,8 +10,9 @@ var client = new Twilio(accountSid, authToken);
 var service = client.notify.services('ISxxx');
 
 service.bindings('BSxxx').remove()
-.then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+  .then(function(wasRemoved) {
+    console.log(wasRemoved);
+  }).catch(function(error) {
+    console.log(error);
+  })
+  .done();

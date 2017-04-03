@@ -17,7 +17,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the bindings
-    ResourceSet<Binding> bindings = Binding.reader(SERVICE_SID).read();
+    ResourceSet<Binding> bindings = Binding.reader(SERVICE_SID)
+      .setStartDate(Date(2005, 8, 18))
+      .setTag("new user")
+      .read();
 
     for (Binding binding : bindings) {
       System.out.println(binding.getEndpoint());

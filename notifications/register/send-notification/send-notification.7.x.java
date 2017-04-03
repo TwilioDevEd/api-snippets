@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.v1.service.Notification;
+import com.twilio.rest.notify.service.Notification;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -18,7 +18,7 @@ public class Example {
     Notification notification = Notification
         .creator(SERVICE_SID)
         .setBody("Hello Bob")
-        .setIdentity("Bob")
+        .setIdentity("00000001")
         .create();
 
     System.out.println(notification.getSid());

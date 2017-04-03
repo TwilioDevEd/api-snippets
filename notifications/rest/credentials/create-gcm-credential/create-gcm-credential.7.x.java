@@ -15,7 +15,7 @@ public class Example {
 
     Credential credential = Credential.creator(Credential.PushService.GCM)
         .setFriendlyName("MyGCMCredential")
-        .setApiKey("api_key_here")
+        .setApiKey("gcm_api_key")
         .create();
 
     System.out.println(credential.getSid());
