@@ -12,7 +12,7 @@ const bindingOpts = {
   address: '+1651000000000',
 };
 
-client.notify.v1
+client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .bindings.create(bindingOpts)
   .then(binding => console.log(binding.sid))

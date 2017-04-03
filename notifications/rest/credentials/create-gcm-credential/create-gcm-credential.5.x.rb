@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-credential = client.notify.v1.credentials.create(
+credential = client.notify.credentials.create(
   friendly_name: 'MyGCMCredential',
   type: 'gcm',
   api_key: 'gcm_api_key'
