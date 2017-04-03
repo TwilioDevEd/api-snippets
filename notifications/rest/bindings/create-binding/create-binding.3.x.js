@@ -6,16 +6,16 @@ var authToken = 'your_auth_token';
 var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
-var service = client.notify.v1.services('ISxxx');
+var service = client.notify.services('ISxxx');
 
 service.bindings.create({
-  endpoint: 'xxx',
-  identity: 'bob',
-  bindingType: 'gcm',
-  address: 'xxx',
-  tag: ['premium', 'new user']
-}).then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+    endpoint: 'xxx',
+    identity: 'bob',
+    bindingType: 'gcm',
+    address: 'xxx',
+    tag: ['premium', 'new user']
+  }).then(function(binding) {
+    console.log(binding);
+  }).catch(function(error) {
+    console.log(error);
+  });

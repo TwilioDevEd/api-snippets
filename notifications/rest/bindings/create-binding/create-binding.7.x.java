@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.twilio.Twilio;
-import com.twilio.rest.notify.v1.service.Binding;
+import com.twilio.rest.notify.service.Binding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account

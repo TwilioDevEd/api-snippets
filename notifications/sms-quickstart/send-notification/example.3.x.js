@@ -10,7 +10,7 @@ const notificationOpts = {
   body: 'Knok-Knok! This is your first Notify SMS',
 };
 
-client.notify.v1
+client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .notifications
   .create(notificationOpts)

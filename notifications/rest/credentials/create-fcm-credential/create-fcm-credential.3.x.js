@@ -12,7 +12,7 @@ const credentialOpts = {
   type: 'fcm',
 };
 
-client.notify.v1
+client.notify
   .credentials.create(credentialOpts)
   .then(credential => console.log(credential.sid))
   .catch(error => console.log(error));

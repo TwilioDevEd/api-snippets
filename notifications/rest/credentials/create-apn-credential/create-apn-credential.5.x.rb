@@ -9,7 +9,7 @@ private_key_from_file = 'private_key_contents'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-credential = client.notify.v1.credentials.create(
+credential = client.notify.credentials.create(
   friendly_name: 'MyAPNCredential',
   type: 'apn',
   sandbox: true,
