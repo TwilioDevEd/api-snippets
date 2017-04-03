@@ -13,8 +13,13 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Binding binding = Binding.creator(SERVICE_SID, "your_user@example.com:sms",
-        "your_user@example.com", Binding.BindingType.SMS, "+1651555667777").create();
+    Binding binding = Binding.creator
+    ( SERVICE_SID,
+      "your_user@example.com:sms",
+      "your_user@example.com",
+      Binding.BindingType.SMS,
+      "+1651555667777"
+    ).create();
 
     System.out.println(binding.getSid());
   }

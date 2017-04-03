@@ -16,4 +16,5 @@ client.notify.v1
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .bindings.create(bindingOpts)
   .then(binding => console.log(binding.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done()
