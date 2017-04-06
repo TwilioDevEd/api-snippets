@@ -212,7 +212,7 @@ $ gem install parallel
 You can use the following command to install dependencies in your system:
 
 ```bash
-$ ruby tools/snippet-testing/model/dependency_model.rb
+$ ruby tools/snippet-testing/model/dependency.rb
 ```
 
 This will download all the necessary dependencies for the snippets to run.
