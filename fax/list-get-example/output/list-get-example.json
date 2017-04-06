@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://fax.twilio.com/v1/Faxes?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://fax.twilio.com/v1/Faxes?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "faxes"
+  },
+  "faxes": [
+    {
+      "status": "busy",
+      "direction": "outbound",
+      "from": "+15017250604",
+      "date_updated": "2017-04-06T06:41:44Z",
+      "price": null,
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "to": "+15558675309",
+      "date_created": "2017-04-06T06:41:32Z",
+      "url": "https://fax.twilio.com/v1/Faxes/FX0bc96ef78eae441348874c6998db5a51",
+      "sid": "FX0bc96ef78eae441348874c0098db5a51",
+      "duration": null,
+      "num_pages": 1,
+      "quality": "fine",
+      "price_unit": null,
+      "api_version": "v1",
+      "media_url": "https://media.twiliocdn.com/fax/AC7719587dd8553511c99cf14d495da345/f540dd4a36e448636c6a03ea16fef29ca1b6f1c20e80b16ae7538807311c1d77e239b42678ffe13617213ce892b55e1a09b0d4f3db7f01968b587b6c095b343e?x-amz-security-token=FQoDYasdEBgaDDRjH242324BB8SK3A4ex5oEKcNjDtlfxoAdcyA8PGme7Z%2Frj4W7l6Jdeq2342rwerwmkJs4vZ8fllEvQU0xErPz5kIxcOJ7ODOYSu%2Bcsk28Nr0QecoIxaZdZTyCFGxa3rEVXOgNq6M4smzWlxH7VHZpiSHjE8VHMGrB5xY5qygtwN1kSqh%2Bf%2Bg1h2XqPE7w83O2JUfLS23%2FnX9KKJOHtMrwLjLyjvD1AxvlVVzB2815xaLUkPYrOrgVO%2B6kzQlPiwn2jqsTO8TYWezgrVQmo8MyLMwVNrZ7cYrTq3Us3tAHm1nG%2BB7cOHziinet%2FsPqjLOL3cpj8Npm55%2BKvh74SypF6zAeNLKsX%2F2uE6%2FaWRtf1iyjp4zh%2B72qw9RJKjicUxCKCTdIK8rhh%2Fk8Zk1puSThXZnMGX0z9XWlSySisLUBrLh2SJAfqNqyjMnzxGErIV6jzgeMOpxpYk6UYtbFUx%2Ba1X5iEdXDQPUO7v7e6dTF2N%2F4OJdXFgeClzYXFAlKA29KUBGx3mYShOM8VccyqtCG7zhHoYv1%2Fhr%2FBktHNezWAVjGdkAhHm6O6Nl3X%2FnS1cLwz3vouRRKPVlPwfLSopuNn0lfAVYRxYojaKZxwU%3D&AWSAccessKeyId=ASIAIF4A5CFXDRXORVKQ&Expires=1491499879&Signature=pVV8xEzm1%22IyDz%2BSQ2rvoSdQxoA%3D"
+    }
+  ]
+}
