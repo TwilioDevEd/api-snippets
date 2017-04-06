@@ -1,0 +1,18 @@
+{
+	"status": "canceled",
+	"direction": "outbound",
+	"from": "+15017250604",
+	"date_updated": "2017-04-06T09:15:48Z",
+	"price": null,
+	"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+	"to": "+15558675309",
+	"date_created": "2017-04-06T09:15:38Z",
+	"url": "https://fax.twilio.com/v1/Faxes/FXc37d4ed12343484f901bde9a758408bc",
+	"sid": "FXc37d4ed12343484f901bde9a758408bc",
+	"duration": null,
+	"num_pages": null,
+	"quality": "fine",
+	"price_unit": null,
+	"api_version": "v1",
+	"media_url": null
+}
