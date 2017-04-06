@@ -6,7 +6,7 @@ var authToken = 'your_auth_token';
 var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
-var service = client.notifications.services('ISxxx');
+var service = client.notify.services('ISxxx');
 
 // Create a binding for a user that will be updated when details for Rogue
 // One or the Han Solo spinoff are revealed
