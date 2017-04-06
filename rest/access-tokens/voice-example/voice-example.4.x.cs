@@ -12,6 +12,7 @@ class Example
 
     // These are specific to Voice
     var outgoingApplicationSid = "APxxxxxxxxxxxx";
+    var pushCredentialSid = "CRxxxxxxxxxxxx";
     var identity = "user";
 
     // Create an Access Token generator
@@ -21,6 +22,7 @@ class Example
     // Create a Voice grant for this token
     var grant = new VoiceGrant();
     grant.OutgoingApplicationSid = outgoingApplicationSid;
+    grant.PushCredentialSid = pushCredentialSid;
     token.AddGrant(grant);
 
     Console.WriteLine(token.ToJWT());

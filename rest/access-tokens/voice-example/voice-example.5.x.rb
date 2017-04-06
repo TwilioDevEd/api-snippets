@@ -7,6 +7,7 @@ api_secret = 'xxxxxxxxxxxxxx'
 
 # Required for Voice
 outgoing_application_sid = 'APxxxxxxxxxxxx'
+push_credential_sid = 'CRxxxxxxxxxxxx'
 identity = 'user'
 
 # Create an Access Token
@@ -20,6 +21,7 @@ token = Twilio::JWT::AccessToken.new(
 # Create Voice grant for our token
 grant = Twilio::JWT::AccessToken::VoiceGrant.new
 grant.outgoing_application_sid = outgoing_application_sid
+grant.push_credential_sid = push_credential_sid
 token.add_grant(grant)
 
 # Generate the token

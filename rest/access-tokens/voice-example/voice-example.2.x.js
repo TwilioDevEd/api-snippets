@@ -8,11 +8,13 @@ const twilioApiSecret = 'xxxxxxxxxxxx';
 
 // Used specifically for creating Voice tokens
 const outgoingApplicationSid = 'APxxxxxxxxxxxxx';
+const pushCredentialSid = 'CRxxxxxxxxxxxxx';
 const identity = 'user';
 
 // Create a "grant" which enables a client to use Voice as a given user
 const voiceGrant = new VoiceGrant({
     outgoingApplicationSid: outgoingApplicationSid
+    pushCredentialSid: pushCredentialSid
 });
 
 // Create an access token which we will sign and return to the client,
