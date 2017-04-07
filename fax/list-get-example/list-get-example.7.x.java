@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/libraries/java
 import com.twilio.Twilio;
+import com.twilio.base.ResourceSet;
 import com.twilio.rest.fax.v1.Fax;
-import java.net.URI;
 import java.net.URISyntaxException;
 
 public class Example {
@@ -12,11 +12,10 @@ public class Example {
     public static void main(String[] args) throws URISyntaxException {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        String from = "+15017250604";
-        String to = "+15558675309";
-        URI mediaUrl = new URI("https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
-        Fax fax = Fax.creator(from, to, mediaUrl).create();
+        ResourceSet<Fax> faxes = Fax.reader().read();
 
-        System.out.println(fax.getSid());
+        for (Fax fax : faxes) {
+            System.out.println(fax.getMediaUrl());
+        }
     }
 }

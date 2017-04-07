@@ -8,10 +8,8 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$fax = $client->fax->v1->faxes->create(
-    "+15017250604",
-    "+15558675309",
-    "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf"
-);
+$faxes = $client->fax->v1->faxes->read();
 
-echo $fax->$sid;
+foreach ($$faxes as $fax) {
+    echo $fax->mediaUrl;
+}
