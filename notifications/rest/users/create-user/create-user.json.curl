@@ -1,0 +1,5 @@
+curl -XPOST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Users \
+    -d "Identity=User0001" \
+    -d "Segment=premium" \
+    -d "Segment=fitness-lifestyle" \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

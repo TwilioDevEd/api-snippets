@@ -17,9 +17,8 @@ public class Example
 
         var notification = NotificationResource.Create(
             serviceSid,
-            body: "A new Rogue One trailer has been released!",
-            tag: new List<string> { "rogue_one" },
-            sms: "{\"from\":\"+16516667788\"}");
+            body: "Knok-Knok! This is your first Notify SMS",
+            identity: new List<string> { "00000001" });
 
         Console.WriteLine(notification.Sid);
     }

@@ -36,14 +36,14 @@
       "credential_sid": null,
       "identity": "0000002"
     },
-    
+
   ],
   "meta": {
     "page": 0,
     "page_size": 50,
     "first_page_url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXBindings?PageSize=50&Page=0",
+    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings?PageSize=50&Page=0",
     "next_page_url": null,
     "key": "bindings"
   }

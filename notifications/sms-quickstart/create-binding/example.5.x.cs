@@ -17,8 +17,7 @@ public class Example
 
         var binding = BindingResource.Create(
                         serviceSid,
-                        endpoint: "your_user@example.com:sms",
-                        identity: "your_user@example.com",
+                        identity: "00000001",
                         bindingType: BindingResource.BindingTypeEnum.Sms,
                         address: "+1651555667777",
                         tag: new List<string> {

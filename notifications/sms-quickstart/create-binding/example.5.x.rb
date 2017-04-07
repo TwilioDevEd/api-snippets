@@ -10,7 +10,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 binding = service.bindings.create(
-  endpoint: '00000001:sms',
   identity: '00000001',
   binding_type: 'sms',
   address: 'Address=+1651000000000'

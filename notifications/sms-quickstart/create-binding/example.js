@@ -12,8 +12,7 @@ var service = client.notifications.services('ISxxx');
 // One or the Han Solo spinoff are revealed
 service.bindings
   .create({
-    endpoint: 'your_user@example.com:sms',
-    identity: 'your_user@example.com',
+    identity: '00000001',
     bindingType: 'sms',
     address: '+16516667788',
     tag: ['rogue_one', 'han_solo_spinoff']

@@ -19,7 +19,6 @@ $client = new Client($accountSid, $authToken);
 $binding = $client
     ->notify->services($serviceSid)
     ->bindings->create(
-        '00000001:sms',
         '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
         'sms',
         '+1651000000000'
