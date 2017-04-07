@@ -3,7 +3,7 @@
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
-import com.twilio.rest.notify.v1.service.Binding;
+import com.twilio.rest.notify.service.Binding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -17,7 +17,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // List the bindings
-    ResourceSet<Binding> bindings = Binding.reader(SERVICE_SID).read();
+    ResourceSet<Binding> bindings = Binding.reader(SERVICE_SID)
+      .setStartDate(Date(2005, 8, 18))
+      .setTag("new user")
+      .read();
 
     for (Binding binding : bindings) {
       System.out.println(binding.getEndpoint());

@@ -1,9 +1,9 @@
 public void connectToRoom(String roomName) {
-  ConnectOptions connectOptions = new ConnectOptions.Builder()
+  ConnectOptions connectOptions = new ConnectOptions.Builder(accessToken)
     .roomName(roomName)
     .localMedia(localMedia)
     .build();
-  room = videoClient.connect(connectOptions, this);
+  room = Video.connect(context, connectOptions, this);
 }
 
 private Room.Listener roomListener() {

@@ -1,0 +1,5 @@
+{
+  "title": "Apply the request validation decorator to a Django view",
+  "description": "Apply a custom Twilio request validation decorator to a Django view used for Twilio webhooks.",
+  "type": "server"
+}

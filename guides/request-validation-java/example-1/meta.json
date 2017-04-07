@@ -1,0 +1,5 @@
+{
+  "type": "server",
+  "description": "Confirm incoming requests to your Servlets are genuine with this filter.",
+  "title": "Use Servlet filter to validate Twilio requests"
+}

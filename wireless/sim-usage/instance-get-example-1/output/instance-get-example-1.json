@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "url": "https://preview.twilio.com/wireless/Sims/DEb8eff34b248d066a31c4a953134e183e/Usage",
+  "period": {
+    "start": "2016-05-01T00:00:00Z",
+    "end": "2016-05-19T22:33:54Z"
+  },
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "data_costs": {
+    "sent": 5,
+    "received": 6,
+    "total": 11,
+    "price_unit": "USD"
+  },
+  "data_usage": {
+    "sent": 1024,
+    "received": 548,
+    "total": 1572
+  },
+  "commands_costs": {
+    "sent": 12,
+    "received": 3,
+    "total": 15,
+    "price_unit": "USD"
+  },
+  "commands_usage": {
+    "sent": 1000,
+    "received": 231,
+    "total": 1231
+  },
+  "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
+  "sim_unique_name": "AliceSmithSmartMeter"
+}

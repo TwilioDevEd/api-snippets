@@ -1,0 +1,5 @@
+{
+  "title": "An improved Django request validation decorator, useful for testing",
+  "description": "Use this version of the custom Django decorator if you test your Django views.",
+  "type": "server"
+}

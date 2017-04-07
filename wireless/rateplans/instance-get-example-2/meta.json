@@ -1,4 +1,4 @@
 {
-  "title": "Get a RatePlan by Alias",
+  "title": "Get a RatePlan by UniqueName",
   "type": "server"
 }

@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "page": 0,
+        "page_size": 50,
+        "first_page_url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "next_page_url": null,
+        "key": "phone_numbers",
+        "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers?PageSize=50&Page=0"
+                    },
+    "phone_numbers": [
+        {
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "service_sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+            "sid": "PN557ce644e5ab84fa21cc21112e22c485",
+            "date_created": "2017-03-14T20:12:31Z",
+            "date_updated": "2017-03-14T20:12:33Z",
+            "phone_number": "+987654321",
+            "country_code": "US",
+            "capabilities": ["sms", "mms"],
+            "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab84fa21cc21112e22c485"
+        },
+        {
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "service_sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+            "sid": "PN2a0747eba6abf96b7e3c3ff0b4530f6e",
+            "date_created": "2017-03-14T20:15:31Z",
+            "date_updated": "2017-03-14T20:15:33Z",
+            "phone_number": "+441632960556",
+            "country_code": "GB",
+            "capabilities": ["sms"],
+            "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e"
+        }
+        {
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "service_sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+            "sid": "PN2a0747eba6abf96b7e3c3ff0b4530f6e",
+            "date_created": "2017-03-14T20:15:31Z",
+            "date_updated": "2017-03-14T20:15:33Z",
+            "phone_number": "+611900654321",
+            "country_code": "AU",
+            "capabilities": ["sms"],
+            "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e"
+        }
+    ]
+}

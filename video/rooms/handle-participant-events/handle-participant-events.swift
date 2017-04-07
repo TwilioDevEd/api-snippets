@@ -1,4 +1,5 @@
 // MARK: TVIParticipantDelegate
+
 func participant(_ participant: TVIParticipant, addedVideoTrack videoTrack: TVIVideoTrack) {
     NSLog("Participant \(participant.identity) added video track")
 }

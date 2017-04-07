@@ -5,7 +5,7 @@ room.disconnect();
 private Room.Listener roomListener() {
   return new Room.Listener() {
     @Override
-    public void onDisconnected(Room room, VideoException e) {
+    public void onDisconnected(Room room, TwilioException e) {
         Log.d(TAG,"Disconnected from " + room.getName());
     } 
   };

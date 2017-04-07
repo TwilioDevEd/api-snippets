@@ -1,9 +1,12 @@
-// Where "channel" is a TMChannel
-let message: TWMMessage = channel.messages.createMessageWithBody("test")
-channel.messages.sendMessage(message) { result in
+// Where "channel" is a TCHChannel
+if let messages = channel.messages {
+  let message = messages.createMessage(withBody: "test")
+  messages.send(message) { result in
     if result.isSuccessful() {
-        print("Message sent.")
+      print("Message sent.")
     } else {
-        print("Message NOT sent.")
+      print("Message NOT sent.")
     }
+  }
 }
+

@@ -8,12 +8,14 @@ module Model
     PHP_NAME        = 'php'.freeze
     PYTHON_NAME     = 'python'.freeze
     RUBY_NAME       = 'ruby'.freeze
+    NODE_NAME       = 'node'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.4.1-alpha1'],
+      PHP_NAME    => ['4.10', '5.4.2-alpha1'],
       PYTHON_NAME => ['5.6.0', '6.0.0rc12'],
-      RUBY_NAME   => ['4.13.0', '5.0.0.rc17']
+      RUBY_NAME   => ['4.13.0', '5.0.0.rc17'],
+      NODE_NAME   => ['2.11.0', '3.0.0-rc.13']
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -22,31 +24,41 @@ module Model
         { name: 'Twilio.Pricing', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
-        { name: 'Twilio.Auth', version: '1.2.0' }
+        { name: 'Twilio.Auth', version: '1.4.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.0.0-rc6' },
+        { name: 'Twilio', version: '5.0.0-rca4' },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
-
-    NODE_DEPENDENCIES = [
-      { name: 'twilio', version: '2.9.1' }
-    ].freeze
 
     def self.install_dependencies
       new.install_dependencies
     end
 
     def install_dependencies
+      dependencies = {
+        csharp: -> { install_csharp_dependencies },
+        php:    -> { install_php_dependencies },
+        ruby:   -> { install_ruby_dependencies },
+        node:   -> { install_node_dependencies },
+        python: -> { install_python_dependencies },
+        java6:  -> { puts 'nothing else to install' },
+        java7:  -> { puts 'nothing else to install' },
+        curl:   -> { puts 'nothing else to install' }
+      }
+
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
-        install_csharp_dependencies
-        install_php_dependencies
-        install_ruby_dependencies
-        install_node_dependencies
-        install_python_dependencies
+        snippet_languages = ENV['SNIPPET_LANGUAGE']
+        if !snippet_languages.nil?
+          snippet_languages.split(':').each do |language|
+            dependencies.fetch(language.to_sym).call
+          end
+        else
+          dependencies.values.each(&:call)
+        end
       end
     end
 
@@ -76,7 +88,7 @@ module Model
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
-        'Twilio.Auth.1.2.0/lib/3.5/Twilio.Auth.dll',
+        'Twilio.Auth.1.4.0/lib/3.5/Twilio.Auth.dll',
         'JWT.1.1/lib/3.5/JWT.dll',
         'RestSharp.105.2.2/lib/net35/RestSharp.dll',
         'Newtonsoft.Json.3.5.8/lib/35/Newtonsoft.Json.dll'
@@ -85,8 +97,9 @@ module Model
 
     def self.csharp_5_dependencies
       [
-        'Twilio.5.0.0-rc6/lib/net35/Twilio35.dll',
-        'JWT.1.3.4/lib/3.5/JWT.dll'
+        'Twilio.5.0.0-rca4/lib/net35/Twilio.dll',
+        'JWT.1.3.4/lib/3.5/JWT.dll',
+        'Newtonsoft.Json.9.0.1/lib/net35/Newtonsoft.Json.dll'
       ]
     end
 
@@ -106,11 +119,25 @@ module Model
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1]
     end
 
+    def self.node_2_path
+      node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][0]
+      "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
+    end
+
+    def self.node_3_path
+      node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][1]
+      "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
+    end
+
     private
 
     def install_node_dependencies
-      NODE_DEPENDENCIES.each do |dependency|
-        system("sudo npm install -g #{dependency[:name]}@#{dependency[:version]}")
+      AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
+        install_language_version(NODE_NAME, version) do
+          unless Dir.exist?('node_modules')
+            system("npm install twilio@#{version} express body-parser")
+          end
+        end
       end
     end
 
@@ -135,7 +162,7 @@ module Model
 
     def install_csharp_dependencies
       unless File.exist?(NUGET_FILE_NAME)
-        system("wget https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe -O #{NUGET_FILE_NAME}")
+        system("wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O #{NUGET_FILE_NAME}")
       end
 
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME].each do |version|

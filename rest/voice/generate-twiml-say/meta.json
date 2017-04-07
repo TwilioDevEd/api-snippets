@@ -1,4 +1,4 @@
 {
-  "title": "Generate TwiML to Say something",
-  "type": "server"
+  "type": "server",
+  "title": "Generate TwiML to Say a message"
 }

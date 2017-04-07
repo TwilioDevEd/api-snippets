@@ -3,60 +3,42 @@ Content-Type: application/json
 
 {
   "rate_plans": [
-   {
-      "sid" : "WP4ff4de42eb7e496c64ed87821bd262a7",
-      "alias" : "us-automotive",
+    {
+      "commands": {
+        "enabled": true
+      },
+      "renewal": "monthly",
+      "date_updated": "2016-09-01T08:21:09Z",
       "friendly_name" : "Data-only US automotive rate plan",
-      "data_metering" : "individual",
-      "cap_unit" : "months",
-      "cap_period" : 1,
-      "data_cap" : 999,
-      "voice_cap" : 0,
-      "messaging_cap" : 0,
-      "commands_cap" : 30,
-      "capabilities" : {
-         "messaging" : [],
-         "commands" : [
-            "home"
-         ],
-         "data" : [
-            "home"
-         ],
-         "voice" : []
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "unique_name": "us-automotive",
+      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+      "sid": "WP467fb57a0aba9641a8209136d42545f8",
+      "date_created": "2016-05-20T06:06:07Z",
+      "roaming": [],
+      "data": {
+        "cap": 50,
+        "metering": "pooled"
+      }
+    },
+    {
+      "commands": {
+        "enabled": true
       },
-      "date_created" : "2016-05-13T09:48:50Z",
-      "date_updated" : "2016-05-13T09:48:50Z",
-      "account_sid" : "AC8caa2afb9d5279926619c458dc65be78",
-      "url" : "https://preview.twilio.com/wireless/RatePlans/WP4ff4de42eb7e496c64ed87821bd262a7",
-   },
-   {
-      "sid" : "WPafb9d5279926616c64ed279926619c4",
-      "alias" : "us-industrial-sensors",
+      "renewal": "monthly",
+      "date_updated": "2016-05-01T10:29:11Z",
       "friendly_name" : "US industrial sensors with national roaming",
-      "data_metering" : "pooled",
-      "cap_unit" : "days",
-      "cap_period" : 1,
-      "data_cap" : 1,
-      "voice_cap" : 0,
-      "messaging_cap" : 0,
-      "commands_cap" : 3,
-      "capabilities" : {
-         "messaging" : [],
-         "commands" : [
-            "home",
-            "national-roaming"
-         ],
-         "data" : [
-            "home",
-            "national-roaming"
-         ],
-         "voice" : []
-      },
-      "date_created" : "2016-05-14T07:48:00Z",
-      "date_updated" : "2016-05-14T09:58:00Z",
-      "account_sid" : "AC8caa2afb9d5279926619c458dc65be78",
-      "url" : "https://preview.twilio.com/wireless/RatePlans/WPafb9d5279926616c64ed279926619c4",
-  }
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "unique_name": "us-industrial-sensors",
+      "url": "https://preview.twilio.com/wireless/RatePlans/WPafb9d5279926616c64ed279926619c4",
+      "sid": "WPafb9d5279926616c64ed279926619c4",
+      "date_created": "2016-05-01T06:02:29Z",
+      "roaming": ["national"],
+      "data": {
+        "cap": 10,
+        "metering": "pooled"
+      }
+    }
   ],
   "meta": {
     "page": 0,

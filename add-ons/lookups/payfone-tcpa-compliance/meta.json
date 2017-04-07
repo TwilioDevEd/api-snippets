@@ -1,0 +1,5 @@
+{
+  "description": "Use a helper library to make a Lookups API request using the Payfone TCPA Compliance add-on.",
+  "type": "server",
+  "title": "Lookups with Payfone TCPA Compliance Add-on"
+}

@@ -1,3 +1,3 @@
-$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{ReservationSid} \
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Workers/WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Reservations/WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
     -d "ReservationStatus=rejected" \
     -u '{account_sid}:{auth_token}'

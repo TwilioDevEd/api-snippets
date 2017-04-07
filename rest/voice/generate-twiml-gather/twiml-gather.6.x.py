@@ -1,6 +1,6 @@
 from flask import Flask
 # from __future__ import with_statement   # Only necessary for Python 2.5
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def voice():
 
-    resp = twiml.Response()
+    resp = VoiceResponse()
     # Greet the caller by name
     resp.say("Hello. It's me. ")
     # Play an mp3

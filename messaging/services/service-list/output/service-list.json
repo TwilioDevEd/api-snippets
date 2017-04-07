@@ -1,0 +1,33 @@
+{
+    "meta": {
+        "page": 0,
+        "page_size": 50,
+        "first_page_url": "https://messaging.twilio.com/v1/Services?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "next_page_url": null,
+        "key": "services",
+        "url": "https://messaging.twilio.com/v1/Services?PageSize=50&Page=0"
+    },
+    "services": [
+        {
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "friendly_name": "My Service!",
+            "sid": "MG2172dd2db502e20dd981ef0d67850e1a",
+            "date_created": "2017-03-14T20:12:31Z",
+            "date_updated": "2017-03-14T20:12:33Z",
+            "sticky_sender": true,
+            "mms_converter": true,
+            "inbound_request_url": "https://www.example.com/",
+            "inbound_method": "POST",
+            "fallback_url": null,
+            "fallback_method": "POST",
+            "status_callback": "http://requestb.in/1234abcd",
+            "links": {
+            "phone_numbers": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers",
+            "short_codes": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes",
+            "alpha_senders": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders"
+            },
+            "url": "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a"
+        }
+    ]
+}

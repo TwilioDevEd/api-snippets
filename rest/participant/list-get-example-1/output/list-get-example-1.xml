@@ -5,6 +5,7 @@
 			<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
 			<CallSid>CA386025c9bf5d6052a1d1ea42b4d16662</CallSid>
 			<Muted>false</Muted>
+			<Hold>false</Hold>
 			<EndConferenceOnExit>true</EndConferenceOnExit>
 			<StartConferenceOnEnter>true</StartConferenceOnEnter>
 			<DateCreated>Wed, 18 Aug 2010 20:20:10 +0000</DateCreated>

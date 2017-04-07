@@ -1,9 +1,9 @@
 {
-  "sid": "NOxxx",
-  "account_sid": "ACxxx",
-  "service_sid": "ISxxx",  
+  "sid": "NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  
   "date_created": "2015-08-26T00:07:12Z",
-  "identities": ["Bob"],
+  "identities": ["00000001"],
   "tags": [],
   "priority": "high",
   "ttl": 2419200,
@@ -12,15 +12,20 @@
   "sound": null,
   "action": null,
   "data": null,
-  "gcm":{
-    "notification":{
-      "tag":"MyTag"
+  "fcm": {
+    "notification": {
+      "title": "New alert",
+      "body": "Hello Bob!"
     }
   },
-  "apn":{
-    "aps":{
-      "title":"Short title for Watch."
+  "apn": {
+    "aps": {
+      "alert": {
+        "title": "New alert",
+        "body": "Hello Bob!"
+      }
     }
   },
-  "sms": null
+  "sms": null,
+  "fcm": null
 }

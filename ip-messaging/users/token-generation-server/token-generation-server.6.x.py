@@ -1,7 +1,8 @@
 import os
 from flask import Flask, jsonify, request
 from faker import Factory
-from twilio.jwt.access_token import AccessToken, IpMessagingGrant
+from twilio.jwt.access_token import AccessToken
+from twilio.jwt.access_token.grants import IpMessagingGrant
 
 app = Flask(__name__)
 fake = Factory.create()
@@ -28,7 +29,7 @@ def token():
     endpoint = "TwilioChatDemo:{0}:{1}".format(identity, device_id)
 
     # Create access token with credentials
-    token = AccessToken(account_sid, api_key, api_secret, identity)
+    token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
     # Create an IP Messaging grant and add to token
     ipm_grant = IpMessagingGrant(endpoint_id=endpoint, service_sid=service_sid)

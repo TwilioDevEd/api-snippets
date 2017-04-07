@@ -25,6 +25,38 @@
    Auth Token: your_auth_token
    ```
 
+1. **Snippet file names are important**. A snippet's file extension is the only way
+   to mark them for a specific language. This is important because the language will
+   be visible on the docs. Also, you must mark snippets with the twilio-client
+   version that is used in that particular snippet.
+
+   For example, a java snippet that uses `twilio-java` v7.x should be named as follows:
+
+   `any_snippet_name.7.x.java`
+
+   The same applies to the rest of languages and library versions, and this is
+   the list of currently supported languages and versions:
+
+   ```
+   any_snippet_name.6.x.java
+   any_snippet_name.7.x.java
+   any_snippet_name.2.x.js
+   any_snippet_name.3.x.js
+   any_snippet_name.4.x.rb
+   any_snippet_name.5.x.rb
+   any_snippet_name.4.x.cs
+   any_snippet_name.5.x.cs
+   any_snippet_name.4.x.php
+   any_snippet_name.5.x.php
+   any_snippet_name.5.x.py
+   any_snippet_name.6.x.py
+   any_snippet_name.json.curl
+   any_snippet_name.xml.curl
+   ```
+
+   Client version is important, as that is how the test harness knows which version of
+   the client it should use for testing.
+
 ## Continuous Integration
 
 This repository is configured to test that a snippet is valid. For compiled languages,
@@ -70,8 +102,8 @@ __Notes:__
 
 ### Local Snippet Testing
 
-The current status of the snippet tests allows to test snippets only in the `rest/`
-directory.
+The current status of the snippet tests allows to test snippets only in the `rest/`, `pricing/` and `security`
+directories.
 
 The next steps describe how to run the snippets test locally in a UNIX based operating system
 (examples will be provided for Debian based Linux distributions and OSX using [Homebrew](http://brew.sh/)).
@@ -174,12 +206,13 @@ dependencies you need to install the following gems:
 ```bash
 $ gem install json
 $ gem install colorize
+$ gem install parallel
 ```
 
 You can use the following command to install dependencies in your system:
 
 ```bash
-$ ruby tools/snippet-testing/model/dependency_model.rb
+$ ruby tools/snippet-testing/model/dependency.rb
 ```
 
 This will download all the necessary dependencies for the snippets to run.
@@ -224,8 +257,14 @@ the wrong user.
 
    Edit your `/etc/hosts` file. Add the following entries:
    ```
+   127.0.0.1 notifications.twilio.com
+   127.0.0.1 notify.twilio.com
    127.0.0.1 taskrouter.twilio.com
    127.0.0.1 api.twilio.com
+   127.0.0.1 lookups.twilio.com
+   127.0.0.1 pricing.twilio.com
+   127.0.0.1 monitor.twilio.com
+   127.0.0.1 ip-messaging.twilio.com
    ```
 
 1. Export Necessary Environment Variables.
@@ -245,3 +284,11 @@ the wrong user.
 
    __Note:__ Remember to mark the directories you want to be tested with a `test.yaml`
    file. For more information go [here](#continuous-integration).
+
+   You can also specify a directory to be tested (relative or absolute path). If a directory is
+   specified, then the default testing behavior for that directory and everything
+   it contains is `true`.
+
+   ```bash
+   $ ruby tools/snippet-testing/snippet_tester.rb -d rest/making-calls
+   ```

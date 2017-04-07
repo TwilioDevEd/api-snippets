@@ -1,0 +1,5 @@
+{
+  "title": "Send an outbound fax",
+  "type": "server",
+  "tags": ["fax"]
+}

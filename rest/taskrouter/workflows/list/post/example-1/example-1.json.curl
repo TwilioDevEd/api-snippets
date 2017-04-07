@@ -1,4 +1,4 @@
-$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/Workflows \
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Workflows \
     -d "FriendlyName=Sales, Marketing, Support Workflow" \
     -d "AssignmentCallbackUrl=http://example.com" \
     -d "FallbackAssignmentCallbackUrl=http://example2.com" \

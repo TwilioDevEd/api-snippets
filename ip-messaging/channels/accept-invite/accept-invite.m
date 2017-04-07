@@ -1,6 +1,6 @@
-- (void)ipMessagingClient:(TwilioIPMessagingClient *)client channelAdded:(TWMChannel *)channel {
-    if(channel.status == TWMChannelStatusInvited) {
-        [channel joinWithCompletion:^(TWMResult *result) {
+- (void)chatClient:(TwilioChatClient *)client channelAdded:(TCHChannel *)channel {
+    if(channel.status == TCHChannelStatusInvited) {
+        [channel joinWithCompletion:^(TCHResult *result) {
             if ([result isSuccessful]) {
                 NSLog(@"Successfully accepted invite.");
             } else {

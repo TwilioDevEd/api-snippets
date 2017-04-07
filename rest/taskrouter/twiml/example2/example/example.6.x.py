@@ -1,6 +1,6 @@
 # Download the Python helper library from twilio.com/docs/python/install
 from flask import Flask
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ app = Flask(__name__)
 def enqueue_call():
     # workflow_sid = 'WW0123456789abcdef0123456789abcdef'
 
-    resp = twiml.Response()
+    resp = VoiceResponse()
     # TODO waiting for https://github.com/twilio/twilio-python/issues/283
 
     # with resp.enqueue(None, workflowSid=workflow_sid) as e:

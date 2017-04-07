@@ -1,0 +1,5 @@
+{
+  "title": "Create Lumen routes to handle Twilio requests.",
+  "description": "Creates a route for /voice and /message to handle the respective webhooks.",
+  "type": "server"
+}

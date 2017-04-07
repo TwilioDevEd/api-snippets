@@ -1,0 +1,4 @@
+curl 'https://messaging.twilio.com/v1/Services' -X POST \
+    --data-urlencode 'FriendlyName=My First Service' \
+    --data-urlencode 'StatusCallback=http://requestb.in/1234abcd' \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

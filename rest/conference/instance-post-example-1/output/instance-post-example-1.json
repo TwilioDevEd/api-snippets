@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "date_updated": "Fri, 02 Dec 2016 23:18:12 +0000",
+  "region": "us1",
+  "friendly_name": "WarmTransfer",
+  "uri": "\/2010-04-01\/Accounts\/AC25e16e9a176a4a1786a7c83f58e30482\/Conferences\/CF1446ceacaefdc0eb24976146269a0a73.json",
+  "account_sid": "AC25e16e9a176a4a1786a7c83f58e30482",
+  "sid": "CF1446ceacaefdc0eb24976146269a0a73",
+  "date_created": "Fri, 02 Dec 2016 23:13:49 +0000",
+  "api_version": "2010-04-01",
+  "subresource_uris": {
+    "participants": "\/2010-04-01\/Accounts\/AC25e16e9a716a4a1786a7c83f58e30482\/Conferences\/CF1446ceacaefdc0eb24976146269a0a73\/Participants.json"
+  }
+}

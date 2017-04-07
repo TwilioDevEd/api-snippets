@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.notify.v1.service.Binding;
+import com.twilio.rest.notify.service.Binding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -13,8 +13,14 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Binding binding = Binding.creator(SERVICE_SID, "your_user@example.com:sms",
-        "your_user@example.com", Binding.BindingType.SMS, "+1651555667777").create();
+    Binding binding = Binding.creator
+    (
+      SERVICE_SID,
+      "your_user@example.com:sms",
+      "your_user@example.com",
+      Binding.BindingType.SMS,
+      "+1651555667777"
+    ).create();
 
     System.out.println(binding.getSid());
   }

@@ -10,6 +10,7 @@ client = Client(account, token)
 
 credential = client.notify \
                    .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
-                   .update(friendly_name="MyCredential")
+                   .update(friendly_name="MyCredential",
+                           sandbox=True)
 
 print(credential.friendly_name)

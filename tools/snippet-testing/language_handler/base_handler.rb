@@ -5,6 +5,12 @@ module LanguageHandler
   class BaseHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
     LANG_CNAME = 'cname'.freeze
+    PROCESS_TIMEOUT_EXIT_CODE = 120
+    UNHANDLED_LANGUAGE_MESSAGE = 'File name does not specify a Twilio library' \
+                                 ' version. Rename snippet as ' \
+                                 '\'snippet.rb\' => \'snippet.5.x.rb\'' \
+                                 ' to use v5 of ruby\'s Twilio ' \
+                                 'library for example'.freeze
 
     attr_reader :dependencies_directory, :dependencies
 
@@ -27,40 +33,50 @@ module LanguageHandler
 
     private
 
-    def execute(_file)
-      raise 'this method must be implemented in child classes'
+    def execute(file)
+      ErrorLogger.instance.add_error(
+        file,
+        UNHANDLED_LANGUAGE_MESSAGE,
+        ErrorLogger::WARNING
+      )
+      puts "warning [#{lang_cname}]".yellow
+    end
+
+    def execute_command
+      raise 'This method must me implemented in sub classes'
     end
 
     def execute_with_suppressed_output(command, file)
       rout, wout = IO.pipe
       rerr, werr = IO.pipe
       pid = Process.spawn(command, out: wout, err: werr)
-      exit_code = check_process_success(pid)
+      exit_code = check_process_success(pid, command)
       wout.close
       werr.close
-      success = exit_code == 0 && language_conditional(rout)
+      success = exit_code.zero? && language_conditional(rout)
 
       if success
         puts "success [#{lang_cname}]".green
       else
         puts "failure [#{lang_cname}]".red
         error_message = rerr.read
-        ErrorLogger.instance.add_error(file, error_message)
+        ErrorLogger.instance.add_error(file, error_message, ErrorLogger::ERROR)
       end
       rout.close
       rerr.close
       success
     end
 
-    def check_process_success(pid)
+    def check_process_success(pid, command)
       Timeout.timeout(20) do
         _id, status = Process.wait2(pid)
         return status.exitstatus
       end
     rescue Timeout::Error
       puts 'process not finished in time, killing it'
+      puts(command)
       Process.kill('KILL', pid)
-      return 1
+      return PROCESS_TIMEOUT_EXIT_CODE
     end
 
     def language_conditional(_rout)

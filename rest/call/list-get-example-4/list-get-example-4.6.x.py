@@ -9,8 +9,8 @@ client = Client(account_sid, auth_token)
 
 # A list of call objects with the properties described above
 calls = client.calls.list(status="in-progress",
-                          started_time_after=date(2009, 7, 4),
-                          started_time_before=date(2009, 7, 6))
+                          start_time_after=date(2009, 7, 4),
+                          start_time_before=date(2009, 7, 6))
 
 for call in calls:
     print(call.to)

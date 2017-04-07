@@ -8,7 +8,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 # A list of account objects with the properties described above
-accounts = client.accounts.list(friendly_name="MySubaccount")
+accounts = client.api.accounts.list(friendly_name="MySubaccount")
 
 for account in accounts:
     print(account.sid)

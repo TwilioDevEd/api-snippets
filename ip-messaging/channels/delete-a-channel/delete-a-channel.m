@@ -1,4 +1,4 @@
-[self.channel destroyWithCompletion:^(TWMResult *result) {
+[self.channel destroyWithCompletion:^(TCHResult *result) {
     if([result isSuccessful]) {
         NSLog(@"Channel destroyed.");
     } else {

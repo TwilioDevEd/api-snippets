@@ -15,7 +15,7 @@ $client = new Client($accountSid, $authToken);
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
     ->taskQueues($taskQueueSid)
-    ->statistics()
+    ->taskQueueStatistics()
     ->fetch(
         array('minutes' => 60)
     );

@@ -1,29 +1,21 @@
 HTTP/1.1 200 OK
 Content-Type: application/json
-
 {
-  "sid" : "WP467fb57a0aba9641a8209136d42545f8",
-  "alias" : "us-automotive",
-  "friendly_name" : "Data-only US automotive rate plan",
-  "data_metering" : "individual",
-  "cap_unit" : "months",
-  "cap_period" : 1,
-  "data_cap" : 999,
-  "voice_cap" : 0,
-  "messaging_cap" : 0,
-  "commands_cap" : 30,
-  "capabilities" : {
-    "messaging" : [],
-    "commands" : [
-      "home"
-    ],
-    "data" : [
-      "home"
-    ],
-    "voice" : []
-  },
-  "date_created" : "2016-05-13T09:48:50Z",
-  "date_updated" : "2016-05-13T09:48:50Z",
-  "account_sid" : "AC8caa2afb9d5279926619c458dc65be78",
-  "url" : "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+      "commands": {
+        "enabled": true
+      },
+      "renewal": "monthly",
+      "date_updated": "2016-09-01T08:21:09Z",
+      "friendly_name" : "Data-only US automotive rate plan",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "unique_name": "us-automotive",
+      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+      "sid": "WP467fb57a0aba9641a8209136d42545f8",
+      "date_created": "2016-05-20T06:06:07Z",
+      "roaming": [],
+      "data": {
+        "cap": 50,
+        "metering": "pooled"
+      }
+    }
 }

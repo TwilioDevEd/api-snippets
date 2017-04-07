@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.v1.Service;
+import com.twilio.rest.notify.Service;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -17,6 +17,8 @@ public class Example {
     Service service = Service
         .updater("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setFriendlyName("NewFlowHipSlackChatDock")
+        .setFacebookMessengerPageId("your_page_id")
+        .setMessagingServiceSid("your_twilio_messaging_service_sid")
         .update();
   }
 }

@@ -1,2 +1,2 @@
-$ curl https://taskrouter.twilio.com/v1/Workspaces/{WorkspaceSid}/TaskQueues \
+$ curl https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/TaskQueues \
     -u '{account_sid}:{auth_token}'

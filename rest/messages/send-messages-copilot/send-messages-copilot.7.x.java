@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Message message =
-        Message.creator(new PhoneNumber("+16518675309"), "MG9752274e9e519418a7406176694466fa",
+        Message.creator(new PhoneNumber("+441632960675"), "MG9752274e9e519418a7406176694466fa",
             "Phantom Menace was clearly the best of the prequel trilogy.").create();
 
     System.out.println(message.getSid());

@@ -1,0 +1,4 @@
+curl 'https://api.twilio.com/2010-04-01/Accounts/AC25e16e9a716a4a1786a7c83f58e30482/Conferences/CF203597f9bc241da2c1e9387946b89a63/Participants/CA386025c9bf5d6052a1d1ea42b4d16662.json' -X POST \
+--data-urlencode 'Hold=true' \
+--data-urlencode 'HoldUrl=www.myapp.com/hold' \
+-u AC25e16e9a716a4a1786a7c83f58e30482:[AuthToken]

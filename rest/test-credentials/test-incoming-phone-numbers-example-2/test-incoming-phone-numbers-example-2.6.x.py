@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-number = client.account.incoming_phone_numbers \
-                        .create(phone_number="+15005550000")
+number = client.api.account \
+               .incoming_phone_numbers.create(phone_number="+15005550000")
 
 print(number.sid)

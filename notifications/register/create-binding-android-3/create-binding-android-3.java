@@ -1,16 +1,13 @@
-public class BindingRegistration {
-    private String identity;
-    private String endpoint;
-    private String address;
-    private String bindingType;
+public class Binding {
+    public String identity;
+    public String endpoint;
+    public String Address;
+    public String BindingType;
 
-    public BindingRegistration(String identity, String endpoint, String address, String bindingType) {
+    public Binding(String identity, String endpoint, String address, String bindingType) {
         this.identity = identity;
         this.endpoint = endpoint;
-        this.address = address;
-        this.bindingType = bindingType;
+        Address = address;
+        BindingType = bindingType;
     }
-    
-    //getters and setters
-    //...
 }

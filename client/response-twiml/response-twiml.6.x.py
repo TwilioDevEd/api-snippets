@@ -1,5 +1,5 @@
 from flask import Flask, Response
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_voice_twiml():
     """Respond to incoming calls with a simple text message."""
 
-    resp = twiml.Response()
+    resp = VoiceResponse()
     resp.say("Thanks for calling!")
 
     return Response(str(resp), mimetype='text/xml')

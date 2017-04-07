@@ -17,22 +17,11 @@ import com.koushikdutta.ion.Ion;
                         if (e == null) {
                             // The identity can be used to receive calls
                             String identity = result.get("identity").getAsString();
-                            String accessToken = result.get("token").getAsString();
+                            VideoActivity.this.accessToken = result.get("token").getAsString();
                             Log.i(TAG, "Token found: " + accessToken);
-                            accessManager =
-                                    new AccessManager(ConversationActivity.this,
-                                                    accessToken,
-                                                    accessManagerListener());
-                            conversationsClient =
-                                    TwilioConversationsClient
-                                            .create(accessManager,
-                                                    conversationsClientListener());
-
-                            // Listen for incoming Invites
-                            conversationsClient.listen();
                         } else {
                             Log.i(TAG, "error fetching token from server");
-                            Toast.makeText(ConversationActivity.this,
+                            Toast.makeText(VideoActivity.this,
                                     R.string.error_retrieving_access_token, Toast.LENGTH_SHORT)
                                     .show();
                         }

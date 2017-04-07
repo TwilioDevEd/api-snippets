@@ -8,12 +8,17 @@
 	"recordings": [
 		{
 			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-			"api_version": "2008-08-01",
+			"api_version": "2010-04-01",
 			"call_sid": "CA8dfedb55c129dd4d6bd1f59af9d11080",
-			"date_created": "Fri, 17 Jul 2009 01:52:49 +0000",
-			"date_updated": "Fri, 17 Jul 2009 01:52:49 +0000",
-			"duration": "1",
+			"channels": 2,
+			"date_created": "Tue, 18 Oct 2016 21:55:38 +0000",
+			"date_updated": "Tue, 18 Oct 2016 21:56:34 +0000",
+			"duration": "53",
+			"price": "-0.00250",
+			"price_unit": "USD",
 			"sid": "RE557ce644e5ab84fa21cc21112e22c485",
+			"source": "DialVerb",
+			"status": "completed",
 			"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab84fa21cc21112e22c485.json"
 		},
 		...

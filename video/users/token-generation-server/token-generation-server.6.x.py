@@ -1,7 +1,8 @@
 import os
 from flask import Flask, jsonify
 from faker import Factory
-from twilio.jwt.access_token import AccessToken, ConversationsGrant
+from twilio.jwt.access_token import AccessToken
+from twilio.jwt.access_token.grants import VideoGrant
 
 app = Flask(__name__)
 fake = Factory.create()
@@ -25,8 +26,8 @@ def token():
     # Set the Identity of this token
     token.identity = fake.user_name()
 
-    # Grant access to Conversations
-    grant = ConversationsGrant()
+    # Grant access to Video
+    grant = VideoGrant()
     grant.configuration_profile_sid = os.environ['TWILIO_CONFIGURATION_SID']
     token.add_grant(grant)
 

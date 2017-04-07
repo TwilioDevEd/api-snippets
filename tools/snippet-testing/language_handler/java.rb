@@ -6,14 +6,14 @@ module LanguageHandler
     TEST_CLASS_NAME        = 'Example'.freeze
     TWILIO_LIBRARY_VERSION = '6'.freeze
 
-    def execute(file)
+    private
+
+    def execute_command(file)
       dir_name = File.dirname(file)
       Dir.chdir("#{dir_name}/#{base_output_path}") do
         execute_with_suppressed_output('gradle build', file)
       end
     end
-
-    private
 
     def text_with_specific_replacements(file_content)
       text_with_example_class_name(file_content)

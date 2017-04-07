@@ -1,5 +1,4 @@
 curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications' \
---data-urlencode 'Tag=rogue_one'  \
---data-urlencode 'Sms={"from":"+16516667788"}'  \
---data-urlencode 'Body=A new Rogue One trailer has been released!'  \
+--data-urlencode 'Identity=00000001'  \
+--data-urlencode 'Body=Knok-Knok! This is your first Notify SMS'  \
 -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

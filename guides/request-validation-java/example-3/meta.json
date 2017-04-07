@@ -1,0 +1,5 @@
+{
+  "title": "An improved request validation filter, useful for testing",
+  "description": "Use this version of the custom filter if you test your Servlets.",
+  "type": "server"
+}

@@ -1,27 +1,30 @@
-extension ViewController: TwilioIPMessagingClientDelegate {
-    func ipMessagingClient(client: TwilioIPMessagingClient!, channel: TWMChannel!,
-                           memberJoined member: TWMMember!) {
+extension ViewController: TwilioChatClientDelegate {
+    func chatClient(client: TwilioChatClient!, channel: TCHChannel!,
+                    memberJoined member: TCHMember!) {
         print("Member joined: \(member.userInfo.identity)")
     }
-
-    func ipMessagingClient(client: TwilioIPMessagingClient!, channel: TWMChannel!,
-                           memberChanged member: TWMMember!) {
+    
+    func chatClient(client: TwilioChatClient!, channel: TCHChannel!,
+                    memberChanged member: TCHMember!) {
         print("Member changed: \(member.userInfo.identity)")
     }
     
-    func ipMessagingClient(client: TwilioIPMessagingClient!, channel: TWMChannel!,
-                           memberLeft member: TWMMember!) {
+    func chatClient(client: TwilioChatClient!, channel: TCHChannel!,
+                    memberLeft member: TCHMember!) {
         print("Member left: \(member.userInfo.identity)")
     }
-
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           typingStartedOnChannel channel: TWMChannel!, member: TWMMember!) {
+    
+    func chatClient(client: TwilioChatClient!,
+                    typingStartedOnChannel channel: TCHChannel!,
+                                           member: TCHMember!) {
         print("Member started typing: \(member.userInfo.identity)")
     }
     
-    func ipMessagingClient(client: TwilioIPMessagingClient!,
-                           typingEndedOnChannel channel: TWMChannel!, member: TWMMember!) {
+    func chatClient(client: TwilioChatClient!,
+                    typingEndedOnChannel channel: TCHChannel!,
+                                         member: TCHMember!) {
         print("Member ended typing: \(member.userInfo.identity)")
     }
+    
 
 }

@@ -1,4 +1,6 @@
-NSArray<TWMMessage *> *allMessages = [[self.channel messages] allObjects];
-for (TWMMessage *message in allMessages) {
+[self.channel.messages getLastMessagesWithCount:100 
+  completion:^(TCHResult *result, NSArray<TCHMessage *> *messages) {
+  for (TCHMessage *message in messages) {
     NSLog(@"Message body: %@", message.body);
-}
+  }
+}];
