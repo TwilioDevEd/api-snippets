@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $fax = $client->fax->v1
-    ->faxes("FXc37d4ed12343484f901bde9a758408bc")
+    ->faxes("FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     ->update(array("status" => "canceled"));
 
 echo $fax->status;

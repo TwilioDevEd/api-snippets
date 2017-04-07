@@ -12,7 +12,7 @@ public class Example {
     public static void main(String[] args) throws URISyntaxException {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
       
-        Fax fax = Fax.updater("FXc37d4ed12343484f901bde9a758408bc")
+        Fax fax = Fax.updater("FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                .setStatus(Fax.UpdateStatus.CANCELED)
                .update();
 

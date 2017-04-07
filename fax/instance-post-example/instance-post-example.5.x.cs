@@ -12,7 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var fax = FaxResource.Update("FXc37d4ed12343484f901bde9a758408bc",
+        var fax = FaxResource.Update("FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
             FaxResource.UpdateStatusEnum.Canceled);
 
         Console.WriteLine(fax.Status);
