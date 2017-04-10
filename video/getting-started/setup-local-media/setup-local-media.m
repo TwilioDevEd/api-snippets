@@ -11,9 +11,6 @@ TVICameraCapturer *camera = = [[TVICameraCapturer alloc] init];
 // Add a video track
 TVILocalVideoTrack *localVideoTrack = [localMedia addVideoTrack:enable capturer:camera];
 
-// Connect and share your local media
-TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
-
 // Remove audio track
 [localMedia removeAudioTrack:localAudioTrack];
 
