@@ -6,7 +6,7 @@ var authToken = 'your_auth_token';
 var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
-var service = client.notifications.services('ISxxx');
+var service = client.notify.services('ISxxx');
 
 // Send a notification to all users who have subscribed for Rogue One updates
 service.notifications.create({
