@@ -36,7 +36,7 @@ Content-Type: application/json
       "unique_name" : "BobJohnsonSmartMeter",
       "url" : "https://preview.twilio.com/wireless/Sims/DE99421b66197ec022384d2cb9431a8667",
       "commands_callback_method" : "POST",
-      "status" : "inactive",
+      "status" : "new",
       "friendly_name" : "Bob's SmartMeter",
       "sid" : "DE99421b66197ec022384d2cb9431a8667",
       "account_sid" : "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
