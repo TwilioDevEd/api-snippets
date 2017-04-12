@@ -2,9 +2,6 @@
 capture video from the front or rear-facing device camera  */
 var camera = TVICameraCapturer()
 
-// TVIVideoView (local or remote) can be added as renderer on TVIVideoTrack
-let previewView = TVIVideoView.init(frame: rect)
-
 /* LocalMedia represents our local camera and microphone (media) configuration
 that can be sent to other Participants in Rooms, or previewed locally */
 var localMedia = TVILocalMedia()
@@ -14,8 +11,11 @@ var localVideoTrack = localMedia?.addVideoTrack(true, capturer: camera!)
 if (localVideoTrack == nil) {
     logMessage(messageText: "Failed to add video track")
 } else {
-    self.view.addSubview(previewView)
-
+    // TVIVideoView is a TVIVideoRenderer and can be added to any TVIVideoTrack.
+    let previewView = TVIVideoView.init(frame: rect)
+    
     // Attach view to video track for local preview
     localVideoTrack!.addRenderer(previewView)
+    
+    self.view.addSubview(previewView)
 }
