@@ -15,9 +15,9 @@ Track by rendering it on screen: */
 func participant(_ participant: TVIParticipant, addedVideoTrack videoTrack: TVIVideoTrack) {
 	print("Participant \(participant.identity) added video track")
     
-	self.remoteMediaView = TVIVideoView.init(frame: self.view.bounds, delegate:self)
+	self.remoteView = TVIVideoView.init(frame: self.view.bounds, delegate:self)
     
-	videoTrack.addRenderer(self.remoteMediaView)
+	videoTrack.addRenderer(self.remoteView)
 }
 
 
