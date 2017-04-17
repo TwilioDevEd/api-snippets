@@ -6,7 +6,6 @@ api_key = 'SKxxxxxxxxxxxx'
 api_secret = 'xxxxxxxxxxxxxx'
 
 # Required for Video
-configuration_profile_sid = 'VSxxxxxxxxxxxx'
 identity = 'user'
 
 # Create an Access Token
@@ -19,7 +18,7 @@ token = Twilio::JWT::AccessToken.new(
 
 # Create Video grant for our token
 grant = Twilio::JWT::AccessToken::VideoGrant.new
-grant.configuration_profile_sid = configuration_profile_sid
+grant.room = 'cool room'
 token.add_grant(grant)
 
 # Generate the token

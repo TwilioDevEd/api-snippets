@@ -6,13 +6,11 @@ const twilioAccountSid = 'ACxxxxxxxxxx';
 const twilioApiKey = 'SKxxxxxxxxxx';
 const twilioApiSecret = 'xxxxxxxxxxxx';
 
-// Used specifically for creating Video tokens
-const configurationProfileSid = 'VSxxxxxxxxxxxxx';
 const identity = 'user';
 
-// Create a "grant" which enables a client to use Video as a given user
+// Create Video Grant
 const videoGrant = new VideoGrant({
-    configurationProfileSid: configurationProfileSid
+    room: 'cool room'
 });
 
 // Create an access token which we will sign and return to the client,
