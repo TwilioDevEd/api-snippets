@@ -1,0 +1,4 @@
+curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
+    -d 'Identity=00000001' \
+    -d 'Apn={"aps" : { "alert": {"title":"Bob alert","body" : "Bob, you just received a badge"}, "badge" : 1 }}' \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
