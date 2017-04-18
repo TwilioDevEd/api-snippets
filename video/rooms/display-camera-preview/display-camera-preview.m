@@ -13,5 +13,7 @@ if (!self.localVideoTrack) {
     // Add renderer to video track for local preview
     [self.localVideoTrack addRenderer:previewView];
     
+    self.previewView.mirror = (self.camera.source == TVICameraCaptureSourceFrontCamera);
+    
     [self.view addSubview:previewView];
 }

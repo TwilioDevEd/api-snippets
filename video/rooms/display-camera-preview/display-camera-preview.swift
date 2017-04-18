@@ -17,5 +17,7 @@ if (localVideoTrack == nil) {
     // Attach view to video track for local preview
     localVideoTrack!.addRenderer(previewView)
     
+    previewView.shouldMirror = (camera!.source == .frontCamera)
+    
     self.view.addSubview(previewView)
 }
