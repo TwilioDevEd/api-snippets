@@ -8,7 +8,7 @@ Content-Type: application/json
   "unique_name" : "AliceSmithSmartMeter",
   "url" : "https://preview.twilio.com/wireless/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c",
   "commands_callback_method" : "POST",
-  "status" : "inactive",
+  "status" : "new",
   "friendly_name" : "Alice's SmartMeter",
   "sid" : "DEd3f4ec6c85ded1a5f64f10afc067895c",
   "account_sid" : "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",

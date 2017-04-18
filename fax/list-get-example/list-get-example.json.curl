@@ -1,0 +1,3 @@
+curl 'https://fax.twilio.com/v1/Faxes' \
+    -X GET \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

@@ -1,1 +1,1 @@
-Authy *sharedAuthy = [Authy sharedAuthy];
+TwilioAuth *sharedTwilioAuth = [TwilioAuth sharedInstance];

@@ -5,6 +5,6 @@ long until = ... // upper limit
 timeInterval.sinceTimestamp = since;
 timeInterval.untilTimestamp = until;
 
-[sharedAuthy getApprovalRequestsWithStatuses:statuses timeInterval:timeInterval completion:^(AUTApprovalRequests *approvalRequests, NSError *error) {
+[sharedTwilioAuth getApprovalRequestsWithStatuses:statuses timeInterval:timeInterval completion:^(AUTApprovalRequests *approvalRequests, NSError *error) {
 	// ...
 }];

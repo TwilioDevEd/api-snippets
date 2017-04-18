@@ -1,1 +1,1 @@
-let isDeviceRegistered = sharedAuthy.isDeviceRegistered()
+let isDeviceRegistered = sharedTwilioAuth.isDeviceRegistered()

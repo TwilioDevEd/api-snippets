@@ -14,15 +14,18 @@ Track by rendering it on screen: */
 
 func participant(_ participant: TVIParticipant, addedVideoTrack videoTrack: TVIVideoTrack) {
 	print("Participant \(participant.identity) added video track")
-	videoTrack.attach(self.remoteMediaView)
-	videoTrack.delegate = self
+    
+	self.remoteView = TVIVideoView.init(frame: self.view.bounds, delegate:self)
+    
+	videoTrack.addRenderer(self.remoteView)
 }
 
 
-// Lastly, we can subscribe to important events on the Video Track
+// Lastly, we can subscribe to important events on the Video View
 
-// MARK: TVIVideoTrackDelegate
+// MARK: TVIVideoViewDelegate
 
-func videoTrack(_ track: TVIVideoTrack, dimensionsDidChange dimensions: CMVideoDimensions) {
-	print("The dimensions of the video track changed to: \(dimensions.width)x\(dimensions.height)")
+func videoView(_ view: TVIVideoView, videoDimensionsDidChange dimensions: CMVideoDimensions) {
+    print("The dimensions of the video track changed to: \(dimensions.width)x\(dimensions.height)")
+    self.view.setNeedsLayout()
 }

@@ -1,1 +1,1 @@
-let sharedAuthy = Authy.sharedAuthy()
+let sharedTwilioAuth = TwilioAuth.sharedInstance()

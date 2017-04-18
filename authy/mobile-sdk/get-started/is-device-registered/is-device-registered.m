@@ -1,1 +1,1 @@
-BOOL isDeviceRegistered = [sharedAuthy isDeviceRegistered];
+BOOL isDeviceRegistered = [sharedTwilioAuth isDeviceRegistered];
