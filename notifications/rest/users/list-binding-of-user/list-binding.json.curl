@@ -1,0 +1,5 @@
+
+curl -X GET -G 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/User/00000001/Bindings' \
+    -d "StartDate=2017-01-17" \
+    -d "Tag=active_in_30d" \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
