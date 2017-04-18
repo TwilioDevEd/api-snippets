@@ -19,7 +19,7 @@ $client = new Client($accountSid, $authToken);
 $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
-        'tag' => 'new_user',
+        'segment' => 'new_user',
         'body' => 'Hello New Users'
     ]);
 

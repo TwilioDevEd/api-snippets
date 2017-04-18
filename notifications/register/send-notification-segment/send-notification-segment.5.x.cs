@@ -19,7 +19,7 @@ public class Example
         var notification = NotificationResource.Create(
             serviceSid,
             body: "Hello New Users",
-            tag: new List<string> { "new_user" });
+            segment: new List<string> { "new_user" });
 
         Console.WriteLine(notification.Sid);
     }

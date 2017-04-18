@@ -18,7 +18,8 @@ public class Example {
     Notification notification = Notification
         .creator(SERVICE_SID)
         .setBody("Hello New Users")
-        .setTag("new_user")
+        .setSegment("new_user")
+        .setTag("preferred_device")
         .create();
 
     System.out.println(notification.getSid());

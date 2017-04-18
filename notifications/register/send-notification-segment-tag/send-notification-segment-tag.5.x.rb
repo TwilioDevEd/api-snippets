@@ -11,7 +11,8 @@ service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 notification = service.notifications.create(
   body: 'Hello New Users',
-  tag: 'new_user'
+  segment: 'new_user',
+  tag: 'preferred_device'
 )
 
 puts notification.sid

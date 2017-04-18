@@ -6,7 +6,7 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const notificationOpts = {
-  Tags: 'new_user',
+  Segments: 'new_user',
   Body: 'Hello New Users',
 };
 
