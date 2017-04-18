@@ -1,0 +1,49 @@
+{
+  "bindings": [
+        {
+      "endpoint": "eyJjdHkiOiJ0d2lsaW8tZnBhO3Y9MSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJncmFudHMiOnsiY2hhdCI6eyJzZXJ2aWNlX3NpZCI6IklTNmIwZmE2MDgzOWM1MTFlNWExNTFmZWZmODE5Y2RjOWYiLCJlbmRwb2ludF9pZCI6InR3aTEtMTdjNTkyM2Y5NTBiNGJhYjllZjAwZTJlZjdkYTBkYTIifSwiaWRlbnRpdHkiOiJOb3RpZmljYXRpb25MaWJyYXJ5VW5pdFRlc3RlcjEifSwic3ViIjoiQUM3OGU4ZTY3ZmMwMjQ2NTIxNDkwZmI5OTA3ZmQwYzE2NSIsImlzcyI6IlNLMmQxYWRmOGIxYzY0YTYzM2U1ZjE4NjU5ZjdjZDE5MTEiLCJleHAiOjE0NzgyNTI4NTl9.1i256CwtacP859Xh-6cEZVio4oohxL-od9krzsa4DnY",
+      "notification_protocol_version": "default",
+      "tags": [
+        "active_in_30d",
+        "preferred device"
+      ],
+      "date_updated": "2017-01-17T14:26:42Z",
+      "address": "+441234123456",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings/BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "binding_type": "sms",
+      "sid": "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "date_created": "2017-01-17T14:26:42Z",
+      "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "credential_sid": null,
+      "identity": "0000001"
+    },
+        {
+      "endpoint": "jiewKjdHkiOiJ0d2lsaW8tZnBhO3Y9MSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJncmFudHMiOnsiY2hhdCI6eyJzZXJ2aWNlX3NpZCI6IklTNmIwZmE2MDgzOWM1MTFlNWExNTFmZWZmODE5Y2RjOWYiLCJlbmRwb2ludF9pZCI6InR3aTEtMTdjNTkyM2Y5NTBiNGJhYjllZjAwZTJlZjdkYTBkYTIifSwiaWRlbnRpdHkiOiJOb3RpZmljYXRpb25MaWJyYXJ5VW5pdFRlc3RlcjEifSwic3ViIjoiQUM3OGU4ZTY3ZmMwMjQ2NTIxNDkwZmI5OTA3ZmQwYzE2NSIsImlzcyI123NLMmQxYWRmOGIxYzY0YTYzM2U1ZjE4NjU5ZjdjZDE5MTEiLCJleHAiOjE0NzgyNTI4NTl9.1i256CwtacP859Xh-6cEZVio4oohxL-od9krz1231S1asd1",
+      "notification_protocol_version": "3",
+      "tags": [
+        "active_in_30d"
+      ],
+      "date_updated": "2017-01-16T14:26:42Z",
+      "address": "483161f7afe6f012aa5f172d3ca93f5c245e3daf34d3a911a41f41f6af3639f6",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings/BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "binding_type": "apn",
+      "sid": "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "date_created": "2017-01-16T14:26:42Z",
+      "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "credential_sid": null,
+      "identity": "0000001"
+    },
+
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "bindings"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "segments":[
+  {
+    "sid":"SGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created":"2016-11-10T14:27:49Z",
+    "date_update":"2016-11-10T14:27:49Z",
+    "unique_name":"premium",
+    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Segments/premium",
+  },
+  {
+    "sid":"SGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXY",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created":"2016-11-10T14:27:49Z",
+    "date_update":"2016-11-10T14:27:49Z",
+    "unique_name":"new user",
+    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Segments/new%20user",
+  }],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Segments?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Segments?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "segments"
+  }
+}
