@@ -15,9 +15,9 @@ $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 // Initialize the client
 $client = new Client($accountSid, $authToken);
 
-// Create a user
-$user = $client
+// List al users
+$users = $client
     ->notify->services($serviceSid)
-    ->users->get('User001');
+    ->users->list();
 
-echo $user->sid;
+echo $users[0]->sid;

@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .segments.list()
-  .then(segments => console.log(segments[0].sid))
+  .users.list()
+  .then(users => console.log(users[0].sid))
   .catch(error => console.log(error));

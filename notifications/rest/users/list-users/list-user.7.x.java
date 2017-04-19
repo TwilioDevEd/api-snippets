@@ -15,13 +15,10 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    NotifyUser user = NotifyUser
+    List<NotifyUser> users = NotifyUser
         .creator(SERVICE_SID)
-        .create(
-            "User001",
-            new ArrayList<String>("premium", "fitness-lifestyle")
-        );
+        .list();
 
-    System.out.println(user.getSid());
+    System.out.println(users[0].getSid());
   }
 }

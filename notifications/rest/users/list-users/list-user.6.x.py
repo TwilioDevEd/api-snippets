@@ -8,7 +8,7 @@ AUTH_TOKEN = 'your_auth_token'
 
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
-user = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .users.create(identity='User001', segments='preferred_device')
+users = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .users.list()
 
-print(user.sid)
+print(users[0].sid)
