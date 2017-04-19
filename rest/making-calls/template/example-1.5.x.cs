@@ -1,0 +1,57 @@
+// Download the twilio-csharp library from twilio.com/docs/csharp/install
+using System;
+using Twilio;
+using Twilio.Resources.Api.V2010.Account;
+using Twilio.Types;
+{{#callMethod}}using Twilio.Http;{{/callMethod}}
+{{#callStatusCallbackMethod}}using Twilio.Http;{{/callStatusCallbackMethod}}
+{{#callFallbackMethod}}using Twilio.Http;{{/callFallbackMethod}}
+{{#callRecordingStatusCallbackMethod}}using Twilio.Http;{{/callRecordingStatusCallbackMethod}}
+
+class Example
+{
+  static void Main(string[] args)
+  {
+    string AccountSid = "{{accountSid}}";
+    string AuthToken = "{{authToken}}";
+
+    TwilioClient.Init(AccountSid, AuthToken);
+
+    {{#callUrl}}
+      {{#toVoiceClient}}
+    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("{{fromPhoneNumber}}"), new Uri("{{callUrl}}"));
+      {{/toVoiceClient}}
+      {{#toPhoneNumber}}
+    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("{{fromPhoneNumber}}"), new Uri("{{callUrl}}"));
+      {{/toPhoneNumber}}
+    {{/callUrl}}
+    {{#applicationSid}}
+      {{#toVoiceClient}}
+    var callCreator = CallResource.Create(new Client("{{toVoiceClient}}"), new PhoneNumber("{{fromPhoneNumber}}"), "{{applicationSid}}");
+      {{/toVoiceClient}}
+      {{#toPhoneNumber}}
+    var callCreator = CallResource.Create(new PhoneNumber("{{toPhoneNumber}}"), new PhoneNumber("{{fromPhoneNumber}}"), "{{applicationSid}}");
+      {{/toPhoneNumber}}
+    {{/applicationSid}}
+
+    {{#sendDigitsVoice}}callCreator.setSendDigits("{{sendDigitsVoice}}");{{/sendDigitsVoice}}
+    {{#callMethod}}callCreator.setMethod(HttpMethod.{{callMethod}});{{/callMethod}}
+    {{#callStatusCallback}}callCreator.setStatusCallback(new Uri("{{callStatusCallback}}"));{{/callStatusCallback}}
+    {{#callStatusCallbackMethod}}callCreator.setStatusCallbackMethod(HttpMethod.{{callStatusCallbackMethod}});{{/callStatusCallbackMethod}}
+    {{#callStatusCallbackEvent}}callCreator.setStatusCallbackEvent = new string[] { {{#callStatusCallbackEvents}}{{.}},{{/callStatusCallbackEvents}} };{{/callStatusCallbackEvent}}
+    {{#callFallbackUrl}}callCreator.setFallbackUrl(new Uri("{{callFallbackUrl}}"));{{/callFallbackUrl}}
+    {{#callFallbackMethod}}callCreator.setFallbackMethod(HttpMethod.{{callFallbackMethod}});{{/callFallbackMethod}}
+    {{#callIfMachine}}callCreator.setIfMachine("{{callIfMachine}}");{{/callIfMachine}}
+    {{#callTimeout}}callCreator.setTimeout({{callTimeout}});{{/callTimeout}}
+    {{#callRecord}}callCreator.setRecord({{callRecord}});{{/callRecord}}
+    {{#callRecordingChannels}}callCreator.setRecordingChannels("{{callRecordingChannels}}");{{/callRecordingChannels}}
+    {{#callRecordingStatusCallback}}callCreator.setRecordingStatusCallback("{{callRecordingStatusCallback}}");{{/callRecordingStatusCallback}}
+    {{#callRecordingStatusCallbackMethod}}callCreator.setRecordingStatusCallbackMethod(HttpMethod.{{callRecordingStatusCallbackMethod}});{{/callRecordingStatusCallbackMethod}}
+    {{#callSipAuthUsername}}callCreator.setSipAuthUsername("{{callSipAuthUsername}}");{{/callSipAuthUsername}}
+    {{#callSipAuthPassword}}callCreator.setSipAuthPassword("{{callSipAuthPassword}}");{{/callSipAuthPassword}}
+
+    var call = callCreator.Execute();
+
+    Console.WriteLine(call.sid);
+  }
+}

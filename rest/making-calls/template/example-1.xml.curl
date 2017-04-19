@@ -1,0 +1,23 @@
+$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/{{accountSid}}/Calls \
+    {{#callUrl}}-d "Url={{callUrl}}" \{{/callUrl}}
+    {{#toPhoneNumber}}--data-urlencode "To={{toPhoneNumber}}" \{{/toPhoneNumber}}
+    {{#toVoiceClient}}--data-urlencode "To={{toVoiceClient}}" \{{/toVoiceClient}}
+    {{#fromPhoneNumber}}--data-urlencode "From={{fromPhoneNumber}}" \{{/fromPhoneNumber}}
+    {{#sendDigitsVoice}}--data-urlencode "SendDigits={{sendDigitsVoice}}" \{{/sendDigitsVoice}}
+    {{#callMethod}}-d "Method={{callMethod}}" \{{/callMethod}}
+    {{#callStatusCallback}}-d "StatusCallback={{callStatusCallback}}" \{{/callStatusCallback}}
+    {{#callStatusCallbackMethod}}=d "StatusCallbackMethod={{callStatusCallbackMethod}}" \{{/callStatusCallbackMethod}}
+    {{#callStatusCallbackEvents}}
+    -d "StatusCallbackEvent={{.}}" \
+    {{/callStatusCallbackEvents}}
+    {{#callFallbackUrl}}-d "FallbackUrl={{callFallbackUrl}}" \{{/callFallbackUrl}}
+    {{#callFallbackMethod}}-d "FallbackMethod={{callFallbackMethod}}" \{{/callFallbackMethod}}
+    {{#callIfMachine}}-d "IfMachine={{callIfMachine}}" \{{/callIfMachine}}
+    {{#callTimeout}}-d "Timeout={{callTimeout}}" \{{/callTimeout}}
+    {{#callRecord}}-d "Record={{callRecord}}" \{{/callRecord}}
+    {{#callRecordingChannels}}-d "RecordingChannels={{callRecordingChannels}}" \{{/callRecordingChannels}}
+    {{#callRecordingStatusCallback}}-d "RecordingStatusCallback={{callRecordingStatusCallback}}" \{{/callRecordingStatusCallback}}
+    {{#callRecordingStatusCallbackMethod}}-d "RecordingStatusCallbackMethod={{callRecordingStatusCallbackMethod}}" \{{/callRecordingStatusCallbackMethod}}
+    {{#callSipAuthUsername}}-d "SipAuthUsername={{callSipAuthUsername}}" \{{/callSipAuthUsername}}
+    {{#callSipAuthPassword}}-d "SipAuthPassword={{callSipAuthPassword}}" \{{/callSipAuthPassword}}
+    -u '{{accountSid}}:{{authToken}}'
