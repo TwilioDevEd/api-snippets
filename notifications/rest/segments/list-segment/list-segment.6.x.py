@@ -9,6 +9,6 @@
 
  client = Client(ACCOUNT_SID, AUTH_TOKEN)
  segments = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-     .segments.list()
+     .segments.read()
 
  print(segments[0].sid)

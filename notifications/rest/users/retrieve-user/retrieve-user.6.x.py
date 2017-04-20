@@ -9,6 +9,6 @@ AUTH_TOKEN = 'your_auth_token'
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 user = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .users.get('User001')
+    .users.read('User001')
 
 print(user.sid)

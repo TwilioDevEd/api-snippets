@@ -12,4 +12,5 @@ client.notify
     segments: ['premium', 'fitness-lifestyle']
   })
   .then(user => console.log(user.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done();

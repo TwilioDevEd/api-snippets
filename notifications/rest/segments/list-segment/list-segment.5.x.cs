@@ -16,7 +16,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var segments = SegmentResource.List();
+        var segments = SegmentResource.Read();
 
         Console.WriteLine(segments[0].getSid());
     }
