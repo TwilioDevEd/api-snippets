@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     NotifyUser
-        .creator(SERVICE_SID)
+        .deleter(SERVICE_SID)
         .delete("User001");
   }
 }

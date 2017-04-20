@@ -17,7 +17,10 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         SegmentMembership segmentMembership = SegmentMembership.Create(
-            segment: "premium");
+            serviceSid,
+            segment: "premium",
+            identity: "User0001"
+        );
 
         Console.WriteLine(segmentMembership.Sid);
     }

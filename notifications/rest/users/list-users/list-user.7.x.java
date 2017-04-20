@@ -17,7 +17,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ArrayList<NotifyUser> users = NotifyUser
-        .creator(SERVICE_SID)
+        .reader(SERVICE_SID)
         .read();
 
     System.out.println(users[0].getSid());
