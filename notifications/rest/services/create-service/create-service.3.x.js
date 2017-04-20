@@ -3,9 +3,11 @@
 // https://www.twilio.com/docs/libraries/node
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'your_auth_token';
+var apnCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var fcmCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 var Twilio = require('twilio');
 
-var client = new Twilio(accountSid, authToken);
+var client = new Twilio(accountSid, apnCredentialSid, fcmCredentialSid, authToken);
 
 client.notify.services
   .create({
