@@ -10,7 +10,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 user = client
           .notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
           .users.create(
-              identity: 'User001',
+              identity: 'User0001',
               segments: ['premium', 'fitness-lifestyle']
           )
 

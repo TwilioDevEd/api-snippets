@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .users.create({
-    identity: 'User001',
+    identity: 'User0001',
     segments: ['premium', 'fitness-lifestyle']
   })
   .then(user => console.log(user.sid))

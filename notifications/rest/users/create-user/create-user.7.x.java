@@ -18,7 +18,7 @@ public class Example {
 
     NotifyUser user = NotifyUser
         .creator(SERVICE_SID)
-        .setIdentity("User001")
+        .setIdentity("User0001")
         .setSegments(new ArrayList<String>("premium", "fitness-lifestyle"))
         .create();
 

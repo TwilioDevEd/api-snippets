@@ -19,7 +19,7 @@ $client = new Client($accountSid, $authToken);
 $user = $client
     ->notify->services($serviceSid)
     ->users->create([
-        'identity' => 'User001',
+        'identity' => 'User0001',
         'segments' => ['premium', 'fitness-lifestyle']
     ]);
 
