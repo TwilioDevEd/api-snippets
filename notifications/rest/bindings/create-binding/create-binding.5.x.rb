@@ -11,7 +11,7 @@ service = client.notify.services('ISxxx')
 binding = service.bindings.create(
   endpoint: 'endpoint_id',
   identity: '00000001',
-  binding_type: 'gcm',
+  binding_type: 'apn',
   address: 'device_token',
   tag: 'new user'
 )

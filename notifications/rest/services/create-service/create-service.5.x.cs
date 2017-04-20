@@ -9,9 +9,11 @@ public class Example
     {
         // Find your Account SID and Auth Token at twilio.com/console
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string apnCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string fcmCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
 
-        TwilioClient.Init(accountSid, authToken);
+        TwilioClient.Init(accountSid, apnCredentialSid, fcmCredentialSid, authToken);
 
         var service = ServiceResource.Create("My awesome service");
 

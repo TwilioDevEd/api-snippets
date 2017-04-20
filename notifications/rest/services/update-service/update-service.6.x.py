@@ -9,7 +9,7 @@ token = "your_auth_token"
 client = Client(account, token)
 
 service = client.notify.services("ISxxx").update(
-    friendly_name="NewFlowHipSlackChatDock",
+    friendly_name="Another Awesome Service",
     facebook_messenger_page_id="your_page_id",
     messaging_service_sid="your_twilio_messaging_service_sid"
 )

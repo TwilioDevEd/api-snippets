@@ -9,10 +9,10 @@ var client = new Twilio(accountSid, authToken);
 var service = client.notify.services('ISxxx');
 
 service.bindings.create({
-    endpoint: 'xxx',
-    identity: "00000001",
-    bindingType: 'gcm',
-    address: 'xxx',
+    endpoint: 'endpoint_id',
+    identity: '00000001',
+    bindingType: 'apn',
+    address: 'device_token',
     tag: ['premium', 'new user']
   }).then(function(binding) {
     console.log(binding);

@@ -10,7 +10,7 @@ token = "your_auth_token"
 client = Client(account, token)
 
 bindings = client.notify.services("ISxxx").bindings.list(
-    tag="premium",
+    tag="new user",
     start_date=datetime.strptime("2015-08-25", "%Y-%m-%d")
 )
 

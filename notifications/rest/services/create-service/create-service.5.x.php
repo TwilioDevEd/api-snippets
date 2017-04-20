@@ -8,12 +8,14 @@ use Twilio\Rest\Client;
 
 // Your Account SID and Auth Token from https://www.twilio.com/console
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$apnCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$fcmCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($accountSid, $authToken);
+$client = new Client($accountSid, $apnCredentialSid, $fcmCredentialSid, $authToken);
 
 // Create a service
 $service = $client

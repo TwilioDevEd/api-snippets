@@ -10,10 +10,12 @@ public class Example {
   public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
   public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  public static final String APN_CREDENTIAL_SID = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  public static final String FCM_CREDENTIAL_SID = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
   public static void main(String[] args) {
     // Initialize the client
-    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+    Twilio.init(ACCOUNT_SID, APN_CREDENTIAL_SID, FCM_CREDENTIAL_SID, AUTH_TOKEN);
 
     // Create the service
     Service service = Service.creator().setFriendlyName("My Awesome Service").create();

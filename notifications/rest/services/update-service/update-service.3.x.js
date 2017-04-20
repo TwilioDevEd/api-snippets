@@ -9,7 +9,7 @@ var client = new Twilio(accountSid, authToken);
 
 client.notify.services('ISxxx')
   .update({
-    friendlyName: 'NewFlowHipSlackChatDock',
+    friendlyName: 'Another Awesome Service',
     FacebookMessengerPageId: 'your_page_id',
     MessagingServiceSid: 'your_twilio_messaging_service_sid'
   }).then(function(service) {

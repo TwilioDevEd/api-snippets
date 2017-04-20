@@ -11,9 +11,9 @@ client = Client(account, token)
 binding = client.notify.services("ISxxx").bindings.create(
     endpoint="endpoint_id",
     identity="00000001",
-    binding_type="gcm",
+    binding_type="apn",
     address="device_token",
-    tag="premium"
+    tag="new user"
 )
 
 print(binding.sid)
