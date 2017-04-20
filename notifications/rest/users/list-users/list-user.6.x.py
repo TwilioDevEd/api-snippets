@@ -9,6 +9,7 @@ AUTH_TOKEN = 'your_auth_token'
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 users = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .users.read()
+              .users.stream(segment='premium')
 
-print(users[0].sid)
+for user in users:
+    print(users.sid)

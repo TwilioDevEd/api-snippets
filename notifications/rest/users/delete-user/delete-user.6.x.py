@@ -9,4 +9,4 @@ AUTH_TOKEN = 'your_auth_token'
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .users.delete('User001')
+      .users('User0001').delete()
