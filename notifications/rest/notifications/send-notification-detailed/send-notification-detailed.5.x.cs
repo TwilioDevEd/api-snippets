@@ -20,8 +20,12 @@ public class Example
             title: "Generic loooooooong title for all Bindings",
             body: "This is the body for all Bindings",
             identity: new List<string> { "00000001" },
-            gcm: "{\"notification\":{\"tag\":\"MyTag\"}}",
-            apn: "{\"aps\":{\"title\":\"Short title for Watch.\"}}");
+            fcm: "{\"notification\":{\"title\":\"New alert\"," +
+                  "\"body"\" : \"Hello Bob!\"}}",
+            apn: "{\"aps\" : " +
+                   "{ \"alert\": " +
+                       "{\"title\":\"New alert\"," +
+                        "\"body\" : \"Hello Bob!\"}");
 
         Console.WriteLine(notification.Sid);
     }
