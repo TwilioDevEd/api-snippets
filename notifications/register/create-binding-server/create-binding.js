@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 //Create a binding using device properties
 app.post('/register', function(request, response) {
 
@@ -7,16 +9,23 @@ app.post('/register', function(request, response) {
   // Get a reference to the user notification service instance
   var service = client.notify.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
 
-  return service.bindings.create({
-    "endpoint": request.body.endpoint,
+  var params =
+  {
     "identity": request.body.identity,
     "bindingType": request.body.BindingType,
     "address": request.body.Address
-  }).then(function(binding) {
+  };
+
+  if (!_.isUndefined(request.body.endpoint)) {
+    params.endpoint = request.body.endpoint;
+  }
+
+  return service.bindings.create(params).then(function(binding) {
     var message = 'Binding created!';
     console.log(binding);
     // Send a JSON response indicating success
     response.send({
+      endpoint: binding.endpoint
       message: message
     });
   }).catch(function(error) {
