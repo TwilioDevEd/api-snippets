@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .users('0000001')
-  .bindings.read()
+  .bindings.list()
   .then(bindings => console.log(bindings[0].sid))
   .catch(error => console.log(error))
   .done();

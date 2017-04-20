@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 bindings = client
           .notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-          .users('0000001').bindings.read()
+          .users('0000001').bindings.list()
 
 puts bindings[0].sid

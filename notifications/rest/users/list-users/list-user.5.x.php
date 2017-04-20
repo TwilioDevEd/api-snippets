@@ -18,6 +18,6 @@ $client = new Client($accountSid, $authToken);
 // List al users
 $users = $client
     ->notify->services($serviceSid)
-    ->users->read();
+    ->users->list();
 
 echo $users[0]->sid;

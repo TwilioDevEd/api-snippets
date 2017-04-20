@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 segments = client.notify
           .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-          .segments.read()
+          .segments.list()
 
 puts segments[0].sid

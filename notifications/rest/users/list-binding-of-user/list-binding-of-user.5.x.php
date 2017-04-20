@@ -18,6 +18,6 @@ $client = new Client($accountSid, $authToken);
 // Create a user
 $bindings = $client
     ->notify->services($serviceSid)
-    ->users('0000001')->bindings->read();
+    ->users('0000001')->bindings->list();
 
 echo $bindings[0]->sid;
