@@ -3,7 +3,7 @@ var client = TVIVideoClient(token: accessToken)
 
 // Connect to a room
 let connectOptions = TVIConnectOptions { (builder) in
-    builder.name = "my-room"
+    builder.roomName = "my-room"
 }
 
 if let client = client {
