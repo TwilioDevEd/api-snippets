@@ -16,7 +16,7 @@ public class Example
 
         var service = ServiceResource.Update(
                           serviceSid,
-                          friendlyName: "NewFlowHipSlackChatDock"
+                          friendlyName: "Another Awesome Service"
                           FacebookMessengerPageId: "your_page_id",
                           MessagingServiceSid: "your_twilio_messaging_service_sid"
                       );
