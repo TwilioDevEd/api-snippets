@@ -17,13 +17,10 @@ public class Example
 
         var binding = BindingResource.Create(
                         serviceSid,
-                        endpoint: "your_user@example.com:sms",
-                        identity: "your_user@example.com",
-                        bindingType: BindingResource.BindingTypeEnum.Sms,
-                        address: "+1651555667777",
-                        tag: new List<string> {
-                          "rogue_one", "han_solo_spinoff"
-                          });
+                        "00000001:sms",
+                        "00000001", // We recommend using a GUID or other anonymized identifier for Identity.
+                        BindingResource.BindingTypeEnum.Sms,
+                        "+1651000000000");
 
         Console.WriteLine(binding.Sid);
     }

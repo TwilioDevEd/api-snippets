@@ -15,9 +15,8 @@ public class Example {
 
     Notification notification = Notification
         .creator(SERVICE_SID)
-        .setBody("A new Rogue One trailer has been released!")
-        .setTag("rogue_one")
-        .setSms("{\"from\":\"+16516667788\"}")
+        .setBody("Knok-Knok! This is your first Notify SMS")
+        .setIdentity("00000001")
         .create();
 
     System.out.println(notification.getSid());

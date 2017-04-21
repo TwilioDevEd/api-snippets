@@ -16,10 +16,10 @@ public class Example {
     Binding binding = Binding.creator
     (
       SERVICE_SID,
-      "your_user@example.com:sms",
-      "your_user@example.com",
+      "00000001:sms",
+      "00000001", // We recommend using a GUID or other anonymized identifier for Identity.
       Binding.BindingType.SMS,
-      "+1651555667777"
+      "+1651000000000"
     ).create();
 
     System.out.println(binding.getSid());
