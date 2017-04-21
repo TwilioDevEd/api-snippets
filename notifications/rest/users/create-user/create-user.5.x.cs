@@ -16,7 +16,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        NotifyUserResource user = NotifyUserResource.create(
+        UserResource user = UserResource.create(
             identity: "User0001",
             segment: new List<string> { "premium", "fitness-lifestyle" });
 

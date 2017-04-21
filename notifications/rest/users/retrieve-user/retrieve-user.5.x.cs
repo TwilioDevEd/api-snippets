@@ -16,7 +16,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        NotifyUserResource user = NotifyUserResource.Read(
+        UserResource user = UserResource.Read(
             serviceSid,
             "User001"
         );
