@@ -19,7 +19,7 @@ public class Example
             serviceSid,
             "endpoint",
             "00000001",
-            BindingResource.BindingTypeEnum.Gcm,
+            BindingResource.BindingTypeEnum.Apn,
             "device_token",
             new List<string> { "preferred device", "new user" });
 
