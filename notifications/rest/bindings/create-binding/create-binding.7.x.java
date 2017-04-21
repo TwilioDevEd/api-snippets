@@ -25,7 +25,7 @@ public class Example {
       SERVICE_SID,
       "endpoint_id",
       "00000001",
-      Binding.BindingType.GCM,
+      Binding.BindingType.APN,
       "device_token"
     )
     .setTag(tags)
