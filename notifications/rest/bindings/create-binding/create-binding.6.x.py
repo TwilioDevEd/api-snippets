@@ -15,7 +15,6 @@ binding = client.notify.services("ISxxx").bindings.create(
     address="483161f7afe6f012aa5f172d3ca93f5c245e3daf34d3a911a41f41f6af3639f6",
     tag="preferred_device",
     tag="new user"
->>>>>>> deved/master
 )
 
 print(binding.sid)
