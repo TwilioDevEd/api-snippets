@@ -20,8 +20,12 @@ public class Example {
         .setTitle("Generic loooooooong title for all Bindings")
         .setBody("This is the body for all Bindings")
         .setIdentity("00000001")
-        .setGcm("{\"notification\":{\"tag\":\"MyTag\"}}")
-        .setApn("{\"aps\":{\"title\":\"Short title for Watch.\"}}")
+        .setFcm("{\"notification\":{\"title\":\"New alert\"," +
+                  "\"body"\" : \"Hello Bob!\"}}")
+        .setApn("{\"aps\" : " +
+                   "{ \"alert\": " +
+                       "{\"title\":\"New alert\"," +
+                        "\"body\" : \"Hello Bob!\"}")
         .create();
 
     System.out.println(notification.getSid());

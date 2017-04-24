@@ -18,7 +18,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    List<String> tags = Arrays.asList("premium", "new user");
+    List<String> tags = Arrays.asList("preferred_device", "new user");
 
     Binding binding = Binding.creator
     (

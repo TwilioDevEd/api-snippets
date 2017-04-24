@@ -14,8 +14,8 @@ service.notifications
       identity:'00000001',
       title:'Generic loooooooong title for all Bindings',
       body:'This is the body for all Bindings',
-      gcm:'{"notification":{"tag":"MyTag"}}',
-      apn:'{"aps":{"title":"Short title for Watch."}}',
+      fcm:'{"notification":{"title":"New alert","body":"Hello Bob!"}}',
+      apn:'{"aps":{"alert":{"title":"New alert","body":Hello Bob!"}}}',
   }).then(function(notification) {
       console.log(notification);
   }).catch(function(error) {

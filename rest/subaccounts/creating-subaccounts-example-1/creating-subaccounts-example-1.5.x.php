@@ -8,8 +8,8 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$account = $client->accounts->create(
-    array("friendlyName" => "Submarine")
-);
+$account = $client->api->v2010->accounts->create(array(
+    'FriendlyName' => 'Submarine'
+));
 
 echo $account->sid;

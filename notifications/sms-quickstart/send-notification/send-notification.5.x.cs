@@ -15,15 +15,11 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var binding = BindingResource.Create(
-                        serviceSid,
-                        identity: "00000001",
-                        bindingType: BindingResource.BindingTypeEnum.Sms,
-                        address: "+1651555667777",
-                        tag: new List<string> {
-                          "rogue_one", "han_solo_spinoff"
-                          });
+        var notification = NotificationResource.Create(
+            serviceSid,
+            identity: new List<string> { "00000001" },
+            body: "Knok-Knok! This is your first Notify SMS");
 
-        Console.WriteLine(binding.Sid);
+        Console.WriteLine(notification.Sid);
     }
 }

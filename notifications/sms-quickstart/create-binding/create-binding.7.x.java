@@ -1,7 +1,4 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import java.util.Arrays;
-import java.util.List;
-
 import com.twilio.Twilio;
 import com.twilio.rest.notify.service.Binding;
 
@@ -16,12 +13,13 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    List<String> tags = Arrays.asList("premium", "new user");
-
-    Binding binding = Binding
-        .creator(SERVICE_SID, "endpoint_id", "00000001", Binding.BindingType.GCM, "apn_device_token")
-        .setTag(tags)
-        .create();
+    Binding binding = Binding.creator
+    (
+      SERVICE_SID,
+      "00000001", // We recommend using a GUID or other anonymized identifier for Identity.
+      Binding.BindingType.SMS,
+      "+1651000000000"
+    ).create();
 
     System.out.println(binding.getSid());
   }
