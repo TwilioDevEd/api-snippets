@@ -9,7 +9,7 @@ AUTH_TOKEN = 'your_auth_token'
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 notification = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .notifications.create(tag='new_user',
+    .notifications.create(segment='new_user',
                           body='Hello New Users')
 
 print(notification.sid)

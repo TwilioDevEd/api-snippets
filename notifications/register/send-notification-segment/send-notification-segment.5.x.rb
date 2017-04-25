@@ -9,10 +9,9 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-binding = service.bindings.create(
-  identity: '00000001',
-  binding_type: 'sms',
-  address: 'Address=+1651000000000'
+notification = service.notifications.create(
+  body: 'Hello New Users',
+  segment: 'new_user'
 )
 
-puts binding.sid
+puts notification.sid

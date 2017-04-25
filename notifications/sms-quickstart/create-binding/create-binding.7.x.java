@@ -16,7 +16,6 @@ public class Example {
     Binding binding = Binding.creator
     (
       SERVICE_SID,
-      "00000001:sms",
       "00000001", // We recommend using a GUID or other anonymized identifier for Identity.
       Binding.BindingType.SMS,
       "+1651000000000"
