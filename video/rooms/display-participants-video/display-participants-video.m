@@ -17,6 +17,7 @@
     
     self.remoteView = [[TVIVideoView alloc] initWithFrame:self.view.bounds delegate:self];
     [videoTrack addRenderer:self.remoteView];
+
     [self.view addSubview:self.remoteView];
 }
 
