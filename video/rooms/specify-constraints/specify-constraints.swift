@@ -1,5 +1,5 @@
-if (localMedia?.videoTracks.count == 0) {
-      camera = TVICameraCapturer()
-    localVideoTrack = localMedia?.addVideoTrack(true, capturer: camera!)
+if (localVideoTrack == nil) {
+    camera = TVICameraCapturer()
+    localVideoTrack = TVILocalVideoTrack.init(capturer: camera!)
 }
         

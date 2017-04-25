@@ -1,4 +1,4 @@
--(void)createARoom {
+- (void)createRoom {
     // Create a room 
     TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
                                                                       block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
