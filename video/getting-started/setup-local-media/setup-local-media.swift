@@ -1,18 +1,8 @@
-// Create a local media object
-var localMedia = TVILocalMedia()
+// Create an audio track
+var localAudioTrack = TVILocalAudioTrack.init()
 
-// Add an audio track
-var enable = true;
-var localAudioTrack = localMedia.addAudioTrack(enable)
-
-// Create camera object
+// Create a Capturer to provide content for the Track
 var camera = TVICameraCapturer()
 
-// Add a video track
-var localVideoTrack = localMedia.addVideoTrack(enable, capturer: camera)
-
-// Remove audio track
-localMedia.removeAudioTrack(localAudioTrack?)
-
-// Remove video track
-localMedia.removeVideoTrack(localVideoTrack?)
+// Create a video track
+var localVideoTrack = TVILocalVideoTrack.init(capturer: camera!)

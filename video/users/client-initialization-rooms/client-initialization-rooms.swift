@@ -1,11 +1,5 @@
-// Create a Video Client and connect to Twilio's backend.
-var client = TVIVideoClient(token: accessToken)
-
-// Connect to a room
-let connectOptions = TVIConnectOptions { (builder) in
-    builder.name = "my-room"
+let connectOptions = TVIConnectOptions.init(token: accessToken) { (builder) in
+    builder.roomName = "my-room"
 }
 
-if let client = client {
-    room = client.connect(with: connectOptions, delegate: self)
-}
+room = TwilioVideo.connect(with: connectOptions, delegate: self)

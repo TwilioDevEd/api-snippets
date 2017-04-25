@@ -1,8 +1,10 @@
 let connectOptions = TVIConnectOptions.init(token: accessToken) { (builder) in
     builder.roomName = "my-room"
-    builder.localMedia = self.localMedia
+    builder.audioTracks = [ self.localAudioTrack! ]
+    builder.videoTracks = [ self.localVideoTrack! ]
 }
-room = TVIVideoClient.connect(with: connectOptions, delegate: self)
+
+room = TwilioVideo.connect(with: connectOptions, delegate: self)
 
 // MARK: TVIRoomDelegate
 
