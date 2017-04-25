@@ -1,5 +1,4 @@
 public interface BindingResource {
     @POST("/register")
-    Call<Void> createBinding(@Body Binding binding);
+    Call<CreateBindingResponse> createBinding(@Body Binding binding);
 }
-
