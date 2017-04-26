@@ -1,4 +1,4 @@
 {
-  "title": "Send a Notification (identity + tag)",
-  "type": "server"
+  "type": "server",
+  "title": "Send a Notification (Identity and Tag)"
 }
