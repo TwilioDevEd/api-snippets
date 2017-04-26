@@ -2,7 +2,8 @@
 String roomName = "my-room";
 ConnectOptions connectOptions = new ConnectOptions.Builder(accessToken)
     .roomName(roomName)
-    .localMedia(localMedia)
+    .audioTracks(localAudioTracks)
+    .videoTracks(localVideoTracks)
     .build();
 
 // Create a room listener

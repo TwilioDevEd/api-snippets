@@ -1,16 +1,13 @@
-// Create a local media object
-LocalMedia localMedia = LocalMedia.create(context);
-
-// Add an audio track
+// Create an audio track
 boolean enable = true;
-LocalAudioTrack localAudioTrack = localMedia.addAudioTrack(enable);
+LocalAudioTrack localAudioTrack = LocalAudioTrack.create(context, enable);
 
 // A video track requires an implementation of VideoCapturer
 CameraCapturer cameraCapturer = new CameraCapturer(context,
         CameraCapturer.CameraSource.FRONT_CAMERA);
 
-// Add a video track
-LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(enable, cameraCapturer);
+// Create a video track
+LocalVideoTrack localVideoTrack = LocalVideoTrack.create(context, enable, cameraCapturer);
 
 // Rendering a local video track requires an implementation of VideoRenderer
 // Let's assume we have added a VideoView in our view hierarchy
@@ -19,11 +16,9 @@ VideoView videoView = (VideoView) findViewById(R.id.video_view);
 // Render a local video track to preview your camera
 localVideoTrack.addRenderer(videoView);
 
-// Remove audio track
-localMedia.removeAudioTrack(localAudioTrack);
+// Release the audio track to free native memory resources
+localAudioTrack.release();
 
-// Remove video track
-localMedia.removeVideoTrack(localVideoTrack);
+// Release the video track to free native memory resources
+localVideoTrack.release();
 
-// You must call release to ensure you free native resources
-localMedia.release();
