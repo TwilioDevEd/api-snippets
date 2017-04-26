@@ -1,55 +1,54 @@
-// Used to observe media events of a participant
-Media.Listener mediaListener = new Media.Listener() {
+// Used to observe participant media events
+Participant.Listener participantListener = new Participant.Listener() {
     @Override
-    public void onAudioTrackAdded(Media media, AudioTrack audioTrack) {
+    public void onAudioTrackAdded(Participant participant, AudioTrack audioTrack) {
         // Notifies you that an audio track has been added
     }
 
     @Override
-    public void onAudioTrackRemoved(Media media, AudioTrack audioTrack) {
+    public void onAudioTrackRemoved(Participant participant, AudioTrack audioTrack) {
         // Notifies you that an audio track has been removed
     }
 
     @Override
-    public void onVideoTrackAdded(Media media, VideoTrack videoTrack) {
+    public void onVideoTrackAdded(Participant participant, VideoTrack videoTrack) {
         // Notifies you that an video track has been added
     }
 
     @Override
-    public void onVideoTrackRemoved(Media media, VideoTrack videoTrack) {
+    public void onVideoTrackRemoved(Participant participant, VideoTrack videoTrack) {
         // Notifies you that an video track has been removed
     }
 
     @Override
-    public void onAudioTrackEnabled(Media media, AudioTrack audioTrack) {
+    public void onAudioTrackEnabled(Participant participant, AudioTrack audioTrack) {
         // Notifies you that an audio track has been enabled
     }
 
     @Override
-    public void onAudioTrackDisabled(Media media, AudioTrack audioTrack) {
+    public void onAudioTrackDisabled(Participant participant, AudioTrack audioTrack) {
         // Notifies you that an audio track has been disabled
     }
 
     @Override
-    public void onVideoTrackEnabled(Media media, VideoTrack videoTrack) {
+    public void onVideoTrackEnabled(Participant participant, VideoTrack videoTrack) {
         // Notifies you that an video track has been enabled
     }
 
     @Override
-    public void onVideoTrackDisabled(Media media, VideoTrack videoTrack) {
+    public void onVideoTrackDisabled(Participant participant, VideoTrack videoTrack) {
         // Notifies you that an video track has been disabled
     }
 };
 
-// Grab the participant's media and register our listener
-Media media = participant.getMedia();
-media.setListener(mediaListener);
+// Set the listener on the participant to listen to media track events
+participant.setListener(participantListener);
 
-// Like a LocalVideoTrack, a VideoTrack can be rendered with a VideoRenderer 
+// Like a LocalVideoTrack, a VideoTrack can be rendered with a VideoRenderer
 VideoView videoView = (VideoView) findViewById(R.id.video_view);
 
 // Render the first video track
-VideoTrack videoTrack = media.getVideoTracks().get(0);
+VideoTrack videoTrack = participant.getVideoTracks().get(0);
 videoTrack.addRenderer(videoView);
 
 // To stop rendering simply remove the renderer from the video track

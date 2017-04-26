@@ -12,4 +12,9 @@ VideoConstraints videoConstraints = new VideoConstraints.Builder()
     .build();
 
 // Add a video track with constraints
-LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(true, cameraCapturer, videoConstraints);
+LocalVideoTrack localVideoTrack = LocalVideoTrack.create(context, true, cameraCapturer, videoConstraints);
+
+// If the constraints are not satisfied a null track will be returned
+if (localVideoTrack == null) {
+    Log.e(TAG, "Unable to satisfy constraints);
+}
