@@ -1,20 +1,19 @@
 from twilio.jwt.access_token import AccessToken
 from twilio.jwt.access_token.grants import VideoGrant
 
-# required for all twilio access tokens
+# Required for all Twilio Access Tokens
 account_sid = 'ACxxxxxxxxxxxx'
 api_key = 'SKxxxxxxxxxxxx'
 api_secret = 'xxxxxxxxxxxxxx'
 
 # required for Video grant
-configuration_profile_sid = 'VSxxxxxxxxxxxx'
 identity = 'user'
 
-# Create access token with credentials
+# Create Access Token with credentials
 token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
 # Create a Video grant and add to token
-video_grant = VideoGrant(configuration_profile_sid=configuration_profile_sid)
+video_grant = VideoGrant(room='cool room')
 token.add_grant(video_grant)
 
 # Return token info as JSON
