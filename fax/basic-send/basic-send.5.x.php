@@ -14,4 +14,4 @@ $fax = $client->fax->v1->faxes->create(
     "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf"
 );
 
-echo $fax->$sid;
+echo $fax->sid;
