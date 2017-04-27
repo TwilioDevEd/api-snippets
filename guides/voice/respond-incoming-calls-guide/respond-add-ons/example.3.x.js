@@ -1,6 +1,6 @@
 
 const express = require('express');
-const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
 
 const app = express();
@@ -23,10 +23,10 @@ app.post('/voice', (request, response) => {
   }
 
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
-  twiml.say(`Never gonna give you up ${firstName}.`, {
-    voice: 'alice',
-  });
+  const twiml = new VoiceResponse();
+  twiml.say({voice: 'alice'},
+    `Never gonna give you up ${firstName}.`
+  );
   twiml.play('https://demo.twilio.com/docs/classic.mp3');
 
   // Render the response as XML in reply to the webhook request

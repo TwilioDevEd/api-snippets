@@ -2,19 +2,18 @@ const http = require('http');
 const express = require('express');
 const router = express.Router();
 const app = express();
-const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 // POST: '/voice'
 router.post('/voice', twilio.webhook({validate: false}), (req, res) => {
-    const twiml = new twilio.TwimlResponse();
+    const twiml = new VoiceResponse();
 
-    twiml.gather({
+    const gather = twiml.gather({
       action: 'voice/handle-record',
       numDigits: '1',
       method: 'POST',
-    }, (node) => {
-      node.play('http://howtodocs.s3.amazonaws.com/et-phone.mp3', {loop: 3});
     });
+    gather.play('http://howtodocs.s3.amazonaws.com/et-phone.mp3', {loop: 3});
 
     res.send(twiml);
 });

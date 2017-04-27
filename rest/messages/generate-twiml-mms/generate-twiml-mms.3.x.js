@@ -1,16 +1,15 @@
 const http = require('http');
 const express = require('express');
-const twilio = require('twilio');
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const app = express();
 
 app.post('/sms', (req, res) => {
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new MessagingResponse();
 
-  twiml.message(() => {
-    this.body('The Robots are coming! Head for the hills!');
-    this.media('https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg');
-  });
+  const message = twiml.message();
+  message.body('The Robots are coming! Head for the hills!');
+  message.media('https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg');
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());

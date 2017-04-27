@@ -1,7 +1,6 @@
 
 const express = require('express');
-const twilio = require('twilio');
-const VoiceResponse = twilio.twiml.VoiceResponse;
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
 
 // Update with your own phone number in E.164 format
@@ -19,21 +18,20 @@ app.post('/voice', (request, response) => {
   const twiml = new VoiceResponse();
 
   // Start with a <Dial> verb
-  twiml.dial((dialNode) => {
-    // If the caller is our MODERATOR, then start the conference when they
-    // join and end the conference when they leave
-    if(request.body.From == MODERATOR) {
-      dialNode.conference('My conference', {
-        startConferenceOnEnter: true,
-        endConferenceOnExit: true,
-      });
-    } else {
-      // Otherwise have the caller join as a regular participant
-      dialNode.conference('My conference', {
-        startConferenceOnEnter: false,
-      });
-    }
-  });
+  const dial = twiml.dial();
+  // If the caller is our MODERATOR, then start the conference when they
+  // join and end the conference when they leave
+  if(request.body.From == MODERATOR) {
+    dial.conference('My conference', {
+      startConferenceOnEnter: true,
+      endConferenceOnExit: true,
+    });
+  } else {
+    // Otherwise have the caller join as a regular participant
+    dial.conference('My conference', {
+      startConferenceOnEnter: false,
+    });
+  }
 
   // Render the response as XML in reply to the webhook request
   response.type('text/xml');

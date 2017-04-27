@@ -1,6 +1,6 @@
 const http = require('http');
 const express = require('express');
-const twilio = require('twilio');
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser());
 
 app.post('/', (req, res) => {
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new MessagingResponse();
 
   if (req.body.Body == 'hello') {
     twiml.message('Hi!');

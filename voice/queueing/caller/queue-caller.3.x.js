@@ -1,6 +1,6 @@
 // Download the Node helper library from twilio.com/docs/node/install
-const twilio = require('twilio');
-const twiml = new twilio.TwimlResponse();
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
+const twiml = new VoiceResponse();
 
 twiml.enqueue('Queue Demo');
 
