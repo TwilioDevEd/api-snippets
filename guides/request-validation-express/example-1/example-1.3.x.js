@@ -8,13 +8,14 @@
 const twilio = require('twilio');
 const app = require('express')();
 const bodyParser = require('body-parser');
-const TwimlResponse = twilio.TwimlResponse;
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/voice', twilio.webhook(), (req, res) => {
   // Twilio Voice URL - receives incoming calls from Twilio
-  const response = new TwimlResponse();
+  const response = new VoiceResponse();
 
   response.say(
     `Thanks for calling!
@@ -28,7 +29,7 @@ app.post('/voice', twilio.webhook(), (req, res) => {
 
 app.post('/message', twilio.webhook(), (req, res) => {
   // Twilio Messaging URL - receives incoming messages from Twilio
-  const response = new TwimlResponse();
+  const response = new MessagingResponse();
 
   response.message(`Your text to me was ${req.body.Body.length} characters long.
                     Webhooks are neat :)`);

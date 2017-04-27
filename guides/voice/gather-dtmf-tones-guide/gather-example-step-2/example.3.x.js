@@ -2,14 +2,13 @@
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
-  twiml.gather({
+  const gather = twiml.gather({
     numDigits: 1,
     action: '/gather',
-  }, (gatherNode) => {
-    gatherNode.say('For sales, press 1. For support, press 2.');
   });
+  gather.say('For sales, press 1. For support, press 2.');
 
   // If the user doesn't enter input, loop
   twiml.redirect('/voice');
@@ -22,7 +21,7 @@ app.post('/voice', (request, response) => {
 // Create a route that will handle <Gather> input
 app.post('/gather', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   // If the user entered digits, process their request
   if (request.body.Digits) {

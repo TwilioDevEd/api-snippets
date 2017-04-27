@@ -3,13 +3,14 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
 // POST: '/handle-record'
 router.post('/handle-record', twilio.webhook({validate: false}), (req, res) =>{
-    const twiml = new twilio.TwimlResponse();
+    const twiml = new VoiceResponse();
 
     twiml.say('Listen to your recorded message.');
     twiml.play(req.body.RecordingUrl);
