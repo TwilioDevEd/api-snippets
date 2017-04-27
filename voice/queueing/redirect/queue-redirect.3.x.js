@@ -1,11 +1,10 @@
 // Download the Node helper library from twilio.com/docs/node/install
-const twilio = require('twilio');
-const twiml = new twilio.TwimlResponse();
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
+const twiml = new VoiceResponse();
 
 twiml.say('You will now be connected to the first caller in the queue.')
-    .dial({}, function() {
-        this.queue('Queue Demo');
-    })
-    .redirect();
+const dial = twiml.dial();
+dial.queue('Queue Demo');
+twiml.redirect();
 
 console.log(twiml.toString());

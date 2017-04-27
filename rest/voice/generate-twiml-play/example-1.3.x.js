@@ -1,9 +1,9 @@
 const http = require('http');
-const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 http.createServer((req, res) => {
   // Create TwiML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   twiml.say('Hello. It\'s me.');
   twiml.play('http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3');

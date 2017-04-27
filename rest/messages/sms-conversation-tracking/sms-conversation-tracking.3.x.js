@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const session = require('express-session');
-const twilio = require('twilio');
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.post('/sms', (req, res) => {
 
   req.session.counter = smsCount + 1;
 
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new MessagingResponse();
   twiml.message(message);
 
   res.writeHead(200, {'Content-Type': 'text/xml'});

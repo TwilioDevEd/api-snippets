@@ -1,6 +1,6 @@
 
 const express = require('express');
-const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
 
 const app = express();
@@ -12,12 +12,11 @@ app.use(urlencoded({extended: false}));
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   // Use the <Gather> verb to collect user input
-  twiml.gather({numDigits: 1}, (gatherNode) => {
-    gatherNode.say('For sales, press 1. For support, press 2.');
-  });
+  const gather = twiml.gather({numDigits: 1});
+  gather.say('For sales, press 1. For support, press 2.');
 
   // If the user doesn't enter input, loop
   twiml.redirect('/voice');
