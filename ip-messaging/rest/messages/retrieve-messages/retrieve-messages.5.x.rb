@@ -12,4 +12,4 @@ channel_sid = '<CHANNEL_SID>'
 service = @client.ip_messaging.v2.services(service_sid)
 channel = service.channels(channel_sid) 
 message = channel.messages('<MESSAGE_SID>').fetch
-puts message
+puts "#{message.sid} #{message.body}"
