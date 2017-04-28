@@ -1,15 +1,14 @@
 {
-  "sid": "RL4bd30b6183854055a419a75995e5ab3c",
+  "date_updated": "2015-10-30T08:34:21Z",
+  "friendly_name": "service user",
   "account_sid": "ACxxx",
-  "service_sid": "IS67f7fa9b52f748beb5e7914356925410",
-  "role_sid": null,
-  "friendly_name": "my updated role",
-  "type": "channel",
+  "url": "https://chat.twilio.com/v2/Services/ISxxx/Roles/RLxxx",
+  "sid": "RLxxx",
+  "date_created": "2015-10-30T08:34:21Z",
+  "service_sid": "ISxxx",
+  "type": "deployment",
   "permissions": [
-    "sendMessage",
-    "leaveChannel"
-  ],
-  "date_created": "2015-08-27T19:44:07Z",
-  "date_updated": "2015-08-27T19:44:07Z",
-  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Roles/RL4bd30b6183854055a419a75995e5ab3c"
+    "leaveChannel",
+    "sendMessage"
+  ]
 }
