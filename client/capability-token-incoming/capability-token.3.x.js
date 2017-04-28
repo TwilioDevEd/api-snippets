@@ -1,6 +1,6 @@
 const http = require('http');
 const express = require('express');
-const twilio = require('twilio');
+const ClientCapability = require('twilio').jwt.ClientCapability;
 
 const app = express();
 
@@ -9,9 +9,14 @@ app.get('/token', (req, res) => {
   const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
   const authToken = 'your_auth_token';
 
-  const capability = new twilio.jwt.Capability(accountSid, authToken);
-  capability.allowClientIncoming('jenny');
-  const token = capability.generate();
+  const capability = new ClientCapability({
+    accountSid: accountSid,
+    authToken: authToken
+  });
+  capability.addScope(
+    new ClientCapability.IncomingClientScope('jenny')
+  );
+  const token = capability.toJwt();
 
   res.set('Content-Type', 'application/jwt');
   res.send(token);
