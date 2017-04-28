@@ -13,5 +13,5 @@ service = @client.ip_messaging.v2.services(service_sid)
 channel = service.channels(channel_sid) 
 
 channel.messages.each do |message|
-    puts message
+    puts "#{message.sid} #{message.body}"
 end
