@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Update role
-role = client.ip_messaging.services("SERVICE_SID").roles("ROLE_SID").update(
+role = client.chat.services("SERVICE_SID").roles("ROLE_SID").update(
     permission=["sendMessage", "leaveChannel"]
 )
 

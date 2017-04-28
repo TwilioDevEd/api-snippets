@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Create role
-role = client.ip_messaging.services("SERVICE_SID").roles.create(
+role = client.chat.services("SERVICE_SID").roles.create(
     friendly_name="new_role",
     type="deployment",
     permission=["createChannel", "joinChannel"]
