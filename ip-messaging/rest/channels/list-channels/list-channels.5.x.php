@@ -13,12 +13,12 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the service
-$channels = $client->ipMessaging
+$channels = $client->chat
     ->services("SERVICE_SID")
     ->channels
     ->read();
 
 // List the channels
 foreach ($channels as $channel) {
-    echo $channel->friendlyName;
+    echo $channel->sid;
 }

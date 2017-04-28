@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Create the service
-$service = $client->ipMessaging
+$service = $client->chat
     ->services
     ->create("NEW_SERVICE");
 

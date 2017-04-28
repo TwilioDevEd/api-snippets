@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Retrieve the messages
-$messages = $client->ipMessaging
+$messages = $client->chat
     ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->messages
@@ -21,5 +21,5 @@ $messages = $client->ipMessaging
 
 //List the messages
 foreach ($messages as $message) {
-    echo $message->from . PHP_EOL;
+    echo $message->from . ": " . $message->body . PHP_EOL;
 }

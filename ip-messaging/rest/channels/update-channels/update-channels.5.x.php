@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve and Update the Channel
-$channel = $client->ipMessaging
+$channel = $client->chat
     ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->update(

@@ -12,7 +12,7 @@ $token = "AUTH_TOKEN";
 // Initialize the client
 $client = new Client($sid, $token);
 
-$roles = $client->ipMessaging
+$roles = $client->chat
     ->services("SERVICE_SID")
     ->roles
     ->read();

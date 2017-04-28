@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the message
-$message = $client->ipMessaging
+$message = $client->chat
     ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->messages("MESSAGE_SID")

@@ -13,6 +13,6 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Delete the service
-$client->ipMessaging
+$client->chat
     ->services("SERVICE_SID")
     ->delete();

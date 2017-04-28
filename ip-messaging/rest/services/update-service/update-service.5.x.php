@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Update the service
-$service = $client->ipMessaging
+$service = $client->chat
     ->services("SERVICE_SID")
     ->update(
         array("friendlyName" => "NEW_FRIENDLY_NAME")

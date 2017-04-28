@@ -12,7 +12,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Retrieve the Channel's members
-$members = $client->ipMessaging
+$members = $client->chat
     ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->members

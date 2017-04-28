@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the Credential
-$credential = $client->ipMessaging
+$credential = $client->chat
     ->credentials("CREDENTIAL_SID")
     ->fetch();
 

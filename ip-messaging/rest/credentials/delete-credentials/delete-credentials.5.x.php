@@ -13,6 +13,6 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Delete a Credential
-$client->ipMessaging
+$client->chat
     ->credentials("CREDENTIAL_SID")
     ->delete();

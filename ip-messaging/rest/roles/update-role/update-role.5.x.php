@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 //Update the role
-$role = $client->ipMessaging
+$role = $client->chat
     ->services("SERVICE_SID")
     ->roles("ROLE_SID")
     ->update(

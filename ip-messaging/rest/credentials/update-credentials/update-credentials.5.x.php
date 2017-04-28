@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Update the credential
-$credential = $client->ipMessaging
+$credential = $client->chat
     ->credentials("CREDENTIAL_SID")
     ->update(
         array(

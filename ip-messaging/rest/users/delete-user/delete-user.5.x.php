@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Delete the user
-$client->ipMessaging
+$client->chat
     ->services("SERVICE_SID")
     ->users("USER_SID")
     ->delete();

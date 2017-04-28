@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Delete the channel
-$client->ipMessaging
+$client->chat
     ->services("SERVICE_SID")
     ->channels("CHANNEL_SID")
     ->delete();

@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the services
-$services = $client->ipMessaging->services->read();
+$services = $client->chat->services->read();
 
 foreach ($services as $service) {
     echo $service->friendlyName . PHP_EOL;

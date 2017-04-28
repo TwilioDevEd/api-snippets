@@ -13,7 +13,7 @@ $token = "AUTH_TOKEN";
 $client = new Client($sid, $token);
 
 // Retrieve the user
-$user = $client->ipMessaging
+$user = $client->chat
     ->services("SERVICE_SID")
     ->users("USER_SID")
     ->fetch();
