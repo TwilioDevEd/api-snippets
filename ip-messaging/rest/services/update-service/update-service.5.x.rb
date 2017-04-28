@@ -8,6 +8,6 @@ service_sid = 'SERVICE_SID'
 
 # Update the service with something new.
 new_role_sid = 'RLxx'
-service = @client.ip_messaging.v2.services(service_sid)
+service = @client.chat.v2.services(service_sid)
 response = service.update(default_service_role_sid: new_role_sid)
 puts "Updated role sid to #{response.new_role_sid}!"
