@@ -1,6 +1,7 @@
 
 const express = require('express');
 const twilio = require('twilio');
+const VoiceResponse = twilio.twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
 
 // Update with your own phone number in E.164 format
@@ -15,7 +16,7 @@ app.use(urlencoded({extended: false}));
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   // Start with a <Dial> verb
   twiml.dial((dialNode) => {
