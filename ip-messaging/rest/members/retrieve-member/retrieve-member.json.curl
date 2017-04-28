@@ -1,2 +1,2 @@
-curl -G https://chat.twilio.com/v2/Services/{service sid}/Channels/{Channel SID}/Members/{Member SID} \
+curl -G https://ip-messaging.twilio.com/v1/Services/{service sid}/Channels/{Channel SID}/Members/{Member SID} \
     -u '{twilio account sid}:{twilio auth token}'
