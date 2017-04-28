@@ -5,7 +5,7 @@
   "friendly_name": "MyChannel",
   "created_by": "system",
   "account_sid": "ACxxx",
-  "url": "https://chat.twilio.com/v1/Services/ISxxx/Channels/CHxxx",
+  "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx",
   "date_created": "2017-04-28T08:54:32Z",
   "sid": "CHxxx",
   "attributes": "{}",
@@ -13,9 +13,9 @@
   "type": "public",
   "messages_count": 0,
   "links": {
-    "messages": "https://chat.twilio.com/v1/Services/ISxxx/Channels/CHxxx/Messages",
-    "invites": "https://chat.twilio.com/v1/Services/ISxxx/Channels/CHxxx/Invites",
-    "members": "https://chat.twilio.com/v1/Services/ISxxx/Channels/CHxxx/Members",
+    "messages": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages",
+    "invites": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Invites",
+    "members": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Members",
     "last_message": null
   }
 }
