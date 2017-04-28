@@ -6,6 +6,6 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-service = client.ip_messaging.services.create(friendly_name="FRIENDLY_NAME")
+service = client.chat.services.create(friendly_name="FRIENDLY_NAME")
 
 print(service.sid)
