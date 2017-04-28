@@ -1,2 +1,15 @@
-curl -G https://ip-messaging.twilio.com/v1/Services/{service sid}/Channels/{Channel SID}/Messages/{Message SID} \
-    -u '{twilio account sid}:{twilio auth token}'
+    {
+      "body": "New message body",
+      "index": 0,
+      "channel_sid": "CHxxx",
+      "from": "system",
+      "date_updated": "2017-04-28T09:38:20Z",
+      "account_sid": "ACxxx",
+      "to": "CHxxx",
+      "date_created": "2017-04-28T09:38:20Z",
+      "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages/IMxxx",
+      "sid": "IMxxx",
+      "attributes": null,
+      "service_sid": "ISxxx",
+      "was_edited": false
+    }
