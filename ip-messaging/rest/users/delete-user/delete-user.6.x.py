@@ -6,7 +6,7 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-response = client.ip_messaging.services("SERVICE_SID").users.create(
+response = client.chat.services("SERVICE_SID").users.create(
     identity="IDENTITY"
 )
 

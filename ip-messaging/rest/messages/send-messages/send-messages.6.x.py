@@ -6,7 +6,7 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-message = client.ip_messaging \
+message = client.chat \
                 .services("SERVICE_SID") \
                 .channels("CHANNEL_SID") \
                 .messages \

@@ -7,6 +7,6 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # List the roles
-roles = client.ip_messaging.services("SERVICE_SID").roles.list()
+roles = client.chat.services("SERVICE_SID").roles.list()
 for role in roles:
     print(role.sid)

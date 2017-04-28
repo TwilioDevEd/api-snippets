@@ -6,5 +6,5 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-for c in client.ip_messaging.credentials.list():
-    print(c)
+for c in client.chat.credentials.list():
+    print(c.sid)

@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Delete role
-response = client.ip_messaging \
+response = client.chat \
                   .services("SERVICE_SID") \
                   .roles("ROLE_SID") \
                   .delete()
