@@ -1,12 +1,12 @@
-require 'http'
 require 'twilio-ruby'
 
 # Get your Account SID and Auth Token from twilio.com/console
 account_sid = 'ACCOUNT_SID'
 auth_token = 'AUTH_TOKEN'
+service_sid = 'SERVICE_SID'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
+service = @client.chat.v2.services(service_sid)
 
 # Retrieve role
-service = @client.ip_messaging.v1.services('SERVICE_SID')
-role = service.roles('ROLES_SID')
+role = service.roles('ROLE_SID').fetch
 puts role
