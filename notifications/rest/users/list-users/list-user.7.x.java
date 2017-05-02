@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.NotifyUser;
+import com.twilio.rest.notify.service.v1.User;
 import java.util.ArrayList;
 
 public class Example {
@@ -18,6 +18,7 @@ public class Example {
 
     ArrayList<NotifyUser> users = NotifyUser
         .reader(SERVICE_SID)
+        .setSegment("premium")
         .read();
 
     System.out.println(users[0].getSid());

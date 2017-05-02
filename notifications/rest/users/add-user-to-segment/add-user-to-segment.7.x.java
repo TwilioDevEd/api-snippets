@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.Service;
+import com.twilio.rest.notify.v1.service.user.SegmentMembership;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -16,8 +16,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create segment membership
-    SegmentMembership segmentMembership = SegmentMembership.creator()
-        .setSegment("premium").create();
+    SegmentMembership segmentMembership = SegmentMembership
+        .creator(SERVICE_SID, "User0001", "premium")
+        .create();
 
     System.out.println(service.getFriendlyName());
   }
