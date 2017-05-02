@@ -1,6 +1,6 @@
 if (self.updatedPushToken) {
     [self.chatClient registerWithNotificatrionToken:self.updatedPushToken
-    completion:^(TCHResult *result) {
+                                         completion:^(TCHResult *result) {
       if (![result isSuccessful]) {
         // try registration again or verify token
       }

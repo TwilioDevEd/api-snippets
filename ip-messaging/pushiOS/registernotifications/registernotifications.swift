@@ -1,7 +1,15 @@
 if let updatedPushToken = updatedPushToken {
-    chatClient.registerWithToken(updatedPushToken)
+    chatClient.registerWithToken(updatedPushToken) { (result) in
+      if (!result.isSuccessful()) {
+        // try registration again or verify token
+      }
+    }
 }
 
 if let receivedNotification = receivedNotification {
-    chatClient.handleNotification(receivedNotification)
+    chatClient.handleNotification(receivedNotification) { (result) in
+      if (!result.isSuccessful()) {
+        // try handling again?
+      }
+    }
 }
