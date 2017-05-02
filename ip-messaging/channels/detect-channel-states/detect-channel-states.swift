@@ -3,7 +3,7 @@ extension ViewController: TwilioChatClientDelegate {
         print("Channel added: \(channel.friendlyName)")
     }
     
-    func chatClient(client: TwilioChatClient!, channelChanged channel: TCHChannel!) {
+    func chatClient(client: TwilioChatClient!, channel channel: TCHChannel!, updated update: TCHChannelUpdate) {
         print("Channel changed: \(channel.friendlyName)")
     }
     

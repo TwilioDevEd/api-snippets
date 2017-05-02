@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # List the channels
-channels = client.ip_messaging \
+channels = client.chat \
                  .services("SERVICE_SID") \
                  .channels \
                  .list()

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Chat.V1.Service;
+using Twilio.Rest.Chat.V2.Service;
 
 class Example
 {

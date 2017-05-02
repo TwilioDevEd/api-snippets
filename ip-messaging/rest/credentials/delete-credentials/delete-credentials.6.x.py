@@ -6,6 +6,6 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-response = client.ip_messaging.credentials("CREDENTIAL_SID").delete()
+response = client.chat.credentials("CREDENTIAL_SID").delete()
 
 print(response)

@@ -6,6 +6,6 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-credential = client.ip_messaging.credentials.create("type")
+credential = client.chat.credentials.create("gcm", friendly_name="Friendly Name", api_key="apiKey")
 
 print(credential)

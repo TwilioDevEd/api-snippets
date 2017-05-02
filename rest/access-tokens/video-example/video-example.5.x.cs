@@ -12,24 +12,20 @@ class Example
         const string twilioApiSecret = "your_secret";
 
         // These are specific to Video
-        const string configurationProfileSid = "VSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user";
 
         // Create a Video grant for this token
         var grant = new VideoGrant();
-        grant.ConfigurationProfileSid = configurationProfileSid;
+        grant.Room = "cool room";
 
-        var grants = new HashSet<IGrant>
-        {
-            { grant }
-        };
+        var grants = new HashSet<IGrant> { grant };
 
         // Create an Access Token generator
         var token = new Token(
             twilioAccountSid,
             twilioApiKey,
             twilioApiSecret,
-            identity,
+            identity: identity,
             grants: grants);
 
         Console.WriteLine(token.ToJwt());

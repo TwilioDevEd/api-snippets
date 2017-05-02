@@ -1,5 +1,4 @@
-Message message = channel.getMessages().createMessage("test");
-channel.getMessages().sendMessage(message, new StatusListener() {
+channel.getMessages().sendMessage("test", new StatusListener() {
     @Override
     public void onSuccess() {
       Log.d(TAG,"Message sent successfully");
@@ -7,6 +6,6 @@ channel.getMessages().sendMessage(message, new StatusListener() {
 
     @Override
     public void onError(ErrorInfo errorInfo) {
-        Log.e(TAG,"Error sending message: " + errorInfo.getErrorText());
+        Log.e(TAG,"Error sending message: " + errorInfo.toString());
     }
 });

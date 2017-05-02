@@ -11,7 +11,7 @@ def voice():
     resp = VoiceResponse()
 
     # Start our <Gather> verb
-    gather = Gather(numDigits=1, action='/gather')
+    gather = Gather(num_digits=1, action='/gather')
     gather.say('For sales, press 1. For support, press 2.')
     resp.append(gather)
 

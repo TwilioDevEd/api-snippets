@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
 using Twilio;
-using Twilio.Rest.Chat.V1.Service.Channel;
+using Twilio.Rest.Chat.V2.Service.Channel;
 
 class Example
 {
@@ -18,6 +18,7 @@ class Example
 
         // Delete a member
         var status = MemberResource.Delete(serviceSid, channelSid, memberSid);
+        
         Console.WriteLine(status);
     }
 }

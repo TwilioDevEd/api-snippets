@@ -1,2 +1,1 @@
-curl -G https://ip-messaging.twilio.com/v1/Services/{service sid}/Channels/{Channel SID}/Messages/{Message SID} \
-    -u '{twilio account sid}:{twilio auth token}'
+HTTP/1.1 204 NO CONTENT

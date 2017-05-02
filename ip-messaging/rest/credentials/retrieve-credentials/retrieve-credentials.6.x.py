@@ -6,6 +6,6 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-credential = client.ip_messaging.credentials("CREDENTIAL_SID").fetch()
+credential = client.chat.credentials("CREDENTIAL_SID").fetch()
 
 print(credential.sid)

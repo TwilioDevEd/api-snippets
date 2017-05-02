@@ -7,6 +7,6 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # List the users
-users = client.ip_messaging.services("SERVICE_SID").users.list()
+users = client.chat.services("SERVICE_SID").users.list()
 for user in users:
     print(user.identity)

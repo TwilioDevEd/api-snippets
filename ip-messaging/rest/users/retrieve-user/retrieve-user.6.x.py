@@ -6,7 +6,7 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-user = client.ip_messaging \
+user = client.chat \
              .services("SERVICE_SID") \
              .users("USER_SID") \
              .fetch()

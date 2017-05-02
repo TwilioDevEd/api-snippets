@@ -28,7 +28,7 @@ def voice():
             resp.say("Sorry, I don't understand that choice.")
 
     # Start our <Gather> verb
-    gather = Gather(numDigits=1)
+    gather = Gather(num_digits=1)
     gather.say('For sales, press 1. For support, press 2.')
     resp.append(gather)
 

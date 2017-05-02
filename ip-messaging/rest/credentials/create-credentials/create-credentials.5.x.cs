@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Chat.V1;
+using Twilio.Rest.Chat.V2;
 
 class Example
 {

@@ -7,6 +7,6 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Retrieve the service
-service = client.ip_messaging.services("SERVICE_SID").fetch()
+service = client.chat.services("SERVICE_SID").fetch()
 
 print(service.friendly_name)

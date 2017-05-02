@@ -10,12 +10,11 @@ public class TokenGenerator {
     String twilioApiSecret = "xxxxxxxxxxxxxx";
 
     // Required for Video
-    String configurationProfileSid = "VSxxxxxxxxxxxx";
     String identity = "user";
       
     // Create Video grant
     VideoGrant grant = new VideoGrant();
-    grant.setConfigurationProfileSid(configurationProfileSid);
+    grant.setRoom("cool room");
     
     // Create access token
     AccessToken token = new AccessToken.Builder(

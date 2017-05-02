@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Delete the channel
-response = client.ip_messaging \
+response = client.chat \
                  .services("SERVICE_SID") \
                  .channels("CHANNEL_SID") \
                  .delete()

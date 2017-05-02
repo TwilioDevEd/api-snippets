@@ -6,7 +6,7 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-credential = client.ip_messaging.credentials("CREDENTIAL_SID").update(
+credential = client.chat.credentials("CREDENTIAL_SID").update(
     friendly_name="MyCredential",
     api_key="xxxxxx"
 )

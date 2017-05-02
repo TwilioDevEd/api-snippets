@@ -1,16 +1,21 @@
 {
-  "sid": "CHxxx",
-  "account_sid": "ACxxx",
-  "service_sid": "ISxxx",
+  "unique_name": "my-channel",
+  "members_count": 0,
+  "date_updated": "2017-04-28T08:54:32Z",
   "friendly_name": "MyChannel",
-  "attributes": null,
-  "type":"private",
-  "date_created": "2015-08-24T22:18:57Z",
-  "date_updated": "2015-08-24T22:18:57Z",
   "created_by": "system",
-  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx",
+  "account_sid": "ACxxx",
+  "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx",
+  "date_created": "2017-04-28T08:54:32Z",
+  "sid": "CHxxx",
+  "attributes": "{}",
+  "service_sid": "ISxxx",
+  "type": "public",
+  "messages_count": 0,
   "links": {
-    "members": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Members",
-    "messages": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Messages"
+    "messages": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages",
+    "invites": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Invites",
+    "members": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Members",
+    "last_message": null
   }
 }

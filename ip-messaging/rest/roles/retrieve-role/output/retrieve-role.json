@@ -1,22 +1,15 @@
 {
-  "sid": "RL0971178787b04715b51266f01384c7d4",
+  "date_updated": "2015-10-30T08:34:21Z",
+  "friendly_name": "service user",
   "account_sid": "ACxxx",
-  "service_sid": "ISd966c3187d4649d2b9d0bf83ca6dad65",
-  "friendly_name": "channel admin",
-  "type": "channel",
+  "url": "https://chat.twilio.com/v2/Services/ISxxx/Roles/RLxxx",
+  "sid": "RLxxx",
+  "date_created": "2015-10-30T08:34:21Z",
+  "service_sid": "ISxxx",
+  "type": "deployment",
   "permissions": [
-    "destroyChannel",
-    "inviteMember",
-    "removeMember",
-    "editChannelName",
-    "editChannelAttributes",
-    "addMember",
-    "sendMessage",
-    "leaveChannel",
-    "editAnyMessage",
-    "deleteAnyMessage"
-  ],
-  "date_created": "2015-10-30T08:33:58Z",
-  "date_updated": "2015-11-06T12:46:38Z",
-  "url": "https://ip-messaging.twilio.com/v1/Services/ISd966c3187d4649d2b9d0bf83ca6dad65/Roles/RL0971178787b04715b51266f01384c7d4"
+    "createChannel",
+    "joinChannel",
+    "editOwnUserInfo"
+  ]
 }

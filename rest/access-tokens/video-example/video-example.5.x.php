@@ -10,9 +10,9 @@ $twilioApiKey = 'SKxxxxxxxxxxxx';
 $twilioApiSecret = 'xxxxxxxxxxxxxx';
 
 // Required for Video grant
-$configurationProfileSid = 'VSxxxxxxxxxxxx';
+$roomName = 'cool room';
 // An identifier for your app - can be anything you'd like
-$identity = "john_doe";
+$identity = 'john_doe';
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
@@ -25,7 +25,7 @@ $token = new AccessToken(
 
 // Create Video grant
 $videoGrant = new VideoGrant();
-$videoGrant->setConfigurationProfileSid($configurationProfileSid);
+$videoGrant->setRoom($roomName);
 
 // Add grant to token
 $token->addGrant($videoGrant);

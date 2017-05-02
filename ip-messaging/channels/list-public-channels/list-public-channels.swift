@@ -1,4 +1,4 @@
-client.channelsList().publicChannelsWithCompletion({ (result, paginator) in
+client.channelsList().publicChannelDescriptorsWithCompletion({ (result, paginator) in
   if (result.isSuccessful()) {
     for channel in paginator.items() {
         print("Channel: \(channel.friendlyName)")

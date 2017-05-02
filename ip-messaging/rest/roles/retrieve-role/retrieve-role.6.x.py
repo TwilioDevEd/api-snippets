@@ -7,6 +7,6 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Retrieve role
-role = client.ip_messaging.services("SERVICE_SID").roles("ROLE_SID").fetch()
+role = client.chat.services("SERVICE_SID").roles("ROLE_SID").fetch()
 
 print(role.sid)

@@ -7,7 +7,7 @@ token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # Update the channel
-channel = client.ip_messaging \
+channel = client.chat \
                 .services("SERVICE_SID") \
                 .channels("CHANNEL_SID") \
                 .update(friendly_name="NEW_FRIENDLY_NAME")

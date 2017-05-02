@@ -6,7 +6,7 @@ account = "ACCOUNT_SID"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
-service = client.ip_messaging.services("SERVICE_SID").update(
+service = client.chat.services("SERVICE_SID").update(
     friendly_name="NEW_FRIENDLY_NAME"
 )
 

@@ -1,3 +1,5 @@
-curl -XPOST https://chat.twilio.com/v1/Services/{service sid}/Channels \
+curl -XPOST https://chat.twilio.com/v2/Services/{service sid}/Channels \
     -d "FriendlyName=MyChannel" \
-    -u '{twilio account sid}:{twilio auth token}'
+    -d "Type=public" \
+    -d "UniqueName=my-channel" \
+    -u '{twilio account sid}:{twilio auth token}' 
