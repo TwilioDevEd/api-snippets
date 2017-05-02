@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.NotifyUser;
+import com.twilio.rest.notify.v1.service.User;
 import java.util.ArrayList;
 
 public class Example {
@@ -16,10 +16,9 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    NotifyUser user = NotifyUser
-        .creator(SERVICE_SID)
-        .setIdentity("User0001")
-        .setSegments(new ArrayList<String>("premium", "fitness-lifestyle"))
+    NotifyUser user = User
+        .creator(SERVICE_SID, "User0001")
+        .setSegment(new ArrayList<String>("premium", "fitness-lifestyle"))
         .create();
 
     System.out.println(user.getSid());
