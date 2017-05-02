@@ -1,14 +1,14 @@
 @Override
-public void onMessageAdd(Message message) {
+public void onMessageAdded(Message message) {
   Log.d(TAG, "Message added: " + message.getMessageBody());
 }
 
 @Override
-public void onMessageChange(Message message) {
+public void onMessageUpdated(Message message) {
   Log.d(TAG, "Message changed: " + message.getMessageBody());
 }
 
 @Override
-public void onMessageDelete(Message message) {
+public void onMessageDeleted(Message message) {
   Log.d(TAG, "Message deleted");
 }
