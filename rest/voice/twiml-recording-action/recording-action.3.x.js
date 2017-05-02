@@ -13,7 +13,7 @@ router.post('/handle-record', twilio.webhook({validate: false}), (req, res) =>{
     const twiml = new VoiceResponse();
 
     twiml.say('Listen to your recorded message.');
-    twiml.play(req.body.RecordingUrl);
+    twiml.play({}, req.body.RecordingUrl);
     twiml.say('Goodbye.');
 
     res.end(twiml.toString());
