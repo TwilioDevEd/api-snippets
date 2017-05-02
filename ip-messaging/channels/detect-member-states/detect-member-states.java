@@ -1,15 +1,15 @@
 @Override
-public void onMemberJoin(Member member) {
+public void onMemberJoined(Member member) {
   Log.d(TAG, "Member joined: " + member.getUserInfo().getIdentity());
 }
 
 @Override
-public void onMemberChange(Member member) {
+public void onMemberUpdated(Member member) {
   Log.d(TAG, "Member changed: " + member.getUserInfo().getIdentity());
 }
 
 @Override
-public void onMemberDelete(Member member) {
+public void onMemberDeleted(Member member) {
   Log.d(TAG, "Member deleted: " + member.getUserInfo().getIdentity());
 }
 
@@ -24,6 +24,6 @@ public void onTypingEnded(Member member) {
 }
 
 @Override
-public void onSynchronizationChange(Channel channel) {
+public void onSynchronizationChanged(Channel channel) {
 
 }
