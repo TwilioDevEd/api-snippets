@@ -1,7 +1,4 @@
-client.channelsList().userChannelsWithCompletion({ (result, paginator) in
-  if (result.isSuccessful()) {
-    for channel in paginator.items() {
-        print("Channel: \(channel.friendlyName)")
-    }
-  }
-})
+let channels = client.channelsList().subscribedChannels()
+for channel in channels {
+    print("Channel: \(channel.friendlyName)")
+}
