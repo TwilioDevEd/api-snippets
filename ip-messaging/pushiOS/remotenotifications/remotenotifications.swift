@@ -1,6 +1,10 @@
 func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-    if let chatClient = chatClient where chatClient.userInfo != nil {
-        chatClient.registerWithToken(deviceToken)
+    if let chatClient = chatClient where chatClient.user != nil {
+        chatClient.registerWithNotificationToken(deviceToken) { (result) in
+          if (!result.isSuccessful()) {
+            // try registration again or verify token
+          }
+        }
     } else {
         updatedPushToken = deviceToken
     }
@@ -8,9 +12,5 @@ func application(application: UIApplication, didRegisterForRemoteNotificationsWi
 
 func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
     NSLog("Failed to get token, error: %@", error)
-    if let chatClient = chatClient where chatClient.userInfo != nil {
-        chatClient.registerWithToken(nil)
-    } else {
-        updatedPushToken = nil
-    }
+    updatedPushToken = nil
 }
