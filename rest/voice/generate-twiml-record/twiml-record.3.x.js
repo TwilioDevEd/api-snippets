@@ -17,7 +17,7 @@ router.post('/voice', twilio.webhook({validate: false}), (req, res) => {
     numDigits: '1',
     method: 'POST',
   });
-  gather.play('http://howtodocs.s3.amazonaws.com/et-phone.mp3', {loop: 3});
+  gather.play({}, 'http://howtodocs.s3.amazonaws.com/et-phone.mp3', {loop: 3});
 
   res.send(twiml);
 });
@@ -53,7 +53,7 @@ router.post('/handle-record', twilio.webhook({validate: false}), (req, res) => {
   const twiml = new VoiceResponse();
 
   twiml.say('Listen to your recorded message.');
-  twiml.play(req.body.RecordingUrl);
+  twiml.play({}, req.body.RecordingUrl);
   twiml.say('Goodbye.');
 
   res.send(twiml);
