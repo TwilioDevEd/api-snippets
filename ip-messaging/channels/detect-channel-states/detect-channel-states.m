@@ -4,7 +4,8 @@
 }
 
 - (void)chatClient:(TwilioChatClient *)client 
-      channelChanged:(TCHChannel *)channel {
+           channel:(TCHChannel *)channel 
+           updated:(TCHChannelUpdate)update {
     NSLog(@"Channel changed: %@", channel.friendlyName);
 }
 
