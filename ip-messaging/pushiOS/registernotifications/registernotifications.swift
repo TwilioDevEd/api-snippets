@@ -9,7 +9,7 @@ if let updatedPushToken = updatedPushToken {
 if let receivedNotification = receivedNotification {
     chatClient.handleNotification(receivedNotification) { (result) in
       if (!result.isSuccessful()) {
-        // try handling again?
+        // Handling of notification was not successful, retry?
       }
     }
 }

@@ -11,7 +11,7 @@ if (self.receivedNotification) {
     [self.chatClient handleNotification:self.receivedNotification
                              completion:^(TCHResult *result) {
       if (![result isSuccessful]) {
-        // try handling again?
+        // Handling of notification was not successful, retry?
       }
     }];
 }
