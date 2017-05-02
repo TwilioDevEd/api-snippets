@@ -1,5 +1,5 @@
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
-    if (self.chatClient) {
+    if (self.chatClient && self.chatClient.user) {
         [self.chatClient registerWithNotificationToken:deviceToken
                                             completion:^(TCHResult *result) {
                                                 if (![result isSuccessful]) {
