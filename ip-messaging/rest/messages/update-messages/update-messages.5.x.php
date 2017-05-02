@@ -12,7 +12,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 // Delete the message
-$message = $client->ipMessaging
+$message = $client->chat
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->messages("IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")

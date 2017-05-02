@@ -6,18 +6,18 @@ require '/path/to/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Find your Account Sid and Token at twilio.com/user/account
-$sid = "ACCOUNT_SID";
-$token = "AUTH_TOKEN";
+$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$token = "your_auth_token";
 
 // Initialize the client
 $client = new Client($sid, $token);
 
 // Update the user
-$user = $client->ipMessaging
-    ->services("SERVICE_SID")
-    ->users("USER_SID")
+$user = $client->chat
+    ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    ->users("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(
-        array("roleSid" => "NEW_ROLE_SID")
+        array("roleSid" => "RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     );
 
 echo $user->identity;
