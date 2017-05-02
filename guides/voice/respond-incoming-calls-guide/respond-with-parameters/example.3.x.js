@@ -20,7 +20,7 @@ app.post('/voice', (request, response) => {
   twiml.say({voice: 'alice'},
     `Never gonna give you up ${city}.`
   );
-  twiml.play('https://demo.twilio.com/docs/classic.mp3');
+  twiml.play({}, 'https://demo.twilio.com/docs/classic.mp3');
 
   // Render the response as XML in reply to the webhook request
   response.type('text/xml');

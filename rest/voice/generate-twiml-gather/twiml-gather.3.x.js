@@ -13,7 +13,6 @@ router.post('/voice', twilio.webhook({validate: false}), (req, res) => {
       numDigits: '1',
       method: 'POST',
     });
-    gather.play('http://howtodocs.s3.amazonaws.com/et-phone.mp3', {loop: 3});
 
     res.send(twiml);
 });
