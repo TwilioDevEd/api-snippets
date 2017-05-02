@@ -1,5 +1,7 @@
- mChatClient.getChannels().createChannel("general",
-  Channel.ChannelType.PUBLIC, new CallbackListener<Channel>() {
+mChatClient.getChannels().channelBuilder().
+  .withFriendlyName("general")
+  .withType(Channel.ChannelType.PUBLIC)
+  .build(new CallbackListener<Channel>() {
       @Override
       public void onSuccess(Channel channel) {
           if (channel != null) {
