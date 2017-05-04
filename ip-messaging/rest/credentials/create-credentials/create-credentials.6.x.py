@@ -2,7 +2,7 @@
 from twilio.rest import Client
 
 # Initialize the client
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 

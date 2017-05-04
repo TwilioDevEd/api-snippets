@@ -1,9 +1,9 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
-var service = client.services('SERVICE_SID');
+var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.users('USER_SID').update({
     roleSID: 'IDENTITY'

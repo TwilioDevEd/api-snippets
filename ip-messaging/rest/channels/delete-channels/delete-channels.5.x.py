@@ -2,12 +2,12 @@
 from twilio.rest.ip_messaging import TwilioIpMessagingClient
 
 # Initialize the client
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token)
 
 # Delete the channel
-service = client.services.get(sid="SERVICE_SID")
+service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 channel = service.channels.create()
 response = channel.delete()
 print(response)

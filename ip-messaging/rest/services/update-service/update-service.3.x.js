@@ -1,10 +1,10 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.services('SERVICE_SID').update({
+client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
     friendlyName: 'My new Chat service'
 }).then(function(response) {
     console.log(response);

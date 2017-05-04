@@ -1,11 +1,11 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
-var service = client.chat.services('SERVICE_SID');
+var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHxx').messages('IMxx').update({
+service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').messages('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
     body: 'New body content.'
 }).then(function(response) {
     console.log(response);

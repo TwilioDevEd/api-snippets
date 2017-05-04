@@ -4,7 +4,7 @@ import com.twilio.sdk.resource.list.ipmessaging.ServiceList;
 
 public class TwilioTest {
     // Find your Account Sid and Token at twilio.com/user/account
-    public static final String ACCOUNT_SID = "ACCOUNT_SID";
+    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
     public static void main(String args[]) throws TwilioRestException {

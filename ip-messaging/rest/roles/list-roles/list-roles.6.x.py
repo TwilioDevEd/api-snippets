@@ -2,11 +2,11 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # List the roles
-roles = client.chat.services("SERVICE_SID").roles.list()
+roles = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").roles.list()
 for role in roles:
     print(role.sid)

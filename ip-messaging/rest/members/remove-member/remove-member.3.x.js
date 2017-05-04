@@ -1,11 +1,11 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
-var service = client.chat.services('SERVICE_SID');
+var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHxx').members('MBxx').remove().then(function(response) {
+service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').members('MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').remove().then(function(response) {
     console.log(response);
 }).catch(function(error) {
     console.log(error);

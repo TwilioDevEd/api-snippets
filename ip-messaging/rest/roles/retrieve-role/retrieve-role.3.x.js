@@ -1,11 +1,11 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
-var service = client.chat.services('SERVICE_SID');
+var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.roles('RLxx').fetch().then(function(response) {
+service.roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch().then(function(response) {
     console.log(response);
 }).catch(function(error) {
     console.log(error);

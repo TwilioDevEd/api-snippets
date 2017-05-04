@@ -2,11 +2,11 @@
 from twilio.rest.ip_messaging import TwilioIpMessagingClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token)
 
-service = client.services.get(sid="SERVICE_SID")
+service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 channel = service.channels.get(sid="CHANNEL_SID")
 for m in channel.members.list():
     print(m)

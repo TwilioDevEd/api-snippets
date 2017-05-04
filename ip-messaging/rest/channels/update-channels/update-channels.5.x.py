@@ -2,7 +2,7 @@
 from twilio.rest.ip_messaging import TwilioIpMessagingClient
 
 # Initialize the client
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = TwilioIpMessagingClient(account, token)
 

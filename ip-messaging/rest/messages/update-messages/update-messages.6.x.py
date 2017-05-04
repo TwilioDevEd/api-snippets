@@ -2,12 +2,12 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
 message = client.chat \
-                .services("SERVICE_SID") \
+                .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .channels("CHANNEL_SID") \
                 .messages("MESSAGE_SID") \
                 .update(body="MESSAGE")

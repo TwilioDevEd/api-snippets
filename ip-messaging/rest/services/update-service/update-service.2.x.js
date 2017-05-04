@@ -1,10 +1,10 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
 
-client.services('SERVICE_SID').update({
+client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
     friendlyName: 'NAME'
 }).then(function(response) {
     console.log(response);

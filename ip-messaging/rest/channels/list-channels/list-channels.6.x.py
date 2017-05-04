@@ -2,13 +2,13 @@
 from twilio.rest import Client
 
 # Initialize the client
-account = "ACCOUNT_SID"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "AUTH_TOKEN"
 client = Client(account, token)
 
 # List the channels
 channels = client.chat \
-                 .services("SERVICE_SID") \
+                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .channels \
                  .list()
 

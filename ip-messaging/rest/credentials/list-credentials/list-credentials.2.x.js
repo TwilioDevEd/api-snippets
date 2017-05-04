@@ -1,4 +1,4 @@
-var accountSid = 'ACCOUNT_SID';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'AUTH_TOKEN';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
