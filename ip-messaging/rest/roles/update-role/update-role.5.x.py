@@ -3,7 +3,7 @@ from twilio.rest.ip_messaging import TwilioIpMessagingClient
 
 # Initialize the Client
 account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-token = "AUTH_TOKEN"
+token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 # Update role

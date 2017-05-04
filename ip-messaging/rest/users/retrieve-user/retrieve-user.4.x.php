@@ -5,7 +5,7 @@ require('Services/Twilio.php');
 
 // Find your Account Sid and Token at twilio.com/user/account
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "AUTH_TOKEN";
+$token = "your_auth_token";
 
 // Initialize the client
 $client = new IPMessaging_Services_Twilio($sid, $token);

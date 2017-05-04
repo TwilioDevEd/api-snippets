@@ -2,7 +2,7 @@ require 'twilio-ruby'
 
 # Get your Account SID, Auth Token, Service SID and Channel SID from twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = 'AUTH_TOKEN'
+auth_token = 'your_auth_token'
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 channel_sid = 'CHANNEL_SID'
 message_sid = 'MESSAGE_SID'

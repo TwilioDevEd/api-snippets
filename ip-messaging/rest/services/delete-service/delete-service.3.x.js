@@ -1,5 +1,5 @@
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'AUTH_TOKEN';
+var authToken = 'your_auth_token';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);

@@ -3,7 +3,7 @@ from twilio.rest import Client
 
 # Initialize the client
 account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-token = "AUTH_TOKEN"
+token = "your_auth_token"
 client = Client(account, token)
 
 credential = client.chat.credentials("CREDENTIAL_SID").fetch()
