@@ -2,12 +2,12 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
 # Create role
-role = client.chat.services("SERVICE_SID").roles.create(
+role = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").roles.create(
     friendly_name="new_role",
     type="deployment",
     permission=["createChannel", "joinChannel"]

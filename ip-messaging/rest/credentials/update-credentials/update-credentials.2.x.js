@@ -1,10 +1,10 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
 
-client.credentials('SERVICE_SID').update({
+client.credentials('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
     type: 'TYPE'
 }).then(function(response) {
     console.log(response);

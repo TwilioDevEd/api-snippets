@@ -2,11 +2,11 @@
 from twilio.rest.ip_messaging import TwilioIpMessagingClient
 
 # Initialize the Client
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 # List the role
-service = client.services.get(sid="SERVICE_SID")
+service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 for c in service.roles.list():
     print(c.sid)

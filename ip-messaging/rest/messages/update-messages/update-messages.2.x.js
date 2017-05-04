@@ -1,11 +1,11 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
-var service = client.services('SERVICE_SID');
+var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHANNEL_SID').messages('MESSAGE_SID').post({
+service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').messages('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').post({
     body: 'New body content.'
 }).then(function(response) {
     console.log(response);

@@ -5,10 +5,10 @@ using Twilio;
 class Example {
     static void Main (string[] args) {
         // Find your Account Sid and Auth Token at twilio.com/user/account
-        string accountSid = "accountSid";
-        string authToken = "authToken";
-        string serviceSid = "serviceSid";
-        string roleSid = "roleSid";
+        string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        string authToken = "your_auth_token";
+        string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        string roleSid = "RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         string type = "deployment";
 
         // Delete a role
@@ -17,4 +17,3 @@ class Example {
         Console.WriteLine(status);
     }
 }
-

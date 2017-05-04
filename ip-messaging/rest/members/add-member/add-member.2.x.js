@@ -1,11 +1,11 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
 var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
-var service = client.services('SERVICE_SID');
+var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHANNEL_SID').members.create({
+service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').members.create({
     identity: "IDENTITY"
 }).then(function(response) {
     console.log(response);
