@@ -8,6 +8,6 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Update the user
 service = @client.chat.v2.services(service_sid)
-user = service.users('USER_SID').fetch
+user = service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 response = user.update(role_sid: 'NEW_SID')
 puts response

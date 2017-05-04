@@ -9,7 +9,7 @@ client = Client(account, token)
 # Retrieve the channel
 channel = client.chat \
                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                .channels("CHANNEL_SID") \
+                .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .fetch()
 
 print(channel.sid)

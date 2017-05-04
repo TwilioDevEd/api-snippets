@@ -14,7 +14,7 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Retrieve the channel
-$channel = $service->channels->get("CHANNEL_SID");
+$channel = $service->channels->get("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Add the member
 $member = $channel->members->create(

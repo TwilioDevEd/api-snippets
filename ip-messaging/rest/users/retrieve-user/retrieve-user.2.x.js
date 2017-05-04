@@ -5,7 +5,7 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.users('USER_SID').get().then(function(response) {
+service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').get().then(function(response) {
     console.log(response);
 }).fail(function(error) {
     console.log(error);

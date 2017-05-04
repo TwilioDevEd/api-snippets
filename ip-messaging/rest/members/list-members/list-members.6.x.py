@@ -8,7 +8,7 @@ client = Client(account, token)
 
 members = client.chat \
                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                .channels("CHANNEL_SID") \
+                .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .members \
                 .list()
 

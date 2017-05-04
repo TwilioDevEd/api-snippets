@@ -7,5 +7,5 @@ token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-user = service.users.get(sid="USER_SID")
+user = service.users.get(sid="USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 print(user)

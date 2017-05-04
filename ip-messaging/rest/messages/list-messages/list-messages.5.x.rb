@@ -4,7 +4,7 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-channel_sid = 'CHANNEL_SID'
+channel_sid = 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # List the messages

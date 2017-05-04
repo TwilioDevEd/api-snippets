@@ -15,7 +15,7 @@ public class TwilioTest {
         Service service = client.getService(SERVICE_SID);
 
         // Retrieve the role
-        Role role = service.getRole("ROLE_SID");
+        Role role = service.getRole("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         System.out.println(role.toString());
     }
 }

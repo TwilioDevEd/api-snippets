@@ -12,5 +12,5 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 
 // Delete the role
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-$response = $service->roles->delete("ROLE_SID");
+$response = $service->roles->delete("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 print $response;

@@ -11,7 +11,7 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 
 // Update the role
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-$role = $service->roles->get("ROLE_SID");
+$role = $service->roles->get("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 $response = $role->update(
     array(
         "Permission" => "sendMessage",

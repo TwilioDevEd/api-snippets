@@ -4,12 +4,12 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-channel_sid = 'CHANNEL_SID'
+channel_sid = 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Remove the member
 service = @client.chat.v2.services(service_sid)
 channel = service.channels(channel_sid)
 
-response = channel.members('MEMBER_SID').delete
+response = channel.members('MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').delete
 puts response

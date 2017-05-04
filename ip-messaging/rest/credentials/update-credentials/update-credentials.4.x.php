@@ -11,7 +11,7 @@ $token = "your_auth_token";
 $client = new IPMessaging_Services_Twilio($sid, $token);
 
 // Retrieve the Credential
-$credential = $client->credentials->get("CREDENTIAL_SID");
+$credential = $client->credentials->get("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Update the credential
 $response = $credential->update(

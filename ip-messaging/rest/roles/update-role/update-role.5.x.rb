@@ -8,5 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 service = @client.chat.v2.services(service_sid)
 
 # Update a role
-role = service.roles('ROLE_SID').update(permission: ['sendMessage', 'leaveChannel'])
+role = service.roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update(permission: ['sendMessage', 'leaveChannel'])
 puts "Role #{role.sid} now has permissions #{role.permissions.join(', ')}"

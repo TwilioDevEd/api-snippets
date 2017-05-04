@@ -8,6 +8,6 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Retrieve the message
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-channel = service.channels.get('CHANNEL_SID')
-message = channel.messages.get('MESSAGE_SID')
+channel = service.channels.get('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+message = channel.messages.get('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 puts message

@@ -8,7 +8,7 @@ client = Client(account, token)
 
 message = client.chat \
                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                .channels("CHANNEL_SID") \
+                .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .messages \
                 .create(body="MESSAGE")
 

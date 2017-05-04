@@ -7,7 +7,7 @@ token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 credential = client.credentials.update(
-    "CREDENTIAL_SID",
+    "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "gcm",
     api_key="xxxxx",
     friendly_name="my credential"

@@ -5,7 +5,7 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHANNEL_SID').get().then(function(response) {
+service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').get().then(function(response) {
     console.log(response);
 }).fail(function(error) {
     console.log(error);

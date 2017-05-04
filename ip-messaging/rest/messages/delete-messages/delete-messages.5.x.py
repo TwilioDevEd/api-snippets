@@ -7,7 +7,7 @@ token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-channel = service.channels.get(sid="CHANNEL_SID")
-message = channel.messages.get(sid="MESSAGE_SID")
+channel = service.channels.get(sid="CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+message = channel.messages.get(sid="IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 response = message.delete()
 print(response)

@@ -8,5 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 service = @client.chat.v2.services(service_sid)
 
 # Delete a particular role
-result = service.roles('ROLE_SID').delete
+result = service.roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').delete
 puts result   # should be true

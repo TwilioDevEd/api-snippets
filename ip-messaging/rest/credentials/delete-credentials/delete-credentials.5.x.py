@@ -6,6 +6,6 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
-response = client.credentials.delete("CREDENTIAL_SID")
+response = client.credentials.delete("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
 print(response)

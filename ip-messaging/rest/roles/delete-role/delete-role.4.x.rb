@@ -8,6 +8,6 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Delete a role
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-role = service.roles.get('ROLE_SID')
+role = service.roles.get('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 response = role.delete()
 puts response

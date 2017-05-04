@@ -8,6 +8,6 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Retrieve the member
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-channel = service.channels.get('CHANNEL_SID')
-member = channel.members.get('MEMBER_SID')
+channel = service.channels.get('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+member = channel.members.get('MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 puts member

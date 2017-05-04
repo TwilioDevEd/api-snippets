@@ -8,7 +8,7 @@ client = Client(account, token)
 
 user = client.chat \
              .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-             .users("USER_SID") \
+             .users("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
              .fetch()
 
 print(user.identity)

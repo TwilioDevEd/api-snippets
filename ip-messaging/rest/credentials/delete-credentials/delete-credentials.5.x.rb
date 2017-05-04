@@ -6,6 +6,6 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Delete the credential
-credential = @client.chat.v2.credentials('CR_SID').fetch
+credential = @client.chat.v2.credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 response = credential.delete
 puts response

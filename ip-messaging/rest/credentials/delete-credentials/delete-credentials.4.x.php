@@ -11,6 +11,6 @@ $token = "your_auth_token";
 $client = new IPMessaging_Services_Twilio($sid, $token);
 
 // Delete the Credentials
-$response = $client->credentials->delete("CREDENTIAL_SID");
+$response = $client->credentials->delete("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 print $response;

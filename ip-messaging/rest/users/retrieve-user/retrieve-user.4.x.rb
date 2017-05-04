@@ -8,5 +8,5 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Retrieve the user
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-user = service.users.get('USER_SID')
+user = service.users.get('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 puts user

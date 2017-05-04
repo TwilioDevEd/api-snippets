@@ -9,7 +9,7 @@ client = Client(account, token)
 # Update the channel
 channel = client.chat \
                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                .channels("CHANNEL_SID") \
+                .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .update(friendly_name="NEW_FRIENDLY_NAME")
 
 print(channel.friendly_name)

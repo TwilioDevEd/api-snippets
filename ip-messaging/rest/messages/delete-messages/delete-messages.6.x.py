@@ -8,8 +8,8 @@ client = Client(account, token)
 
 response = client.chat \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .channels("CHANNEL_SID") \
-                 .messages("MESSAGE_SID") \
+                 .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                 .messages("IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .delete()
 
 print(response)

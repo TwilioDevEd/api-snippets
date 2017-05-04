@@ -4,8 +4,8 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-channel_sid = 'CHANNEL_SID'
-message_sid = 'MESSAGE_SID'
+channel_sid = 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+message_sid = 'IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Update the message

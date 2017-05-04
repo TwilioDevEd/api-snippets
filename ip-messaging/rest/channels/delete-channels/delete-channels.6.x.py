@@ -9,7 +9,7 @@ client = Client(account, token)
 # Delete the channel
 response = client.chat \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .channels("CHANNEL_SID") \
+                 .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .delete()
 
 print(response)

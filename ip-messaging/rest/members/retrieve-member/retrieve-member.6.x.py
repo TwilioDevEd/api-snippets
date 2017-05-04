@@ -8,8 +8,8 @@ client = Client(account, token)
 
 member = client.chat \
                .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-               .channels("CHANNEL_SID") \
-               .members("MEMBER_SID") \
+               .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+               .members("MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                .fetch()
 
 print(member.sid)

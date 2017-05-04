@@ -14,7 +14,7 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Update the channel
-$channel = $service->channels->get("CHANNEL_SID");
+$channel = $service->channels->get("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 $response = $channel->update(array(
     "FriendlyName" => "NEW_FRIENDLY_NAME",
 ));

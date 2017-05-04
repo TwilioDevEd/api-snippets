@@ -7,6 +7,6 @@ token = "your_auth_token"
 client = Client(account, token)
 
 # Retrieve role
-role = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").roles("ROLE_SID").fetch()
+role = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch()
 
 print(role.sid)

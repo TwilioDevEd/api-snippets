@@ -8,7 +8,7 @@ client = Client(account, token)
 
 user = client.chat \
              .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-             .users("USER_SID") \
-             .update(role_sid="NEW_ROLE_SID")
+             .users("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+             .update(role_sid="RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
 print(user.role_sid)

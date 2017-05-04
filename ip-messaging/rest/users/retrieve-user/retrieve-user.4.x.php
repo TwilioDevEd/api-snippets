@@ -14,5 +14,5 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Retrieve the user
-$user = $service->users->get("USER_SID");
+$user = $service->users->get("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 print $user;

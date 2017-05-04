@@ -9,6 +9,6 @@ client = Client(account, token)
 # Delete role
 response = client.chat \
                   .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                  .roles("ROLE_SID") \
+                  .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                   .delete()
 print(response)

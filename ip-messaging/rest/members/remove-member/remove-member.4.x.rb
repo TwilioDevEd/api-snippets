@@ -8,6 +8,6 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Remove the member
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-channel = service.channels.get('CHANNEL_SID')
-response = channel.members.delete(sid: 'MEMBER_SID')
+channel = service.channels.get('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+response = channel.members.delete(sid: 'MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 puts response

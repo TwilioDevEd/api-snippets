@@ -6,6 +6,6 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
-credential = client.credentials.get("CREDENTIAL_SID")
+credential = client.credentials.get("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
 print(credential)

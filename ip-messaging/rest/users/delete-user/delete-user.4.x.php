@@ -14,5 +14,5 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Delete the user
-$response = $service->users->delete("USER_SID");
+$response = $service->users->delete("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 print $response;

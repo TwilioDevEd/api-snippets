@@ -8,5 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Retrieve the user
 service = @client.chat.v2.services(service_sid)
-user = service.users('USER_SID').fetch
+user = service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 puts user.identity

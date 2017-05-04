@@ -8,6 +8,6 @@ client = TwilioIpMessagingClient(account, token)
 
 # Delete role
 service = client.services.get(sid="ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-role = service.roles.get(sid="ROLE_SID")
+role = service.roles.get(sid="RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 response = role.delete()
 print(response)

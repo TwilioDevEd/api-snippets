@@ -8,8 +8,8 @@ client = Client(account, token)
 
 message = client.chat \
                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                .channels("CHANNEL_SID") \
-                .messages("MESSAGE_SID") \
+                .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                .messages("IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .update(body="MESSAGE")
 
 print(message.body)

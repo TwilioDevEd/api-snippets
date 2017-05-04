@@ -9,8 +9,8 @@ public class TwilioTest {
     public static final String AUTH_TOKEN = "your_auth_token";
 
     public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    public static final String CHANNEL_SID = "CHANNEL_SID";
-    public static final String MEMBER_SID = "MEMBER_SID";
+    public static final String CHANNEL_SID = "CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String MEMBER_SID = "MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client

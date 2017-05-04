@@ -14,9 +14,9 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Retrieve the channel
-$channel = $service->channels->get("CHANNEL_SID");
+$channel = $service->channels->get("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Retrieve the message
-$message = $channel->messages->get("MESSAGE_SID");
+$message = $channel->messages->get("IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 print $message;

@@ -7,7 +7,7 @@ token = "your_auth_token"
 client = TwilioIpMessagingClient(account, token)
 
 # Update the channel
-service = client.services.get(sid="CHANNEL_SID")
+service = client.services.get(sid="CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 channel = service.channels.create()
 response = channel.update(friendly_name="NEW_FRIENDLY_NAME")
 print(response)

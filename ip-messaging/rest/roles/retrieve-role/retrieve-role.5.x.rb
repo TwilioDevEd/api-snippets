@@ -8,5 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 service = @client.chat.v2.services(service_sid)
 
 # Retrieve role
-role = service.roles('ROLE_SID').fetch
+role = service.roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 puts role

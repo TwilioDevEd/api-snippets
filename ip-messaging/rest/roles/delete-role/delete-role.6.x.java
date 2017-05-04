@@ -15,7 +15,7 @@ public class TwilioTest {
         Service service = client.getService(SERVICE_SID);
 
         // Get the role
-        Role role = service.getRole("ROLE_SID");
+        Role role = service.getRole("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
         // Delete the role
         boolean didDelete = role.delete();

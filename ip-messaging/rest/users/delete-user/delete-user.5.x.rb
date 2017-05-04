@@ -8,6 +8,6 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Delete the user
 service = @client.chat.v2.services(service_sid)
-user = service.users('USER_SID').fetch
+user = service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 response = user.delete
 puts response

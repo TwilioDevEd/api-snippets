@@ -14,5 +14,5 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Delete the channel
-$response = $service->channels->delete("CHANNEL_SID");
+$response = $service->channels->delete("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 print $response;

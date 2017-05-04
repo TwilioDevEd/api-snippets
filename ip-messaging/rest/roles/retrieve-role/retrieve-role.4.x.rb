@@ -8,5 +8,5 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Retrieve role
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-role = service.roles.get('ROLES_SID')
+role = service.roles.get('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 puts role

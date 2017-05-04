@@ -12,5 +12,5 @@ $client = new IPMessaging_Services_Twilio($sid, $token);
 
 // Retrieve the role
 $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-$role = $service->roles->get("ROLE_SID");
+$role = $service->roles->get("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 print $role;
