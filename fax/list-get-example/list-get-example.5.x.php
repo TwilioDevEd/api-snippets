@@ -10,6 +10,6 @@ $client = new Client($sid, $token);
 
 $faxes = $client->fax->v1->faxes->read();
 
-foreach ($$faxes as $fax) {
+foreach ($faxes as $fax) {
     echo $fax->mediaUrl;
 }
