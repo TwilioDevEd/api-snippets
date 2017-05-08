@@ -11,7 +11,7 @@ client.calls.create({
   from: '+18668675309',
   statusCallback: 'https://www.myapp.com/events',
   statusCallbackMethod: 'POST',
-  statusCallbackEvent: ['initiated', 'ringing', 'answered', 'completed'],
+  statusCallbackEvent: 'initiated ringing answered completed',
   method: 'GET',
 })
 .then((call) => process.stdout.write(call.sid));
