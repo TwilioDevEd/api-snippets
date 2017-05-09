@@ -1,2 +1,2 @@
-$ curl -G https://preview.twilio.com/wireless/Sims/AliceSmithSmartMeter \
+curl -G https://preview.twilio.com/wireless/Sims/AliceSmithSmartMeter \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

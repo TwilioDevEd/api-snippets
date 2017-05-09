@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers.json \
+curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers.json \
     -d "TriggerValue=1000" \
     -d "UsageCategory=sms" \
     -d "CallbackUrl=http://www.example.com/" \

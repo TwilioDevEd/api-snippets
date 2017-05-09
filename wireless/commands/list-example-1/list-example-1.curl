@@ -1,2 +1,2 @@
-$ curl -G https://preview.twilio.com/wireless/Commands \
+curl -G https://preview.twilio.com/wireless/Commands \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

@@ -1,4 +1,4 @@
-$ curl -X POST https://preview.twilio.com/wireless/RatePlans \
+curl -X POST https://preview.twilio.com/wireless/RatePlans \
     -d 'Alias=10gb-data-per-month' \
     -d "FriendlyName=10GB Data-only per Month" \
     -d 'DataLimit=10000' \
