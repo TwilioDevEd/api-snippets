@@ -19,7 +19,7 @@ $data = (object) array(
     'username' => "spicy_curry"
 );
 
-$item = $client->preview->sync
+$item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")
     ->syncMapItems("steph_curry")->update(json_encode($data));
