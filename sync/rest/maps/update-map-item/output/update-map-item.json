@@ -1,12 +1,12 @@
 {
   "map_sid": "Players",
-  "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Maps/Players/Items/steph_curry",
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/Players/Items/steph_curry",
   "created_by": "system",
-  "account_sid": "AC38cf10e53d331ec9ce14db86deb3bf29",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2016-07-07T21:38:21Z",
   "date_updated": "2016-07-07T21:38:21Z",
   "key": "steph_curry",
-  "date_created": "2016-07-07T21:38:21Z",
-  "service_sid": "ISd23791d9d83be960b5ede4b8bffeeb90",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {
     "level": "31",
     "name": "Stephen Curry",

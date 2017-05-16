@@ -2,13 +2,13 @@
   "items": [
     {
       "map_sid": "MPxx",
-      "url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Maps/MP3973bd2f8e1444889df0ae107269e687/Items/steph_curry",
+      "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items/steph_curry",
       "created_by": "system",
-      "account_sid": "ACxx",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "date_created": "2016-07-25T20:40:43Z",
       "date_updated": "2016-07-25T20:40:43Z",
       "key": "steph_curry",
-      "date_created": "2016-07-25T20:40:43Z",
-      "service_sid": "ISxx",
+      "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "data": {
         "level": 30,
         "name": "Stephen Curry",
@@ -20,9 +20,9 @@
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Maps/MP3973bd2f8e1444889df0ae107269e687/Items?Order=asc&From=steph_curry&PageSize=50&Page=0",
+    "first_page_url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items?Order=asc&From=steph_curry&PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Maps/MP3973bd2f8e1444889df0ae107269e687/Items?Order=asc&From=steph_curry&PageSize=50&Page=0",
+    "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items?Order=asc&From=steph_curry&PageSize=50&Page=0",
     "next_page_url": null,
     "key": "items"
   }

@@ -1,14 +1,15 @@
 {
   "unique_name": "MyFirstList",
   "links": {
-    "items": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Lists/ES9ca4371f3e424012aa0d241935e75443/Items"
+    "items": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items",
+    "permissions": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions"
   },
-  "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Lists/ES9ca4371f3e424012aa0d241935e75443",
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "created_by": "system",
-  "account_sid": "AC38cf10e53d331ec9ce14db86deb3bf29",
-  "date_updated": "2016-07-11T19:11:15Z",
-  "sid": "ES9ca4371f3e424012aa0d241935e75443",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-07-11T19:11:15Z",
-  "service_sid": "ISd23791d9d83be960b5ede4b8bffeeb90",
+  "date_updated": "2016-07-11T19:11:15Z",
+  "sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "revision": "0"
 }

@@ -1,3 +1,3 @@
-curl -X POST https://preview.twilio.com/Sync/Services/ISxx/Lists/ESxx/Items \
+curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items \
  -d 'Data={text:"welcome!"}'  \
  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
