@@ -7,7 +7,9 @@
   "date_created": "2016-07-25T20:06:36Z",
   "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {
-    "text": "hello!"
+    "number": "001",
+    "attack": "49",
+    "name": "Bulbasaur"
   },
   "list_sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "revision": "1"
