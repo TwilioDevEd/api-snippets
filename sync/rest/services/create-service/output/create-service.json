@@ -1,7 +1,7 @@
 {
   "sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "friendly_name": "FriendlyName",
+  "friendly_name": "MySyncServiceInstance",
   "date_created": "2016-08-25T04:10:54Z",
   "date_updated": "2017-05-09T14:25:02Z",
   "acl_enabled": false,

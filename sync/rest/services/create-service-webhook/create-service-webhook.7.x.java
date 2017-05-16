@@ -10,7 +10,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Service service = Service.creator().setFriendlyName("MySyncServiceInstance").create();
+    Service service = Service.creator()
+      .setFriendlyName("MySyncServiceInstance")
+      .setWebhookUrl("http://example.com/sync")
+      .create();
 
     System.out.println(service.getSid());
   }
