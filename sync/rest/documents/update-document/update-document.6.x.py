@@ -16,8 +16,7 @@ new_data = json.dumps({
     'genre': "Romance"
 })
 
-document = client.preview \
-                 .sync \
+document = client.sync \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .documents("MyFirstDocument") \
                  .update(data=new_data)
