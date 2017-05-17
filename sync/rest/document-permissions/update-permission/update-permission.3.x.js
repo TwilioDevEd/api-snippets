@@ -5,11 +5,11 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.documents('MyFirstDocument')
+service.documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .documentPermissions('bob').update({
     read: 'true',
     write: 'true',
-    manage: 'false'
+    manage: 'true'
   }).then(function(response) {
     console.log(response);
   }).catch(function(error) {

@@ -5,7 +5,7 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.syncLists('MyFirstList')
+service.syncLists('ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .syncListPermissions.list()
     .then(function(response) {
       console.log(response);

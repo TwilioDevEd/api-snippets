@@ -5,7 +5,7 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.documents('MyFirstDocument')
+service.documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .documentPermissions('bob').remove()
     .then(function(response) {
       console.log(response);
