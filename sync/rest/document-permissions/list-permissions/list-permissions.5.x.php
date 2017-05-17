@@ -9,7 +9,7 @@ $authToken = 'your_auth_token';
 $client = new Client($accountSid, $authToken);
 $documents = $client->preview->sync
                     ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                    ->documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                    ->documents('MyFirstDocument')
                     ->documentPermissions
                     ->read();
 

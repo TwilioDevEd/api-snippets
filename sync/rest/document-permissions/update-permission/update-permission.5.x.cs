@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            DocumentPermissionResource.Update(serviceSid, "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob", true, true, true);
+            DocumentPermissionResource.Update(serviceSid, "MyFirstDocument", "bob", true, true, true);
         }
         catch (ApiException err)
         {

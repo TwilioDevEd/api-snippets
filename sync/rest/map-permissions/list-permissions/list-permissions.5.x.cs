@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            SyncMapPermissionResource.Read(serviceSid, "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            SyncMapPermissionResource.Read(serviceSid, "Players");
         }
         catch (ApiException err)
         {

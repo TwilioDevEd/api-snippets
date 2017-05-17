@@ -15,7 +15,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String pathServiceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        String pathMapSid = "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        String pathMapSid = "Players";
 
         ResourceSet<SyncMapPermission> syncMapPermissions = SyncMapPermission
                 .reader(pathServiceSid, pathMapSid).read();

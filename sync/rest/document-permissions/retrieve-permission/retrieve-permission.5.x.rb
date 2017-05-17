@@ -7,7 +7,7 @@ client = Twilio::REST::Client.new(accountSid, authToken)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
-  response = service.documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  response = service.documents('MyFirstDocument')
     .document_permissions('bob').fetch
   puts response
 rescue Twilio::REST::TwilioException => err

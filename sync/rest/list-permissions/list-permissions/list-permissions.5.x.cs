@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            SyncListPermissionResource.Read(serviceSid, "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            SyncListPermissionResource.Read(serviceSid, "MyFirstList");
         }
         catch (ApiException err)
         {

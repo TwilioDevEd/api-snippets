@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            SyncMapPermissionResource.Delete(serviceSid, "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob");
+            SyncMapPermissionResource.Delete(serviceSid, "Players", "bob");
         }
         catch (ApiException err)
         {

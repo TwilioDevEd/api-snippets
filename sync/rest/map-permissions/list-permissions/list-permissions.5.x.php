@@ -9,7 +9,7 @@ $authToken = 'your_auth_token';
 $client = new Client($accountSid, $authToken);
 $permissions = $client->preview->sync
                       ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                      ->syncMaps('MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                      ->syncMaps('Players')
                       ->syncMapPermissions
                       ->read();
 

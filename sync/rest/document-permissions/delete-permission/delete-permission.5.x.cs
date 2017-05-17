@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            DocumentPermissionResource.Delete(serviceSid, "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob");
+            DocumentPermissionResource.Delete(serviceSid, "MyFirstDocument", "bob");
         }
         catch (ApiException err)
         {

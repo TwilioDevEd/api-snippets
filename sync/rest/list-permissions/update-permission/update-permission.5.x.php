@@ -11,7 +11,7 @@ $client = new Client($accountSid, $authToken);
 
 $status = $client->preview->sync
                  ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                 ->syncLists('ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                 ->syncLists('MyFirstList')
                  ->syncListPermissions('bob')
                  ->update($read = true, $write = true, $manage = true);
 

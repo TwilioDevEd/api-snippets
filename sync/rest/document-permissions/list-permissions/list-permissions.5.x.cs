@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            DocumentPermissionResource.Read(serviceSid, "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            DocumentPermissionResource.Read(serviceSid, "MyFirstDocument");
         }
         catch (ApiException err)
         {

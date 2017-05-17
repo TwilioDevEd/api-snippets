@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 document_permission = client.preview \
                             .sync \
                             .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                            .documents("ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                            .documents("MyFirstDocument") \
                             .document_permissions("bob") \
                             .fetch()
 

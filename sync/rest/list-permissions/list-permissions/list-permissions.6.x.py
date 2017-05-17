@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 list_permissions = client.preview \
                          .sync \
                          .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                         .sync_lists("ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                         .sync_lists("MyFirstList") \
                          .sync_list_permissions \
                          .list()
 

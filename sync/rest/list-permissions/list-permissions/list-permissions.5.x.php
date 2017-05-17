@@ -9,7 +9,7 @@ $authToken = 'your_auth_token';
 $client = new Client($accountSid, $authToken);
 $permissions = $client->preview->sync
     ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    ->syncLists('ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+    ->syncLists('MyFirstList')
     ->syncListPermissions
     ->read();
 

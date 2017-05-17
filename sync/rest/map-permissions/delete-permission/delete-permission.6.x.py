@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 did_delete = client.preview \
                    .sync \
                    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                   .sync_maps("MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                   .sync_maps("Players") \
                    .sync_map_permissions("bob") \
                    .delete()
 

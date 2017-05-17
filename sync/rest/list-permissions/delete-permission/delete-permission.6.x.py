@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 did_delete = client.preview \
                    .sync \
                    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                   .sync_lists("ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                   .sync_lists("MyFirstList") \
                    .sync_list_permissions("bob") \
                    .delete()
 

@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            SyncListPermissionResource.Update(serviceSid, "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob", true, true, true);
+            SyncListPermissionResource.Update(serviceSid, "MyFirstList", "bob", true, true, true);
         }
         catch (ApiException err)
         {

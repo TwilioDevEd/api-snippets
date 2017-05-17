@@ -1,4 +1,4 @@
-curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions/bob \
+curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/MyFirstList/Permissions/bob \
  -d 'Read=true' \
  -d 'Write=true' \
  -d 'Manage=true' \

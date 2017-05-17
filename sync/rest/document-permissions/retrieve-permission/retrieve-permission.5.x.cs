@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            DocumentPermissionResource.Fetch(serviceSid, "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob");
+            DocumentPermissionResource.Fetch(serviceSid, "MyFirstDocument", "bob");
         }
         catch (ApiException err)
         {

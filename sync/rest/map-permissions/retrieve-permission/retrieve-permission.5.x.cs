@@ -18,7 +18,7 @@ public class Example
 
         try
         {
-            SyncMapPermissionResource.Fetch(serviceSid, "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "bob");
+            SyncMapPermissionResource.Fetch(serviceSid, "Players", "bob");
         }
         catch (ApiException err)
         {

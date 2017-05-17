@@ -14,7 +14,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        String documentSid = "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        String documentSid = "MyFirstDocument";
         String identity = "bob";
 
         DocumentPermission documentPermission = DocumentPermission

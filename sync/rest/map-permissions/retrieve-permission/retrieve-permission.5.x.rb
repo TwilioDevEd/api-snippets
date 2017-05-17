@@ -7,7 +7,7 @@ client = Twilio::REST::Client.new(accountSid, authToken)
 service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
-  response = service.sync_maps('MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  response = service.sync_maps('Players')
     .sync_map_permissions('bob').fetch
   puts response
 rescue Twilio::REST::TwilioException => err

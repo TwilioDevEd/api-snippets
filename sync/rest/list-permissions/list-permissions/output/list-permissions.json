@@ -3,20 +3,20 @@
     {
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "list_sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "list_sid": "MyFirstList",
       "identity": "bob",
       "read": true,
       "write": true,
       "manage": false,
-      "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions/bob"
+      "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/MyFirstList/Permissions/bob"
     }
   ],
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions?PageSize=50&Page=0",
+    "first_page_url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/MyFirstList/Permissions?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions?PageSize=50&Page=0",
+    "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/MyFirstList/Permissions?PageSize=50&Page=0",
     "next_page_url": null,
     "key": "permissions"
   }

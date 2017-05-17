@@ -14,7 +14,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String pathServiceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        String pathSid = "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        String pathSid = "MyFirstList";
         String pathIdentity = "bob";
 
         SyncListPermission syncListPermission = SyncListPermission
