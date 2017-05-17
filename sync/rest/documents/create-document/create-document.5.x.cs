@@ -2,7 +2,7 @@
 using System;
 using Newtonsoft.Json;
 using Twilio;
-using Twilio.Rest.Sync.V1.Service;
+using Twilio.Rest.Preview.Sync.Service;
 
 public class Example
 {

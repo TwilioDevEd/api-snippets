@@ -13,7 +13,7 @@ data = json.dumps({
     'attack': 50
 })
 
-list_item = client.sync \
+list_item = client.preview.sync \
                   .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                   .sync_lists("MyCollection") \
                   .sync_list_items(0) \

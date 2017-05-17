@@ -13,7 +13,7 @@ data = json.dumps({
     'username': "spicy_curry"
 })
 
-map_item = client.sync \
+map_item = client.preview.sync \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .sync_maps("Players") \
                  .sync_map_items \

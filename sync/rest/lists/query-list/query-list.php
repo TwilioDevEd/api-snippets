@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$items = $client->sync
+$items = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncLists("MyCollection")
     ->syncListItems->read(

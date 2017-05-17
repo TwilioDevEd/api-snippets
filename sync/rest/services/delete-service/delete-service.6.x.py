@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-response = client \
+response = client.preview \
       .sync \
       .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
       .delete()

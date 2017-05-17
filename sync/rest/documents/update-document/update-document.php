@@ -21,7 +21,7 @@ $data = (object) array(
     'genre' => "Romance"
 );
 
-$doc = $client->sync
+$doc = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->documents("MyFirstDocument")->update(
         array(

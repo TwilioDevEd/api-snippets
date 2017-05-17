@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-document_permissions = client.sync \
+document_permissions = client.preview.sync \
                              .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                              .documents("MyFirstDocument") \
                              .document_permissions \

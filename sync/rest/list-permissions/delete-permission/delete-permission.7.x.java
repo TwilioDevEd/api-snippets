@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/libraries/java
 
 import com.twilio.Twilio;
-import com.twilio.rest.sync.v1.service.synclist.SyncListPermission;
+import com.twilio.rest.preview.sync.service.synclist.SyncListPermission;
 
 import java.net.URISyntaxException;
 

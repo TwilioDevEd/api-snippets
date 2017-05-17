@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$doc = $client->sync
+$doc = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->documents("MyFirstDocument")->fetch();
 

@@ -19,7 +19,7 @@ $data = (object) array(
     'attack' => 49
 );
 
-$item = $client->sync
+$item = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncLists("MyCollection")
     ->syncListItems->create(

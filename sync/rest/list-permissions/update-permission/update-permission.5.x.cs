@@ -3,7 +3,7 @@ using System;
 using Newtonsoft.Json;
 using Twilio;
 using Twilio.Exceptions;
-using Twilio.Rest.Sync.V1.Service.SyncList;
+using Twilio.Rest.Preview.Sync.Service.SyncList;
 
 public class Example
 {

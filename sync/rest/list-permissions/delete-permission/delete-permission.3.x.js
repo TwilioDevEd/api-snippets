@@ -3,7 +3,7 @@ var authToken = 'your_auth_token';
 var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
-var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+var service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.syncLists('MyFirstList')
   .syncListPermissions('bob').remove()

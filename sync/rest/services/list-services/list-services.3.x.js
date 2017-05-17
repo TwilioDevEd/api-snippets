@@ -4,7 +4,7 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.sync.services.list()
+client.preview.sync.services.list()
   .then(function(response) {
     console.log(response);
   }).catch(function(error) {

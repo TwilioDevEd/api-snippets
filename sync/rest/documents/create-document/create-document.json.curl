@@ -1,4 +1,4 @@
-curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Documents \
+curl -X POST https://preview.twilio.com/Sync/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Documents \
  -d 'UniqueName=MyFirstDocument' \
  -d 'Data={"firstName":"Alice"}'  \
  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

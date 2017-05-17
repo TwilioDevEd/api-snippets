@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$item = $client->sync
+$item = $client->preview->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")->delete();
 

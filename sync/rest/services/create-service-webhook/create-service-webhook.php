@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$service = $client->sync->services->create(
+$service = $client->preview->sync->services->create(
     array(
         'friendlyName' => "MySyncServiceInstance",
         'webhookUrl' => "https://example.com/sync"
