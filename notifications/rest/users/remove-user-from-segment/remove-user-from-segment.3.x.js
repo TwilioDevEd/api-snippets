@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .users('User0001')
-  .segment_memberships('premium').delete()
+  .segment_memberships('premium').remove()
   .then(success => console.log(success))
   .catch(error => console.log(error))
   .done();
