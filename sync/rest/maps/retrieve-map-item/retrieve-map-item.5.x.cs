@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Sync.Service.SyncMap;
+using Twilio.Rest.Sync.V1.Service.SyncMap;
 
 public class Example
 {
@@ -16,6 +16,6 @@ public class Example
 
         var item = SyncMapItemResource.Fetch(serviceSid, "Players", "steph_curry");
 
-        Console.WriteLine(item.GetData());
+        Console.WriteLine(item.Data);
     }
 }
