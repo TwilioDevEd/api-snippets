@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .users('User0001')
-  .segment_memberships.create({ segment: 'premium' })
+  .segmentMemberships.create({ segment: 'premium' })
   .then(segment_membership => console.log(segment_membership.sid))
   .catch(error => console.log(error))
   .done();

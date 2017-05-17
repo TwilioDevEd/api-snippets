@@ -10,4 +10,4 @@ client.notify
   .users.list()
   .then(users => console.log(users[0].sid))
   .catch(error => console.log(error))
-  .read();
+  .done();
