@@ -4,7 +4,7 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
     friendlyName: 'NEW_FRIENDLY_NAME'
   }).then(function(response) {
