@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$service = $client->preview->sync
+$service = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->update(
         array(
             'friendlyName' => "NEW_FRIENDLY_NAME"
