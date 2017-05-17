@@ -1,8 +1,9 @@
 @IBAction func joinRoom(sender: AnyObject) {
     let connectOptions = TVIConnectOptions.init(block: { (builder) in
-        builder.name = "existing-room"
+        builder.roomName = "existing-room"
     })
-    room = videoClient.connectWithOptions(connectOptions, delegate: self)
+    room = TwilioVideo.connect(with: connectOptions, delegate: self)
+
 }
 
 // MARK: TVIRoomDelegate
