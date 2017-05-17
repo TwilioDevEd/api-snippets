@@ -9,7 +9,7 @@ service.syncMaps('Players')
   .syncMapPermissions('bob').update({
     read: 'true',
     write: 'true',
-    manage: 'false'
+    manage: 'true'
   }).then(function(response) {
     console.log(response);
   }).catch(function(error) {

@@ -1,10 +1,10 @@
 {
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "list_sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "list_sid": "MyFirstList",
   "identity": "bob",
   "read": true,
   "write": true,
   "manage": false,
-  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions/bob"
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/MyFirstList/Permissions/bob"
 }
