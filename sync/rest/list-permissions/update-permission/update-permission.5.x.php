@@ -9,7 +9,7 @@ $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
 
-$status = $client->preview->sync
+$status = $client->sync
                  ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                  ->syncLists('MyFirstList')
                  ->syncListPermissions('bob')
