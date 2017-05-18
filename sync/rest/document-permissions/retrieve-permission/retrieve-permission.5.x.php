@@ -7,7 +7,7 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
-$document = $client->sync
+$document = $client->preview->sync
                    ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                    ->documents('MyFirstDocument')
                    ->documentPermissions('bob')

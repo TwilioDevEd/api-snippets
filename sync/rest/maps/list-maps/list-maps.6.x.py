@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-maps = client.sync \
+maps = client.preview.sync \
              .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
              .sync_maps \
              .list()

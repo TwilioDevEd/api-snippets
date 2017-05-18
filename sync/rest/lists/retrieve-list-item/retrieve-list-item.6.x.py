@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-item = client.sync \
+item = client.preview.sync \
              .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
              .sync_lists("MyCollection") \
              .sync_list_items(0) \

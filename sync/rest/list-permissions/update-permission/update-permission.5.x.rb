@@ -4,7 +4,7 @@ accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 authToken = 'your_auth_token'
 
 client = Twilio::REST::Client.new(accountSid, authToken)
-service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
   response = service.sync_lists('MyFirstList')

@@ -6,7 +6,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Create the service
-service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Retrieve a Map Item
 response = service.sync_maps('Players').fetch

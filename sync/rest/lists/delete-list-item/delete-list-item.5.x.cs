@@ -1,7 +1,7 @@
 // Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio.Clients;
-using Twilio.Rest.Sync.V1.Service.SyncList;
+using Twilio.Rest.Preview.Sync.Service.SyncList;
 
 class Example
 {

@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.sync.v1.service.synclist.SyncListItem;
+import com.twilio.rest.preview.sync.service.synclist.SyncListItem;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
