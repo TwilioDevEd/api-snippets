@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$accounts = $client->accounts->read(
+$accounts = $client->api->accounts->read(
     array("friendlyName" => "MySubaccount")
 );
 // Loop over the list of accounts and echo a property for each one
