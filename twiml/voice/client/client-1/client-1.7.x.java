@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Client-1.7.x {
+public class Client1 {
     public static void main(String[] args) {
         Client client = new Client.Builder("jenny").build();
         Dial dial = new Dial.Builder().client(client).build();

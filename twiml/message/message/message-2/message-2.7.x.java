@@ -6,7 +6,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Message-2.7.x {
+public class Message2 {
     public static void main(String[] args) {
         Body body = new Body("Store Location: 123 Easy St.");
         Media media = new Media("https://demo.twilio.com/owl.png");

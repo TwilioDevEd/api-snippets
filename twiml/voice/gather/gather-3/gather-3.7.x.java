@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Gather-3.7.x {
+public class Gather3 {
     public static void main(String[] args) {
         Say say = new Say.Builder("Please enter your account number,\nfollowed by the pound sign").build();
         Gather gather = new Gather.Builder().action("/process_gather.php").method(Method.GET).say(say).build();

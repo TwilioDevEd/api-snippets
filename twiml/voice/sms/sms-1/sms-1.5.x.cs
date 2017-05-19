@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Sms-1.5.x
+public class Sms1
 {
     public static void Main()
     {

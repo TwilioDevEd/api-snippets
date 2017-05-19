@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Record-2.7.x {
+public class Record2 {
     public static void main(String[] args) {
         Record record = new Record.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().record(record).build();

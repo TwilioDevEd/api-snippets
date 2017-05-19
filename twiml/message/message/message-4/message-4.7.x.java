@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Message-4.7.x {
+public class Message4 {
     public static void main(String[] args) {
         Media media = new Media("https://demo.twilio.com/owl.png");
         Message message = new Message.Builder("Hello Jenny").media(media).build();

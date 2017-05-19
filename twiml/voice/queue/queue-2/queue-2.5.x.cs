@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Queue-2.5.x
+public class Queue2
 {
     public static void Main()
     {

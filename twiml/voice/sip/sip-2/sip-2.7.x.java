@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Sip-2.7.x {
+public class Sip2 {
     public static void main(String[] args) {
         Sip sip = new Sip.Builder("sip:kate@example.com").username("admin").password("1234").build();
         Dial dial = new Dial.Builder().sip(sip).build();

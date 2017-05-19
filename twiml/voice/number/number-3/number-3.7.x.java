@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Number-3.7.x {
+public class Number3 {
     public static void main(String[] args) {
         Number number = new Number.Builder("+14158675309").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();
         Dial dial = new Dial.Builder().number(number).build();

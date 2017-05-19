@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Redirect-2.5.x
+public class Redirect2
 {
     public static void Main()
     {

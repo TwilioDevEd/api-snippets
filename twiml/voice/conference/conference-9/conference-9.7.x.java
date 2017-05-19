@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Conference-9.7.x {
+public class Conference9 {
     public static void main(String[] args) {
         Conference conference = new Conference.Builder("LoveTwilio").build();
         Dial dial = new Dial.Builder().action("handleLeaveConference.php").method(Method.POST).hangupOnStar("true").timeLimit(30).conference(conference).build();

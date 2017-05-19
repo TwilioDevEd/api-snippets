@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Pause-1.7.x {
+public class Pause1 {
     public static void main(String[] args) {
         Say say = new Say.Builder("I will pause 10 seconds starting now!").build();
         Say say = new Say.Builder("I just paused 10 seconds").build();

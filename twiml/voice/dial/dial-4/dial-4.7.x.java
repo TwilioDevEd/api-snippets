@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Dial-4.7.x {
+public class Dial4 {
     public static void main(String[] args) {
         Number number = new Number.Builder("+15558675309").build();
         Dial dial = new Dial.Builder().callerId("+15551112222").number(number).build();

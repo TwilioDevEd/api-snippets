@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Gather-2.5.x
+public class Gather2
 {
     public static void Main()
     {

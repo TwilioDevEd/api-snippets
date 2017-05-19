@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Conference-4.7.x {
+public class Conference4 {
     public static void main(String[] args) {
         Conference conference = new Conference.Builder("EventedConf").statusCallback("https://myapp.com/events").statusCallbackEvent("start end join leave mute hold").build();
         Dial dial = new Dial.Builder().conference(conference).build();

@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Queue-1.7.x {
+public class Queue1 {
     public static void main(String[] args) {
         Queue queue = new Queue.Builder("support").url("about_to_connect.xml").build();
         Dial dial = new Dial.Builder().queue(queue).build();

@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Pause-1.5.x
+public class Pause1
 {
     public static void Main()
     {

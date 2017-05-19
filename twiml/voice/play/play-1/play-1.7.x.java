@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Play-1.7.x {
+public class Play1 {
     public static void main(String[] args) {
         Play play = new Play.Builder("https://api.twilio.com/cowbell.mp3").loop(10).build();
         VoiceResponse response = new VoiceResponse.Builder().play(play).build();

@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Say-4.7.x {
+public class Say4 {
     public static void main(String[] args) {
         Say say = new Say.Builder("Hello World").build();
         VoiceResponse response = new VoiceResponse.Builder().say(say).build();

@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Dial-2.5.x
+public class Dial2
 {
     public static void Main()
     {

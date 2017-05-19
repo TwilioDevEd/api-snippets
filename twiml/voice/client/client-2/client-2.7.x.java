@@ -6,7 +6,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Client-2.7.x {
+public class Client2 {
     public static void main(String[] args) {
         Number number = new Number.Builder("858-987-6543").build();
         Client client = new Client.Builder("jenny").build();

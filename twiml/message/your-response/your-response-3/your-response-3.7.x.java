@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Your-response-3.7.x {
+public class YourResponse3 {
     public static void main(String[] args) {
         Message message = new Message.Builder("I'm hungry!").build();
         MessagingResponse response = new MessagingResponse.Builder().message(message).build();

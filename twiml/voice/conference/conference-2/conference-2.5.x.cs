@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Conference-2.5.x
+public class Conference2
 {
     public static void Main()
     {

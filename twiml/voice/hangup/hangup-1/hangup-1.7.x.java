@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Hangup-1.7.x {
+public class Hangup1 {
     public static void main(String[] args) {
         Hangup hangup = new Hangup.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().hangup(hangup).build();

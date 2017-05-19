@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Record-4.7.x {
+public class Record4 {
     public static void main(String[] args) {
         Record record = new Record.Builder().transcribe("true").transcribeCallback("/handle_transcribe.php").build();
         VoiceResponse response = new VoiceResponse.Builder().record(record).build();

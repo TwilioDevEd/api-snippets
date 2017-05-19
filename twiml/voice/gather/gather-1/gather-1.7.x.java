@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Gather-1.7.x {
+public class Gather1 {
     public static void main(String[] args) {
         Say say = new Say.Builder("Please enter your pin number and then press star.").build();
         Gather gather = new Gather.Builder().timeout(10).finishOnKey("*").say(say).build();

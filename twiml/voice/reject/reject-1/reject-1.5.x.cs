@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Reject-1.5.x
+public class Reject1
 {
     public static void Main()
     {

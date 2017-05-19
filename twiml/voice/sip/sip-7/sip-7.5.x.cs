@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Sip-7.5.x
+public class Sip7
 {
     public static void Main()
     {

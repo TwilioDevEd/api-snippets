@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Leave-3.7.x {
+public class Leave3 {
     public static void main(String[] args) {
         Leave leave = new Leave.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().leave(leave).build();

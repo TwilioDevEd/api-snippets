@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Gather-2.7.x {
+public class Gather2 {
     public static void main(String[] args) {
         Gather gather = new Gather.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather).build();

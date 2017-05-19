@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Message-1.7.x {
+public class Message1 {
     public static void main(String[] args) {
         Message message = new Message.Builder("Store Location: 123 Easy St.").build();
         MessagingResponse response = new MessagingResponse.Builder().message(message).build();

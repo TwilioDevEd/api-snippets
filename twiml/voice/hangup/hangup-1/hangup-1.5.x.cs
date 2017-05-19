@@ -1,7 +1,7 @@
 using Twilio.TwiML;
 
 
-public class Hangup-1.5.x
+public class Hangup1
 {
     public static void Main()
     {

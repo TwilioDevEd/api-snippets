@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Dial-6.7.x {
+public class Dial6 {
     public static void main(String[] args) {
         Conference conference = new Conference.Builder("myteamroom").build();
         Dial dial = new Dial.Builder().record("record-from-ringing-dual").recordingStatusCallback("www.myexample.com").conference(conference).build();

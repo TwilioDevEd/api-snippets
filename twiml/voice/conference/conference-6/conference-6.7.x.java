@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Conference-6.7.x {
+public class Conference6 {
     public static void main(String[] args) {
         Conference conference = new Conference.Builder("NoMusicNoBeepRoom").beep("false").waitUrl("").startConferenceOnEnter("true").endConferenceOnExit("true").build();
         Dial dial = new Dial.Builder().conference(conference).build();

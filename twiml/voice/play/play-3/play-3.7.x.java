@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Play-3.7.x {
+public class Play3 {
     public static void main(String[] args) {
         Play play = new Play.Builder().digits("wwww3").build();
         VoiceResponse response = new VoiceResponse.Builder().play(play).build();

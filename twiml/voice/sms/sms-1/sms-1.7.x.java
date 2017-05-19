@@ -4,7 +4,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
 
-public class Sms-1.7.x {
+public class Sms1 {
     public static void main(String[] args) {
         Sms sms = new Sms.Builder("The king stay the king.").from("+14105551234").to("+14105556789").build();
         VoiceResponse response = new VoiceResponse.Builder().sms(sms).build();
