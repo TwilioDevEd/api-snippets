@@ -4,40 +4,36 @@ Content-Type: application/json
 {
   "rate_plans": [
     {
-      "commands": {
-        "enabled": true
-      },
-      "renewal": "monthly",
-      "date_updated": "2016-09-01T08:21:09Z",
-      "friendly_name" : "Data-only US automotive rate plan",
-      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "voice_enabled": false,
       "unique_name": "us-automotive",
-      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
-      "sid": "WP467fb57a0aba9641a8209136d42545f8",
+      "data_limit": 50,
+      "data_metering": "pooled",
+      "date_updated": "2016-09-01T08:21:09Z",
+      "friendly_name": "Data-only US automotive rate plan",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "date_created": "2016-05-20T06:06:07Z",
-      "roaming": [],
-      "data": {
-        "cap": 50,
-        "metering": "pooled"
-      }
+      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+      "messaging_enabled": true,
+      "data_enabled": true,
+      "sid": "WP467fb57a0aba9641a8209136d42545f8",
+      "international_roaming": [],
+      "national_roaming_enabled": false
     },
     {
-      "commands": {
-        "enabled": true
-      },
-      "renewal": "monthly",
-      "date_updated": "2016-05-01T10:29:11Z",
-      "friendly_name" : "US industrial sensors with national roaming",
+      "voice_enabled": false,
+      "unique_name": "10gb-data-per-month",
+      "data_limit": 1000,
+      "data_metering": "pooled",
+      "date_updated": "2016-11-16T20:12:57Z",
+      "friendly_name": "10GB Data-only per Month",
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "unique_name": "us-industrial-sensors",
-      "url": "https://preview.twilio.com/wireless/RatePlans/WPafb9d5279926616c64ed279926619c4",
-      "sid": "WPafb9d5279926616c64ed279926619c4",
-      "date_created": "2016-05-01T06:02:29Z",
-      "roaming": ["national"],
-      "data": {
-        "cap": 10,
-        "metering": "pooled"
-      }
+      "date_created": "2016-11-16T20:12:57Z",
+      "url": "https://preview.twilio.com/wireless/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
+      "messaging_enabled": false,
+      "data_enabled": true,
+      "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
+      "international_roaming": [],
+      "national_roaming_enabled": false
     }
   ],
   "meta": {
