@@ -36,7 +36,7 @@ matrix:
       env: SNIPPET_LANGUAGE=csharp:ruby
     - language: node_js
       node_js:
-        - node
+        - stable
       env: SNIPPET_LANGUAGE=node:php
 
 addons:
