@@ -12,10 +12,10 @@ module Model
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.4.2-alpha1'],
-      PYTHON_NAME => ['5.6.0', '6.0.0rc12'],
-      RUBY_NAME   => ['4.13.0', '5.0.0.rc17'],
-      NODE_NAME   => ['2.11.0', '3.0.0-rc.13']
+      PHP_NAME    => ['4.10', '5.9.0'],
+      PYTHON_NAME => ['5.6.0', '6.2.0'],
+      RUBY_NAME   => ['4.13.0', '5.0.0.rc19'],
+      NODE_NAME   => ['2.11.0', '4.5.0']
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -27,7 +27,7 @@ module Model
         { name: 'Twilio.Auth', version: '1.4.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.0.0-rca4' },
+        { name: 'Twilio', version: '5.4.2-alpha1' },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze

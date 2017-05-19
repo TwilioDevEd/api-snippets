@@ -206,7 +206,6 @@ dependencies you need to install the following gems:
 ```bash
 $ gem install json
 $ gem install colorize
-$ gem install parallel
 ```
 
 You can use the following command to install dependencies in your system:
