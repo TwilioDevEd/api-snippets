@@ -1,7 +1,6 @@
 $ curl -X POST https://preview.twilio.com/wireless/RatePlans \
-    -d 'Alias=10gb-data-per-month' \
+    -d 'UniqueName=10gb-data-per-month' \
     -d "FriendlyName=10GB Data-only per Month" \
     -d 'DataLimit=10000' \
-    -d 'Renewal=Monthly' \
-    -d 'CommandsEnabled=false' \
+    -d 'MessagingEnabled=false' \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
