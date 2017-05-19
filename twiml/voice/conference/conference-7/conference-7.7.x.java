@@ -10,6 +10,7 @@ public class Conference-7.7.x {
         Conference conference = new Conference.Builder("Customer Waiting Room").beep("false").build();
         Dial dial = new Dial.Builder().conference(conference).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

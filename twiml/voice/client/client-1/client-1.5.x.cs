@@ -9,7 +9,7 @@ public class Client-1.5.x
       var dial = new Dial();
       dial.Client("jenny");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

@@ -9,7 +9,7 @@ public class Conference-5.5.x
       var dial = new Dial();
       dial.Conference("SimpleRoom", muted: "true");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

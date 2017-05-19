@@ -9,7 +9,7 @@ public class Conference-7.5.x
       var dial = new Dial();
       dial.Conference("Customer Waiting Room", beep: "false");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

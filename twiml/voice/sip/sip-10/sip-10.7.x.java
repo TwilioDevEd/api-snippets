@@ -10,6 +10,7 @@ public class Sip-10.7.x {
         Sip sip = new Sip.Builder("sip:kate@example.com").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();
         Dial dial = new Dial.Builder().sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

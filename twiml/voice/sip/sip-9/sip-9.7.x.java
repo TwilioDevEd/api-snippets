@@ -10,6 +10,7 @@ public class Sip-9.7.x {
         Sip sip = new Sip.Builder("sip:kate@example.com?customheader=foo").method(Method.POST).url("/handle_screening_on_answer").build();
         Dial dial = new Dial.Builder().record("true").timeout(10).hangupOnStar("true").callerId("bob").method(Method.POST).action("/handle_post_dial").sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

@@ -10,6 +10,7 @@ public class Sip-1.7.x {
         Sip sip = new Sip.Builder("sip:jack@example.com").build();
         Dial dial = new Dial.Builder().sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

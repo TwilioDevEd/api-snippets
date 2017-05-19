@@ -11,7 +11,7 @@ public class Client-2.5.x
       dial.Client("jenny");
       dial.Client("tommy");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

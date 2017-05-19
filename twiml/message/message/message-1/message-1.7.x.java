@@ -8,6 +8,7 @@ public class Message-1.7.x {
     public static void main(String[] args) {
         Message message = new Message.Builder("Store Location: 123 Easy St.").build();
         MessagingResponse response = new MessagingResponse.Builder().message(message).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

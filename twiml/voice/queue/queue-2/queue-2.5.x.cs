@@ -7,7 +7,7 @@ public class Queue-2.5.x
    {
       var response = new VoiceResponse();
       response.Say("You will now be connected to an agent.");
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

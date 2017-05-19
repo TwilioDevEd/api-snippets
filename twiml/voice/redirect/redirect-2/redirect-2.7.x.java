@@ -10,6 +10,7 @@ public class Redirect-2.7.x {
         Dial dial = new Dial.Builder("415-123-4567").build();
         Redirect redirect = new Redirect.Builder().url("http://www.foo.com/nextInstructions").build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).redirect(redirect).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

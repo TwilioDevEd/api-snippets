@@ -8,6 +8,7 @@ public class Say-2.7.x {
     public static void main(String[] args) {
         Say say = new Say.Builder("Chapeau!").voice("alice").language("fr-FR").build();
         VoiceResponse response = new VoiceResponse.Builder().say(say).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

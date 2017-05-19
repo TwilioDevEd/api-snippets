@@ -10,7 +10,7 @@ public class Message-2.5.x
       message.Body("Store Location: 123 Easy St.");
       message.Media("https://demo.twilio.com/owl.png");
       response.Message(message);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

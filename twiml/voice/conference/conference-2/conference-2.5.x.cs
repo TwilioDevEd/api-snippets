@@ -9,7 +9,7 @@ public class Conference-2.5.x
       var dial = new Dial();
       dial.Conference("moderated-conference-room", startConferenceOnEnter: "false");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

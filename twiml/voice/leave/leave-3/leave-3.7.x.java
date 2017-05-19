@@ -8,6 +8,7 @@ public class Leave-3.7.x {
     public static void main(String[] args) {
         Leave leave = new Leave.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().leave(leave).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

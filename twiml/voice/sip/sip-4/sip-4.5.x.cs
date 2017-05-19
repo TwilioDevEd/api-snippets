@@ -9,7 +9,7 @@ public class Sip-4.5.x
       var dial = new Dial();
       dial.Sip("sip:jack@example.com;transport=tcp");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

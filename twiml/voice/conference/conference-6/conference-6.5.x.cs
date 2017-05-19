@@ -9,7 +9,7 @@ public class Conference-6.5.x
       var dial = new Dial();
       dial.Conference("NoMusicNoBeepRoom", beep: "false", waitUrl: "", startConferenceOnEnter: "true", endConferenceOnExit: "true");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

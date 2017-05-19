@@ -12,6 +12,7 @@ public class Message-2.7.x {
         Media media = new Media("https://demo.twilio.com/owl.png");
         Message message = new Message.Builder().body(body).media(media).build();
         MessagingResponse response = new MessagingResponse.Builder().message(message).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

@@ -7,7 +7,7 @@ public class Redirect-1.5.x
    {
       var response = new VoiceResponse();
       response.Redirect("http://www.foo.com/nextInstructions");
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

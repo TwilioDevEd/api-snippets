@@ -8,6 +8,7 @@ public class Hangup-1.7.x {
     public static void main(String[] args) {
         Hangup hangup = new Hangup.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().hangup(hangup).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

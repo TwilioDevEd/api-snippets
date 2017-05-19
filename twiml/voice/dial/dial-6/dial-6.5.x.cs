@@ -9,7 +9,7 @@ public class Dial-6.5.x
       var dial = new Dial(record: "record-from-ringing-dual", recordingStatusCallback: "www.myexample.com");
       dial.Conference("myteamroom");
       response.Dial(dial);
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

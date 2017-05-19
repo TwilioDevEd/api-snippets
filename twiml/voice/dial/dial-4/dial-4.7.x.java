@@ -10,6 +10,7 @@ public class Dial-4.7.x {
         Number number = new Number.Builder("+15558675309").build();
         Dial dial = new Dial.Builder().callerId("+15551112222").number(number).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

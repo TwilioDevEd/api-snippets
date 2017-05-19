@@ -10,6 +10,7 @@ public class Number-3.7.x {
         Number number = new Number.Builder("+14158675309").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();
         Dial dial = new Dial.Builder().number(number).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

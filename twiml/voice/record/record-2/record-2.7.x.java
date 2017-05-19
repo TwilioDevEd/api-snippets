@@ -8,6 +8,7 @@ public class Record-2.7.x {
     public static void main(String[] args) {
         Record record = new Record.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().record(record).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

@@ -11,6 +11,7 @@ public class Gather-3.7.x {
         Gather gather = new Gather.Builder().action("/process_gather.php").method(Method.GET).say(say).build();
         Say say = new Say.Builder("We didn't receive any input. Goodbye!").build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather).say(say).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

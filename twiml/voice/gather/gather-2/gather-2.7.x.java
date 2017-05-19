@@ -8,6 +8,7 @@ public class Gather-2.7.x {
     public static void main(String[] args) {
         Gather gather = new Gather.Builder().build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

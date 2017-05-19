@@ -11,6 +11,7 @@ public class Number-4.7.x {
         Number number = new Number.Builder("+14153333333").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://example.com/events").statusCallbackMethod("POST").build();
         Dial dial = new Dial.Builder().number(number).number(number).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {

@@ -7,7 +7,7 @@ public class Message-1.5.x
    {
       var response = new MessagingResponse();
       response.Message("Store Location: 123 Easy St.");
-      
+
       System.Console.WriteLine(response.ToString());
    }
 }

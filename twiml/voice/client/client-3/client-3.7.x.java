@@ -10,6 +10,7 @@ public class Client-3.7.x {
         Client client = new Client.Builder("jenny").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();
         Dial dial = new Dial.Builder().client(client).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
+
         try {
             System.out.println(response.toXml());
         } catch (TwiMLException e) {
