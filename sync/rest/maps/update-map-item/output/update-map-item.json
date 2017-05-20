@@ -1,6 +1,6 @@
 {
   "map_sid": "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "url": "https://preview.twilio.com/Sync/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/Players/Items/steph_curry",
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/Players/Items/steph_curry",
   "created_by": "system",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-07-07T21:38:21Z",

@@ -4,7 +4,7 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.preview.sync.services.create({
+client.sync.services.create({
   friendlyName: 'MySyncServiceInstance'
 }).then(function(response) {
   console.log(response);

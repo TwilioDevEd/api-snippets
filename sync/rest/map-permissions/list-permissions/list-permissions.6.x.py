@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-map_permissions = client.preview.sync \
+map_permissions = client.sync \
                         .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                         .sync_maps("Players") \
                         .sync_map_permissions \

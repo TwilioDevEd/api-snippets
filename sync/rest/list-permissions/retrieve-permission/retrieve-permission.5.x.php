@@ -7,7 +7,7 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
-$permission = $client->preview->sync
+$permission = $client->sync
                      ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                      ->syncLists('MyFirstList')
                      ->syncListPermissions('bob')
