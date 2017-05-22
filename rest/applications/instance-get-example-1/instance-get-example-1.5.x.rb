@@ -10,6 +10,6 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@app = @client.applications('AP2a0747eba6abf96b7e3c3ff0b4530f6e').fetch
+@app = @client.api.applications('AP2a0747eba6abf96b7e3c3ff0b4530f6e').fetch
 
 puts @app.sms_url

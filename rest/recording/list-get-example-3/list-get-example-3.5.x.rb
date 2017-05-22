@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Loop over recordings and print out a property for each one
 @client.recordings.list(
-  date_created_after: Time.new('2009-07-06')
+  date_created: Time.new('2009-07-06')
 ).each do |recording|
   puts recording.call_sid
 end

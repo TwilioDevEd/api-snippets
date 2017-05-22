@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-message = @client.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
+message = @client.api.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
 
 message.delete

@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Get all available phone numbers in Great Britain which are voice enabled
-@numbers = @client.available_phone_numbers('GB').local
+@numbers = @client.api.available_phone_numbers('GB').local
                   .list(voice_enabled: 'true')
 
 @number = @numbers[0].phone_number

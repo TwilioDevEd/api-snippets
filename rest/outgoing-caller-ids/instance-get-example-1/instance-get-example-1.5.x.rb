@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@caller_id = @client
+@caller_id = @client.api
                     .outgoing_caller_ids('PNe905d7e6b410746a0fb08c57e5a186f3')
                     .fetch
 

@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Retrieve available phone numbers that match the given pattern
-@numbers = @client.available_phone_numbers('US').local
+@numbers = @client.api.available_phone_numbers('US').local
                   .list(contains: '510555****')
 
 @number = @numbers[0].phone_number

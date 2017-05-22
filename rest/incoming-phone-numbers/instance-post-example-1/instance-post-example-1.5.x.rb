@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @number = @client
-                 .incoming_phone_numbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
+                 .api.incoming_phone_numbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e')
                  .fetch
 
 @number.update(

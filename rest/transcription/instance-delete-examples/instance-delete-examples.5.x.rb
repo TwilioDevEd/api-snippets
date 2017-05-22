@@ -7,5 +7,5 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-transcription = @client.transcriptions("TR8c61027b709ffb038236612dc5af8723").fetch
+transcription = @client.api.transcriptions("TR8c61027b709ffb038236612dc5af8723").fetch
 transcription.delete

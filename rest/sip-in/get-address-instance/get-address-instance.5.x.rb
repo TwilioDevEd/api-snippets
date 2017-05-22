@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 @ip_acl_list_sid = 'AL32a3c49700934481addd5ce1659f04d2'
 @ip_sid = 'IP32a3c49700934481addd5ce1659f04d2'
 
-@ip_address = @client.sip
+@ip_address = @client.api.sip
                      .ip_access_control_lists(@ip_acl_list_sid)
                      .ip_addresses(@ip_sid)
                      .fetch

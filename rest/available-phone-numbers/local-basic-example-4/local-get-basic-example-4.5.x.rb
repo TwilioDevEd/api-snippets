@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@numbers = @client.available_phone_numbers('US').local
+@numbers = @client.api.available_phone_numbers('US').local
                   .list(in_region: 'AR')
 
 @number = @numbers[0].phone_number

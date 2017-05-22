@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Get all the members in the queue with the given sid
-@member = @client.queues('QU5ef8732a3c49700934481addd5ce1659')
+@member = @client.api.queues('QU5ef8732a3c49700934481addd5ce1659')
                  .members('CA5ef8732a3c49700934481addd5ce1659').fetch
 
 @member.update(

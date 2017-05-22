@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Retrieve available phone numbers in near specified latitude and longitude
 # for the given account sid
-@numbers = @client.available_phone_numbers('US')
+@numbers = @client.api.available_phone_numbers('US')
                   .local.list(
                     near_lat_long: '37.840699,-122.461853',
                     distance: '50',
