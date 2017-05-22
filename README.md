@@ -206,7 +206,6 @@ dependencies you need to install the following gems:
 ```bash
 $ gem install json
 $ gem install colorize
-$ gem install parallel
 ```
 
 You can use the following command to install dependencies in your system:
@@ -267,13 +266,19 @@ the wrong user.
    127.0.0.1 ip-messaging.twilio.com
    ```
 
-1. Export Necessary Environment Variables.
-
-   This repository includes a `.env.example` file. Change it to match your configuration
-   and the use the `source` command to export the variables.
+1. Make a copy of the `.env.example` file.
 
    ```bash
-   $ source .env.example
+   $ cp .env.example .env
+   ```
+
+1. Set the necessary environment variables.
+
+   Change environment variables in the `.env` file to match your configuration
+   and then use the `source` command to export the variables.
+
+   ```bash
+   $ source .env
    ```
 
 1. Finally, run the tests.

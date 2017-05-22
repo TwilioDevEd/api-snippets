@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 @sip_domain_sid = 'SD32a3c49700934481addd5ce1659f04d2'
 @cred_list_mapping_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 
-@cred_list_mapping = @client.account.sip
+@cred_list_mapping = @client.sip
                             .domains(@sip_domain_sid)
                             .credential_list_mappings(@cred_list_mapping_sid)
 

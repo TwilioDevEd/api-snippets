@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Get all acl's an print their friendly names
-@client.account.sip.ip_access_control_lists.list
+@client.sip.ip_access_control_lists.list
        .each do |ip_access_control_list|
          puts ip_access_control_list.friendly_name
        end

@@ -7,7 +7,7 @@ before_install:
   - ./install_travis_dependencies.sh
 
 install:
-  - gem install json colorize parallel
+  - gem install json colorize
   - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
   - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
   - sudo update-ca-certificates
@@ -24,18 +24,20 @@ env:
     - GRADLE_OPTS="-Dorg.gradle.daemon=true"
     - BASH=/bin/bash
     - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-    - PARALLEL=2
   matrix:
     - SNIPPET_LANGUAGE=java6
     - SNIPPET_LANGUAGE=java7
     - SNIPPET_LANGUAGE=python:curl
-    - SNIPPET_LANGUAGE=php:ruby
 
 matrix:
   include:
     - language: csharp
       mono: latest
-      env: SNIPPET_LANGUAGE=csharp:node
+      env: SNIPPET_LANGUAGE=csharp:ruby
+    - language: node_js
+      node_js:
+        - stable
+      env: SNIPPET_LANGUAGE=node:php
 
 addons:
   hosts:

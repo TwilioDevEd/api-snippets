@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.notifications.list(
+@client.notifications.list(
   message_date: Time.new('2009-07-06'),
   log: '1'
 ).each do |notification|

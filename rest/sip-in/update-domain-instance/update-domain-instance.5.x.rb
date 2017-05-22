@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@domain = @client.account.sip
+@domain = @client.sip
                  .domains('SD32a3c49700934481addd5ce1659f04d2').fetch
 
 @domain.update(

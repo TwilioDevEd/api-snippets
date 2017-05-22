@@ -2,7 +2,6 @@ require 'json'
 require 'optparse'
 require 'ostruct'
 require 'colorize'
-require 'parallel'
 require_relative 'error_logger'
 require_relative 'model/snippet'
 require_relative 'model/test_session'
@@ -46,20 +45,10 @@ class SnippetTester
   end
 
   def run
-    puts '####### Testing marked snippets #######'
-    parallel = ENV['PARALLEL']
-
-    if parallel
-      parallel = parallel.to_i
-    end
-
-    if !parallel
-      @snippet_models.each do |snippet|
-        test_folder(snippet)
-      end
-    else
-      Parallel.each(@snippet_models, in_processes: parallel) do |snippet|
-        test_folder(snippet)
+    @snippet_models.each do |snippet|
+      puts "Testing #{snippet.output_folder}"
+      snippet.available_langs.each do |lang, _file_name|
+        @language_handlers.fetch(lang).test_snippet(snippet)
       end
     end
   end

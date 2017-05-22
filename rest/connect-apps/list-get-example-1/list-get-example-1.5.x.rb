@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.connect_apps.list.each do |connect_app|
+@client.connect_apps.list.each do |connect_app|
   puts connect_app.friendly_name
 end

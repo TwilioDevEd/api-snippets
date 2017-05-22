@@ -12,7 +12,7 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@credential_list = @client.account.sip
+@credential_list = @client.sip
                           .credential_lists(@cred_list_sid).fetch
 
 @credential_list.update(friendly_name: 'Marlos Lieutenants')

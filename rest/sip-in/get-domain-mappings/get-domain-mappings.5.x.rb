@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over ip_access_control_list_mappings and print out a property for each
-@client.account.sip.domains('SD32a3c49700934481addd5ce1659f04d2')
+@client.sip.domains('SD32a3c49700934481addd5ce1659f04d2')
        .ip_access_control_list_mappings
        .list.each do |ip_access_control_list_mapping|
          puts ip_access_control_list_mapping.friendly_name

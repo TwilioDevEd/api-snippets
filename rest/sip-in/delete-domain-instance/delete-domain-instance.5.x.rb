@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@domain = @client.account.sip
+@domain = @client.sip
                  .domains('SD32a3c49700934481addd5ce1659f04d2')
                  .fetch
 
