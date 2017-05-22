@@ -16,7 +16,7 @@ data = json.dumps({
     'genre': "Romance"
 })
 
-document = client.preview.sync \
+document = client.sync \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                  .documents \
                  .create(unique_name="MyFirstDocument", data=data)

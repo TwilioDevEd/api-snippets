@@ -7,7 +7,7 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
-$status = $client->preview->sync
+$status = $client->sync
                  ->services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                  ->syncMaps('Players')
                  ->syncMapPermissions('bob')

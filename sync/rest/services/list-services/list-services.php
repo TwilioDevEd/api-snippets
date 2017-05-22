@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$services = $client->preview->sync->services->read();
+$services = $client->sync->services->read();
 
 foreach ($services as $service) {
     echo $service->friendlyName, PHP_EOL;

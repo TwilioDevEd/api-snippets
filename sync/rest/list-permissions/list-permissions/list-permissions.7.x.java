@@ -2,7 +2,7 @@
 
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
-import com.twilio.rest.preview.sync.service.synclist.SyncListPermission;
+import com.twilio.rest.sync.v1.service.synclist.SyncListPermission;
 
 import java.net.URISyntaxException;
 
