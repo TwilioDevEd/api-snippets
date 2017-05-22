@@ -4,7 +4,7 @@ Content-Type: application/json
 {
   "unique_name" : "AliceSmithSmartMeter",
   "date_updated" : "2016-05-13T22:19:53Z",
-  "voice_url": "https://my-app-server.com/twiml/mobile-originated-call",
+  "voice_url": null,
   "iccid": "8901340852295524703",
   "voice_fallback_method": "POST",
   "sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",

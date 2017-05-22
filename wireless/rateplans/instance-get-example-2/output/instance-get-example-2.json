@@ -9,7 +9,7 @@ Content-Type: application/json
   "friendly_name": "Data-only US automotive rate plan",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-05-20T06:06:07Z",
-  "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+  "url": "https://wireless.twilio.com/v1/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
   "messaging_enabled": true,
   "data_enabled": true,
   "sid": "WP467fb57a0aba9641a8209136d42545f8",

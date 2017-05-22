@@ -9,7 +9,7 @@ Content-Type: application/json
   "friendly_name": "10GB Data-only per Month",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-11-16T20:12:57Z",
-  "url": "https://preview.twilio.com/wireless/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
+  "url": "https://wireless.twilio.com/v1/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
   "messaging_enabled": false,
   "data_enabled": true,
   "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
