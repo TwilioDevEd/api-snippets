@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 @acl_sid = 'AL32a3c49700934481addd5ce1659f04d2'
 
-ip_address = @client.account.sip.ip_access_control_lists(@acl_sid)
+ip_address = @client.sip.ip_access_control_lists(@acl_sid)
                     .ip_addresses.create(
                       friendly_name: 'My office IP Address',
                       ip_address: '55.102.123.124'

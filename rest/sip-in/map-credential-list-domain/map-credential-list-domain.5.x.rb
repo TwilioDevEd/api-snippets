@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 @cred_list_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 
 # Get the credential mappings for the given sip domain and add a credential list
-cred_list_mapping = @client.account.sip
+cred_list_mapping = @client.sip
                            .domains('SD32a3c49700934481addd5ce1659f04d2')
                            .credential_list_mappings
                            .create(credential_list_sid: @cred_list_sid)

@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@queue = @client.account.queues('QU5ef8732a3c49700934481addd5ce1659').fetch
+@queue = @client.queues('QU5ef8732a3c49700934481addd5ce1659').fetch
 
 puts @queue.average_wait_time

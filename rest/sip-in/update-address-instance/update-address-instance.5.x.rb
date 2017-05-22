@@ -12,7 +12,7 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@ip_address = @client.account.sip
+@ip_address = @client.sip
                      .ip_access_control_lists(@ip_acl_list_sid)
                      .ip_addresses('IP32a3c49700934481addd5ce1659f04d2')
                      .fetch

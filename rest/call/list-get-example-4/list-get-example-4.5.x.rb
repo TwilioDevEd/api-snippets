@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.calls.list(
+@client.calls.list(
   status: 'in-progress',
   start_time_after: Time.parse('2009-07-04'),
   start_time_before: Time.parse('2009-07-06')

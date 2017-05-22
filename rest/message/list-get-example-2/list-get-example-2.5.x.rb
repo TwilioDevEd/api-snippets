@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.messages.list(
+@client.messages.list(
   to: 'to_number',
   from: 'from_number',
   date_sent: Time.new('2015-04-01T00:00:00Z')

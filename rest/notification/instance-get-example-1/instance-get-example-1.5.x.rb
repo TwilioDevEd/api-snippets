@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@notification = @client.account
+@notification = @client
                        .notifications('NO5a7a84730f529f0a76b3e30c01315d1a')
                        .fetch
 

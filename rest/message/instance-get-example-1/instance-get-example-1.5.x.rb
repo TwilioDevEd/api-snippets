@@ -10,6 +10,6 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@message = @client.account.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
+@message = @client.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
 
 puts @message.body

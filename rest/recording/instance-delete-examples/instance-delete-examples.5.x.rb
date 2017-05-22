@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@recording = @client.account
+@recording = @client
                     .recordings('RE557ce644e5ab84fa21cc21112e22c485').fetch
 
 @recording.delete

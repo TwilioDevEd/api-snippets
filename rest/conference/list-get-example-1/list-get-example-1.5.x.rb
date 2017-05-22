@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over conferences and print out a property for each one
-@client.account.conferences.list
+@client.conferences.list
        .each do |conference|
          puts conference.status
        end
