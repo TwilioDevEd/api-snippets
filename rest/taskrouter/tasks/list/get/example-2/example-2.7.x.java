@@ -18,7 +18,9 @@ public class Example {
       System.out.println(task.getAttributes());
     }
 
-    tasks = Task.reader(WORKSPACE_SID).setAssignmentStatus(Task.Status.PENDING).read();
+    tasks = Task.reader(WORKSPACE_SID)
+        .setAssignmentStatus(Task.Status.PENDING.toString())
+        .read();
 
     for (Task task : tasks) {
       System.out.println(task.getAttributes());
