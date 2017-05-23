@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$data = (object) array(
+$data = array(
     'number' => "001",
     'name' => "Bulbasaur",
     'attack' => 50
@@ -24,7 +24,7 @@ $item = $client->sync
     ->syncLists("MyCollection")
     ->syncListItems(0)->update(
         array(
-            'data' => json_encode($data)
+            'data' => $data
         )
     );
 
