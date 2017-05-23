@@ -5,7 +5,6 @@ Content-Type: application/json
   "usage_records": [
     {
       "commands": {
-        "international_roaming": [],
         "total": 6,
         "to_sim": 3,
         "home": {
@@ -18,7 +17,6 @@ Content-Type: application/json
       },
       "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
       "data": {
-        "international_roaming": [],
         "total": 5446765119,
         "home": {
           "total": 5446765119,
