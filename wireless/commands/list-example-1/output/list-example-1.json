@@ -6,7 +6,7 @@ Content-Type: application/json
   "commands": [
     {
       "sid": "DC17d3b4990bc837308eb589f3c543838c",
-      "command": "Hello, Sim!",
+      "command": "Hello, SIM!",
       "command_mode": "text",
       "direction": "to_sim",
       "sim_sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",
