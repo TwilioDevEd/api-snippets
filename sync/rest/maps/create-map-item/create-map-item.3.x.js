@@ -8,11 +8,11 @@ var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service.syncMaps('Players')
   .syncMapItems.create({
     key: 'steph_curry',
-    data: JSON.stringify({
+    data: {
       level: 30,
       name: "Stephen Curry",
       username: "spicy_curry"
-    })
+    }
   }).then(function(response) {
     console.log(response);
   }).catch(function(error) {

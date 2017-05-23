@@ -7,11 +7,11 @@ var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.syncLists('MyFirstList')
   .syncListItems(0).update({
-    data: JSON.stringify({
+    data: {
       number: "001",
       attack: "49",
       name: "Bulbasaur"
-    })
+    }
   }).then(function(response) {
     console.log(response);
   }).catch(function(error) {

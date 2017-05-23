@@ -7,7 +7,7 @@ var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.documents.create({
   uniqueName: 'MyFirstDocument',
-  data: JSON.stringify({ firstName: 'Alice' })
+  data: { firstName: 'Alice' }
 }).then(function(response) {
   console.log(response);
 }).catch(function(error) {

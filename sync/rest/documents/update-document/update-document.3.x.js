@@ -6,7 +6,7 @@ var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.documents('MyFirstDocument').update({
-  data: JSON.stringify({ firstName: 'Bob' })
+  data: { firstName: 'Bob' }
 }).then(function(response) {
   console.log(response);
 }).catch(function(error) {
