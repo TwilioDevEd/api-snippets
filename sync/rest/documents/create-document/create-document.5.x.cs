@@ -1,6 +1,5 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using Newtonsoft.Json;
 using Twilio;
 using Twilio.Rest.Sync.V1.Service;
 
@@ -26,7 +25,7 @@ public class Example
 
         var doc = DocumentResource.Create(serviceSid,
                                           "MyFirstDocument",
-                                          JsonConvert.SerializeObject(data));
+                                          data);
 
         Console.WriteLine(doc.Sid);
     }
