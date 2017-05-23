@@ -1,2 +1,2 @@
-$ curl -G https://preview.twilio.com/wireless/RatePlans/us-automotive \
+$ curl -G https://wireless.twilio.com/v1/RatePlans/us-automotive \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

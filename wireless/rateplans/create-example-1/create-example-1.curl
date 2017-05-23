@@ -1,6 +1,6 @@
-$ curl -X POST https://preview.twilio.com/wireless/RatePlans \
-    -d 'UniqueName=10gb-data-per-month' \
-    -d "FriendlyName=10GB Data-only per Month" \
-    -d 'DataLimit=10000' \
-    -d 'MessagingEnabled=false' \
+$ curl -X POST https://wireless.twilio.com/v1/RatePlans \
+    -d 'UniqueName=SmartMeterCA' \
+    -d "FriendlyName=California SmartMeter Plan" \
+    -d 'DataLimit=5' \
+    -d 'MessagingEnabled=true' \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

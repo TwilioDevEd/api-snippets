@@ -12,11 +12,10 @@ Content-Type: application/json
       "friendly_name": "Data-only US automotive rate plan",
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "date_created": "2016-05-20T06:06:07Z",
-      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+      "url": "https://wireless.twilio.com/v1/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
       "messaging_enabled": true,
       "data_enabled": true,
       "sid": "WP467fb57a0aba9641a8209136d42545f8",
-      "international_roaming": [],
       "national_roaming_enabled": false
     },
     {
@@ -28,20 +27,19 @@ Content-Type: application/json
       "friendly_name": "10GB Data-only per Month",
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "date_created": "2016-11-16T20:12:57Z",
-      "url": "https://preview.twilio.com/wireless/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
+      "url": "https://wireless.twilio.com/v1/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
       "messaging_enabled": false,
       "data_enabled": true,
       "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
-      "international_roaming": [],
       "national_roaming_enabled": false
     }
   ],
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://preview.twilio.com/wireless/RatePlans?PageSize=50&Page=0",
+    "first_page_url": "https://wireless.twilio.com/v1/RatePlans?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://preview.twilio.com/wireless/RatePlans?PageSize=50&Page=0",
+    "url": "https://wireless.twilio.com/v1/RatePlans?PageSize=50&Page=0",
     "next_page_url": null,
     "key": "rate_plans"
   }

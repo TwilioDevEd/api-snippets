@@ -3,11 +3,13 @@ Content-Type: application/json
 
 {
   "sid": "DCcb6aa7c620874dd98ba6c9c4108d0ed0",
-  "command": "Hello, Sim!",
+  "command": "Hello, SIM!",
+  "direction": "to_sim",
+  "command_mode": "text",
   "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
   "status": "delivered",
   "date_updated": "2016-05-13T16:34:14Z",
   "date_created": "2016-05-13T16:34:11Z",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "url": "https://preview.twilio.com/wireless/Commands/DCcb6aa7c620874dd98ba6c9c4108d0ed0",
+  "url": "https://wireless.twilio.com/v1/Commands/DCcb6aa7c620874dd98ba6c9c4108d0ed0",
 }
