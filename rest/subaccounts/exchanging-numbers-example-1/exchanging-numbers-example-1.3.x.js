@@ -12,9 +12,9 @@ const currentNumberOwnerAccountSid = 'ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy';
 const newNumberOwnerAccountSid = 'ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
 const phoneNumberSid = 'PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy';
 
-client.accounts(currentNumberOwnerAccountSid)
+client.api.accounts(currentNumberOwnerAccountSid)
   .incomingPhoneNumbers(phoneNumberSid)
-  .update({ 
+  .update({
     accountSid: newNumberOwnerAccountSid // specify new account owner
   })
   .then((number) => console.log(number));
