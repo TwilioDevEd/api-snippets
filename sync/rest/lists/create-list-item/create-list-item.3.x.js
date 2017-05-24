@@ -7,7 +7,7 @@ var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.syncLists('MyFirstList')
   .syncListItems.create({
-    data: JSON.stringify({ text: "welcome!" })
+    data: { text: "welcome!" }
   }).then(function(response) {
     console.log(response);
   }).catch(function(error) {
