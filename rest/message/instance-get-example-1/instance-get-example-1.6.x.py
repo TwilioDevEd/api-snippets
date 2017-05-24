@@ -9,4 +9,4 @@ client = Client(account_sid, auth_token)
 message = client.messages("MM800f449d0399ed014aae2bcc0cc2f2ec") \
                 .fetch()
 
-print(message.body)
+print(message.body.encode('utf-8'))
