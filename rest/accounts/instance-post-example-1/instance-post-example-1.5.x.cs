@@ -13,9 +13,9 @@ class Example
         const string authToken = "your_auth_token";
 
         TwilioClient.Init(accountSid, authToken);
-        
+
         AccountResource.Update(
-            sid: accountSidToSuspend,
+            accountSidToSuspend,
             status: AccountResource.StatusEnum.Suspended);
     }
 }

@@ -10,6 +10,9 @@ module Model
     RUBY_NAME       = 'ruby'.freeze
     NODE_NAME       = 'node'.freeze
 
+    CS_V4 = '4.7.2'
+    CS_V5 = '5.5.0'
+
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.x'],
       PHP_NAME    => ['4.10', '5.9.0'],
@@ -20,14 +23,14 @@ module Model
 
     CSHARP_DEPENDENCIES = {
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
-        { name: 'Twilio', version: '4.7.2' },
+        { name: 'Twilio', version: CS_V4 },
         { name: 'Twilio.Pricing', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
         { name: 'Twilio.Auth', version: '1.4.0' }
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: '5.4.2-alpha1' },
+        { name: 'Twilio', version: CS_V5 },
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
@@ -84,7 +87,7 @@ module Model
 
     def self.csharp_4_dependencies
       [
-        'Twilio.4.7.2/lib/3.5/Twilio.Api.dll',
+        "Twilio.#{CS_V4}/lib/3.5/Twilio.Api.dll",
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
@@ -97,7 +100,7 @@ module Model
 
     def self.csharp_5_dependencies
       [
-        'Twilio.5.4.2-alpha1/lib/net35/Twilio.dll',
+        "Twilio.#{CS_V5}/lib/net35/Twilio.dll",
         'JWT.1.3.4/lib/3.5/JWT.dll',
         'Newtonsoft.Json.9.0.1/lib/net35/Newtonsoft.Json.dll'
       ]

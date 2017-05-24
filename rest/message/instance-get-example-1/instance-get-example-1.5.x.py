@@ -7,4 +7,4 @@ auth_token  = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 message = client.messages.get("MM800f449d0399ed014aae2bcc0cc2f2ec")
-print(message.body)
+print(message.body.encode('utf-8'))
