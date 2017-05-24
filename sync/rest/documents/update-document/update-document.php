@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$data = (object) array(
+$data = array(
     'dateUpdated' => date("c"),
     'movieTitle' => "On The Line",
     'showtimes' => null,
@@ -25,7 +25,7 @@ $doc = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->documents("MyFirstDocument")->update(
         array(
-            'data' => json_encode($data)
+            'data' => $data
         )
     );
 
