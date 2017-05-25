@@ -7,7 +7,8 @@ public class Conference2
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Conference("moderated-conference-room", startConferenceOnEnter: "false");
+        dial.Conference("moderated-conference-room",
+             startConferenceOnEnter: "false");
         response.Dial(dial);
 
         System.Console.WriteLine(response.ToString());
