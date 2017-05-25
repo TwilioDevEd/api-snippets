@@ -16,12 +16,11 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var binding = BindingResource.Create(
-            serviceSid,
-            "endpoint",
-            "00000001",
-            BindingResource.BindingTypeEnum.Apn,
-            "device_token",
-            new List<string> { "preferred device", "new user" });
+            servicePathSid: serviceSid,
+            identity: "00000001",
+            bindingType: BindingResource.BindingTypeEnum.Apn,
+            address: "device_token",
+            tag: new List<string> { "preferred device", "new user" });
 
         Console.WriteLine(binding.Sid);
     }
