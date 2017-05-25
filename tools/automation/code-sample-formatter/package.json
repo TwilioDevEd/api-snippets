@@ -4,12 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/jasmine"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-find-files": "0.0.4",
     "recursive-readdir": "^2.2.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
   }
 }
