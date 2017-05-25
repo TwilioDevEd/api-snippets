@@ -7,7 +7,8 @@ import com.twilio.twiml.Method;
 public class Leave3 {
     public static void main(String[] args) {
         Leave leave = new Leave.Builder().build();
-        VoiceResponse response = new VoiceResponse.Builder().leave(leave).build();
+        VoiceResponse response = new VoiceResponse.Builder().leave(leave)
+            .build();
 
         try {
             System.out.println(response.toXml());

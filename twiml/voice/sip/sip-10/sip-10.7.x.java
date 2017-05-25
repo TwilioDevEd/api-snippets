@@ -7,7 +7,10 @@ import com.twilio.twiml.Method;
 
 public class Sip10 {
     public static void main(String[] args) {
-        Sip sip = new Sip.Builder("sip:kate@example.com").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();
+        Sip sip = new Sip.Builder("sip:kate@example.com")
+            .statusCallbackEvent("initiated ringing answered completed")
+            .statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST")
+            .build();
         Dial dial = new Dial.Builder().sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 

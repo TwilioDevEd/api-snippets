@@ -11,7 +11,8 @@ public class Client2 {
         Number number = new Number.Builder("858-987-6543").build();
         Client client = new Client.Builder("jenny").build();
         Client client = new Client.Builder("tommy").build();
-        Dial dial = new Dial.Builder().callerId("+1888XXXXXXX").number(number).client(client).client(client).build();
+        Dial dial = new Dial.Builder().callerId("+1888XXXXXXX").number(number)
+            .client(client).client(client).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 
         try {

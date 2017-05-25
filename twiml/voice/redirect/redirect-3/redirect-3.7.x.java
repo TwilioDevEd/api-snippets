@@ -6,8 +6,10 @@ import com.twilio.twiml.Method;
 
 public class Redirect3 {
     public static void main(String[] args) {
-        Redirect redirect = new Redirect.Builder().url("../nextInstructions").build();
-        VoiceResponse response = new VoiceResponse.Builder().redirect(redirect).build();
+        Redirect redirect = new Redirect.Builder().url("../nextInstructions")
+            .build();
+        VoiceResponse response = new VoiceResponse.Builder().redirect(redirect)
+            .build();
 
         try {
             System.out.println(response.toXml());

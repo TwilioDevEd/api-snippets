@@ -7,10 +7,15 @@ import com.twilio.twiml.Method;
 
 public class Gather3 {
     public static void main(String[] args) {
-        Say say = new Say.Builder("Please enter your account number,\nfollowed by the pound sign").build();
-        Gather gather = new Gather.Builder().action("/process_gather.php").method(Method.GET).say(say).build();
-        Say say = new Say.Builder("We didn't receive any input. Goodbye!").build();
-        VoiceResponse response = new VoiceResponse.Builder().gather(gather).say(say).build();
+        Say say = new Say
+            .Builder("Please enter your account number,\nfollowed by the pound sign")
+            .build();
+        Gather gather = new Gather.Builder().action("/process_gather.php")
+            .method(Method.GET).say(say).build();
+        Say say = new Say.Builder("We didn't receive any input. Goodbye!")
+            .build();
+        VoiceResponse response = new VoiceResponse.Builder().gather(gather)
+            .say(say).build();
 
         try {
             System.out.println(response.toXml());

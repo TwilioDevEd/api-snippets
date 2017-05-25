@@ -7,7 +7,8 @@ import com.twilio.twiml.Method;
 public class YourResponse3 {
     public static void main(String[] args) {
         Message message = new Message.Builder("I'm hungry!").build();
-        MessagingResponse response = new MessagingResponse.Builder().message(message).build();
+        MessagingResponse response = new MessagingResponse.Builder()
+            .message(message).build();
 
         try {
             System.out.println(response.toXml());

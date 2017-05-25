@@ -7,7 +7,9 @@ import com.twilio.twiml.Method;
 
 public class Conference10 {
     public static void main(String[] args) {
-        Conference conference = new Conference.Builder("LoveTwilio").record("record-from-start").recordingStatusCallback("www.myexample.com").build();
+        Conference conference = new Conference.Builder("LoveTwilio")
+            .record("record-from-start").recordingStatusCallback("www.myexample.com")
+            .build();
         Dial dial = new Dial.Builder().conference(conference).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 

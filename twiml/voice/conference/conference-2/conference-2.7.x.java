@@ -7,7 +7,8 @@ import com.twilio.twiml.Method;
 
 public class Conference2 {
     public static void main(String[] args) {
-        Conference conference = new Conference.Builder("moderated-conference-room").startConferenceOnEnter("false").build();
+        Conference conference = new Conference
+            .Builder("moderated-conference-room").startConferenceOnEnter("false").build();
         Dial dial = new Dial.Builder().conference(conference).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 

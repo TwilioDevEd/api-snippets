@@ -6,8 +6,10 @@ import com.twilio.twiml.Method;
 
 public class Message3 {
     public static void main(String[] args) {
-        Message message = new Message.Builder("Store Location: 123 Easy St.").action("/SmsHandler.php").method(Method.POST).build();
-        MessagingResponse response = new MessagingResponse.Builder().message(message).build();
+        Message message = new Message.Builder("Store Location: 123 Easy St.")
+            .action("/SmsHandler.php").method(Method.POST).build();
+        MessagingResponse response = new MessagingResponse.Builder()
+            .message(message).build();
 
         try {
             System.out.println(response.toXml());

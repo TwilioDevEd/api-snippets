@@ -6,7 +6,8 @@ import com.twilio.twiml.Method;
 
 public class Play2 {
     public static void main(String[] args) {
-        Play play = new Play.Builder("https://api.twilio.com/cowbell.mp3").build();
+        Play play = new Play.Builder("https://api.twilio.com/cowbell.mp3")
+            .build();
         VoiceResponse response = new VoiceResponse.Builder().play(play).build();
 
         try {

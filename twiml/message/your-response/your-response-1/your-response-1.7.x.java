@@ -8,8 +8,10 @@ import com.twilio.twiml.Method;
 public class YourResponse1 {
     public static void main(String[] args) {
         Message message = new Message.Builder("Hello World!").build();
-        Redirect redirect = new Redirect.Builder().url("https://demo.twilio.com/sms/welcome").build();
-        MessagingResponse response = new MessagingResponse.Builder().message(message).redirect(redirect).build();
+        Redirect redirect = new Redirect.Builder()
+            .url("https://demo.twilio.com/sms/welcome").build();
+        MessagingResponse response = new MessagingResponse.Builder()
+            .message(message).redirect(redirect).build();
 
         try {
             System.out.println(response.toXml());

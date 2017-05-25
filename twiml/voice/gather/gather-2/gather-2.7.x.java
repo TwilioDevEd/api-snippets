@@ -7,7 +7,8 @@ import com.twilio.twiml.Method;
 public class Gather2 {
     public static void main(String[] args) {
         Gather gather = new Gather.Builder().build();
-        VoiceResponse response = new VoiceResponse.Builder().gather(gather).build();
+        VoiceResponse response = new VoiceResponse.Builder().gather(gather)
+            .build();
 
         try {
             System.out.println(response.toXml());

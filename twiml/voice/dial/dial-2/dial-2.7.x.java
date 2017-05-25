@@ -9,7 +9,8 @@ public class Dial2 {
     public static void main(String[] args) {
         Dial dial = new Dial.Builder("415-123-4567").build();
         Say say = new Say.Builder("Goodbye").build();
-        VoiceResponse response = new VoiceResponse.Builder().dial(dial).say(say).build();
+        VoiceResponse response = new VoiceResponse.Builder().dial(dial)
+            .say(say).build();
 
         try {
             System.out.println(response.toXml());

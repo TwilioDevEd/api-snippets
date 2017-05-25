@@ -7,9 +7,11 @@ import com.twilio.twiml.Method;
 
 public class Dial3 {
     public static void main(String[] args) {
-        Dial dial = new Dial.Builder("415-123-4567").action("/handleDialCallStatus.php").method(Method.GET).build();
+        Dial dial = new Dial.Builder("415-123-4567")
+            .action("/handleDialCallStatus.php").method(Method.GET).build();
         Say say = new Say.Builder("I am unreachable").build();
-        VoiceResponse response = new VoiceResponse.Builder().dial(dial).say(say).build();
+        VoiceResponse response = new VoiceResponse.Builder().dial(dial)
+            .say(say).build();
 
         try {
             System.out.println(response.toXml());
