@@ -1,0 +1,15 @@
+{
+  "name": "reformat-code-samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-find-files": "0.0.4",
+    "recursive-readdir": "^2.2.1"
+  }
+}
