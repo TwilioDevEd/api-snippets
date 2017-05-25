@@ -38,7 +38,14 @@ describe('Break lines', () => {
       expect(newLines[0]).toBe("$dial->conference('moderated-conference-room',");
       expect(newLines[1]).toBe("['startConferenceOnEnter' => 'false']);");
     });
-
+    it('breaks line 2', () => {
+      const line =
+"$dial->conference('EventedConf', ['statusCallback' => 'https://myapp.com/events', 'statusCallbackEvent' => 'start end join leave mute hold']);"
+      const newLines = fileFormatter.trimLine(line, []);
+      expect(newLines[0]).toBe("$dial->conference('EventedConf',");
+      expect(newLines[1]).toBe("['statusCallback' => 'https://myapp.com/events',");
+      expect(newLines[2]).toBe("'statusCallbackEvent' => 'start end join leave mute hold']);");
+    });
 
   });
 });

@@ -33,12 +33,13 @@ function trimLine(line, lines) {
     const lastBreakingChar = getLastBreakingChar(trimmedLine);
     const secondToLastBreakingChar = getLastBreakingChar(line.substring(0, lastBreakingChar - 1));
     const isDoubleQuoteCountEven = (line.substring(0, lastBreakingChar).match(/[^\\]"/gi) || []).length % 2 == 0;
+    const isSingleQuoteCountEven = (line.substring(0, lastBreakingChar).match(/[^\\]'/gi) || []).length % 2 == 0;
     const lastQuote = getLastQuote(trimmedLine);
 
     let splitLineIndex;
-    if(isDoubleQuoteCountEven && lastBreakingChar > 0) {
+    if(isDoubleQuoteCountEven && isSingleQuoteCountEven && lastBreakingChar > 0) {
       splitLineIndex = lastBreakingChar;
-    } else if(!isDoubleQuoteCountEven && secondToLastBreakingChar > 0) {
+    } else if((!isDoubleQuoteCountEven || !isSingleQuoteCountEven) && secondToLastBreakingChar > 0) {
       splitLineIndex = secondToLastBreakingChar;
     } else {
       lines.push(line);
