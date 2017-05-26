@@ -1,0 +1,7 @@
+<Response>
+  <Dial>
+    <Conference beep="false" endConferenceOnExit="true">
+      Customer Waiting Room
+    </Conference>
+  </Dial>
+</Response>

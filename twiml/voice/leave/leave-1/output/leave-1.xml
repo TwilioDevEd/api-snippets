@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Enqueue waitUrl="wait.xml">support</Enqueue>
+    <Say>Unfortunately, the support line has closed. Please call again tomorrow.</Say>
+</Response>
