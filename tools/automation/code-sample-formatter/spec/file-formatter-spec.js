@@ -35,6 +35,7 @@ describe('Break lines', () => {
       const line =
 "$dial->conference('moderated-conference-room', ['startConferenceOnEnter' => 'false']);"
       const newLines = fileFormatter.trimLine(line, []);
+      expect(newLines.length).toBe(2);
       expect(newLines[0]).toBe("$dial->conference('moderated-conference-room',");
       expect(newLines[1]).toBe("['startConferenceOnEnter' => 'false']);");
     });
@@ -42,10 +43,18 @@ describe('Break lines', () => {
       const line =
 "$dial->conference('EventedConf', ['statusCallback' => 'https://myapp.com/events', 'statusCallbackEvent' => 'start end join leave mute hold']);"
       const newLines = fileFormatter.trimLine(line, []);
+      expect(newLines.length).toBe(3);
       expect(newLines[0]).toBe("$dial->conference('EventedConf',");
       expect(newLines[1]).toBe("['statusCallback' => 'https://myapp.com/events',");
       expect(newLines[2]).toBe("'statusCallbackEvent' => 'start end join leave mute hold']);");
     });
 
+    it('breaks line 3', () => {
+      const line =
+"$response->play('http://com.twilio.sounds.music.s3.amazonaws.com/MARKOVICHAMP-Borghestral.mp3');"
+      const newLines = fileFormatter.trimLine(line, []);
+      expect(newLines.length).toBe(1);
+      expect(newLines[0]).toBe("$response->play('http://com.twilio.sounds.music.s3.amazonaws.com/MARKOVICHAMP-Borghestral.mp3');");
+    });
   });
 });

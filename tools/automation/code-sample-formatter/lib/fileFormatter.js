@@ -29,26 +29,28 @@ function formatFile(file) {
 
 function trimLine(line, lines) {
   if(line.length > 80) {
-    const trimmedLine = line.substring(0, 80);
-    const lastBreakingChar = getLastBreakingChar(trimmedLine);
-    const secondToLastBreakingChar = getLastBreakingChar(line.substring(0, lastBreakingChar - 1));
-    const isDoubleQuoteCountEven = (line.substring(0, lastBreakingChar).match(/[^\\]"/gi) || []).length % 2 == 0;
-    const isSingleQuoteCountEven = (line.substring(0, lastBreakingChar).match(/[^\\]'/gi) || []).length % 2 == 0;
-    const lastQuote = getLastQuote(trimmedLine);
+    let lastBreakingChar = 80;
+    let previousLastBreakingChar;
+    let trimmedLine = line;
+    do {
+      trimmedLine = trimmedLine.substring(0, lastBreakingChar);
+      previousLastBreakingChar = lastBreakingChar;
+      lastBreakingChar = getLastBreakingChar(trimmedLine);
+    } while(lastBreakingChar > 0 &&
+      lastBreakingChar != previousLastBreakingChar &&
+      !isBreakingCharOutsideQuotes(trimmedLine, lastBreakingChar));
 
-    let splitLineIndex;
-    if(isDoubleQuoteCountEven && isSingleQuoteCountEven && lastBreakingChar > 0) {
-      splitLineIndex = lastBreakingChar;
-    } else if((!isDoubleQuoteCountEven || !isSingleQuoteCountEven) && secondToLastBreakingChar > 0) {
-      splitLineIndex = secondToLastBreakingChar;
-    } else {
+    if(!isBreakingCharOutsideQuotes(line, lastBreakingChar) || lastBreakingChar == -1) {
       lines.push(line);
       return lines;
     }
+
+    let splitLineIndex = lastBreakingChar;
     if(line.charAt(splitLineIndex) == ',') {
       splitLineIndex++;
     }
     if(line === line.substring(splitLineIndex, line.length)) {
+      console.log("Stalled");
       process.exit();
     }
     lines.push(line.substring(0, splitLineIndex));
@@ -59,17 +61,20 @@ function trimLine(line, lines) {
   }
 }
 
+function isBreakingCharOutsideQuotes(line, lastIndexOf) {
+  const trimmmedLine = line.substring(0, lastIndexOf)
+  const evenDoubleQuotes = isEvenNumberOfCharacters(trimmmedLine, "'");
+  const evenSingleQuotes = isEvenNumberOfCharacters(trimmmedLine, '"');
+  return evenSingleQuotes && evenDoubleQuotes;
+}
+
 function isEvenNumberOfCharacters(line, char) {
-  const regex = new RegExp(char);
+  const regex = new RegExp(char, 'gi');
   return (line.match(regex) || []).length % 2 == 0;
 }
 
 function getLastBreakingChar(line) {
   return Math.max(line.lastIndexOf("."), line.lastIndexOf(","));
-}
-
-function getLastQuote(line) {
-  return Math.max(line.lastIndexOf("'"), line.lastIndexOf('"'));
 }
 
 function tabPlus(line) {
