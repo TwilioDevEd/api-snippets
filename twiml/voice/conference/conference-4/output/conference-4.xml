@@ -1,0 +1,7 @@
+<Response>
+  <Dial>
+    <Conference statusCallback="https://myapp.com/events" statusCallbackEvent="start end join leave mute hold">
+      EventedConf
+    </Conference>
+  </Dial>
+</Response>
