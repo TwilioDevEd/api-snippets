@@ -8,14 +8,12 @@ import com.twilio.twiml.Method;
 public class Example {
     public static void main(String[] args) {
         Say say = new Say
-            .Builder("Please enter your account number,\nfollowed by the pound sign")
+            .Builder("Welcome to Twilio, please tell us why you're calling")
             .build();
-        Gather gather = new Gather.Builder().action("/process_gather.php")
-            .method(Method.GET).say(say).build();
-        Say say2 = new Say.Builder("We didn't receive any input. Goodbye!")
-            .build();
+        Gather gather = new Gather.Builder().action("/completed")
+            .input("speech").say(say).build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
-            .say(say2).build();
+            .build();
 
         try {
             System.out.println(response.toXml());
