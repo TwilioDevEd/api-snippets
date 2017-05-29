@@ -13,7 +13,7 @@ module Model
       curl:   [LanguageHandler::Curl::LANG_CNAME, LanguageHandler::CurlXml::LANG_CNAME, LanguageHandler::CurlJson::LANG_CNAME]
     }.freeze
 
-    attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs
+    attr_reader :output_folder, :relative_folder, :source_folder, :type, :testable, :name, :langs, :available_langs, :test_output
 
     alias testable? testable
 
@@ -26,9 +26,9 @@ module Model
       @testable         = json_object.fetch('testable', test_model.testable).to_s.downcase == 'true'
       @name             = File.basename(@source_folder)
       @type             = json_object.fetch('type', 'server').downcase
-      @title            = json_object.fetch('title') { raise "#{meta_json_path} has no title" }
       @langs            = @type == 'server' ? @server_languages : []
       @testable         = false unless @type == 'server'
+      @test_output      = json_object.fetch('test_output', test_model.test_output)
       @available_langs  = {}
 
       Dir.glob("#{source_folder}/**") do |file|
