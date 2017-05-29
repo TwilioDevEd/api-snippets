@@ -11,7 +11,7 @@ const phoneNumbers = ['PN2a0747eba6abf96b7e3c3ff0b4530f6e',
                       'PN2a0747eba6abf96b7e3c3ff0b4530f6e'];
 
 phoneNumbers.forEach((phoneNumber) => {
-  service.phoneNumbers.create({phoneNumberSid: 'PN557ce644e5ab84fa21cc21112e22c485'})
+  service.phoneNumbers.create({phoneNumberSid: phoneNumber})
       .then(function(response) {
         console.log(response);
       }).catch(function(error) {
