@@ -6,9 +6,10 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(input: "speech dtmf", numDigits: 1, timeout: 3);
-        gather.Say("Please press 1 or say sales for sales.");
+        var gather = new Gather(method: "GET", action: "/process_gather.php");
+        gather.Say("Enter something, or not");
         response.Gather(gather);
+        response.Redirect("/process_gather.php?Digits=TIMEOUT", method: "GET");
 
         System.Console.WriteLine(response.ToString());
     }
