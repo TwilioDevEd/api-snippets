@@ -57,6 +57,7 @@ testable_snippets/
 
 # Custom Ruby Gems
 Gemfile*
+!Gemfile
 jreyes-example.*
 
 venv
