@@ -43,7 +43,7 @@ if __name__ == '__main__':
             for language in languages:
                 code_filepath = generate_code_sample_filepath(twiml_filepath, language)
                 print("{} -> {}".format(twiml_filepath, code_filepath))
-                code_generator = TwimlCodeGenerator(twiml_filepath, language=language)
+                code_generator = TwimlCodeGenerator(twiml_filepath, code_filepath=code_filepath, language=language)
                 if language in ['java', 'csharp', 'php']:
                     code_generator.overwrite_language_spec('formatter', 'node ../code-sample-formatter/app.js -f {filepath}')
                 code_generator.write_code()
