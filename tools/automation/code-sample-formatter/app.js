@@ -1,17 +1,42 @@
-const recursive = require("recursive-readdir");
-const path = require("path");
+const recursive = require('recursive-readdir');
+const path = require('path');
 const formatFile = require('./lib/fileFormatter').formatFile;
 
-const relativeSnippetFolder = process.argv[2] == '.' ? "" : process.argv[2];
-const absoluteSnippetFolder = __dirname + "/../../../" + relativeSnippetFolder;
-const extension = process.argv[3];
+const ArgumentParser = require("argparse").ArgumentParser;
+const parser = new ArgumentParser({
+  version: '0.0.1',
+  addHelp:true,
+  description: 'Code formatter for C#, Java and PHP'
+});
+parser.addArgument(['-r', '--root-path'], {
+    help: 'Root directory path to scan recursively (relative to api-snippets root)',
+    required: false
+});
+parser.addArgument(['-e', '--extension'], {
+    help: 'File extension to format',
+    required: false
+});
+parser.addArgument(['-f', '--file'], {
+    help: 'Specific file path to format',
+    required: false
+});
 
-recursive(absoluteSnippetFolder,
-    [(path, stats) => {
-      return !stats.isDirectory() && !path.includes(extension);
-    }],
-    (err, files) => {
-      files.forEach((file) => {
-        formatFile(file);
-      })
-    });
+const args = parser.parseArgs();
+
+if (args.file) {
+    formatFile(args.file);
+} else {
+    const relativeSnippetFolder = args.root_path;
+    const absoluteSnippetFolder = __dirname + "/../../../" + relativeSnippetFolder;
+    const extension = process.argv[3];
+
+    recursive(absoluteSnippetFolder,
+        [(path, stats) => {
+          return !stats.isDirectory() && !path.includes(args.extension);
+        }],
+        (err, files) => {
+          files.forEach((file) => {
+            formatFile(file);
+          })
+        });
+}
