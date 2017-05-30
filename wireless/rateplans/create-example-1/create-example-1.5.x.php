@@ -9,9 +9,10 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $ratePlan = $client->preview->wireless->ratePlans->create([
-    'UniqueName' => 'SmartMeterCA',
-    'FriendlyName' => 'California SmartMeter Plan',
-    'MessagingEnabled' => true
+    'uniqueName' => 'SmartMeterCA',
+    'friendlyName' => 'California SmartMeter Plan',
+    'dataLimit' => 5,
+    'messagingEnabled' => true
 ]);
 
 print_r($ratePlan);

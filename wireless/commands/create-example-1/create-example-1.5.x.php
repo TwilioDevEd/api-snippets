@@ -10,10 +10,10 @@ $client = new Client($sid, $token);
 
 $command = $client->preview->wireless
     ->commands
-    ->create(
-        'wakeup',
-        'AliceSmithSmartMeter',
-        'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback'
-    );
+    ->create([
+      "sim" => "AliceSmithSmartMeter",
+      "command" => "wakeup",
+      "callbackUrl" => "https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"
+    ]);
 
 print_r($command);

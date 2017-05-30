@@ -11,9 +11,9 @@ $client = new Client($sid, $token);
 $sim = $client->preview->wireless
     ->sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     ->update([
-        'Status' => 'active',
-        'CallbackUrl' => 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
-        'CallbackMethod' => 'POST'
+        'status' => 'active',
+        'callbackUrl' => 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
+        'callbackMethod' => 'POST'
     ]);
 
 print_r($sim);
