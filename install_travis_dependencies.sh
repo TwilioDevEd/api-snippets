@@ -8,7 +8,6 @@ if [ -n "$SNIPPET_LANGUAGE" ]; then
 fi
 
 # Install common dependencies
-jdk_switcher use oraclejdk8
 sudo apt-get install -y --force-yes build-essential ca-certificates git curl
 sudo add-apt-repository ppa:cwchien/gradle -y
 sudo apt-get update
@@ -20,7 +19,10 @@ if [[ $languages == *"python"* ]]; then
 fi
 
 if [[ $languages == *"php"* ]]; then
-  sudo apt-get install -y --force-yes php5-cli git php5-curl
+  sudo apt-get install python-software-properties
+  sudo add-apt-repository ppa:ondrej/php -y
+  sudo apt-get update
+  sudo apt-get install -y --force-yes php5.6
   curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 fi
 
