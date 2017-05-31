@@ -204,9 +204,7 @@ The testing and installation scripts use ruby. Before installing language
 dependencies you need to install the following gems:
 
 ```bash
-$ gem install json
-$ gem install colorize
-$ gem install nokogiri
+$ bundle install
 ```
 
 You can use the following command to install dependencies in your system:
