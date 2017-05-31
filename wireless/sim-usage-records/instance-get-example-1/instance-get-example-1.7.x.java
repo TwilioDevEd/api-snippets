@@ -1,5 +1,6 @@
 import com.twilio.Twilio;
-import com.twilio.rest.preview.wireless.sim.Usage;
+import com.twilio.base.ResourceSet;
+import com.twilio.rest.wireless.v1.sim.UsageRecord;
 
 public class Example {
     // Find your Account Sid and Token at twilio.com/console
@@ -10,10 +11,11 @@ public class Example {
         // Initialize the client
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        Usage usage = Usage
-                .fetcher("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-                .fetch();
+        ResourceSet<UsageRecord> usageRecords = UsageRecord
+                .reader("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").read();
 
-        System.out.println(usage);
+        for (UsageRecord usageRecord : usageRecords) {
+            System.out.println(usageRecord);
+        }
     }
 }
