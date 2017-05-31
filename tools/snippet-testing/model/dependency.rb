@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'unirest'
+require 'version_sorter'
 
 module Model
   class Dependency
@@ -26,29 +27,21 @@ module Model
     end
 
     def latest_version(versions)
-      rc_or_alpha = /alpha1$|alpha\-1$|[0-9]{1,}a1$/
-      alpha_versions = versions.select { |version| version[rc_or_alpha] }
+      versions = VersionSorter.sort(versions)
+      rc_or_alpha = /alpha1$|alpha\-1$|[0-9]{1,}a1$|rc[0-9]+$/
+      last_is_unstable = versions[-1] =~ rc_or_alpha
 
-      if alpha_versions.empty?
-        rc_versions = versions.select { |version| version[/rc[0-9]+$/] }
-
-        padding = 4
-        rc_versions = rc_versions.sort { |a, b|
-          a, b = [a, b].map{ |s| s.gsub(/\d+/){|m| '0'*(padding - m.size) + m } }
-          a <=> b
-        }
-        versions = rc_versions
+      if versions[-2] =~ rc_or_alpha && !last_is_unstable
+        versions[-2]
       else
-        versions = alpha_versions.sort
+        versions[-1]
       end
-
-      versions.last
     end
 
     def csharp_latest
       response = Unirest.get 'https://api.nuget.org/v3/registration1/twilio/index.json'
       versions = response.body['items'].map { |version_grp| version_grp['upper'] }
-      versions.last
+      latest_version(versions)
     end
 
     def php_latest
@@ -80,6 +73,8 @@ module Model
       AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][1] = python_latest
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1] = ruby_latest
       AVAILABLE_LIBRARY_VERSION[NODE_NAME][1] = node_latest
+
+      puts AVAILABLE_LIBRARY_VERSION
     end
 
     def update_library_versions
