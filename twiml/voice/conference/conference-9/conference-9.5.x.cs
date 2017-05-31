@@ -7,7 +7,7 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial(action: "handleLeaveConference.php", method: "POST",
-            hangupOnStar: "true", timeLimit: 30);
+            hangupOnStar: true, timeLimit: 30);
         dial.Conference("LoveTwilio");
         response.Dial(dial);
 

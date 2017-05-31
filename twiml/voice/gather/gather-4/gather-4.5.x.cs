@@ -6,7 +6,7 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(action: "/completed", input: "speech");
+        var gather = new Gather(input: "speech", action: "/completed");
         gather.Say("Welcome to Twilio, please tell us why you're calling");
         response.Gather(gather);
 

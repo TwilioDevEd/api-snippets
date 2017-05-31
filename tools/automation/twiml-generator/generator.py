@@ -2,9 +2,11 @@
 # coding: utf-8
 from twiml_generator import TwimlCodeGenerator, load_language_spec
 from pathlib import Path
-from lxml.etree import XMLSyntaxError
+from lxml import etree
 
 import argparse
+import shutil
+import subprocess
 
 LANGUAGES_VERSIONS = {
     'python': '6.x',
@@ -23,13 +25,14 @@ def generate_code_sample_filepath(twiml_filepath, language):
     version = LANGUAGES_VERSIONS[language]
     return twiml_filepath.parent.parent / (twiml_filepath.name[:-3] + version + language_spec['extension'])
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("root_twiml_filepath", help="Path to a directory containing TwiML file")
     parser.add_argument("-l", "--languages", help="Languages for the code to generate (default: all)",
                         choices=['csharp', 'java', 'node', 'php', 'python'],
                         action="append")
+    parser.add_argument("-t", "--test", help="Test the snippet against the input",
+                        action="store_true")
     args = parser.parse_args()
 
     if not args.languages:
@@ -42,10 +45,29 @@ if __name__ == '__main__':
         try:
             for language in languages:
                 code_filepath = generate_code_sample_filepath(twiml_filepath, language)
-                print("{} -> {}".format(twiml_filepath, code_filepath))
-                code_generator = TwimlCodeGenerator(twiml_filepath, code_filepath=code_filepath, language=language)
+                print("{} -> {}".format(twiml_filepath, code_filepath), end='')
+                code_generator = TwimlCodeGenerator(
+                    twiml_filepath,
+                    code_filepath=code_filepath,
+                    lib_filepath=Path(__file__).parent / 'lib',
+                    language=language)
                 if language in ['java', 'csharp', 'php']:
-                    code_generator.overwrite_language_spec('formatter', 'node ../code-sample-formatter/app.js -f {filepath}')
+                    formater_path = Path(__file__).parent / '../code-sample-formatter/app.js'
+                    code_generator.overwrite_language_spec('formatter', 'node ' + str(formater_path) + ' -f {filepath}')
                 code_generator.write_code()
-        except XMLSyntaxError as e:
-            print('Error parsing : {}'.format(twiml_filepath))
+
+                if args.test:
+                    result, stdout, input_tree, output_tree = code_generator.verify()
+                    if result == TwimlCodeGenerator.VERIFY_SUCCESS:
+                        print(' \x1B[92m[passed]\x1B[39m')
+                    elif result == TwimlCodeGenerator.VERIFY_FAILURE:
+                        print(' \x1B[91m[failed]\x1B[39m')
+                        print('INPUT:\n' + input_tree)
+                        print('OUTPUT:\n' + output_tree)
+                    else:
+                        print(' \x1B[91m[error]\x1B[39m')
+                        print(stdout)
+                else:
+                    print('')
+        except etree.XMLSyntaxError as e:
+            print('\nError parsing : {}'.format(twiml_filepath))

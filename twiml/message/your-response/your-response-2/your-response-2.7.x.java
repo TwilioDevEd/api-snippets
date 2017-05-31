@@ -1,15 +1,15 @@
+import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {
     public static void main(String[] args) {
-        Message message = new Message.Builder("This is message 1 of 2.")
-            .build();
-        Message message2 = new Message.Builder("This is message 2 of 2.")
-            .build();
+        Body body = new Body("This is message 1 of 2.");
+        Message message = new Message.Builder().body(body).build();
+        Body body2 = new Body("This is message 2 of 2.");
+        Message message2 = new Message.Builder().body(body2).build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).message(message2).build();
 

@@ -4,7 +4,7 @@ const response = new VoiceResponse();
 const dial = response.dial({
     action: 'handleLeaveConference.php',
     method: 'POST',
-    hangupOnStar: 'true',
+    hangupOnStar: true,
     timeLimit: 30
 });
 dial.conference('LoveTwilio');

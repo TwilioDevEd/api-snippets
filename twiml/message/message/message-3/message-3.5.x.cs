@@ -6,9 +6,8 @@ class Example
     static void Main()
     {
         var response = new MessagingResponse();
-        var message = new Message(action: "/SmsHandler.php", method: "POST");
-        message.Body("Store Location: 123 Easy St.");
-        response.Message(message);
+        response.Message("Store Location: 123 Easy St.",
+            action: "/SmsHandler.php", method: "POST");
 
         System.Console.WriteLine(response.ToString());
     }

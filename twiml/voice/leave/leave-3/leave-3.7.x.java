@@ -1,12 +1,11 @@
 import com.twilio.twiml.Leave;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {
     public static void main(String[] args) {
-        Leave leave = new Leave.Builder().build();
+        Leave leave = new Leave();
         VoiceResponse response = new VoiceResponse.Builder().leave(leave)
             .build();
 

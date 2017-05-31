@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Dial
-     record="true"
+     record="record-from-answer"
      timeout="10"
      hangupOnStar="true"
      callerId="bob"

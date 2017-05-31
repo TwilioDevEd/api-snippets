@@ -2,7 +2,6 @@ import com.twilio.twiml.Client;
 import com.twilio.twiml.Dial;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {

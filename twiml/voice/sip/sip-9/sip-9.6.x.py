@@ -2,9 +2,9 @@ from twilio.twiml.voice_response import Dial, VoiceResponse, Sip
 
 response = VoiceResponse()
 dial = Dial(
-    record='true',
+    record='record-from-answer',
     timeout=10,
-    hangup_on_star='true',
+    hangup_on_star=True,
     caller_id='bob',
     method='POST',
     action='/handle_post_dial')

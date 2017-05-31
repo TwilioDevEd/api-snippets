@@ -1,12 +1,13 @@
+import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {
     public static void main(String[] args) {
-        Message message = new Message.Builder("I'm hungry!").build();
+        Body body = new Body("I'm hungry!");
+        Message message = new Message.Builder().body(body).build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).build();
 

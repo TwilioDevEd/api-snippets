@@ -2,7 +2,7 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const response = new VoiceResponse();
 response.record({
-    transcribe: 'true',
+    transcribe: true,
     transcribeCallback: '/handle_transcribe.php'
 });
 
