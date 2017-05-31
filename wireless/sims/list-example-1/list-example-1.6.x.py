@@ -8,6 +8,6 @@ api_secret = 'xxxxxxxxxxxxxx'
 client = Client(account_sid, auth_token)
 
 sims = client.preview.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-            .read()
+            .list()
 
 print(sims)

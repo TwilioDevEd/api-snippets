@@ -8,6 +8,6 @@ api_secret = 'xxxxxxxxxxxxxx'
 client = Client(account_sid, auth_token)
 
 commands = client.preview.wireless.commands('DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-            .read()
+            .list()
 
 print(commands)

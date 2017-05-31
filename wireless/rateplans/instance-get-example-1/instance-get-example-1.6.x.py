@@ -7,7 +7,7 @@ api_secret = 'xxxxxxxxxxxxxx'
 
 client = Client(account_sid, auth_token)
 
-ratePlan = client.preview.wireless.ratePlans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
+ratePlan = client.preview.wireless.rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
                 .fetch()
 
 print(ratePlan)

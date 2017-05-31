@@ -7,9 +7,9 @@ api_secret = 'xxxxxxxxxxxxxx'
 
 client = Client(account_sid, auth_token)
 
-newRatePlan = client.preview.wireless.ratePlans\
-                    .create(uniqueName='SmartMeterCA',
-                            friendlyName='California SmartMeter Plan',
-                            messagingEnabled=True)
+newRatePlan = client.preview.wireless.rate_plans\
+                    .create(unique_name='SmartMeterCA',
+                            friendly_name='California SmartMeter Plan',
+                            messaging_enabled=True)
 
 print(newRatePlan)

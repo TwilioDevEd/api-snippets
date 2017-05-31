@@ -7,7 +7,7 @@ api_secret = 'xxxxxxxxxxxxxx'
 
 client = Client(account_sid, auth_token)
 
-ratePlanDeleted = client.preview.wireless.ratePlans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-                .delete()
+ratePlanDeleted = client.preview.wireless.rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
+                    .delete()
 
 print(ratePlanDeleted)
