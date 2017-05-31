@@ -9,6 +9,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $ratePlans = $client->preview->wireless->ratePlans
-    ->read();
+    ->stream();
 
-print_r($ratePlans);
+foreach ($ratePlans as $ratePlan) {
+    print_r($ratePlan);
+}

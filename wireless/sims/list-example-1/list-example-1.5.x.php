@@ -10,4 +10,6 @@ $client = new Client($sid, $token);
 
 $sims = $client->preview->wireless->sims->read();
 
-print_r($sims);
+foreach ($sims as $sim) {
+    print_r($sim);
+}

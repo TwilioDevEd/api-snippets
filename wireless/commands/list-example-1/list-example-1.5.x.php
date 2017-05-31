@@ -9,6 +9,8 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $commands = $client->preview->wireless->commands
-    ->read();
+    ->stream();
 
-print_r($commands);
+foreach ($commands as $command) {
+    print_r($command);
+}
