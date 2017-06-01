@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@address = @client.account.addresses.create(
+@address = @client.addresses.create(
   friendly_name: 'Billing - Customer 123',
   customer_name: 'Customer 123',
   street: '1 Hasselhoff Lane',

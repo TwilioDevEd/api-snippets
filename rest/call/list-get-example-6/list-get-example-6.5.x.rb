@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.calls.list(
+@client.calls.list(
   status: 'busy',
     to: '+15558675309'
 ).each do |call|

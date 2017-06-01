@@ -11,7 +11,7 @@ module LanguageHandler
     def execute_command(file)
       dir_name = File.dirname(file)
       Dir.chdir("#{dir_name}/#{base_output_path}") do
-        execute_with_suppressed_output('gradle build', file)
+        execute_with_suppressed_output("gradle #{@test_output ? '-q run' : 'build'}", file)
       end
     end
 

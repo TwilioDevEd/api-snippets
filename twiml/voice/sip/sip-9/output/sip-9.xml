@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial
+     record="record-from-answer"
+     timeout="10"
+     hangupOnStar="true"
+     callerId="bob"
+     method="POST"
+     action="/handle_post_dial">
+
+        <Sip
+         method="POST"
+         url="/handle_screening_on_answer">
+            sip:kate@example.com?customheader=foo
+        </Sip>
+    </Dial>
+</Response>

@@ -1,0 +1,5 @@
+curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/Players/Permissions/bob \
+ -d 'Read=true' \
+ -d 'Write=true' \
+ -d 'Manage=true' \
+ -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

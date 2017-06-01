@@ -12,7 +12,7 @@ $client = new Client($sid, $token);
 // check out the list resource examples on this page
 // You can call $client->account to access the authenticated account
 // you used to initialize the client and call update() on that object.
-$account = $client
+$account = $client->api
     ->accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(
         array('status' => 'closed')

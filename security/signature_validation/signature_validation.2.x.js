@@ -19,4 +19,4 @@ var params = {
 // The X-Twilio-Signature header attached to the request
 var twilioSignature = 'RSOYDt4T1cUTdK1PDd93/VVr8B8=';
 
-console.log(twilio.validateRequest(authToken, twilioSignature, url, params));
+console.log(client.validateRequest(authToken, twilioSignature, url, params));

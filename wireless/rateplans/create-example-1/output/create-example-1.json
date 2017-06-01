@@ -1,18 +1,17 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
 {
-  "commands": {
-    "enabled": false
-  },
-  "renewal": "monthly",
+  "voice_enabled": false,
+  "unique_name": "10gb-data-per-month",
+  "data_limit": 1000,
+  "data_metering": "pooled",
   "date_updated": "2016-11-16T20:12:57Z",
   "friendly_name": "10GB Data-only per Month",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "alias": "10gb-data-per-month",
-  "url": "https://preview.twilio.com/wireless/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
-  "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
   "date_created": "2016-11-16T20:12:57Z",
-  "roaming": [],
-  "data": {
-    "limit": 10000,
-    "metering": "pooled"
-  }
+  "url": "https://wireless.twilio.com/v1/RatePlans/WP7d428e8d34042d168224e4c2dd28fd4c",
+  "messaging_enabled": false,
+  "data_enabled": true,
+  "sid": "WP7d428e8d34042d168224e4c2dd28fd4c",
+  "national_roaming_enabled": false
 }

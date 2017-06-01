@@ -9,7 +9,7 @@ client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .users.create({
     identity: 'User0001',
-    segments: ['premium', 'fitness-lifestyle']
+    segment: ['premium', 'fitness-lifestyle']
   })
   .then(user => console.log(user.sid))
   .catch(error => console.log(error))

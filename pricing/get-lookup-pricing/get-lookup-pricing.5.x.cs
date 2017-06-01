@@ -30,8 +30,7 @@ public class Example
         var prices = countries
             .OutboundSmsPrices
             .Where(price => price.Mcc.Equals(mcc) && price.Mnc.Equals(mnc))
-            .SelectMany(price => price.Prices)
-            .Where(price => price.Type.Equals(InboundSmsPrice.TypeEnum.Local));
+            .SelectMany(price => price.Prices);
 
 
         foreach (var price in prices)

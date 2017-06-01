@@ -5,7 +5,7 @@ require 'twilio-ruby'
 sub_account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 sub_auth_token = 'your_auth_token'
 @sub_account_client = Twilio::REST::Client.new(sub_account_sid, sub_auth_token)
-@subaccount = @sub_account_client.account
+@subaccount = @sub_account_client.api.account
 
 # Place to store the billable usage
 time_to_bill = 0

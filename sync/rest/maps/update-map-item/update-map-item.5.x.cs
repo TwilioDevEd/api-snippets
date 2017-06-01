@@ -1,8 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
-using Newtonsoft.Json;
 using Twilio;
-using Twilio.Rest.Preview.Sync.Service.SyncMap;
+using Twilio.Rest.Sync.V1.Service.SyncMap;
 
 public class Example
 {
@@ -26,7 +25,7 @@ public class Example
             serviceSid,
             "Players",
             "steph_curry",
-            JsonConvert.SerializeObject(data));
+            data);
 
         Console.WriteLine(item.Data);
     }

@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 @domain_sip = 'SD32a3c49700934481addd5ce1659f04d2'
 @new_map = { ip_access_control_list_sid: 'AL32a3c49700934481addd5ce1659f04d2' }
 
-@ip_access_control_list_mapping = @client.account
+@ip_access_control_list_mapping = @client
                                          .sip.domains(@domain_sip)
                                          .ip_access_control_list_mappings
                                          .create(@new_map)

@@ -13,17 +13,17 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$data = (object) array(
+$data = array(
     'name' => "Stephen Curry",
     'level' => 30,
     'username' => "spicy_curry"
 );
 
-$item = $client->preview->sync
+$item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")
     ->syncMapItems->create(
-        'steph_curry', json_encode($data)
+        'steph_curry', $data
     );
 
 print_r($item->data);

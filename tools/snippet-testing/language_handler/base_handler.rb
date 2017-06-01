@@ -27,6 +27,8 @@ module LanguageHandler
     end
 
     def test_snippet(snippet_model)
+      @input_file = snippet_model.get_input_file(lang_cname)
+      @test_output = snippet_model.test_output
       path = snippet_model.get_output_file(lang_cname)
       execute(path)
     end
@@ -53,18 +55,48 @@ module LanguageHandler
       exit_code = check_process_success(pid, command)
       wout.close
       werr.close
-      success = exit_code.zero? && language_conditional(rout)
+      output = rout.read
+      success = exit_code.zero? && assert_output(output) && language_conditional(output)
 
       if success
         puts "success [#{lang_cname}]".green
       else
         puts "failure [#{lang_cname}]".red
         error_message = rerr.read
+
+        if @test_output
+          error_message += test_output_report(output)
+        end
+
         ErrorLogger.instance.add_error(file, error_message, ErrorLogger::ERROR)
       end
+
       rout.close
       rerr.close
       success
+    end
+
+    def test_output_report(output)
+      [
+        '',
+        'diff:'.red,
+        "  sample: #{ @current_sample }",
+        "  output: #{ output.chomp }"
+      ].join("\n")
+    end
+
+    def assert_output(output)
+      return true unless @test_output
+      File.open(xml_output_file, 'r') do |xml|
+        XmlMatcher.match(@current_sample = xml.read, output)
+      end
+    rescue => err
+      puts err.message
+    end
+
+    def xml_output_file
+      "#{File.dirname(@input_file)}/output/" \
+      "#{File.basename(@input_file).split('.').first}.xml"
     end
 
     def check_process_success(pid, command)
@@ -79,7 +111,7 @@ module LanguageHandler
       return PROCESS_TIMEOUT_EXIT_CODE
     end
 
-    def language_conditional(_rout)
+    def language_conditional(_output)
       true
     end
 

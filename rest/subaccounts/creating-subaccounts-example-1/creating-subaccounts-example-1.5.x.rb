@@ -7,5 +7,5 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-account = @client.accounts.create(:friendly_name => 'Submarine')
+account = @client.api.accounts.create(:friendly_name => 'Submarine')
 puts account.friendly_name

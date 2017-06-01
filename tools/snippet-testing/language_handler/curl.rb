@@ -12,8 +12,8 @@ module LanguageHandler
       execute_with_suppressed_output("sh #{file}", file)
     end
 
-    def language_conditional(rout)
-      responses = splitted_responses(rout.read)
+    def language_conditional(output)
+      responses = splitted_responses(output)
       return false if responses.empty?
 
       responses.each do |response|

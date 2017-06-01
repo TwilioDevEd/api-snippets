@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 @cred_list_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 @cred_sid = 'SC32a3c49700934481addd5ce1659f04d2'
 
-@credential = @client.account.sip
+@credential = @client.sip
                      .credential_lists(@cred_list_sid)
                      .credentials(@cred_sid).fetch
 

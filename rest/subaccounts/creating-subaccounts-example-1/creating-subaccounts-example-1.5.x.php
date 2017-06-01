@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$account = $client->api->v2010->accounts->create(array(
+$account = $client->api->accounts->create(array(
     'FriendlyName' => 'Submarine'
 ));
 

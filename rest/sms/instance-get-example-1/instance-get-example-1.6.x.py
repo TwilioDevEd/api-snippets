@@ -11,4 +11,4 @@ client = Client(account_sid, auth_token)
 sms = client.messages("SM800f449d0399ed014aae2bcc0cc2f2ec") \
             .fetch()
 
-print(sms.body)
+print(sms.body.encode('utf-8'))

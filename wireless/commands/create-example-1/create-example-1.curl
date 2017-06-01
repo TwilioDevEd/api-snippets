@@ -1,5 +1,5 @@
-curl -X POST https://preview.twilio.com/wireless/Commands \
+curl -X POST https://wireless.twilio.com/v1/Commands \
   -d 'Sim=AliceSmithSmartMeter' \
   -d 'Command=wakeup' \
-  -d 'CallbackUrl=https://sim_manager.mycompany.com/sims/handle_command_callback?sim=AliceSmithSmartMeter' \
+  -d 'CallbackUrl=https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback' \
   -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

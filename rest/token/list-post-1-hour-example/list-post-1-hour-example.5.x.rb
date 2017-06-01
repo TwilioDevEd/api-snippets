@@ -7,5 +7,5 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-token = @client.account.tokens.create(:ttl => 3600)
+token = @client.tokens.create(:ttl => 3600)
 puts token.username

@@ -8,24 +8,10 @@ if [ -n "$SNIPPET_LANGUAGE" ]; then
 fi
 
 # Install common dependencies
-jdk_switcher use oraclejdk8
 sudo apt-get install -y --force-yes build-essential ca-certificates git curl
-
-if [[ $languages == *"java"* ]]; then
-  sudo add-apt-repository ppa:cwchien/gradle -y
-  sudo apt-get update
-  sudo apt-get install -y --force-yes gradle
-fi
-
-if [[ $languages == *"node"* ]]; then
-  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-  sudo apt-get install -y --force-yes nodejs
-  sudo npm install -g n
-  sudo n lts
-  ". $HOME/.nvm/nvm.sh"
-  nvm install stable
-  nvm use stable
-fi
+sudo add-apt-repository ppa:cwchien/gradle -y
+sudo apt-get update
+sudo apt-get install -y --force-yes gradle
 
 if [[ $languages == *"python"* ]]; then
   sudo apt-get install -y --force-yes python-dev python-pip
@@ -33,7 +19,10 @@ if [[ $languages == *"python"* ]]; then
 fi
 
 if [[ $languages == *"php"* ]]; then
-  sudo apt-get install -y --force-yes php5-cli git php5-curl
+  sudo apt-get install python-software-properties
+  sudo add-apt-repository ppa:ondrej/php -y
+  sudo apt-get update
+  sudo apt-get install -y --force-yes php5.6
   curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 fi
 

@@ -13,16 +13,16 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$data = (object) array(
+$data = array(
     'name' => "Stephen Curry",
     'level' => 31,
     'username' => "spicy_curry"
 );
 
-$item = $client->preview->sync
+$item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")
-    ->syncMapItems("steph_curry")->update(json_encode($data));
+    ->syncMapItems("steph_curry")->update($data);
 
 print_r($item->data);
 echo PHP_EOL;

@@ -9,9 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over recordings and print out a property for each one
-@client.account.recordings.list(
-  date_created_after: Time.new('2009-07-06'),
-  date_created_before: Time.new('2009-07-04')
+@client.recordings.list(
+  date_created: Time.new('2009-07-06')
 ).each do |recording|
   puts recording.duration
 end
