@@ -20,7 +20,7 @@ module LanguageHandler
     end
 
     def text_with_example_class_name(file_content)
-      file_content.gsub(/^public class\s.+\s*{\s*$/, "public class #{TEST_CLASS_NAME} {")
+      file_content.gsub(/^public class\s[^\s{]+/, "public class #{TEST_CLASS_NAME}")
     end
 
     def write_content(content, output_file)
