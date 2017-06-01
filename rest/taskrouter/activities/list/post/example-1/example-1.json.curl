@@ -1,4 +1,4 @@
-$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Activities \
+curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Activities \
     -d "FriendlyName=NewAvailableActivity" \
     -d "Available=true" \
     -u '{account_sid}:{auth_token}'

@@ -1,4 +1,4 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains.json \
+curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains.json \
     -d "FriendlyName=My%20Domain" \
     -d "VoiceUrl=https://demo.twilio.com/welcome" \
     -d "AuthType=IP_ACL" \

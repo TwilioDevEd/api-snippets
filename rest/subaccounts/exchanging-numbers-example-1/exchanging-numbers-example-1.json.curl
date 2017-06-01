@@ -1,3 +1,3 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/IncomingPhoneNumbers/PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.json \
+curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/IncomingPhoneNumbers/PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.json \
     -d "AccountSid=ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

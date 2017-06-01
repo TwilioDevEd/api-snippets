@@ -1,2 +1,2 @@
-$ curl -G https://monitor.twilio.com/v1/Alerts/NO5a7a84730f529f0a76b3e30c01315d1a \
+curl -G https://monitor.twilio.com/v1/Alerts/NO5a7a84730f529f0a76b3e30c01315d1a \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
