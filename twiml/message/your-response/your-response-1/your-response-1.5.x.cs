@@ -9,7 +9,7 @@ class Example
         var message = new Message();
         message.Body("Hello World!");
         response.Message(message);
-        response.Redirect("https://demo.twilio.com/sms/welcome");
+        response.Redirect(url: "https://demo.twilio.com/sms/welcome");
 
         System.Console.WriteLine(response.ToString());
     }

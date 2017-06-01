@@ -1,13 +1,14 @@
 import com.twilio.twiml.Dial;
+import com.twilio.twiml.Number;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.Say;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {
     public static void main(String[] args) {
-        Dial dial = new Dial.Builder("415-123-4567").build();
+        Number number = new Number.Builder("415-123-4567").build();
+        Dial dial = new Dial.Builder().number(number).build();
         Say say = new Say.Builder("Goodbye").build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial)
             .say(say).build();

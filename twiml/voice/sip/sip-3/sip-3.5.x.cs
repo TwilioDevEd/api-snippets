@@ -1,9 +1,9 @@
 using Twilio.TwiML;
 
 
-public class Sip1
+class Example
 {
-    public static void Main()
+    static void Main()
     {
         var response = new VoiceResponse();
         var dial = new Dial();

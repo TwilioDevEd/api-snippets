@@ -2,7 +2,6 @@ import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {

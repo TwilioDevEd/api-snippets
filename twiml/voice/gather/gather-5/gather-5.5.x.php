@@ -3,8 +3,8 @@ require_once './vendor/autoload.php';
 use Twilio\Twiml;
 
 $response = new Twiml();
-$gather = $response->gather(['method' => 'GET',
-    'action' => '/process_gather.php']);
+$gather = $response->gather(['action' => '/process_gather.php',
+    'method' => 'GET']);
 $gather->say('Enter something, or not');
 $response->redirect('/process_gather.php?Digits=TIMEOUT', ['method' => 'GET']);
 

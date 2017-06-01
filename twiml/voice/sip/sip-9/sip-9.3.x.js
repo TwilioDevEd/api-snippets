@@ -2,9 +2,9 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const response = new VoiceResponse();
 const dial = response.dial({
-    record: 'true',
+    record: 'record-from-answer',
     timeout: 10,
-    hangupOnStar: 'true',
+    hangupOnStar: true,
     callerId: 'bob',
     method: 'POST',
     action: '/handle_post_dial'

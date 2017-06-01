@@ -1,7 +1,6 @@
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.Sms;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
 
 
 public class Example {

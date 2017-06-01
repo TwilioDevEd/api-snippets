@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Message>Hello Jenny
-        <Media>https://demo.twilio.com/owl.png
-        </Media>
+    <Message>
+    	<Body>Hello Jenny</Body>
+        <Media>https://demo.twilio.com/owl.png</Media>
     </Message>
 </Response>

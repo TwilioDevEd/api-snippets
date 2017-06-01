@@ -4,7 +4,6 @@ import com.twilio.twiml.Sms;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.Method;
 
-
 public class Example {
     public static void main(String[] args) {
         Say say = new Say.Builder("Our store is located at 123 Easy St.")
