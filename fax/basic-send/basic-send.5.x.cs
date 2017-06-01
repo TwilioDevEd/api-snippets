@@ -17,7 +17,7 @@ class Example
         var from = "+15017250604";
         var to = "+15558675309";
         var mediaUrl = new Uri(
-            "https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg");
+            "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
 
         var fax = FaxResource.Create(from, to, mediaUrl);
 
