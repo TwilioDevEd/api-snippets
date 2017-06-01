@@ -19,7 +19,7 @@ class Example
         var mediaUrl = new Uri(
             "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
 
-        var fax = FaxResource.Create(from, to, mediaUrl);
+        var fax = FaxResource.Create(to, mediaUrl, from: from);
 
         Console.WriteLine(fax.Sid);
     }
