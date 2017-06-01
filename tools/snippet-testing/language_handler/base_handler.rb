@@ -48,6 +48,10 @@ module LanguageHandler
       raise 'This method must me implemented in sub classes'
     end
 
+    def excluded_twiml_nodes
+      []
+    end
+
     def execute_with_suppressed_output(command, file)
       rout, wout = IO.pipe
       rerr, werr = IO.pipe
@@ -88,7 +92,7 @@ module LanguageHandler
     def assert_output(output)
       return true unless @test_output
       File.open(xml_output_file, 'r') do |xml|
-        XmlMatcher.match(@current_sample = xml.read, output)
+        XmlMatcher.match(@current_sample = xml.read, output, excluded_twiml_nodes)
       end
     rescue => err
       puts err.message
