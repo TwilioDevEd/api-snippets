@@ -8,10 +8,12 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
+$options = array();
+$options['From'] = "+15017250604";
 $fax = $client->fax->v1->faxes->create(
-    "+15017250604",
     "+15558675309",
-    "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf"
+    "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf",
+    $options
 );
 
 echo $fax->sid;
