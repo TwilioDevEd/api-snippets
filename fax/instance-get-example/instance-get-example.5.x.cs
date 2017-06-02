@@ -17,7 +17,7 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var fax = FaxResource.Fetch(faxSid, client: TwilioClient);
+        var fax = FaxResource.Fetch(faxSid);
 
         Console.WriteLine(fax.Sid);
     }

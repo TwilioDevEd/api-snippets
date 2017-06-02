@@ -14,12 +14,11 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var from = "+15017250604";
         var to = "+15558675309";
         var mediaUrl = new Uri(
             "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
 
-        var fax = FaxResource.Create(to, mediaUrl, from: from);
+        var fax = FaxResource.Create(to, mediaUrl, from: "+15017250604");
 
         Console.WriteLine(fax.Sid);
     }
