@@ -172,8 +172,9 @@ module Model
         install_language_version(CSHARP_NAME, version) do
           CSHARP_DEPENDENCIES[version].each do |dependency|
             next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
+            cmdSudoPrefix = 'sudo ' unless ENV['RUN_ENV'] == 'test'
             system(
-              "sudo mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
+              "#{cmdSudoPrefix}mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
             )
           end
         end
