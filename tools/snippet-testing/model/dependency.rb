@@ -14,9 +14,9 @@ module Model
     CS_V5 = '5.5.1-alpha1'
 
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.10.0-alpha1'],
-      PYTHON_NAME => ['5.6.0', '6.2.0a1'],
+      CSHARP_NAME => ['4.x', '5.5.1-alpha1'],
+      PHP_NAME    => ['4.10', '5.9.0-alpha1'],
+      PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc20'],
       NODE_NAME   => ['2.11.0', '3.0.0-alpha-1']
     }.freeze
