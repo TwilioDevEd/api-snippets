@@ -34,14 +34,10 @@ matrix:
     - language: csharp
       mono: latest
       env: SNIPPET_LANGUAGE=csharp:ruby
-    - language: node_js
-      node_js:
-        - stable
-      env: SNIPPET_LANGUAGE=node
     - os: linux
       dist: trusty
       sudo: required
-      env: SNIPPET_LANGUAGE=php
+      env: SNIPPET_LANGUAGE=node:php
 
 addons:
   hosts:
