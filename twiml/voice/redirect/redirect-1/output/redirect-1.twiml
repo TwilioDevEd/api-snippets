@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Redirect method="POST">http://pigeons.com/twiml.xml</Redirect>
+</Response>

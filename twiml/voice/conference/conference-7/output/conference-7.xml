@@ -1,7 +1,0 @@
-<Response>
-  <Dial>
-    <Conference beep="false">
-      Customer Waiting Room
-    </Conference>
-  </Dial>
-</Response>

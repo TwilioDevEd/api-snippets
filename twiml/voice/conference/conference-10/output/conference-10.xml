@@ -1,5 +1,0 @@
-<Response>
-  <Dial>
-    <Conference record="record-from-start" recordingStatusCallback="www.myexample.com">LoveTwilio</Conference>
-  </Dial>
-</Response>

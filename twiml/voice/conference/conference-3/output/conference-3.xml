@@ -1,7 +1,0 @@
-<Response>
-  <Dial>
-    <Conference startConferenceOnEnter="true" endConferenceOnExit="true">
-      moderated-conference-room
-    </Conference>
-  </Dial>
-</Response>

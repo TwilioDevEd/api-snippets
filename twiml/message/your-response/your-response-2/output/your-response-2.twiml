@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Message>This is message 1 of 2.</Message>
+    <Message>This is message 2 of 2.</Message>
+</Response>

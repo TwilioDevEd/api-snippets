@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Pause length="5"/>
+    <Say>Hi there.</Say>
+</Response>

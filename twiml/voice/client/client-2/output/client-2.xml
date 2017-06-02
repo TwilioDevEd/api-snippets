@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-	<Dial callerId="+1888XXXXXXX">
-		<Number>858-987-6543</Number>
-		<Client>jenny</Client>
-		<Client>tommy</Client>
-	</Dial>
-</Response>

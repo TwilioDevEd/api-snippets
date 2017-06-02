@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial>
+        <Number>
+            858-987-6543
+        </Number>
+        <Number>
+            415-123-4567
+        </Number>
+        <Number>
+            619-765-4321
+        </Number>
+    </Dial>
+</Response>

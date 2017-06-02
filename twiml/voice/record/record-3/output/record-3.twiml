@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/voicemail_record.xml -->
+<Response>
+    <Say>
+        Please leave a message at the beep. 
+        Press the star key when finished. 
+    </Say>
+    <Record 
+        action="http://foo.edu/handleRecording.php"
+        method="GET" 
+        maxLength="20"
+        finishOnKey="*"
+        />
+    <Say>I did not receive a recording</Say>
+</Response>

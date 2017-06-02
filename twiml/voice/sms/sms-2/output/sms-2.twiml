@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/simple_sms.xml -->
+<Response>
+    <Say>Our store is located at 123 Easy St.</Say>
+    <Sms>Store Location: 123 Easy St.</Sms>
+</Response>    
