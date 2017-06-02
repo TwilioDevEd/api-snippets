@@ -100,7 +100,7 @@ module LanguageHandler
 
     def xml_output_file
       "#{File.dirname(@input_file)}/output/" \
-      "#{File.basename(@input_file).split('.').first}.xml"
+      "#{File.basename(@input_file).split('.').first}.twiml"
     end
 
     def check_process_success(pid, command)

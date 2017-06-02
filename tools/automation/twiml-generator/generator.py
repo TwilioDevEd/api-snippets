@@ -40,7 +40,7 @@ if __name__ == '__main__':
     else:
         languages = args.languages
 
-    filepaths = Path(args.root_twiml_filepath).glob('**/*.xml')
+    filepaths = Path(args.root_twiml_filepath).glob('**/*.twiml')
     for twiml_filepath in filepaths:
         try:
             for language in languages:
