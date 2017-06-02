@@ -18,7 +18,7 @@ class Example
             conferenceSid,
             callSid,
             hold: true,
-            holdUrl: "www.myapp.com/hold"
+            holdUrl: new Uri("http://www.myapp.com/hold")
         );
     }
 }
