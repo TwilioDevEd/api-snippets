@@ -1,5 +1,6 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using Twilio.IpMessaging;
 using Twilio;
 
 class Example {
@@ -10,8 +11,8 @@ class Example {
         const string credentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         // Delete a Credential
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
-        DeleteStatus status = client.deleteCredential(credentialSid);
+        var client = new IpMessagingClient(accountSid, authToken);
+        DeleteStatus status = client.DeleteCredential(credentialSid);
         Console.WriteLine(status);
     }
 }

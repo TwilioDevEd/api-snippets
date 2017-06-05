@@ -1,5 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
 using Twilio;
 
 class Example {
@@ -10,7 +12,7 @@ class Example {
     	const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     	// Delete a service
-    	var client = new TwilioIpMessagingClient(accountSid, authToken);
+    	var client = new IpMessagingClient(accountSid, authToken);
     	DeleteStatus status = client.DeleteService(serviceSid);
     	Console.WriteLine(status);
     }

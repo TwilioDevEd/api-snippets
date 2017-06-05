@@ -1,5 +1,6 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using Twilio.IpMessaging;
 using Twilio;
 
 class Example
@@ -13,7 +14,7 @@ class Example
     const string channelSid = "CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     // Delete a Channel
-    var client = new TwilioIpMessagingClient(accountSid, authToken);
+    var client = new IpMessagingClient(accountSid, authToken);
     DeleteStatus status = client.DeleteChannel(serviceSid, channelSid);
 
     Console.WriteLine(status);

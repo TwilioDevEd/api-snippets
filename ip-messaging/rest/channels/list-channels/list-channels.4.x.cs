@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
-using Twilio;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
 
 class Example {
     static void Main (string[] args) {
@@ -10,7 +11,7 @@ class Example {
         const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         //Retrieve the list of channels
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
+        var client = new IpMessagingClient(accountSid, authToken);
         ChannelResult channels = client.ListChannels(serviceSid);
         Console.WriteLine(channels);
     }
