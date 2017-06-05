@@ -1,5 +1,4 @@
 {
   "title": "Use an API Key Pair to Send A Message",
-  "type": "server",
-  "test": false
+  "type": "server"
 }

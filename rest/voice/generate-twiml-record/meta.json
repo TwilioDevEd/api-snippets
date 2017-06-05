@@ -1,4 +1,5 @@
 {
   "title": "Generate TwiML to Play, Gather and Record a message.",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }
