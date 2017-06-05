@@ -1,5 +1,0 @@
-<Response>
-  <Dial>
-    <Conference muted="true">SimpleRoom</Conference>
-  </Dial>
-</Response>

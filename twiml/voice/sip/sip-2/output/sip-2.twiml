@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<Dial>
+    <Sip username="admin" password="1234">sip:kate@example.com</Sip>
+</Dial>
+</Response>

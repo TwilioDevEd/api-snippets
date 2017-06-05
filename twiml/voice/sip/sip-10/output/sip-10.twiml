@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial>
+        <Sip
+         statusCallbackEvent='initiated ringing answered completed'
+         statusCallback='https://myapp.com/calls/events'
+         statusCallbackMethod='POST'>
+            sip:kate@example.com
+        </Sip>
+    </Dial>
+</Response>

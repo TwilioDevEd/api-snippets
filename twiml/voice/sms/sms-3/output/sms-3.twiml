@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/sms_status.xml -->
+<Response>
+    <Say>Our store is located at 123 Easy St.</Say>
+    <Sms action="/smsHandler.php" method="POST">
+        Store Location: 123 Easy St.
+    </Sms>
+</Response>

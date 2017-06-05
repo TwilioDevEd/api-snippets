@@ -1,7 +1,0 @@
-<Response>
-  <Dial>
-    <Conference beep="false" waitUrl="" startConferenceOnEnter="true" endConferenceOnExit="true">
-      NoMusicNoBeepRoom
-    </Conference>
-  </Dial>
-</Response>
