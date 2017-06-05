@@ -1,5 +1,6 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using Twilio.IpMessaging;
 using Twilio;
 
 class Example {
@@ -10,8 +11,8 @@ class Example {
         const string credentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         // Retrieve a Credential
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
-        Credential credential = client.getCredential(credentialSid);
+        var client = new IpMessagingClient(accountSid, authToken);
+        Credential credential = client.GetCredential(credentialSid);
         Console.WriteLine(credential);
     }
 }

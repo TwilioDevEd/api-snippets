@@ -12,6 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         const string apikey = "apiKey";
         const string friendlyName = "Friendly Name";
+        const string apiKey = "XXX";
 
         TwilioClient.Init(accountSid, authToken);
 
