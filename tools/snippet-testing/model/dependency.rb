@@ -137,9 +137,10 @@ module Model
     def install_node_dependencies
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
         install_language_version(NODE_NAME, version) do
-          unless Dir.exist?('node_modules')
-            system("npm install twilio@#{version} express body-parser")
-          end
+          node_modules_dir = "#{DEP_DIR_NAME}/#{NODE_NAME}/#{version}"
+          # npm 4 requires even an empty package.json
+          FileUtils.cp("#{__dir__}/package.json", "#{node_modules_dir}/package.json")
+          system("npm install -q -p #{node_modules_dir} twilio@#{version} express body-parser")
         end
       end
     end
