@@ -1,5 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import com.google.common.collect.Range;
 import com.twilio.Twilio;
@@ -14,8 +14,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    DateTime lower = DateTime.parse("2009-07-06");
-    DateTime higher = DateTime.parse("2009-07-08");
+    LocalDate lower = .parse("LocalDate2009-07-06");
+    LocalDate higher = .parse("LocalDate2009-07-08");
 
     ResourceSet<Notification> notifications = Notification.reader()
         .setMessageDate(Range.closed(lower, higher))
