@@ -3,6 +3,7 @@ import com.twilio.sdk.resource.instance.ipmessaging.Service;
 import com.twilio.sdk.resource.instance.ipmessaging.User;
 import com.twilio.sdk.resource.list.ipmessaging.ServiceList;
 import com.twilio.sdk.resource.list.ipmessaging.UserList;
+import com.twilio.sdk.TwilioRestException;
 
 public class TwilioTest {
     // Find your Account Sid and Token at twilio.com/user/account
@@ -11,7 +12,7 @@ public class TwilioTest {
 
     public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     public static final String USER_SID = "USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  
+
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
         TwilioIPMessagingClient client = new TwilioIPMessagingClient(ACCOUNT_SID, AUTH_TOKEN);
