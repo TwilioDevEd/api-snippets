@@ -1,4 +1,6 @@
 require 'fileutils'
+require 'unirest'
+require 'version_sorter'
 
 module Model
   class Dependency
@@ -10,33 +12,94 @@ module Model
     RUBY_NAME       = 'ruby'.freeze
     NODE_NAME       = 'node'.freeze
 
-    CS_V4 = '4.7.2'
-    CS_V5 = '5.5.0'
-
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.x', '5.x'],
+      CSHARP_NAME => ['4.7.2', '5.x'],
       PHP_NAME    => ['4.10', '5.9.0'],
       PYTHON_NAME => ['5.6.0', '6.2.0'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc20'],
       NODE_NAME   => ['2.11.0', '3.0.0-alpha-1']
     }.freeze
 
-    CSHARP_DEPENDENCIES = {
-      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
-        { name: 'Twilio', version: CS_V4 },
+    CSHARP_DEPENDENCIES = {}
+
+    def initialize
+      update_library_versions
+    end
+
+    def latest_version(versions)
+      versions = VersionSorter.sort(versions)
+      rc_or_alpha = /alpha1$|alpha\-1$|[0-9]{1,}a1$|rc[0-9]+$/
+      last_is_unstable = versions[-1] =~ rc_or_alpha
+
+      if versions[-2] =~ rc_or_alpha && !last_is_unstable
+        versions[-2]
+      else
+        versions[-1]
+      end
+    end
+
+    def csharp_latest
+      response = Unirest.get 'https://api.nuget.org/v3/registration1/twilio/index.json'
+      versions = response.body['items'].map { |version_grp| version_grp['upper'] }
+      latest_version(versions)
+    end
+
+    def php_latest
+      response = Unirest.get 'https://packagist.org/p/twilio/sdk.json'
+      package_info = response.body['packages']['twilio/sdk']
+      latest_version(package_info.keys)
+    end
+
+    def python_latest
+      response = Unirest.get 'https://pypi.python.org/pypi/twilio/json'
+      package_info = response.body['releases']
+      latest_version(package_info.keys)
+    end
+
+    def ruby_latest
+      response = Unirest.get 'https://rubygems.org/api/v1/versions/twilio-ruby.json'
+      versions = response.body.map { |version_info| version_info['number'] }
+      latest_version(versions)
+    end
+
+    def node_latest
+      response = Unirest.get 'http://registry.npmjs.org/-/package/twilio/dist-tags'
+      response.body['alpha']
+    end
+
+    def update_latest_version
+      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] = csharp_latest
+      AVAILABLE_LIBRARY_VERSION[PHP_NAME][1] = php_latest
+      AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][1] = python_latest
+      AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1] = ruby_latest
+      AVAILABLE_LIBRARY_VERSION[NODE_NAME][1] = node_latest
+
+      puts AVAILABLE_LIBRARY_VERSION
+    end
+
+    def update_library_versions
+      update_latest_version
+
+      CSHARP_DEPENDENCIES[get_csharp_v4] = [
+        { name: 'Twilio', version: get_csharp_v4 },
         { name: 'Twilio.Pricing', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
         { name: 'Twilio.Auth', version: '1.4.0' }
-      ],
-      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
-        { name: 'Twilio', version: CS_V5 },
+      ]
+
+      CSHARP_DEPENDENCIES[get_csharp_v5] = [
+        { name: 'Twilio', version: get_csharp_v5 },
         { name: 'JWT', version: '1.3.4' }
       ]
-    }.freeze
+    end
 
-    def self.install_dependencies
-      new.install_dependencies
+    def get_csharp_v4
+      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0]
+    end
+
+    def get_csharp_v5
+      AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1]
     end
 
     def install_dependencies
@@ -65,29 +128,29 @@ module Model
       end
     end
 
-    def self.php_4_path
+    def php_4_path
       php_4_path = AVAILABLE_LIBRARY_VERSION[PHP_NAME][0]
       "#{DEP_DIR_NAME}/#{PHP_NAME}/#{php_4_path}"
     end
 
-    def self.php_5_path
+    def php_5_path
       php_5_path = AVAILABLE_LIBRARY_VERSION[PHP_NAME][1]
       "#{DEP_DIR_NAME}/#{PHP_NAME}/#{php_5_path}"
     end
 
-    def self.csharp_4_path
+    def csharp_4_path
       csharp_path = AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0]
       "#{DEP_DIR_NAME}/#{CSHARP_NAME}/#{csharp_path}"
     end
 
-    def self.csharp_5_path
+    def csharp_5_path
       csharp_path = AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1]
       "#{DEP_DIR_NAME}/#{CSHARP_NAME}/#{csharp_path}"
     end
 
-    def self.csharp_4_dependencies
+    def csharp_4_dependencies
       [
-        "Twilio.#{CS_V4}/lib/3.5/Twilio.Api.dll",
+        "Twilio.#{get_csharp_v4}/lib/3.5/Twilio.Api.dll",
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
@@ -98,36 +161,36 @@ module Model
       ]
     end
 
-    def self.csharp_5_dependencies
+    def csharp_5_dependencies
       [
-        "Twilio.#{CS_V5}/lib/net35/Twilio.dll",
+        "Twilio.#{get_csharp_v5}/lib/net35/Twilio.dll",
         'JWT.1.3.4/lib/3.5/JWT.dll',
         'Newtonsoft.Json.9.0.1/lib/net35/Newtonsoft.Json.dll'
       ]
     end
 
-    def self.python_5_venv
+    def python_5_venv
       AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][0]
     end
 
-    def self.python_6_venv
+    def python_6_venv
       AVAILABLE_LIBRARY_VERSION[PYTHON_NAME][1]
     end
 
-    def self.ruby_4_gemset
+    def ruby_4_gemset
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME][0]
     end
 
-    def self.ruby_5_gemset
+    def ruby_5_gemset
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME][1]
     end
 
-    def self.node_2_path
+    def node_2_path
       node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][0]
       "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
     end
 
-    def self.node_3_path
+    def node_3_path
       node_path = AVAILABLE_LIBRARY_VERSION[NODE_NAME][1]
       "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
     end
@@ -138,7 +201,7 @@ module Model
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
         install_language_version(NODE_NAME, version) do
           unless Dir.exist?('node_modules')
-            system("npm install twilio@#{version} express body-parser")
+            system("npm install --quiet twilio@#{version} express body-parser")
           end
         end
       end
@@ -172,8 +235,11 @@ module Model
         install_language_version(CSHARP_NAME, version) do
           CSHARP_DEPENDENCIES[version].each do |dependency|
             next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
+
+            sudoCmdPrefix = 'sudo' unless ENV['RUN_ENV'] == 'test'
+
             system(
-              "sudo mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
+              "#{sudoCmdPrefix} mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
             )
           end
         end
@@ -208,5 +274,6 @@ module Model
 end
 
 if __FILE__ == $0
-  Model::Dependency.install_dependencies
+  dependency = Model::Dependency.new
+  dependency.install_dependencies
 end

@@ -9,21 +9,22 @@ require_relative 'model/dependency'
 Dir["#{File.dirname(__FILE__)}/language_handler/*.rb"].each { |file| require File.expand_path(file) }
 
 class SnippetTester
-  def install_dependencies
-    puts 'Installing Dependencies, please wait'
-    Model::Dependency.install_dependencies
-    puts 'Dependencies installed!'
-  end
-
   def initialize(parent_source_folder, test_default = false)
     @parent_source_folder = parent_source_folder
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
+    @dependency = Model::Dependency.new
     @snippet_models = []
     @test_models = [
       Model::TestSession.new(@parent_source_folder, nil, test_default)
     ]
     @language_handlers = get_language_handlers
+  end
+
+  def install_dependencies
+    puts 'Installing Dependencies, please wait'
+    @dependency.install_dependencies
+    puts 'Dependencies installed!'
   end
 
   # Try to recon which snippets are going to be tested in a given folder
@@ -96,44 +97,44 @@ class SnippetTester
 
   def get_language_handlers
     php4_language_handler = LanguageHandler::Php4.new(
-      Model::Dependency.php_4_path
+      @dependency.php_4_path
     )
     php5_language_handler = LanguageHandler::Php5.new(
-      Model::Dependency.php_5_path
+      @dependency.php_5_path
     )
 
     csharp4_language_handler = LanguageHandler::Csharp4.new(
-      Model::Dependency.csharp_4_path,
-      Model::Dependency.csharp_4_dependencies
+      @dependency.csharp_4_path,
+      @dependency.csharp_4_dependencies
     )
 
     csharp5_language_handler = LanguageHandler::Csharp5.new(
-      Model::Dependency.csharp_5_path,
-      Model::Dependency.csharp_5_dependencies
+      @dependency.csharp_5_path,
+      @dependency.csharp_5_dependencies
     )
 
     python5_language_handler = LanguageHandler::Python5.new(
-      Model::Dependency.python_5_venv
+      @dependency.python_5_venv
     )
 
     python6_language_handler = LanguageHandler::Python6.new(
-      Model::Dependency.python_6_venv
+      @dependency.python_6_venv
     )
 
     ruby4_language_handler = LanguageHandler::Ruby4.new(
-      Model::Dependency.ruby_4_gemset
+      @dependency.ruby_4_gemset
     )
 
     ruby5_language_handler = LanguageHandler::Ruby5.new(
-      Model::Dependency.ruby_5_gemset
+      @dependency.ruby_5_gemset
     )
 
     node2_language_handler = LanguageHandler::Node2.new(
-      Model::Dependency.node_2_path
+      @dependency.node_2_path
     )
 
     node3_language_handler = LanguageHandler::Node3.new(
-      Model::Dependency.node_3_path
+      @dependency.node_3_path
     )
 
     {

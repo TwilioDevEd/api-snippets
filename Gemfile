@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'json'
+gem 'colorize'
+gem 'unirest'
+gem 'version_sorter'
+gem 'nokogiri'
