@@ -11,7 +11,7 @@ user = client
           .notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
           .users.create(
               identity: 'User0001',
-              segments: ['premium', 'fitness-lifestyle']
+              segment: ['premium', 'fitness-lifestyle']
           )
 
 puts user.sid
