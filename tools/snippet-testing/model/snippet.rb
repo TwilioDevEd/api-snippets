@@ -18,7 +18,7 @@ module Model
     alias testable? testable
 
     def initialize(meta_json_path, test_model)
-      @server_languages = get_valid_server_languages
+      @server_languages = get_valid_server_languages(test_model)
       @source_folder    = File.dirname(meta_json_path)
       @relative_folder  = @source_folder.sub(test_model.root_source_folder,"")
       @output_folder    = test_model.root_output_folder + @relative_folder
@@ -39,16 +39,20 @@ module Model
       end
     end
 
-    def get_valid_server_languages
+    def get_valid_server_languages(test_model)
       server_languages = []
       snippet_languages = ENV['SNIPPET_LANGUAGE']
 
+      allowed_languages = LANGUAGES.select do |key|
+        !test_model.exclude_languages.include?(key.to_s)
+      end.freeze
+
       unless snippet_languages.nil?
         snippet_languages.split(':').each do |language|
-          server_languages += LANGUAGES.fetch(language.to_sym)
+          server_languages += allowed_languages.fetch(language.to_sym)
         end
       else
-        server_languages = LANGUAGES.values.flatten.freeze
+        server_languages = allowed_languages.values.flatten.freeze
       end
 
       server_languages.uniq
