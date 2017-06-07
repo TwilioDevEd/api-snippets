@@ -10,6 +10,6 @@ AUTH_TOKEN = 'your_auth_token'
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 user = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
              .users.create(identity='User0001',
-                           segments=['premium', 'fitness-lifestyle'])
+                           segment=['premium', 'fitness-lifestyle'])
 
 print(user.sid)
