@@ -10,7 +10,7 @@ from __future__ import print_function
 import os
 import urllib
 from twilio import twiml
-from twilio.util import RequestValidator
+from twilio.request_validator import RequestValidator
 
 twilio_master_number = os.environ['MASTER_NUMBER']
 
