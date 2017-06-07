@@ -25,6 +25,7 @@ module Model
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
         { name: 'Twilio', version: CS_V4 },
         { name: 'Twilio.Pricing', version: '1.1.0' },
+        { name: 'Twilio.Lookups', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
         { name: 'Twilio.Auth', version: '1.4.0' }
@@ -89,6 +90,7 @@ module Model
       [
         "Twilio.#{CS_V4}/lib/3.5/Twilio.Api.dll",
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+        'Twilio.Lookups.1.1.0/lib/3.5/Twilio.Lookups.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
         'Twilio.Auth.1.4.0/lib/3.5/Twilio.Auth.dll',
