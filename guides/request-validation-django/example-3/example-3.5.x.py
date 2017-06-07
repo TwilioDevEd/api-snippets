@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.http import HttpResponseForbidden
 from functools import wraps
-from twilio.util import RequestValidator
+from twilio.request_validator import RequestValidator
 
 import os
 
