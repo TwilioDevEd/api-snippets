@@ -20,7 +20,7 @@ $user = $client
     ->notify->services($serviceSid)
     ->users->create([
         'identity' => 'User0001',
-        'segments' => ['premium', 'fitness-lifestyle']
+        'segment' => ['premium', 'fitness-lifestyle']
     ]);
 
 echo $user->sid;
