@@ -14,8 +14,8 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    LocalDate lower = .parse("LocalDate2009-07-06");
-    LocalDate higher = .parse("LocalDate2009-07-08");
+    LocalDate lower = LocalDate.parse("2009-07-06");
+    LocalDate higher = LocalDate.parse("2009-07-08");
 
     ResourceSet<Notification> notifications = Notification.reader()
         .setMessageDate(Range.closed(lower, higher))

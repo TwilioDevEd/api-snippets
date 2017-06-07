@@ -26,11 +26,12 @@ env:
     - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
   matrix:
     - SNIPPET_LANGUAGE=java6
-    - SNIPPET_LANGUAGE=java7
     - SNIPPET_LANGUAGE=python:curl
 
 matrix:
   include:
+    - env: SNIPPET_LANGUAGE=java7
+      jdk: oraclejdk8
     - language: csharp
       mono: latest
       env: SNIPPET_LANGUAGE=csharp:ruby
@@ -56,3 +57,10 @@ notifications:
 cache:
   apt: true
   pip: true
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
