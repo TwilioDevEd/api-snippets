@@ -11,14 +11,23 @@ var service = client.notify.services('ISxxx');
 
 service.notifications
   .create({
-      identity:'00000001',
-      title:'Generic loooooooong title for all Bindings',
-      body:'This is the body for all Bindings',
-      fcm:'{"notification":{"title":"New alert","body":"Hello Bob!"}}',
-      apn:'{"aps":{"alert":{"title":"New alert","body":Hello Bob!"}}}',
+    "identity": "00000001",
+    "title": "Generic loooooooong title for all Bindings",
+    "body": "This is the body for all Bindings",
+    "fcm": {
+      "notification": {
+        "title": "New alert",
+        "body": "Hello Bob!"
+      }
+    },
+    "apn": {
+      "aps": {
+        "alert": {
+          "title": "New alert",
+          "body": "Hello Bob!"
+        }
+      }
+    },
   }).then(function(notification) {
-      console.log(notification);
-  }).catch(function(error) {
-      console.log(error);
-  })
-  .done()
+    console.log(notification);
+  }).done()
