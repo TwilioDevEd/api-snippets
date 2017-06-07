@@ -1,0 +1,4 @@
+testable: true
+test_output: true
+exclude_languages:
+  - csharp
