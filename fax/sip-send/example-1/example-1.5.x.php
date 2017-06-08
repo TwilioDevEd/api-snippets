@@ -8,8 +8,9 @@ $sid = "AC850685e1d9b8c09dae0b938923dc0d42";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$options = array();
-$options['From'] = "Jack";
+$options = array(
+  "from" => "Jack"  
+);
 $fax = $client->fax->v1->faxes->create(
   "sip:kate@example.com",
   "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf",
