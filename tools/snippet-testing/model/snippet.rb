@@ -46,11 +46,14 @@ module Model
       allowed_languages = LANGUAGES.select do |key|
         !test_model.exclude_languages.include?(key.to_s)
       end.freeze
-
+      
       unless snippet_languages.nil?
         snippet_languages.split(':').each do |language|
-          server_languages += allowed_languages.fetch(language.to_sym)
+          if allowed_languages.key?(language.to_sym)
+            server_languages += allowed_languages.fetch(language.to_sym)
+          end
         end
+        server_languages.flatten.freeze
       else
         server_languages = allowed_languages.values.flatten.freeze
       end

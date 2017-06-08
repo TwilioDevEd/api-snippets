@@ -1,5 +1,5 @@
 {
   "title": "Add A New Outgoing Caller ID",
   "type": "server",
-  "testable": false
+  "testable": true
 }

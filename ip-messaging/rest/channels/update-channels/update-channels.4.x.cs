@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
-using Twilio;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
 
 class Example {
     static void Main (string[] args) {
@@ -14,7 +15,7 @@ class Example {
         const string attr = "attributes";
         
         // Update the channel
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
+        var client = new IpMessagingClient(accountSid, authToken);
         Channel channel = client.UpdateChannel(serviceSid, channelSid, type, friendlyName, attr);
         Console.WriteLine(channel);
     }

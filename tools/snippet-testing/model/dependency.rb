@@ -11,12 +11,12 @@ module Model
     NODE_NAME       = 'node'.freeze
 
     CS_V4 = '4.7.2'
-    CS_V5 = '5.5.0'
+    CS_V5 = '5.5.1-alpha1'
 
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.x', '5.x'],
-      PHP_NAME    => ['4.10', '5.9.0'],
-      PYTHON_NAME => ['5.6.0', '6.2.0'],
+      CSHARP_NAME => ['4.x', '5.5.1-alpha1'],
+      PHP_NAME    => ['4.10', '5.9.0-alpha1'],
+      PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc20'],
       NODE_NAME   => ['2.11.0', '3.0.0-alpha-1']
     }.freeze
@@ -25,6 +25,8 @@ module Model
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
         { name: 'Twilio', version: CS_V4 },
         { name: 'Twilio.Pricing', version: '1.1.0' },
+        { name: 'Twilio.Lookups', version: '1.1.0' },
+        { name: 'Twilio.Monitor', version: '1.1.0' },
         { name: 'Twilio.IpMessaging', version: '1.2.0' },
         { name: 'Twilio.TaskRouter', version: '2.3.0' },
         { name: 'Twilio.Auth', version: '1.4.0' }
@@ -89,6 +91,8 @@ module Model
       [
         "Twilio.#{CS_V4}/lib/3.5/Twilio.Api.dll",
         'Twilio.Pricing.1.1.0/lib/3.5/Twilio.Pricing.dll',
+        'Twilio.Lookups.1.1.0/lib/3.5/Twilio.Lookups.dll',
+        'Twilio.Monitor.1.1.0/lib/3.5/Twilio.Monitor.dll',
         'Twilio.IpMessaging.1.2.0/lib/3.5/Twilio.IpMessaging.dll',
         'Twilio.TaskRouter.2.3.0/lib/3.5/Twilio.TaskRouter.dll',
         'Twilio.Auth.1.4.0/lib/3.5/Twilio.Auth.dll',
@@ -137,9 +141,10 @@ module Model
     def install_node_dependencies
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
         install_language_version(NODE_NAME, version) do
-          unless Dir.exist?('node_modules')
-            system("npm install twilio@#{version} express body-parser")
-          end
+          node_modules_dir = "#{DEP_DIR_NAME}/#{NODE_NAME}/#{version}"
+          # npm 4 requires even an empty package.json
+          FileUtils.cp("#{__dir__}/package.json", "#{node_modules_dir}/package.json")
+          system("npm install -q -p #{node_modules_dir} twilio@#{version} express body-parser")
         end
       end
     end
@@ -172,8 +177,9 @@ module Model
         install_language_version(CSHARP_NAME, version) do
           CSHARP_DEPENDENCIES[version].each do |dependency|
             next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
+            cmdSudoPrefix = 'sudo ' unless ENV['RUN_ENV'] == 'test'
             system(
-              "sudo mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
+              "#{cmdSudoPrefix}mono #{DEP_DIR_NAME}/#{NUGET_FILE_NAME} install #{dependency[:name]} -Version #{dependency[:version]}"
             )
           end
         end

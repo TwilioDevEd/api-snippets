@@ -1,6 +1,7 @@
 // Install the Java helper library from twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.rest.fax.v1.Fax;
+import com.twilio.rest.fax.v1.FaxCreator;
 import java.net.URI;
 import java.net.URISyntaxException;
 

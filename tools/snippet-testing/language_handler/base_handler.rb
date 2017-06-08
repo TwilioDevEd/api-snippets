@@ -6,6 +6,7 @@ module LanguageHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
     LANG_CNAME = 'cname'.freeze
     PROCESS_TIMEOUT_EXIT_CODE = 120
+    TEST_TIMEOUT = Integer(ENV['TEST_TIMEOUT'] || 20)
     UNHANDLED_LANGUAGE_MESSAGE = 'File name does not specify a Twilio library' \
                                  ' version. Rename snippet as ' \
                                  '\'snippet.rb\' => \'snippet.5.x.rb\'' \
@@ -104,7 +105,7 @@ module LanguageHandler
     end
 
     def check_process_success(pid, command)
-      Timeout.timeout(20) do
+      Timeout.timeout(TEST_TIMEOUT) do
         _id, status = Process.wait2(pid)
         return status.exitstatus
       end

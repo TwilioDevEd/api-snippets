@@ -1,4 +1,4 @@
-curl -XPOST https://chat.twilio.com/v2/Services/{service sid}/Roles \
+curl -XPOST https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Roles \
     -d "FriendlyName=my role" \
     -d "Type=channel" \
     -d "Permission=sendMessage" \

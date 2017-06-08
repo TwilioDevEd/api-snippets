@@ -9,5 +9,5 @@ client.calls.create({
     to: "+14155551212",
     from: "+15017250604"
 }, function(err, call) {
-    process.stdout.write(call.sid);
+    console.log(call.sid);
 });

@@ -5,9 +5,7 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.messaging
-      .services
-      .list()
+client.messaging.services.list()
       .then(function(response) {
         console.log(response);
       }).catch(function(error) {

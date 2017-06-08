@@ -15,6 +15,6 @@ $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // Create the channel
 $channel = $service->channels->create(array(
-    'FriendlyName' => 'CHANNEL_NAME'));
+    'FriendlyName' => 'MyChannel'));
 
 print $channel;

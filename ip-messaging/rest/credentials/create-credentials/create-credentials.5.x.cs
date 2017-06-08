@@ -10,8 +10,8 @@ class Example
         // Find your Account SID and Auth Token at twilio.com/console
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
-        const string apikey = "apiKey";
         const string friendlyName = "Friendly Name";
+        const string apiKey = "XXX";
 
         TwilioClient.Init(accountSid, authToken);
 

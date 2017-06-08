@@ -12,4 +12,4 @@ alpha_senders = client.messaging \
                       .list()
 
 for alpha_sender in alpha_senders:
-    print(alpha_senders.sid)
+    print(alpha_sender)

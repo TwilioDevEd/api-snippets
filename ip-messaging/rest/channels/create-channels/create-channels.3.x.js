@@ -6,7 +6,7 @@ var client = new Twilio(accountSid, authToken);
 var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.channels.create({
-    friendlyName: 'My channel name'
+    friendlyName: 'MyChannel'
 }).then(function(response) {
     console.log(response);
 }).catch(function(error) {

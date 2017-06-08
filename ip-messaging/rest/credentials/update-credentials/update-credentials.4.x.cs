@@ -1,5 +1,6 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
+using Twilio.IpMessaging;
 using Twilio;
 
 class Example {
@@ -17,8 +18,14 @@ class Example {
         const string apiKey = "apiKey";
 
         // Update a Credential
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
-        Credential credential = client.UpdateCredential(credentialSid, type, friendlyName, certificate, privateKey, sandbox, apikey);
+        var client = new IpMessagingClient(accountSid, authToken);
+        Credential credential = client.UpdateCredential(credentialSid,
+            type,
+            friendlyName,
+            certificate,
+            privateKey,
+            sandbox,
+            apiKey);
         Console.WriteLine(credential);
     }
 }

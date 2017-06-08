@@ -2,7 +2,9 @@
 // These consts are your accountSid and authToken from twilio.com/user/account
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
-const client = require('twilio')(accountSid, authToken);
+const Twilio = require('twilio');
+const client = new Twilio(accountSid, authToken);
+
 
 client.calls
   .create({
@@ -10,4 +12,4 @@ client.calls
     to: 'client:tommy',
     from: '+15017250604',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then((call) => console.log(call.sid));

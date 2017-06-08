@@ -1,6 +1,8 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
-using Twilio;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
+using System.Collections.Generic;
 
 class Example {
     static void Main (string[] args) {
@@ -13,11 +15,18 @@ class Example {
         const string defaultChannelRoleSid = "defaultChannelRoleSid";
         const string defaultChannelCreatorRoleSid = "defaultChannelCreatorRoleSid";
         const int typingIndicatorTimeout = 5;
-        Dictionary<string, string> webhooksParams;
+        Dictionary<string, string> webhooksParams = new Dictionary<string, string>();
 
         // Update a service
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
-        Service service = client.UpdateService(serviceSid,friendlyName,defaultServiceRoleSid,defaultChannelRoleSid,defaultChannelCreatorRoleSid,typingIndicatorTimeout,webhooksParams);
+        var client = new IpMessagingClient(accountSid, authToken);
+        Service service = client.UpdateService(serviceSid,
+            friendlyName,
+            defaultServiceRoleSid,
+            defaultChannelRoleSid,
+            defaultChannelCreatorRoleSid,
+            typingIndicatorTimeout,
+            webhooksParams);
+
         Console.WriteLine(service);
     }
 }

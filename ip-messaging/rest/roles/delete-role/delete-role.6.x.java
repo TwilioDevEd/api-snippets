@@ -1,5 +1,5 @@
+import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.ipmessaging.Role;
-import com.twilio.sdk.resource.list.ipmessaging.RoleList;
 import com.twilio.sdk.TwilioIPMessagingClient;
 import com.twilio.sdk.resource.instance.ipmessaging.Service;
 

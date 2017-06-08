@@ -1,0 +1,5 @@
+testable: true
+test_output: false
+exclude_languages:
+  - python
+  - java6

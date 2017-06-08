@@ -6,7 +6,8 @@ url.auth = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token';
 https.get(url, (res) => {
   res.on('data', (jsonString) => {
     const lookup = JSON.parse(jsonString);
-    console.log(`Phone Number ${lookup.phone_number} is currently owned : ${lookup.add_ons.results.payfone_tcpa_compliance.result.Response.NumberMatch}`);
+    const numberMatch = lookup.add_ons.results && lookup.add_ons.results.payfone_tcpa_compliance.result.Response.NumberMatch;
+    console.log(`Phone Number ${lookup.phone_number} is currently owned : ${numberMatch}`);
   });
 }).on('error', (e) => {
   console.log(`Got error: ${e.message}`);
