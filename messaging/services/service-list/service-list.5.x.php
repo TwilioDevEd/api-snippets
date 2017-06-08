@@ -8,7 +8,7 @@ use Twilio\Rest\Client;
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 
-$twilio = new Twilio($sid, $token);
+$twilio = new Client($sid, $token);
 
 $services = $twilio->messaging->v1->services->read();
 

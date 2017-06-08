@@ -9,4 +9,4 @@ client = Client(account_sid, auth_token)
 services = client.messaging.services.list()
 
 for service in services:
-    print(services.sid)
+    print(service)
