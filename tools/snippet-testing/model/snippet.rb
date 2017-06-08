@@ -49,7 +49,9 @@ module Model
 
       unless snippet_languages.nil?
         snippet_languages.split(':').each do |language|
-          server_languages += allowed_languages.fetch(language.to_sym)
+          if allowed_languages.key?(language)
+            server_languages += allowed_languages.fetch(language.to_sym)
+          end
         end
       else
         server_languages = allowed_languages.values.flatten.freeze
