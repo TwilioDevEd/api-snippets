@@ -7,7 +7,7 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Sip("sip:kate@example.com?mycustomheader=foo&smyotherheader=bar");
+        dial.Sip("sip:kate@example.com?mycustomheader=foo&myotherheader=bar");
         response.Dial(dial);
 
         System.Console.WriteLine(response.ToString());
