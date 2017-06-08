@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'json'
+gem 'colorize'
+gem 'parallel'
+gem 'github_api'
