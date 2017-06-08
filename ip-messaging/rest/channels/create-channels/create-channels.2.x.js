@@ -6,7 +6,7 @@ var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.channels.create({
-    friendlyName: 'channel_name'
+    friendlyName: 'MyChannel'
 }).then(function(response) {
     console.log(response);
 }).fail(function(error) {

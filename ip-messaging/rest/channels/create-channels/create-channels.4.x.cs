@@ -10,8 +10,8 @@ class Example {
         const string authToken = "your_auth_token";
         const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string channelType = "public";
-        const string friendlyName = "general";
-        const string uniqueName = "general";
+        const string friendlyName = "MyChannel";
+        const string uniqueName = "my-channel";
         const string attributes = "";
 
         // Create a channel

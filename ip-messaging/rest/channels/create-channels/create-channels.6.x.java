@@ -19,8 +19,8 @@ public class TwilioTest {
 
         // Create the parameters
         final Map<String, String> channelParams = new HashMap<String, String>();
-        channelParams.put("FriendlyName", "General");
-        channelParams.put("UniqueName", "General");
+        channelParams.put("FriendlyName", "MyChannel");
+        channelParams.put("UniqueName", "my-channel");
 
         // Create the channel
         Channel channel = service.createChannel(channelParams);
