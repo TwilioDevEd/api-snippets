@@ -1,3 +1,4 @@
 testable: true
 exclude_languages:
-  - python
+  - csharp
+  - java7

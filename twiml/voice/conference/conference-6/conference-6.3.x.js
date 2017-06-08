@@ -4,7 +4,7 @@ const response = new VoiceResponse();
 const dial = response.dial();
 dial.conference({
     beep: false,
-    waitUrl: '',
+    waitUrl: 'http://your-webhook-host.com',
     startConferenceOnEnter: true,
     endConferenceOnExit: true
 }, 'NoMusicNoBeepRoom');

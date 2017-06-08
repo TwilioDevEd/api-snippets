@@ -2,7 +2,7 @@
 <Response>
   <Dial>
     <Conference beep="false" 
-                waitUrl=""
+                waitUrl="http://your-webhook-host.com"
                 startConferenceOnEnter="true"
                 endConferenceOnExit="true">
       NoMusicNoBeepRoom
