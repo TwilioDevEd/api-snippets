@@ -24,12 +24,12 @@ env:
     - GRADLE_OPTS="-Dorg.gradle.daemon=true"
     - BASH=/bin/bash
     - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-  matrix:
-    - SNIPPET_LANGUAGE=java6
-    - SNIPPET_LANGUAGE=python:curl
 
 matrix:
   include:
+    - env: SNIPPET_LANGUAGE=python:curl
+    - env: SNIPPET_LANGUAGE=java6
+      jdk: oraclejdk7
     - env: SNIPPET_LANGUAGE=java7
       jdk: oraclejdk8
     - language: csharp
@@ -45,7 +45,12 @@ addons:
     - api.twilio.com
     - chat.twilio.com
     - fax.twilio.com
+    - ip-messaging.twilio.com
     - lookups.twilio.com
+    - messaging.twilio.com
+    - monitor.twilio.com
+    - notifications.twilio.com
+    - notify.twilio.com
     - pricing.twilio.com
     - taskrouter.twilio.com
 
