@@ -43,9 +43,11 @@ matrix:
 addons:
   hosts:
     - api.twilio.com
-    - taskrouter.twilio.com
-    - pricing.twilio.com
+    - chat.twilio.com
+    - fax.twilio.com
     - lookups.twilio.com
+    - pricing.twilio.com
+    - taskrouter.twilio.com
 
 notifications:
   slack:
