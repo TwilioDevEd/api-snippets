@@ -1,8 +1,5 @@
 <?php
 
-// This line loads the library
-require '/path/to/vendor/autoload.php';
-
 use Twilio\Rest\Client;
 
 // Find your Account Sid and Token at twilio.com/user/account
@@ -15,5 +12,5 @@ $client = new Client($sid, $token);
 //Delete the role
 $client->chat
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+    ->roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->delete();
