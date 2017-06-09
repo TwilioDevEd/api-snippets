@@ -1,3 +1,0 @@
-curl -XPOST https://preview.twilio.com/Proxy/Services/KSxxxxxxxx/PhoneNumbers \
-    -d "Sid=PNxxxxxxxxxxxxxxxxxxxxxxxx" \
-    -u 'your_account_sid:your_auth_token'

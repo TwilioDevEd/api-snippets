@@ -1,0 +1,4 @@
+curl -XPOST https://preview.twilio.com/Proxy/Services/KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sessions/KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants \
+    -d "Identifier=+15558675309" \
+    -d "FriendlyName=Alice" \
+    -u 'your_account_sid:your_auth_token'

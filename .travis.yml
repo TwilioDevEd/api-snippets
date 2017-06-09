@@ -51,6 +51,7 @@ addons:
     - monitor.twilio.com
     - notifications.twilio.com
     - notify.twilio.com
+    - preview.twilio.com
     - pricing.twilio.com
     - taskrouter.twilio.com
 
