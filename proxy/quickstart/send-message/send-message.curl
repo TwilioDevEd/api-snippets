@@ -1,3 +1,0 @@
-curl -XPOST https://preview.twilio.com/Proxy/Services/KSxxxxxxxxxx/Sessions/KCxxxxxxxxxx/Participants/KPxxxxxxxxxx/Message_Interactions \
-    -d "Body=Hey, reply to this message to chat!" \
-    -u 'your_account_sid:your_auth_token'
