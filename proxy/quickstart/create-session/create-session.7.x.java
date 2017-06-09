@@ -11,7 +11,8 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Session session = Session.creator("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-      .setUniqueName("MyFirstSession").create();
+      .setUniqueName("MyFirstSession")
+      .create();
 
     System.out.println(session.getUniqueName());
   }

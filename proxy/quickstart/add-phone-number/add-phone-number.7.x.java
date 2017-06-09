@@ -12,7 +12,8 @@ public class Example {
 
     PhoneNumber phoneNumber = PhoneNumber.creator(
       "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").create();
+      "PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+      .create();
 
     System.out.println(phoneNumber.getSid());
   }
