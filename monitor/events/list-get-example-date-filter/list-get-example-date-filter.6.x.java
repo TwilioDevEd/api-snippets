@@ -3,6 +3,8 @@ import com.twilio.sdk.TwilioMonitorClient;
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.monitor.Event;
 import com.twilio.sdk.resource.list.monitor.EventList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Example {
 

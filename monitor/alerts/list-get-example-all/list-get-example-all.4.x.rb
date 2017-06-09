@@ -9,6 +9,6 @@ auth_token = 'your_auth_token'
 
 
 # Loop over alerts and print out a property for each one
-@client.account.alerts.list.each do |alert|
+@client.alerts.list.each do |alert|
   puts alert.alert_text
 end
