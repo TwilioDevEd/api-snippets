@@ -1,7 +1,6 @@
 // NOTE: This example uses the ALPHA release of the next generation Twilio
 // helper library - for more information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/csharp#accessing-preview-twilio-features
-
 using System;
 using Twilio;
 using Twilio.Rest.Preview.Proxy.Service;
@@ -14,10 +13,11 @@ class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string proxyServiceSid = "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string twilioPhoneNumberSid = "PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioClient.Init(accountSid, authToken);
 
-        var session = SessionResource.Create(proxyServiceSid, "MyFirstSession");
+        var proxyNumber = PhoneNumberResource.Create(proxyServiceSid, twilioPhoneNumberSid);
 
-        Console.WriteLine(session.Sid);
+        Console.WriteLine(proxyNumber.Sid);
     }
 }
