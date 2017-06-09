@@ -12,6 +12,9 @@ $service = $client
     ->preview
     ->proxy
     ->services
-    ->create("NEW_SERVICE");
+    ->create([
+      "friendlyName" => "My Awesome Service",
+      "callbackUrl" => "https://www.example.com/"
+    ]);
 
 echo $service->friendlyName;

@@ -10,6 +10,8 @@ token = "your_auth_token"
 
 client = Client(account, token)
 
-service = client.preview.proxy.services.create(friendly_name="FRIENDLY_NAME")
+service = client.preview.proxy.services.create( \
+    friendly_name="My Awesome Service", \
+    callback_url="https://www.example.com/")
 
 print(service.sid)
