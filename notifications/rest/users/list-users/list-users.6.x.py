@@ -12,4 +12,4 @@ users = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
               .users.stream(segment='premium')
 
 for user in users:
-    print(users.sid)
+    print(user.sid)

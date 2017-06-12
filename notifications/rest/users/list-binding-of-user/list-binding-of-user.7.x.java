@@ -15,7 +15,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     String serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    String identity = "NUXXXX"
+    String identity = "User0001";
     // List the User Bindings
     ResourceSet<UserBinding> userBindings = UserBinding
         .reader(serviceSid, identity).read();

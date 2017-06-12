@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-credential = client.notify.credentials.create(
+credential = client.notify.v1.credentials.create(
   friendly_name: 'MyFCMCredential',
   type: 'fcm',
   secret: 'fcm_secret'

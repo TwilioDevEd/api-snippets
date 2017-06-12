@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Notify.Service;
+using Twilio.Rest.Notify.V1.Service;
 
 public class Example
 {

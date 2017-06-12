@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Notify;
+using Twilio.Rest.Notify.V1;
 
 public class Example
 {
@@ -16,9 +16,9 @@ public class Example
 
         var service = ServiceResource.Update(
                           serviceSid,
-                          friendlyName: "Another Awesome Service"
-                          FacebookMessengerPageId: "your_page_id",
-                          MessagingServiceSid: "your_twilio_messaging_service_sid"
+                          friendlyName: "Another Awesome Service",
+                          facebookMessengerPageId: "your_page_id",
+                          messagingServiceSid: "your_twilio_messaging_service_sid"
                       );
 
         Console.WriteLine(service.FriendlyName);

@@ -3,35 +3,31 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.Binding;
+import com.twilio.rest.notify.v1.service.Binding;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACCOUNT_SID";
-  public static final String AUTH_TOKEN = "AUTH_TOKEN";
+    // Find your Account Sid and Token at twilio.com/user/account
+    public static final String ACCOUNT_SID = "ACCOUNT_SID";
+    public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
-  public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-  public static void main(String[] args) {
-    // Initialize the client
-    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+    public static void main(String[] args) {
+        // Initialize the client
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    List<String> tags = Arrays.asList("premium", "new user");
+        List<String> tags = Arrays.asList("premium", "new user");
 
-    String endpoint = "endpoint_id";
-    String identity = "00000001";
-    String address = "apn_device_token";
+        String endpoint = "endpoint_id";
+        String identity = "00000001";
+        String address = "apn_device_token";
 
-    Binding binding = Binding
-            .creator(
-                     SERVICE_SID,
-                     endpoint,
-                     identity,
-                     Binding.BindingType.APN,
-                     address)
-            .setTag(tags)
-            .create();
+        Binding binding = Binding
+                .creator(SERVICE_SID, identity, Binding.BindingType.APN, address)
+                .setEndpoint(endpoint)
+                .setTag(tags)
+                .create();
 
-    System.out.println(binding.getSid());
-  }
+        System.out.println(binding.getSid());
+    }
 }

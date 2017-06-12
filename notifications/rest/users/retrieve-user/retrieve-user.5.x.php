@@ -17,7 +17,7 @@ $client = new Client($accountSid, $authToken);
 
 // Create a user
 $user = $client
-    ->notify->services($serviceSid)
-    ->users('User001');
+    ->notify->v1->services($serviceSid)
+    ->users("User001")->fetch();
 
 echo $user->sid;

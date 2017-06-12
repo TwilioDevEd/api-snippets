@@ -18,6 +18,9 @@ public class Example
 
         var users = UserResource.Read(serviceSid);
 
-        Console.WriteLine(users[0].Sid);
+        foreach (var user in users)
+        {
+            Console.WriteLine(user.Sid);
+        }
     }
 }

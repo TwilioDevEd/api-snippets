@@ -15,12 +15,14 @@ $authToken = "your_auth_token";
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($accountSid, $apnCredentialSid, $fcmCredentialSid, $authToken);
+$client = new Client($accountSid, $authToken);
 
 // Create a service
 $service = $client
     ->notify
     ->services
-    ->create(["friendlyName" => "My Awesome Service"]);
+    ->create(["friendlyName" => "My Awesome Service",
+        "apnCredentialSid" => $apnCredentialSid,
+        "fcmCredentialSid" => $fcmCredentialSid]);
 
 echo $service->friendlyName; // => My Awesome Service

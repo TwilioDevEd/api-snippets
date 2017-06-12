@@ -16,6 +16,6 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        UserResource().Delete("User001");
+        UserResource.Delete(serviceSid, "User001");
     }
 }
