@@ -7,10 +7,12 @@ apn_credential_sid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fcm_credential_sid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 
-client = Twilio::REST::Client.new(account_sid, apn_credential_sid, fcm_credential_sid, auth_token)
+client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.services.create(
-  friendly_name: 'My Awesome Service'
+service = client.notify.v1.services.create(
+  friendly_name: 'My Awesome Service',
+  apn_credential_sid: apn_credential_sid,
+  fcm_credential_sid:fcm_credential_sid
 )
 
 puts service.friendly_name

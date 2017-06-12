@@ -1,4 +1,4 @@
-curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
+curl -XPOST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
     -d 'Segment=new_user' \
     -d 'Tag=preferred_device' \
     -d 'Body=Hello New Users on your preferred device' \

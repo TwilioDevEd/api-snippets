@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Notify.V1.Service;
+using Twilio.Rest.Notify.V1.Service.User;
 
 public class Example
 {
@@ -17,8 +17,7 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var segmentMembershipDeleted = SegmentMembershipResource.Delete(
-            identity: "User0001",
-            segment: "premium");
+            serviceSid, "User0001", "premium");
 
         if(segmentMembershipDeleted){
             Console.WriteLine("segment membership was succesfully removed.");

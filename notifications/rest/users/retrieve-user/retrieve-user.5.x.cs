@@ -16,7 +16,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        UserResource user = UserResource.Read(
+        UserResource user = UserResource.Fetch(
             serviceSid,
             "User001"
         );

@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.Notification;
+import com.twilio.rest.notify.v1.service.Notification;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account

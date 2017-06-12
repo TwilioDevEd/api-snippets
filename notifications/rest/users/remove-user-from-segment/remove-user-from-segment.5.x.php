@@ -19,4 +19,4 @@ $client = new Client($accountSid, $authToken);
 $client
     ->notify->services($serviceSid)
     ->users('User0001')
-    ->segmentMembership('premium')->delete();
+    ->segmentMemberships('premium')->delete();

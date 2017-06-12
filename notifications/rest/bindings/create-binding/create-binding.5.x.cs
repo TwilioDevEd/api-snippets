@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Notify.Service;
+using Twilio.Rest.Notify.V1.Service;
 
 public class Example
 {
@@ -12,14 +12,16 @@ public class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string identity = "00000001";
+        const string address = "device_token";
 
         TwilioClient.Init(accountSid, authToken);
 
         var binding = BindingResource.Create(
-            servicePathSid: serviceSid,
-            identity: "00000001",
-            bindingType: BindingResource.BindingTypeEnum.Apn,
-            address: "device_token",
+            serviceSid,
+            identity,
+            BindingResource.BindingTypeEnum.Apn,
+            address,
             tag: new List<string> { "preferred device", "new user" });
 
         Console.WriteLine(binding.Sid);

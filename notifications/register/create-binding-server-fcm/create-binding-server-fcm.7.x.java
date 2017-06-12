@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.Binding;
+import com.twilio.rest.notify.v1.service.Binding;
 
 public class Example {
     // Find your Account Sid and Token at twilio.com/user/account
@@ -21,13 +21,10 @@ public class Example {
         String endpoint = "XXXXXXXXXXXXXXX";
         String identity = "00000001";
         String address = "fcm_device_token";
+
         Binding binding = Binding
-                .creator(
-                         SERVICE_SID,
-                         endpoint,
-                         identity,
-                         Binding.BindingType.FACEBOOK_MESSENGER,
-                         address)
+                .creator(SERVICE_SID, identity, Binding.BindingType.FACEBOOK_MESSENGER, address)
+                .setEndpoint(endpoint)
                 .setTag(tags)
                 .create();
 

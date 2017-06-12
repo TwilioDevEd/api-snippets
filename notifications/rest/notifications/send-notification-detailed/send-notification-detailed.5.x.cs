@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Notify.Service;
+using Twilio.Rest.Notify.V1.Service;
 
 public class Example
 {
@@ -21,7 +21,7 @@ public class Example
             body: "This is the body for all Bindings",
             identity: new List<string> { "00000001" },
             fcm: "{\"notification\":{\"title\":\"New alert\"," +
-                  "\"body"\" : \"Hello Bob!\"}}",
+                  "\"body\" : \"Hello Bob!\"}}",
             apn: "{\"aps\" : " +
                    "{ \"alert\": " +
                        "{\"title\":\"New alert\"," +

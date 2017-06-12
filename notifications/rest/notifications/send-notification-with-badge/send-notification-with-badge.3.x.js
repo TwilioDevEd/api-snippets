@@ -11,16 +11,12 @@ var service = client.notify.services('ISxxx');
 
 service.notifications
   .create({
-    "identity": "00000001",
-    "apn" : {
-      "aps" : {
-        "alert": {
-          "title": "Bob alert",
-          "body" : "Bob, you just received a badge"
-        },
-        "badge" : 1
-      }
-    }
-  }).then(function(notification) {
+    identity: '00000001',
+    apn: `{"aps" :'
+            '{ "alert":'
+              '{"title":"Bob alert",'
+               '"body" : "Bob, you just received a badge"},'
+            '"badge" : 1 }}'`
+  }).then((notification) => {
     console.log(notification);
-  }).done()
+  }).catch(error => console.log(error));

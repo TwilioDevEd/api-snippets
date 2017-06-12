@@ -13,4 +13,4 @@ segment_membership = client.notify \
                            .users('User0001') \
                            .segment_memberships.create(segment='premium')
 
-print(segment_membership.sid)
+print(segment_membership.url)

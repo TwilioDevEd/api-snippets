@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Notify;
+using Twilio.Rest.Notify.V1;
 
 public class Example
 {
@@ -13,9 +13,13 @@ public class Example
         const string fcmCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
 
-        TwilioClient.Init(accountSid, apnCredentialSid, fcmCredentialSid, authToken);
+        TwilioClient.Init(accountSid, authToken);
 
-        var service = ServiceResource.Create("My awesome service");
+        var service = ServiceResource.Create(
+            friendlyName: "My awesome service",
+            apnCredentialSid: apnCredentialSid,
+            fcmCredentialSid: fcmCredentialSid
+        );
 
         Console.WriteLine(service.Sid);
     }

@@ -14,7 +14,7 @@ $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $bindingSid = "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // Initialize the client
-$client = new Client($sid, $token);
+$client = new Client($accountSid, $authToken);
 
 // Retrieve a binding
 $binding = $client

@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Notify;
+using Twilio.Rest.Notify.V1;
 
 public class Example
 {
@@ -15,7 +15,7 @@ public class Example
 
         var credential = CredentialResource.Create(
             CredentialResource.PushServiceEnum.Fcm,
-            "MyFCMCredential"
+            "MyFCMCredential",
             secret: "fcm_secret"
         );
 
