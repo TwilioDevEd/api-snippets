@@ -1,4 +1,0 @@
-curl -XPOST https://preview.twilio.com/Proxy/Services \
-    -d "FriendlyName=My Awesome Service" \
-    -d "CallbackUrl=https://www.example.com/" \
-    -u 'your_account_sid:your_auth_token'
