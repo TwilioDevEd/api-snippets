@@ -10,9 +10,11 @@ token = "your_auth_token"
 
 client = Client(account, token)
 
-participant = client.preview \
+message_interaction = client.preview \
     .proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .participants("KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .message_interactions.create(body="Reply to this message to chat!")
+
+print(message_interaction.sid)

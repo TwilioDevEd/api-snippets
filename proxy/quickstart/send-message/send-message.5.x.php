@@ -11,7 +11,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
-$session = $client
+$msgInteraction = $client
     ->preview
     ->proxy
     ->services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
@@ -23,4 +23,4 @@ $session = $client
         )
     );
 
-echo $session->sid, PHP_EOL;
+echo $msgInteraction->sid, PHP_EOL;
