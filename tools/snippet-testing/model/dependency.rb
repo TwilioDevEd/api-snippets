@@ -10,6 +10,7 @@ module Model
     RUBY_NAME       = 'ruby'.freeze
     NODE_NAME       = 'node'.freeze
     JAVA6_NAME      = 'java6'.freeze
+    JAVA7_NAME      = 'java7'.freeze
 
     CS_V4 = '4.7.2'
     CS_V5 = '5.5.1-alpha1'
@@ -20,7 +21,8 @@ module Model
       PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc21'],
       NODE_NAME   => ['2.11.0', '3.3.0-alpha-1'],
-      JAVA6_NAME  => {artifact: 'twilio-java-sdk', version: '6.3.0'}
+      JAVA6_NAME  => {artifact: 'twilio-java-sdk', version: '6.3.0'},
+      JAVA7_NAME  => {artifact: 'twilio', version: '7.11.0-alpha-1'}
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -51,7 +53,7 @@ module Model
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
         java6:  -> { install_java6_dependencies },
-        java7:  -> { puts 'nothing else to install' },
+        java7:  -> { install_java7_dependencies },
         curl:   -> { puts 'nothing else to install' }
       }
 
@@ -67,6 +69,11 @@ module Model
           dependencies.values.each(&:call)
         end
       end
+    end
+
+    def self.java_7_path
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA7_NAME]
+      "#{DEP_DIR_NAME}/#{JAVA7_NAME}/#{dependency[:version]}/"
     end
 
     def self.java_6_path
@@ -147,6 +154,18 @@ module Model
 
     def build_java_jar_name(artifact, version)
       "#{artifact}-#{version}-jar-with-dependencies.jar"
+    end
+
+    def install_java7_dependencies
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA7_NAME]
+      version = dependency[:version]
+      artifact = dependency[:artifact]
+      filename = build_java_jar_name(artifact, version)
+      install_language_version(JAVA7_NAME, version) do
+        node_modules_dir = "#{DEP_DIR_NAME}/#{JAVA7_NAME}/#{version}"
+        url = "http://repo.maven.apache.org/maven2/com/twilio/sdk/#{artifact}/#{version}/#{filename}"
+        system("wget #{url} -O #{filename}")
+      end
     end
 
     def install_java6_dependencies

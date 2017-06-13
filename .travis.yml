@@ -29,7 +29,9 @@ matrix:
   include:
     - env: SNIPPET_LANGUAGE=java6
       jdk: oraclejdk7
-
+    - env: SNIPPET_LANGUAGE=java7
+      jdk: oraclejdk8
+    
 addons:
   hosts:
     - api.twilio.com

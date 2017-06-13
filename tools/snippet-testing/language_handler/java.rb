@@ -10,9 +10,7 @@ module LanguageHandler
 
     def execute_command(file)
       dir_name = File.dirname(file)
-      Dir.chdir("#{dir_name}/#{base_output_path}") do
-        execute_with_suppressed_output("gradle #{@test_output ? '-q run' : 'build'}", file)
-      end
+      execute_with_suppressed_output("javac -cp #{dependencies_directory}*.jar #{dir_name}/Example.java", file)
     end
 
     def text_with_specific_replacements(file_content)
@@ -25,10 +23,8 @@ module LanguageHandler
 
     def write_content(content, output_file)
       dir_name = File.dirname(output_file)
-      puts "????#{dir_name}"
-      output_dir = "#{dir_name}"
-      FileUtils.mkdir_p("#{output_dir}") unless Dir.exist?("#{output_dir}")
-      new_file = File.new("#{output_dir}/#{TEST_CLASS_NAME}.java", 'w+')
+      FileUtils.mkdir_p("#{dir_name}") unless Dir.exist?("#{dir_name}")
+      new_file = File.new("#{dir_name}/#{TEST_CLASS_NAME}.java", 'w+')
       new_file.write(content)
       new_file.close
       # FileUtils.cp(

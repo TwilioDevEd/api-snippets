@@ -140,10 +140,14 @@ class SnippetTester
       Model::Dependency.java_6_path,
     )
 
+    java7_language_handler = LanguageHandler::Java7.new(
+      Model::Dependency.java_7_path,
+    )
+
     {
       LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
       LanguageHandler::Java6::LANG_CNAME    => java6_language_handler,
-      LanguageHandler::Java7::LANG_CNAME    => LanguageHandler::Java7.new,
+      LanguageHandler::Java7::LANG_CNAME    => java7_language_handler,
       LanguageHandler::Ruby::LANG_CNAME     => LanguageHandler::Ruby.new,
       LanguageHandler::Ruby4::LANG_CNAME    => ruby4_language_handler,
       LanguageHandler::Ruby5::LANG_CNAME    => ruby5_language_handler,
