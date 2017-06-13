@@ -25,21 +25,22 @@ module LanguageHandler
 
     def write_content(content, output_file)
       dir_name = File.dirname(output_file)
-      output_dir = "#{dir_name}/#{base_output_path}"
-      FileUtils.mkdir_p("#{output_dir}/src/main/java/") unless Dir.exist?("#{output_dir}/src/main/java/")
-      new_file = File.new("#{output_dir}/src/main/java/#{TEST_CLASS_NAME}.java", 'w+')
+      puts "????#{dir_name}"
+      output_dir = "#{dir_name}"
+      FileUtils.mkdir_p("#{output_dir}") unless Dir.exist?("#{output_dir}")
+      new_file = File.new("#{output_dir}/#{TEST_CLASS_NAME}.java", 'w+')
       new_file.write(content)
       new_file.close
-      FileUtils.cp(
-        "#{File.dirname(__FILE__)}/#{gradle_file_path}",
-        "#{output_dir}/build.gradle"
-      )
+      # FileUtils.cp(
+      #   "#{File.dirname(__FILE__)}/#{gradle_file_path}",
+      #   "#{output_dir}/build.gradle"
+      # )
     end
 
-    def gradle_file_path
-      "file-templates/build.#{self.class::TWILIO_LIBRARY_VERSION}.gradle"
-    end
-
+    # def gradle_file_path
+    #   "file-templates/build.#{self.class::TWILIO_LIBRARY_VERSION}.gradle"
+    # end
+    #
     def base_output_path
       "java/#{self.class::TWILIO_LIBRARY_VERSION}"
     end

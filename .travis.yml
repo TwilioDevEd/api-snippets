@@ -27,18 +27,8 @@ env:
 
 matrix:
   include:
-    - env: SNIPPET_LANGUAGE=python:curl
     - env: SNIPPET_LANGUAGE=java6
       jdk: oraclejdk7
-    - env: SNIPPET_LANGUAGE=java7
-      jdk: oraclejdk8
-    - language: csharp
-      mono: latest
-      env: SNIPPET_LANGUAGE=csharp:ruby
-    - os: linux
-      dist: trusty
-      sudo: required
-      env: SNIPPET_LANGUAGE=node:php
 
 addons:
   hosts:

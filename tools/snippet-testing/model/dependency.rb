@@ -9,6 +9,7 @@ module Model
     PYTHON_NAME     = 'python'.freeze
     RUBY_NAME       = 'ruby'.freeze
     NODE_NAME       = 'node'.freeze
+    JAVA6_NAME      = 'java6'.freeze
 
     CS_V4 = '4.7.2'
     CS_V5 = '5.5.1-alpha1'
@@ -18,7 +19,8 @@ module Model
       PHP_NAME    => ['4.10', '5.10.0-alpha1'],
       PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc21'],
-      NODE_NAME   => ['2.11.0', '3.3.0-alpha-1']
+      NODE_NAME   => ['2.11.0', '3.3.0-alpha-1'],
+      JAVA6_NAME  => {artifact: 'twilio-java-sdk', version: '6.3.0'}
     }.freeze
 
     CSHARP_DEPENDENCIES = {
@@ -48,7 +50,7 @@ module Model
         ruby:   -> { install_ruby_dependencies },
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
-        java6:  -> { puts 'nothing else to install' },
+        java6:  -> { install_java6_dependencies },
         java7:  -> { puts 'nothing else to install' },
         curl:   -> { puts 'nothing else to install' }
       }
@@ -65,6 +67,11 @@ module Model
           dependencies.values.each(&:call)
         end
       end
+    end
+
+    def self.java_6_path
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA6_NAME]
+      "#{DEP_DIR_NAME}/#{JAVA6_NAME}/#{dependency[:version]}/"
     end
 
     def self.php_4_path
@@ -137,6 +144,22 @@ module Model
     end
 
     private
+
+    def build_java_jar_name(artifact, version)
+      "#{artifact}-#{version}-jar-with-dependencies.jar"
+    end
+
+    def install_java6_dependencies
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA6_NAME]
+      version = dependency[:version]
+      artifact = dependency[:artifact]
+      filename = build_java_jar_name(artifact, version)
+      install_language_version(JAVA6_NAME, version) do
+        node_modules_dir = "#{DEP_DIR_NAME}/#{JAVA6_NAME}/#{version}"
+        url = "http://repo.maven.apache.org/maven2/com/twilio/sdk/#{artifact}/#{version}/#{filename}"
+        system("wget #{url} -O #{filename}")
+      end
+    end
 
     def install_node_dependencies
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|
