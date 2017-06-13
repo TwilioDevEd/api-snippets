@@ -11,6 +11,10 @@ module LanguageHandler
       execute_command(file)
     end
 
+    def get_filename
+      Model::Dependency.new().get_java_7_twilio_dependency_jar()
+    end
+
     def excluded_twiml_nodes
       ['/Response/Message/Body', '/Response/Dial/Number']
     end

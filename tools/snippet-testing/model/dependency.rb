@@ -52,8 +52,8 @@ module Model
         ruby:   -> { install_ruby_dependencies },
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
-        java6:  -> { install_java6_dependencies },
-        java7:  -> { install_java7_dependencies },
+        java6:  -> { install_java_dependencies(JAVA6_NAME) },
+        java7:  -> { install_java_dependencies(JAVA7_NAME) },
         curl:   -> { puts 'nothing else to install' }
       }
 
@@ -150,31 +150,34 @@ module Model
       "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
     end
 
+    def get_java_6_twilio_dependency_jar
+      get_java_twilio_dependency_jar(JAVA6_NAME)
+    end
+
+    def get_java_7_twilio_dependency_jar
+      get_java_twilio_dependency_jar(JAVA7_NAME)
+    end
+
     private
+
+    def get_java_twilio_dependency_jar(java_name)
+      dependency = AVAILABLE_LIBRARY_VERSION[java_name]
+      version = dependency[:version]
+      artifact = dependency[:artifact]
+      filename = build_java_jar_name(artifact, version)
+    end
 
     def build_java_jar_name(artifact, version)
       "#{artifact}-#{version}-jar-with-dependencies.jar"
     end
 
-    def install_java7_dependencies
-      dependency = AVAILABLE_LIBRARY_VERSION[JAVA7_NAME]
+    def install_java_dependencies(java_name)
+      dependency = AVAILABLE_LIBRARY_VERSION[java_name]
       version = dependency[:version]
       artifact = dependency[:artifact]
       filename = build_java_jar_name(artifact, version)
-      install_language_version(JAVA7_NAME, version) do
-        node_modules_dir = "#{DEP_DIR_NAME}/#{JAVA7_NAME}/#{version}"
-        url = "http://repo.maven.apache.org/maven2/com/twilio/sdk/#{artifact}/#{version}/#{filename}"
-        system("wget #{url} -O #{filename}")
-      end
-    end
-
-    def install_java6_dependencies
-      dependency = AVAILABLE_LIBRARY_VERSION[JAVA6_NAME]
-      version = dependency[:version]
-      artifact = dependency[:artifact]
-      filename = build_java_jar_name(artifact, version)
-      install_language_version(JAVA6_NAME, version) do
-        node_modules_dir = "#{DEP_DIR_NAME}/#{JAVA6_NAME}/#{version}"
+      install_language_version(java_name, version) do
+        node_modules_dir = "#{DEP_DIR_NAME}/#{java_name}/#{version}"
         url = "http://repo.maven.apache.org/maven2/com/twilio/sdk/#{artifact}/#{version}/#{filename}"
         system("wget #{url} -O #{filename}")
       end

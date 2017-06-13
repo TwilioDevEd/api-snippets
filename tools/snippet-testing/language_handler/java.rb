@@ -10,7 +10,15 @@ module LanguageHandler
 
     def execute_command(file)
       dir_name = File.dirname(file)
-      execute_with_suppressed_output("javac -cp #{dependencies_directory}*.jar #{dir_name}/Example.java", file)
+      cmd = "javac -cp #{dependencies_directory}*.jar #{dir_name}/Example.java"
+      if @test_output
+        cmd += " && java -cp '#{dir_name}:#{dependencies_directory}#{get_filename}' Example"
+      end
+      execute_with_suppressed_output(cmd, file)
+    end
+
+    def get_filename
+      raise 'This method must me implemented in sub classes'
     end
 
     def text_with_specific_replacements(file_content)
@@ -27,18 +35,6 @@ module LanguageHandler
       new_file = File.new("#{dir_name}/#{TEST_CLASS_NAME}.java", 'w+')
       new_file.write(content)
       new_file.close
-      # FileUtils.cp(
-      #   "#{File.dirname(__FILE__)}/#{gradle_file_path}",
-      #   "#{output_dir}/build.gradle"
-      # )
-    end
-
-    # def gradle_file_path
-    #   "file-templates/build.#{self.class::TWILIO_LIBRARY_VERSION}.gradle"
-    # end
-    #
-    def base_output_path
-      "java/#{self.class::TWILIO_LIBRARY_VERSION}"
     end
   end
 end
