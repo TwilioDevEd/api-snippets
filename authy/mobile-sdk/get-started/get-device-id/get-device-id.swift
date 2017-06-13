@@ -1,0 +1,1 @@
+let deviceId = sharedTwilioAuth.getDeviceId()
