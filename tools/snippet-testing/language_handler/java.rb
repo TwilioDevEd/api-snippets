@@ -10,9 +10,19 @@ module LanguageHandler
 
     def execute_command(file)
       dir_name = File.dirname(file)
-      Dir.chdir("#{dir_name}/#{base_output_path}") do
-        execute_with_suppressed_output("gradle #{@test_output ? '-q run' : 'build'}", file)
+      classpath = get_dependencies.map do |dependency|
+        "#{dependencies_directory}#{dependency}"
+      end.join ":"
+
+      cmd = "javac -cp #{classpath} #{dir_name}/Example.java"
+      if @test_output
+        cmd += " && java -cp '#{dir_name}:#{classpath}' Example"
       end
+      execute_with_suppressed_output(cmd, file)
+    end
+
+    def get_dependencies
+      raise 'This method must me implemented in sub classes'
     end
 
     def text_with_specific_replacements(file_content)
@@ -25,23 +35,10 @@ module LanguageHandler
 
     def write_content(content, output_file)
       dir_name = File.dirname(output_file)
-      output_dir = "#{dir_name}/#{base_output_path}"
-      FileUtils.mkdir_p("#{output_dir}/src/main/java/") unless Dir.exist?("#{output_dir}/src/main/java/")
-      new_file = File.new("#{output_dir}/src/main/java/#{TEST_CLASS_NAME}.java", 'w+')
+      FileUtils.mkdir_p("#{dir_name}") unless Dir.exist?("#{dir_name}")
+      new_file = File.new("#{dir_name}/#{TEST_CLASS_NAME}.java", 'w+')
       new_file.write(content)
       new_file.close
-      FileUtils.cp(
-        "#{File.dirname(__FILE__)}/#{gradle_file_path}",
-        "#{output_dir}/build.gradle"
-      )
-    end
-
-    def gradle_file_path
-      "file-templates/build.#{self.class::TWILIO_LIBRARY_VERSION}.gradle"
-    end
-
-    def base_output_path
-      "java/#{self.class::TWILIO_LIBRARY_VERSION}"
     end
   end
 end
