@@ -12,5 +12,5 @@ map_permission = client.sync \
                        .sync_map_permissions("bob") \
                        .fetch()
 
-print(map_permission.unique_name)
+print(map_permission.identity)
 print(map_permission.url)

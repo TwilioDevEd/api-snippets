@@ -26,6 +26,6 @@ public class Example {
     // Create a Map Item
     SyncMapItem item = SyncMapItem.creator(SERVICE_SID, MAP_SID, "steph_curry", data).create();
 
-    System.out.println(item.getSid());
+    System.out.println(item.getUrl());
   }
 }

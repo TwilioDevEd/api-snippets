@@ -12,5 +12,5 @@ list_permission = client.sync \
                         .sync_list_permissions("bob") \
                         .fetch()
 
-print(list_permission.unique_name)
+print(list_permission.identity)
 print(list_permission.url)

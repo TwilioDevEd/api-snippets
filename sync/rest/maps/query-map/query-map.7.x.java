@@ -22,7 +22,7 @@ public class Example {
         .read();
 
     for (SyncMapItem item : items) {
-      System.out.println(item.getSid() + ": " + item.getData());
+      System.out.println(item.getUrl() + ": " + item.getData());
     }
   }
 }
