@@ -9,6 +9,8 @@ module Model
     PYTHON_NAME     = 'python'.freeze
     RUBY_NAME       = 'ruby'.freeze
     NODE_NAME       = 'node'.freeze
+    JAVA6_NAME      = 'java6'.freeze
+    JAVA7_NAME      = 'java7'.freeze
 
     CS_V4 = '4.7.2'
     CS_V5 = '5.5.1-alpha1'
@@ -18,8 +20,17 @@ module Model
       PHP_NAME    => ['4.10', '5.10.0-alpha1'],
       PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
       RUBY_NAME   => ['4.13.0', '5.0.0.rc21'],
-      NODE_NAME   => ['2.11.0', '3.3.0-alpha-1']
+      NODE_NAME   => ['2.11.0', '3.3.0-alpha-1'],
+      JAVA6_NAME  => {group: "com.twilio.sdk", name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies'},
+      JAVA7_NAME  => {group: "com.twilio.sdk", name: 'twilio', version: '7.11.0-alpha-1', suffix: '-jar-with-dependencies'}
     }.freeze
+
+    JAVA_DEPENDENCIES = {
+      JAVA6_NAME => [],
+      JAVA7_NAME => [
+        {group: "javax.servlet", name: "javax.servlet-api", version: "3.1.0"}
+      ]
+    }
 
     CSHARP_DEPENDENCIES = {
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
@@ -48,8 +59,8 @@ module Model
         ruby:   -> { install_ruby_dependencies },
         node:   -> { install_node_dependencies },
         python: -> { install_python_dependencies },
-        java6:  -> { puts 'nothing else to install' },
-        java7:  -> { puts 'nothing else to install' },
+        java6:  -> { install_java_dependencies(JAVA6_NAME) },
+        java7:  -> { install_java_dependencies(JAVA7_NAME) },
         curl:   -> { puts 'nothing else to install' }
       }
 
@@ -65,6 +76,16 @@ module Model
           dependencies.values.each(&:call)
         end
       end
+    end
+
+    def self.java_7_path
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA7_NAME]
+      "#{DEP_DIR_NAME}/#{JAVA7_NAME}/#{dependency[:version]}/"
+    end
+
+    def self.java_6_path
+      dependency = AVAILABLE_LIBRARY_VERSION[JAVA6_NAME]
+      "#{DEP_DIR_NAME}/#{JAVA6_NAME}/#{dependency[:version]}/"
     end
 
     def self.php_4_path
@@ -136,7 +157,44 @@ module Model
       "#{DEP_DIR_NAME}/#{NODE_NAME}/#{node_path}/node_modules"
     end
 
+    def get_java_6_jars
+      get_java_jars(JAVA6_NAME)
+    end
+
+    def get_java_7_jars
+      get_java_jars(JAVA7_NAME)
+    end
+
     private
+
+    def get_java_jars(java_name)
+      twilio_dependency = AVAILABLE_LIBRARY_VERSION[java_name]
+      JAVA_DEPENDENCIES[java_name].push(twilio_dependency).map do |dependency|
+        build_java_jar_name(dependency)
+      end
+    end
+
+    def build_java_jar_name(dependency)
+      "#{dependency[:name]}-#{dependency[:version]}#{dependency[:suffix]}.jar"
+    end
+
+    def build_maven_url(dependency, filename)
+      group = dependency[:group].gsub '.', '/'
+      "http://repo.maven.apache.org/maven2/#{group}/#{dependency[:name]}/#{dependency[:version]}/#{filename}"
+    end
+
+    def install_java_dependencies(java_name)
+      twilio_dependency = AVAILABLE_LIBRARY_VERSION[java_name]
+      JAVA_DEPENDENCIES[java_name].push(twilio_dependency).each do |dependency|
+        filename = build_java_jar_name(dependency)
+        version = dependency[:version]
+        install_language_version(java_name, twilio_dependency[:version]) do
+          node_modules_dir = "#{DEP_DIR_NAME}/#{java_name}/#{version}"
+          url = build_maven_url(dependency, filename)
+          system("wget #{url} -O #{filename}")
+        end
+      end
+    end
 
     def install_node_dependencies
       AVAILABLE_LIBRARY_VERSION[NODE_NAME].each do |version|

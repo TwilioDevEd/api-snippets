@@ -1,4 +1,5 @@
 require_relative 'java'
+require_relative '../model/dependency'
 
 module LanguageHandler
   class Java6 < Java
@@ -9,6 +10,10 @@ module LanguageHandler
 
     def execute(file)
       execute_command(file)
+    end
+
+    def get_dependencies
+      Model::Dependency.new().get_java_6_jars
     end
   end
 end
