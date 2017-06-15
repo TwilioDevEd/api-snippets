@@ -7,7 +7,6 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-sims = client.preview.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-            .list()
+sims = client.preview.wireless.sims.list()
 
 print(sims)

@@ -12,4 +12,4 @@ $ratePlan = $client->preview->wireless
     ->ratePlans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     ->fetch();
 
-prin_r($ratePlan);
+print_r($ratePlan);

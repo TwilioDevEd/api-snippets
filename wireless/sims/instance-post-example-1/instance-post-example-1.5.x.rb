@@ -11,8 +11,8 @@ sim = client.preview.wireless
   .sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
   .update(
     status: 'active',
-    callbackUrl: 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter'
-    callbackMethod: 'POST'
+    callback_url: 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
+    callback_method: 'POST'
   )
 
 puts sim
