@@ -1,6 +1,6 @@
 require 'twilio-ruby'
 
-response = Twilio::TwiML::VoiceResponse.new 
-response.reject reason: 'busy'
+response = Twilio::TwiML::VoiceResponse.new
+response.reject(reason: 'busy')
 
 puts response
