@@ -20,11 +20,15 @@ parser.addArgument(['-f', '--file'], {
     help: 'Specific file path to format',
     required: false
 });
+parser.addArgument(['-t', '--tab-size'], {
+    help: 'Line indentation specified in number of spaces. Default value is 4',
+    required: false
+});
 
 const args = parser.parseArgs();
 
 if (args.file) {
-    formatFile(args.file);
+    formatFile(args.file, args.tab_size);
 } else {
     const relativeSnippetFolder = args.root_path;
     const absoluteSnippetFolder = __dirname + "/../../../" + relativeSnippetFolder;
@@ -36,7 +40,7 @@ if (args.file) {
         }],
         (err, files) => {
           files.forEach((file) => {
-            formatFile(file);
+            formatFile(file, args.tab_size);
           })
         });
 }

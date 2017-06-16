@@ -3,11 +3,13 @@ const fs = require('fs');
 const path = require("path");
 
 const MAX_LINE_LENGTH = 80;
+let tabString;
 
 // Go through all lines in a file, formatting them if needed and appending
 // them to a temporary file. When done, replaces the original file with the
 // temporary one
-function formatFile(file) {
+function formatFile(file, tabSize = 4) {
+  tabString = Array(parseInt(tabSize) + 1).join(" ");
   const rl = readline.createInterface({
     input: fs.createReadStream(file)
   });
@@ -96,7 +98,7 @@ function tabLineIfNeeded(lines, line) {
 // Get tab spaces considering already formatted lines
 function getTab(line) {
   const baseTab = line.match(/^ */);
-  return line.trim().charAt(0) == "." ? baseTab : baseTab + "    ";
+  return line.trim().charAt(0) == "." ? baseTab : baseTab + tabString;
 }
 
 module.exports.formatFile = formatFile;
