@@ -8,7 +8,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-binding = client.notify.services("ISxxx").bindings.create(
+binding = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").bindings.create(
     endpoint="endpoint_id",
     identity="00000001",
     binding_type="apn",

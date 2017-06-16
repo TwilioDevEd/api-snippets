@@ -10,7 +10,7 @@ class Example
     string AuthToken = "your_auth_token";
     var client = new MonitorClient(AccountSid, AuthToken);
 
-    var alerts = twilio.ListAlerts();
+    var alerts = client.ListAlerts();
 
     foreach (var alert in alerts.Alerts)
     {

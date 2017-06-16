@@ -19,6 +19,6 @@ $client = new Client($accountSid, $authToken);
 $segmentMembership = $client
     ->notify->services($serviceSid)
     ->users('User0001')
-    ->segmentMembership->create([ 'segment' => 'premium' ]);
+    ->segmentMemberships->create([ 'segment' => 'premium' ]);
 
-echo $segmentMembership->sid;
+echo $segmentMembership->url;

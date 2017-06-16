@@ -10,6 +10,6 @@ var params = {
 };
 client.events.list(params, function(error, events) {
     for (var e in events) {
-        process.stdout.write(e.description);
+        process.stdout.write(e);
     }
 });

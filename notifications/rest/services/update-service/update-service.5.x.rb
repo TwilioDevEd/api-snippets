@@ -7,12 +7,12 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.services('ISxxx')
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 service = service.update(
   friendly_name: 'Another Awesome Service',
-  FacebookMessengerPageId: 'your_page_id',
-  MessagingServiceSid: 'your_twilio_messaging_service_sid'
+  facebook_messenger_page_id: 'your_page_id',
+  messaging_service_sid: 'your_twilio_messaging_service_sid'
 )
 
 puts service

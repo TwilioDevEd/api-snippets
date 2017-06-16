@@ -8,6 +8,6 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-response = client.notify.services("ISxxx").delete()
+response = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
 
 print(response)

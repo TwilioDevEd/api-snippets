@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Notify.V1.Service;
+using Twilio.Rest.Notify.V1.Service.User;
 
 public class Example
 {
@@ -16,12 +16,10 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        SegmentMembership segmentMembership = SegmentMembership.Create(
-            serviceSid,
-            segment: "premium",
-            identity: "User0001"
+        SegmentMembershipResource segmentMembership = SegmentMembershipResource.Create(
+            serviceSid, "User0001", "premium"
         );
 
-        Console.WriteLine(segmentMembership.Sid);
+        Console.WriteLine(segmentMembership.Url);
     }
 }

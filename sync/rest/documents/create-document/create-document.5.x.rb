@@ -6,7 +6,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Retrieve the service
-service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create the Document, data can be any JSON
 response = service.documents.create(

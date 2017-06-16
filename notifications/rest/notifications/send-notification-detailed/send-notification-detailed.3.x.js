@@ -7,27 +7,15 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-var service = client.notify.services('ISxxx');
+var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.notifications
   .create({
-    "identity": "00000001",
-    "title": "Generic loooooooong title for all Bindings",
-    "body": "This is the body for all Bindings",
-    "fcm": {
-      "notification": {
-        "title": "New alert",
-        "body": "Hello Bob!"
-      }
-    },
-    "apn": {
-      "aps": {
-        "alert": {
-          "title": "New alert",
-          "body": "Hello Bob!"
-        }
-      }
-    },
-  }).then(function(notification) {
+    identity: '00000001',
+    title: 'Generic loooooooong title for all Bindings',
+    body: 'This is the body for all Bindings',
+    fcm: '{"notification":{"title":"New alert","body":"Hello Bob!"}}',
+    apn: '{"aps":{"alert":{"title":"New alert.","body":"Hello Bob!"}}}'
+  }).then((notification) => {
     console.log(notification);
-  }).done()
+  }).catch(error => console.log(error));

@@ -7,7 +7,7 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-client.notify.services('ISxxx')
+client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
     friendlyName: 'Another Awesome Service',
     FacebookMessengerPageId: 'your_page_id',

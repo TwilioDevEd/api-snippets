@@ -18,6 +18,6 @@ $client = new Client($accountSid, $authToken);
 // List all segments
 $segments = $client->notify
     ->services($serviceSid)
-    ->segments->list();
+    ->segments->read();
 
 echo $segments[0]->sid;

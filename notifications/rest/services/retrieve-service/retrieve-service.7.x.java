@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.Service;
+import com.twilio.rest.notify.v1.Service;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -14,7 +14,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Fetch the service
-    Service service = Service.fetcher("ISxxx").fetch();
+    Service service = Service.fetcher("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch();
 
     System.out.println(service.toString());
   }

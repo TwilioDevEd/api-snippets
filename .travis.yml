@@ -53,6 +53,7 @@ addons:
     - notify.twilio.com
     - preview.twilio.com
     - pricing.twilio.com
+    - sync.twilio.com
     - taskrouter.twilio.com
 
 notifications:
