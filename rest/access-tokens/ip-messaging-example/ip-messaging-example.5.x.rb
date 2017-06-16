@@ -11,19 +11,17 @@ device_id = 'someiosdevice'
 identity = 'user@example.com'
 endpoint_id = "HipFlowSlackDockRC:#{identity}:#{device_id}"
 
+# Create IP Messaging grant for our token
+grant = Twilio::JWT::IpMessagingGrant.new
+grant.service_sid = service_sid
+grant.endpoint_id = endpoint_id
+
 # Create an Access Token
 token = Twilio::JWT::AccessToken.new(
   account_sid,
-  api_key, api_secret,
-  3600,
-  identity
-)
-
-# Create IP Messaging grant for our token
-grant = Twilio::JWT::AccessToken::IpMessagingGrant.new
-grant.service_sid = service_sid
-grant.endpoint_id = endpoint_id
-token.add_grant(grant)
+  api_key,
+  api_secret,
+  [grant]);
 
 # Generate the token
 puts token.to_jwt
