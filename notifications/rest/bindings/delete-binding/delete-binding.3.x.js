@@ -7,9 +7,9 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-var service = client.notify.services('ISxxx');
+var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.bindings('BSxxx').remove()
+service.bindings('BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').remove()
   .then(function(wasRemoved) {
     console.log(wasRemoved);
   }).catch(function(error) {

@@ -7,7 +7,7 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-var service = client.notify.services('ISxxx');
+var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.notifications
   .create({

@@ -8,6 +8,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-wasDeleted = client.notify.services("ISxxx").bindings("BSxxx").delete()
+wasDeleted = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .bindings("BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
 
 print(wasDeleted)
