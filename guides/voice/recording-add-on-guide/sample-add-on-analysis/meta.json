@@ -1,0 +1,5 @@
+{
+  "title": "Sample recording analysis from the IBM Watson Speech to Text Add-on",
+  "description": "This is the sample analysis that the Add-on partner provides which is included in the URL of the payload above.",
+  "type": "output"
+}
