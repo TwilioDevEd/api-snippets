@@ -1,0 +1,5 @@
+{
+  "title": "Use IBM Watson Speech to Text Add-on",
+  "description": "Use the IBM Watson Speech to Text add-on to get a transcription of a recording",
+  "type": "server"
+}

@@ -1,0 +1,27 @@
+{
+  "user_token": "XRf951c9b0bce23930750991099e553b0a",
+  "results":[
+    {
+      "results":[
+        {
+          "keywords_result":{},
+          "alternatives":[
+            {
+            "timestamps":[
+              ["I", 0.04, 0.28],
+              ["love", 0.28, 0.71],
+              ["coding", 0.74, 1.25]
+            ],
+            "confidence":0.782,
+            "transcript":"I love coding "
+            }
+          ],
+          "final":true
+        }
+      ],
+      "result_index":0
+    }
+  ],
+  "id":"b0e7a660-bcb6-11e6-8b1b-192a5f5dc12f",
+  "event":"recognitions.completed_with_results"
+}

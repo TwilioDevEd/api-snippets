@@ -1,0 +1,24 @@
+{
+  "status":"successful",
+  "message":null,
+  "code":null,
+  "results":{
+    "ibm_watson_speechtotext":{
+      "request_sid":"XRc82d4197bbc51d5982588ae367365a51",
+      "status":"successful",
+      "message":null,
+      "code":null,
+      "payload":[
+        {
+        "content_type":"application/json",
+        "url":"https://api.twilio.com/2010-04-01/Accounts/AC597d02bf69de79f8f411f289ac211a0d/Recordings/REab85c1c2860471abf040b545c4e5aa40/AddOnResults/XRc82d4197bbc51d5982588ae367365a51/Payloads/XH364bd4514b1377fd8844cd9793416131/Data"
+        }
+      ],
+      "links":{
+        "add_on_result":"https://api.twilio.com/2010-04-01/Accounts/AC597d02bf69de79f8f411f289ac211a0d/Recordings/REab85c1c2860471abf040b545c4e5aa40/AddOnResults/XRc82d4197bbc51d5982588ae367365a51",
+        "payloads":"https://api.twilio.com/2010-04-01/Accounts/AC597d02bf69de79f8f411f289ac211a0d/Recordings/REab85c1c2860471abf040b545c4e5aa40/AddOnResults/XRc82d4197bbc51d5982588ae367365a51/Payloads",
+        "recording":"https://api.twilio.com/2010-04-01/Accounts/AC597d02bf69de79f8f411f289ac211a0d/Recordings/REab85c1c2860471abf040b545c4e5aa40"
+      }
+    }
+  }
+}
