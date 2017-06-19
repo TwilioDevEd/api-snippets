@@ -1,0 +1,3 @@
+curl -XPOST 'https://video.twilio.com/v1/Rooms/RMxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token' \
+  -d 'Status=completed'

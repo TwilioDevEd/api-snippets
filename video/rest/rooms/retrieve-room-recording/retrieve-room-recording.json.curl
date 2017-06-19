@@ -1,0 +1,2 @@
+curl 'https://video.twilio.com/v1/Rooms/{RoomSID}/Recordings/{RecordingSid}' \
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
