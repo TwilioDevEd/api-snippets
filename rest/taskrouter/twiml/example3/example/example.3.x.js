@@ -7,18 +7,14 @@ const app = express();
 app.post('/enqueue_call', function(request, response) {
     const resp = new VoiceResponse();
 
-    const arr = {account_number: '12345abcdef'};
-    const json = JSON.stringify(arr);
+    const json = {account_number: '12345abcdef'};
 
-    resp.enqueue(
-      {workflowSid: 'WW0123456789abcdef0123456789abcdef'}, (node) => {
-        // FIXME <Task> element is not accessible in the helper lib
-        node.task(json, {
-            priority: '5',
-            timeout: '200',
-        });
-      }
-    );
+    resp.enqueueTask({
+      workflowSid: 'WW0123456789abcdef0123456789abcdef'
+    }).task({
+        priority: '5',
+        timeout: '200',
+    }, JSON.stringify(json));
 
     response.setHeader('Content-Type', 'application/xml');
     response.write(resp.toString());
