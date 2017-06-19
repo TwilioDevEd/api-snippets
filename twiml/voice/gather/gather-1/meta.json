@@ -1,4 +1,5 @@
 {
   "title": "Gather Speech or DTMF",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }

@@ -1,4 +1,5 @@
 {
   "title": "Passing headers",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }

@@ -1,4 +1,0 @@
-testable: true
-exclude_languages:
-  - java7
-  - csharp

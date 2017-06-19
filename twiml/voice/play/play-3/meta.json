@@ -1,4 +1,5 @@
 {
   "title": "Using digits",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }

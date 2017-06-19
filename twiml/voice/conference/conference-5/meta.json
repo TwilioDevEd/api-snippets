@@ -1,4 +1,5 @@
 {
   "title": "Join a Conference Muted",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }
