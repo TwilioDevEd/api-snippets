@@ -11,8 +11,7 @@ $client = new Client($accountSid, $authToken);
 $p2pRoom = $client->video->rooms->create([
     'uniqueName' => 'DailyStandup',
     'type' => 'peer-to-peer',
-    'enableTurn' => 'false',
-    'recordParticipantsOnConnect' => 'true',
+    'enableTurn' => false,
     'statusCallback' => 'http://example.org'
 ]);
 

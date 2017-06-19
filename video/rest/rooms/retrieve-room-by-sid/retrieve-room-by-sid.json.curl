@@ -1,2 +1,2 @@
-curl -G 'https://video.twilio.com/v1/Rooms/RMxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+curl -G 'https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
   -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

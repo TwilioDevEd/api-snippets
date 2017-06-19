@@ -10,8 +10,7 @@ var client = new Twilio(accountSid, authToken);
 client.video.rooms.create({
     uniqueName: 'DailyStandup',
     type: 'peer-to-peer',
-    enableTurn: 'false',
-    recordParticipantsOnConnect: 'true',
+    enableTurn: false,
     statusCallback: 'http://example.org'
   }).then((room) => {
     console.log(room.sid);

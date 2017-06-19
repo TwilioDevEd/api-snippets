@@ -7,7 +7,7 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-client.video.rooms('RMxxxxxxxxxxxxxxxxxxxxxxxxxxxxx').fetch()
+client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch()
   .then((room) => {
     console.log(room.uniqueName);
   });

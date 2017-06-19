@@ -7,7 +7,7 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-client.video.rooms('RMxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
     status: 'completed'
   }).then((room) => {

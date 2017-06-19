@@ -9,8 +9,8 @@ $authToken = "your_auth_authToken";
 $client = new Client($accountSid, $authToken);
 
 $rooms = $client->video->rooms->read([
-    'UniqueName' => 'DailyStandup',
-    'status' => 'completed'
+    'status' => 'completed',
+    'uniqueName' => 'DailyStandup'
 ]);
 
 foreach ($rooms as $room) {
