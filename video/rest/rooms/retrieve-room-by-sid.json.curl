@@ -1,2 +1,0 @@
-curl -G 'https://video.twilio.com/v1/Rooms/DailyStandup' \
--u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
