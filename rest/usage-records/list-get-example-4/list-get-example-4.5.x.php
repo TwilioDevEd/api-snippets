@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 $records = $client->usage
     ->records
-    ->today
+    ->daily
     ->read(
         array(
             "category" => "calls-inbound",
