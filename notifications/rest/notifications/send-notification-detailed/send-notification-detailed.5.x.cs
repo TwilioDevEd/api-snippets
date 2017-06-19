@@ -17,9 +17,11 @@ public class Example
 
         var notification = NotificationResource.Create(
             serviceSid,
+            identity: new List<string> { "00000001" },
             title: "Generic loooooooong title for all Bindings",
             body: "This is the body for all Bindings",
-            identity: new List<string> { "00000001" },
+            data: "{\"custom_key1\":\"custom value 1\"," + 
+                  "\"custom_key2\":\"custom value 2\"}",
             fcm: "{\"notification\":{\"title\":\"New alert\"," +
                   "\"body\" : \"Hello Bob!\"}}",
             apn: "{\"aps\" : " +
