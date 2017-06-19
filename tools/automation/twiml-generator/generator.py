@@ -13,7 +13,8 @@ LANGUAGES_VERSIONS = {
     'java': '7.x',
     'csharp': '5.x',
     'node': '3.x',
-    'php': '5.x'
+    'php': '5.x',
+    'ruby': '5.x'
 }
 
 
@@ -23,13 +24,13 @@ def generate_code_sample_filepath(twiml_filepath, language):
 
     language_spec = load_language_spec(language)
     version = LANGUAGES_VERSIONS[language]
-    return twiml_filepath.parent.parent / (twiml_filepath.name[:-3] + version + language_spec['extension'])
+    return twiml_filepath.parent.parent / (twiml_filepath.name[:-5] + version + language_spec['extension'])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("root_twiml_filepath", help="Path to a directory containing TwiML file")
     parser.add_argument("-l", "--languages", help="Languages for the code to generate (default: all)",
-                        choices=['csharp', 'java', 'node', 'php', 'python'],
+                        choices=['csharp', 'java', 'node', 'php', 'python', 'ruby'],
                         action="append")
     parser.add_argument("-t", "--test", help="Test the snippet against the input",
                         action="store_true")
