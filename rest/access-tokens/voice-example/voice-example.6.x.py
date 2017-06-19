@@ -8,6 +8,7 @@ api_secret = 'xxxxxxxxxxxxxx'
 
 # required for Voice grant
 outgoing_application_sid = 'APxxxxxxxxxxxxx'
+push_credential_sid = 'CRxxxxxxxxxxxxx'
 identity = 'user'
 
 # Create access token with credentials
@@ -16,6 +17,7 @@ token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 # Create a Voice grant and add to token
 voice_grant = VoiceGrant(
     outgoing_application_sid=outgoing_application_sid
+    push_credential_sid=push_credential_sid
 )
 token.add_grant(voice_grant)
 

@@ -11,6 +11,7 @@ $twilioApiSecret = 'xxxxxxxxxxxxxx';
 
 // Required for Voice grant
 $outgoingApplicationSid = 'APxxxxxxxxxxxx';
+$pushCredentialSid = 'CRxxxxxxxxxxxx';
 // An identifier for your app - can be anything you'd like
 $identity = "john_doe";
 
@@ -26,6 +27,7 @@ $token = new AccessToken(
 // Create Voice grant
 $voiceGrant = new VoiceGrant();
 $voiceGrant->setOutgoingApplicationSid($outgoingApplicationSid);
+$voiceGrant->setPushCredentialSid($pushCredentialSid);
 
 // Add grant to token
 $token->addGrant($voiceGrant);

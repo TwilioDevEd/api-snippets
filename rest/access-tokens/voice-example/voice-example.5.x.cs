@@ -13,11 +13,13 @@ class Example
 
         // These are specific to Voice
         const string outgoingApplicationSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string pushCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user";
 
         // Create a Voice grant for this token
         var grant = new VoiceGrant();
         grant.OutgoingApplicationSid = outgoingApplicationSid;
+        grant.PushCredentialSid = pushCredentialSid;
 
         var grants = new HashSet<IGrant>
         {
