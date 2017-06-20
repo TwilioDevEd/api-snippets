@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-rooms = client.video.v1.rooms.read(
+rooms = client.video.v1.rooms.list(
   status: 'completed',
   unique_name: 'DailyStandup'
 )

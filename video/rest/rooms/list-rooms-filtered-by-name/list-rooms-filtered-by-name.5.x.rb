@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-rooms = client.video.rooms.read(unique_name: 'DailyStandup')
+rooms = client.video.rooms.list(unique_name: 'DailyStandup')
 
 rooms.each do |room|
   puts room.sid

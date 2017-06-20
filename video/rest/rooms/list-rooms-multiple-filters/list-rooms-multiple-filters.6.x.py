@@ -7,7 +7,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-rooms = client.video.rooms.read( \
+rooms = client.video.rooms.list( \
   status='completed', \
   unique_name='DailyStandup')
 

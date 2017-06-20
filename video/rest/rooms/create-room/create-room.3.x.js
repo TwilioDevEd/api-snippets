@@ -8,7 +8,7 @@ var Twilio = require('twilio');
 var client = new Twilio(accountSid, authToken);
 
 client.video.rooms.create({
-    uniqueName: 'DailyStandup'
-  }).then((room) => {
-    console.log(room.sid);
-  });
+  uniqueName: 'DailyStandup'
+}).then((room) => {
+  console.log(room.sid);
+});

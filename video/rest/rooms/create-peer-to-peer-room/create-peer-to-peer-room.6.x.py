@@ -10,7 +10,7 @@ client = Client(account_sid, auth_token)
 p2p_room = client.video.rooms.create( \
     unique_name='DailyStandup', \
     type='peer-to-peer', \
-    enable_turn=true, \
+    enable_turn=True, \
     status_callback='http://example.org')
 
 print(p2p_room.sid)

@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new account_sid, auth_token
 
 room = client.video
   .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .update('completed')
+  .update(status: 'completed')
 
 puts room.sid
