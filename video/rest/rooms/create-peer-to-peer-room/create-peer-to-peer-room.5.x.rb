@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-p2p_room = client.video.v1.rooms.create(
+p2p_room = client.video.rooms.create(
   unique_name: 'DailyStandup',
   type: 'peer-to-peer',
   enable_turn: false,

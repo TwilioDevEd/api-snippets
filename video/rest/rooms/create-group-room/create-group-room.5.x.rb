@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-group_room = client.video.v1.rooms.create(
+group_room = client.video.rooms.create(
   unique_name: 'DailyStandup',
   type: 'group',
   record_participants_on_connect: true,
