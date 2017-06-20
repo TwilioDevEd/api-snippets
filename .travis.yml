@@ -55,6 +55,7 @@ addons:
     - pricing.twilio.com
     - sync.twilio.com
     - taskrouter.twilio.com
+    - video.twilio.com
 
 notifications:
   slack:
