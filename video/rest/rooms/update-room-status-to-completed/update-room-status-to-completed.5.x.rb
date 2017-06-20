@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-room = client.video.v1
+room = client.video
   .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update('completed')
 

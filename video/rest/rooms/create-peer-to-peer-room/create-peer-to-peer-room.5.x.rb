@@ -11,7 +11,6 @@ p2p_room = client.video.rooms.create(
   unique_name: 'DailyStandup',
   type: 'peer-to-peer',
   enable_turn: false,
-  status_callback: 'http://example.org'
-)
+  status_callback: 'http://example.org')
 
 puts p2p_room.sid

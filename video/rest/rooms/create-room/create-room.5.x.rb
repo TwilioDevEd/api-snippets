@@ -7,8 +7,6 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-room = client.video.v1.rooms.create(
-  unique_name: 'DailyStandup'
-)
+room = client.video.v1.rooms.create(unique_name: 'DailyStandup')
 
 puts room.sid
