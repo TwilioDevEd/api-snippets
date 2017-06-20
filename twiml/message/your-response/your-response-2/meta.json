@@ -1,4 +1,5 @@
 {
   "title": "Send two messages",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }
