@@ -1,4 +1,4 @@
 {
-  "title": "Create a Peer-to-Peer Room called SalesMeeting with Network Traversal Service TURN disabled and the Status Callback URL set",
+  "title": "Create a Peer-to-Peer Room",
   "type": "server"
 }
