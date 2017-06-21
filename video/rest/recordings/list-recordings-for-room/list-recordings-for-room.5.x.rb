@@ -7,4 +7,9 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-client.video.v1.recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
+recordings_in_room = client.video.recordings.list(
+  grouping_sid: ['RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'])
+
+recordings_in_room.each do |recording|
+  puts recording.sid
+end

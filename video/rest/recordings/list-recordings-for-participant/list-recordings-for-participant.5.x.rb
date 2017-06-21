@@ -7,7 +7,8 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-participant_recordings = client.video.recordings.list(grouping_sid: 'ParticipantSid')
+participant_recordings = client.video.recordings
+  .list(grouping_sid: 'ParticipantSid')
 
 participant_recordings.each do |recording|
   puts recording.sid

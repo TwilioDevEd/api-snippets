@@ -7,4 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new account_sid, auth_token
 
-client.video.v1.recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
+recording = client.video.recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+  .fetch()
+
+puts recording.type
