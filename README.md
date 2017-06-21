@@ -309,6 +309,7 @@ the wrong user.
    127.0.0.1 preview.twilio.com
    127.0.0.1 sync.twilio.com
    127.0.0.1 taskrouter.twilio.com
+   127.0.0.1 video.twilio.com
    ```
 
 1. Make a copy of the `.env.example` file.
