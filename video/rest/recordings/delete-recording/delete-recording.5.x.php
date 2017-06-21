@@ -3,7 +3,11 @@
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
-// Your Account Sid and Auth Token from twilio.com/user/account
+// Your Account Sid and Auth Token from twilio.com/console
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_authToken";
 $client = new Client($accountSid, $authToken);
+
+$deleted = $client->video->recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->delete();
+
+echo $deleted;
