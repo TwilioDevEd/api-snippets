@@ -20,6 +20,8 @@ public class Example {
                 .setTitle("Generic loooooooong title for all Bindings")
                 .setBody("This is the body for all Bindings")
                 .setIdentity("00000001")
+                .setData("{\"custom_key1\":\"custom value 1\"," + 
+                         "\"custom_key2\":\"custom value 2\"}",
                 .setFcm("{\"notification\":{\"title\":\"New alert\"," +
                         "\"body\" : \"Hello Bob!\"}}")
                 .setApn("{\"aps\" : " +
