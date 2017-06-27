@@ -4,9 +4,9 @@ require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/console
-$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$authToken = "your_auth_authToken";
-$client = new Client($accountSid, $authToken);
+$apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$apiKeySecret = "your_auth_apiKeySecret";
+$client = new Client($apiKeySid, $apiKeySecret);
 
 $recording = $client->video->recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->fetch();

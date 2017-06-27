@@ -2,10 +2,10 @@
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from https://www.twilio.com/console
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = 'your_auth_token'
+api_key_sid = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+api_key_secret = 'your_api_key_secret'
 
-client = Twilio::REST::Client.new account_sid, auth_token
+client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
 group_room = client.video.rooms.create(
   unique_name: 'DailyStandup',

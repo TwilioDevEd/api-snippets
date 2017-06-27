@@ -5,12 +5,12 @@ import com.twilio.rest.video.v1.Room.RoomStatus;
 
 public class Example {
     // Find your Account Sid and Token at twilio.com/console
-    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    public static final String AUTH_TOKEN = "your_auth_token";
+    public static final String API_KEY_SID = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String API_KEY_SECRET = "your_api_key_secret";
 
     public static void main(String args[]) {
         // Initialize the client
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        Twilio.init(API_KEY_SID, API_KEY_SECRET);
 
         ResourceSet<Room> rooms = Room.reader().setStatus(RoomStatus.COMPLETED)
                 .setUniqueName("DailyStandup").read();

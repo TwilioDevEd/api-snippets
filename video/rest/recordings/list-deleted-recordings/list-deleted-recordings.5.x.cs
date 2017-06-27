@@ -9,10 +9,10 @@ class Example
     static void Main (string[] args)
     {
         // Find your Account SID and Auth Token at twilio.com/console
-        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string authToken = "your_auth_token";
+        const string apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string apiKeySecret = "your_api_key_secret";
 
-        TwilioClient.Init(accountSid, authToken);
+        TwilioClient.Init(apiKeySid, apiKeySecret);
 
         var recordings = RecordingResource.Read(
             status: RecordingResource.StatusEnum.Deleted);
