@@ -1,2 +1,2 @@
 curl -G 'https://video.twilio.com/v1/Recordings?Status=deleted' \
-  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
+  -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret'

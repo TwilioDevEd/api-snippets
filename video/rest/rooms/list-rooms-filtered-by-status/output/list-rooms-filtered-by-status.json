@@ -1,6 +1,6 @@
 {
     "rooms": [{
-        "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "date_created": "2015-07-30T20:00:00Z",
         "date_updated": "2015-07-30T20:00:00Z",
         "status": "in-progress",

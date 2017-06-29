@@ -2,9 +2,9 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/console
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token = "your_auth_token"
-client = Client(account_sid, auth_token)
+api_key_sid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+api_key_secret = "your_api_key_secret"
+client = Client(api_key_sid, api_key_secret)
 
 rooms_by_name = client.video.rooms.list(unique_name='DailyStandup')
 
