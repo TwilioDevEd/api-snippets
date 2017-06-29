@@ -1,8 +1,8 @@
 curl -XPOST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings \
-    -d "Endpoint=endpoint_id" \
-    -d "Identity=00000001" \
-    -d "BindingType=apn" \
-    -d "Address=device_token" \
-    -d "Tag=preferred device" \
-    -d "Tag=new user" \
+    --data-urlencode "Endpoint=endpoint_id" \
+    --data-urlencode "Identity=00000001" \
+    --data-urlencode "BindingType=apn" \
+    --data-urlencode "Address=device_token" \
+    --data-urlencode "Tag=preferred device" \
+    --data-urlencode "Tag=new user" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
