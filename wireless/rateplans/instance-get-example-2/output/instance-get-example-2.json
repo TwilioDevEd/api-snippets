@@ -13,5 +13,6 @@ Content-Type: application/json
   "messaging_enabled": true,
   "data_enabled": true,
   "sid": "WP467fb57a0aba9641a8209136d42545f8",
-  "national_roaming_enabled": false
+  "national_roaming_enabled": false,
+  "national_roaming_data_limit": 0
 }
