@@ -1,15 +1,20 @@
 .PHONY: start, start_dev, register_hosts, run_api_faker, install_dependencies, save_dependencies, restore_dependencies
 
 define HOSTS
+127.0.0.1 api.twilio.com
+127.0.0.1 chat.twilio.com
+127.0.0.1 fax.twilio.com
+127.0.0.1 ip-messaging.twilio.com
+127.0.0.1 lookups.twilio.com
+127.0.0.1 messaging.twilio.com
+127.0.0.1 monitor.twilio.com
 127.0.0.1 notifications.twilio.com
 127.0.0.1 notify.twilio.com
-127.0.0.1 notifications.twilio.com
-127.0.0.1 taskrouter.twilio.com
-127.0.0.1 api.twilio.com
-127.0.0.1 lookups.twilio.com
+127.0.0.1 preview.twilio.com
 127.0.0.1 pricing.twilio.com
-127.0.0.1 monitor.twilio.com
-127.0.0.1 fax.twilio.com
+127.0.0.1 sync.twilio.com
+127.0.0.1 taskrouter.twilio.com
+127.0.0.1 video.twilio.com
 endef
 
 export HOSTS
