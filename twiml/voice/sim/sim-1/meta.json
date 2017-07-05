@@ -1,4 +1,5 @@
 {
   "title": "Dialing to a SIM",
-  "type": "server"
+  "type": "server",
+  "testable": false
 }
