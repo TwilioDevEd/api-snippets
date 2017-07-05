@@ -1,4 +1,5 @@
 {
   "title": "Get Recording in XML Format",
-  "type": "server"
+  "type": "server",
+  "testable": true
 }
