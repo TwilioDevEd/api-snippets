@@ -16,11 +16,11 @@ module Model
     CS_V5 = '5.5.1-alpha1'
 
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.x', '5.5.1-alpha1'],
-      PHP_NAME    => ['4.10', '5.10.0-alpha1'],
-      PYTHON_NAME => ['5.6.0', '6.3.0-alpha-1'],
-      RUBY_NAME   => ['4.13.0', '5.0.0.rc23'],
-      NODE_NAME   => ['2.11.0', '3.3.0-alpha-1'],
+      CSHARP_NAME => ['4.x', '5.5.3-alpha1'],
+      PHP_NAME    => ['4.10', '5.11.0-alpha1'],
+      PYTHON_NAME => ['5.6.0', '6.4.2-alpha-1'],
+      RUBY_NAME   => ['4.13.0', '5.0.0.rc24'],
+      NODE_NAME   => ['2.11.0', '3.4.0-alpha-1'],
       JAVA6_NAME  => {group: "com.twilio.sdk", name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies'},
       JAVA7_NAME  => {group: "com.twilio.sdk", name: 'twilio', version: '7.12.0-alpha-1', suffix: '-jar-with-dependencies'}
     }.freeze
