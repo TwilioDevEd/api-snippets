@@ -10,7 +10,7 @@ outgoing_application_sid = 'APxxxxxxxxxxxx'
 identity = 'user'
 
 # Create Voice grant for our token
-grant = Twilio::JWT::VoiceGrant.new
+grant = Twilio::JWT::AccessToken::VoiceGrant.new
 grant.outgoing_application_sid = outgoing_application_sid
 
 # Create an Access Token
