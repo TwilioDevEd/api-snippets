@@ -9,7 +9,7 @@ api_secret = 'xxxxxxxxxxxxxx'
 identity = 'user'
 
 # Create Video grant for our token
-video_grant = Twilio::JWT::VideoGrant.new
+video_grant = Twilio::JWT::AccessToken::VideoGrant.new
 video_grant.room = 'cool room'
 
 # Create an Access Token
