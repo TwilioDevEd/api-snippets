@@ -25,32 +25,40 @@ class Example
         var allowActivityUpdates = new Policy(urls.Worker,
                                               HttpMethod.Post,
                                               postFilter: updateActivityFilter);
-
         var allowTasksUpdate = new Policy(urls.AllTasks, HttpMethod.Post);
-
         var allowReservationUpdate = new Policy(urls.AllReservations, HttpMethod.Post);
+        var allowWorkerFetches = new Policy(urls.Worker, HttpMethod.Get);
+        var allowTasksFetches = new Policy(urls.AllTasks, HttpMethod.Get );
+        var allowReservationFetches = new Policy(urls.AllReservations, HttpMethod.Get);
+        var allowActivityFetches = new Policy(urls.Activities, HttpMethod.Get);
 
         var policies = new List<Policy>
         {
             allowActivityUpdates,
             allowTasksUpdate,
-            allowReservationUpdate
+            allowReservationUpdate,
+            allowWorkerFetches,
+            allowTasksFetches,
+            allowReservationFetches
+            
         };
 
         // By default, tokens are good for one hour.
         // Override this default timeout by specifiying a new value (in seconds).
-        // For example, to generate a token good for 8 hours:
+        // For example, to generate a token good for 8 hours:        
         var capability = new TaskRouterCapability(
             accountSid,
             authToken,
             workspaceSid,
-            null,
+            workerSid,
             policies: policies,
             expiration: DateTime.UtcNow.AddSeconds(28800)); // 60 * 60 * 8
+
 
         Console.WriteLine(capability.ToJwt());
     }
 }
+
 
 class PolicyUrlUtils
 {
@@ -72,6 +80,10 @@ class PolicyUrlUtils
 
     public string AllReservations => $"{Worker}/Reservations/**";
 
-    string Workspace =>
+    public string Workspace =>
         $"{taskRouterBaseUrl}/{taskRouterVersion}/Workspaces/{_workspaceSid}";
+    
+    public string Activities => $"{Workspace}/Activities";
+
+
 }
