@@ -17,7 +17,8 @@ token = Twilio::JWT::AccessToken.new(
   account_sid,
   api_key,
   api_secret,
-  [video_grant]);
+  [video_grant],
+  identity: identity);
 
 # Generate the token
 puts token.to_jwt
