@@ -1,8 +1,8 @@
 require 'twilio-ruby'
 
 response = Twilio::TwiML::VoiceResponse.new
-dial = Twilio::TwiML::Dial.new
-dial.conference('SimpleRoom', muted: true)
-response.append(dial)
+response.dial('') do |dial|
+    dial.conference('SimpleRoom', muted: true)
+end
 
 puts response

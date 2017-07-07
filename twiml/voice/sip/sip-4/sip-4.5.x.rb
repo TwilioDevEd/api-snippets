@@ -1,8 +1,8 @@
 require 'twilio-ruby'
 
 response = Twilio::TwiML::VoiceResponse.new
-dial = Twilio::TwiML::Dial.new
-dial.sip('sip:jack@example.com;transport=tcp')
-response.append(dial)
+response.dial('') do |dial|
+    dial.sip('sip:jack@example.com;transport=tcp')
+end
 
 puts response
