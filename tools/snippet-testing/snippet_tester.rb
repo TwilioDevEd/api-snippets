@@ -15,8 +15,9 @@ class SnippetTester
     puts 'Dependencies installed!'
   end
 
-  def initialize(parent_source_folder, test_default = false)
+  def initialize(parent_source_folder, test_default = false, version_manager)
     @parent_source_folder = parent_source_folder
+    @version_manager = version_manager
     Dir.chdir(@parent_source_folder)
     puts "Base folder is #{@parent_source_folder}"
     @snippet_models = []
@@ -121,11 +122,13 @@ class SnippetTester
     )
 
     ruby4_language_handler = LanguageHandler::Ruby4.new(
-      Model::Dependency.ruby_4_gemset
+      dependencies_directory: Model::Dependency.ruby_4_gemset,
+      version_manager: @version_manager
     )
 
     ruby5_language_handler = LanguageHandler::Ruby5.new(
-      Model::Dependency.ruby_5_gemset
+      dependencies_directory: Model::Dependency.ruby_5_gemset,
+      version_manager: @version_manager
     )
 
     node2_language_handler = LanguageHandler::Node2.new(
@@ -218,6 +221,10 @@ def parse_options(args)
       options.source_folder = File.expand_path(dir)
       options.test_default = true if options.test_default.nil?
     end
+
+    opts.on('-m manager', String, 'Specify a ruby version manager to be used') do |manager|
+      options.version_manager = manager.upcase
+    end
   end
 
   opts.parse!(args)
@@ -227,7 +234,7 @@ end
 if __FILE__ == $0
   begin
     options = parse_options(ARGV)
-    tester = SnippetTester.new(options.source_folder, options.test_default)
+    tester = SnippetTester.new(options.source_folder, options.test_default, options.version_manager)
 
     tester.install_dependencies if options.install
     tester.init
