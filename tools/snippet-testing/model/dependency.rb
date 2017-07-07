@@ -210,8 +210,7 @@ module Model
     def install_ruby_dependencies
       AVAILABLE_LIBRARY_VERSION[RUBY_NAME].each do |version|
         system(
-          "rvm gemset create #{version} &&"\
-          " rvm @#{version} do gem install twilio-ruby -v #{version}"
+          LanguageHandler::Ruby::Commands.install_ruby_dependencies_command(version)
         )
       end
     end
