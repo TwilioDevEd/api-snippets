@@ -17,13 +17,13 @@ post '/sms' do
               'Hello, thanks for message number #{sms_count + 1}'
             end
 
-  twiml = Twilio::TwiML::Response.new do |r|
-    r.Message message
+  twiml = Twilio::TwiML::MessagingResponse.new do |r|
+    r.message(body: message)
   end
 
   session['counter'] += 1
 
   content_type 'text/xml'
 
-  twiml.text
+  twiml.to_s
 end
