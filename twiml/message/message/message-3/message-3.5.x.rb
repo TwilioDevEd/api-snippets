@@ -1,7 +1,7 @@
 require 'twilio-ruby'
 
 response = Twilio::TwiML::MessagingResponse.new
-response.message('Store Location: 123 Easy St.', action: '/SmsHandler.php',
-  method: 'POST')
+response.message(action: '/SmsHandler.php', method: 'POST',
+    body: 'Store Location: 123 Easy St.')
 
 puts response
