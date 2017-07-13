@@ -7,9 +7,9 @@ post '/voice' do
   city = params['FromCity']
 
   # Start our TwiML response
-  Twilio::TwiML::Response.new do |r|
+  Twilio::TwiML::VoiceResponse.new do |r|
     # Use <Say> to give the caller some instructions
-    r.Say "Never gonna give you up #{city}.", voice: 'alice'
-    r.Play 'https://demo.twilio.com/docs/classic.mp3'
-  end.text
+    r.say("Never gonna give you up #{city}.", voice: 'alice')
+    r.play(url: 'https://demo.twilio.com/docs/classic.mp3')
+  end.to_s
 end

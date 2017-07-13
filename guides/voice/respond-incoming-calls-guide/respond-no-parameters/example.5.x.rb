@@ -5,8 +5,8 @@ require 'twilio-ruby'
 
 post '/twiml' do
   # Start our TwiML response
-  Twilio::TwiML::Response.new do |r|
+  Twilio::TwiML::VoiceResponse.new do |r|
     # Use <Say> to give the caller some instructions
-    r.Say 'hello world!', voice: 'alice'
-  end.text
+    r.say('hello world!', voice: 'alice')
+  end.to_s
 end
