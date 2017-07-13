@@ -1,4 +1,5 @@
 {
   "title": "Create a Binding (Server-side)",
-  "type": "server"
+  "type": "server",
+  "testable": true
 }

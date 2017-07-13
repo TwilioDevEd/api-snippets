@@ -1,3 +1,0 @@
-testable: true
-exclude_languages:
-  - node
