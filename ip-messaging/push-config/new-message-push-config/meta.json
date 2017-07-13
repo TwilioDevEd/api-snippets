@@ -1,5 +1,5 @@
 {
   "title": "Configure NewMessage Push Notifications",
-  "description": "Configure the NewMessage Push Notification callback for a Service instance",
+  "description": "Configure the NewMessage Push Notification for a Service instance",
   "type": "server"
 }
