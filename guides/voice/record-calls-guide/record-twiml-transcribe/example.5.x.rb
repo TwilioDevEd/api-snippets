@@ -7,12 +7,12 @@ post '/record' do
   # Start our TwiML response
   Twilio::TwiML::Response.new do |r|
     # Use <Say> to give the caller some instructions
-    r.Say 'Hello. Please leave a message and I will transcribe it.'
+    r.say('Hello. Please leave a message and I will transcribe it.')
 
     # Use <Record> to record and transcribe the caller's message
-    r.Record(transcribe: true, maxLength: 30)
+    r.record(transcribe: true, max_length: 30)
 
     # End the call with <Hangup>
-    r.Hangup
-  end.text
+    r.hangup
+  end.to_s
 end
