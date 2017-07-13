@@ -3,11 +3,11 @@ require 'sinatra'
 
 # Respond to incoming calls with a simple text message
 post '/sms' do
-  twiml = Twilio::TwiML::Response.new do |r|
-    r.Message 'The Robots are coming! Head for the hills!'
+  twiml = Twilio::TwiML::MessagingResponse.new do |r|
+    r.message 'The Robots are coming! Head for the hills!'
   end
 
   content_type 'text/xml'
 
-  twiml.text
+  twiml.to_s
 end
