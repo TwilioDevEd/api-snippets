@@ -1,0 +1,5 @@
+curl -X POST https://chat.twilio.com/v1/Services/{service sid} \
+-d 'PreWebhookUrl=https://hooks.yoursite.com/pre-webhooks' \
+-d 'PostWebhookUrl=https://hooks.yoursite.com/post-webhooks' \
+-d 'WebhookMethod=POST' \
+-u '{twilio account sid}:{twilio auth token}'
