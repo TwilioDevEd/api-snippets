@@ -1,0 +1,2 @@
+curl -X GET https://lookups.twilio.com/v1/PhoneNumbers/+16502530000/?AddOns=whitepages_pro_caller_id \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

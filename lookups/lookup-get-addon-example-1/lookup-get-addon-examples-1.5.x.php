@@ -13,7 +13,7 @@ $client = new Client($sid, $token);
 $number = $client->lookups
     ->phoneNumbers("+16502530000")
     ->fetch(
-        array("type" => "caller-name")
+        array("add_ons" => "whitepages_pro_caller_id")
     );
 
 echo $number->callerName['caller_type'] . "\r\n";

@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 number = client.lookups.phone_numbers("+16502530000").fetch(
-    type="caller-name",
+    add_ons="whitepages_pro_caller_id",
 )
 
 print(number.carrier['type'])
