@@ -12,7 +12,7 @@ public class Example {
 
     PhoneNumber number = PhoneNumber
         .fetcher(new com.twilio.type.PhoneNumber("+16502530000"))
-        .setType("caller-name")
+        .setAddOns("whitepages_pro_caller_id")
         .fetch();
 
     System.out.println(number.getCallerName());

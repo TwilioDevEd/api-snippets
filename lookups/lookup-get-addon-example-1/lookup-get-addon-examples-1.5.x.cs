@@ -17,7 +17,7 @@ public class Example
 
 		var phoneNumber = PhoneNumberResource.Fetch(
 		    new PhoneNumber("+16502530000"),
-		    type: new List<string> { "caller-name" });
+		    addOns: new List<string> { "whitepages_pro_caller_id" });
 
 		Console.WriteLine(phoneNumber.CallerName["caller_name"]);
 	}
