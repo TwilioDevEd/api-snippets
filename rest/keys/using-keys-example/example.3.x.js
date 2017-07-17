@@ -2,8 +2,9 @@
 // These identifiers are your accountSid and authToken from
 // https://www.twilio.com/console
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const apiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const apiSecret = 'your_api_secret';
-const client = require('twilio')(accountSid, apiSecret);
+const client = require('twilio')(apiKey, apiSecret, {accountSid: accountSid});
 
 // Create a message for your account (send an outbound SMS)
 client.messages.create({
