@@ -1,3 +1,0 @@
-curl -X POST https://chat.twilio.com/v1/Services/{service sid} \ 
- -d 'ReachabilityEnabled=true' \
- -u '{twilio account sid}:{twilio auth token}'
