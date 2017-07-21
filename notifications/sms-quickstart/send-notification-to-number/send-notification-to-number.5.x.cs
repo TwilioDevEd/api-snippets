@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Twilio;
-using Twilio.Rest.Notify.V1.Service;
+using Twilio.Rest.Notify.Service;
 
 public class Example
 {
@@ -17,9 +17,8 @@ public class Example
 
         var notification = NotificationResource.Create(
             serviceSid,
-            toBinding: new List<string> { "{\"binding_type\":\"sms\",\"address\":\"+15555555555\"}",
-            "{\"binding_type\":\"facebook-messenger\",\"address\":\"123456789123\"}" },
-            body: "Hello Bob");
+            toBinding: new List<string> { "{\"binding_type\":\"sms\",\"address\":\"+1651000000000\"}"}
+            body: "Knok-Knok! This is your first Notify SMS");
 
         Console.WriteLine(notification.Sid);
     }
