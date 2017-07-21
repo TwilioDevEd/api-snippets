@@ -11,7 +11,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $number = $client->lookups
-    ->phoneNumbers("+14157012311")
+    ->phoneNumbers("+16502530000")
     ->fetch(
         array("type" => "caller-name")
     );

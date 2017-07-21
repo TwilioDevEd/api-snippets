@@ -1,4 +1,5 @@
 {
   "title": "Send a Notification (Segment and Tag)",
-  "type": "server"
+  "type": "server",
+  "testable": true
 }

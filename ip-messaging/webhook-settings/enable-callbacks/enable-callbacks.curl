@@ -1,0 +1,20 @@
+curl -X POST https://chat.twilio.com/v1/Services/{service sid} \
+-d 'WebhookFilters=onMessageSend' \
+-d 'WebhookFilters=onMessageSent' \
+-d 'WebhookFilters=onMessageUpdate' \
+-d 'WebhookFilters=onMessageUpdated' \
+-d 'WebhookFilters=onMessageRemove' \
+-d 'WebhookFilters=onMessageRemoved' \
+-d 'WebhookFilters=onChannelAdd' \
+-d 'WebhookFilters=onChannelAdded' \
+-d 'WebhookFilters=onChannelDestroy' \
+-d 'WebhookFilters=onChannelDestroyed' \
+-d 'WebhookFilters=onChannelUpdate' \ 
+-d 'WebhookFilters=onChannelUpdated' \ 
+-d 'WebhookFilters=onMemberAdd' \ 
+-d 'WebhookFilters=onMemberAdded' \ 
+-d 'WebhookFilters=onMemberRemove' \ 
+-d 'WebhookFilters=onMemberRemoved' \ 
+-d 'WebhookFilters=onUserUpdate' \
+-d 'WebhookFilters=onUserUpdated' \
+-u '{twilio account sid}:{twilio auth token}'
