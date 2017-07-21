@@ -8,11 +8,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/token', function(req, res) {
   // put your Twilio API credentials here
-  var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  var authToken = "your_auth_token";
+  var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  var authToken = 'your_auth_token';
 
   // put your Twilio Application Sid here
-  var appSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  var appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
   var capability = new twilio.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);

@@ -9,11 +9,11 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.preview.proxy
-  .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-  .sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-  .participants("KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+  .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .participants('KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .messageInteractions.create({
-    body: "Reply to this message to chat!"
+    body: 'Reply to this message to chat!'
   }).then(function(response) {
     console.log(response);
   }).catch(function(err) {

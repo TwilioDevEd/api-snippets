@@ -6,11 +6,11 @@ var app = express();
 
 app.get('/token', function(req, res) {
   // put your Twilio API credentials here
-  var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  var authToken = "your_auth_token";
+  var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  var authToken = 'your_auth_token';
 
   var capability = new twilio.Capability(accountSid, authToken);
-  capability.allowClientIncoming("jenny");
+  capability.allowClientIncoming('jenny');
   var token = capability.generate();
 
   res.set('Content-Type', 'application/jwt')

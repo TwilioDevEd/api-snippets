@@ -6,9 +6,9 @@ const client = require('twilio')(accountSid, authToken);
 
 client.fax.v1.faxes
   .create({
-      to: "+15558675309",
-      from: "+15017250604",
-      mediaUrl: "https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf"
+      to: '+15558675309',
+      from: '+15017250604',
+      mediaUrl: 'https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf'
   }).then(function(response) {
     console.log(response.sid);
   }).catch((err) => {

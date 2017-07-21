@@ -11,9 +11,9 @@ app.post('/register', function(request, response) {
 
   var params =
   {
-    "identity": request.body.identity,
-    "bindingType": request.body.BindingType,
-    "address": request.body.Address
+    identity: request.body.identity,
+    bindingType: request.body.BindingType,
+    address: request.body.Address
   };
 
   if (!_.isUndefined(request.body.endpoint)) {

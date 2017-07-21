@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.monitor.v1.events
   .list({
-    resourceSid: "PN4aa51b930717ea83c91971b86d99018f"
+    resourceSid: 'PN4aa51b930717ea83c91971b86d99018f'
   })
   .then((response) => console.log(response));
