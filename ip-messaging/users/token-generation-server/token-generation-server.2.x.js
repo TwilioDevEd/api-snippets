@@ -15,7 +15,7 @@ parameter.
 */
 app.get('/token', function(request, response) {
     var appName = 'TwilioChatDemo';
-    var identity = "John Doe";
+    var identity = 'John Doe';
     var deviceId = request.query.device;
 
     // Create a unique ID for the client on their current device

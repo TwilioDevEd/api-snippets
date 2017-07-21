@@ -7,7 +7,7 @@ var app = express();
 app.post('/voice', function (req, res) {
     // Create TwiML response
     var twiml = new twilio.TwimlResponse();
-    twiml.say("Thanks for calling!");
+    twiml.say('Thanks for calling!');
 
     res.set('Content-Type', 'text/xml');
     res.send(twiml.toString());

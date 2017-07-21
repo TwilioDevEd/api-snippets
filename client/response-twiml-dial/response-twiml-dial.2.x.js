@@ -15,7 +15,7 @@ app.post('/voice', function (req, res) {
         this.number(req.body.To);
       });
     } else {
-      twiml.say("Thanks for calling!");
+      twiml.say('Thanks for calling!');
     }
 
     res.set('Content-Type', 'text/xml');
