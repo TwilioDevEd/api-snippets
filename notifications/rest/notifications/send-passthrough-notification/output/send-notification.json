@@ -1,0 +1,26 @@
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2015-08-26T00:07:12Z",
+  "toBindings": [{
+      "binding_type":"sms",
+      "address":"+15555555555"
+    },{
+      "binding_type":"facebook-messenger",
+      "address":"123456789123"
+    }],
+  "identities": [],
+  "tags": [],
+  "priority": "high",
+  "ttl": 2419200,
+  "title": null,
+  "body": "Hello Bob",
+  "sound": null,
+  "action": null,
+  "data": null,
+  "apn": null,
+  "gcm": null,
+  "sms": null,
+  "fcm": null
+}

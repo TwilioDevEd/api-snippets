@@ -1,0 +1,4 @@
+curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications' \
+--data-urlencode 'ToBinding={"binding_type":"sms", "address":"+1651000000000"}'  \
+--data-urlencode 'Body=Knok-Knok! This is your first Notify SMS'  \
+-u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
