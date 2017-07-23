@@ -8,7 +8,7 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workers.statistics.get({}, function(err, responseData) {
+client.workspace.workers.statistics.get({}, (err, responseData) => {
   if (!err) {
     console.log(responseData.cumulative.reservations_accepted);
   }

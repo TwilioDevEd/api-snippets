@@ -14,7 +14,7 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 client.workspace.tasks(taskSid).reservations(reservationSid).update({
   instruction: 'dequeue',
   dequeueFrom: '+18001231234',
-}, function(err, reservation) {
+}, (err, reservation) => {
   console.log(reservation.reservation_status);
   console.log(reservation.worker_name);
 });

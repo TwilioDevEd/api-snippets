@@ -11,6 +11,6 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.workers(workerSid).update({
   attributes: '{"type":"support"}',
-}, function(err, worker) {
+}, (err, worker) => {
   console.log(worker.attributes);
 });

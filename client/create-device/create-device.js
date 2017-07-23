@@ -1,9 +1,9 @@
 Twilio.Device.setup(token);
 
-Twilio.Device.ready(function(device) {
+Twilio.Device.ready(device => {
   console.log('Ready');
 });
 
-Twilio.Device.error(function(error) {
+Twilio.Device.error(error => {
   console.log('Error: ' + error.message);
 });

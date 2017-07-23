@@ -11,7 +11,7 @@ client.messages.create(
     from: '+15017250604',
     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
   },
-  function(err, message) {
+  (err, message) => {
     console.log(message.sid);
   }
 );

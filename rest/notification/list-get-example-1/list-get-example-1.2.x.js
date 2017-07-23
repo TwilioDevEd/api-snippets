@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.notifications.list(function(err, data) {
-  data.notifications.forEach(function(notification) {
+client.notifications.list((err, data) => {
+  data.notifications.forEach(notification => {
     console.log(notification.MessageText);
   });
 });

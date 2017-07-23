@@ -11,7 +11,7 @@ client.sip
       friendlyName: 'My office IP Address',
       ipAddress: '55.102.123.124',
     },
-    function(err, ipAddress) {
+    (err, ipAddress) => {
       process.stdout.write(ipAddress.sid);
     }
   );

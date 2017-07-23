@@ -10,9 +10,9 @@ client.chat.credentials
     apiKey: '1234',
     friendlyName: 'My credential',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

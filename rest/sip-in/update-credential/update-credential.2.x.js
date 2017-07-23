@@ -11,7 +11,7 @@ client.sip
     {
       password: '07',
     },
-    function(err, credential) {
+    (err, credential) => {
       console.log(credential.username);
     }
   );

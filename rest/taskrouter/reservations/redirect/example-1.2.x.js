@@ -15,7 +15,7 @@ client.workspace.tasks(taskSid).reservations(reservationSid).update({
   Instruction: 'Redirect',
   RedirectCallSid: 'CA123456789',
   RedirectUrl: 'http://example.com/assignment_redirect',
-}, function(err, reservation) {
+}, (err, reservation) => {
   console.log(reservation.reservation_status);
   console.log(reservation.worker_name);
 });

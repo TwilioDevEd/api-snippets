@@ -18,10 +18,10 @@ client.notify.services
   .create({
     friendlyName: 'My Awesome Service',
   })
-  .then(function(service) {
+  .then(service => {
     console.log(service.friendlyName);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   })
   .done();

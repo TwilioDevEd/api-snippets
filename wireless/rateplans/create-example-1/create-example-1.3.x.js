@@ -11,6 +11,6 @@ client.preview.wireless.ratePlans
     dataLimit: 5,
     messagingEnabled: 'true',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

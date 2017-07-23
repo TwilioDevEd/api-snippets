@@ -14,7 +14,7 @@ client.calls.create(
     statusCallbackEvent: 'initiated ringing answered completed',
     method: 'GET',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

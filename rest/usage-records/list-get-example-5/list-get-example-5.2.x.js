@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.usage.records.list(function(err, data) {
-  data.usageRecords.forEach(function(record) {
+client.usage.records.list((err, data) => {
+  data.usageRecords.forEach(record => {
     console.log(record.count);
   });
 });

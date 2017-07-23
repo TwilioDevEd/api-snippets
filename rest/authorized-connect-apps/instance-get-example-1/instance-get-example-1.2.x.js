@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .authorizedConnectApps('CN47260e643654388faabe8aaa18ea6756')
-  .get(function(err, authorizedApp) {
+  .get((err, authorizedApp) => {
     console.log(authorizedApp.connectAppHomepageUrl);
   });

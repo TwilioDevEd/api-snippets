@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .transcriptions('TR8c61027b709ffb038236612dc5af8723')
-  .get(function(err, transcription) {
+  .get((err, transcription) => {
     console.log(transcription.transcriptionText);
   });

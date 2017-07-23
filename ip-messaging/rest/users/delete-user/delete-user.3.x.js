@@ -8,9 +8,9 @@ const service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service
   .users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

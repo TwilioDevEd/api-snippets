@@ -12,7 +12,7 @@ client.fax.v1.faxes
     sipAuthUsername: 'jack',
     sipAuthPassword: 'secret',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response.sid);
   })
   .catch(err => {

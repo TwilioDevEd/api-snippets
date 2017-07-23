@@ -8,7 +8,7 @@ client.keys.create(
   {
     friendlyName: 'User Jenny',
   },
-  function(err, key) {
+  (err, key) => {
     process.stdout.write(key.sid);
     process.stdout.write(key.secret);
   }

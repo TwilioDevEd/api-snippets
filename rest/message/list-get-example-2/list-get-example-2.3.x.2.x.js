@@ -11,8 +11,8 @@ const filterOpts = {
   dateSent: new Date(2016, 0, 1),
 };
 
-client.messages.list(filterOpts, function(err, data) {
-  data.forEach(function(message) {
+client.messages.list(filterOpts, (err, data) => {
+  data.forEach(message => {
     console.log(message.body);
   });
 });

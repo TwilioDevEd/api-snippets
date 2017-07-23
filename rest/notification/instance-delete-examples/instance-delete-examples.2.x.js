@@ -6,7 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .notifications('NO5a7a84730f529f0a76b3e30c01315d1a')
-  .delete(function(err, data) {
+  .delete((err, data) => {
     if (err) {
       console.log(err.status);
       throw err.message;

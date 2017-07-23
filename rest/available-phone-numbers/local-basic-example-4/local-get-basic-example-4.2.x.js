@@ -6,14 +6,14 @@ const client = require('twilio')(accountSid, authToken);
 
 client.availablePhoneNumbers('US').local.list({
   inRegion: 'AR',
-}, function(err, data) {
+}, (err, data) => {
   const number = data.availablePhoneNumbers[0];
 
   client.incomingPhoneNumbers.create(
     {
       phoneNumber: number.phone_number,
     },
-    function(err, purchasedNumber) {
+    (err, purchasedNumber) => {
       console.log(purchasedNumber.sid);
     }
   );

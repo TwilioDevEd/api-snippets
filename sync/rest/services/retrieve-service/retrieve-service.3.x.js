@@ -7,9 +7,9 @@ const client = new Twilio(accountSid, authToken);
 client.sync
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

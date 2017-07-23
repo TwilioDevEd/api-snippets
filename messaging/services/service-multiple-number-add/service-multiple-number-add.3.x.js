@@ -15,10 +15,10 @@ const phoneNumbers = [
 phoneNumbers.forEach(phoneNumber => {
   service.phoneNumbers
     .create({ phoneNumberSid: phoneNumber })
-    .then(function(response) {
+    .then(response => {
       console.log(response);
     })
-    .catch(function(error) {
+    .catch(error => {
       console.log(error);
     });
 });

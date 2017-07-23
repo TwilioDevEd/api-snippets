@@ -10,7 +10,7 @@ client.calls.create(
     to: 'client:tommy',
     from: '+15017250604',
   },
-  function(err, call) {
+  (err, call) => {
     console.log(call.sid);
   }
 );

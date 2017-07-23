@@ -6,8 +6,8 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sip
   .ipAccessControlLists('AL32a3c49700934481addd5ce1659f04d2')
-  .ipAddresses.list(function(err, data) {
-    data.ipAddresses.forEach(function(ipAddress) {
+  .ipAddresses.list((err, data) => {
+    data.ipAddresses.forEach(ipAddress => {
       console.log(ipAddress.friendlyName);
     });
   });

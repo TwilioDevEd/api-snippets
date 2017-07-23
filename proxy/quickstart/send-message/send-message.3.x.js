@@ -15,9 +15,9 @@ client.preview.proxy
   .messageInteractions.create({
     body: 'Reply to this message to chat!',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(err) {
+  .catch(err => {
     console.log(err);
   });

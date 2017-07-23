@@ -4,6 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.keys('SK2a0747eba6abf96b7e3c3ff0b4530f6e').get(function(err, key) {
+client.keys('SK2a0747eba6abf96b7e3c3ff0b4530f6e').get((err, key) => {
   console.log(key.friendlyName);
 });

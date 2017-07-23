@@ -6,8 +6,8 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sip
   .domains('SD32a3c49700934481addd5ce1659f04d2')
-  .credentialListMappings.list(function(err, data) {
-    data.credentialListMappings.forEach(function(credentialListMapping) {
+  .credentialListMappings.list((err, data) => {
+    data.credentialListMappings.forEach(credentialListMapping => {
       console.log(credentialListMapping.FriendlyName);
     });
   });

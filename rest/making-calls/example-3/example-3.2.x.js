@@ -12,7 +12,7 @@ client.calls.create(
     from: '+18668675309',
     method: 'GET',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

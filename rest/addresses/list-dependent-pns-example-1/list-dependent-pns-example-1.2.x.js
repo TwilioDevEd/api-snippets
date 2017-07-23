@@ -6,8 +6,8 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .addresses('AD2a0747eba6abf96b7e3c3ff0b4530f6e')
-  .dependentPhoneNumbers.list(function(err, data) {
-    data.dependentPhoneNumbers.forEach(function(number) {
+  .dependentPhoneNumbers.list((err, data) => {
+    data.dependentPhoneNumbers.forEach(number => {
       console.log(number.friendlyName);
     });
   });

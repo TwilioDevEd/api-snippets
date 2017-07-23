@@ -7,9 +7,9 @@ const client = new IpMessagingClient(accountSid, authToken);
 client
   .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .get()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .fail(function(error) {
+  .fail(error => {
     console.log(error);
   });

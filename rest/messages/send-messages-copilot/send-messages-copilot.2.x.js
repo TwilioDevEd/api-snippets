@@ -10,7 +10,7 @@ client.sendMessage(
     to: '+441632960675',
     body: 'Phantom Menace was clearly the best of the prequel trilogy.',
   },
-  function(err, message) {
+  (err, message) => {
     console.log(message);
   }
 );

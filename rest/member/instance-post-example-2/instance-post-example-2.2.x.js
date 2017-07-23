@@ -12,7 +12,7 @@ client
       url: 'http://demo.twilio.com/docs/voice.xml',
       method: 'POST',
     },
-    function(err, member) {
+    (err, member) => {
       console.log(member.position);
     }
   );

@@ -9,9 +9,9 @@ service
   .channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .members('MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .delete()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .fail(function(error) {
+  .fail(error => {
     console.log(error);
   });

@@ -8,9 +8,9 @@ const service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service
   .syncMaps('Players')
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

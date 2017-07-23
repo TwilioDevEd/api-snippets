@@ -4,7 +4,7 @@ chatClient
     uniqueName: 'general',
     friendlyName: 'General Chat Channel',
   })
-  .then(function(channel) {
+  .then(channel => {
     console.log('Created general channel:');
     console.log(channel);
   });

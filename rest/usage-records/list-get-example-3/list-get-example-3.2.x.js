@@ -10,8 +10,8 @@ client.usage.records.list(
     startDate: '2012-09-01',
     endDate: '2012-09-30',
   },
-  function(err, data) {
-    data.usageRecords.forEach(function(record) {
+  (err, data) => {
+    data.usageRecords.forEach(record => {
       console.log(record.price);
     });
   }

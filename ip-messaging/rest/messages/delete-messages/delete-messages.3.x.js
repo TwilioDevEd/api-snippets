@@ -9,9 +9,9 @@ service
   .channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .messages('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
   status: 'active',
-}, function(err, account) {
+}, (err, account) => {
   console.log(account.status);
 });

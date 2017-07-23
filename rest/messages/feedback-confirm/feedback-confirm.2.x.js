@@ -10,7 +10,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/confirm', function(req, res) {
+app.get('/confirm', (req, res) => {
   const uniqueId = req.query.id;
   // Lookup variable `uniqueId` in a database to find messageSid
   const messageSid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
@@ -24,7 +24,7 @@ app.get('/confirm', function(req, res) {
         Outcome: 'confirmed',
       },
     },
-    function(err, data) {
+    (err, data) => {
       // Handle remaining request normally
       res.send('Thank you!');
       res.end();
@@ -32,6 +32,6 @@ app.get('/confirm', function(req, res) {
   );
 });
 
-http.createServer(app).listen(1337, function() {
+http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });

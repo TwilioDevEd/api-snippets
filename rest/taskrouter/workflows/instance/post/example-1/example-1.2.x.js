@@ -11,6 +11,6 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.workflows(workflowSid).update({
   taskReservationTimeout: '20',
-}, function(err, workflow) {
+}, (err, workflow) => {
   console.log(workflow.task_reservation_timeout);
 });

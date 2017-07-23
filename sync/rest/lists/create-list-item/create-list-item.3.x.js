@@ -10,9 +10,9 @@ service
   .syncListItems.create({
     data: { text: 'welcome!' },
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

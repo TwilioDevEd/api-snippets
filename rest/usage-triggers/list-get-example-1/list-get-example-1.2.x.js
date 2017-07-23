@@ -9,8 +9,8 @@ client.usage.triggers.list(
     recurring: 'daily',
     usageCategory: 'calls',
   },
-  function(err, data) {
-    data.usageTriggers.forEach(function(trigger) {
+  (err, data) => {
+    data.usageTriggers.forEach(trigger => {
       console.log(trigger.currentValue);
     });
   }

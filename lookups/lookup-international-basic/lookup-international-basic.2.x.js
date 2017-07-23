@@ -6,6 +6,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = new LookupsClient(accountSid, authToken);
 
-client.phoneNumbers('+4402077651182').get(function(error, number) {
+client.phoneNumbers('+4402077651182').get((error, number) => {
   console.log(number.nationalFormat);
 });

@@ -4,11 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.outgoingCallerIds.list({ phoneNumber: '+14158675309' }, function(
-  err,
-  data
-) {
-  data.outgoingCallerIds.forEach(function(callerId) {
+client.outgoingCallerIds.list({ phoneNumber: '+14158675309' }, (err, data) => {
+  data.outgoingCallerIds.forEach(callerId => {
     console.log(callerId.phoneNumber);
   });
 });

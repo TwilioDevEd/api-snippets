@@ -10,9 +10,9 @@ service
   .messages.create({
     body: 'New message',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

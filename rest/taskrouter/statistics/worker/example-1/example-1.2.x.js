@@ -9,10 +9,8 @@ const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace
-  .workers(workerSid)
-  .statistics.get({}, function(err, responseData) {
-    if (!err) {
-      console.log(responseData.cumulative.reservations_accepted);
-    }
-  });
+client.workspace.workers(workerSid).statistics.get({}, (err, responseData) => {
+  if (!err) {
+    console.log(responseData.cumulative.reservations_accepted);
+  }
+});

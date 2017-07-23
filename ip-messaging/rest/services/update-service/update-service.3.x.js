@@ -9,9 +9,9 @@ client.chat
   .update({
     friendlyName: 'My new Chat service',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

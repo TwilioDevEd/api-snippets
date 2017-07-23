@@ -9,9 +9,9 @@ service.channels
   .create({
     friendlyName: 'MyChannel',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

@@ -8,7 +8,7 @@ client.accounts.create(
   {
     friendlyName: 'Submarine',
   },
-  function(err, account) {
+  (err, account) => {
     process.stdout.write(account.sid);
   }
 );

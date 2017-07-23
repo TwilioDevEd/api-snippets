@@ -4,7 +4,7 @@ const twilio = require('twilio');
 
 const app = express();
 
-app.post('/voice', function(req, res) {
+app.post('/voice', (req, res) => {
   // Create TwiML response
   const twiml = new twilio.TwimlResponse();
   twiml.say('Thanks for calling!');
@@ -13,7 +13,7 @@ app.post('/voice', function(req, res) {
   res.send(twiml.toString());
 });
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // TODO: generate token
 });
 

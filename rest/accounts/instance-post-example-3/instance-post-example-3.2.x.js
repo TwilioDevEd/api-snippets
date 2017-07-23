@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
   status: 'closed',
-}, function(err, account) {
+}, (err, account) => {
   console.log(account.dateCreated);
 });

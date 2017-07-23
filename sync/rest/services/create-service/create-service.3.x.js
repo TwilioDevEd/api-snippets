@@ -8,9 +8,9 @@ client.sync.services
   .create({
     friendlyName: 'MySyncServiceInstance',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

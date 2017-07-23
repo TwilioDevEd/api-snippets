@@ -11,7 +11,7 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace
   .taskQueues(taskQueueSid)
-  .statistics.get({}, function(err, responseData) {
+  .statistics.get({}, (err, responseData) => {
     if (!err) {
       console.log(responseData.cumulative.reservations_accepted);
     }

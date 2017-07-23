@@ -6,10 +6,8 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sip
   .domains('SD32a3c49700934481addd5ce1659f04d2')
-  .ipAccessControlListMappings.list(function(err, data) {
-    data.ipAccessControlListMappings.forEach(function(
-      ipAccessControlListMapping
-    ) {
+  .ipAccessControlListMappings.list((err, data) => {
+    data.ipAccessControlListMappings.forEach(ipAccessControlListMapping => {
       console.log(ipAccessControlListMapping.FriendlyName);
     });
   });

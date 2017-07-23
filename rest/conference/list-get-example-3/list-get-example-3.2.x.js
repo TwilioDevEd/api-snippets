@@ -9,8 +9,8 @@ client.conferences.list(
     status: 'completed',
     dateCreated: '2009-07-06',
   },
-  function(err, data) {
-    data.conferences.forEach(function(conference) {
+  (err, data) => {
+    data.conferences.forEach(conference => {
       console.log(conference.Status);
     });
   }

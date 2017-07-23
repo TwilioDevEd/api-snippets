@@ -11,6 +11,6 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.taskQueues(taskQueueSid).update({
   target_workers: 'languages HAS "english"',
-}, function(err, taskQueue) {
+}, (err, taskQueue) => {
   console.log(taskQueue.targetWorkers);
 });

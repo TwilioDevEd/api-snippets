@@ -6,7 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sip
   .ipAccessControlLists('AL32a3c49700934481addd5ce1659f04d2')
-  .delete(function(err, data) {
+  .delete((err, data) => {
     if (err) {
       console.log(err.status);
       throw err.message;

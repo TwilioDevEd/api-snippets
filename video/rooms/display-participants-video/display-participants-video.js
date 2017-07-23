@@ -1,5 +1,5 @@
 // Attach the Participant's Media to a <div> element.
-room.on('participantConnected', function(participant) {
+room.on('participantConnected', participant => {
   console.log('Participant "' + participant.identity + '" connected');
 
   participant.tracks.forEach(track => {

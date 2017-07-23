@@ -8,7 +8,7 @@ client.incomingPhoneNumbers.create(
   {
     phoneNumber: '+15005550000',
   },
-  function(err, number) {
+  (err, number) => {
     process.stdout.write(number.sid);
   }
 );

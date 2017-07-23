@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .connectApps('CNb989fdd207b04d16aee578018ef5fd93')
-  .get(function(err, connectApp) {
+  .get((err, connectApp) => {
     console.log(connectApp.homepageUrl);
   });

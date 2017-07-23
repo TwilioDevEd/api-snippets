@@ -11,8 +11,8 @@ const params = {
   logLevel: 'warning',
 };
 
-client.alerts.list(params, function(err, data) {
-  data.alerts.forEach(function(alert) {
+client.alerts.list(params, (err, data) => {
+  data.alerts.forEach(alert => {
     console.log(alert.alertText);
   });
 });

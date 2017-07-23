@@ -10,7 +10,7 @@ client.sip
     {
       credentialListSid: 'CL32a3c49700934481addd5ce1659f04d2',
     },
-    function(err, credentialListMapping) {
+    (err, credentialListMapping) => {
       process.stdout.write(credentialListMapping.sid);
     }
   );

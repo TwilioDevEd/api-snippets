@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.sms
   .shortCodes('SC6b20cb705c1e8f00210049b20b70fce2')
-  .get(function(err, shortCode) {
+  .get((err, shortCode) => {
     console.log(shortCode.shortCode);
   });

@@ -10,7 +10,7 @@ client.fax.v1.faxes
     from: '+15017250604',
     mediaUrl: 'https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response.sid);
   })
   .catch(err => {

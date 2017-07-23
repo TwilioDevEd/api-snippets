@@ -9,9 +9,9 @@ service.syncMaps
   .create({
     uniqueName: 'Players',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

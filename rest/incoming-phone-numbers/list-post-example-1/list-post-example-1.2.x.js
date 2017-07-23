@@ -11,7 +11,7 @@ client.incomingPhoneNumbers.create(
     phoneNumber: '+15105647903',
     voiceMethod: 'GET',
   },
-  function(err, number) {
+  (err, number) => {
     console.log(number.sid);
   }
 );

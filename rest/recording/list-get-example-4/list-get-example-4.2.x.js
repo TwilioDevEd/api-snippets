@@ -9,8 +9,8 @@ client.recordings.list(
     'dateCreated<': '2016-10-15',
     'dateCreated>': '2016-10-12',
   },
-  function(err, data) {
-    data.recordings.forEach(function(recording) {
+  (err, data) => {
+    data.recordings.forEach(recording => {
       console.log(recording.Duration);
     });
   }

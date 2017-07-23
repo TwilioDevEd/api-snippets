@@ -12,6 +12,6 @@ client.preview.wireless
       'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
     status: 'active',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

@@ -1,4 +1,4 @@
-Twilio.Device.incoming(function(conn) {
+Twilio.Device.incoming(conn => {
   console.log('Incoming connection from ' + conn.parameters.From);
   const archEnemyPhoneNumber = '+15417280966';
 

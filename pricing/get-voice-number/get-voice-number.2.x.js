@@ -5,6 +5,6 @@ const authToken = 'your_auth_token';
 const PricingClient = require('twilio').PricingClient;
 const client = new PricingClient(accountSid, authToken);
 
-client.voice.numbers('+15108675309').get(function(err, number) {
+client.voice.numbers('+15108675309').get((err, number) => {
   console.log(number.outboundCallPrice.currentPrice);
 });

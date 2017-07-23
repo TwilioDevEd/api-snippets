@@ -13,7 +13,7 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 // accept a reservation
 client.workspace.tasks(taskSid).reservations(reservationSid).update({
   reservationStatus: 'accepted',
-}, function(err, reservation) {
+}, (err, reservation) => {
   console.log(reservation.reservation_status);
   console.log(reservation.worker_name);
 });

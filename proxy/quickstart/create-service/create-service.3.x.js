@@ -13,9 +13,9 @@ client.preview.proxy.services
     friendlyName: 'My Awesome Service',
     callbackUrl: 'https://www.example.com/',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(err) {
+  .catch(err => {
     console.log(err);
   });

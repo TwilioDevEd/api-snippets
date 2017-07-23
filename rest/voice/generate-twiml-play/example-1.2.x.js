@@ -2,7 +2,7 @@ const http = require('http');
 const twilio = require('twilio');
 
 http
-  .createServer(function(req, res) {
+  .createServer((req, res) => {
     // Create TwiML response
     const twiml = new twilio.TwimlResponse();
     twiml.say("Hello. It's me.");

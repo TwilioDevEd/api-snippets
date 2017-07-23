@@ -12,7 +12,7 @@ client.calls.create(
     sipAuthPassword: 'secret',
     sipAuthUsername: 'jack',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

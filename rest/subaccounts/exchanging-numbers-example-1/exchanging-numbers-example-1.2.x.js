@@ -20,7 +20,7 @@ phoneNumber.update(
   {
     accountSid: newNumberOwnerAccountSid, // Specify a new account as owner
   },
-  function(err, number) {
+  (err, number) => {
     console.log(number);
   }
 );

@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.recordings.list({ dateCreated: '2016-10-18' }, function(err, data) {
-  data.recordings.forEach(function(recording) {
+client.recordings.list({ dateCreated: '2016-10-18' }, (err, data) => {
+  data.recordings.forEach(recording => {
     console.log(recording.CallSid);
   });
 });

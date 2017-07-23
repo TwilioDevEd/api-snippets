@@ -9,8 +9,8 @@ const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workers(workerSid).reservations.list(function(err, data) {
-  data.reservations.forEach(function(reservation) {
+client.workspace.workers(workerSid).reservations.list((err, data) => {
+  data.reservations.forEach(reservation => {
     console.log(reservation.reservation_status);
     console.log(reservation.worker_name);
   });

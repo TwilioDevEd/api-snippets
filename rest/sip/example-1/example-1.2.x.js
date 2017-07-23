@@ -10,7 +10,7 @@ client.calls.create(
     to: 'sip:kate@example.com',
     from: 'Jack',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

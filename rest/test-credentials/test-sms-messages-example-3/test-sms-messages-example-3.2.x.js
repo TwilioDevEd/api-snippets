@@ -9,7 +9,7 @@ client.messages.create(
     to: '+14108675309',
     from: '+15005550006',
   },
-  function(err, sms) {
+  (err, sms) => {
     process.stdout.write(sms.sid);
   }
 );

@@ -1,6 +1,6 @@
 // We use jQuery to make an Ajax request to the server to retrieve our
 // Access Token
-$.getJSON('/token', function(data) {
+$.getJSON('/token', data => {
   // The data sent back from the server should contain a long string - this is
   // the JWT token you need to initialize the SDK. Read more about JWT
   // (JSON Web Token) at http://jwt.io

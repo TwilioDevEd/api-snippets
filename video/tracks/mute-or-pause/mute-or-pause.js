@@ -1,5 +1,5 @@
 const localMedia = room.localParticipant.media;
-localMedia.tracks.forEach(function(track) {
+localMedia.tracks.forEach(track => {
   if (track.isEnabled) {
     track.disable();
   } else {

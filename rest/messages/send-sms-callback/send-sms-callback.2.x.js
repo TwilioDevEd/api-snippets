@@ -12,7 +12,7 @@ client.messages.create(
     body: 'McAvoy or Stewart? These timelines can get so confusing.',
     statusCallback: 'http://requestb.in/1234abcd',
   },
-  function(err, message) {
+  (err, message) => {
     console.log(message.sid);
   }
 );

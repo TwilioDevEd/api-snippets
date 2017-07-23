@@ -4,6 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.tokens.create({}, function(err, token) {
+client.tokens.create({}, (err, token) => {
   process.stdout.write(token.username);
 });

@@ -7,9 +7,9 @@ const client = new Twilio(accountSid, authToken);
 client.chat
   .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

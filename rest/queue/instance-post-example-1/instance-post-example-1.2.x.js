@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.queues('QU32a3c49700934481addd5ce1659f04d2').update({
   maxSize: '123',
-}, function(err, queue) {
+}, (err, queue) => {
   console.log(queue.averageWaitTime);
 });

@@ -11,7 +11,7 @@ client.messages.create(
     from: '+14158141829',
     mediaUrl: 'http://www.example.com/hearts.png',
   },
-  function(err, message) {
+  (err, message) => {
     process.stdout.write(message.sid);
   }
 );
