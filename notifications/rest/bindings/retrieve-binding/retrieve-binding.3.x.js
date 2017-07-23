@@ -12,10 +12,10 @@ const service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service
   .bindings('BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
-  .then(function(binding) {
+  .then(binding => {
     console.log(binding);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   })
   .done();

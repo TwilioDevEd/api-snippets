@@ -8,6 +8,6 @@ client.wireless
   .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   .usageRecords
   .list()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

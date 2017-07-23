@@ -4,7 +4,7 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const express = require('express');
 const app = express();
 
-app.post('/enqueue_call', function(request, response) {
+app.post('/enqueue_call', (request, response) => {
   const resp = new VoiceResponse();
 
   const json = { account_number: '12345abcdef' };

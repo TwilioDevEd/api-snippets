@@ -9,7 +9,7 @@ const taskQueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.statistics.get({}, function(err, responseData) {
+client.workspace.statistics.get({}, (err, responseData) => {
   if (!err) {
     console.log(responseData.cumulative.avg_task_acceptance_time);
     console.log(responseData.cumulative.tasks_created);

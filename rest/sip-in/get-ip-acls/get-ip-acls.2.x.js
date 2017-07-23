@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.sip.ipAccessControlLists.list(function(err, data) {
-  data.ipAccessControlLists.forEach(function(ipAccessControlList) {
+client.sip.ipAccessControlLists.list((err, data) => {
+  data.ipAccessControlLists.forEach(ipAccessControlList => {
     console.log(ipAccessControlList.FriendlyName);
   });
 });

@@ -11,7 +11,7 @@ client
     {
       muted: 'True',
     },
-    function(err, participant) {
+    (err, participant) => {
       console.log(participant.muted);
     }
   );

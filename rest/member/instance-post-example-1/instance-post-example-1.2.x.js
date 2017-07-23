@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client.queues('QU5ef8732a3c49700934481addd5ce1659').members('Front').update({
   url: 'http://demo.twilio.com/docs/voice.xml',
   method: 'POST',
-}, function(err, member) {
+}, (err, member) => {
   console.log(member.waitTime);
 });

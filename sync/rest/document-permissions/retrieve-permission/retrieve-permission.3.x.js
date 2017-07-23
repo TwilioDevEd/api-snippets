@@ -9,9 +9,9 @@ service
   .documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .documentPermissions('bob')
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

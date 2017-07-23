@@ -9,8 +9,8 @@ client.conferences.list(
     status: 'in-progress',
     friendlyName: 'MyRoom',
   },
-  function(err, data) {
-    data.conferences.forEach(function(conference) {
+  (err, data) => {
+    data.conferences.forEach(conference => {
       console.log(conference.Status);
     });
   }

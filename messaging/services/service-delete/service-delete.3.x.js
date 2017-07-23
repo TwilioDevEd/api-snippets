@@ -8,9 +8,9 @@ const client = require('twilio')(accountSid, authToken);
 client.messaging
   .services('MG2172dd2db502e20dd981ef0d67850e1a')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

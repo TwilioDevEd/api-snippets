@@ -4,8 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.sms
-  .messages('SM800f449d0399ed014aae2bcc0cc2f2ec')
-  .get(function(err, sms) {
-    console.log(sms.body);
-  });
+client.sms.messages('SM800f449d0399ed014aae2bcc0cc2f2ec').get((err, sms) => {
+  console.log(sms.body);
+});

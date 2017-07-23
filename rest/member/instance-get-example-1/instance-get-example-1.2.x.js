@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client
   .queues('QU5ef8732a3c49700934481addd5ce1659')
   .members('CA386025c9bf5d6052a1d1ea42b4d16662')
-  .get(function(err, member) {
+  .get((err, member) => {
     console.log(member.waitTime);
   });

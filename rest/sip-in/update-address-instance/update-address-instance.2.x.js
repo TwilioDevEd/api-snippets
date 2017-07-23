@@ -11,7 +11,7 @@ client.sip
     {
       friendlyName: 'Orlandos Nightclub',
     },
-    function(err, ipAddress) {
+    (err, ipAddress) => {
       console.log(ipAddress.friendlyName);
     }
   );

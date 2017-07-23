@@ -10,7 +10,7 @@ client.calls.create(
     to: '+15005550003',
     from: '+15005550006',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

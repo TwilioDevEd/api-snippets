@@ -10,6 +10,6 @@ client.wireless.commands
     callbackUrl:
       'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

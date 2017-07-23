@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client.incomingPhoneNumbers('PN2a0747eba6abf96b7e3c3ff0b4530f6e').update({
   voiceUrl: 'http://demo.twilio.com/docs/voice.xml',
   smsUrl: 'http://demo.twilio.com/docs/sms.xml',
-}, function(err, number) {
+}, (err, number) => {
   console.log(number.voiceUrl);
 });

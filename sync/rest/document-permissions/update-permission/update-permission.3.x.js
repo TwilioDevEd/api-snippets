@@ -13,9 +13,9 @@ service
     write: 'true',
     manage: 'true',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

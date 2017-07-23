@@ -9,7 +9,7 @@ const params = {
   startDate: '2015-03-01T00:00:00Z',
   endDate: '2015-04-01T00:00:00Z',
 };
-client.events.list(params, function(error, events) {
+client.events.list(params, (error, events) => {
   for (const e in events) {
     process.stdout.write(e);
   }

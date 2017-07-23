@@ -5,7 +5,7 @@ const authToken = 'your_auth_token';
 const PricingClient = require('twilio').PricingClient;
 const client = new PricingClient(accountSid, authToken);
 
-client.messaging.countries.list(function(error, response) {
+client.messaging.countries.list((error, response) => {
   const cList = response.countries;
   for (let i = 0; i < cList.length; i++) {
     console.log(cList[i].isoCountry + '\n');

@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client.sip
   .credentialLists('CL32a3c49700934481addd5ce1659f04d2')
   .credentials('SC32a3c49700934481addd5ce1659f04d2')
-  .get(function(err, credential) {
+  .get((err, credential) => {
     console.log(credential.username);
   });

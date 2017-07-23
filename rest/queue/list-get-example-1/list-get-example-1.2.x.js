@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.queues.list(function(err, data) {
-  data.queues.forEach(function(queue) {
+client.queues.list((err, data) => {
+  data.queues.forEach(queue => {
     console.log(queue.AverageWaitTime);
   });
 });

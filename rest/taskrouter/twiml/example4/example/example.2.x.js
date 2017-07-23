@@ -4,7 +4,7 @@ const twilio = require('twilio');
 const express = require('express');
 const app = express();
 
-app.post('/enqueue_call', function(request, response) {
+app.post('/enqueue_call', (request, response) => {
   const resp = new twilio.TwimlResponse();
 
   const arr = { account_number: '12345abcdef' };
@@ -16,7 +16,7 @@ app.post('/enqueue_call', function(request, response) {
       waitUrl: '/hold_music.php',
       action: '/post_bridge_survey.php',
     },
-    function(node) {
+    node => {
       node.task(json);
     }
   );

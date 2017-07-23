@@ -10,7 +10,7 @@ client.sip
     {
       ipAccessControlListSid: 'AL32a3c49700934481addd5ce1659f04d2',
     },
-    function(err, ipAccessControlListMapping) {
+    (err, ipAccessControlListMapping) => {
       process.stdout.write(ipAccessControlListMapping.sid);
     }
   );

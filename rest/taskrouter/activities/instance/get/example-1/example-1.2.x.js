@@ -9,6 +9,6 @@ const activitySid = 'WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.activities(activitySid).get(function(err, activity) {
+client.workspace.activities(activitySid).get((err, activity) => {
   console.log(activity.friendly_name);
 });

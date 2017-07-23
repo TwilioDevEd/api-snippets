@@ -6,7 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .transcriptions('TR8c61027b709ffb038236612dc5af8723')
-  .delete(function(err, data) {
+  .delete((err, data) => {
     if (err) {
       console.log(err.status);
       throw err.message;

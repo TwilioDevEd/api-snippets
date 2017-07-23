@@ -9,6 +9,6 @@ const taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.tasks(taskSid).get(function(err, task) {
+client.workspace.tasks(taskSid).get((err, task) => {
   console.log(task.attributes);
 });

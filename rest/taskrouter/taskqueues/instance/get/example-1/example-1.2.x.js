@@ -9,6 +9,6 @@ const taskQueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.taskQueues(taskQueueSid).get(function(err, taskQueue) {
+client.workspace.taskQueues(taskQueueSid).get((err, taskQueue) => {
   console.log(taskQueue.friendly_name);
 });

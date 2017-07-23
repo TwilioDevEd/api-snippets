@@ -8,9 +8,9 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workers.get({ Available: '1' }, function(err, data) {
+client.workspace.workers.get({ Available: '1' }, (err, data) => {
   if (!err) {
-    data.workers.forEach(function(worker) {
+    data.workers.forEach(worker => {
       console.log(worker.friendly_name);
     });
   }
@@ -18,9 +18,9 @@ client.workspace.workers.get({ Available: '1' }, function(err, data) {
 
 client.workspace.workers.get(
   { TaskQueueSid: 'WQf855e98ad280d0a0a325628e24ca9627', Available: '1' },
-  function(err, data) {
+  (err, data) => {
     if (!err) {
-      data.workers.forEach(function(worker) {
+      data.workers.forEach(worker => {
         console.log(worker.friendly_name);
       });
     }
@@ -29,9 +29,9 @@ client.workspace.workers.get(
 
 client.workspace.workers.get(
   { TargetWorkersExpression: "type == 'leads'" },
-  function(err, data) {
+  (err, data) => {
     if (!err) {
-      data.workers.forEach(function(worker) {
+      data.workers.forEach(worker => {
         console.log(worker.friendly_name);
       });
     }

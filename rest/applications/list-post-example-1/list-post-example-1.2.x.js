@@ -10,7 +10,7 @@ client.applications.create(
     voiceUrl: 'http://demo.twilio.com/docs/voice.xml',
     voiceMethod: 'GET',
   },
-  function(err, app) {
+  (err, app) => {
     process.stdout.write(app.sid);
   }
 );

@@ -10,7 +10,7 @@ client.usage.triggers.create(
     usageCategory: 'sms',
     callbackUrl: 'http://www.example.com/',
   },
-  function(err, trigger) {
+  (err, trigger) => {
     process.stdout.write(trigger.sid);
   }
 );

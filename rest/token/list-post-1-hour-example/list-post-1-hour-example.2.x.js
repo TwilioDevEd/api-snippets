@@ -8,7 +8,7 @@ client.tokens.create(
   {
     ttl: 3600,
   },
-  function(err, token) {
+  (err, token) => {
     process.stdout.write(token.username);
   }
 );

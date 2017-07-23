@@ -12,7 +12,7 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 // update a task's attributes
 client.workspace.tasks(taskSid).update({
   attributes: '{"type":"support"}',
-}, function(err, task) {
+}, (err, task) => {
   console.log(task.attributes);
 });
 
@@ -20,7 +20,7 @@ client.workspace.tasks(taskSid).update({
 client.workspace.tasks(taskSid).update({
   assignmentStatus: 'canceled',
   reason: 'waiting too long',
-}, function(err, task) {
+}, (err, task) => {
   console.log(task.assignment_status);
   console.log(task.reason);
 });

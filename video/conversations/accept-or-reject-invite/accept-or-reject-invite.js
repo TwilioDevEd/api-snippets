@@ -5,10 +5,10 @@ const accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
 // Create a Conversations Client and listen for IncomingInvites
 conversationsClient = new Twilio.Conversations.Client(accessManager);
 conversationsClient.listen().then(
-  function() {
+  () => {
     console.log('Connected to Twilio!');
     // Selectively handle IncomingInvites based on the originator
-    client.on('invite', function(invite) {
+    client.on('invite', invite => {
       if (invite.from == 'ringo') {
         invite.reject();
       } else {
@@ -16,7 +16,7 @@ conversationsClient.listen().then(
       }
     });
   },
-  function(error) {
+  error => {
     console.log('Could not connect to Twilio: ' + error.message);
   }
 );

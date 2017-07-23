@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.conferences.list(function(err, data) {
-  data.conferences.forEach(function(conference) {
+client.conferences.list((err, data) => {
+  data.conferences.forEach(conference => {
     console.log(conference.Status);
   });
 });

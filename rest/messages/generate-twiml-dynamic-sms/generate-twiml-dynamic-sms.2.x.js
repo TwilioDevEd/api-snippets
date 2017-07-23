@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/', function(req, res) {
+app.post('/', (req, res) => {
   const twilio = require('twilio');
   const twiml = new twilio.TwimlResponse();
   if (req.body.Body == 'hello') {
@@ -22,6 +22,6 @@ app.post('/', function(req, res) {
   res.end(twiml.toString());
 });
 
-http.createServer(app).listen(1337, function() {
+http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });

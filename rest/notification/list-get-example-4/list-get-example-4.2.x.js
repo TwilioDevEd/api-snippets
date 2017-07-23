@@ -10,8 +10,8 @@ client.notifications.list(
     'messageDate<': '2009-07-08',
     log: '1',
   },
-  function(err, data) {
-    data.notifications.forEach(function(notification) {
+  (err, data) => {
+    data.notifications.forEach(notification => {
       console.log(notification.RequestUrl);
     });
   }

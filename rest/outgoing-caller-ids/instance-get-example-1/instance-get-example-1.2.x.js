@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .outgoingCallerIds('PNe905d7e6b410746a0fb08c57e5a186f3')
-  .get(function(err, callerId) {
+  .get((err, callerId) => {
     console.log(callerId.phoneNumber);
   });

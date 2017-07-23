@@ -9,14 +9,14 @@ client.availablePhoneNumbers('US').local.list({
   distance: '50',
   contains: '555',
   inRegion: 'CA',
-}, function(err, data) {
+}, (err, data) => {
   const number = data.availablePhoneNumbers[0];
 
   client.incomingPhoneNumbers.create(
     {
       phoneNumber: number.phone_number,
     },
-    function(err, purchasedNumber) {
+    (err, purchasedNumber) => {
       console.log(purchasedNumber.sid);
     }
   );

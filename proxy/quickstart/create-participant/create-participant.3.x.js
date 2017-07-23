@@ -15,9 +15,9 @@ client.preview.proxy
     identifier: '+15558675309',
     friendly_name: 'Alice',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(err) {
+  .catch(err => {
     console.log(err);
   });

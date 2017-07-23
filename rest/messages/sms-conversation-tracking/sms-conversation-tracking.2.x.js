@@ -6,7 +6,7 @@ const twilio = require('twilio');
 const app = express();
 app.use(session({ secret: 'anything-you-want-but-keep-secret' }));
 
-app.post('/sms', function(req, res) {
+app.post('/sms', (req, res) => {
   const smsCount = req.session.counter || 0;
 
   let message = 'Hello, thanks for the new message.';
@@ -22,6 +22,6 @@ app.post('/sms', function(req, res) {
   res.end(twiml.toString());
 });
 
-http.createServer(app).listen(1337, function() {
+http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });

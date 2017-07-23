@@ -5,8 +5,8 @@ const authToken = 'your_auth_token';
 const PricingClient = require('twilio').PricingClient;
 const client = new PricingClient(accountSid, authToken);
 
-client.phoneNumbers.countries('US').get(function(err, country) {
-  country.phoneNumberPrices.forEach(function(phonePrices) {
+client.phoneNumbers.countries('US').get((err, country) => {
+  country.phoneNumberPrices.forEach(phonePrices => {
     console.log(phonePrices.numberType + ' ' + phonePrices.currentPrice + '\n');
   });
 });

@@ -4,7 +4,7 @@ const twilio = require('twilio');
 const express = require('express');
 const app = express();
 
-app.post('/enqueue_call', function(request, response) {
+app.post('/enqueue_call', (request, response) => {
   const resp = new twilio.TwimlResponse();
   resp.enqueue({ workflowSid: 'WW0123456789abcdef0123456789abcdef' });
 

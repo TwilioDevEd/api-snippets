@@ -8,7 +8,7 @@ const client = new MonitorClient(accountSid, authToken);
 const params = {
   resourceSid: 'PN4aa51b930717ea83c91971b86d99018f',
 };
-client.events.list(params, function(error, events) {
+client.events.list(params, (error, events) => {
   for (const e in events) {
     process.stdout.write(e);
   }

@@ -9,6 +9,6 @@ const workflowSid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workflows(workflowSid).get(function(err, workflow) {
+client.workspace.workflows(workflowSid).get((err, workflow) => {
   console.log(workflow.friendly_name);
 });

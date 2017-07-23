@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client.addresses('AD2a0747eba6abf96b7e3c3ff0b4530f6e').post({
   customerName: 'Customer 456',
   street: '2 Hasselhoff Lane',
-}, function(err, address) {
+}, (err, address) => {
   console.log(address.customerName);
 });

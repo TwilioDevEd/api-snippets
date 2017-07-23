@@ -8,8 +8,8 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspaces.list(function(err, data) {
-  data.workspaces.forEach(function(workspace) {
+client.workspaces.list((err, data) => {
+  data.workspaces.forEach(workspace => {
     console.log(workspace.friendly_name);
   });
 });

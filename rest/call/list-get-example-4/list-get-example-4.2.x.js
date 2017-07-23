@@ -10,8 +10,8 @@ client.calls.list(
     'startTime>': '2009-07-04',
     'startTime<': '2009-07-06',
   },
-  function(err, data) {
-    data.calls.forEach(function(call) {
+  (err, data) => {
+    data.calls.forEach(call => {
       console.log(call.To);
     });
   }

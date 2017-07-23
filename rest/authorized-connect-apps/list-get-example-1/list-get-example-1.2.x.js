@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.authorizedConnectApps.list(function(err, data) {
-  data.authorizedConnectApps.forEach(function(authorizedApp) {
+client.authorizedConnectApps.list((err, data) => {
+  data.authorizedConnectApps.forEach(authorizedApp => {
     console.log(authorizedApp.connectAppHomepageUrl);
   });
 });

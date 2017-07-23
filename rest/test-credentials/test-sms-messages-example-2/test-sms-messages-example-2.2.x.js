@@ -10,7 +10,7 @@ client.messages.create(
     to: '+15005550009',
     from: '+15005550006',
   },
-  function(err, sms) {
+  (err, sms) => {
     process.stdout.write(sms.sid);
   }
 );

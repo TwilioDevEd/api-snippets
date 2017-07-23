@@ -10,21 +10,18 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.tasks.get(
   { TaskQueueSid: 'WQf855e98ad280d0a0a325628e24ca9627' },
-  function(err, data) {
+  (err, data) => {
     if (!err) {
-      data.tasks.forEach(function(task) {
+      data.tasks.forEach(task => {
         console.log(task.attributes);
       });
     }
   }
 );
 
-client.workspace.tasks.get({ AssignmentStatus: 'pending' }, function(
-  err,
-  data
-) {
+client.workspace.tasks.get({ AssignmentStatus: 'pending' }, (err, data) => {
   if (!err) {
-    data.tasks.forEach(function(task) {
+    data.tasks.forEach(task => {
       console.log(task.attributes);
     });
   }

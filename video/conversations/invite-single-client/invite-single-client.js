@@ -1,11 +1,11 @@
 client.inviteToConversation('alice').then(
-  function(conversation) {
+  conversation => {
     console.log('Successfully connected to Conversation: ' + conversation);
-    conversation.on('participantConnected', function(participant) {
+    conversation.on('participantConnected', participant => {
       console.log('A remote Participant connected: ' + participant);
     });
   },
-  function(error) {
+  error => {
     console.error('Unable to connect to Conversation: ' + error.message);
   }
 );

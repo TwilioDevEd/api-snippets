@@ -9,9 +9,9 @@ client.chat
   .update({
     reachabilityEnabled: 'true',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

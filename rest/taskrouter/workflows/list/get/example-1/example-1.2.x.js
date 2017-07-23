@@ -8,8 +8,8 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workflows.list(function(err, data) {
-  data.workflows.forEach(function(workflows) {
+client.workspace.workflows.list((err, data) => {
+  data.workflows.forEach(workflows => {
     console.log(workflows.friendly_name);
   });
 });

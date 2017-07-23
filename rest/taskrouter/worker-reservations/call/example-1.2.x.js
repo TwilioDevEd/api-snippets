@@ -17,7 +17,7 @@ client.workspace.workers(workerSid).reservations(reservationSid).update({
   callUrl: 'http://example.com/agent_answer',
   callStatusCallbackUrl: 'http://example.com/agent_answer_status_callback',
   callAccept: 'true',
-}, function(err, reservation) {
+}, (err, reservation) => {
   console.log(reservation.reservation_status);
   console.log(reservation.worker_name);
 });

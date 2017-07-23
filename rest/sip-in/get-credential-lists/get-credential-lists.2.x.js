@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.sip.credentialLists.list(function(err, data) {
-  data.credentialLists.forEach(function(credentialList) {
+client.sip.credentialLists.list((err, data) => {
+  data.credentialLists.forEach(credentialList => {
     console.log(credentialList.FriendlyName);
   });
 });

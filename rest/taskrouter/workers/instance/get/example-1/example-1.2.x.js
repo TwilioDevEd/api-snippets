@@ -9,6 +9,6 @@ const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.workers(workerSid).get(function(err, worker) {
+client.workspace.workers(workerSid).get((err, worker) => {
   console.log(worker.friendly_name);
 });

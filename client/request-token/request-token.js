@@ -1,10 +1,10 @@
-$(function() {
+$(() => {
   $.ajax('/token')
-    .done(function(token) {
+    .done(token => {
       console.log('Got a token: ', token);
       // TODO: Use token with Twilio Client
     })
-    .fail(function() {
+    .fail(() => {
       alert('Could not authenticate!');
     });
 });

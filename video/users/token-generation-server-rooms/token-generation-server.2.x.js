@@ -10,7 +10,7 @@ const randomUsername = require('./randos');
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/token', function(request, response) {
+app.get('/token', (request, response) => {
   const identity = randomUsername();
 
   // Create an access token which we will sign and return to the client,
@@ -39,6 +39,6 @@ app.get('/token', function(request, response) {
 // Create http server and run it
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
-server.listen(port, function() {
+server.listen(port, () => {
   console.log('Express server running on *:' + port);
 });

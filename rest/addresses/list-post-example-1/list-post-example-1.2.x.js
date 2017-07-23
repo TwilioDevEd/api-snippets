@@ -14,7 +14,7 @@ client.addresses.create(
     postalCode: '10875',
     isoCountry: 'DE',
   },
-  function(err, address) {
+  (err, address) => {
     console.log(address.customerName);
   }
 );

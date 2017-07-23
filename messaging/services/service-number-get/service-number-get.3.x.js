@@ -9,9 +9,9 @@ const service = client.messaging.services('MG2172dd2db502e20dd981ef0d67850e1a');
 service
   .phoneNumbers('PN557ce644e5ab84fa21cc21112e22c485')
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

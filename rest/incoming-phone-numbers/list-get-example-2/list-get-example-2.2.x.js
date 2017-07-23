@@ -8,8 +8,8 @@ client.incomingPhoneNumbers.list(
   {
     phoneNumber: '+14158675309',
   },
-  function(err, data) {
-    data.incomingPhoneNumbers.forEach(function(number) {
+  (err, data) => {
+    data.incomingPhoneNumbers.forEach(number => {
       console.log(number.phoneNumber);
     });
   }

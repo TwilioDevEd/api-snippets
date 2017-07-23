@@ -9,9 +9,9 @@ const service = client.messaging.services('MG2172dd2db502e20dd981ef0d67850e1a');
 service
   .alphaSenders('AIc781610ec0b3400c9e0cab8e757da937')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

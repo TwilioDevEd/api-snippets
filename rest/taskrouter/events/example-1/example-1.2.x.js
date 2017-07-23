@@ -8,9 +8,9 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.events.get({}, function(err, data) {
+client.workspace.events.get({}, (err, data) => {
   if (!err) {
-    data.events.forEach(function(event) {
+    data.events.forEach(event => {
       console.log(event.event_type);
     });
   }

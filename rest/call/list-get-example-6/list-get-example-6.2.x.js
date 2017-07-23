@@ -9,8 +9,8 @@ client.calls.list(
     status: 'busy',
     to: '+15558675309',
   },
-  function(err, data) {
-    data.calls.forEach(function(call) {
+  (err, data) => {
+    data.calls.forEach(call => {
       console.log(call.StartTime);
     });
   }

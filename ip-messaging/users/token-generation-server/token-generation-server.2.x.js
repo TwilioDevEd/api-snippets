@@ -13,7 +13,7 @@ Generate an Access Token for a chat application user - it generates a random
 username for the client requesting a token, and takes a device ID as a query
 parameter.
 */
-app.get('/token', function(request, response) {
+app.get('/token', (request, response) => {
   const appName = 'TwilioChatDemo';
   const identity = 'John Doe';
   const deviceId = request.query.device;
@@ -48,6 +48,6 @@ app.get('/token', function(request, response) {
 // Create http server and run it
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
-server.listen(port, function() {
+server.listen(port, () => {
   console.log('Express server running on *:' + port);
 });

@@ -8,9 +8,9 @@ const service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service
   .users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .get()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .fail(function(error) {
+  .fail(error => {
     console.log(error);
   });

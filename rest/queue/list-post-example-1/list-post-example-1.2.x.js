@@ -8,7 +8,7 @@ client.queues.create(
   {
     friendlyName: 'newqueue',
   },
-  function(err, queue) {
+  (err, queue) => {
     process.stdout.write(queue.sid);
   }
 );

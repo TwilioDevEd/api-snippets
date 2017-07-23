@@ -13,7 +13,7 @@ client.workspace.update(
     friendlyName: 'NewFriendlyName',
     eventCallbackUrl: 'http://requestb.in/vh9reovh',
   },
-  function(err, workspace) {
+  (err, workspace) => {
     console.log(workspace.friendly_name);
   }
 );

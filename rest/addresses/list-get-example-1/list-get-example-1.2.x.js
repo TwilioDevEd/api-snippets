@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.addresses.list(function(err, data) {
-  data.addresses.forEach(function(address) {
+client.addresses.list((err, data) => {
+  data.addresses.forEach(address => {
     console.log(address.friendlyName);
   });
 });

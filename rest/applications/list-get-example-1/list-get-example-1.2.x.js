@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.applications.list(function(err, data) {
-  data.applications.forEach(function(app) {
+client.applications.list((err, data) => {
+  data.applications.forEach(app => {
     console.log(app.SmsUrl);
   });
 });

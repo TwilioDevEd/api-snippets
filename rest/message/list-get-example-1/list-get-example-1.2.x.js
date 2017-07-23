@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.messages.list(function(err, data) {
-  data.messages.forEach(function(message) {
+client.messages.list((err, data) => {
+  data.messages.forEach(message => {
     console.log(message.body);
   });
 });

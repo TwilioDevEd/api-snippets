@@ -6,6 +6,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .calls('CA42ed11f93dc08b952027ffbc406d0868')
-  .feedback.get(function(err, feedback) {
+  .feedback.get((err, feedback) => {
     console.log(feedback.dateCreated);
   });

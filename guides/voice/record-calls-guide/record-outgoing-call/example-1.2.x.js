@@ -11,7 +11,7 @@ client.calls.create(
     from: '+15017250604',
     record: 'true',
   },
-  function(err, call) {
+  (err, call) => {
     process.stdout.write(call.sid);
   }
 );

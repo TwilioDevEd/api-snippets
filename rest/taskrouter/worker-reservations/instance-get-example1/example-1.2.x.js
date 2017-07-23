@@ -13,7 +13,7 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 client.workspace
   .workers(workerSid)
   .reservations(reservationSid)
-  .get(function(err, reservation) {
+  .get((err, reservation) => {
     console.log(reservation.reservation_status);
     console.log(reservation.worker_name);
   });

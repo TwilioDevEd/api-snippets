@@ -8,9 +8,9 @@ client.services
   .create({
     friendlyName: 'friendly_name',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .fail(function(error) {
+  .fail(error => {
     console.log(error);
   });

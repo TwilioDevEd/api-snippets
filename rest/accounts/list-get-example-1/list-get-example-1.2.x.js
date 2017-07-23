@@ -4,8 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.accounts.list(function(err, data) {
-  data.accounts.forEach(function(account) {
+client.accounts.list((err, data) => {
+  data.accounts.forEach(account => {
     console.log(account.dateCreated);
   });
 });

@@ -11,7 +11,7 @@ client.outgoingCallerIds.create(
     friendlyName: 'My Home Phone Number',
     phoneNumber: '+14158675309',
   },
-  function(err, callerId) {
+  (err, callerId) => {
     if (err) {
       console.error(err);
     } else {

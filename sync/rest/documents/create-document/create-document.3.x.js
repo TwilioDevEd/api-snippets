@@ -10,9 +10,9 @@ service.documents
     uniqueName: 'MyFirstDocument',
     data: { firstName: 'Alice' },
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });

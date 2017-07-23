@@ -9,9 +9,9 @@ client.sync
   .update({
     friendlyName: 'NEW_FRIENDLY_NAME',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   })
-  .catch(function(error) {
+  .catch(error => {
     console.log(error);
   });
