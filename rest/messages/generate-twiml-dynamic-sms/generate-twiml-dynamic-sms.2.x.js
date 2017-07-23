@@ -1,14 +1,14 @@
-var http = require('http'),
-  express = require('express'),
-  twilio = require('twilio'),
-  bodyParser = require('body-parser');
+const http = require('http');
+const express = require('express');
+const twilio = require('twilio');
+const bodyParser = require('body-parser');
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', function(req, res) {
-  var twilio = require('twilio');
-  var twiml = new twilio.TwimlResponse();
+  const twilio = require('twilio');
+  const twiml = new twilio.TwimlResponse();
   if (req.body.Body == 'hello') {
     twiml.message('Hi!');
   } else if (req.body.Body == 'bye') {

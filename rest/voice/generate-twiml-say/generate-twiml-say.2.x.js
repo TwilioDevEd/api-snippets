@@ -1,10 +1,10 @@
-var http = require('http'),
-  twilio = require('twilio');
+const http = require('http');
+const twilio = require('twilio');
 
 http
   .createServer(function(req, res) {
-    //Create TwiML response
-    var twiml = new twilio.TwimlResponse();
+    // Create TwiML response
+    const twiml = new twilio.TwimlResponse();
     twiml.say('Hello from your pals at Twilio! Have fun.');
 
     res.writeHead(200, { 'Content-Type': 'text/xml' });

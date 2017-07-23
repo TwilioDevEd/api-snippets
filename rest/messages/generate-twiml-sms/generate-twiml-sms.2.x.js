@@ -1,12 +1,12 @@
-var http = require('http');
-var express = require('express');
-var twilio = require('twilio');
+let http = require('http');
+let express = require('express');
+let twilio = require('twilio');
 
-var app = express();
+let app = express();
 
 app.post('/sms', function(req, res) {
-  var twilio = require('twilio');
-  var twiml = new twilio.TwimlResponse();
+  let twilio = require('twilio');
+  let twiml = new twilio.TwimlResponse();
   twiml.message('The Robots are coming! Head for the hills!');
   res.writeHead(200, { 'Content-Type': 'text/xml' });
   res.end(twiml.toString());

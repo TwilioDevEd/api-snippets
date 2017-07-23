@@ -13,7 +13,7 @@ app.post('/voice', (request, response) => {
   // Get the caller's first name (if it's available from whitepages pro)
   const addOnsData = JSON.parse(request.body.AddOns);
   const proData = addOnsData.results.whitepages_pro_caller_id.result.results[0];
-  const firstName = 'home slice';
+  let firstName = 'home slice';
 
   if (proData.belongs_to[0]) {
     const person = proData.belongs_to[0];

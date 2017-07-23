@@ -1,13 +1,13 @@
-var http = require('http'),
-  express = require('express'),
-  bodyParser = require('body-parser');
+const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/MessageStatus', function(req, res) {
-  var messageSid = req.body.MessageSid;
-  var messageStatus = req.body.MessageStatus;
+  const messageSid = req.body.MessageSid;
+  const messageStatus = req.body.MessageStatus;
   console.log('SID: ' + messageSid + ', Status: ' + messageStatus);
   res.end();
 });

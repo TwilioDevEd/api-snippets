@@ -1,14 +1,14 @@
-var http = require('http'),
-  express = require('express'),
-  bodyParser = require('body-parser'),
-  twilio = require('twilio');
+const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const twilio = require('twilio');
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/voice', function(req, res) {
   // Create TwiML response
-  var twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
 
   if (req.body.To) {
     twiml.dial({ callerId: '+15017250604' }, function() {

@@ -1,8 +1,8 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+let authToken = 'your_auth_token';
+let Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
+let client = new Twilio(accountSid, authToken);
 
 client.chat.credentials
   .list()

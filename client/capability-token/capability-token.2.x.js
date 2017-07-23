@@ -1,21 +1,21 @@
-var http = require('http'),
-  express = require('express'),
-  twilio = require('twilio');
+const http = require('http');
+const express = require('express');
+const twilio = require('twilio');
 
-var app = express();
+const app = express();
 
 app.get('/token', function(req, res) {
   // put your Twilio API credentials here
-  var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-  var authToken = 'your_auth_token';
+  const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const authToken = 'your_auth_token';
 
   // put your Twilio Application Sid here
-  var appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-  var capability = new twilio.Capability(accountSid, authToken);
+  const capability = new twilio.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);
   capability.allowClientIncoming('jenny');
-  var token = capability.generate();
+  const token = capability.generate();
 
   res.set('Content-Type', 'application/jwt');
   res.send(token);

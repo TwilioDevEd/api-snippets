@@ -1,5 +1,5 @@
 // Create an AccessManager to manage our Access Token
-var accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
+let accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
 
 // Create a Conversations Client and connect to Twilio's backend
 conversationsClient = new Twilio.Conversations.Client(accessManager);

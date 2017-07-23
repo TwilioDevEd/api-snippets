@@ -10,7 +10,7 @@ app.use(session({ secret: 'anything-you-want-but-keep-secret' }));
 app.post('/sms', (req, res) => {
   const smsCount = req.session.counter || 0;
 
-  const message = 'Hello, thanks for the new message.';
+  let message = 'Hello, thanks for the new message.';
 
   if (smsCount > 0) {
     message = 'Hello, thanks for message number ' + (smsCount + 1);
