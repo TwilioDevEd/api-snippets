@@ -1,5 +1,5 @@
 // Create LocalMedia with a camera track and no microphone track
-let localMedia = new Twilio.Conversations.LocalMedia();
+const localMedia = new Twilio.Conversations.LocalMedia();
 localMedia.addCamera().then(function() {
   return client.inviteToConversation('alice', { localMedia: localMedia });
 });

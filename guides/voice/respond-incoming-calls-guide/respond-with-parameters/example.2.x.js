@@ -5,7 +5,7 @@ const express = require('express');
 const twilio = require('twilio');
 const urlencoded = require('body-parser').urlencoded;
 
-let app = express();
+const app = express();
 
 // Parse incoming POST params with Express middleware
 app.use(urlencoded({ extended: false }));
@@ -15,10 +15,10 @@ app.use(urlencoded({ extended: false }));
 app.post('/voice', (request, response) => {
   // Get information about the incoming call, like the city associated
   // with the phone number (if Twilio can discover it)
-  let city = request.body.FromCity;
+  const city = request.body.FromCity;
 
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.say(`Never gonna give you up ${city}.`, {
     voice: 'alice',
   });

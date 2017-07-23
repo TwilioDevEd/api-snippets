@@ -1,5 +1,5 @@
 // retrieve the list of members for the active channel
-let members = activeChannel.getMembers();
+const members = activeChannel.getMembers();
 // for each member, set up a listener for when the member is updated
 members.then(function(currentMembers) {
   currentMembers.forEach(function(member) {

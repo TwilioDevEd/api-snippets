@@ -1,13 +1,13 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-let twilio = require('twilio');
+const twilio = require('twilio');
 
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let taskQueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const taskQueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-let capability = new twilio.TaskRouterTaskQueueCapability(
+const capability = new twilio.TaskRouterTaskQueueCapability(
   accountSid,
   authToken,
   workspaceSid,

@@ -1,8 +1,8 @@
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-let client = new IpMessagingClient(accountSid, authToken);
+const client = new IpMessagingClient(accountSid, authToken);
 
 client
   .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

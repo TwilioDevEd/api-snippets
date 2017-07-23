@@ -1,8 +1,8 @@
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-let client = new Twilio(accountSid, authToken);
+const client = new Twilio(accountSid, authToken);
 
 client.chat.credentials
   .create({

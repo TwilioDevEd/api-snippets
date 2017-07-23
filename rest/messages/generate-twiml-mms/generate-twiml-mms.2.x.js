@@ -2,11 +2,11 @@ const http = require('http');
 const express = require('express');
 const twilio = require('twilio');
 
-let app = express();
+const app = express();
 
 app.post('/sms', function(req, res) {
-  let twilio = require('twilio');
-  let twiml = new twilio.TwimlResponse();
+  const twilio = require('twilio');
+  const twiml = new twilio.TwimlResponse();
   twiml.message(function() {
     this.body('The Robots are coming! Head for the hills!');
     this.media(

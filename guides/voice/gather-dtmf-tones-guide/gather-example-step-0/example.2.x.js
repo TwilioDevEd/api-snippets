@@ -5,7 +5,7 @@ const express = require('express');
 const twilio = require('twilio');
 const urlencoded = require('body-parser').urlencoded;
 
-let app = express();
+const app = express();
 
 // Parse incoming POST params with Express middleware
 app.use(urlencoded({ extended: false }));
@@ -14,7 +14,7 @@ app.use(urlencoded({ extended: false }));
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
 
   // Use the <Gather> verb to collect user input
   twiml.gather({ numDigits: 1 }, gatherNode => {

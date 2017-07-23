@@ -1,9 +1,9 @@
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-let client = new IpMessagingClient(accountSid, authToken);
-let service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+const client = new IpMessagingClient(accountSid, authToken);
+const service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.roles
   .list()
