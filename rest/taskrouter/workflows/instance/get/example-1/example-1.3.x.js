@@ -10,4 +10,4 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .workflows(workflowSid)
   .fetch()
-  .then((workflow) => console.log(workflow.friendlyName));
+  .then(workflow => console.log(workflow.friendlyName));

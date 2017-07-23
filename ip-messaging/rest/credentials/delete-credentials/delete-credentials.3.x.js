@@ -4,10 +4,12 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.chat
+  .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .remove()
   .then(function(response) {
     console.log(response);
-  }).catch(function(error) {
-      console.log(error);
+  })
+  .catch(function(error) {
+    console.log(error);
   });

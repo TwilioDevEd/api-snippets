@@ -5,10 +5,13 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.users.create({
-    identity: 'IDENTITY'
-}).then(function(response) {
+service.users
+  .create({
+    identity: 'IDENTITY',
+  })
+  .then(function(response) {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error);
-});
+  });

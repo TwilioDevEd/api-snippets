@@ -16,7 +16,9 @@ service.notifications
             '{ "alert":'
               '{"title":"Bob alert",'
                '"body" : "Bob, you just received a badge"},'
-            '"badge" : 1 }}'`
-  }).then((notification) => {
+            '"badge" : 1 }}'`,
+  })
+  .then(notification => {
     console.log(notification);
-  }).catch(error => console.log(error));
+  })
+  .catch(error => console.log(error));

@@ -16,7 +16,9 @@ service.notifications
     data: '{"custom_key1":"custom value 1","custom_key2":"custom value 2"}',
     body: 'This is the body for all Bindings',
     fcm: '{"notification":{"title":"New alert","body":"Hello Bob!"}}',
-    apn: '{"aps":{"alert":{"title":"New alert.","body":"Hello Bob!"}}}'
-  }).then((notification) => {
+    apn: '{"aps":{"alert":{"title":"New alert.","body":"Hello Bob!"}}}',
+  })
+  .then(notification => {
     console.log(notification);
-  }).catch(error => console.log(error));
+  })
+  .catch(error => console.log(error));

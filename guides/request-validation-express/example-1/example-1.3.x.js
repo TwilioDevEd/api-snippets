@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/voice', twilio.webhook(), (req, res) => {
   // Twilio Voice URL - receives incoming calls from Twilio

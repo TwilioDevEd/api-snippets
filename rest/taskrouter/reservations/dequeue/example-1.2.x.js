@@ -2,19 +2,19 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 var twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var reservationSid = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
+var workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var reservationSid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 // dequeue a reservation
 client.workspace.tasks(taskSid).reservations(reservationSid).update({
-    instruction: 'dequeue',
-    dequeueFrom: '+18001231234'
+  instruction: 'dequeue',
+  dequeueFrom: '+18001231234',
 }, function(err, reservation) {
-    console.log(reservation.reservation_status);
-    console.log(reservation.worker_name);
+  console.log(reservation.reservation_status);
+  console.log(reservation.worker_name);
 });

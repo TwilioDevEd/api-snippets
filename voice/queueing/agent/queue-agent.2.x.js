@@ -3,6 +3,6 @@ var twilio = require('twilio');
 var twiml = new twilio.TwimlResponse();
 
 twiml.dial({}, function() {
-    this.queue('Queue Demo');
-})
+  this.queue('Queue Demo');
+});
 console.log(twiml.toString());

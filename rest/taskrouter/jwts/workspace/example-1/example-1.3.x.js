@@ -21,23 +21,32 @@ const capability = new TaskRouterCapability({
   accountSid: accountSid,
   authToken: authToken,
   workspaceSid: workspaceSid,
-  channelId: workerSid});
+  channelId: workerSid,
+});
 
 // Helper function to create Policy
 function buildWorkspacePolicy(options) {
   options = options || {};
   var resources = options.resources || [];
-  var urlComponents = [TASKROUTER_BASE_URL, version, 'Workspaces', workspaceSid]
+  var urlComponents = [
+    TASKROUTER_BASE_URL,
+    version,
+    'Workspaces',
+    workspaceSid,
+  ];
 
   return new Policy({
     url: urlComponents.concat(resources).join('/'),
     method: options.method || 'GET',
-    allow: true
+    allow: true,
   });
 }
 
 // Event Bridge Policies
-var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
+var eventBridgePolicies = util.defaultEventBridgePolicies(
+  accountSid,
+  workerSid
+);
 
 var workspacePolicies = [
   // Workspace Policy
@@ -47,10 +56,10 @@ var workspacePolicies = [
   // Workspace resources update Policy
   buildWorkspacePolicy({ resources: ['**'], method: 'POST' }),
   // Workspace resources delete Policy
-  buildWorkspacePolicy({ resources: ['**'], method: 'DELETE' })
+  buildWorkspacePolicy({ resources: ['**'], method: 'DELETE' }),
 ];
 
-eventBridgePolicies.concat(workspacePolicies).forEach(function (policy) {
+eventBridgePolicies.concat(workspacePolicies).forEach(function(policy) {
   capability.addPolicy(policy);
 });
 

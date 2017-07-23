@@ -5,8 +5,12 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').members.list().then(function(response) {
+service
+  .channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .members.list()
+  .then(function(response) {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
-});
+  });

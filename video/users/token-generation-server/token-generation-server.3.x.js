@@ -42,6 +42,6 @@ app.get('/token', (request, response) => {
 const server = http.createServer(app);
 const port = process.env.PORT;
 
-server.listen(port = 3000, function() {
+server.listen((port = 3000), function() {
   console.log('Express server running on *:' + port);
 });

@@ -6,11 +6,11 @@ var MonitorClient = require('twilio').MonitorClient;
 var client = new MonitorClient(accountSid, authToken);
 
 var params = {
-    actorSid: 'USd0afd67cddff4ec7cb0022771a203cb1',
-    resourceSid: 'PN4aa51b930717ea83c91971b86d99018f'
+  actorSid: 'USd0afd67cddff4ec7cb0022771a203cb1',
+  resourceSid: 'PN4aa51b930717ea83c91971b86d99018f',
 };
 client.events.list(params, function(error, events) {
-    for (var e in events) {
-        process.stdout.write(e);
-    }
+  for (var e in events) {
+    process.stdout.write(e);
+  }
 });

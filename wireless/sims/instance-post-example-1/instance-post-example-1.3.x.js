@@ -8,8 +8,9 @@ client.wireless
   .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   .update({
     callbackMethod: 'POST',
-    callbackUrl: 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
-    status: 'active'
+    callbackUrl:
+      'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
+    status: 'active',
   })
   .then(function(response) {
     console.log(response);

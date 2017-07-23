@@ -7,7 +7,7 @@ var authToken = 'your_auth_token';
 var client = new LookupsClient(accountSid, authToken);
 
 client.phoneNumbers('(510) 867-5309').get({
-  countryCode: 'US'
+  countryCode: 'US',
 }, function(error, number) {
   console.log(number.phoneNumber);
 });

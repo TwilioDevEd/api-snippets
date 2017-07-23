@@ -12,4 +12,4 @@ client.messages
     body: 'McAvoy or Stewart? These timelines can get so confusing.',
     statusCallback: 'http://requestb.in/1234abcd',
   })
-  .then((message) => console.log(message.sid));
+  .then(message => console.log(message.sid));

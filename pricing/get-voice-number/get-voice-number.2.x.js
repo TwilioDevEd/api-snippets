@@ -6,5 +6,5 @@ var PricingClient = require('twilio').PricingClient;
 var client = new PricingClient(accountSid, authToken);
 
 client.voice.numbers('+15108675309').get(function(err, number) {
-    console.log(number.outboundCallPrice.currentPrice);
+  console.log(number.outboundCallPrice.currentPrice);
 });

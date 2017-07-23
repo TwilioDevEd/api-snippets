@@ -4,10 +4,14 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    friendlyName: 'My other credential'
-}).then(function(response) {
+client.chat
+  .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    friendlyName: 'My other credential',
+  })
+  .then(function(response) {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
-});
+  });

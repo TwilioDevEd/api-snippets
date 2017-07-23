@@ -12,4 +12,4 @@ client.taskrouter.v1
   .update({
     taskReservationTimeout: '20',
   })
-  .then((workflow) => console.log(workflow.taskReservationTimeout));
+  .then(workflow => console.log(workflow.taskReservationTimeout));

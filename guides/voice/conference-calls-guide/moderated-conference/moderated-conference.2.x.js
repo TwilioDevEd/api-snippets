@@ -13,7 +13,7 @@ let app = express();
 // Parse incoming POST params with Express middleware
 app.use(urlencoded({ extended: false }));
 
-// Create a route that will handle Twilio webhook requests, sent as an 
+// Create a route that will handle Twilio webhook requests, sent as an
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
@@ -23,19 +23,19 @@ app.post('/voice', (request, response) => {
   twiml.dial(function(dialNode) {
     // If the caller is our MODERATOR, then start the conference when they
     // join and end the conference when they leave
-    if(request.body.From == MODERATOR) {
+    if (request.body.From == MODERATOR) {
       dialNode.conference('My conference', {
         startConferenceOnEnter: true,
-        endConferenceOnExit: true
+        endConferenceOnExit: true,
       });
     } else {
       // Otherwise have the caller join as a regular participant
       dialNode.conference('My conference', {
-        startConferenceOnEnter: false
+        startConferenceOnEnter: false,
       });
     }
   });
-  
+
   // Render the response as XML in reply to the webhook request
   response.type('text/xml');
   response.send(twiml.toString());

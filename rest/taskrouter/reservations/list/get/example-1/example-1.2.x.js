@@ -2,16 +2,16 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 var twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var taskSid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
+var workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.tasks(taskSid).reservations.list(function(err, data) {
-    data.reservations.forEach(function(reservation) {
-        console.log(reservation.reservation_status);
-        console.log(reservation.worker_name);
-    })
+  data.reservations.forEach(function(reservation) {
+    console.log(reservation.reservation_status);
+    console.log(reservation.worker_name);
+  });
 });

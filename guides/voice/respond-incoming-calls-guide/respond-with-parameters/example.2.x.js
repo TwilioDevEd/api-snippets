@@ -10,7 +10,7 @@ let app = express();
 // Parse incoming POST params with Express middleware
 app.use(urlencoded({ extended: false }));
 
-// Create a route that will handle Twilio webhook requests, sent as an 
+// Create a route that will handle Twilio webhook requests, sent as an
 // HTTP POST to /voice in our application
 app.post('/voice', (request, response) => {
   // Get information about the incoming call, like the city associated
@@ -19,8 +19,8 @@ app.post('/voice', (request, response) => {
 
   // Use the Twilio Node.js SDK to build an XML response
   let twiml = new twilio.TwimlResponse();
-  twiml.say(`Never gonna give you up ${city}.`, { 
-    voice: 'alice' 
+  twiml.say(`Never gonna give you up ${city}.`, {
+    voice: 'alice',
   });
   twiml.play('https://demo.twilio.com/docs/classic.mp3');
 

@@ -30,7 +30,6 @@ participant.on('trackDisabled', track => {
   }
 });
 
-
 // You can attach Tracks to the DOM in the following manner
 participant.tracks.forEach(track => {
   var mediaElement = track.attach();

@@ -4,10 +4,14 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
 
-client.credentials('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    type: 'TYPE'
-}).then(function(response) {
+client
+  .credentials('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    type: 'TYPE',
+  })
+  .then(function(response) {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error);
-});
+  });

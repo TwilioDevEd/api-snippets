@@ -5,10 +5,15 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').messages('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').post({
-    body: 'New body content.'
-}).then(function(response) {
+service
+  .channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .messages('IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .post({
+    body: 'New body content.',
+  })
+  .then(function(response) {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error);
-});
+  });

@@ -7,7 +7,8 @@ const client = require('twilio')(accountSid, authToken);
 client.wireless.commands
   .create({
     command: 'wakeup',
-    callbackUrl: 'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback'
+    callbackUrl:
+      'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback',
   })
   .then(function(response) {
     console.log(response);

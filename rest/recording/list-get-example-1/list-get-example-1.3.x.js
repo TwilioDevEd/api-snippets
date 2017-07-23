@@ -4,5 +4,4 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.recordings
-  .each((recording) => console.log(recording.duration));
+client.recordings.each(recording => console.log(recording.duration));

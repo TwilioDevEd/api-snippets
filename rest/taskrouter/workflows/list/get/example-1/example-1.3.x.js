@@ -5,10 +5,6 @@ const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
-client.taskrouter.v1
-  .workspaces(workspaceSid)
-  .workflows
-  .list()
-  .then((data) => {
-    data.forEach((workflows) => console.log(workflows.friendlyName));
-  });
+client.taskrouter.v1.workspaces(workspaceSid).workflows.list().then(data => {
+  data.forEach(workflows => console.log(workflows.friendlyName));
+});

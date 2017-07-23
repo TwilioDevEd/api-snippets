@@ -5,10 +5,13 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.syncMaps('Players')
-  .syncMapPermissions('bob').remove()
-    .then(function(response) {
-      console.log(response);
-    }).catch(function(error) {
-      console.log(error);
-    });
+service
+  .syncMaps('Players')
+  .syncMapPermissions('bob')
+  .remove()
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });

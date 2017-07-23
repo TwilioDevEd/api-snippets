@@ -8,14 +8,17 @@ var Twilio = require('twilio');
 var client = new Twilio(accountSid, authToken);
 var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.bindings.create({
+service.bindings
+  .create({
     endpoint: 'endpoint_id',
     identity: '00000001',
     bindingType: 'apn',
     address: 'device_token',
-    tag: ['premium', 'new user']
-  }).then(function(binding) {
+    tag: ['premium', 'new user'],
+  })
+  .then(function(binding) {
     console.log(binding);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   });

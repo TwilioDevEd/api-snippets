@@ -4,11 +4,14 @@ var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'your_auth_token';
 var client = require('twilio')(accountSid, authToken);
 
-client.calls.create({
+client.calls.create(
+  {
     url: 'http://demo.twilio.com/docs/voice.xml',
     to: '+14155551212',
     from: '+15017250604',
-    record: 'true'
-}, function(err, call) {
+    record: 'true',
+  },
+  function(err, call) {
     process.stdout.write(call.sid);
-});
+  }
+);

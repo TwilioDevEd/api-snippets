@@ -1,7 +1,7 @@
 const {
   createLocalTracks,
   createLocalAudioTrack,
-  createLocalVideoTrack
+  createLocalVideoTrack,
 } = require('twilio-video');
 
 var localTracks;

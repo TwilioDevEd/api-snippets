@@ -6,7 +6,7 @@ var PricingClient = require('twilio').PricingClient;
 var client = new PricingClient(accountSid, authToken);
 
 client.phoneNumbers.countries('US').get(function(err, country) {
-	country.phoneNumberPrices.forEach(function(phonePrices){
-        console.log(phonePrices.numberType + ' ' + phonePrices.currentPrice + '\n');
-	}); 
+  country.phoneNumberPrices.forEach(function(phonePrices) {
+    console.log(phonePrices.numberType + ' ' + phonePrices.currentPrice + '\n');
+  });
 });
