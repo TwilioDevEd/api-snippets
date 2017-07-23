@@ -25,6 +25,9 @@
         "no-useless-escape": 0,
         "guard-for-in": 0,
         "new-cap": 0,
-        "prefer-const": "error"
+        "prefer-const": "error",
+        "prefer-arrow-callback": ["error", {
+            "allowNamedFunctions": true
+        }]
     }
 }
