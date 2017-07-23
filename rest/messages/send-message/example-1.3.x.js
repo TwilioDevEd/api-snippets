@@ -12,4 +12,4 @@ client.messages
     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
     mediaUrl: 'https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg',
   })
-  .then((message) => console.log(message.sid));
+  .then(message => console.log(message.sid));

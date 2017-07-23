@@ -18,23 +18,32 @@ const capability = new TaskRouterCapability({
   accountSid: accountSid,
   authToken: authToken,
   workspaceSid: workspaceSid,
-  channelId: workerSid});
+  channelId: workerSid,
+});
 
 // Helper function to create Policy
 function buildWorkspacePolicy(options) {
   options = options || {};
   var resources = options.resources || [];
-  var urlComponents = [TASKROUTER_BASE_URL, version, 'Workspaces', workspaceSid]
+  var urlComponents = [
+    TASKROUTER_BASE_URL,
+    version,
+    'Workspaces',
+    workspaceSid,
+  ];
 
   return new Policy({
     url: urlComponents.concat(resources).join('/'),
     method: options.method || 'GET',
-    allow: true
+    allow: true,
   });
 }
 
 // Event Bridge Policies
-var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
+var eventBridgePolicies = util.defaultEventBridgePolicies(
+  accountSid,
+  workerSid
+);
 
 var workspacePolicies = [
   // Workspace fetch Policy
@@ -42,10 +51,13 @@ var workspacePolicies = [
   // Workspace Activities Update Policy
   buildWorkspacePolicy({ resources: ['Activities'], method: 'POST' }),
   // Workspace Activities Worker Reserations Policy
-  buildWorkspacePolicy({ resources: ['Workers', workerSid, 'Reservations', '**'], method: 'POST' }),
+  buildWorkspacePolicy({
+    resources: ['Workers', workerSid, 'Reservations', '**'],
+    method: 'POST',
+  }),
 ];
 
-eventBridgePolicies.concat(workspacePolicies).forEach(function (policy) {
+eventBridgePolicies.concat(workspacePolicies).forEach(function(policy) {
   capability.addPolicy(policy);
 });
 

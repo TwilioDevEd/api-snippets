@@ -5,11 +5,10 @@ const authToken = 'your_auth_token';
 const Twilio = require('twilio');
 const client = new Twilio(accountSid, authToken);
 
-
 client.calls
   .create({
     url: 'http://demo.twilio.com/docs/voice.xml',
     to: 'client:tommy',
     from: '+15017250604',
   })
-  .then((call) => console.log(call.sid));
+  .then(call => console.log(call.sid));

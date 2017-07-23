@@ -9,5 +9,6 @@ const filterOpts = {
   usageCategory: 'calls',
 };
 
-client.usage.triggers
-  .each(filterOpts, (trigger) => console.log(trigger.currentValue));
+client.usage.triggers.each(filterOpts, trigger =>
+  console.log(trigger.currentValue)
+);

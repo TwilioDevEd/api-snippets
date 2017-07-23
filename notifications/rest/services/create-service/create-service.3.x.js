@@ -4,17 +4,24 @@
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'your_auth_token';
 var apnCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var fcmCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+var fcmCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var Twilio = require('twilio');
 
-var client = new Twilio(accountSid, apnCredentialSid, fcmCredentialSid, authToken);
+var client = new Twilio(
+  accountSid,
+  apnCredentialSid,
+  fcmCredentialSid,
+  authToken
+);
 
 client.notify.services
   .create({
-    friendlyName: 'My Awesome Service'
-  }).then(function(service) {
+    friendlyName: 'My Awesome Service',
+  })
+  .then(function(service) {
     console.log(service.friendlyName);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   })
-  .done()
+  .done();

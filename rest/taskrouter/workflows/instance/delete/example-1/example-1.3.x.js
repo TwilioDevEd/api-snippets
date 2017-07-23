@@ -6,7 +6,4 @@ const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const workflowSid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
-client.taskrouter.v1
-  .workspaces(workspaceSid)
-  .workflows(workflowSid)
-  .remove();
+client.taskrouter.v1.workspaces(workspaceSid).workflows(workflowSid).remove();

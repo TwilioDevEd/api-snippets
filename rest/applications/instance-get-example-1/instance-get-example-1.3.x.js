@@ -5,6 +5,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.applications('AP2a0747eba6abf96b7e3c3ff0b4530f6e')
+client
+  .applications('AP2a0747eba6abf96b7e3c3ff0b4530f6e')
   .fetch()
-  .then((app) => console.log(app.smsUrl));
+  .then(app => console.log(app.smsUrl));

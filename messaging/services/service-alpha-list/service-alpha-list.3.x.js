@@ -6,9 +6,11 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 const service = client.messaging.services('MG2172dd2db502e20dd981ef0d67850e1a');
 
-service.alphaSenders.list()
-       .then(function(response) {
-         console.log(response);
-       }).catch(function(error) {
-         console.log(error);
-       });
+service.alphaSenders
+  .list()
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });

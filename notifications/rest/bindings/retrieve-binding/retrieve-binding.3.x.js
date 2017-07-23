@@ -9,10 +9,13 @@ var client = new Twilio(accountSid, authToken);
 
 var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.bindings('BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch()
+service
+  .bindings('BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .fetch()
   .then(function(binding) {
     console.log(binding);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   })
   .done();

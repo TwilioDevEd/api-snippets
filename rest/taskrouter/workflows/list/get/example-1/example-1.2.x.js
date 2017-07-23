@@ -2,14 +2,14 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 var twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
+var workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
 client.workspace.workflows.list(function(err, data) {
-    data.workflows.forEach(function(workflows) {
-        console.log(workflows.friendly_name);
-    })
+  data.workflows.forEach(function(workflows) {
+    console.log(workflows.friendly_name);
+  });
 });

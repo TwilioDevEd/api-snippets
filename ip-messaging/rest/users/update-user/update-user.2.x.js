@@ -5,10 +5,14 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    roleSID: 'IDENTITY'
-}).then(function(response) {
+service
+  .users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    roleSID: 'IDENTITY',
+  })
+  .then(function(response) {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error);
-});
+  });

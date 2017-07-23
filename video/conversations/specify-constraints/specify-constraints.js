@@ -4,8 +4,7 @@ localMedia.addCamera().then(function() {
   return client.inviteToConversation('alice', { localMedia: localMedia });
 });
 
-
 // Or, more simply:
 client.inviteToConversation('alice', {
-  localStreamConstraints: { audio: false }
+  localStreamConstraints: { audio: false },
 });

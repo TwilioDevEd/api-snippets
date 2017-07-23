@@ -5,10 +5,13 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.users.create({
-    identity: 'Bob'
-}).then(function(response) {
+service.users
+  .create({
+    identity: 'Bob',
+  })
+  .then(function(response) {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
-});
+  });

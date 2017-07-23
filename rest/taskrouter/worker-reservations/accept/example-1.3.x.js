@@ -13,9 +13,9 @@ client.taskrouter.v1
   .workers(workerSid)
   .reservations(reservationSid)
   .update({
-      reservationStatus: 'accepted',
+    reservationStatus: 'accepted',
   })
-  .then((reservation) => {
-      console.log(reservation.reservationStatus);
-      console.log(reservation.workerName);
+  .then(reservation => {
+    console.log(reservation.reservationStatus);
+    console.log(reservation.workerName);
   });

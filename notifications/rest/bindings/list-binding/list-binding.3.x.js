@@ -9,14 +9,16 @@ var client = new Twilio(accountSid, authToken);
 
 var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.bindings.list({
+service.bindings
+  .list({
     // filter bindings with the following attributes
     startDate: new Date('2015-08-18'),
-    tag: 'new user'
+    tag: 'new user',
   })
   .then(function(bindings) {
-    bindings.forEach(binding => console.log(binding.identity))
-  }).catch(function(error) {
+    bindings.forEach(binding => console.log(binding.identity));
+  })
+  .catch(function(error) {
     console.log(error);
   })
-  .done()
+  .done();

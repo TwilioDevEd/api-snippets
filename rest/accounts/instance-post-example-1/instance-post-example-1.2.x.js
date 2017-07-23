@@ -5,7 +5,7 @@ var authToken = 'your_auth_token';
 var client = require('twilio')(accountSid, authToken);
 
 client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    status: 'suspended'
+  status: 'suspended',
 }, function(err, account) {
-    console.log(account.dateCreated);
+  console.log(account.dateCreated);
 });

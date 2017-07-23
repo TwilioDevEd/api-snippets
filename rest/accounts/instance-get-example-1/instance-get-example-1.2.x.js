@@ -4,6 +4,8 @@ var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var authToken = 'your_auth_token';
 var client = require('twilio')(accountSid, authToken);
 
-client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').get(function(err, account) {
+client
+  .accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .get(function(err, account) {
     console.log(account.dateCreated);
-});
+  });

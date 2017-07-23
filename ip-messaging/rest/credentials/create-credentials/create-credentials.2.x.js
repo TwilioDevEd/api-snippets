@@ -4,12 +4,15 @@ var IpMessagingClient = require('twilio').IpMessagingClient;
 
 var client = new IpMessagingClient(accountSid, authToken);
 
-client.credentials.create({
+client.credentials
+  .create({
     type: 'TYPE',
     apiKey: 'APIKEY',
-    friendlyName: 'FRIENDLY_NAME'
-}).then(function(response) {
+    friendlyName: 'FRIENDLY_NAME',
+  })
+  .then(function(response) {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error);
-});
+  });

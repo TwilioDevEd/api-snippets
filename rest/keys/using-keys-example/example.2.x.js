@@ -10,11 +10,14 @@ var client = require('twilio')(apiKey, apiSecret);
 var account = client.accounts(accountSid);
 
 // Create a message for your account (send an outbound SMS)
-account.messages.create({
-  to: '+15558675309', // the destination phone number
-  from: '+15017250604', // a Twilio number in your account
-  body: 'Never gonna give you up.' // body of a text message
-}, (err, messageData) => {
-  // print SID of the message you just sent
-  console.log(messageData.sid);
-});
+account.messages.create(
+  {
+    to: '+15558675309', // the destination phone number
+    from: '+15017250604', // a Twilio number in your account
+    body: 'Never gonna give you up.', // body of a text message
+  },
+  (err, messageData) => {
+    // print SID of the message you just sent
+    console.log(messageData.sid);
+  }
+);

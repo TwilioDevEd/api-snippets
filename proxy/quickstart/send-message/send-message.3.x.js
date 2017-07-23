@@ -13,9 +13,11 @@ client.preview.proxy
   .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .participants('KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .messageInteractions.create({
-    body: 'Reply to this message to chat!'
-  }).then(function(response) {
+    body: 'Reply to this message to chat!',
+  })
+  .then(function(response) {
     console.log(response);
-  }).catch(function(err) {
+  })
+  .catch(function(err) {
     console.log(err);
   });

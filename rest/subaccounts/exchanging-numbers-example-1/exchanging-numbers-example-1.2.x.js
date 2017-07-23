@@ -16,8 +16,11 @@ var phoneNumber = client
   .accounts(currentNumberOwnerAccountSid)
   .incomingPhoneNumbers(phoneNumberSid);
 
-phoneNumber.update({
-  accountSid: newNumberOwnerAccountSid // Specify a new account as owner
-}, function(err, number) {
-  console.log(number);
-});
+phoneNumber.update(
+  {
+    accountSid: newNumberOwnerAccountSid, // Specify a new account as owner
+  },
+  function(err, number) {
+    console.log(number);
+  }
+);

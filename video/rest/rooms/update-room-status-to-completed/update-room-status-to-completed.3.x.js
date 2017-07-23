@@ -6,11 +6,13 @@ var apiKeySecret = 'your_api_key_secret';
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var Twilio = require('twilio');
 
-var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
+var client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
-client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.video
+  .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
-    status: 'completed'
-  }).then((room) => {
+    status: 'completed',
+  })
+  .then(room => {
     console.log(room.status);
   });

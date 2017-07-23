@@ -11,11 +11,13 @@ var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.notifications
   .create({
-    identity:'00000001',
-    body:'Hello Bob'
-  }).then(function(notification) {
+    identity: '00000001',
+    body: 'Hello Bob',
+  })
+  .then(function(notification) {
     console.log(notification);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   })
   .done();

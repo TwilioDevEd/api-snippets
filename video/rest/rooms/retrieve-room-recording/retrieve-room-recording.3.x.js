@@ -6,11 +6,12 @@ var apiKeySecret = 'your_api_key_secret';
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var Twilio = require('twilio');
 
-var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
+var client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
-client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.video
+  .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
-  .then((recording) => {
+  .then(recording => {
     console.log(recording.type);
   });

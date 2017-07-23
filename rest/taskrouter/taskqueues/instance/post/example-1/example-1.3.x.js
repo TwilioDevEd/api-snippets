@@ -12,4 +12,4 @@ client.taskrouter.v1
   .update({
     target_workers: 'languages HAS "english"',
   })
-  .then((taskQueue) => console.log(taskQueue.targetWorkers));
+  .then(taskQueue => console.log(taskQueue.targetWorkers));

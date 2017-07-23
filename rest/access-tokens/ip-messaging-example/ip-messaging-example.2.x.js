@@ -16,8 +16,8 @@ var endpointId = appName + ':' + identity + ':' + deviceId;
 // Create a "grant" which enables a client to use IPM as a given user,
 // on a given device
 var ipmGrant = new IpMessagingGrant({
-    serviceSid: serviceSid,
-    endpointId: endpointId
+  serviceSid: serviceSid,
+  endpointId: endpointId,
 });
 
 // Create an access token which we will sign and return to the client,

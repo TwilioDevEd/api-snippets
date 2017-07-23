@@ -4,10 +4,14 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    friendlyName: 'My new Chat service'
-}).then(function(response) {
+client.chat
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    friendlyName: 'My new Chat service',
+  })
+  .then(function(response) {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
-});
+  });

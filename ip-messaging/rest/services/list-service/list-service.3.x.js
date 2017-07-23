@@ -4,8 +4,11 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.chat.services.list().then(function(response) {
+client.chat.services
+  .list()
+  .then(function(response) {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
-});
+  });

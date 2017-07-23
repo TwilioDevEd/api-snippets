@@ -4,9 +4,12 @@ var Twilio = require('twilio').Twilio;
 
 var client = new Twilio(accountSid, authToken);
 
-client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .remove().then(function(response) {
+client.sync
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .remove()
+  .then(function(response) {
     console.log(response);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   });

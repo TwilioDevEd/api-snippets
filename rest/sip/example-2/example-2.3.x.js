@@ -12,4 +12,4 @@ client.calls
     sipAuthPassword: 'secret',
     sipAuthUsername: 'jack',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then(call => process.stdout.write(call.sid));

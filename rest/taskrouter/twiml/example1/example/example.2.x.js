@@ -5,12 +5,12 @@ var express = require('express');
 var app = express();
 
 app.post('/enqueue_call', function(request, response) {
-    var resp = new twilio.TwimlResponse();
-    resp.enqueue({workflowSid:"WW0123456789abcdef0123456789abcdef"});
+  var resp = new twilio.TwimlResponse();
+  resp.enqueue({ workflowSid: 'WW0123456789abcdef0123456789abcdef' });
 
-    response.setHeader('Content-Type', 'application/xml');
-    response.write(resp.toString());
-    response.end();
+  response.setHeader('Content-Type', 'application/xml');
+  response.write(resp.toString());
+  response.end();
 });
 
 app.listen(8080);

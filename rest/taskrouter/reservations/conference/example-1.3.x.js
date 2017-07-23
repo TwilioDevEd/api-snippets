@@ -16,7 +16,7 @@ client.taskrouter.v1
     instruction: 'conference',
     dequeueFrom: '+18001231234',
   })
-  .then((reservation) => {
+  .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);
   });

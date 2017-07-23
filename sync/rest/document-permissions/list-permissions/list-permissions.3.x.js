@@ -5,10 +5,12 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.documents('MyFirstDocument')
+service
+  .documents('MyFirstDocument')
   .documentPermissions.list()
-    .then(function(response) {
-      console.log(response);
-    }).catch(function(error) {
-      console.log(error);
-    });
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });

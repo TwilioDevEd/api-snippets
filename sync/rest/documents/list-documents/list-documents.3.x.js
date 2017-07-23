@@ -5,9 +5,11 @@ var Twilio = require('twilio').Twilio;
 var client = new Twilio(accountSid, authToken);
 var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.documents.list()
+service.documents
+  .list()
   .then(function(response) {
     console.log(response);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   });

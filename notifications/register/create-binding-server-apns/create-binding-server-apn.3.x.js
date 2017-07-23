@@ -10,7 +10,7 @@ const bindingOpts = {
   identity: '00000001',
   bindingType: 'apn',
   address: 'apn_device_token',
-  tag: ['preferred device', 'new user']
+  tag: ['preferred device', 'new user'],
 };
 
 client.notify

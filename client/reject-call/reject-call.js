@@ -1,7 +1,7 @@
-Twilio.Device.incoming(function (conn) {
+Twilio.Device.incoming(function(conn) {
   console.log('Incoming connection from ' + conn.parameters.From);
   var archEnemyPhoneNumber = '+15417280966';
-  
+
   if (conn.parameters.From === archEnemyPhoneNumber) {
     conn.reject();
   } else {

@@ -13,8 +13,8 @@ const credentialOpts = {
   type: 'apn',
 };
 
-client.notify
-  .credentials.create(credentialOpts)
+client.notify.credentials
+  .create(credentialOpts)
   .then(credential => console.log(credential.friendlyName))
   .catch(error => console.log(error))
   .done();

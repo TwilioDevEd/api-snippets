@@ -7,10 +7,12 @@ var Twilio = require('twilio');
 
 var client = new Twilio(accountSid, authToken);
 
-client.notify.services.list()
+client.notify.services
+  .list()
   .then(function(services) {
-    services.forEach(service => console.log(service.identity))
-  }).catch(function(error) {
+    services.forEach(service => console.log(service.identity));
+  })
+  .catch(function(error) {
     console.log(error);
   })
-  .done()
+  .done();

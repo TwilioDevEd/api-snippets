@@ -6,8 +6,8 @@ var PricingClient = require('twilio').PricingClient;
 var client = new PricingClient(accountSid, authToken);
 
 client.voice.countries('EE').get(function(err, country) {
-    var cpList = country.inboundCallPrices;
-    for (var i = 0; i < cpList.length; i++) {
-        console.log(cpList[i].numberType + ' ' + cpList[i].currentPrice + '\n');
-    }
+  var cpList = country.inboundCallPrices;
+  for (var i = 0; i < cpList.length; i++) {
+    console.log(cpList[i].numberType + ' ' + cpList[i].currentPrice + '\n');
+  }
 });

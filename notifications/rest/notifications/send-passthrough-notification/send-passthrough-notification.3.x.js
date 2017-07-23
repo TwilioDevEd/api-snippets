@@ -11,17 +11,22 @@ var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.notifications
   .create({
-    'toBinding':[{
-      'binding_type':'sms',
-      'address':'+15555555555'
-    },{
-      'binding_type':'facebook-messenger',
-      'address':'123456789123'
-    }],
-    'body':'Hello Bob'
-  }).then(function(notification) {
+    toBinding: [
+      {
+        binding_type: 'sms',
+        address: '+15555555555',
+      },
+      {
+        binding_type: 'facebook-messenger',
+        address: '123456789123',
+      },
+    ],
+    body: 'Hello Bob',
+  })
+  .then(function(notification) {
     console.log(notification);
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     console.log(error);
   })
   .done();

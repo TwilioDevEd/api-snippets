@@ -6,9 +6,11 @@ var apiKeySecret = 'your_api_key_secret';
 var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var Twilio = require('twilio');
 
-var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
+var client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
-client.video.recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .remove().then((response) => {
+client.video
+  .recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .remove()
+  .then(response => {
     console.log(response);
   });

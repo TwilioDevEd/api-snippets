@@ -5,5 +5,4 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.monitor.v1.events.list()
-  .then((response) => console.log(response));
+client.monitor.v1.events.list().then(response => console.log(response));

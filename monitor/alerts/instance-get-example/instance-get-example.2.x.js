@@ -6,5 +6,5 @@ var MonitorClient = require('twilio').MonitorClient;
 var client = new MonitorClient(accountSid, authToken);
 
 client.alerts('NO5a7a84730f529f0a76b3e30c01315d1a').get(function(err, alert) {
-    console.log(alert.alertText);
+  console.log(alert.alertText);
 });

@@ -2,49 +2,49 @@
 // These vars are your accountSid and authToken from twilio.com/user/account
 var twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var authToken = 'your_auth_token';
+var workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-var salesQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var marketingQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var supportQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var everyoneQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+var salesQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var marketingQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var supportQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var everyoneQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 var configuration = {
-    "task_routing":{
-        "filters":[
-            {
-                "targets":[
-                    {
-                        "queue": salesQueue
-                    }
-                ],
-                "expression":"type == \"sales\""
-            },
-            {
-                "targets":[
-                    {
-                        "queue": marketingQueue
-                    }
-                ],
-                "expression":"type == \"marketing\""
-            },
-            {
-                "targets":[
-                    {
-                        "queue": supportQueue
-                    }
-                ],
-                "expression":"type == \"support\""
-            }
+  task_routing: {
+    filters: [
+      {
+        targets: [
+          {
+            queue: salesQueue,
+          },
         ],
-        "default_filter":{
-            "queue": everyoneQueue
-        }
-    }
+        expression: 'type == "sales"',
+      },
+      {
+        targets: [
+          {
+            queue: marketingQueue,
+          },
+        ],
+        expression: 'type == "marketing"',
+      },
+      {
+        targets: [
+          {
+            queue: supportQueue,
+          },
+        ],
+        expression: 'type == "support"',
+      },
+    ],
+    default_filter: {
+      queue: everyoneQueue,
+    },
+  },
 };
 
 // or utilizing objects
@@ -52,52 +52,52 @@ var wb = require('twilio/lib/resources/task_router/WorkflowBuilder');
 
 // sales
 var salesTarget = new wb.WorkflowRuleTarget({
-    queue: salesQueue
+  queue: salesQueue,
 });
 var salesRule = new wb.WorkflowRule({
-    expression : "type == 'sales'",
-    targets : [salesTarget]
+  expression: "type == 'sales'",
+  targets: [salesTarget],
 });
 
 // marketing
 var marketingTarget = new wb.WorkflowRuleTarget({
-    queue: marketingQueue
+  queue: marketingQueue,
 });
 var marketingRule = new wb.WorkflowRule({
-    expression : "type == 'marketing'",
-    targets : [marketingTarget]
+  expression: "type == 'marketing'",
+  targets: [marketingTarget],
 });
 
 // support
 var supportTarget = new wb.WorkflowRuleTarget({
-    queue: supportQueue
+  queue: supportQueue,
 });
 var supportRule = new wb.WorkflowRule({
-    expression : "type == 'support'",
-    targets : [supportTarget]
+  expression: "type == 'support'",
+  targets: [supportTarget],
 });
 
 // default
 var defaultTarget = new wb.WorkflowRuleTarget({
-    queue: everyoneQueue
+  queue: everyoneQueue,
 });
 
 // put all together
 var taskRouting = new wb.TaskRoutingConfiguration({
-    filters : [salesRule, marketingRule, supportRule],
-    default_filter : defaultTarget
+  filters: [salesRule, marketingRule, supportRule],
+  default_filter: defaultTarget,
 });
 var config = new wb.WorkflowConfiguration({
-    taskRouting: taskRouting
+  taskRouting: taskRouting,
 });
 
 // convert to json
 configuration = config.toJSON();
 
 client.workspace.workflows.create({
-    friendlyName: 'Sales, Marketing, Support Workflow',
-    assignmentCallbackUrl: 'http://example.com',
-    fallbackAssignmentCallbackUrl: 'http://example2.com',
-    taskReservationTimeout: '30',
-    configuration: configuration
+  friendlyName: 'Sales, Marketing, Support Workflow',
+  assignmentCallbackUrl: 'http://example.com',
+  fallbackAssignmentCallbackUrl: 'http://example2.com',
+  taskReservationTimeout: '30',
+  configuration: configuration,
 });

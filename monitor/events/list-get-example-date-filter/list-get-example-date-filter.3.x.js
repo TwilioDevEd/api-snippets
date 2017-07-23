@@ -8,6 +8,6 @@ const client = require('twilio')(accountSid, authToken);
 client.monitor.v1.events
   .list({
     startDate: '2015-03-01T00:00:00Z',
-    endDate: '2015-04-01T00:00:00Z'
+    endDate: '2015-04-01T00:00:00Z',
   })
-  .then((response) => console.log(response));
+  .then(response => console.log(response));
