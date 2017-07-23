@@ -32,12 +32,12 @@ participant.on('trackDisabled', track => {
 
 // You can attach Tracks to the DOM in the following manner
 participant.tracks.forEach(track => {
-  var mediaElement = track.attach();
+  let mediaElement = track.attach();
   document.getElementById('track-view').appendChild(mediaElement);
 });
 
 // You can detach Tracks from the DOM in the following manner
 participant.tracks.forEach(track => {
-  var trackElements = track.detach();
+  let trackElements = track.detach();
   trackElements.forEach(element => element.remove());
 });

@@ -4,7 +4,7 @@
 <audio> and <video> elements will be created and destroyed as
 needed and appended to the <div>:*/
 conversation.on('participantConnected', function(participant) {
-  console.log("Participant '" + participant.identity + "' connected");
+  console.log('Participant "' + participant.identity + '" connected');
   participant.media.attach('#remote-media-div');
 });
 

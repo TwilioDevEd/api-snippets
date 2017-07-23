@@ -1,6 +1,6 @@
 /* Create an AccessManager - this provides a single place to update your 
 Twilio Access Token when using multiple Twilio SDKs */
-var accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
+let accessManager = new Twilio.AccessManager('$TWILIO_ACCESS_TOKEN');
 
 // Create a Conversations Client and listen for IncomingInvites
 conversationsClient = new Twilio.Conversations.Client(accessManager);

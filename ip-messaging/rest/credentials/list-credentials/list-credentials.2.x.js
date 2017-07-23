@@ -1,8 +1,8 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+let authToken = 'your_auth_token';
+let IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
+let client = new IpMessagingClient(accountSid, authToken);
 
 client.credentials
   .list()

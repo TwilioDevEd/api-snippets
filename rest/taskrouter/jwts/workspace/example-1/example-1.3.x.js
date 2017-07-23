@@ -27,8 +27,8 @@ const capability = new TaskRouterCapability({
 // Helper function to create Policy
 function buildWorkspacePolicy(options) {
   options = options || {};
-  var resources = options.resources || [];
-  var urlComponents = [
+  let resources = options.resources || [];
+  let urlComponents = [
     TASKROUTER_BASE_URL,
     version,
     'Workspaces',
@@ -43,12 +43,12 @@ function buildWorkspacePolicy(options) {
 }
 
 // Event Bridge Policies
-var eventBridgePolicies = util.defaultEventBridgePolicies(
+let eventBridgePolicies = util.defaultEventBridgePolicies(
   accountSid,
   workerSid
 );
 
-var workspacePolicies = [
+let workspacePolicies = [
   // Workspace Policy
   buildWorkspacePolicy(),
   // Workspace subresources fetch Policy
@@ -63,4 +63,4 @@ eventBridgePolicies.concat(workspacePolicies).forEach(function(policy) {
   capability.addPolicy(policy);
 });
 
-var token = capability.toJwt();
+let token = capability.toJwt();

@@ -1,1 +1,1 @@
-var chatClient = new Twilio.Chat.Client('the token string from server');
+let chatClient = new Twilio.Chat.Client('the token string from server');

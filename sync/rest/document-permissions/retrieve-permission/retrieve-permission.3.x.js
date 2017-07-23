@@ -1,9 +1,9 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+let authToken = 'your_auth_token';
+let Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
-var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+let client = new Twilio(accountSid, authToken);
+let service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service
   .documents('ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

@@ -1,12 +1,12 @@
 // Twilio Credentials
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
+let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+let authToken = 'your_auth_token';
 
-//require the Twilio module and create a REST client
-var client = require('twilio')(accountSid, authToken);
+// require the Twilio module and create a REST client
+let client = require('twilio')(accountSid, authToken);
 
 // Generate a random, unique code
-var uniqueCode = '1234567890';
+let uniqueCode = '1234567890';
 
 client.messages.create(
   {

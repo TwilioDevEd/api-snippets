@@ -4,7 +4,7 @@ const {
   createLocalVideoTrack,
 } = require('twilio-video');
 
-var localTracks;
+let localTracks;
 
 // Create default local audio and video tracks
 createLocalTracks().then(localTracks => {

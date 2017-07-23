@@ -1,12 +1,12 @@
-var http = require('http'),
-  express = require('express'),
-  twilio = require('twilio');
+const http = require('http');
+const express = require('express');
+const twilio = require('twilio');
 
-var app = express();
+const app = express();
 
 app.post('/voice', function(req, res) {
   // Create TwiML response
-  var twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.say('Thanks for calling!');
 
   res.set('Content-Type', 'text/xml');
