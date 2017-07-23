@@ -2,7 +2,7 @@
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const twiml = new VoiceResponse();
 
-const = twiml.dial();
+const dial = twiml.dial();
 dial.queue('Queue Demo');
 
 console.log(twiml.toString());

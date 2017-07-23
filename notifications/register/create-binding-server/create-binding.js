@@ -25,7 +25,7 @@ app.post('/register', function(request, response) {
     console.log(binding);
     // Send a JSON response indicating success
     response.send({
-      endpoint: binding.endpoint
+      endpoint: binding.endpoint,
       message: message
     });
   }).catch(function(error) {
