@@ -1,13 +1,13 @@
-let express = require('express');
-let router = express.Router();
-let twilio = require('twilio');
+const express = require('express');
+const router = express.Router();
+const twilio = require('twilio');
 
 // POST: '/voice'
 router.post('/voice', twilio.webhook({ validate: false }), function(
   request,
   response
 ) {
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.gather(
     {
       action: 'voice/handle-record',

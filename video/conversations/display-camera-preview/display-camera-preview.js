@@ -1,4 +1,4 @@
-let previewMedia = new Twilio.Conversations.LocalMedia();
+const previewMedia = new Twilio.Conversations.LocalMedia();
 previewMedia.addCamera().then(
   function(cameraTrack) {
     // attach to a <video> element

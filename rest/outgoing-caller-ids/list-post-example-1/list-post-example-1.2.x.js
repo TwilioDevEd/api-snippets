@@ -1,10 +1,10 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let Client = require('twilio').RestClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Client = require('twilio').RestClient;
 
-let client = new Client(accountSid, authToken);
+const client = new Client(accountSid, authToken);
 
 client.outgoingCallerIds.create(
   {

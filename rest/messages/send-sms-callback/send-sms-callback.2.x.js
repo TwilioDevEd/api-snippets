@@ -1,9 +1,9 @@
 // Twilio Credentials
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
 
 // require the Twilio module and create a REST client
-let client = require('twilio')(accountSid, authToken);
+const client = require('twilio')(accountSid, authToken);
 
 client.messages.create(
   {

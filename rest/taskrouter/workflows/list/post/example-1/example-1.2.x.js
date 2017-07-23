@@ -1,17 +1,17 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-let twilio = require('twilio');
+const twilio = require('twilio');
 
-let accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let authToken = 'your_auth_token';
-let workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-let client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
+const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-let salesQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let marketingQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let supportQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-let everyoneQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const salesQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const marketingQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const supportQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const everyoneQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 let configuration = {
   task_routing: {
@@ -48,46 +48,46 @@ let configuration = {
 };
 
 // or utilizing objects
-let wb = require('twilio/lib/resources/task_router/WorkflowBuilder');
+const wb = require('twilio/lib/resources/task_router/WorkflowBuilder');
 
 // sales
-let salesTarget = new wb.WorkflowRuleTarget({
+const salesTarget = new wb.WorkflowRuleTarget({
   queue: salesQueue,
 });
-let salesRule = new wb.WorkflowRule({
+const salesRule = new wb.WorkflowRule({
   expression: "type == 'sales'",
   targets: [salesTarget],
 });
 
 // marketing
-let marketingTarget = new wb.WorkflowRuleTarget({
+const marketingTarget = new wb.WorkflowRuleTarget({
   queue: marketingQueue,
 });
-let marketingRule = new wb.WorkflowRule({
+const marketingRule = new wb.WorkflowRule({
   expression: "type == 'marketing'",
   targets: [marketingTarget],
 });
 
 // support
-let supportTarget = new wb.WorkflowRuleTarget({
+const supportTarget = new wb.WorkflowRuleTarget({
   queue: supportQueue,
 });
-let supportRule = new wb.WorkflowRule({
+const supportRule = new wb.WorkflowRule({
   expression: "type == 'support'",
   targets: [supportTarget],
 });
 
 // default
-let defaultTarget = new wb.WorkflowRuleTarget({
+const defaultTarget = new wb.WorkflowRuleTarget({
   queue: everyoneQueue,
 });
 
 // put all together
-let taskRouting = new wb.TaskRoutingConfiguration({
+const taskRouting = new wb.TaskRoutingConfiguration({
   filters: [salesRule, marketingRule, supportRule],
   default_filter: defaultTarget,
 });
-let config = new wb.WorkflowConfiguration({
+const config = new wb.WorkflowConfiguration({
   taskRouting: taskRouting,
 });
 

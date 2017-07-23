@@ -1,14 +1,14 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-let twilio = require('twilio');
-let express = require('express');
-let app = express();
+const twilio = require('twilio');
+const express = require('express');
+const app = express();
 
 app.post('/enqueue_call', function(request, response) {
-  let resp = new twilio.TwimlResponse();
+  const resp = new twilio.TwimlResponse();
 
-  let arr = { account_number: '12345abcdef' };
-  let json = JSON.stringify(arr);
+  const arr = { account_number: '12345abcdef' };
+  const json = JSON.stringify(arr);
 
   resp.enqueue(
     {

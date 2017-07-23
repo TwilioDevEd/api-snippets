@@ -1,14 +1,14 @@
-let _ = require('lodash');
+const _ = require('lodash');
 
 // Create a binding using device properties
 app.post('/register', function(request, response) {
   // Authenticate with Twilio
-  let client = twilio(env.TWILIO_ACCOUNT_SID, env.TWILIO_AUTH_TOKEN);
+  const client = twilio(env.TWILIO_ACCOUNT_SID, env.TWILIO_AUTH_TOKEN);
 
   // Get a reference to the user notification service instance
-  let service = client.notify.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
+  const service = client.notify.services(env.TWILIO_NOTIFICATION_SERVICE_SID);
 
-  let params = {
+  const params = {
     identity: request.body.identity,
     bindingType: request.body.BindingType,
     address: request.body.Address,
@@ -21,7 +21,7 @@ app.post('/register', function(request, response) {
   return service.bindings
     .create(params)
     .then(function(binding) {
-      let message = 'Binding created!';
+      const message = 'Binding created!';
       console.log(binding);
       // Send a JSON response indicating success
       response.send({
@@ -30,7 +30,7 @@ app.post('/register', function(request, response) {
       });
     })
     .catch(function(error) {
-      let message = 'Failed to create binding: ' + error;
+      const message = 'Failed to create binding: ' + error;
       console.log(message);
 
       // Send a JSON response indicating an internal server error

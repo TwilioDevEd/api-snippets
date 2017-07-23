@@ -1,14 +1,14 @@
-let express = require('express');
-let router = express.Router();
-let twilio = require('twilio');
+const express = require('express');
+const router = express.Router();
+const twilio = require('twilio');
 
 // POST: '/voice/handle-gather'
 router.post('/handle-gather', twilio.webhook({ validate: false }), function(
   request,
   response
 ) {
-  let selectedOption = request.body.Digits;
-  let twiml = new twilio.TwimlResponse();
+  const selectedOption = request.body.Digits;
+  const twiml = new twilio.TwimlResponse();
 
   if (selectedOption == '1') {
     // Dial a new person
@@ -28,7 +28,7 @@ router.post('/handle-gather', twilio.webhook({ validate: false }), function(
 });
 
 function redirectWelcome() {
-  let twiml = new twilio.TwimlResponse();
+  const twiml = new twilio.TwimlResponse();
   twiml.say('Returning to the main menu', {
     voice: 'alice',
     language: 'en-GB',

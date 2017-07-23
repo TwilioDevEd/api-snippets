@@ -1,5 +1,5 @@
 // preview local camera on screen
-let previewMedia = new Twilio.Conversations.LocalMedia();
+const previewMedia = new Twilio.Conversations.LocalMedia();
 Twilio.Conversations.getUserMedia().then(
   function(mediaStream) {
     previewMedia.addStream(mediaStream);
