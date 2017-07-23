@@ -28,6 +28,7 @@
         "prefer-const": "error",
         "prefer-arrow-callback": ["error", {
             "allowNamedFunctions": true
-        }]
+        }],
+        "no-invalid-this": 0
     }
 }
