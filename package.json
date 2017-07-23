@@ -1,0 +1,25 @@
+{
+  "name": "api-snippets",
+  "version": "1.0.0",
+  "description": "The API Snippets for Twilio's Docs",
+  "scripts": {
+    "prettier:base": "prettier --single-quote --trailing-comma es5",
+    "prettier:write": "npm run prettier:base -- --write",
+    "format:js": "npm run prettier:write -- \"!(tools|node_modules)/**/*.js\"",
+    "test:js": "npm run prettier:base -- -l \"!(tools|node_modules)/**/*.js\"",
+    "test": "npm run test:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwilioDevEd/api-snippets.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TwilioDevEd/api-snippets/issues"
+  },
+  "homepage": "https://github.com/TwilioDevEd/api-snippets#readme",
+  "devDependencies": {
+    "prettier": "^1.5.3"
+  }
+}
