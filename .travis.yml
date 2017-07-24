@@ -29,6 +29,7 @@ env:
 matrix:
   include:
     - env: SNIPPET_LANGUAGE=python:curl
+      dist: precise
     - env: SNIPPET_LANGUAGE=java6
       jdk: oraclejdk7
     - env: SNIPPET_LANGUAGE=java7
