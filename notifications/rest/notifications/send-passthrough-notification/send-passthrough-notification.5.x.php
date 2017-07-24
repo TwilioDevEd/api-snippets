@@ -20,7 +20,7 @@ $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
         ["toBinding" => '{"binding_type":"sms", "address":"+15555555555"}',
-        "toBinding" =>'{"binding_type":"facebook-messenger", "address":"123456789123"}']
+        "toBinding" =>'{"binding_type":"facebook-messenger", "address":"123456789123"}'],
         "body" => "Hello Bob"
     ]);
 
