@@ -1,4 +1,5 @@
 {
   "type": "server",
-  "title": "Send a Notification with Bindings in request"
+  "title": "Send a Notification with Bindings in request",
+  "testable": false
 }
