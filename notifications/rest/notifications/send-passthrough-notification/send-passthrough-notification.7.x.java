@@ -1,6 +1,8 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
+import java.util.Arrays;
+import java.util.List;
 import com.twilio.Twilio;
 import com.twilio.rest.notify.v1.service.Notification;
 
