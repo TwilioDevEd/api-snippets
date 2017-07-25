@@ -7,12 +7,14 @@ const client = require('twilio')(accountSid, authToken);
 
 const opts = {
   friendlyName: 'My First Service',
-  statusCallback: 'http://requestb.in/1234abcd'
+  statusCallback: 'http://requestb.in/1234abcd',
 };
 
-client.messaging.services.create(opts)
-    .then(function(response) {
-      console.log(response);
-    }).catch(function(error) {
-      console.log(error);
-    });
+client.messaging.services
+  .create(opts)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });

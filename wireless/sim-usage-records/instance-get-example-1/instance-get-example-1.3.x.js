@@ -8,6 +8,6 @@ client.preview.wireless
   .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   .usage()
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

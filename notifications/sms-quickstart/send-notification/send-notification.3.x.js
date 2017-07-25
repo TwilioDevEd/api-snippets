@@ -12,7 +12,6 @@ const notificationOpts = {
 
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .notifications
-  .create(notificationOpts)
+  .notifications.create(notificationOpts)
   .then(notification => console.log(notification.sid))
   .catch(error => console.log(error));

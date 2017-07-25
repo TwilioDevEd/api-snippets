@@ -1,4 +1,4 @@
 // Join a previously created channel
-myChannel.join().then(function(channel) {
-    console.log('Joined channel ' + channel.friendlyName) 
+myChannel.join().then(channel => {
+  console.log('Joined channel ' + channel.friendlyName);
 });

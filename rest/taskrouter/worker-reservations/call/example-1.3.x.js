@@ -19,7 +19,7 @@ client.taskrouter.v1
     callStatusCallbackUrl: 'http://example.com/agent_answer_status_callback',
     callAccept: 'true',
   })
-  .then((reservation) => {
+  .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);
   });

@@ -7,5 +7,5 @@ const client = require('twilio')(accountSid, authToken);
 
 client.lookups.v1
   .phoneNumbers('+15108675309')
-  .fetch({type: ['carrier', 'caller-name']})
-  .then((number) => console.log(number.carrier.type, number.carrier.name));
+  .fetch({ type: ['carrier', 'caller-name'] })
+  .then(number => console.log(number.carrier.type, number.carrier.name));

@@ -1,4 +1,3 @@
-
 const express = require('express');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
@@ -6,7 +5,7 @@ const urlencoded = require('body-parser').urlencoded;
 const app = express();
 
 // Parse incoming POST params with Express middleware
-app.use(urlencoded({extended: false}));
+app.use(urlencoded({ extended: false }));
 
 // Create a route that will handle Twilio webhook requests, sent as an
 // HTTP POST to /voice in our application
@@ -15,7 +14,7 @@ app.post('/voice', (request, response) => {
   const twiml = new VoiceResponse();
 
   // Use the <Gather> verb to collect user input
-  const gather = twiml.gather({numDigits: 1});
+  const gather = twiml.gather({ numDigits: 1 });
   gather.say('For sales, press 1. For support, press 2.');
 
   // If the user doesn't enter input, loop

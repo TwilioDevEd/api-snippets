@@ -6,15 +6,19 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 const service = client.messaging.services('MG2172dd2db502e20dd981ef0d67850e1a');
 
-const phoneNumbers = ['PN2a0747eba6abf96b7e3c3ff0b4530f6e',
-                      'PN557ce644e5ab84fa21cc21112e22c485',
-                      'PN2a0747eba6abf96b7e3c3ff0b4530f6e'];
+const phoneNumbers = [
+  'PN2a0747eba6abf96b7e3c3ff0b4530f6e',
+  'PN557ce644e5ab84fa21cc21112e22c485',
+  'PN2a0747eba6abf96b7e3c3ff0b4530f6e',
+];
 
-phoneNumbers.forEach((phoneNumber) => {
-  service.phoneNumbers.create({phoneNumberSid: phoneNumber})
-      .then(function(response) {
-        console.log(response);
-      }).catch(function(error) {
-        console.log(error);
-      });
+phoneNumbers.forEach(phoneNumber => {
+  service.phoneNumbers
+    .create({ phoneNumberSid: phoneNumber })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    });
 });

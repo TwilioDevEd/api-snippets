@@ -1,12 +1,15 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
+const client = new Twilio(accountSid, authToken);
 
-client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .fetch().then(function(response) {
+client.sync
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .fetch()
+  .then(response => {
     console.log(response);
-  }).catch(function(error) {
+  })
+  .catch(error => {
     console.log(error);
   });

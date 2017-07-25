@@ -1,9 +1,9 @@
-let token = generateToken();
+const token = generateToken();
 
-let accessManager = new AccessManager(token);
-let chatClient = new ChatClient(token);
+const accessManager = new AccessManager(token);
+const chatClient = new ChatClient(token);
 
 accessManager.on('tokenUpdated', am => {
   // get new token from AccessManager and pass it to the library instance
-  chatClient.updateToken(am.token));
+  chatClient.updateToken(am.token);
 });

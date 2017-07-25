@@ -10,4 +10,4 @@ client.calls
     to: 'sip:kate@example.com?hatchkey=4815162342',
     from: 'Jack',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then(call => process.stdout.write(call.sid));

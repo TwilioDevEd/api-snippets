@@ -8,13 +8,12 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.preview
-  .proxy
+client.preview.proxy
   .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .phoneNumbers
-  .create({sid: 'PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'})
-  .then(function(response) {
+  .phoneNumbers.create({ sid: 'PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' })
+  .then(response => {
     console.log(response);
-  }).catch(function(err) {
+  })
+  .catch(err => {
     console.log(err);
   });

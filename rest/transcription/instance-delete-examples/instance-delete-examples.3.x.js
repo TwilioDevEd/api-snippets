@@ -6,10 +6,11 @@ const client = require('twilio')(accountSid, authToken);
 
 const transcriptionSid = 'TR8c61027b709ffb038236612dc5af8723';
 
-client.transcriptions(transcriptionSid)
+client
+  .transcriptions(transcriptionSid)
   .remove()
   .then(() => console.log(`Sid ${transcriptionSid} deleted successfully.`))
-  .catch((err) => {
+  .catch(err => {
     console.log(err.status);
     throw err;
   });

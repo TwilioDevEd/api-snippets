@@ -6,10 +6,11 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.messaging
-      .services('MG2172dd2db502e20dd981ef0d67850e1a')
-      .remove()
-      .then(function(response) {
-        console.log(response);
-      }).catch(function(error) {
-        console.log(error);
-      });
+  .services('MG2172dd2db502e20dd981ef0d67850e1a')
+  .remove()
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });

@@ -1,8 +1,10 @@
 // Create a Channel
-chatClient.createChannel({
+chatClient
+  .createChannel({
     uniqueName: 'general',
-    friendlyName: 'General Chat Channel'
-}).then(function(channel) {
+    friendlyName: 'General Chat Channel',
+  })
+  .then(channel => {
     console.log('Created general channel:');
     console.log(channel);
-});
+  });

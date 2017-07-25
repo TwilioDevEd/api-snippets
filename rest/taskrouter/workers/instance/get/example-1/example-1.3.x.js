@@ -10,4 +10,4 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .workers(workerSid)
   .fetch()
-  .then((worker) => console.log(worker.friendlyName));
+  .then(worker => console.log(worker.friendlyName));

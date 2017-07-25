@@ -9,4 +9,4 @@ client.incomingPhoneNumbers
     voiceUrl: 'http://demo.twilio.com/docs/voice.xml',
     phoneNumber: '+15005550006',
   })
-  .then((number) => process.stdout.write(number.sid));
+  .then(number => process.stdout.write(number.sid));

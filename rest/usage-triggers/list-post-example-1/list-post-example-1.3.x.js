@@ -10,4 +10,4 @@ client.usage.triggers
     usageCategory: 'sms',
     callbackUrl: 'http://www.example.com/',
   })
-  .then((trigger) => process.stdout.write(trigger.sid));
+  .then(trigger => process.stdout.write(trigger.sid));

@@ -4,21 +4,26 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const express = require('express');
 const app = express();
 
-app.post('/enqueue_call', function(request, response) {
-    const resp = new VoiceResponse();
+app.post('/enqueue_call', (request, response) => {
+  const resp = new VoiceResponse();
 
-    const json = {account_number: '12345abcdef'};
+  const json = { account_number: '12345abcdef' };
 
-    resp.enqueueTask({
-      workflowSid: 'WW0123456789abcdef0123456789abcdef'
-    }).task({
+  resp
+    .enqueueTask({
+      workflowSid: 'WW0123456789abcdef0123456789abcdef',
+    })
+    .task(
+      {
         priority: '5',
         timeout: '200',
-    }, JSON.stringify(json));
+      },
+      JSON.stringify(json)
+    );
 
-    response.setHeader('Content-Type', 'application/xml');
-    response.write(resp.toString());
-    response.end();
+  response.setHeader('Content-Type', 'application/xml');
+  response.write(resp.toString());
+  response.end();
 });
 
 app.listen(8080);

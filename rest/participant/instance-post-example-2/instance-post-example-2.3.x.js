@@ -5,10 +5,10 @@ const authToken = 'your_auth_token';
 const Twilio = require('twilio');
 const client = new Twilio(accountSid, authToken);
 
-
-client.api.accounts(accountSid)
+client.api
+  .accounts(accountSid)
   .conferences('CFXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .participants('CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .update({hold: 'true', holdUrl: 'www.myapp.com/hold'})
-  .then((participant) => console.log(participant.hold))
+  .update({ hold: 'true', holdUrl: 'www.myapp.com/hold' })
+  .then(participant => console.log(participant.hold))
   .done();

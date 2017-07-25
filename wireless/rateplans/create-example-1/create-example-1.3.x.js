@@ -9,8 +9,8 @@ client.preview.wireless.ratePlans
     uniqueName: 'SmartMeterCA',
     friendlyName: 'California SmartMeter Plan',
     dataLimit: 5,
-    messagingEnabled: 'true'
+    messagingEnabled: 'true',
   })
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });

@@ -1,20 +1,23 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
-var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+const client = new Twilio(accountSid, authToken);
+const service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.syncMaps('Players')
+service
+  .syncMaps('Players')
   .syncMapItems.create({
     key: 'steph_curry',
     data: {
       level: 30,
-      name: "Stephen Curry",
-      username: "spicy_curry"
-    }
-  }).then(function(response) {
+      name: 'Stephen Curry',
+      username: 'spicy_curry',
+    },
+  })
+  .then(response => {
     console.log(response);
-  }).catch(function(error) {
+  })
+  .catch(error => {
     console.log(error);
   });

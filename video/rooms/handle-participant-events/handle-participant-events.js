@@ -1,7 +1,7 @@
-room.on('participantConnected', function(participant) {
+room.on('participantConnected', participant => {
   console.log('Participant connected: ' + participant.identity);
 });
 
-room.on('participantDisconnected', function(participant) {
+room.on('participantDisconnected', participant => {
   console.log('Participant disconnected: ' + participant.identity);
 });

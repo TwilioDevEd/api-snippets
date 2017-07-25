@@ -1,13 +1,17 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
+const client = new IpMessagingClient(accountSid, authToken);
 
-client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    friendlyName: 'NAME'
-}).then(function(response) {
+client
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    friendlyName: 'NAME',
+  })
+  .then(response => {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(error => {
     console.log(error);
-});
+  });

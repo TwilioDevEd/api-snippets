@@ -40,8 +40,8 @@ app.get('/token', (request, response) => {
 
 // Create http server and run it
 const server = http.createServer(app);
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
-server.listen(port = 3000, function() {
+server.listen(port, () => {
   console.log('Express server running on *:' + port);
 });

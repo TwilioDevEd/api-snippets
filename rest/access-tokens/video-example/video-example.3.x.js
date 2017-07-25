@@ -10,7 +10,7 @@ const identity = 'user';
 
 // Create Video Grant
 const videoGrant = new VideoGrant({
-    room: 'cool room'
+  room: 'cool room',
 });
 
 // Create an access token which we will sign and return to the client,

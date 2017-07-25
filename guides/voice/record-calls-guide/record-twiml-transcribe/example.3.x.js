@@ -1,4 +1,3 @@
-
 const express = require('express');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
@@ -11,7 +10,7 @@ app.post('/record', (request, response) => {
   twiml.say('Hello. Please leave a message after the beep.');
 
   // Use <Record> to record and transcribe the caller's message
-  twiml.record({transcribe: true, maxLength: 30});
+  twiml.record({ transcribe: true, maxLength: 30 });
 
   // End the call with <Hangup>
   twiml.hangup();
