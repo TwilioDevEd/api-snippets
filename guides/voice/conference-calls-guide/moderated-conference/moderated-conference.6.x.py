@@ -21,11 +21,11 @@ def call():
         if request.values.get('From') == MODERATOR:
             dial.conference(
                 'My conference',
-                startConferenceOnEnter=True,
-                endConferenceOnExit=True)
+                start_conference_on_enter=True,
+                end_conference_on_exit=True)
         else:
             # Otherwise have the caller join as a regular participant
-            dial.conference('My conference', startConferenceOnEnter=False)
+            dial.conference('My conference', start_conference_on_enter=False)
 
     response.append(dial)
     return str(response)
