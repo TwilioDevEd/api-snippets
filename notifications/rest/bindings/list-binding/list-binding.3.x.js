@@ -11,8 +11,8 @@ var service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.bindings.list({
     // filter bindings with the following attributes
-    startDate: new Date("2015-08-18"),
-    tag: "new user"
+    startDate: new Date('2015-08-18'),
+    tag: 'new user'
   })
   .then(function(bindings) {
     bindings.forEach(binding => console.log(binding.identity))

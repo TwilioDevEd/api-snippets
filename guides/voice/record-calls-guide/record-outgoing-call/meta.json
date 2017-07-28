@@ -1,5 +1,6 @@
 {
   "title": "Record an outbound call",
   "description": "Record an outbound call with the Twilio REST API",
-  "type": "server"
+  "type": "server",
+  "testable": true
 }

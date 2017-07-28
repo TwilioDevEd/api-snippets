@@ -11,7 +11,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     PhoneNumber number = PhoneNumber
-        .fetcher(new com.twilio.type.PhoneNumber("+15108675309"))
+        .fetcher(new com.twilio.type.PhoneNumber("+16502530000"))
         .setType("caller-name")
         .fetch();
 

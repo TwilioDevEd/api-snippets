@@ -21,7 +21,7 @@ app.post('/voice', function (req, res) {
         }
       });
     } else {
-      twiml.say("Thanks for calling!");
+      twiml.say('Thanks for calling!');
     }
 
     res.set('Content-Type', 'text/xml');

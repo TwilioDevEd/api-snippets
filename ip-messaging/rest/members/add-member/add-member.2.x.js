@@ -6,7 +6,7 @@ var client = new IpMessagingClient(accountSid, authToken);
 var service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service.channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').members.create({
-    identity: "IDENTITY"
+    identity: 'IDENTITY'
 }).then(function(response) {
     console.log(response);
 }).fail(function(error) {
