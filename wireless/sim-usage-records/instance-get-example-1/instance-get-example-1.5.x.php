@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$usage = $client->preview->wireless
+$usage = $client->wireless
     ->sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     ->usage()
     ->fetch();

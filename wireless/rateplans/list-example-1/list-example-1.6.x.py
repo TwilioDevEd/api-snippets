@@ -7,6 +7,6 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-ratePlans = client.preview.wireless.rate_plans.list()
+ratePlans = client.wireless.rate_plans.list()
 
 print(ratePlans)

@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-ratePlanDeleted = client.preview.wireless.rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
+ratePlanDeleted = client.wireless.rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
                     .delete()
 
 print(ratePlanDeleted)

@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$command = $client->preview->wireless
+$command = $client->wireless
     ->commands('DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     ->fetch();
 
