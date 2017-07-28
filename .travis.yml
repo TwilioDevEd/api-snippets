@@ -55,6 +55,7 @@ addons:
     - sync.twilio.com
     - taskrouter.twilio.com
     - video.twilio.com
+    - wireless.twilio.com
 
 notifications:
   slack:

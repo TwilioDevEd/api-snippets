@@ -12,7 +12,7 @@ public class Example {
 
         Command command = Command
                 .creator("SGVsbG8sIE1hY2hpbmUh==")
-                .setCommandMode("binary")
+                .setCommandMode(Command.CommandMode.forValue("binary"))
                 .setCallbackUrl("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
                 .create();
 
