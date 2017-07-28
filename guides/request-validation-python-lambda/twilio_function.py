@@ -23,7 +23,7 @@ def handler(event, context):
             and event['Body'].lower() == "secret":
 
         form_parameters = {
-            k: urllib.unquote(v) for k, v in event.items()
+            k: urllib.unquote_plus(v) for k, v in event.items()
             if k != u'twilioSignature'
         }
 
