@@ -1,0 +1,15 @@
+HTTP/1.1 202 ACCEPTED
+Content-Type: application/json
+
+{
+  "sid": "DC04a2aaa500367976bbb8294ec8082bab",
+  "direction": "to_sim",
+  "sim_sid": "DE99421b66197ec022384d2cb9431a8667",
+  "command": "SGVsbG8sIE1hY2hpbmUh==",
+  "command_mode": "binary",
+  "status": "queued",
+  "date_created": "2016-05-16T15:42:04Z",
+  "date_updated": "2016-05-16T15:42:04Z",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "url": "https://wireless.twilio.com/v1/Commands/DC04a2aaa500367976bbb8294ec8082bab"
+}

@@ -14,10 +14,13 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var ratePlan = RatePlanResource.Create(uniqueName: "SmartMeterCA",
-            friendlyName: "California SmartMeter Plan",
-            dataLimit: 5,
-            messagingEnabled: true);
+        var ratePlan = CommandResource.Create(
+            new CreateCommandOptions {
+                UniqueName = "SmartMeterCA",
+                FriendlyName = "California SmartMeter Plan",
+                DataLimit = 5,
+                MessageEnabled = true
+            });
 
         Console.WriteLine(ratePlan.Sid);
     }

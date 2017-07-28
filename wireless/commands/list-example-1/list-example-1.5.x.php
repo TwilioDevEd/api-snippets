@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$commands = $client->preview->wireless->commands
+$commands = $client->wireless->commands
     ->stream();
 
 foreach ($commands as $command) {

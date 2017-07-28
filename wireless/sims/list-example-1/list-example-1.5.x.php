@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$sims = $client->preview->wireless->sims->read();
+$sims = $client->wireless->sims->read();
 
 foreach ($sims as $sim) {
     print_r($sim);

@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$sim = $client->preview->wireless
+$sim = $client->wireless
     ->sims("AliceSmithSmartMeter")
     ->fetch();
 

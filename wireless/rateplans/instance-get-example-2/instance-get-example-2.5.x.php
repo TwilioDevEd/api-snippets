@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ratePlan = $client->preview->wireless
+$ratePlan = $client->wireless
     ->ratePlans('us-automotive')
     ->fetch();
 
