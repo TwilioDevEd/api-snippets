@@ -13,7 +13,7 @@
       "iso_country": "US",
       "capabilities":{
         "voice": true,
-        "SMS": true",
+        "SMS": true,
         "MMS": false
       },
       "beta": false
