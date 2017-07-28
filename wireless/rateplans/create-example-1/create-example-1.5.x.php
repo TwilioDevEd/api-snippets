@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ratePlan = $client->preview->wireless->ratePlans->create([
+$ratePlan = $client->wireless->ratePlans->create([
     'uniqueName' => 'SmartMeterCA',
     'friendlyName' => 'California SmartMeter Plan',
     'dataLimit' => 5,

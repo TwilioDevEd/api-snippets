@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-command = client.preview.wireless.commands('DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
+command = client.wireless.commands('DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
             .fetch()
 
 print(command)

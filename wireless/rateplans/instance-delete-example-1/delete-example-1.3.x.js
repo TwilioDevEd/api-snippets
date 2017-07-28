@@ -4,7 +4,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.wireless
+client.wireless
   .ratePlans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   .remove()
   .then(function(response) {

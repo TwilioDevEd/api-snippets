@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$ratePlans = $client->preview->wireless->ratePlans
+$ratePlans = $client->wireless->ratePlans
     ->stream();
 
 foreach ($ratePlans as $ratePlan) {

@@ -4,9 +4,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.wireless.commands
+client.wireless.commands
   .create({
-    command: 'wakeup',
+    commandMode: 'binary',
+    command: 'SGVsbG8sIE1hY2hpbmUh==',
     callbackUrl: 'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback'
   })
   .then(function(response) {

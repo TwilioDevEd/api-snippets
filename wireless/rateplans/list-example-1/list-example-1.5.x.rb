@@ -7,6 +7,6 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-rate_plans = client.preview.wireless.rate_plans.list()
+rate_plans = client.wireless.rate_plans.list()
 
 puts rate_plans
