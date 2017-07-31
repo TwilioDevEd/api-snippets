@@ -11,22 +11,18 @@
     // Since the approval request has sensitive data, we'll fetch it in background with the 
     // request uuid instead of delivering the information within the userInfo.
 
-    [twilioAuth getApprovalRequestsWithStatuses:AUTApprovalRequestStatusPending timeInterval:nil completion:^(AUTApprovalRequests * _Nullable approvalRequests, NSError * _Nullable error) {
+    [twilioAuth getRequestWithUUID:approvalRequestUUID completion:^(AUTApprovalRequest *request, NSError *error) {
 
         if (error != nil) {
             return;
         }
 
-        //Search in the pending request for the one that was just pushed through the notification
-        for (AUTApprovalRequest *pendingRequest in approvalRequests.pending) {
+        if ([request.uuid isEqualToString:approvalRequestUUID]) {
 
-            if ([pendingRequest.uuid isEqualToString:approvalRequestUUID]) {
-
-
-                // Do something with the pendingRequest
-                return;
-            }
+            // Do something with the pendingRequest
+            return;
         }
+
     }];
 
 }
