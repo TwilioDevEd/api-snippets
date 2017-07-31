@@ -10,7 +10,7 @@ $client = new Client($sid, $token);
 
 $usage = $client->wireless
     ->sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    ->usage()
-    ->fetch();
+    ->usageRecords
+    ->read();
 
 print_r($usage);

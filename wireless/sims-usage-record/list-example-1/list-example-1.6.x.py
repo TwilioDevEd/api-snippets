@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 ratePlanUsage = client.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-                .usage().fetch()
+                .usage_records.list()
 
 print(ratePlanUsage)

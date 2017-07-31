@@ -14,10 +14,9 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
         var command = CommandResource.Create(
-            new CreateCommandOptions {
-                Command = "wakeup",
-                CallbackUrl = new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
-            });
+            command: "wakeup",
+            callbackUrl: new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
+        );
 
         Console.WriteLine(command.Sid);
     }
