@@ -1,35 +1,26 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
-require_once '/path/to/vendor/autoload.php'; // Loads the library
+include('./vendor/autoload.php');
+include('./config.php');
+
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
 
-// Required for all Twilio access tokens
-$twilioAccountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$twilioApiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$twilioApiSecret = 'your_api_secret';
-$TwilioConfigurationSid = 'VSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-// choose a random username for the connecting user
-$identity = 'randomUsername';
+// Use identity and room from query string if provided
+$identity = isset($_GET["identity"]) ? $_GET["identity"] : "identity";
+$room = isset($_GET["room"]) ? $_GET["room"] :  "";
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
-    $TWILIO_ACCOUNT_SID,
-    $TWILIO_API_KEY,
-    $TWILIO_API_SECRET,
-    3600,
+    $TWILIO_ACCOUNT_SID, 
+    $TWILIO_API_KEY, 
+    $TWILIO_API_SECRET, 
+    3600, 
     $identity
 );
 
-// Grant access to Twilio Video
+// Grant access to Video
 $grant = new VideoGrant();
-$grant->setConfigurationProfileSid($TwilioConfigurationSid);
+$grant->setRoom($room);
 $token->addGrant($grant);
 
-// return serialized token and the user's randomly generated ID
-echo json_encode(
-    array(
-        'identity' => $identity,
-        'token' => $token->toJWT(),
-    )
-);
+echo $token->toJWT();

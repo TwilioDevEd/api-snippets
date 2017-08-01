@@ -1,37 +1,33 @@
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using Faker;
+using System.Configuration;
 using Twilio.Jwt.AccessToken;
 
-namespace VideoQuickstart.Controllers
+namespace VideoAccessTokenServer.Controllers
 {
     public class TokenController : Controller
     {
         // GET: Token
-        public ActionResult Index(string device)
+        public ActionResult Index()
         {
             // Load Twilio configuration from Web.config
             var accountSid = ConfigurationManager.AppSettings["TwilioAccountSid"];
             var apiKey = ConfigurationManager.AppSettings["TwilioApiKey"];
             var apiSecret = ConfigurationManager.AppSettings["TwilioApiSecret"];
-            var videoConfigSid = ConfigurationManager.AppSettings["TwilioConfigurationSid"];
 
             // Create a random identity for the client
-            var identity = Internet.UserName();
+            var identity = Request.QueryString["identity"] ?? "identity";
 
-            var grants = new HashSet<IGrant>
-            {
-                // Grant access to Video
-                new VideoGrant { ConfigurationProfileSid = videoConfigSid }
-            };
+            // Create a video grant for the token
+            var grant = new VideoGrant();
+            grant.Room = Request.QueryString["room"];
+            var grants = new HashSet<IGrant> { grant };
 
             // Create an Access Token generator
             var token = new Token(accountSid, apiKey, apiSecret, identity: identity, grants: grants);
 
             return Json(new
             {
-                identity,
                 token = token.ToJwt()
             }, JsonRequestBehavior.AllowGet);
         }
