@@ -4,7 +4,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.wireless.ratePlans
+client.wireless.ratePlans
   .create({
     uniqueName: 'SmartMeterCA',
     friendlyName: 'California SmartMeter Plan',

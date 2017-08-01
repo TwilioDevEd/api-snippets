@@ -13,8 +13,11 @@ class Example
         const string authToken = "your_auth_token";
 
         TwilioClient.Init(accountSid, authToken);
-        var command = CommandResource.Create("wakeup",
-            callbackUrl: new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"));
+        var command = CommandResource.Create(
+            command: "SGVsbG8sIE1hY2hpbmUh==",
+            commandMode: CommandResource.CommandModeEnum.Binary,
+            callbackUrl: new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
+        );
 
         Console.WriteLine(command.Sid);
     }

@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-sim = client.preview.wireless.sims('AliceSmithSmartMeter')\
+sim = client.wireless.sims('AliceSmithSmartMeter')\
             .fetch()
 
 print(sim)

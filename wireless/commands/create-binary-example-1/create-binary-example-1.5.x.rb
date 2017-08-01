@@ -7,8 +7,11 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-sim = client.wireless
-  .sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-  .fetch()
+command = client.wireless.commands.create(
+  command: "SGVsbG8sIE1hY2hpbmUh==",
+  sim: "AliceSmithSmartMeter",
+  command_mode: "binary",
+  callback_url: "https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"
+)
 
-puts sim
+puts command

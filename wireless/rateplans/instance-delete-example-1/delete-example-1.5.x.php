@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$status = $client->preview->wireless
+$status = $client->wireless
     ->ratePlans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     ->delete();
 

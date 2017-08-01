@@ -8,12 +8,9 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$command = $client->preview->wireless
-    ->commands
-    ->create([
-      "sim" => "AliceSmithSmartMeter",
-      "command" => "wakeup",
-      "callbackUrl" => "https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"
-    ]);
+$usage = $client->wireless
+    ->sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    ->usageRecords
+    ->read();
 
-print_r($command);
+print_r($usage);

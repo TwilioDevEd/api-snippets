@@ -3,6 +3,7 @@ using System;
 using Twilio;
 using Twilio.Rest.Wireless.V1;
 
+
 class Example
 {
     static void Main(string[] args)
@@ -12,12 +13,11 @@ class Example
         const string authToken = "your_auth_token";
 
         TwilioClient.Init(accountSid, authToken);
+        var command = CommandResource.Create(
+            command: "wakeup",
+            callbackUrl: new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
+        );
 
-        var sims = SimResource.Read();
-
-        foreach ( var sim in sims)
-        {
-            Console.WriteLine(sim.Sid);
-        }
+        Console.WriteLine(command.Sid);
     }
 }
