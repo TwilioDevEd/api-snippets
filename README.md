@@ -292,7 +292,7 @@ the wrong user.
    directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
    for more information.
 
-1. Change your hosts file
+1. Update your hosts file with [this content](./tools/hosts)
 
    ```bash
    sudo cat ./tools/hosts >> /etc/hosts
