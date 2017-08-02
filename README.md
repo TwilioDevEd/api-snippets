@@ -292,25 +292,10 @@ the wrong user.
    directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
    for more information.
 
-1. Change your hosts file.
+1. Change your hosts file
 
-   Edit your `/etc/hosts` file. Add the following entries:
-   ```
-   127.0.0.1 api.twilio.com
-   127.0.0.1 chat.twilio.com
-   127.0.0.1 fax.twilio.com
-   127.0.0.1 ip-messaging.twilio.com
-   127.0.0.1 lookups.twilio.com
-   127.0.0.1 messaging.twilio.com
-   127.0.0.1 monitor.twilio.com
-   127.0.0.1 notifications.twilio.com
-   127.0.0.1 notify.twilio.com
-   127.0.0.1 pricing.twilio.com
-   127.0.0.1 preview.twilio.com
-   127.0.0.1 sync.twilio.com
-   127.0.0.1 taskrouter.twilio.com
-   127.0.0.1 video.twilio.com
-   127.0.0.1 wireless.twilio.com
+   ```bash
+   sudo cat ./tools/hosts >> /etc/hosts
    ```
 
 1. Make a copy of the `.env.example` file.

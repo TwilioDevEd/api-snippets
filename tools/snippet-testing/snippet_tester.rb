@@ -73,6 +73,16 @@ class SnippetTester
     end
   end
 
+  def add_hosts()
+    Dir.chdir(__dir__) do
+      `sudo -- sh -c "cat ../hosts >> /etc/hosts"`
+    end
+  end
+
+  def remove_hosts()
+    `sudo -- sh -c "sed -i '' '/^# START: api-snippets$/,/^# END: api-snippets$/d' /etc/hosts"`
+  end
+
   private
 
   attr_reader :parent_source_folder, :snippets_models, :test_models
@@ -230,6 +240,10 @@ def parse_options(args)
       options.source_folder = File.expand_path(dir)
       options.test_default = true if options.test_default.nil?
     end
+
+    opts.on('-h', 'Append the twilio endpoints to your hosts file for testing') do
+      options.update_hosts = true
+    end
   end
 
   opts.parse!(args)
@@ -242,10 +256,12 @@ if __FILE__ == $0
     tester = SnippetTester.new(options.source_folder, options.test_default)
 
     tester.install_dependencies if options.install
+    tester.add_hosts if options.update_hosts
     tester.run_before_test
     tester.init
     tester.setup
     tester.run
+    tester.remove_hosts if options.update_hosts
 
     print_errors_if_any
   rescue Interrupt
