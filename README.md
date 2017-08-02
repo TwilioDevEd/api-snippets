@@ -292,11 +292,28 @@ the wrong user.
    directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
    for more information.
 
+
 1. Update your hosts file with [this content](./tools/hosts)
 
    ```bash
    sudo cat ./tools/hosts >> /etc/hosts
    ```
+
+   If you want to avoid this step, you can simply pass the option `-u` to the
+   test runner.
+
+   ```bash
+   SNIPPET_LANGUAGE=node ruby tools/snippet-testing/snippet_tester.rb -u -d rest/calls
+   ```
+
+   **Note:** To make changes inside the `/etc/hosts` file, it will prompt you
+   for your password.
+
+   **Note:** For Mac users, this options depends on gnu `sed` command, because mac
+   native `sed` has problems when using optiong `-i`, for that reason I suggest
+   you to install `brew install gnu-sed` and create an alias in your `.bashrc`
+   file like `alias sed=gsed`.
+
 
 1. Make a copy of the `.env.example` file.
 
