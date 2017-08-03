@@ -8,4 +8,4 @@ const client = require('twilio')(accountSid, authToken);
 client.taskrouter.v1
   .workspaces(workspaceSid)
   .fetch()
-  .then((workspace) => console.log(workspace.friendlyName));
+  .then(workspace => console.log(workspace.friendlyName));

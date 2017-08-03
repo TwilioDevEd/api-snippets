@@ -1,14 +1,18 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
-var service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+const client = new Twilio(accountSid, authToken);
+const service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').update({
-    friendlyName: 'Bob'
-}).then(function(response) {
+service
+  .users('USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    friendlyName: 'Bob',
+  })
+  .then(response => {
     console.log(response);
-}).catch(function(error) {
+  })
+  .catch(error => {
     console.log(error);
-});
+  });

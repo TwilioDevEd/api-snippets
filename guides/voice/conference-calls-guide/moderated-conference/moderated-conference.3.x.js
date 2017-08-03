@@ -1,4 +1,3 @@
-
 const express = require('express');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
@@ -9,7 +8,7 @@ const MODERATOR = '+15558675309';
 const app = express();
 
 // Parse incoming POST params with Express middleware
-app.use(urlencoded({extended: false}));
+app.use(urlencoded({ extended: false }));
 
 // Create a route that will handle Twilio webhook requests, sent as an
 // HTTP POST to /voice in our application
@@ -21,7 +20,7 @@ app.post('/voice', (request, response) => {
   const dial = twiml.dial();
   // If the caller is our MODERATOR, then start the conference when they
   // join and end the conference when they leave
-  if(request.body.From == MODERATOR) {
+  if (request.body.From == MODERATOR) {
     dial.conference('My conference', {
       startConferenceOnEnter: true,
       endConferenceOnExit: true,

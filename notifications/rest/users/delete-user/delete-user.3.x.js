@@ -7,6 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .users('User001').remove()
+  .users('User001')
+  .remove()
   .catch(error => console.log(error))
   .done();

@@ -1,4 +1,4 @@
-participant.on('trackAdded', track => {
+participant.on('trackAdded', function(track) {
   if (track.kind === 'audio') {
     console.log('Added an AudioTrack %s', track.id);
   } else {
@@ -6,7 +6,7 @@ participant.on('trackAdded', track => {
   }
 });
 
-participant.on('trackRemoved', track => {
+participant.on('trackRemoved', function(track) {
   if (track.kind === 'audio') {
     console.log('Removed an AudioTrack %s', track.id);
   } else {
@@ -14,7 +14,7 @@ participant.on('trackRemoved', track => {
   }
 });
 
-participant.on('trackEnabled', track => {
+participant.on('trackEnabled', function(track) {
   if (track.kind === 'audio') {
     console.log('Enabled AudioTrack %s', track.id);
   } else {
@@ -22,7 +22,7 @@ participant.on('trackEnabled', track => {
   }
 });
 
-participant.on('trackDisabled', track => {
+participant.on('trackDisabled', function(track) {
   if (track.kind === 'audio') {
     console.log('Disabled AudioTrack %s', track.id);
   } else {
@@ -30,15 +30,16 @@ participant.on('trackDisabled', track => {
   }
 });
 
-
 // You can attach Tracks to the DOM in the following manner
-participant.tracks.forEach(track => {
-  var mediaElement = track.attach();
+participant.tracks.forEach(function(track) {
+  const mediaElement = track.attach();
   document.getElementById('track-view').appendChild(mediaElement);
 });
 
 // You can detach Tracks from the DOM in the following manner
-participant.tracks.forEach(track => {
-  var trackElements = track.detach();
-  trackElements.forEach(element => element.remove());
+participant.tracks.forEach(function(track) {
+  const trackElements = track.detach();
+  trackElements.forEach(function(element) {
+    return element.remove();
+  });
 });

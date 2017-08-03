@@ -1,103 +1,103 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var twilio = require('twilio');
+const twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
+const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-var salesQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var marketingQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var supportQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var everyoneQueue = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const salesQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const marketingQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const supportQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const everyoneQueue = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-var configuration = {
-    "task_routing":{
-        "filters":[
-            {
-                "targets":[
-                    {
-                        "queue": salesQueue
-                    }
-                ],
-                "expression":"type == \"sales\""
-            },
-            {
-                "targets":[
-                    {
-                        "queue": marketingQueue
-                    }
-                ],
-                "expression":"type == \"marketing\""
-            },
-            {
-                "targets":[
-                    {
-                        "queue": supportQueue
-                    }
-                ],
-                "expression":"type == \"support\""
-            }
+let configuration = {
+  task_routing: {
+    filters: [
+      {
+        targets: [
+          {
+            queue: salesQueue,
+          },
         ],
-        "default_filter":{
-            "queue": everyoneQueue
-        }
-    }
+        expression: 'type == "sales"',
+      },
+      {
+        targets: [
+          {
+            queue: marketingQueue,
+          },
+        ],
+        expression: 'type == "marketing"',
+      },
+      {
+        targets: [
+          {
+            queue: supportQueue,
+          },
+        ],
+        expression: 'type == "support"',
+      },
+    ],
+    default_filter: {
+      queue: everyoneQueue,
+    },
+  },
 };
 
 // or utilizing objects
-var wb = require('twilio/lib/resources/task_router/WorkflowBuilder');
+const wb = require('twilio/lib/resources/task_router/WorkflowBuilder');
 
 // sales
-var salesTarget = new wb.WorkflowRuleTarget({
-    queue: salesQueue
+const salesTarget = new wb.WorkflowRuleTarget({
+  queue: salesQueue,
 });
-var salesRule = new wb.WorkflowRule({
-    expression : "type == 'sales'",
-    targets : [salesTarget]
+const salesRule = new wb.WorkflowRule({
+  expression: "type == 'sales'",
+  targets: [salesTarget],
 });
 
 // marketing
-var marketingTarget = new wb.WorkflowRuleTarget({
-    queue: marketingQueue
+const marketingTarget = new wb.WorkflowRuleTarget({
+  queue: marketingQueue,
 });
-var marketingRule = new wb.WorkflowRule({
-    expression : "type == 'marketing'",
-    targets : [marketingTarget]
+const marketingRule = new wb.WorkflowRule({
+  expression: "type == 'marketing'",
+  targets: [marketingTarget],
 });
 
 // support
-var supportTarget = new wb.WorkflowRuleTarget({
-    queue: supportQueue
+const supportTarget = new wb.WorkflowRuleTarget({
+  queue: supportQueue,
 });
-var supportRule = new wb.WorkflowRule({
-    expression : "type == 'support'",
-    targets : [supportTarget]
+const supportRule = new wb.WorkflowRule({
+  expression: "type == 'support'",
+  targets: [supportTarget],
 });
 
 // default
-var defaultTarget = new wb.WorkflowRuleTarget({
-    queue: everyoneQueue
+const defaultTarget = new wb.WorkflowRuleTarget({
+  queue: everyoneQueue,
 });
 
 // put all together
-var taskRouting = new wb.TaskRoutingConfiguration({
-    filters : [salesRule, marketingRule, supportRule],
-    default_filter : defaultTarget
+const taskRouting = new wb.TaskRoutingConfiguration({
+  filters: [salesRule, marketingRule, supportRule],
+  default_filter: defaultTarget,
 });
-var config = new wb.WorkflowConfiguration({
-    taskRouting: taskRouting
+const config = new wb.WorkflowConfiguration({
+  taskRouting: taskRouting,
 });
 
 // convert to json
 configuration = config.toJSON();
 
 client.workspace.workflows.create({
-    friendlyName: 'Sales, Marketing, Support Workflow',
-    assignmentCallbackUrl: 'http://example.com',
-    fallbackAssignmentCallbackUrl: 'http://example2.com',
-    taskReservationTimeout: '30',
-    configuration: configuration
+  friendlyName: 'Sales, Marketing, Support Workflow',
+  assignmentCallbackUrl: 'http://example.com',
+  fallbackAssignmentCallbackUrl: 'http://example2.com',
+  taskReservationTimeout: '30',
+  configuration: configuration,
 });

@@ -17,10 +17,10 @@ app.get('/confirm', (req, res) => {
   const messageSid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
   // Send Feedback to Twilio
-  client.accounts(accountSid)
+  client
+    .accounts(accountSid)
     .messages(messageSid)
-    .feedback
-    .create({
+    .feedback.create({
       outcome: 'confirmed',
     })
     .then(() => {
@@ -28,7 +28,7 @@ app.get('/confirm', (req, res) => {
       res.send('Thank you!');
       res.end();
     })
-    .catch((err) => {
+    .catch(err => {
       res.status(500);
       res.send(err.toString());
     })

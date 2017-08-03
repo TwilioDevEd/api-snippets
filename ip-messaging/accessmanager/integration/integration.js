@@ -1,1 +1,1 @@
-let AccessManager = require('twilio-common').AccessManager;
+const AccessManager = require('twilio-common').AccessManager;

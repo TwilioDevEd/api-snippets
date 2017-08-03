@@ -2,10 +2,13 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const response = new VoiceResponse();
 const dial = response.dial();
-dial.number({
+dial.number(
+  {
     statusCallbackEvent: 'initiated ringing answered completed',
     statusCallback: 'https://myapp.com/calls/events',
-    statusCallbackMethod: 'POST'
-}, '+14158675309');
+    statusCallbackMethod: 'POST',
+  },
+  '+14158675309'
+);
 
 console.log(response.toString());

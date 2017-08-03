@@ -11,4 +11,4 @@ client.messages
     from: '+15017250604',
     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
   })
-  .then((message) => console.log(message.sid));
+  .then(message => console.log(message.sid));

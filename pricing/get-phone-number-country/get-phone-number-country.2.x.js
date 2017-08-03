@@ -1,12 +1,12 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var PricingClient = require('twilio').PricingClient;
-var client = new PricingClient(accountSid, authToken);
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const PricingClient = require('twilio').PricingClient;
+const client = new PricingClient(accountSid, authToken);
 
-client.phoneNumbers.countries('US').get(function(err, country) {
-	country.phoneNumberPrices.forEach(function(phonePrices){
-        console.log(phonePrices.numberType + ' ' + phonePrices.currentPrice + '\n');
-	}); 
+client.phoneNumbers.countries('US').get((err, country) => {
+  country.phoneNumberPrices.forEach(phonePrices => {
+    console.log(phonePrices.numberType + ' ' + phonePrices.currentPrice + '\n');
+  });
 });

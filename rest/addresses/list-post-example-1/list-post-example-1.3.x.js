@@ -5,7 +5,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.addresses.create({
+client.addresses
+  .create({
     friendlyName: 'Billing - Customer 123',
     customerName: 'Customer 123',
     street: '1 Hasselhoff Lane',
@@ -14,4 +15,4 @@ client.addresses.create({
     postalCode: '10875',
     isoCountry: 'DE',
   })
-  .then((address) => console.log(address.customerName));
+  .then(address => console.log(address.customerName));

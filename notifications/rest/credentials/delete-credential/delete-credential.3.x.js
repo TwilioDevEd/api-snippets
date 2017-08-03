@@ -5,13 +5,13 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-credentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+credentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 client.notify
   .credentials(credentialSid)
-  .remove((wasRemoved) => {
+  .remove(wasRemoved => {
     if (wasRemoved) {
       console.log('Credential ' + credentialSid + ' was removed.');
     }
   })
-  .done()
+  .done();

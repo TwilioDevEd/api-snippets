@@ -12,7 +12,7 @@ client.taskrouter.v1
   .tasks(taskSid)
   .reservations(reservationSid)
   .fetch()
-  .then((reservation) => {
+  .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);
   });

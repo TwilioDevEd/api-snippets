@@ -1,11 +1,11 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = "your_auth_token";
-var client = require('twilio')(accountSid, authToken);
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const client = require('twilio')(accountSid, authToken);
 
-client.sms.shortCodes.list({ shortCode: "898" }, function(err, data) {
-    data.shortCodes.forEach(function(shortCode) {
-        console.log(shortCode.SmsMethod);
-    });
+client.sms.shortCodes.list({ shortCode: '898' }, (err, data) => {
+  data.shortCodes.forEach(shortCode => {
+    console.log(shortCode.SmsMethod);
+  });
 });

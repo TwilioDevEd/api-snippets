@@ -1,5 +1,5 @@
-accessManager.on('tokenExpired', () => {
+accessManager.on('tokenExpired', function() {
   // generate new token here and set it to the accessManager
-  let updatedToken = generateToken(); 
+  const updatedToken = generateToken();
   accessManager.updateToken(updatedToken);
 });

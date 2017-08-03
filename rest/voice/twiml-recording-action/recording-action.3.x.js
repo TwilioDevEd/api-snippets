@@ -9,7 +9,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 // POST: '/handle-record'
-router.post('/handle-record', twilio.webhook({validate: false}), (req, res) =>{
+router.post(
+  '/handle-record',
+  twilio.webhook({ validate: false }),
+  (req, res) => {
     const twiml = new VoiceResponse();
 
     twiml.say('Listen to your recorded message.');
@@ -17,8 +20,8 @@ router.post('/handle-record', twilio.webhook({validate: false}), (req, res) =>{
     twiml.say('Goodbye.');
 
     res.end(twiml.toString());
-});
-
+  }
+);
 
 app.use('/', router);
 
