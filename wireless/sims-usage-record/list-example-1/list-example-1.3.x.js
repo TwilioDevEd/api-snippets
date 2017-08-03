@@ -6,8 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.wireless
   .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-  .usageRecords
-  .list()
+  .usageRecords.list()
   .then(response => {
     console.log(response);
   });
