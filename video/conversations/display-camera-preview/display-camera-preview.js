@@ -1,10 +1,10 @@
 const previewMedia = new Twilio.Conversations.LocalMedia();
 previewMedia.addCamera().then(
-  cameraTrack => {
+  function(cameraTrack) {
     // attach to a <video> element
     cameraTrack.attach('#preview-video-element');
   },
-  error => {
+  function(error) {
     console.error('Unable to get access to the local camera.');
   }
 );

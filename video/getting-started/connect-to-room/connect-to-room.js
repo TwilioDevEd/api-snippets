@@ -3,10 +3,10 @@ Twilio.Video
     name: 'my-room',
   })
   .then(
-    room => {
+    function(room) {
       console.log('Connected to the Room "%s"', room.name);
     },
-    error => {
+    function(error) {
       console.error('Failed to connect to the Room', error);
     }
   );

@@ -6,7 +6,7 @@ console.log(
 );
 
 // Log any Participants already connected to the Room
-room.participants.forEach(participant => {
+room.participants.forEach(function(participant) {
   console.log(
     'Participant "%s" is connected to the Room',
     participant.identity
@@ -14,7 +14,7 @@ room.participants.forEach(participant => {
 });
 
 // Log new Participants as they connect to the Room
-room.once('participantConnected', participant => {
+room.once('participantConnected', function(participant) {
   console.log(
     'Participant "%s" has connected to the Room',
     participant.identity
@@ -22,7 +22,7 @@ room.once('participantConnected', participant => {
 });
 
 // Log Participants as they disconnect from the Room
-room.once('participantDisconnected', participant => {
+room.once('participantDisconnected', function(participant) {
   console.log(
     'Participant "%s" has disconnected from Room',
     participant.identity

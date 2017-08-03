@@ -9,7 +9,7 @@ function fetchAccessToken(handler) {
       // your server to establish the identity of the client
       device: 'browser',
     },
-    data => {
+    function(data) {
       // The data sent back from the server should contain a long string, which
       // is the token you'll need to initialize the SDK. This string is in a format
       // called JWT (JSON Web Token) - more at http://jwt.io

@@ -1,10 +1,10 @@
-$.getJSON('/token', data => {
+$.getJSON('/token', function(data) {
   // Create a Video Client and connect to Twilio's backend
   Twilio.Video.connect('$TOKEN', { name: 'my-room' }).then(
-    room => {
+    function(room) {
       console.log('Connected to Twilio!');
     },
-    error => {
+    function(error) {
       console.log('Could not connect to Twilio: ' + error.message);
     }
   );

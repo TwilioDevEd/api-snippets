@@ -1,11 +1,11 @@
 Twilio.Video.connect('$TOKEN', { name: 'my-new-room' }).then(
-  room => {
+  function(room) {
     console.log('Successfully joined a Room: ', room);
-    room.on('participantConnected', participant => {
+    room.on('participantConnected', function(participant) {
       console.log('A remote Participant connected: ', participant);
     });
   },
-  error => {
+  function(error) {
     console.error('Unable to connect to Room: ' + error.message);
   }
 );
