@@ -8,9 +8,9 @@
 //
 
 // 1.0.0-beta4 and earlier
-// const client = new Video.Client(accessToken);  
+// const client = new Video.Client(accessToken);
 
-// 1.0.0-beta5 onwards the Client class has been removed. 
-// Instead of constructing a Client using an Access Token and then calling connect 
+// 1.0.0-beta5 onwards the Client class has been removed.
+// Instead of constructing a Client using an Access Token and then calling connect
 // on it, you can simply call connect and pass it an Access Token directly.
-const room = await Twilio.Video.connect('your-token');
+const room = Twilio.Video.connect('your-token');
