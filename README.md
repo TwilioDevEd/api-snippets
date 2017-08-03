@@ -309,12 +309,6 @@ the wrong user.
    **Note:** To make changes inside the `/etc/hosts` file, it will prompt you
    for your password.
 
-   **Note:** For Mac users, this options depends on gnu `sed` command, because mac
-   native `sed` has problems when using optiong `-i`, for that reason I suggest
-   you to install `brew install gnu-sed` and create an alias in your `.bashrc`
-   file like `alias sed=gsed`.
-
-
 1. Make a copy of the `.env.example` file.
 
    ```bash

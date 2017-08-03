@@ -1,4 +1,3 @@
-# START: api-snippets
 127.0.0.1 api.twilio.com
 127.0.0.1 chat.twilio.com
 127.0.0.1 fax.twilio.com
@@ -14,4 +13,3 @@
 127.0.0.1 taskrouter.twilio.com
 127.0.0.1 video.twilio.com
 127.0.0.1 wireless.twilio.com
-# END: api-snippets

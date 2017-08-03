@@ -74,14 +74,18 @@ class SnippetTester
   end
 
   def add_hosts()
+    @start = "# START: api-snippets"
+    @end = "# END: api-snippets"
+
     remove_hosts()
     Dir.chdir(__dir__) do
-      `sudo -- sh -c "cat ../hosts >> /etc/hosts"`
+      hosts = `cat ../hosts`
+      `sudo -- sh -c 'echo "#{@start}\n#{hosts}\n#{@end}" >> /etc/hosts'`
     end
   end
 
   def remove_hosts()
-    `sudo sed -i'' '/^# START: api-snippets$/,/^# END: api-snippets$/d' /etc/hosts`
+    `sudo sed -i -- "/#{@start}/,/#{@end}/d" /etc/hosts`
   end
 
   private
@@ -262,11 +266,11 @@ if __FILE__ == $0
     tester.setup
     tester.add_hosts if options.update_hosts
     tester.run
-    tester.remove_hosts if options.update_hosts
 
     print_errors_if_any
   rescue Interrupt
-    tester.remove_hosts if options.update_hosts
     print_errors_if_any
+  ensure
+    tester.remove_hosts if options.update_hosts
   end
 end
