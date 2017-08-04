@@ -1,14 +1,16 @@
 // Get messages from the newest to oldest
-channel.getMessages(20 /* by pages of 20 messages */).then(function(messagesPage) {
-  messagesPage.items.forEach(function(message) {
-    // do stuff for each message
+channel
+  .getMessages(20 /* by pages of 20 messages */)
+  .then(function(messagesPage) {
+    messagesPage.items.forEach(function(message) {
+      // do stuff for each message
+    });
+    // note, that by default pages are in "backwards" order,
+    // so you should ask for previous page, not the next one
+    if (messagesPage.hasPrevPage) {
+      return messagesPage.prevPage(); // here we can ask for following page
+    }
   });
-  // note, that by default pages are in "backwards" order,
-  // so you should ask for previous page, not the next one
-  if (messagesPage.hasPrevPage) {
-    return messagesPage.prevPage(); // here we can ask for following page
-  }
-});
 
 // Get messages from the message with id 3 to newest
 channel.getMessages(20, 3, 'forward').then(function(messagesPage) {
