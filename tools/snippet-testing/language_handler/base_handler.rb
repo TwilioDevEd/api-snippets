@@ -13,6 +13,8 @@ module LanguageHandler
                                  ' to use v5 of ruby\'s Twilio ' \
                                  'library for example'.freeze
 
+    ROOT_FOLDER = "#{__dir__}/../../../"
+
     attr_reader :dependencies_directory, :dependencies
 
     def initialize(dependencies_directory = Dir.pwd, dependencies = [])
@@ -32,6 +34,9 @@ module LanguageHandler
       @test_output = snippet_model.test_output
       path = snippet_model.get_output_file(lang_cname)
       execute(path)
+    end
+
+    def run_before_test
     end
 
     private
