@@ -8,4 +8,4 @@ const client = require('twilio')(accountSid, authToken);
 client.monitor.v1
   .events('AE21f24380625e4aa4abec76e39b14458d')
   .fetch()
-  .then((data) => console.log(event.description));
+  .then(data => console.log(event.description));

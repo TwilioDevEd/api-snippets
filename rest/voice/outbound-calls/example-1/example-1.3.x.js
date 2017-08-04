@@ -11,4 +11,4 @@ client.api.calls
     to: '+14155551212',
     from: '+15017250604',
   })
-  .then((call) => console.log(call.sid));
+  .then(call => console.log(call.sid));

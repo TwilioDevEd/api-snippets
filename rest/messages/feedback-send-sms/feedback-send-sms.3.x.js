@@ -15,7 +15,7 @@ client.messages
     body: `Open to confirm: http://yourserver.com/confirm?id=${uniqueCode}`,
     provideFeedback: 'true',
   })
-  .then((message) => {
+  .then(message => {
     console.log('We should save this to a database:');
     console.log(`Unique Code = ${uniqueCode}`);
     console.log(`Message SID = ${message.sid}`);

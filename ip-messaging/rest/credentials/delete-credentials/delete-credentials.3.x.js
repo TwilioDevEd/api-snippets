@@ -1,13 +1,15 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
+const client = new Twilio(accountSid, authToken);
 
-client.chat.credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.chat
+  .credentials('CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .remove()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
-  }).catch(function(error) {
-      console.log(error);
+  })
+  .catch(error => {
+    console.log(error);
   });

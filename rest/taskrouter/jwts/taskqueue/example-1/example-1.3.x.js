@@ -18,35 +18,47 @@ const capability = new TaskRouterCapability({
   accountSid: accountSid,
   authToken: authToken,
   workspaceSid: workspaceSid,
-  channelId: workerSid});
+  channelId: workerSid,
+});
 
 // Helper function to create Policy
 function buildWorkspacePolicy(options) {
   options = options || {};
-  var resources = options.resources || [];
-  var urlComponents = [TASKROUTER_BASE_URL, version, 'Workspaces', workspaceSid]
+  const resources = options.resources || [];
+  const urlComponents = [
+    TASKROUTER_BASE_URL,
+    version,
+    'Workspaces',
+    workspaceSid,
+  ];
 
   return new Policy({
     url: urlComponents.concat(resources).join('/'),
     method: options.method || 'GET',
-    allow: true
+    allow: true,
   });
 }
 
 // Event Bridge Policies
-var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
+const eventBridgePolicies = util.defaultEventBridgePolicies(
+  accountSid,
+  workerSid
+);
 
-var workspacePolicies = [
+const workspacePolicies = [
   // Workspace fetch Policy
   buildWorkspacePolicy(),
   // Workspace subresources fetch Policy
   buildWorkspacePolicy({ resources: ['**'] }),
   // Workspace Tasks Update Policy
-  buildWorkspacePolicy({ resources: ['Workers', workerSid, 'Tasks', '**'], method: 'POST' }),
+  buildWorkspacePolicy({
+    resources: ['Workers', workerSid, 'Tasks', '**'],
+    method: 'POST',
+  }),
 ];
 
-eventBridgePolicies.concat(workspacePolicies).forEach(function (policy) {
+eventBridgePolicies.concat(workspacePolicies).forEach(policy => {
   capability.addPolicy(policy);
 });
 
-var token = capability.toJwt();
+const token = capability.toJwt();

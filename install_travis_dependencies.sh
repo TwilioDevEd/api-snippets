@@ -31,4 +31,5 @@ if [[ $languages == *"node"* ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   nvm install --lts
+  npm install
 fi

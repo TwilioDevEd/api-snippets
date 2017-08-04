@@ -10,4 +10,4 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .tasks(taskSid)
   .fetch()
-  .then((task) => console.log(task.attributes));
+  .then(task => console.log(task.attributes));

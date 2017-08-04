@@ -7,7 +7,8 @@ const client = new Twilio(accountSid, authToken);
 
 const outgoingCalledIdSid = 'PNe536d32a3c49700934481addd5ce1659';
 
-client.outgoingCallerIds(outgoingCalledIdSid)
+client
+  .outgoingCallerIds(outgoingCalledIdSid)
   .remove()
   .then(() => console.log(`Sid ${outgoingCalledIdSid} deleted successfully.`))
   .done();

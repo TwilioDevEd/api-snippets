@@ -10,11 +10,10 @@ const client = require('twilio')(accountSid, authToken);
 client.taskrouter.v1
   .workspaces(workspaceSid)
   .workers(workerSid)
-  .reservations
-  .list()
-  .then((data) => {
-    data.reservations.forEach((reservation) => {
-        console.log(reservation.reservationStatus);
-        console.log(reservation.workerName);
+  .reservations.list()
+  .then(data => {
+    data.reservations.forEach(reservation => {
+      console.log(reservation.reservationStatus);
+      console.log(reservation.workerName);
     });
   });

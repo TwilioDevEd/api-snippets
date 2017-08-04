@@ -4,5 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.usage.records.today
-  .each({category: 'calls'}, (record) => console.log(record.count));
+client.usage.records.today.each({ category: 'calls' }, record =>
+  console.log(record.count)
+);

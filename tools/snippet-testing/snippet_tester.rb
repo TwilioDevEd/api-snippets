@@ -44,6 +44,12 @@ class SnippetTester
     end
   end
 
+  def run_before_test
+    if !ENV['SNIPPET_LANGUAGE'] || (ENV['SNIPPET_LANGUAGE'].include? 'node')
+      LanguageHandler::Node.run_before_test
+    end
+  end
+
   def run
     @snippet_models.each do |snippet|
       puts "Testing #{snippet.output_folder}"
@@ -230,6 +236,7 @@ if __FILE__ == $0
     tester = SnippetTester.new(options.source_folder, options.test_default)
 
     tester.install_dependencies if options.install
+    tester.run_before_test
     tester.init
     tester.setup
     tester.run

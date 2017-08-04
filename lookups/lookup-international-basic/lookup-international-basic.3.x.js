@@ -8,4 +8,4 @@ const client = require('twilio')(accountSid, authToken);
 client.lookups.v1
   .phoneNumbers('+4402077651182')
   .fetch()
-  .then((number) => console.log(number.nationalFormat));
+  .then(number => console.log(number.nationalFormat));

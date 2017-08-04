@@ -12,13 +12,13 @@ client.taskrouter.v1
   .tasks(taskSid)
   .reservations(reservationSid)
   .update({
-      instruction: 'call',
-      callFrom: '+15558675309',
-      callUrl: 'http://example.com/agent_answer',
-      callStatusCallbackUrl: 'http://example.com/agent_answer_status_callback',
-      callAccept: 'true',
+    instruction: 'call',
+    callFrom: '+15558675309',
+    callUrl: 'http://example.com/agent_answer',
+    callStatusCallbackUrl: 'http://example.com/agent_answer_status_callback',
+    callAccept: 'true',
   })
-  .then((reservation) => {
+  .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);
   });
