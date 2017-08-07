@@ -16,6 +16,7 @@ sudo apt-get install -y --force-yes gradle
 if [[ $languages == *"python"* ]]; then
   sudo apt-get install -y --force-yes python-dev python-pip
   sudo pip install --upgrade pip wheel virtualenv virtualenvwrapper --quiet
+  sudo pip install -r requirements.txt
 fi
 
 if [[ $languages == *"php"* ]]; then
