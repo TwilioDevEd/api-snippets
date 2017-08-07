@@ -46,7 +46,7 @@ module Model
       allowed_languages = LANGUAGES.select do |key|
         !test_model.exclude_languages.include?(key.to_s)
       end.freeze
-      
+
       unless snippet_languages.nil?
         snippet_languages.split(':').each do |language|
           if allowed_languages.key?(language.to_sym)
@@ -59,6 +59,18 @@ module Model
       end
 
       server_languages.uniq
+    end
+
+    def self.verify_snippet_language
+      langs_to_test = ENV['SNIPPET_LANGUAGE'] || ''
+      valid_langs = LANGUAGES.keys.map(&:to_s)
+      has_valid_langs = langs_to_test.split(':').all? do |lang|
+        valid_langs.include?(lang)
+      end
+      if !has_valid_langs
+        raise ArgumentError, 'The language specified in SNIPPET_LANGUAGE ' +
+        'should be one of: ' + valid_langs.join(', ')
+      end
     end
 
     def get_input_file(lang_cname)

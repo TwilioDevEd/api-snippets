@@ -36,7 +36,7 @@ module LanguageHandler
       execute(path)
     end
 
-    def run_before_test
+    def self.run_before_test(directory)
     end
 
     private
