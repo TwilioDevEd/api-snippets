@@ -170,6 +170,7 @@ Make sure you have the following dependencies installed on your system.
    export NVM_DIR="$HOME/.nvm" \
    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
    nvm install --lts
+   npm install
    ```
 
 1. Install Python and PIP.
@@ -179,9 +180,17 @@ Make sure you have the following dependencies installed on your system.
    sudo apt-get install python-pip python2.7-dev build-essential \
    sudo pip install --upgrade pip
    ```
+
    On OSX:
+
    ```bash
    brew install python
+   ```
+
+   Once you have python and pip ready, run the command below
+
+   ```
+   pip install -r requirements.txt
    ```
 
 1. Install JDK8 and Gradle. The best option for this is to use
@@ -197,6 +206,7 @@ Make sure you have the following dependencies installed on your system.
 1. Install PHP 5 with CURL.
 
    On Linux:
+
    ```bash
    sudo add-apt-repository ppa:ondrej/php -y
    sudo apt-get update
@@ -204,14 +214,18 @@ Make sure you have the following dependencies installed on your system.
    ```
 
    On OSX:
+
    ```bash
    brew install php56
    ```
 
-   - Install Composer.
-     ```bash
-     curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-     ```
+   Once you have php ready, please install
+   [Composer](https://getcomposer.org/download/)
+
+   ```bash
+   curl -sS https://getcomposer.org/installer | \
+   sudo php -- --install-dir=/usr/local/bin --filename=composer
+   ```
 
 1. Install Ruby and RubyGems.
 
