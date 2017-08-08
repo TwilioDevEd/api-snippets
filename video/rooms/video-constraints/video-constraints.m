@@ -14,7 +14,6 @@ TVIVideoConstraints *videoConstraints = [TVIVideoConstraints constraintsWithBloc
 TVIVideoTrack *localVideoTrack = [TVILocalVideoTrack trackWithCapturer:camera
                                                                enabled:YES
                                                            constraints:videoConstraints];
-
 // If the constraints are not satisfied, a nil track will be returned.
 if (localVideoTrack == nil) {
     NSLog(@"Error: Failed to create a video track using the local camera.");

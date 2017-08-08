@@ -10,10 +10,9 @@ let videoConstraints = TVIVideoConstraints { (constraints) in
 }
 
 // Add local video track with camera and video constraints
-let localVideoTrack = TVILocalVideoTrack.init(capturer: camera!,
+var localVideoTrack = TVILocalVideoTrack.init(capturer: camera!,
                                               enabled: true,
                                               constraints: videoConstraints)
-
 // If the constraints are not satisfied, a nil track will be returned.
 if (localVideoTrack == nil) {
     print ("Error: Failed to create a video track using the local camera.")
