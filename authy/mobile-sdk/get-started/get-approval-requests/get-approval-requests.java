@@ -10,4 +10,4 @@ List<ApprovalRequestStatus> statuses = Arrays.asList(
                                               ApprovalRequestStatus.expired, 
                                               ApprovalRequestStatus.pending);
 
-authy.getApprovalRequests(statuses, timeInterval);
+twilioAuth.getApprovalRequests(statuses, timeInterval);

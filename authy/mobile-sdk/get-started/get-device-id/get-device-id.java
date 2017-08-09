@@ -1,1 +1,1 @@
-String deviceId = getDeviceId();
+String deviceId = twilioAuth.getDeviceId();
