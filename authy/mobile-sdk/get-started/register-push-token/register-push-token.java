@@ -1,3 +1,2 @@
-// You should obtain the registration token from your backend 
 // pushToken is optional and you include it if you want us to handle push notifications  
-authy.setPushToken(pushToken);
+twilioAuth.setPushToken(pushToken);
