@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
 @address = @client.api.addresses.create(
-    customer_name: 'FriendlyName',
+    customer_name: 'Customer 500',
     street: 'Elm Street',
     city: 'Racoon',
     region: 'Mordor',

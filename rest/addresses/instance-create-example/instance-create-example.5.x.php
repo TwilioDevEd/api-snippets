@@ -13,7 +13,7 @@ $client = new Client($sid, $token);
 $address = $client
     ->addresses
     ->create(
-        'FriendlyName',
+        'Customer 500',
         'Elm Street',
         'Racoon',
         'Mordor',

@@ -13,7 +13,7 @@ public class Example {
         // Get an object from its sid. If you do not have a sid,
         // check out the list resource examples on this page
         Address address = Address.creator(
-            "FriendlyName",
+            "Customer 500",
             "Elm Street",
             "Racoon",
             "Mordor",

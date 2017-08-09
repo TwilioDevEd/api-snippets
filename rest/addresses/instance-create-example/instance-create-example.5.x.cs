@@ -13,7 +13,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var address = AddressResource.Create(
-            customerName: "FriendlyName",
+            customerName: "Customer 500",
             street: "Elm Street",
             city: "Racoon",
             region: "Mordor",

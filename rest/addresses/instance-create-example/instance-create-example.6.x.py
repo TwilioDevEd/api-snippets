@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 address = client.addresses.create(
-    customer_name='FriendlyName',
+    customer_name='Customer 500',
     street='Elm Street',
     city='Racoon',
     region='Mordor',

@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.addresses
   .create({
-    customerName: 'FriendlyName',
+    customerName: 'Customer 500',
     street: 'Elm Street',
     city: 'Racoon',
     region: 'Mordor',
