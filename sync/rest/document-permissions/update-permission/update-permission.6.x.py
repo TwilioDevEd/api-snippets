@@ -14,6 +14,6 @@ document_permission = client.sync \
                             .document_permissions("bob") \
                             .update(True, True, False)
 
-print(document_permission.read) # True
-print(document_permission.write) # True
-print(document_permission.manage) # False
+print(document_permission.read)  # True
+print(document_permission.write)  # True
+print(document_permission.manage)  # False

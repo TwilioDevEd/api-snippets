@@ -5,7 +5,8 @@ dial = Dial()
 dial.conference(
     'EventedConf',
     status_callback='https://myapp.com/events',
-    status_callback_event='start end join leave mute hold')
+    status_callback_event='start end join leave mute hold'
+)
 response.append(dial)
 
 print(response)

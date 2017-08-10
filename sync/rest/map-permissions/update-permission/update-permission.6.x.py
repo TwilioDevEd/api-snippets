@@ -14,6 +14,6 @@ map_permission = client.sync \
                        .sync_map_permissions("bob") \
                        .update(True, True, False)
 
-print(map_permission.read) # True
-print(map_permission.write) # True
-print(map_permission.manage) # False
+print(map_permission.read)  # True
+print(map_permission.write)  # True
+print(map_permission.manage)  # False

@@ -14,13 +14,11 @@ workers = client.taskrouter.workspaces(workspace_sid) \
 for worker in workers:
     print(worker.friendly_name)
 
-
 task_queue_sid = 'WQf855e98ad280d0a0a325628e24ca9627'
 workers = client.taskrouter.workspaces(workspace_sid) \
                   .workers.list(available=1, task_queue_sid=task_queue_sid)
 for worker in workers:
     print(worker.friendly_name)
-
 
 expression = "type == 'leads'"
 workers = client.taskrouter.workspaces(workspace_sid) \

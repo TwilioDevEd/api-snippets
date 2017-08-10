@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 """Fax snippet."""
 
 from flask.ext.script import Manager
@@ -7,6 +6,7 @@ from sms2fa_flask import prepare_app
 from flask import Flask, Response, request
 
 app = Flask(__name__)
+
 
 @app.route('/fax/sent', methods=['POST'])
 def fax_sent():
@@ -31,6 +31,7 @@ def fax_received():
 
     # Respond with empty 200/OK to Twilio
     return '', 200
+
 
 if __name__ == "__main__":
     Manager(app).run()

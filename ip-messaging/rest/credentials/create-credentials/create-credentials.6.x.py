@@ -6,6 +6,8 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-credential = client.chat.credentials.create("gcm", friendly_name="Friendly Name", api_key="apiKey")
+credential = client.chat.credentials.create(
+    "gcm", friendly_name="Friendly Name", api_key="apiKey"
+)
 
 print(credential)

@@ -6,11 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-data = {
-    'number': "001",
-    'name': "Bulbasaur",
-    'attack': 49
-}
+data = {'number': "001", 'name': "Bulbasaur", 'attack': 49}
 
 list_item = client.sync \
                   .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \

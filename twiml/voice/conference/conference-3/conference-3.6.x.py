@@ -5,7 +5,8 @@ dial = Dial()
 dial.conference(
     'moderated-conference-room',
     start_conference_on_enter=True,
-    end_conference_on_exit=True)
+    end_conference_on_exit=True
+)
 response.append(dial)
 
 print(response)

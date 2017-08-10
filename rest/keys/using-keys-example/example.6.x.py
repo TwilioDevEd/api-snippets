@@ -8,8 +8,10 @@ api_secret = "your_api_secret"
 
 client = Client(api_key, api_secret, account_sid)
 
-message = client.messages.create("+15558675309",
-                                 from_='+15017250604',  # twilio number
-                                 body='Never gonna give you up.')
+message = client.messages.create(
+    "+15558675309",
+    from_='+15017250604',  # twilio number
+    body='Never gonna give you up.'
+)
 
 print(message.sid)

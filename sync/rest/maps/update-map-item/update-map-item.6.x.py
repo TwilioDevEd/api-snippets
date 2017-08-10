@@ -6,10 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-data = {
-    'name': "Stephen Curry",
-    'level': 31,
-    'username': "spicy_curry"}
+data = {'name': "Stephen Curry", 'level': 31, 'username': "spicy_curry"}
 
 map_item = client.sync \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \

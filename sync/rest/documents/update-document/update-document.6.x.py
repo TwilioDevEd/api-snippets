@@ -12,7 +12,8 @@ new_data = {
     'movie_title': "On The Line",
     'show_times': None,
     'starring': ["Lance Bass", "Joey Fatone"],
-    'genre': "Romance"}
+    'genre': "Romance"
+}
 
 document = client.sync \
                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \

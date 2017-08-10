@@ -1,8 +1,9 @@
 from flask import Flask, request, redirect
-from __future__ import with_statement   # Only necessary for Python 2.5
+from __future__ import with_statement  # Only necessary for Python 2.5
 import twilio.twiml
 
 app = Flask(__name__)
+
 
 @app.route("/handle-gather", methods=['GET', 'POST'])
 def handle_gather():
@@ -27,6 +28,7 @@ def handle_gather():
     # If the caller pressed anything but 1, redirect them to the homepage.
     else:
         return redirect("/")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

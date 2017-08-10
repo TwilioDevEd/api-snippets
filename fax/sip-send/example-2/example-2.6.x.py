@@ -11,6 +11,7 @@ fax = client.fax.v1.faxes.create(
     to="sip:kate@example.com",
     media_url="https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf",
     sip_auth_username="jack",
-    sip_auth_password="secret")
+    sip_auth_password="secret"
+)
 
 print(fax.sid)

@@ -8,8 +8,10 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 capability = WorkerCapabilityToken(
-    account_sid=account_sid, auth_token=auth_token,
-    workspace_sid=workspace_sid, worker_sid=worker_sid
+    account_sid=account_sid,
+    auth_token=auth_token,
+    workspace_sid=workspace_sid,
+    worker_sid=worker_sid
 )
 capability.allow_update_activities()
 capability.allow_update_reservations()

@@ -13,5 +13,9 @@ country = client.pricing \
                 .fetch()
 
 for inbound_sms_price in country.inbound_sms_prices:
-    print("{} {}".format(inbound_sms_price['number_type'],
-                         inbound_sms_price['current_price']))
+    print(
+        "{} {}".format(
+            inbound_sms_price['number_type'], inbound_sms_price['current_price'
+                                                                ]
+        )
+    )

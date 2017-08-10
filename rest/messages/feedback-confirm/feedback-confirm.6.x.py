@@ -8,6 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 
+
 @app.route("/confirm", methods=['GET'])
 def incoming_sms():
     unique_id = request.values.get('id', None)
@@ -20,13 +21,13 @@ def incoming_sms():
     account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     auth_token = "your_auth_token"
 
-
     client = Client(account_sid, auth_token)
     client.messages(message_sid) \
-          .feedback
-          .create(outcome="confirmed")
+        .feedback \
+        .create(outcome="confirmed")
 
     return ('Thank you!', 200)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

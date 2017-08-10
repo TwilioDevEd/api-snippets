@@ -3,6 +3,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
+
 @app.route("/sms", methods=['GET', 'POST'])
 def incoming_sms():
     """Send a dynamic reply to an incoming text message"""
@@ -19,6 +20,7 @@ def incoming_sms():
         resp.message("Goodbye")
 
     return str(resp)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

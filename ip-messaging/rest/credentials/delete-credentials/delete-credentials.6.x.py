@@ -6,6 +6,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-response = client.chat.credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
+response = client.chat.credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                                   ).delete()
 
 print(response)

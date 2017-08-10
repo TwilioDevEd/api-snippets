@@ -3,13 +3,15 @@ from twilio.rest import TwilioTaskRouterClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "your_auth_token"
+auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 activity_sid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = TwilioTaskRouterClient(account_sid, auth_token)
 
-activity = client.activities(workspace_sid).update(activity_sid,friendly_name='NewAvailableFriendlyName',available='true')
+activity = client.activities(workspace_sid).update(
+    activity_sid, friendly_name='NewAvailableFriendlyName', available='true'
+)
 print(activity.friendly_name)
 
 # alternatively

@@ -1,8 +1,9 @@
 from flask import Flask, request, redirect
-from __future__ import with_statement   # Only necessary for Python 2.5
+from __future__ import with_statement  # Only necessary for Python 2.5
 import twilio.twiml
 
 app = Flask(__name__)
+
 
 @app.route("/", methods=['GET', 'POST'])
 def voice():
@@ -15,11 +16,14 @@ def voice():
 
     # Gather digits.
     with resp.gather(numDigits=1, action="/handle-gather", method="POST") as g:
-        g.say("""To speak to a realpreson, press 1. 
+        g.say(
+            """To speak to a realpreson, press 1. 
                  Press 2 to record a message for a Twilio educator.
-                 Press any other key to start over.""")
+                 Press any other key to start over."""
+        )
 
     return str(resp)
+
 
 @app.route("/handle-gather", methods=['GET', 'POST'])
 def handle_gather():
@@ -45,6 +49,7 @@ def handle_gather():
     else:
         return redirect("/")
 
+
 @app.route("/handle-recording", methods=['GET', 'POST'])
 def handle_recording():
     """Play back the caller's recording."""
@@ -56,6 +61,7 @@ def handle_recording():
     resp.play(recording_url)
     resp.say("Goodbye.")
     return str(resp)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

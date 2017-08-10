@@ -14,6 +14,6 @@ list_permission = client.sync \
                         .sync_list_permissions("bob") \
                         .update(True, True, False)
 
-print(list_permission.read) # True
-print(list_permission.write) # True
-print(list_permission.manage) # False
+print(list_permission.read)  # True
+print(list_permission.write)  # True
+print(list_permission.manage)  # False
