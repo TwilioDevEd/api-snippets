@@ -11,8 +11,8 @@ const credentialOpts = {
   type: 'gcm',
 };
 
-client.notify
-  .credentials.create(credentialOpts)
+client.notify.credentials
+  .create(credentialOpts)
   .then(credential => console.log(credential.sid))
   .catch(error => console.log(error))
   .done();

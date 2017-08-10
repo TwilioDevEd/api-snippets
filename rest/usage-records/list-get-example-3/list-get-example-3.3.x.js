@@ -10,4 +10,4 @@ const filterOpts = {
   endDate: '2012-09-30',
 };
 
-client.usage.records.each(filterOpts, (record) => console.log(record.price));
+client.usage.records.each(filterOpts, record => console.log(record.price));

@@ -12,8 +12,8 @@ public class Example {
 
         Command command = Command
                 .creator("SGVsbG8sIE1hY2hpbmUh==")
+                .setSim("AliceSmithSmartMeter")
                 .setCommandMode(Command.CommandMode.forValue("binary"))
-                .setCallbackUrl("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
                 .create();
 
         System.out.println(command);

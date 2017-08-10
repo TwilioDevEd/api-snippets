@@ -4,7 +4,7 @@ app.post('/voice', (request, response) => {
 
   /** helper function to set up a <Gather> */
   function gather() {
-    const gatherNode = twiml.gather({numDigits: 1});
+    const gatherNode = twiml.gather({ numDigits: 1 });
     gatherNode.say('For sales, press 1. For support, press 2.');
 
     // If the user doesn't enter input, loop
@@ -14,10 +14,14 @@ app.post('/voice', (request, response) => {
   // If the user entered digits, process their request
   if (request.body.Digits) {
     switch (request.body.Digits) {
-      case '1': twiml.say('You selected sales. Good for you!'); break;
-      case '2': twiml.say('You need support. We will help!'); break;
+      case '1':
+        twiml.say('You selected sales. Good for you!');
+        break;
+      case '2':
+        twiml.say('You need support. We will help!');
+        break;
       default:
-        twiml.say('Sorry, I don\'t understand that choice.').pause();
+        twiml.say("Sorry, I don't understand that choice.").pause();
         gather();
         break;
     }

@@ -1,15 +1,18 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
-var service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+const client = new Twilio(accountSid, authToken);
+const service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.documents.create({
-  uniqueName: 'MyFirstDocument',
-  data: { firstName: 'Alice' }
-}).then(function(response) {
-  console.log(response);
-}).catch(function(error) {
-  console.log(error);
-});
+service.documents
+  .create({
+    uniqueName: 'MyFirstDocument',
+    data: { firstName: 'Alice' },
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });

@@ -4,10 +4,8 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.taskrouter.v1
-  .workspaces
-  .create({
-    friendlyName: 'NewWorkspace',
-    eventCallbackUrl: 'http://requestb.in/vh9reovh',
-    template: 'FIFO'
-  });
+client.taskrouter.v1.workspaces.create({
+  friendlyName: 'NewWorkspace',
+  eventCallbackUrl: 'http://requestb.in/vh9reovh',
+  template: 'FIFO',
+});

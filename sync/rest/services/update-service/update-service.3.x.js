@@ -1,14 +1,17 @@
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = 'your_auth_token';
-var Twilio = require('twilio').Twilio;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Twilio = require('twilio').Twilio;
 
-var client = new Twilio(accountSid, authToken);
+const client = new Twilio(accountSid, authToken);
 
-client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.sync
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
-    friendlyName: 'NEW_FRIENDLY_NAME'
-  }).then(function(response) {
+    friendlyName: 'NEW_FRIENDLY_NAME',
+  })
+  .then(response => {
     console.log(response);
-  }).catch(function(error) {
+  })
+  .catch(error => {
     console.log(error);
   });

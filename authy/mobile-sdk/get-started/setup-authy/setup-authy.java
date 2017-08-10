@@ -1,1 +1,1 @@
-Authy authy = Authy.getInstance(this);
+TwilioAuth twilioAuth = TwilioAuth.getInstance(this);

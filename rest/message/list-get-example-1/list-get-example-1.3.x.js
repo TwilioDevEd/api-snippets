@@ -4,4 +4,4 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.messages.each((message) => console.log(message.body));
+client.messages.each(message => console.log(message.body));

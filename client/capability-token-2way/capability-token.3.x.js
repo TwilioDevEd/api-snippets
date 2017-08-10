@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const ClientCapability = require('twilio').jwt.ClientCapability;
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/token', (req, res) => {
   // put your Twilio API credentials here
@@ -16,10 +16,10 @@ app.get('/token', (req, res) => {
 
   const capability = new ClientCapability({
     accountSid: accountSid,
-    authToken: authToken
+    authToken: authToken,
   });
   capability.addScope(
-    new ClientCapability.OutgoingClientScope({applicationSid: appSid})
+    new ClientCapability.OutgoingClientScope({ applicationSid: appSid })
   );
   capability.addScope(
     new ClientCapability.IncomingClientScope(req.body.ClientName)
@@ -31,7 +31,7 @@ app.get('/token', (req, res) => {
 });
 
 app.post('/voice', (req, res) => {
-    // TODO: Create TwiML response
+  // TODO: Create TwiML response
 });
 
 http.createServer(app).listen(1337, '127.0.0.1');

@@ -10,7 +10,7 @@ client.lookups.v1
   .fetch({
     addOns: 'payfone_tcpa_compliance',
     addOnsData: {
-      'payfone_tcpa_compliance.RightPartyContactedDate': '20160101'
-    }
+      'payfone_tcpa_compliance.RightPartyContactedDate': '20160101',
+    },
   })
   .then(number => console.log(number.addOns));

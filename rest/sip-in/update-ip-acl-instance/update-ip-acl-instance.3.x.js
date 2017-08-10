@@ -4,10 +4,11 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.sip.ipAccessControlLists('AL32a3c49700934481addd5ce1659f04d2')
+client.sip
+  .ipAccessControlLists('AL32a3c49700934481addd5ce1659f04d2')
   .update({
     friendlyName: 'Avons Lieutenants',
   })
-  .then((ipAccessControlList) => {
+  .then(ipAccessControlList => {
     console.log(ipAccessControlList.friendlyName);
   });

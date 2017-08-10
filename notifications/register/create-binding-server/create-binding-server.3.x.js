@@ -10,7 +10,7 @@ const bindingOpts = {
   identity: '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
   bindingType: 'gcm',
   address: 'gcm_device_token',
-  tag: ['premium', 'new user']
+  tag: ['premium', 'new user'],
 };
 
 client.notify

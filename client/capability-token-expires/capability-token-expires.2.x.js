@@ -1,1 +1,1 @@
-var token = capability.generate(600);
+const token = capability.generate(600);

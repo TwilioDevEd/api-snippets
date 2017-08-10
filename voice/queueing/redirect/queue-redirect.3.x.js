@@ -2,7 +2,7 @@
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const twiml = new VoiceResponse();
 
-twiml.say('You will now be connected to the first caller in the queue.')
+twiml.say('You will now be connected to the first caller in the queue.');
 const dial = twiml.dial();
 dial.queue('Queue Demo');
 twiml.redirect();

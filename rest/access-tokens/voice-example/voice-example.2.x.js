@@ -12,7 +12,7 @@ const identity = 'user';
 
 // Create a "grant" which enables a client to use Voice as a given user
 const voiceGrant = new VoiceGrant({
-    outgoingApplicationSid: outgoingApplicationSid
+  outgoingApplicationSid: outgoingApplicationSid,
 });
 
 // Create an access token which we will sign and return to the client,

@@ -7,7 +7,4 @@ const taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
 // update a task's attributes
-client.taskrouter.v1
-  .workspaces(workspaceSid)
-  .tasks(taskSid)
-  .remove();
+client.taskrouter.v1.workspaces(workspaceSid).tasks(taskSid).remove();

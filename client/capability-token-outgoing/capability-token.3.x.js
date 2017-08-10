@@ -14,10 +14,10 @@ app.get('/token', (req, res) => {
 
   const capability = new ClientCapability({
     accountSid: accountSid,
-    authToken: authToken
+    authToken: authToken,
   });
   capability.addScope(
-    new ClientCapability.OutgoingClientScope({applicationSid: appSid})
+    new ClientCapability.OutgoingClientScope({ applicationSid: appSid })
   );
   const token = capability.toJwt();
 

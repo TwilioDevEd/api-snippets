@@ -7,6 +7,6 @@ const client = require('twilio')(accountSid, authToken);
 client.wireless
   .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   .fetch()
-  .then(function(response) {
+  .then(response => {
     console.log(response);
   });
