@@ -15,8 +15,8 @@ class Example
         TwilioClient.Init(accountSid, authToken);
         var command = CommandResource.Create(
             command: "SGVsbG8sIE1hY2hpbmUh==",
-            commandMode: CommandResource.CommandModeEnum.Binary,
-            callbackUrl: new Uri("https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback")
+            sim: "AliceSmithSmartMeter",
+            commandMode: CommandResource.CommandModeEnum.Binary
         );
 
         Console.WriteLine(command.Sid);

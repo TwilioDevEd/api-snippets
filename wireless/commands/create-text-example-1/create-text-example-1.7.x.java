@@ -11,9 +11,8 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         Command command = Command.creator("wakeup")
-                .setCallbackUrl("https://sim-manager.mycompany.com/commands/" +
-                        "mobile-terminated-command-callback")
-                .create();
+            .setSim("AliceSmithSmartMeter")
+            .create();
 
         System.out.println(command);
     }
