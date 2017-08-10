@@ -9,8 +9,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 command = client.wireless.commands.create(
   command: "wakeup",
-  sim: "AliceSmithSmartMeter",
-  callback_url: "https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"
+  sim: "AliceSmithSmartMeter"
 )
 
 puts command

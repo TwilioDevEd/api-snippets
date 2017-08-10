@@ -10,11 +10,9 @@ $client = new Client($sid, $token);
 
 $command = $client->wireless
     ->commands
-    ->create([
+    ->create("SGVsbG8sIE1hY2hpbmUh==", [
       "sim" => "AliceSmithSmartMeter",
-      "command" => "SGVsbG8sIE1hY2hpbmUh==",
-      "commandMode" => "binary",
-      "callbackUrl" => "https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback"
+      "commandMode" => "binary"
     ]);
 
 print_r($command);
