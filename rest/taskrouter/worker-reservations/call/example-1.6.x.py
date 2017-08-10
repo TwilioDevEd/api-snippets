@@ -12,14 +12,13 @@ client = Client(account_sid, auth_token)
 
 # call using a reservation
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).reservations(reservation_sid) \
-        .update(
-          instruction='call',
-          call_from='+15558675309',
-          call_url='http://example.com/agent_answer',
-          call_status_callback_url='http://example.com/agent_answer_status_cb',
-          call_accept='true'
-)
+    .workers(worker_sid).reservations(reservation_sid) \
+    .update(
+        instruction='call',
+        call_from='+15558675309',
+        call_url='http://example.com/agent_answer',
+        call_status_callback_url='http://example.com/agent_answer_status_cb',
+        call_accept='true')
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

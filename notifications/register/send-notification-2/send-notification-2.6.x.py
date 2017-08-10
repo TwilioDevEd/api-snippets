@@ -11,6 +11,5 @@ notification = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .notifications.create(
         identity='00000001',
         body='Hello Bob',
-        tag='preferred_device'
-    )
+        tag='preferred_device')
 print(notification.sid)

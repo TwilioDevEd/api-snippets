@@ -9,7 +9,7 @@ AUTH_TOKEN = 'your_auth_token'
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 notification = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .notifications.create(
-        identity='00000001',  # We recommend using a GUID or other anonymized identifier for Identity.
-        body='Knok-Knok! This is your first Notify SMS'
-    )
-print(binding.sid)
+        # We recommend using a GUID or other anonymized identifier for Identity
+        identity='00000001',
+        body='Knok-Knok! This is your first Notify SMS')
+print(notification.sid)

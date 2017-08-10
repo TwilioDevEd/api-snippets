@@ -6,9 +6,10 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
+add_ons_data = {"payfone_tcpa_compliance.RightPartyContactedDate": "20160101"}
+
 number = client.lookups \
-               .phone_numbers("+16502530000") \
-               .fetch(add_ons="payfone_tcpa_compliance",
-                      add_ons_data={"payfone_tcpa_compliance.RightPartyContactedDate": "20160101"})
+    .phone_numbers("+16502530000") \
+    .fetch(add_ons="payfone_tcpa_compliance", add_ons_data=add_ons_data)
 
 print(number.add_ons)

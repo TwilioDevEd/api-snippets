@@ -9,9 +9,9 @@ client = Client(account_sid, auth_token)
 data = {'name': "Stephen Curry", 'level': 31, 'username': "spicy_curry"}
 
 map_item = client.sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .sync_maps("Players") \
-                 .sync_map_items("steph_curry") \
-                 .update(data=data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps("Players") \
+    .sync_map_items("steph_curry") \
+    .update(data=data)
 
 print(map_item.data)

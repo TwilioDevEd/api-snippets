@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect
+from flask import Flask
 import twilio.twiml
 
 app = Flask(__name__)

@@ -7,5 +7,5 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 client.sip \
-      .domains("SD32a3c49700934481addd5ce1659f04d2") \
-      .delete()
+    .domains("SD32a3c49700934481addd5ce1659f04d2") \
+    .delete()

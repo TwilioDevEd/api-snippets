@@ -2,7 +2,6 @@
 """Fax snippet."""
 
 from flask.ext.script import Manager
-from sms2fa_flask import prepare_app
 from flask import Flask, Response, request
 
 app = Flask(__name__)

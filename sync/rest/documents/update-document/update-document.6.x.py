@@ -16,8 +16,8 @@ new_data = {
 }
 
 document = client.sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .documents("MyFirstDocument") \
-                 .update(data=new_data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents("MyFirstDocument") \
+    .update(data=new_data)
 
 print(document.data)

@@ -7,8 +7,8 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 list_instance = client.sync \
-                      .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                      .sync_lists("MyCollection") \
-                      .fetch() \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_lists("MyCollection") \
+    .fetch() \
 
 print(list_instance.sid)

@@ -1,8 +1,7 @@
-from flask import Flask, request
-from requests.auth import HTTPBasicAuth
+from flask import Flask
+from twilio import Client
 
 import logging
-import requests
 
 logging.basicConfig(level=logging.INFO)
 
@@ -11,8 +10,7 @@ app = Flask(__name__)
 
 @app.route("/confirm", methods=['GET'])
 def incoming_sms():
-    unique_id = request.values.get('id', None)
-
+    # unique_id = request.values.get('id', None)
     # Use a unique id associated with your user to figure out the Message Sid
     # of the message that prompted this action
     message_sid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
@@ -22,9 +20,7 @@ def incoming_sms():
     auth_token = "your_auth_token"
 
     client = Client(account_sid, auth_token)
-    client.messages(message_sid) \
-        .feedback \
-        .create(outcome="confirmed")
+    client.messages(message_sid).feedback.create(outcome="confirmed")
 
     return ('Thank you!', 200)
 

@@ -7,7 +7,8 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-ratePlan = client.wireless.rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-                .fetch()
+ratePlan = client.wireless \
+    .rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') \
+    .fetch()
 
 print(ratePlan)

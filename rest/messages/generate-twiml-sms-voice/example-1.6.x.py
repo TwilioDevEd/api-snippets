@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)

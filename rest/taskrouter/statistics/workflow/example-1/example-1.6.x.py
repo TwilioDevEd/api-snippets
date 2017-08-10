@@ -10,7 +10,7 @@ workflow_sid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 statistics = client.taskrouter.workspaces(workspace_sid) \
-        .workflows(workflow_sid).statistics().fetch()
+    .workflows(workflow_sid).statistics().fetch()
 
 print(statistics.cumulative["avg_task_acceptance_time"])
 print(statistics.cumulative["tasks_entered"])

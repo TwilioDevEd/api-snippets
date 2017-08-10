@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-credential_list_mapping = client.sip.credential_list_mappings(
-    "SD32a3c49700934481addd5ce1659f04d2"
-).create(credential_list_sid="CL32a3c49700934481addd5ce1659f04d2")
+credential_list_mapping = client.sip \
+    .credential_list_mappings("SD32a3c49700934481addd5ce1659f04d2") \
+    .create(credential_list_sid="CL32a3c49700934481addd5ce1659f04d2")
 print(credential_list_mapping.sid)

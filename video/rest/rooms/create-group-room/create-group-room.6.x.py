@@ -6,10 +6,11 @@ api_key_sid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 api_key_secret = "your_api_key_secret"
 client = Client(api_key_sid, api_key_secret)
 
-group_room = client.video.rooms.create( \
-    unique_name='DailyStandup', \
-    type='group', \
-    record_participants_on_connect=True, \
-    status_callback='http://example.org')
+group_room = client.video.rooms.create(
+    unique_name='DailyStandup',
+    type='group',
+    record_participants_on_connect=True,
+    status_callback='http://example.org'
+)
 
 print(group_room.sid)

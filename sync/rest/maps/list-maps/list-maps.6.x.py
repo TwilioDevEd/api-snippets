@@ -7,9 +7,9 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 maps = client.sync \
-             .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-             .sync_maps \
-             .list()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps \
+    .list()
 
 for map_instance in maps:
     print(map_instance.unique_name)

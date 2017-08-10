@@ -1,5 +1,5 @@
 # Download the Python helper library from twilio.com/docs/python/install
-from flask import Flask, request, Response
+from flask import Flask
 import twilio.twiml
 
 app = Flask(__name__)

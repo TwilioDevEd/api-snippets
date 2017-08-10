@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
 domain = client.sip \
-               .domains("SD27f0288630a668bdfbf177f8e22f5ccc") \
-               .fetch()
+    .domains("SD27f0288630a668bdfbf177f8e22f5ccc") \
+    .fetch()
 
 print(domain.voice_method)

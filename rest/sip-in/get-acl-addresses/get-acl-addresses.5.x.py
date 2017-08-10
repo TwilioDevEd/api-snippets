@@ -7,5 +7,6 @@ auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 # A list of ip_address objects with the properties described above
-ip_addresss = client.sip.ip_addresses("AL32a3c49700934481addd5ce1659f04d2"
-                                      ).list()
+ip_addresss = client.sip \
+    .ip_addresses("AL32a3c49700934481addd5ce1659f04d2") \
+    .list()

@@ -7,7 +7,6 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-sim = client.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-                    .fetch()
+sim = client.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA').fetch()
 
 print(sim)

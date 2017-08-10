@@ -9,9 +9,9 @@ client = Client(account_sid, auth_token)
 data = {'number': "001", 'name': "Bulbasaur", 'attack': 49}
 
 list_item = client.sync \
-                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                  .sync_lists("MyCollection") \
-                  .sync_list_items \
-                  .create(data=data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_lists("MyCollection") \
+    .sync_list_items \
+    .create(data=data)
 
 print(list_item.data)

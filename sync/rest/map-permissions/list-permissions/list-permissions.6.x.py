@@ -7,10 +7,10 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 map_permissions = client.sync \
-                        .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                        .sync_maps("Players") \
-                        .sync_map_permissions \
-                        .list()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps("Players") \
+    .sync_map_permissions \
+    .list()
 
 for map_permission in map_permissions:
     print(map_permission.unique_name)

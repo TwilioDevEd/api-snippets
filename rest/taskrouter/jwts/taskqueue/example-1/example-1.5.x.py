@@ -1,5 +1,4 @@
 # Download the Python helper library from twilio.com/docs/python/install
-from twilio import jwt
 from twilio.task_router import TaskRouterTaskQueueCapability
 
 # Your Account Sid and Auth Token from twilio.com/user/account

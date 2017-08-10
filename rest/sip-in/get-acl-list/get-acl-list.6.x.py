@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
 ip_access_control_list = client.sip \
-        .ip_access_control_lists("AL32a3c49700934481addd5ce1659f04d2") \
-        .fetch()
+    .ip_access_control_lists("AL32a3c49700934481addd5ce1659f04d2") \
+    .fetch()
 
 print(ip_access_control_list.friendly_name)

@@ -6,8 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-credential = client.sip.credentials("CL32a3c49700934481addd5ce1659f04d2"
-                                    ).create(
-                                        username="WeeBey", password="05"
-                                    )
+credential = client.sip \
+    .credentials("CL32a3c49700934481addd5ce1659f04d2") \
+    .create(username="WeeBey", password="05")
 print(credential.sid)

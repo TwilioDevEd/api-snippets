@@ -10,9 +10,9 @@ client = Client(ACCOUNT_SID, AUTH_TOKEN)
 binding = client.notify.v1.services(sid='ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .bindings.create(
         endpoint='XXXXXXXXXXXXXXX',
-        identity='00000001',  # We recommend using a GUID or other anonymized identifier for Identity.
+        # We recommend using a GUID or other anonymized identifier for Identity
+        identity='00000001',
         binding_type='gcm',
         address='gcm_device_token',
-        tag=['premium', 'new user']
-    )
+        tag=['premium', 'new user'])
 print(binding.sid)

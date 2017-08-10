@@ -7,8 +7,8 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 map_instance = client.sync \
-                     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                     .sync_maps("Players") \
-                     .fetch()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps("Players") \
+    .fetch()
 
 print(map_instance.sid)

@@ -16,8 +16,8 @@ data = {
 }
 
 document = client.sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .documents \
-                 .create(unique_name="MyFirstDocument", data=data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents \
+    .create(unique_name="MyFirstDocument", data=data)
 
 print(document.sid)

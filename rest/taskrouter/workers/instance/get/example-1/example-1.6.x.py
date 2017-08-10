@@ -10,6 +10,6 @@ worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 worker = client.taskrouter.workspaces(workspace_sid) \
-                                      .workers(worker_sid).fetch()
+    .workers(worker_sid).fetch()
 
 print(worker.friendly_name)

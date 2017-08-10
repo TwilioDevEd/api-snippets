@@ -7,5 +7,6 @@ auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 # A list of credential objects with the properties described above
-credentials = client.sip.credentials("CL32a3c49700934481addd5ce1659f04d2"
-                                     ).list()
+credentials = client.sip \
+    .credentials("CL32a3c49700934481addd5ce1659f04d2") \
+    .list()
