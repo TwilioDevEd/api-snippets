@@ -12,6 +12,6 @@ client.addresses
     city: 'Racoon',
     region: 'Mordor',
     postalCode: '150',
-    isoCountry: 'AX',
+    isoCountry: 'AX'
   })
   .then(address => console.log(address.customerName));
