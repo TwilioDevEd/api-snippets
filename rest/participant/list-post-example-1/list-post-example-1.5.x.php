@@ -8,11 +8,14 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$command = $client->wireless
-    ->commands
-    ->create("SGVsbG8sIE1hY2hpbmUh==", [
-      "sim" => "AliceSmithSmartMeter",
-      "commandMode" => "binary"
+// Get an object from its sid. If you do not have a sid,
+// check out the list resource examples on this page
+$participant = $client
+    ->conferences("AgentConf12")
+    ->participants
+    ->create([
+        'from' => '+18180021216',
+        'to' => '+15624421212'
     ]);
 
-print_r($command);
+echo $participant->callSid;

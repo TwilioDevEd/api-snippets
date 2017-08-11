@@ -6,10 +6,9 @@ const client = require('twilio')(accountSid, authToken);
 
 client.wireless.commands
   .create({
-    commandMode: 'binary',
     command: 'SGVsbG8sIE1hY2hpbmUh==',
-    callbackUrl:
-      'https://sim-manager.mycompany.com/commands/mobile-terminated-command-callback',
+    sim: 'AliceSmithSmartMeter',
+    commandMode: 'binary'
   })
   .then(response => {
     console.log(response);

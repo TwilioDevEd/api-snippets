@@ -4,11 +4,9 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.wireless.commands
-  .create({
-    command: 'wakeup',
-    sim: "AliceSmithSmartMeter"
+client.conferences('AgentConf12')
+  .participants.create({
+    to: '+15624421212',
+    from: '+18180021216'
   })
-  .then(response => {
-    console.log(response);
-  });
+  .then((participant) => console.log(participant.sid));
