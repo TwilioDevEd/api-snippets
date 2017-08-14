@@ -45,8 +45,14 @@ class SnippetTester
   end
 
   def run_before_test
-    if !ENV['SNIPPET_LANGUAGE'] || (ENV['SNIPPET_LANGUAGE'].include? 'node')
-      LanguageHandler::Node.run_before_test
+    Model::Snippet::verify_snippet_language
+
+    valid_langs = Model::Snippet::LANGUAGES.keys.map(&:to_s)
+    langs_to_test = ENV['SNIPPET_LANGUAGE'] || valid_langs.join(':')
+    langs_to_test.split(':').each do |lang|
+      Object.const_get('LanguageHandler')
+            .const_get(lang.capitalize)
+            .run_before_test(@parent_source_folder)
     end
   end
 
