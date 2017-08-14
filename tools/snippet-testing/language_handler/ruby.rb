@@ -4,6 +4,15 @@ module LanguageHandler
   class Ruby < BaseHandler
     LANG_CNAME = 'rb'.freeze
 
+    def self.run_before_test(directory)
+      Dir.chdir(directory) do
+        output = `rubocop -a`
+        if $? != 0
+          abort(output)
+        end
+      end
+    end
+
     private
 
     def execute_command(file)
