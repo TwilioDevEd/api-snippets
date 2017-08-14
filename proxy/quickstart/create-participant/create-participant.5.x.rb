@@ -11,10 +11,11 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 participant = client.preview.proxy
-    .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    .participants.create(
-        identifier: '+15558675309',
-        friendly_name: 'Alice')
+                    .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                    .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                    .participants.create(
+                      identifier: '+15558675309',
+                      friendly_name: 'Alice'
+                    )
 
 puts participant.sid

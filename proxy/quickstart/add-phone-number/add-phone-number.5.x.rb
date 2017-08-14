@@ -11,7 +11,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 phone_number = client.preview
-    .proxy.services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    .phone_numbers.create(sid: 'PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                     .proxy.services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                     .phone_numbers.create(sid: 'PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 puts phone_number.sid

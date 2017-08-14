@@ -8,7 +8,7 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
   response = service.sync_maps('Players')
-    .sync_map_permissions.list
+                    .sync_map_permissions.list
   puts response
 rescue Twilio::REST::TwilioError => err
   puts err

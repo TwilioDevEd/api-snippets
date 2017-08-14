@@ -9,9 +9,10 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @service = @client.messaging.v1
-  .services
-  .create(
-    friendly_name: 'My First Service',
-    status_callback: 'http://requestb.in/1234abcd')
+                  .services
+                  .create(
+                    friendly_name: 'My First Service',
+                    status_callback: 'http://requestb.in/1234abcd'
+                  )
 
 puts @service.sid

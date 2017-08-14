@@ -8,7 +8,7 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
   response = service.sync_lists('MyFirstList')
-    .sync_list_permissions('bob').fetch
+                    .sync_list_permissions('bob').fetch
   puts response
 rescue Twilio::REST::TwilioError => err
   puts err

@@ -7,4 +7,4 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-client.video.recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
+client.video.recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').delete

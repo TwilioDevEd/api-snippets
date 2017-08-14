@@ -8,7 +8,8 @@ api_key_secret = 'your_api_key_secret'
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
 recordings_in_room = client.video.recordings.list(
-  grouping_sid: ['RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'])
+  grouping_sid: ['RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX']
+)
 
 recordings_in_room.each do |recording|
   puts recording.sid

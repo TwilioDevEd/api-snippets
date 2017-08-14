@@ -13,9 +13,10 @@ identity = 'user'
 token = Twilio::Util::AccessToken.new(
   account_sid,
   api_key,
-  api_secret, 
+  api_secret,
   3600,
-  identity);
+  identity
+)
 
 # Create Voice grant for our token
 grant = Twilio::Util::AccessToken::VoiceGrant.new

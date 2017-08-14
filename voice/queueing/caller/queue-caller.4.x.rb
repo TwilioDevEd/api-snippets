@@ -5,7 +5,7 @@ require 'twilio-ruby'
 post '/caller/?' do
   response = Twilio::TwiML::Response.new do |r|
     # Use <Enqueue> verb to place caller in a <Queue>
-    r.Enqueue "Queue Demo"
+    r.Enqueue 'Queue Demo'
   end
   response.text
 end

@@ -6,7 +6,6 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::PricingClient.new account_sid, auth_token
 
-
 @countries = @client.phone_numbers.countries.list
 @countries.each do |c|
   puts c.iso_country

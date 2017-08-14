@@ -7,9 +7,9 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 command = client.wireless.commands.create(
-  command: "SGVsbG8sIE1hY2hpbmUh==",
-  sim: "AliceSmithSmartMeter",
-  command_mode: "binary"
+  command: 'SGVsbG8sIE1hY2hpbmUh==',
+  sim: 'AliceSmithSmartMeter',
+  command_mode: 'binary'
 )
 
 puts command

@@ -45,7 +45,7 @@ class SnippetTester
   end
 
   def run_before_test
-    Model::Snippet::verify_snippet_language
+    Model::Snippet.verify_snippet_language
 
     valid_langs = Model::Snippet::LANGUAGES.keys.map(&:to_s)
     langs_to_test = ENV['SNIPPET_LANGUAGE'] || valid_langs.join(':')
@@ -86,7 +86,7 @@ class SnippetTester
     current_folder_has_config = import_existing_config(folder_path)
     # import snippet json
     import_existing_snippet(folder_path, current_config)
-    Dir.glob(folder_path+"/*") do |folder|
+    Dir.glob(folder_path + '/*') do |folder|
       scan_folder_configs(folder) if File.directory?(folder)
     end
     erase_added_config if current_folder_has_config
@@ -99,7 +99,7 @@ class SnippetTester
       puts test_config
       return true
     end
-    return false
+    false
   end
 
   def erase_added_config
@@ -149,11 +149,11 @@ class SnippetTester
     )
 
     java6_language_handler = LanguageHandler::Java6.new(
-      Model::Dependency.java_6_path,
+      Model::Dependency.java_6_path
     )
 
     java7_language_handler = LanguageHandler::Java7.new(
-      Model::Dependency.java_7_path,
+      Model::Dependency.java_7_path
     )
 
     {
@@ -203,7 +203,7 @@ def print_errors_if_any
      "#                              #\n"\
      "# Build Finished Successfully! #\n"\
      "#                              #\n"\
-     "################################"
+     '################################'
 end
 
 def parse_options(args)
@@ -236,7 +236,7 @@ def parse_options(args)
   options
 end
 
-if __FILE__ == $0
+if $PROGRAM_NAME == __FILE__
   begin
     options = parse_options(ARGV)
     tester = SnippetTester.new(options.source_folder, options.test_default)

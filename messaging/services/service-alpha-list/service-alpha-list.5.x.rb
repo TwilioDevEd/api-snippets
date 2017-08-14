@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @alpha_senders = @client.messaging.v1
-  .services('MG2172dd2db502e20dd981ef0d67850e1a')
-  .alpha_senders.list
+                        .services('MG2172dd2db502e20dd981ef0d67850e1a')
+                        .alpha_senders.list
 
 @alpha_senders.each do |alpha_sender|
   puts alpha_sender.url

@@ -10,6 +10,6 @@ message_sid = 'IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Retrieve the message
 service = @client.chat.v2.services(service_sid)
-channel = service.channels(channel_sid) 
+channel = service.channels(channel_sid)
 message = channel.messages(message_sid).fetch
 puts "#{message.sid} #{message.body}"

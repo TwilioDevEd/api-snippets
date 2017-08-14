@@ -9,10 +9,10 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @caller_id = @client.validation_requests
-                 .create(
-                   friendly_name: 'My Company Line',
-                   phone_number: '+14158675309'
-                 )
+                    .create(
+                      friendly_name: 'My Company Line',
+                      phone_number: '+14158675309'
+                    )
 puts @caller_id.phone_number
 puts @caller_id.friendly_name
 puts @caller_id.validation_code

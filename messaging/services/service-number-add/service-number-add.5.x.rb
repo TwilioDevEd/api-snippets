@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @phone_number = @client.messaging.v1
-  .services('MG2172dd2db502e20dd981ef0d67850e1a')
-  .phone_numbers
-  .create(phone_number_sid: 'PN557ce644e5ab84fa21cc21112e22c485')
+                       .services('MG2172dd2db502e20dd981ef0d67850e1a')
+                       .phone_numbers
+                       .create(phone_number_sid: 'PN557ce644e5ab84fa21cc21112e22c485')
 
 puts @phone_number.sid

@@ -1,5 +1,5 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
+require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
@@ -17,4 +17,4 @@ token = capability.generate_token
 # Override this default timeout by specifiying a new value (in seconds).
 # For example, to generate a token good for 8 hours:
 
-token = capability.generate_token 28800 # 60 * 60 * 8
+token = capability.generate_token 28_800 # 60 * 60 * 8

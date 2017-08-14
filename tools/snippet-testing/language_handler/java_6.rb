@@ -15,7 +15,7 @@ module LanguageHandler
     end
 
     def get_dependencies
-      Model::Dependency.new().get_java_6_jars
+      Model::Dependency.new.get_java_6_jars
     end
 
     def test_class_name

@@ -1,5 +1,5 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
+require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@participant = @client.account.conferences.get('CFbbe4632a3c49700934481addd5ce1659').participants.get("CA386025c9bf5d6052a1d1ea42b4d16662")
+@participant = @client.account.conferences.get('CFbbe4632a3c49700934481addd5ce1659').participants.get('CA386025c9bf5d6052a1d1ea42b4d16662')
 puts @participant.start_conference_on_enter

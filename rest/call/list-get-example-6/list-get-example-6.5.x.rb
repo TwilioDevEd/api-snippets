@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 @client.calls.list(
   status: 'busy',
-    to: '+15558675309'
+  to: '+15558675309'
 ).each do |call|
   puts call.start_time
 end

@@ -9,5 +9,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # List the users
 service = @client.chat.v2.services(service_sid)
 service.users.each do |user|
-    puts "#{user.sid} #{user.identity}"
+  puts "#{user.sid} #{user.identity}"
 end

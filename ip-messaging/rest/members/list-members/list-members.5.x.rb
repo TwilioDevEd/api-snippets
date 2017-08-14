@@ -11,5 +11,5 @@ channel_sid = 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 service = @client.chat.v2.services(service_sid)
 channel = service.channels(channel_sid)
 channel.members.each do |member|
-    puts "#{member.sid} #{member.identity}"
+  puts "#{member.sid} #{member.identity}"
 end

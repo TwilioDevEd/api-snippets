@@ -10,6 +10,6 @@ message_sid = 'IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Delete the message
 service = @client.chat.v2.services(service_sid)
-channel = service.channels(channel_sid) 
+channel = service.channels(channel_sid)
 response = channel.messages(message_sid).delete
 puts response

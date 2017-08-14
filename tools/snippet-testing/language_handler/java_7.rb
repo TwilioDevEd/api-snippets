@@ -13,7 +13,7 @@ module LanguageHandler
     end
 
     def get_dependencies
-      Model::Dependency.new().get_java_7_jars
+      Model::Dependency.new.get_java_7_jars
     end
 
     def excluded_twiml_nodes

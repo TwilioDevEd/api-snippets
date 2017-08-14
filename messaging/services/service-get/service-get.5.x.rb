@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @service = @client.messaging.v1
-  .services('MG2172dd2db502e20dd981ef0d67850e1a')
-  .fetch
+                  .services('MG2172dd2db502e20dd981ef0d67850e1a')
+                  .fetch
 
 puts @service.friendly_name

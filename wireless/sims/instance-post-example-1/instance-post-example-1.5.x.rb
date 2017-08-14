@@ -8,11 +8,11 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 sim = client.wireless
-  .sims("DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-  .update(
-    status: 'active',
-    callback_url: 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
-    callback_method: 'POST'
-  )
+            .sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+            .update(
+              status: 'active',
+              callback_url: 'https://sim-manager.mycompany.com/sim-update-callback/AliceSmithSmartMeter',
+              callback_method: 'POST'
+            )
 
 puts sim

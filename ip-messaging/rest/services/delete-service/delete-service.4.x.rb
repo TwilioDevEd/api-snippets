@@ -8,5 +8,5 @@ ip_messaging_client = Twilio::REST::IpMessagingClient.new(account_sid, auth_toke
 
 # Delete the service
 service = ip_messaging_client.services.get('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-response = service.delete()
+response = service.delete
 puts response

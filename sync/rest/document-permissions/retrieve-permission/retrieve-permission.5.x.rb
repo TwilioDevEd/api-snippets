@@ -8,7 +8,7 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 begin
   response = service.documents('MyFirstDocument')
-    .document_permissions('bob').fetch
+                    .document_permissions('bob').fetch
   puts response
 rescue Twilio::REST::TwilioError => err
   puts err

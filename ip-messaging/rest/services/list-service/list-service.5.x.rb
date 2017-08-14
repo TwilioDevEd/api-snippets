@@ -7,5 +7,5 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @client.chat.v2.services.each do |s|
-    puts "#{s.sid} #{s.friendly_name}"
+  puts "#{s.sid} #{s.friendly_name}"
 end

@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @deleted = @client.messaging.v1
-  .services('MG2172dd2db502e20dd981ef0d67850e1a')
-  .alpha_senders('AIc781610ec0b3400c9e0cab8e757da937')
-  .delete
+                  .services('MG2172dd2db502e20dd981ef0d67850e1a')
+                  .alpha_senders('AIc781610ec0b3400c9e0cab8e757da937')
+                  .delete
 
 puts @deleted

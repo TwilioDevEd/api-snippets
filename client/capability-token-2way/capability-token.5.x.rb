@@ -8,7 +8,7 @@ get '/token' do
 
   # Create an application sid at
   # twilio.com/console/phone-numbers/dev-tools/twiml-apps and use it here
-  capability.allow_client_outgoing("APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+  capability.allow_client_outgoing('APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   capability.allow_client_incoming(params['ClientName'])
   token = capability.generate
 

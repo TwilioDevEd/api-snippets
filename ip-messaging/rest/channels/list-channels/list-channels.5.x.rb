@@ -9,5 +9,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # List the channels
 service = @client.chat.v2.services(service_sid)
 channels = service.channels.each do |c|
-    puts "#{c.sid} \"#{c.unique_name}\""
+  puts "#{c.sid} \"#{c.unique_name}\""
 end

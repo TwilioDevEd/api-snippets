@@ -11,7 +11,7 @@ module LanguageHandler
       dir_name = File.dirname(file)
       classpath = get_dependencies.map do |dependency|
         "#{dependencies_directory}#{dependency}"
-      end.join ":"
+      end.join ':'
 
       cmd = "javac -cp #{classpath} #{dir_name}/#{test_class_name}.java"
       if @test_output
@@ -38,7 +38,7 @@ module LanguageHandler
 
     def write_content(content, output_file)
       dir_name = File.dirname(output_file)
-      FileUtils.mkdir_p("#{dir_name}") unless Dir.exist?("#{dir_name}")
+      FileUtils.mkdir_p(dir_name.to_s) unless Dir.exist?(dir_name.to_s)
       new_file = File.new("#{dir_name}/#{test_class_name}.java", 'w+')
       new_file.write(content)
       new_file.close

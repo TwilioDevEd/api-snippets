@@ -11,7 +11,7 @@ service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 notification = service.notifications.create(
   to_binding: ['{"binding_type":"sms", "address":"+15555555555"}',
-    '{"binding_type":"facebook-messenger", "address":"123456789123"}'],
+               '{"binding_type":"facebook-messenger", "address":"123456789123"}'],
   body: 'Hello Bob'
 )
 

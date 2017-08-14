@@ -3,7 +3,7 @@ require 'nokogiri'
 module LanguageHandler
   class XmlMatcher
     def self.match(xml_str1, xml_str2, excluded_nodes = [])
-      self.new(xml_str1, excluded_nodes: excluded_nodes).match(xml_str2)
+      new(xml_str1, excluded_nodes: excluded_nodes).match(xml_str2)
     end
 
     def initialize(xml_str, excluded_nodes: [])

@@ -7,9 +7,7 @@ module LanguageHandler
     def self.run_before_test(directory)
       Dir.chdir(directory) do
         output = `rubocop -a`
-        if $? != 0
-          abort(output)
-        end
+        abort(output) if $CHILD_STATUS != 0
       end
     end
 

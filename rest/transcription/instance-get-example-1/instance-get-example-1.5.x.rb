@@ -1,5 +1,5 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
+require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account SID and Auth Token from twilio.com/console
@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-transcription = @client.api.transcriptions("TR8c61027b709ffb038236612dc5af8723").fetch
+transcription = @client.api.transcriptions('TR8c61027b709ffb038236612dc5af8723').fetch
 puts transcription.transcription_text

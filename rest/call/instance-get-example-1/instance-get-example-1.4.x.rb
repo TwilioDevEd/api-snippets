@@ -1,5 +1,5 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
+require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@call = @client.account.calls.get("CA42ed11f93dc08b952027ffbc406d0868")
+@call = @client.account.calls.get('CA42ed11f93dc08b952027ffbc406d0868')
 puts @call.to

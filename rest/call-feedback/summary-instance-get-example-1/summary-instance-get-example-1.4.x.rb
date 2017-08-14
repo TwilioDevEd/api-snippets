@@ -1,5 +1,5 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems'          # This line not needed for ruby > 1.8
+require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from twilio.com/user/account
@@ -9,5 +9,5 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@summary = @client.account.calls.feedback_summary.get("FSa346467ca321c71dbd5e12f627deb854")
+@summary = @client.account.calls.feedback_summary.get('FSa346467ca321c71dbd5e12f627deb854')
 puts @summary.date_created

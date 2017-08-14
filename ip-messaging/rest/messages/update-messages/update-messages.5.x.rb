@@ -10,7 +10,7 @@ message_sid = 'IMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Update the message
 service = @client.chat.v2.services(service_sid)
-channel = service.channels(channel_sid) 
+channel = service.channels(channel_sid)
 message = channel.messages(message_sid).fetch
 message_updated = message.update(body: 'New message text')
 puts "#{message_updated.sid} #{message_updated.body}"

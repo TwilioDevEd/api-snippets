@@ -14,7 +14,7 @@ post '/voice' do
         end
       end
     else
-      r.Say "Thanks for calling!"
+      r.Say 'Thanks for calling!'
     end
   end
 

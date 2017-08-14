@@ -14,9 +14,8 @@ get '/voice' do
   end.text
 end
 
-
 get '/voice/handle-gather' do
-  redirect '/voice' unless ['1', '2'].include?(params['Digits'])
+  redirect '/voice' unless %w[1 2].include?(params['Digits'])
   if params['Digits'] == '1'
     response = Twilio::TwiML::Response.new do |r|
       r.Dial '+13105551212'
@@ -30,7 +29,6 @@ get '/voice/handle-gather' do
   end
   response.text
 end
-
 
 get '/voice/handle-record' do
   Twilio::TwiML::Response.new do |r|
