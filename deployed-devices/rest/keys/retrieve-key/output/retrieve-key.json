@@ -1,0 +1,11 @@
+{
+  "sid": "KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "friendly_name": null,
+  "fleet_sid": "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "device_sid": "THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "secret": null,
+  "date_created": "2017-08-14T17:52:00Z",
+  "date_updated": "2017-08-14T17:52:00Z",
+  "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys/KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
