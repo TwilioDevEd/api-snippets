@@ -1,10 +1,10 @@
 require 'sinatra'
 
 post '/MessageStatus' do
-  messageSid = params['MessageSid']
-  messageStatus = params['MessageStatus']
+  message_sid = params['MessageSid']
+  message_status = params['MessageStatus']
 
-  print 'SID: ' + messageSid + ', Status: ' + messageStatus + "\n"
+  print 'SID: ' + message_sid + ', Status: ' + message_status + "\n"
 
   response.status = 204
 end

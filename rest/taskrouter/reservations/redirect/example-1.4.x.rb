@@ -9,9 +9,14 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 task_sid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
+client = Twilio::REST::TaskRouterClient.new account_sid,
+                                            auth_token,
+                                            workspace_sid
 
-reservation = client.workspace.tasks.get(task_sid).reservations.get(reservation_sid)
+reservation = client.workspace
+                    .tasks.get(task_sid)
+                    .reservations.get(reservation_sid)
+
 reservation.update(Instruction: 'Redirect',
                    RedirectCallSid: 'CA123456789',
                    RedirectUrl: 'http://example.com/assignment_redirect')

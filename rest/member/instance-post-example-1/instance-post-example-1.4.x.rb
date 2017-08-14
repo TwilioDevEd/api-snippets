@@ -5,11 +5,13 @@ require 'twilio-ruby'
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::Client.new account_sid, auth_token
+client = Twilio::REST::Client.new account_sid, auth_token
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@member = @client.account.queues.get('QU5ef8732a3c49700934481addd5ce1659').members.get('Front')
-@member.update(url: 'http://demo.twilio.com/docs/voice.xml',
-               method: 'POST')
-puts @member.wait_time
+member = client.account
+               .queues.get('QU5ef8732a3c49700934481addd5ce1659')
+               .members.get('Front')
+               .update(url: 'http://demo.twilio.com/docs/voice.xml',
+                       method: 'POST')
+puts member.wait_time

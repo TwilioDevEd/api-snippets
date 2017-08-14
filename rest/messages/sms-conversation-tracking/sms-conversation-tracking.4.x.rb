@@ -9,7 +9,7 @@ use Rack::Session::Cookie, key: 'rack.session',
 post '/sms' do
   session['counter'] ||= 0
   sms_count = session['counter']
-  message = if sms_count == 0
+  message = if sms_count.zero?
               'Hello, thanks for the new message.'
             else
               "Hello, thanks for message number #{sms_count + 1}"

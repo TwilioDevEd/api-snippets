@@ -8,7 +8,10 @@ auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 workflow_sid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
+client = Twilio::REST::TaskRouterClient.new account_sid,
+                                            auth_token,
+                                            workspace_sid
 
-task = client.workspace.tasks.create(workflow_sid: workflow_sid, attributes: '{"type":"support"}')
+task = client.workspace.tasks.create(workflow_sid: workflow_sid,
+                                     attributes: '{"type":"support"}')
 puts task.attributes

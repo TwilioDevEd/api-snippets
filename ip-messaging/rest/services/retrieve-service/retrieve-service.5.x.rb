@@ -8,4 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Retrieve the service
 service = @client.chat.v2.services(service_sid).fetch
-puts "Chat service #{service_sid} has Friendly Name \"#{service.friendly_name}\""
+puts "Chat service #{service_sid} has " \
+     "Friendly Name \"#{service.friendly_name}\""

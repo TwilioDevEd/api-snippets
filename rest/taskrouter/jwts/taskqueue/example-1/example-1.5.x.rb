@@ -13,12 +13,14 @@ capability = Twilio::JWT::TaskRouterCapability.new(
 )
 
 allow_fetch_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(
-  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_task_queues(workspace_sid), 'GET', true
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils
+  .all_task_queues(workspace_sid), 'GET', true
 )
 capability.add_policy(allow_fetch_subresources)
 
 allow_updates = Twilio::JWT::TaskRouterCapability::Policy.new(
-  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_task_queues(workspace_sid), 'POST', true
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils
+  .all_task_queues(workspace_sid), 'POST', true
 )
 capability.add_policy(allow_updates)
 

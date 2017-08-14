@@ -13,6 +13,6 @@ items = service.sync_maps('Players').sync_map_items.stream(
   from:  'steph_curry',
   order: 'asc'
 )
-items.each do |mapItem|
-  puts mapItem.key
+items.each do |map_item|
+  puts map_item.key
 end

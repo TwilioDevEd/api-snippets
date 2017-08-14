@@ -11,17 +11,23 @@ capability = Twilio::JWT::TaskRouterCapability.new(
 )
 
 allow_fetch_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(
-  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces, 'GET', true
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces,
+  'GET',
+  true
 )
 capability.add_policy(allow_fetch_subresources)
 
 allow_updates_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(
-  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces, 'POST', true
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces,
+  'POST',
+  true
 )
 capability.add_policy(allow_updates_subresources)
 
 allow_delete_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(
-  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces, 'DELETE', true
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils.all_workspaces,
+  'DELETE',
+  true
 )
 capability.add_policy(allow_delete_subresources)
 

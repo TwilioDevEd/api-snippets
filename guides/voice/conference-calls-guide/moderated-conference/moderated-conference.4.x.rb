@@ -14,7 +14,9 @@ post '/voice' do
       if params['From'] == MODERATOR
         # If the caller is our MODERATOR, then start the conference when they
         # join and end the conference when they leave
-        d.Conference 'My conference', startConferenceOnEnter: true, endConferenceOnExit: true
+        d.Conference('My conference',
+                     startConferenceOnEnter: true,
+                     endConferenceOnExit: true)
       else
         # Otherwise have the caller join as a regular participant
         d.Conference 'My conference', startConferenceOnEnter: false

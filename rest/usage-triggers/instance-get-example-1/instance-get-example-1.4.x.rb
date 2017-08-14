@@ -9,5 +9,6 @@ auth_token = 'your_auth_token'
 
 # Get an object from its sid. If you do not have a sid,
 # check out the list resource examples on this page
-@trigger = @client.account.usage.triggers.get('UT33c6aeeba34e48f38d6899ea5b765ad4')
+sid = 'UT33c6aeeba34e48f38d6899ea5b765ad4'
+@trigger = @client.account.usage.triggers.get(sid)
 puts @trigger.current_value

@@ -7,27 +7,33 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::TaskRouterClient.new account_sid, auth_token, workspace_sid
+client = Twilio::REST::TaskRouterClient.new(account_sid,
+                                            auth_token,
+                                            workspace_sid)
 
-sales_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-marketing_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-support_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-everyone_queue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+# Queues
+sales_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+marketing_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+support_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+everyone_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-sales_queue_target = Twilio::TaskRouter::WorkflowRuleTarget.new sales_queue_sid
+sales_queue_target = Twilio::TaskRouter::WorkflowRuleTarget.new sales_sid
 sales_queue_targets = [sales_queue_target]
-sales_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "sales"', sales_queue_targets
+sales_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "sales"',
+                                                  sales_queue_targets
 
-marketing_target = Twilio::TaskRouter::WorkflowRuleTarget.new marketing_queue_sid
+marketing_target = Twilio::TaskRouter::WorkflowRuleTarget.new marketing_sid
 marketing_targets = [marketing_target]
-marketing_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "marketing"', marketing_targets
+marketing_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "marketing"',
+                                                      marketing_targets
 
-support_target = Twilio::TaskRouter::WorkflowRuleTarget.new support_queue_sid
+support_target = Twilio::TaskRouter::WorkflowRuleTarget.new support_sid
 support_targets = [support_target]
-support_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "support"', support_targets
+support_rule = Twilio::TaskRouter::WorkflowRule.new 'type == "support"',
+                                                    support_targets
 
 rules = [sales_rule, marketing_rule, support_rule]
-default_target = Twilio::TaskRouter::WorkflowRuleTarget.new everyone_queue_sid
+default_target = Twilio::TaskRouter::WorkflowRuleTarget.new everyone_sid
 
 config = Twilio::TaskRouter::WorkflowConfiguration.new rules, default_target
 json = config.to_json

@@ -5,7 +5,10 @@ require 'twilio-ruby'
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::Client.new account_sid, auth_token
+client = Twilio::REST::Client.new account_sid, auth_token
 
-@ip_address = @client.account.sip.ip_access_control_lists.get('AL32a3c49700934481addd5ce1659f04d2').ip_addresses.get('IP32a3c49700934481addd5ce1659f04d2')
-@ip_address.delete
+ip_address = client.account.sip.ip_access_control_lists
+                   .get('AL32a3c49700934481addd5ce1659f04d2')
+                   .ip_addresses
+                   .get('IP32a3c49700934481addd5ce1659f04d2')
+ip_address.delete

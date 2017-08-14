@@ -9,9 +9,14 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-client = Twilio::REST::TaskRouterClient.new(account_sid, auth_token, workspace_sid)
+client = Twilio::REST::TaskRouterClient.new account_sid,
+                                            auth_token,
+                                            workspace_sid
 
-reservation = client.workspace.workers.get(worker_sid).reservations.get(reservation_sid)
+reservation = client.workspace
+                    .workers.get(worker_sid)
+                    .reservations.get(reservation_sid)
+
 reservation.update(instruction: 'dequeue', dequeueFrom: '+18001231234')
 puts reservation.reservation_status
 puts reservation.worker_name

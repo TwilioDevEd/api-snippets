@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 # Loop over calls and print out a property for each one
-@client.account.calls.list(:status => 'completed',
-                           :"start_time>" => '2009-07-06').each do |call|
+@client.account.calls.list(status: 'completed',
+                           "start_time>": '2009-07-06').each do |call|
   puts call.to
 end
