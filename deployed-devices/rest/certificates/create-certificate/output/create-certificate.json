@@ -4,7 +4,7 @@
   "fleet_sid": "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "device_sid": "THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "thumbprint": "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff",
+  "thumbprint": "<supplied_certificate_fingerprint>",
   "date_created": "2017-08-14T18:23:12Z",
   "date_updated": "2017-08-14T18:23:12Z",
   "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Certificates/CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
