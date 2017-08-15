@@ -1,0 +1,4 @@
+curl -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token' \
+  -X POST https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Certificates/CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+  -d 'FriendlyName=My New Certificate' \
+  -d 'DeviceSid=THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'

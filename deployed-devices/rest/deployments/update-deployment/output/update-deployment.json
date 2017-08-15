@@ -1,0 +1,10 @@
+{
+  "sid": "DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "friendly_name": "My New Device Deployment",
+  "fleet_sid": "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sync_service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2017-08-14T15:44:05Z",
+  "date_updated": "2017-08-14T15:55:25Z",
+  "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Deployments/DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
