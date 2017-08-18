@@ -10,8 +10,7 @@ $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-foreach($client->workspace->workers->get($workerSid)->reservations as $reservation)
-{
-	echo $reservation->reservation_status;
-	echo $reservation->worker_name;
+foreach ($client->workspace->workers->get($workerSid)->reservations as $reservation) {
+    echo $reservation->reservation_status;
+    echo $reservation->worker_name;
 }

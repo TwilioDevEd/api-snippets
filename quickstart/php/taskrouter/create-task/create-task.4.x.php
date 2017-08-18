@@ -8,14 +8,14 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
 
 // Set your WorkspaceSid and WorkflowSid
-$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
-$workflowSid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+$workflowSid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-// instantiate a new Twilio TaskRouter Rest Client 
-$taskrouterClient = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid); 
+// instantiate a new Twilio TaskRouter Rest Client
+$taskrouterClient = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-// create a new task 
-$taskrouterClient->workspace->tasks->create('{"selected_language": "es"}', $workflowSid); 
+// create a new task
+$taskrouterClient->workspace->tasks->create('{"selected_language": "es"}', $workflowSid);
 
 // display a confirmation message on the screen
 echo "Created a new task";

@@ -7,9 +7,9 @@ use Twilio\Twiml;
 $response = new Twiml;
 $body = $_REQUEST['Body'];
 
-if( $body == 'hello' ){
+if ($body == 'hello') {
     $response->message('Hi!');
-}else if( $body == 'bye' ){
+} elseif ($body == 'bye') {
     $response->message('Goodbye');
 }
 print $response;

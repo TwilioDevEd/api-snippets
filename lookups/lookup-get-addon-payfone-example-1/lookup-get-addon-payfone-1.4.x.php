@@ -6,9 +6,7 @@ $process = curl_init($url);
 curl_setopt($process, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $additionalHeaders));
 curl_setopt($process, CURLOPT_USERPWD, 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token');
 curl_setopt($process, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($process, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($process);
 curl_close($process);
 echo($response);
-
-?>

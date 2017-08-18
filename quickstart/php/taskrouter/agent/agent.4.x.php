@@ -6,12 +6,16 @@ require 'Services/Twilio.php';
 // put your Twilio API credentials here
 $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
-$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 $workerSid = $_REQUEST['WorkerSid'];
 
 $workerCapability = new Services_Twilio_TaskRouter_Worker_Capability(
-    $accountSid, $authToken, $workspaceSid, $workerSid);
+    $accountSid,
+    $authToken,
+    $workspaceSid,
+    $workerSid
+);
 $workerCapability->allowActivityUpdates();
 $workerToken = $workerCapability->generateToken();
 

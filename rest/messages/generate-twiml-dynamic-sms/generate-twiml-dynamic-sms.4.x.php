@@ -1,16 +1,16 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
 
-// this line loads the library 
-require('/path/to/twilio-php/Services/Twilio.php'); 
+// this line loads the library
+require('/path/to/twilio-php/Services/Twilio.php');
 use Services_Twilio_Twiml;
 
 $response = new Services_Twilio_Twiml;
 $body = $_REQUEST['Body'];
 
-if( $body == 'hello' ){
+if ($body == 'hello') {
     $response->message('Hi!');
-}else if( $body == 'bye' ){
+} elseif ($body == 'bye') {
     $response->message('Goodbye');
 }
 print $response;

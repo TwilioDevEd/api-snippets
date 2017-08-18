@@ -7,7 +7,7 @@
     $counter = $_SESSION['counter'];
 
     // if it doesnt, set the default
-    if(!strlen($counter)) {
+    if (!strlen($counter)) {
         $counter = 0;
     }
 
@@ -25,7 +25,7 @@
     );
 
     // if the sender is known, then greet them by name
-    if(!$name = $people[$_REQUEST['From']]) {
+    if (!$name = $people[$_REQUEST['From']]) {
         $name = "Friend";
     }
 

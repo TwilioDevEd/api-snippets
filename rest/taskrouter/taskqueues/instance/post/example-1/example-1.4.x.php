@@ -12,7 +12,7 @@ $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid)
 
 $taskQueue = $client->workspace->task_queues->get($taskQueueSid);
 $taskQueue->update(
-	array(
-		'TargetWorkers' => 'languages HAS "english"'
-	)
+    array(
+        'TargetWorkers' => 'languages HAS "english"'
+    )
 );

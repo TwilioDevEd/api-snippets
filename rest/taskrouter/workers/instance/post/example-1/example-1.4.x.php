@@ -12,7 +12,7 @@ $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid)
 
 $worker = $client->workspace->workers->get($workerSid);
 $worker->update(
-	array(
-		'Attributes' => '{"type":"support"}'
-	)
+    array(
+        'Attributes' => '{"type":"support"}'
+    )
 );

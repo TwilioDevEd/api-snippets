@@ -7,9 +7,9 @@ require 'Services/Twilio.php';
 $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
 
-$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$reservationSid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$reservationSid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-$taskrouterClient = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid); 
-$taskrouterClient->workspace->tasks->get($taskSid)->reservations->get($reservationSid)->update('ReservationStatus', 'accepted'); 
+$taskrouterClient = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
+$taskrouterClient->workspace->tasks->get($taskSid)->reservations->get($reservationSid)->update('ReservationStatus', 'accepted');

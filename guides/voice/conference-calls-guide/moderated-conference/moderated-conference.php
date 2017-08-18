@@ -1,7 +1,7 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
 
-// this line loads the library 
+// this line loads the library
 require_once '/path/to/vendor/autoload.php';
 use Twilio\Twiml;
 
@@ -16,14 +16,14 @@ $dial = $response->dial();
 // If the caller is our MODERATOR, then start the conference when they
 // join and end the conference when they leave
 if ($_REQUEST['From'] == $MODERATOR) {
-  $dial->conference('My conference', array(
-                'startConferenceOnEnter' => True,
-                'endConferenceOnExit' => True
+    $dial->conference('My conference', array(
+                'startConferenceOnEnter' => true,
+                'endConferenceOnExit' => true
                 ));
 } else {
-  // Otherwise have the caller join as a regular participant
-  $dial->conference('My conference', array(
-                'startConferenceOnEnter' => False
+    // Otherwise have the caller join as a regular participant
+    $dial->conference('My conference', array(
+                'startConferenceOnEnter' => false
                 ));
 }
 

@@ -10,8 +10,8 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 $client->workspace->update(
-	array(
-		'FriendlyName' => 'NewFriendlyName',
-		'EventCallbackUrl' => 'http://requestb.in/vh9reovh'
-	)
+    array(
+        'FriendlyName' => 'NewFriendlyName',
+        'EventCallbackUrl' => 'http://requestb.in/vh9reovh'
+    )
 );

@@ -15,5 +15,5 @@ $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // List the users
 $users = $service->users;
-$all_users = print_r($users,true);
+$all_users = print_r($users, true);
 print $all_users;

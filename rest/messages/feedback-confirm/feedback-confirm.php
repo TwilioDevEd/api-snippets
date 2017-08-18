@@ -10,7 +10,7 @@ $uniqueId = $_REQUEST['id'];
 $messageSid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 // Your Account SID and Auth Token from twilio.com/console
-$accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken = 'your_auth_token';
 
 $client = new Client($accountSid, $authToken);
@@ -19,4 +19,3 @@ $client->messages($messageSid)->feedback->create(
 );
 
 echo 'Thank you!';
-

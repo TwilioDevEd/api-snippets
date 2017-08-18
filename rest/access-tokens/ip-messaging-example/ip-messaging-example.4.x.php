@@ -15,10 +15,10 @@ $endpointId = $appName . ':' . $identity . ':' . $deviceId;
 
 // Create access token
 $token = new Services_Twilio_AccessToken(
-    $twilioAccountSid, 
-    $twilioApiKey, 
-    $twilioApiSecret, 
-    3600, 
+    $twilioAccountSid,
+    $twilioApiKey,
+    $twilioApiSecret,
+    3600,
     $identity
 );
 

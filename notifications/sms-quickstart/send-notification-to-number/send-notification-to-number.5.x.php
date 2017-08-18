@@ -19,7 +19,7 @@ $client = new Client($accountSid, $authToken);
 $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
-        "toBinding" => '{"binding_type":"sms", "address":"+1651000000000"}'
+        "toBinding" => '{"binding_type":"sms", "address":"+1651000000000"}',
         'body' => 'Knok-Knok! This is your first Notify SMS'
     ]);
 

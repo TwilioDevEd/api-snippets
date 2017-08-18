@@ -24,7 +24,7 @@ $items = $client->sync
     );
 
 foreach ($items as $item) {
-  echo $item->index, ' = ';
-  print_r($item->data);
-  echo PHP_EOL;
+    echo $item->index, ' = ';
+    print_r($item->data);
+    echo PHP_EOL;
 }

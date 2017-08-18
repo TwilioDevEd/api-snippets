@@ -15,5 +15,5 @@ $service = $client->services->get("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 // List the channels
 $channels = $service->channels;
-$all_channels = print_r($channels,true);
+$all_channels = print_r($channels, true);
 print $all_channels;

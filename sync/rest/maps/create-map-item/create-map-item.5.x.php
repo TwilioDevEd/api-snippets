@@ -23,7 +23,8 @@ $item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")
     ->syncMapItems->create(
-        'steph_curry', $data
+        'steph_curry',
+        $data
     );
 
 print_r($item->data);

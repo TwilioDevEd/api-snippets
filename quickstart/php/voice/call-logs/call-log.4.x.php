@@ -4,7 +4,7 @@
      *        php call-log.php
      */
 
-    // Step 1: Get the Twilio-PHP library from twilio.com/docs/libraries/php, 
+    // Step 1: Get the Twilio-PHP library from twilio.com/docs/libraries/php,
     // and move it into the folder containing this call-log.php file.
     require "Services/Twilio.php";
 
