@@ -25,6 +25,7 @@ if [[ $languages == *"php"* ]]; then
   sudo apt-get update
   sudo apt-get install -y --force-yes php5.6
   curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  export PATH=~/.composer/vendor/bin:$PATH
   sudo composer global require friendsofphp/php-cs-fixer
 fi
 
