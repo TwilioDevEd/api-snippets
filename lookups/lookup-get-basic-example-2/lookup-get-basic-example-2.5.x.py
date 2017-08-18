@@ -14,7 +14,8 @@ auth_token = "your_auth_token"
 client = TwilioLookupsClient(account_sid, auth_token)
 
 encoded_number = quote('(510) 867-5309')
-number = client.phone_numbers.get(encoded_number, include_carrier_info=True,
-                                  country_code="US")
+number = client.phone_numbers.get(
+    encoded_number, include_carrier_info=True, country_code="US"
+)
 print(number.carrier['type'])
 print(number.carrier['name'])

@@ -19,5 +19,6 @@ def get_capability_token():
 
     return Response(token, mimetype='application/jwt')
 
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -6,8 +6,9 @@ api_key_sid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 api_key_secret = "your_api_key_secret"
 client = Client(api_key_sid, api_key_secret)
 
-room_recordings = client.video.rooms(sid="RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                              .recordings.list()
+room_recordings = client.video \
+    .rooms(sid="RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .recordings.list()
 
 for recording in room_recordings:
     print(recording.sid)

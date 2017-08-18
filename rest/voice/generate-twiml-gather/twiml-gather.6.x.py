@@ -16,11 +16,14 @@ def voice():
 
     # Gather digits.
     with resp.gather(numDigits=1, action="/handle-gather", method="POST") as g:
-        g.say("""To speak to a real person, press 1.
+        g.say(
+            """To speak to a real person, press 1.
                  Press 2 to record a message for a Twilio educator.
-                 Press any other key to start over.""")
+                 Press any other key to start over."""
+        )
 
     return str(resp)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

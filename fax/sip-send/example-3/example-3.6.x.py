@@ -9,6 +9,7 @@ client = Client(account_sid, auth_token)
 fax = client.fax.v1.faxes.create(
     from_="Jack",
     to="sip:kate@example.com?hatchkey=4815162342;transport=TCP",
-    media_url="https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf")
+    media_url="https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf"
+)
 
 print(fax.sid)

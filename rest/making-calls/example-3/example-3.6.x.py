@@ -6,10 +6,12 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-call = client.calls.create(to="+14155551212",
-                           from_="+18668675309",
-                           url="http://demo.twilio.com/docs/voice.xml",
-                           send_digits="1234#",
-                           method="GET")
+call = client.calls.create(
+    to="+14155551212",
+    from_="+18668675309",
+    url="http://demo.twilio.com/docs/voice.xml",
+    send_digits="1234#",
+    method="GET"
+)
 
 print(call.sid)

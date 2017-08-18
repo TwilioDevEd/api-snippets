@@ -37,5 +37,6 @@ def token():
     # Return token info as JSON
     return jsonify(identity=identity, token=token.to_jwt())
 
+
 if __name__ == '__main__':
     app.run(debug=True)

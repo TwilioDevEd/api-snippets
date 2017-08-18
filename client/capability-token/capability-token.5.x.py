@@ -3,6 +3,7 @@ from twilio.util import TwilioCapability
 
 app = Flask(__name__)
 
+
 @app.route('/token', methods=['GET'])
 def get_capability_token():
     """Respond to incoming requests."""
@@ -20,6 +21,7 @@ def get_capability_token():
     token = capability.generate()
 
     return Response(token, mimetype='application/jwt')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

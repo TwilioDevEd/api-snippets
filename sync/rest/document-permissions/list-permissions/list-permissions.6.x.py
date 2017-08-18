@@ -7,10 +7,10 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 document_permissions = client.sync \
-                             .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                             .documents("MyFirstDocument") \
-                             .document_permissions \
-                             .list()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents("MyFirstDocument") \
+    .document_permissions \
+    .list()
 
 for document_permission in document_permissions:
     print(document_permission.read)

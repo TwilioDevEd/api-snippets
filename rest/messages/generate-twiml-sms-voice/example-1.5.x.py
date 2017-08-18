@@ -1,8 +1,8 @@
-from flask import Flask, request
+from flask import Flask
 from twilio import twiml
 
-
 app = Flask(__name__)
+
 
 @app.route("/voice", methods=['GET', 'POST'])
 def voice():
@@ -17,6 +17,7 @@ def voice():
     resp.sms("This is the ship that made the Kessel Run in fourteen parsecs?")
 
     return str(resp)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

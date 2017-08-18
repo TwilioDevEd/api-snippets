@@ -7,7 +7,8 @@ dial.conference(
     beep=False,
     wait_url='http://your-webhook-host.com',
     start_conference_on_enter=True,
-    end_conference_on_exit=True)
+    end_conference_on_exit=True
+)
 response.append(dial)
 
 print(response)

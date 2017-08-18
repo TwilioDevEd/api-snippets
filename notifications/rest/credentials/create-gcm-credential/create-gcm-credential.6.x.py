@@ -9,7 +9,5 @@ token = "your_auth_token"
 client = Client(account, token)
 
 credential = client.notify.credentials.create(
-    type="gcm",
-    friendly_name="MyGCMCredential",
-    api_key="gcm_api_key"
+    type="gcm", friendly_name="MyGCMCredential", api_key="gcm_api_key"
 )

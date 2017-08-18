@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 
 client = Client(account_sid, auth_token)
 
-ratePlanUsage = client.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')\
-                .usage_records.list()
+ratePlanUsage = client.wireless.sims('DEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') \
+    .usage_records.list()
 
 print(ratePlanUsage)

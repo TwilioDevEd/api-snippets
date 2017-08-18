@@ -10,8 +10,10 @@ fcm_credential_sid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-service = client.notify.services.create(friendly_name="My Awesome Service", \
-    apn_credential_sid=apn_credential_sid, \
-    fcm_credential_sid=fcm_credential_sid)
+service = client.notify.services.create(
+    friendly_name="My Awesome Service",
+    apn_credential_sid=apn_credential_sid,
+    fcm_credential_sid=fcm_credential_sid
+)
 
 print(service.friendly_name)

@@ -6,7 +6,6 @@ from twilio.rest import Client
 ACCOUNT_SID = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 AUTH_TOKEN = 'your_auth_token'
 
-
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 segments = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                  .segments.stream()

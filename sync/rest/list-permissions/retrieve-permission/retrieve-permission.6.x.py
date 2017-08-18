@@ -7,10 +7,10 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 list_permission = client.sync \
-                        .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                        .sync_lists("MyFirstList") \
-                        .sync_list_permissions("bob") \
-                        .fetch()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_lists("MyFirstList") \
+    .sync_list_permissions("bob") \
+    .fetch()
 
 print(list_permission.identity)
 print(list_permission.url)

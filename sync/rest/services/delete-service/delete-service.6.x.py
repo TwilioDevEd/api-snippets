@@ -6,9 +6,8 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-response = client \
-      .sync \
-      .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-      .delete()
+response = client.sync \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .delete()
 
 print(response)

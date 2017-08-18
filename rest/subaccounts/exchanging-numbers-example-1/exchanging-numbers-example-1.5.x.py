@@ -4,10 +4,10 @@ from twilio.rest import TwilioRestClient
 # Use the Account Sid and Auth Token of the subaccount which currently
 # owns the number you want to transfer (twilio.com/console/account/subaccounts)
 account_sid = "ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
-auth_token  = "your_auth_token"
+auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-# In the case you want to transfer numbers between subaccounts, you need to 
+# In the case you want to transfer numbers between subaccounts, you need to
 # know two things: the account SID of the account you'd like to transfer the
 # number to, and the SID of the phone number you'd like to transfer
 new_owner_sid = "ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"

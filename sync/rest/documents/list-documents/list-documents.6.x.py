@@ -7,9 +7,9 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 documents = client.sync \
-                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                  .documents \
-                  .list()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents \
+    .list()
 
 for document in documents:
     print(document.unique_name)

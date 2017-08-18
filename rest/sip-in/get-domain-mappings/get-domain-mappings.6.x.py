@@ -9,9 +9,9 @@ client = Client(account_sid, auth_token)
 # A list of ip_access_control_list_mapping objects with
 # the properties described above
 ip_access_control_list_mappings = client.sip \
-        .domains("SD32a3c49700934481addd5ce1659f04d2") \
-        .ip_access_control_list_mappings \
-        .list()
+    .domains("SD32a3c49700934481addd5ce1659f04d2") \
+    .ip_access_control_list_mappings \
+    .list()
 
 # Loop over the list of ip_access_control_list_mappings and print
 # a property for each one

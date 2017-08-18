@@ -10,6 +10,7 @@ client = Client(account_sid, auth_token)
 trigger = client.usage.triggers.create(
     trigger_value="1000",
     usage_category="sms",
-    callback_url="http://www.example.com/")
+    callback_url="http://www.example.com/"
+)
 
 print(trigger.sid)

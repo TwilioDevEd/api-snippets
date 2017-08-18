@@ -7,9 +7,9 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 did_delete = client.sync \
-                   .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                   .sync_maps("Players") \
-                   .sync_map_permissions("bob") \
-                   .delete()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps("Players") \
+    .sync_map_permissions("bob") \
+    .delete()
 
 print(did_delete)

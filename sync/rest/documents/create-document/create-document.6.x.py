@@ -12,11 +12,12 @@ data = {
     'movie_title': "On The Line",
     'show_times': ["12:30:00Z", "14:45:00Z", "15:30:00Z", "17:45:00Z"],
     'starring': ["Lance Bass", "Joey Fatone"],
-    'genre': "Romance"}
+    'genre': "Romance"
+}
 
 document = client.sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .documents \
-                 .create(unique_name="MyFirstDocument", data=data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents \
+    .create(unique_name="MyFirstDocument", data=data)
 
 print(document.sid)

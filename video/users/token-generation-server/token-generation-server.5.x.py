@@ -1,7 +1,7 @@
 import os
 from flask import Flask, jsonify
 from faker import Factory
-from twilio.access_token import AccessToken, ConversationsGrant
+from twilio.access_token import AccessToken, VideoGrant
 
 app = Flask(__name__)
 fake = Factory.create()
@@ -32,6 +32,7 @@ def token():
 
     # Return token info as JSON
     return jsonify(identity=token.identity, token=token.to_jwt())
+
 
 if __name__ == '__main__':
     app.run(debug=True)

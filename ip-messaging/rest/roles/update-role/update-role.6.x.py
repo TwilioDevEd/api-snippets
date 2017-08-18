@@ -7,8 +7,9 @@ token = "your_auth_token"
 client = Client(account, token)
 
 # Update role
-role = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").update(
-    permission=["sendMessage", "leaveChannel"]
-)
+role = client.chat \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .update(permission=["sendMessage", "leaveChannel"])
 
 print(role.friendly_name)

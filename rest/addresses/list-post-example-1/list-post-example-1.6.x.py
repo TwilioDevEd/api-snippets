@@ -13,6 +13,7 @@ app = client.addresses.create(
     region="Berlin",
     postal_code="10875",
     iso_country="DE",
-    friendly_name="Billing - Customer 123")
+    friendly_name="Billing - Customer 123"
+)
 
 print(app.sid)

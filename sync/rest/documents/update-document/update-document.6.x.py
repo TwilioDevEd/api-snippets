@@ -12,11 +12,12 @@ new_data = {
     'movie_title': "On The Line",
     'show_times': None,
     'starring': ["Lance Bass", "Joey Fatone"],
-    'genre': "Romance"}
+    'genre': "Romance"
+}
 
 document = client.sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .documents("MyFirstDocument") \
-                 .update(data=new_data)
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents("MyFirstDocument") \
+    .update(data=new_data)
 
 print(document.data)

@@ -7,8 +7,8 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 credential = client.sip \
-        .credential_lists("CL32a3c49700934481addd5ce1659f04d2") \
-        .credentials("SC32a3c49700934481addd5ce1659f04d2") \
-        .fetch()
+    .credential_lists("CL32a3c49700934481addd5ce1659f04d2") \
+    .credentials("SC32a3c49700934481addd5ce1659f04d2") \
+    .fetch()
 
 print(credential.username)

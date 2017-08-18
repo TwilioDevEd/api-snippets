@@ -7,10 +7,10 @@ from twilio.rest import Client
 account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
+apn = '{"aps" : { "alert": {"title":"Bob alert","body" :' + \
+    '"Bob, you just received a badge"}, "badge" : 1 }}'
 
-notification = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")\
-    .notifications.create(identity="00000001",
-                          apn='{"aps" : { "alert": {"title":"Bob alert","body" :'\
-                           '"Bob, you just received a badge"}, "badge" : 1 }}')
+notification = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .notifications.create(identity="00000001", apn=apn)
 
 print(notification)

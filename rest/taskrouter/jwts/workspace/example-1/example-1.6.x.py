@@ -7,7 +7,9 @@ auth_token = "your_auth_token"
 workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 capability = WorkspaceCapabilityToken(
-    account_sid=account_sid, auth_token=auth_token, workspace_sid=workspace_sid
+    account_sid=account_sid,
+    auth_token=auth_token,
+    workspace_sid=workspace_sid
 )
 
 capability.allow_fetch_subresources()

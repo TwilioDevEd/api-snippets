@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 credential_list = client.sip \
-                        .credential_lists \
-                        .create("Low Rises")
+    .credential_lists \
+    .create("Low Rises")
 
 print(credential_list.sid)
