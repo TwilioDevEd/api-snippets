@@ -8,7 +8,7 @@ before_install:
   - ./install_travis_dependencies.sh
 
 install:
-  - gem install json colorize nokogiri
+  - gem install json colorize nokogiri rubocop
   - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
   - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
   - sudo update-ca-certificates

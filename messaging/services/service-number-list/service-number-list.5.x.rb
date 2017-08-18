@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @phone_numbers = @client.messaging.v1
-  .services('MG2172dd2db502e20dd981ef0d67850e1a')
-  .phone_numbers.list
+                        .services('MG2172dd2db502e20dd981ef0d67850e1a')
+                        .phone_numbers.list
 
 @phone_numbers.each do |phone_number|
   puts phone_number.phone_number

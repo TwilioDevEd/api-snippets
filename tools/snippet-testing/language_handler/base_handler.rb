@@ -13,7 +13,7 @@ module LanguageHandler
                                  ' to use v5 of ruby\'s Twilio ' \
                                  'library for example'.freeze
 
-    ROOT_FOLDER = "#{__dir__}/../../../"
+    ROOT_FOLDER = "#{__dir__}/../../../".freeze
 
     attr_reader :dependencies_directory, :dependencies
 
@@ -36,8 +36,7 @@ module LanguageHandler
       execute(path)
     end
 
-    def self.run_before_test(directory)
-    end
+    def self.run_before_test(_directory); end
 
     private
 
@@ -74,9 +73,7 @@ module LanguageHandler
         puts "failure [#{lang_cname}]".red
         error_message = rerr.read
 
-        if @test_output
-          error_message += test_output_report(output)
-        end
+        error_message += test_output_report(output) if @test_output
 
         ErrorLogger.instance.add_error(file, error_message, ErrorLogger::ERROR)
       end
@@ -90,8 +87,8 @@ module LanguageHandler
       [
         '',
         'diff:'.red,
-        "  sample: #{ @current_sample }",
-        "  output: #{ output.chomp }"
+        "  sample: #{@current_sample}",
+        "  output: #{output.chomp}"
       ].join("\n")
     end
 

@@ -13,10 +13,10 @@ module LanguageHandler
     end
 
     def test_output_command_for(file)
-      " && rm -rf App.app" \
+      ' && rm -rf App.app' \
       " && #{package_command} -m:2 -o:." \
       "    -n:App -a:#{file.sub(/\.cs\Z/, '.exe')}" \
-      " && mono App.app/Contents/Resources/App.exe"
+      ' && mono App.app/Contents/Resources/App.exe'
     end
 
     def build_command(command)

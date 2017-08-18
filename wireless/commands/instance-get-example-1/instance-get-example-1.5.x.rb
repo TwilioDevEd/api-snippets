@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 command = client.wireless
-  .commands("DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-  .fetch()
+                .commands('DCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+                .fetch
 
 puts command

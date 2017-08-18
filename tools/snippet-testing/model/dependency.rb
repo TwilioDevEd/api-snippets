@@ -12,8 +12,8 @@ module Model
     JAVA6_NAME      = 'java6'.freeze
     JAVA7_NAME      = 'java7'.freeze
 
-    CS_V4 = '4.7.2'
-    CS_V5 = '5.5.1-alpha1'
+    CS_V4 = '4.7.2'.freeze
+    CS_V5 = '5.5.1-alpha1'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', '5.6.0'],
@@ -21,16 +21,16 @@ module Model
       PYTHON_NAME => ['5.6.0', '6.5.0'],
       RUBY_NAME   => ['4.13.0', '5.1.0'],
       NODE_NAME   => ['2.11.0', '3.6.1'],
-      JAVA6_NAME  => {group: "com.twilio.sdk", name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies'},
-      JAVA7_NAME  => {group: "com.twilio.sdk", name: 'twilio', version: '7.14.0', suffix: '-jar-with-dependencies'}
+      JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
+      JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.14.0', suffix: '-jar-with-dependencies' }
     }.freeze
 
     JAVA_DEPENDENCIES = {
       JAVA6_NAME => [],
       JAVA7_NAME => [
-        {group: "javax.servlet", name: "javax.servlet-api", version: "3.1.0"}
+        { group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0' }
       ]
-    }
+    }.freeze
 
     CSHARP_DEPENDENCIES = {
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][0] => [
@@ -179,7 +179,7 @@ module Model
     end
 
     def build_maven_url(dependency, filename)
-      group = dependency[:group].gsub '.', '/'
+      group = dependency[:group].tr '.', '/'
       "http://repo.maven.apache.org/maven2/#{group}/#{dependency[:name]}/#{dependency[:version]}/#{filename}"
     end
 
@@ -271,6 +271,4 @@ module Model
   end
 end
 
-if __FILE__ == $0
-  Model::Dependency.install_dependencies
-end
+Model::Dependency.install_dependencies if $PROGRAM_NAME == __FILE__

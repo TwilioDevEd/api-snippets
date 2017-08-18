@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 rate_plan = client.wireless
-  .rate_plans("WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-  .fetch()
+                  .rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+                  .fetch
 
 puts rate_plan

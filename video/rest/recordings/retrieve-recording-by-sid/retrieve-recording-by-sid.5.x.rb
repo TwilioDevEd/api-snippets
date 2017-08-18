@@ -7,7 +7,7 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-recording = client.video.recordings("RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-  .fetch()
+recording = client.video.recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                  .fetch
 
 puts recording.type

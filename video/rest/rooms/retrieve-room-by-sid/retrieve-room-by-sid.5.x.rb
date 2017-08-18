@@ -7,6 +7,6 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-room = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch()
+room = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 
 puts room.sid

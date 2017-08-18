@@ -11,4 +11,5 @@ service = @client.chat.v2.services(service_sid)
 my_channel_sid = 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 channel = service.channels(my_channel_sid).fetch
 channel_updated = channel.update(unique_name: 'Something Different')
-puts "The \"#{channel.unique_name}\" channel has become the \"#{channel_updated.unique_name}\" channel."
+puts "The \"#{channel.unique_name}\" channel " \
+     "has become the \"#{channel_updated.unique_name}\" channel."

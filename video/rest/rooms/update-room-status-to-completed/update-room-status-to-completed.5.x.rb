@@ -8,7 +8,7 @@ api_key_secret = 'your_api_key_secret'
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
 room = client.video
-  .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .update(status: 'completed')
+             .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+             .update(status: 'completed')
 
 puts room.sid

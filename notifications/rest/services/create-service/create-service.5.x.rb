@@ -12,7 +12,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.notify.v1.services.create(
   friendly_name: 'My Awesome Service',
   apn_credential_sid: apn_credential_sid,
-  fcm_credential_sid:fcm_credential_sid
+  fcm_credential_sid: fcm_credential_sid
 )
 
 puts service.friendly_name

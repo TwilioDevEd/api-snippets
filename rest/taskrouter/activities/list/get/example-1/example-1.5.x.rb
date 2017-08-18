@@ -8,6 +8,7 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-client.taskrouter.v1.workspaces(workspace_sid).activities.list.each do |activity|
+client.taskrouter.v1.workspaces(workspace_sid).activities.list
+      .each do |activity|
   puts activity.friendly_name
 end

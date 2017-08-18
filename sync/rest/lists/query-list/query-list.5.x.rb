@@ -14,6 +14,6 @@ items = service.sync_lists('MyCollection').sync_list_items.stream(
   order: 'asc'
 )
 
-items.each do |listItem|
-  puts listItem.data
+items.each do |list_item|
+  puts list_item.data
 end

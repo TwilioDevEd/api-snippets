@@ -38,4 +38,3 @@ post '/gather' do
     end.text
   end
 end
-

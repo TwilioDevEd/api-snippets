@@ -6,7 +6,7 @@ get '/token' do
   auth_token = 'your_auth_token'
   capability = Twilio::JWT::Capability.new(account_sid, auth_token)
 
-  capability.allow_client_incoming("jenny")
+  capability.allow_client_incoming('jenny')
   token = capability.generate
 
   content_type 'application/jwt'

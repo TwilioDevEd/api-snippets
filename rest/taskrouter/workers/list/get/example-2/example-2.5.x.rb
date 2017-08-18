@@ -20,6 +20,7 @@ workspace.workers.list(task_queue_sid: 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
 end
 
 workspace.workers.list(
-  target_workers_expression: "type == 'leads'").each do |worker|
+  target_workers_expression: "type == 'leads'"
+).each do |worker|
   puts worker.friendly_name
 end

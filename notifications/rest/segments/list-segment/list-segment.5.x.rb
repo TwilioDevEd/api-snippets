@@ -8,8 +8,8 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 segments = client.notify.v1
-          		 .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-          		 .segments.list()
+                 .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                 .segments.list
 
 segments.each do |segment|
   puts segment.sid

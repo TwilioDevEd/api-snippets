@@ -33,4 +33,3 @@ post '/voice' do
     end.text
   end
 end
-

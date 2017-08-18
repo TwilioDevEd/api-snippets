@@ -8,7 +8,7 @@ post '/voice' do
         d.Number params['To']
       end
     else
-      r.Say "Thanks for calling!"
+      r.Say 'Thanks for calling!'
     end
   end
 

@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 status = client.wireless
-  .rate_plans("WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-  .delete()
+               .rate_plans('WPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+               .delete
 
 puts status

@@ -20,10 +20,10 @@ module Model
     def initialize(meta_json_path, test_model)
       @server_languages = get_valid_server_languages(test_model)
       @source_folder    = File.dirname(meta_json_path)
-      @relative_folder  = @source_folder.sub(test_model.root_source_folder,"")
+      @relative_folder  = @source_folder.sub(test_model.root_source_folder, '')
       @output_folder    = test_model.root_output_folder + @relative_folder
       json_object       = JSON.parse(File.read(meta_json_path))
-      @testable         = json_object.fetch('testable', test_model.testable).to_s.downcase == 'true'
+      @testable         = json_object.fetch('testable', test_model.testable).to_s.casecmp('true').zero?
       @name             = File.basename(@source_folder)
       @type             = json_object.fetch('type', 'server').downcase
       @langs            = @type == 'server' ? @server_languages : []
@@ -43,19 +43,19 @@ module Model
       server_languages = []
       snippet_languages = ENV['SNIPPET_LANGUAGE']
 
-      allowed_languages = LANGUAGES.select do |key|
-        !test_model.exclude_languages.include?(key.to_s)
+      allowed_languages = LANGUAGES.reject do |key|
+        test_model.exclude_languages.include?(key.to_s)
       end.freeze
 
-      unless snippet_languages.nil?
+      if snippet_languages.nil?
+        server_languages = allowed_languages.values.flatten.freeze
+      else
         snippet_languages.split(':').each do |language|
           if allowed_languages.key?(language.to_sym)
             server_languages += allowed_languages.fetch(language.to_sym)
           end
         end
         server_languages.flatten.freeze
-      else
-        server_languages = allowed_languages.values.flatten.freeze
       end
 
       server_languages.uniq
@@ -67,9 +67,9 @@ module Model
       has_valid_langs = langs_to_test.split(':').all? do |lang|
         valid_langs.include?(lang)
       end
-      if !has_valid_langs
-        raise ArgumentError, 'The language specified in SNIPPET_LANGUAGE ' +
-        'should be one of: ' + valid_langs.join(', ')
+      unless has_valid_langs
+        raise ArgumentError, 'The language specified in SNIPPET_LANGUAGE ' \
+                             'should be one of: ' + valid_langs.join(', ')
       end
     end
 

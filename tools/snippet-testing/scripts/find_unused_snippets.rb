@@ -23,7 +23,7 @@ api_pages_result.each do |row|
 end
 api_pages_result.clear
 
-unused_samples = code_samples.select { |_, sample| !sample[:used] }
+unused_samples = code_samples.reject { |_, sample| sample[:used] }
 
 conn.prepare('delete_sample', 'DELETE FROM code_samples_codesample WHERE id=$1')
 unused_samples.each do |key, value|
