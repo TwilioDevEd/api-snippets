@@ -4,6 +4,15 @@ module LanguageHandler
   class Php < BaseHandler
     LANG_CNAME = 'php'.freeze
 
+    def self.run_before_test(directory)
+      Dir.chdir(directory) do
+        output = `php-cs-fixer fix .`
+        if $? != 0
+          abort(output)
+        end
+      end
+    end
+
     def initialize(dependencies_directory = nil)
       super(dependencies_directory)
       @autoload_path = "#{dependencies_directory}/vendor/autoload.php"
