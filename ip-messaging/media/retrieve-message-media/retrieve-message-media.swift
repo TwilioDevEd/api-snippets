@@ -1,5 +1,3 @@
-let message = TCHMessage()
-
 // Set up output stream for media content
 let tempFilename = (NSTemporaryDirectory() as NSString).appendingPathComponent(message.mediaFilename ?? "file.dat")
 let outputStream = OutputStream(toFileAtPath: tempFilename, append: false)
