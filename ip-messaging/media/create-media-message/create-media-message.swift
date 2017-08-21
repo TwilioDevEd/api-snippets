@@ -25,4 +25,4 @@ self.channel.messages?.sendMessage(with: messageOptions,
                                     } else {
                                         print("Creation successful")
                                     }
-})
+}) 

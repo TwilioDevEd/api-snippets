@@ -17,4 +17,4 @@ NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:tempFile
                             } else {
                                 NSLog(@"Download successful");
                             }
-                        }];
+                        }]; 
