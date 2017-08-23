@@ -1,0 +1,1 @@
+[haredTwilioAuth.clearLocalData()
