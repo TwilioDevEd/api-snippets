@@ -1,1 +1,1 @@
-[haredTwilioAuth.clearLocalData()
+[sharedTwilioAuth.clearLocalData()
