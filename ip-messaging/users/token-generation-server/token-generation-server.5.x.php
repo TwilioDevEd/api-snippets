@@ -2,15 +2,15 @@
 // Get the PHP helper library from twilio.com/docs/php/install
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Jwt\AccessToken;
-use Twilio\Jwt\Grants\IpMessagingGrant;
+use Twilio\Jwt\Grants\ChatGrant;
 
 // Required for all Twilio access tokens
 $twilioAccountSid = 'ACxxxxxxxxxxxx';
 $twilioApiKey = 'SKxxxxxxxxxxxx';
 $twilioApiSecret = 'xxxxxxxxxxxxxx';
 
-// Required for IP messaging grant
-$ipmServiceSid = 'ISxxxxxxxxxxxx';
+// Required for Chat grant
+$chatServiceSid = 'ISxxxxxxxxxxxx';
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioChatDemo';
 // choose a random username for the connecting user
@@ -28,13 +28,13 @@ $token = new AccessToken(
     $identity
 );
 
-// Create IP Messaging grant
-$ipmGrant = new IpMessagingGrant();
-$ipmGrant->setServiceSid($ipmServiceSid);
-$ipmGrant->setEndpointId($endpointId);
+// Create Chat grant
+$chatGrant = new ChatGrant();
+$chatGrant->setServiceSid($chatServiceSid);
+$chatGrant->setEndpointId($endpointId);
 
 // Add grant to token
-$token->addGrant($ipmGrant);
+$token->addGrant($chatGrant);
 
 // return serialized token and the user's randomly generated ID
 echo json_encode(

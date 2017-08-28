@@ -5,14 +5,14 @@ account_sid = 'ACxxxxxxxxxxxx'
 api_key = 'SKxxxxxxxxxxxx'
 api_secret = 'xxxxxxxxxxxxxx'
 
-# Required for IP Messaging
+# Required for Chat
 service_sid = 'ISxxxxxxxxxxxx'
 device_id = 'someiosdevice'
 identity = 'user@example.com'
 endpoint_id = "HipFlowSlackDockRC:#{identity}:#{device_id}"
 
-# Create IP Messaging grant for our token
-grant = Twilio::JWT::AccessToken::IpMessagingGrant.new
+# Create Chat grant for our token
+grant = Twilio::JWT::AccessToken::ChatGrant.new
 grant.service_sid = service_sid
 grant.endpoint_id = endpoint_id
 
