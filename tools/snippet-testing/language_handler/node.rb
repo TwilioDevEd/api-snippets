@@ -6,7 +6,7 @@ module LanguageHandler
 
     def self.run_before_test(_directory)
       Dir.chdir(ROOT_FOLDER) do
-        output = `npm run format:js 1>/dev/null && npm run test:js -- --fix`
+        output = `npm run test:js -- --fix`
         abort(output) if $? != 0
       end
     end
