@@ -13,16 +13,16 @@ module Model
     JAVA7_NAME      = 'java7'.freeze
 
     CS_V4 = '4.7.2'.freeze
-    CS_V5 = '5.5.1-alpha1'.freeze
+    CS_V5 = '5.6.3'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
-      CSHARP_NAME => ['4.x', '5.6.0'],
-      PHP_NAME    => ['4.10', '5.13.0'],
-      PYTHON_NAME => ['5.6.0', '6.5.0'],
-      RUBY_NAME   => ['4.13.0', '5.1.0'],
-      NODE_NAME   => ['2.11.0', '3.6.1'],
+      CSHARP_NAME => ['4.x', CS_V5],
+      PHP_NAME    => ['4.10', '5.13.3'],
+      PYTHON_NAME => ['5.6.0', '6.5.1'],
+      RUBY_NAME   => ['4.13.0', '5.2.0'],
+      NODE_NAME   => ['2.11.0', '3.6.4'],
       JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
-      JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.14.0', suffix: '-jar-with-dependencies' }
+      JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.14.4', suffix: '-jar-with-dependencies' }
     }.freeze
 
     JAVA_DEPENDENCIES = {
