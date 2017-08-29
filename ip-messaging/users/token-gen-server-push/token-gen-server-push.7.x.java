@@ -1,4 +1,4 @@
-IpMessagingGrant grant = new IpMessagingGrant();
+ChatGrant grant = new ChatGrant();
 grant.setEndpointId(endpointId);
-grant.setServiceSid(env.get("TWILIO_IPM_SERVICE_SID"));
+grant.setServiceSid(env.get("TWILIO_CHAT_SERVICE_SID"));
 grant.setPushCredentialSid("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");

@@ -19,18 +19,18 @@ namespace TwilioIpMessaging.Controllers
             var accountSid = ConfigurationManager.AppSettings["TwilioAccountSid"];
             var apiKey = ConfigurationManager.AppSettings["TwilioApiKey"];
             var apiSecret = ConfigurationManager.AppSettings["TwilioApiSecret"];
-            var ipmServiceSid = ConfigurationManager.AppSettings["TwilioIpmServiceSid"];
+            var chatServiceSid = ConfigurationManager.AppSettings["TwilioChatServiceSid"];
 
             // Create a random identity for the client
             var identity = Internet.UserName();
 
-            // Create an IP messaging grant for this token
+            // Create an Chat grant for this token
             var grants = new HashSet<IGrant>
             {
-                new IpMessagingGrant
+                new ChatGrant
                 {
                     EndpointId = $"TwilioChatDemo:{identity}:{device}",
-                    ServiceSid = ipmServiceSid
+                    ServiceSid = chatServiceSid
                 }
             };
 

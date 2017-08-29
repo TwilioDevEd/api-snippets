@@ -10,7 +10,7 @@ import java.util.Map;
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 import com.twilio.jwt.accesstoken.AccessToken;
-import com.twilio.jwt.accesstoken.IpMessagingGrant;
+import com.twilio.jwt.accesstoken.ChatGrant;
 
 public class WebApp {
   public static void main(String[] args) {
@@ -40,10 +40,10 @@ public class WebApp {
         env.put(key, val);
       });
 
-      // Create IP messaging grant
-      IpMessagingGrant grant = new IpMessagingGrant();
+      // Create Chat grant
+      ChatGrant grant = new ChatGrant();
       grant.setEndpointId(endpointId);
-      grant.setServiceSid(env.get("TWILIO_IPM_SERVICE_SID"));
+      grant.setServiceSid(env.get("TWILIO_CHAT_SERVICE_SID"));
 
       // Create access token
       AccessToken token = new AccessToken.Builder(System.getenv("TWILIO_ACCOUNT_SID"),
