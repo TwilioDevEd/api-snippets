@@ -13,8 +13,8 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$list = $client->sync
+$map = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")->fetch();
 
-echo $list->sid, PHP_EOL;
+echo $map->sid, PHP_EOL;

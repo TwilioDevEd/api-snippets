@@ -13,7 +13,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$list = $client->sync
+$map = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps->create(
         array(
@@ -21,4 +21,4 @@ $list = $client->sync
         )
     );
 
-echo $list->sid, PHP_EOL;
+echo $map->sid, PHP_EOL;
