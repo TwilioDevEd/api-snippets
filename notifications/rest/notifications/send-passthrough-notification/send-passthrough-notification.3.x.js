@@ -12,14 +12,14 @@ const service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service.notifications
   .create({
     toBinding: [
-      {
+      JSON.stringify({
         binding_type: 'sms',
         address: '+15555555555',
-      },
+      }), JSON.stringify(
       {
         binding_type: 'facebook-messenger',
         address: '123456789123',
-      },
+      }),
     ],
     body: 'Hello Bob',
   })
