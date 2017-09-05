@@ -6,7 +6,7 @@ if let url = URL(string: functionURL) {
             print(error!)
         } else {
             do {
-                let responseObject = try JSONSerialization.jsonObject(with: data!, options: [])
+                let responseObject = try JSONSerialization.jsonObject(with: data!) as! [[String:Any]]
                 print(responseObject)
             } catch let error as NSError {
                 print(error)
