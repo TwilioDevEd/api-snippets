@@ -6,16 +6,16 @@ const Client = require('twilio').RestClient;
 
 const client = new Client(accountSid, authToken);
 
-client.validationRequests.create(
+client.outgoingCallerIds.create(
   {
     friendlyName: 'My Home Phone Number',
     phoneNumber: '+14158675309',
   },
-  (err, data) => {
+  (err, callerId) => {
     if (err) {
       console.error(err);
     } else {
-      console.log(data.validationCode);
+      console.log(callerId.sid);
     }
   }
 );
