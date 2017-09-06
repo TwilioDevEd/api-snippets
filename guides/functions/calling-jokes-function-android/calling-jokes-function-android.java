@@ -10,7 +10,7 @@ JsonArrayRequest request = new JsonArrayRequest(url,
         new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("APP", error.getLocalizedMessage());
+                Log.e("APP", error.getLocalizedMessage());
             }
         }
 );

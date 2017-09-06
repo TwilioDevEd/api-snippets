@@ -10,7 +10,7 @@ StringRequest request = new StringRequest(Request.Method.GET,
     new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-            Log.d("APP", error.getLocalizedMessage());
+            Log.e("APP", error.getLocalizedMessage());
         }
     }
 );
