@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $options = array(
-  "from" => "Jack"  
+  "from" => "Jack"
 );
 $fax = $client->fax->v1->faxes->create(
   "sip:kate@example.com",

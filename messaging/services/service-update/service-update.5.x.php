@@ -9,5 +9,6 @@ $auth_token = 'your_auth_token';
 $twilio = new Client($account_sid, $auth_token);
 
 $service = $twilio->messaging->v1->services("MG2172dd2db502e20dd981ef0d67850e1a")
-                                                       ->update( array( "inboundRequestUrl" => "http://www.example.com" )
+                                                       ->update(
+                                                           array( "inboundRequestUrl" => "http://www.example.com" )
                                                         );

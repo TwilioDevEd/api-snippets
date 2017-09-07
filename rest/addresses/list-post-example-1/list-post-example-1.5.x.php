@@ -13,7 +13,12 @@ $client = new Client($sid, $token);
 $address = $client
     ->addresses
     ->create(
-        "Customer 123", "1 Hasselhoff Lane", "Berlin", "Berlin", "10875", "DE"
+        "Customer 123",
+        "1 Hasselhoff Lane",
+        "Berlin",
+        "Berlin",
+        "10875",
+        "DE"
     );
 
 echo $address->sid;

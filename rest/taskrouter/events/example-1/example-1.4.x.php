@@ -10,7 +10,6 @@ $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-foreach($client->workspace->events as $event)
-{
-	echo $event->event_type;
+foreach ($client->workspace->events as $event) {
+    echo $event->event_type;
 }

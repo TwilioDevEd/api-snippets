@@ -9,7 +9,9 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $trigger = $client->usage->triggers->create(
-    "http://www.example.com/", "1000", "sms"
+    "http://www.example.com/",
+    "1000",
+    "sms"
 );
 
 echo $trigger->sid;

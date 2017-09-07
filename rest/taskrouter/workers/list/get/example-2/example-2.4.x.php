@@ -10,6 +10,6 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
 $workers = $client->workspace->workers->getIterator(null, null, array("Available" => "1", "TaskQueueSid" => "WQf855e98ad280d0a0a325628e24ca9627"));
-foreach($workers as $worker) {
-	print_r("worker: ".$worker->friendly_name);
+foreach ($workers as $worker) {
+    print_r("worker: ".$worker->friendly_name);
 }

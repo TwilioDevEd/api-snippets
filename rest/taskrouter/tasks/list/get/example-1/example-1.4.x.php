@@ -9,7 +9,6 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-foreach($client->workspace->tasks as $task)
-{
-	echo $task->attributes;
+foreach ($client->workspace->tasks as $task) {
+    echo $task->attributes;
 }

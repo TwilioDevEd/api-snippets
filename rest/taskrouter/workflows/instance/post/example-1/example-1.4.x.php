@@ -12,7 +12,7 @@ $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid)
 
 $workflow = $client->workspace->workflows->get($workflowSid);
 $workflow->update(
-	array(
-		'TaskReservationTimeout' => '20'
-	)
+    array(
+        'TaskReservationTimeout' => '20'
+    )
 );

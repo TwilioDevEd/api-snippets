@@ -1,8 +1,7 @@
 <?php
-    // Step 5: Loop over all our friends. $number is a phone number above, and 
+    // Step 5: Loop over all our friends. $number is a phone number above, and
     // $name is the name next to it
     foreach ($people as $number => $name) {
-
         $sms = $client->account->messages->sendMessage(
 
             // Step 6: Change the 'From' number below to be a valid Twilio number

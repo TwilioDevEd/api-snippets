@@ -9,7 +9,7 @@ $client = new Services_Twilio($sid, $token);
 
 // Loop over the list of addresses and echo a property for each one
 foreach ($client->account->addresses->getIterator(0, 50, array(
-	"CustomerName" => "Customer 123"
+    "CustomerName" => "Customer 123"
     )) as $address) {
     echo $address->friendly_name;
 }

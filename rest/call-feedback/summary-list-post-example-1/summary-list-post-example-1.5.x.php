@@ -14,7 +14,8 @@ $summary = $client
     ->calls
     ->feedbackSummaries
     ->create(
-        "2014-06-01", "2014-06-30",
+        "2014-06-01",
+        "2014-06-30",
         array(
             "includeSubaccounts" => "true",
             "statusCallback" => "http://www.example.com/feedback"

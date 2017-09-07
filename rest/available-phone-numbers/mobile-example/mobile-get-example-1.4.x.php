@@ -8,7 +8,9 @@ $token = "your_auth_token";
 $client = new Services_Twilio($sid, $token);
 
 $numbers = $client->account->available_phone_numbers->getList(
-    'GB', 'Mobile', array()
+    'GB',
+    'Mobile',
+    array()
 );
 
 $firstNumber = $numbers->available_phone_numbers[0];

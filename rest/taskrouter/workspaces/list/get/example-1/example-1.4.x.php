@@ -9,7 +9,6 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new TaskRouter_Services_Twilio($accountSid, $authToken, $workspaceSid);
 
-foreach($client->workspaces as $workspace)
-{
-	echo $workspace->friendly_name;
+foreach ($client->workspaces as $workspace) {
+    echo $workspace->friendly_name;
 }

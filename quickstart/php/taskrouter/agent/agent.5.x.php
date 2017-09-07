@@ -1,5 +1,5 @@
 <?php
-// Get the Twilio-PHP library from twilio.com/docs/libraries/php, 
+// Get the Twilio-PHP library from twilio.com/docs/libraries/php,
 // following the instructions to install it with Composer.
 require_once "vendor/autoload.php";
 
@@ -7,12 +7,16 @@ require_once "vendor/autoload.php";
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 // Your Auth Token from www.twilio.com/console
 $authToken = "your_auth_token";
-$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
+$workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 $workerSid = $_REQUEST['WorkerSid'];
 
 $workerCapability = new Twilio\Jwt\TaskRouter\WorkerCapability(
-    $accountSid, $authToken, $workspaceSid, $workerSid);
+    $accountSid,
+    $authToken,
+    $workspaceSid,
+    $workerSid
+);
 $workerCapability->allowActivityUpdates();
 $workerToken = $workerCapability->generateToken();
 

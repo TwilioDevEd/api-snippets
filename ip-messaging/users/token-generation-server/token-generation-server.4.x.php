@@ -1,6 +1,6 @@
 <?php
- 
-require_once('./twilio-php/Services/Twilio.php'); 
+
+require_once('./twilio-php/Services/Twilio.php');
 require_once('./config.php');
 
 // An identifier for your app - can be anything you'd like
@@ -13,10 +13,10 @@ $deviceId = empty($_GET['device']) ? "unknown" : $_GET['device'];
 $endpointId = $appName . ':' . $identity . ':' . $deviceId;
 // Create access token, which we will serialize and send to the client
 $token = new Services_Twilio_AccessToken(
-    $TWILIO_ACCOUNT_SID, 
-    $TWILIO_API_KEY, 
-    $TWILIO_API_SECRET, 
-    3600, 
+    $TWILIO_ACCOUNT_SID,
+    $TWILIO_API_KEY,
+    $TWILIO_API_SECRET,
+    3600,
     $identity
 );
 

@@ -8,7 +8,9 @@ $token = "your_auth_token";
 $client = new Services_Twilio($sid, $token);
 
 $numbers = $client->account->available_phone_numbers->getList(
-    'US', 'TollFree', array(
+    'US',
+    'TollFree',
+    array(
         "Contains" => "STORM"
     )
 );
