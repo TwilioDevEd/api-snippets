@@ -13,8 +13,12 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$map = $client->sync
+$stream = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->syncMaps("Players")->fetch();
+    ->syncStreams->create(
+        array(
+            'uniqueName' => "MyStream"
+        )
+    );
 
-echo $map->sid, PHP_EOL;
+echo $stream->sid, PHP_EOL;

@@ -5,10 +5,12 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create the service
+# Retreive the service
 service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-# Retrieve a Map
-response = service.sync_maps('Players').fetch
+# Publish a Stream Message
+stream_message = service.sync_streams('MyStream').stream_messages.create(
+  data: "{ 'id': 'bob', 'x': 256, 'y': 42}"
+)
 
-puts response
+puts stream_message.sid

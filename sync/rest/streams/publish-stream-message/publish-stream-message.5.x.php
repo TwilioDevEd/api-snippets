@@ -13,8 +13,16 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$map = $client->sync
-    ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->syncMaps("Players")->fetch();
+$data = array(
+    'id' => "bob",
+    'x' => 256,
+    'y' => 42
+);
 
-echo $map->sid, PHP_EOL;
+$message = $client->sync
+    ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    ->syncStreams("MyStream")
+    ->streamMessages->create($data);
+
+print_r($message->sid);
+echo PHP_EOL;
