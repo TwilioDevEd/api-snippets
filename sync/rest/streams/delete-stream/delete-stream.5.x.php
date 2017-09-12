@@ -13,8 +13,8 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$map = $client->sync
+$didDelete = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->syncMaps("Players")->fetch();
+    ->syncStreams("MyStream")->delete();
 
-echo $map->sid, PHP_EOL;
+echo "Stream Deleted: {$didDelete}", PHP_EOL;

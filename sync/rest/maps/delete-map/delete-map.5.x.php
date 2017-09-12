@@ -13,8 +13,8 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$item = $client->sync
+$didDelete = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")->delete();
 
-echo "Map Deleted", PHP_EOL;
+echo $didDelete, PHP_EOL;
