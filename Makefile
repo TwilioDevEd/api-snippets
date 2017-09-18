@@ -45,3 +45,9 @@ save_dependencies:
 
 restore_dependencies:
 	cp -r /dependencies tools/dependencies
+
+run_all_tests:
+	ruby tools/snippet-testing/snippet_tester.rb
+
+run_docker_dev:
+	docker run -it -v $PWD:/src api-snippets bash -c "make start_dev; bash --login"
