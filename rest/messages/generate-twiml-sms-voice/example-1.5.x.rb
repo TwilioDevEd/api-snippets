@@ -4,7 +4,7 @@ require 'sinatra'
 
 # Respond to incoming text messages with a call and a text message.
 post '/sms' do
-  puts 'Message: #{params[\'Body\']}!'
+  puts "Message: #{params['Body']}!"
 
   twiml = Twilio::TwiML::Response.new do |r|
     r.Say 'Hello! You will get an SMS message soon.'
