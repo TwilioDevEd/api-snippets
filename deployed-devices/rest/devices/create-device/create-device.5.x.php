@@ -12,7 +12,7 @@ $client = new Client($sid, $token);
 $fleetSid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $fleetService = $client->preview->deployedDevices->fleets($fleetSid);
 
-$device = $fleetService->device->create([
+$device = $fleetService->devices->create([
     'friendlyName' => 'My Device #1'
 ]);
 

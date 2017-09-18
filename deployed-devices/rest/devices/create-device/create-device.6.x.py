@@ -10,6 +10,6 @@ client = Client(account_sid, auth_token)
 fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
-device = fleet_service.device.create(friendly_name='My Device #1')
+device = fleet_service.devices.create(friendly_name='My Device #1')
 
 print(device.sid)
