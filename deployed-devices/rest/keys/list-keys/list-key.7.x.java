@@ -14,7 +14,6 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String fleetSid = "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        String keySid = "KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         ResourceSet<Key> keys = new KeyReader(fleetSid).read();
 
