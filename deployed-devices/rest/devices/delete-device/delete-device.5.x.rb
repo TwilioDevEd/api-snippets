@@ -10,7 +10,7 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 was_deleted = fleet_service
-  .devices("THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-  .delete()
+              .devices('THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+              .delete
 
 puts was_deleted

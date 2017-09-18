@@ -10,7 +10,7 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 key = fleet_service.keys.create(
-    device_sid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  device_sid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 )
 
 puts key.sid

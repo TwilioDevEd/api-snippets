@@ -10,7 +10,7 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 certificate = fleet_service
-  .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .fetch()
+              .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+              .fetch
 
 puts certificate.sid

@@ -10,9 +10,9 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 certificate = fleet_service.certificates.create(
-    device_sid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    friendly_name: 'Woody',
-    certificate_data: IO.read('/path/to/certificate.pem')
+  device_sid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  friendly_name: 'Woody',
+  certificate_data: IO.read('/path/to/certificate.pem')
 )
 
 puts certificate.sid

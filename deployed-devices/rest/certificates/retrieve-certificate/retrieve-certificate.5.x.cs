@@ -16,7 +16,7 @@ public class Example
         const string fleetSid = "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string certSid = "CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const bool certiricate = CertificateResource
-            .Fetch(fleetSid, certSid);
+                                 .Fetch(fleetSid, certSid);
 
         Console.WriteLine(certiricate.Sid);
     }

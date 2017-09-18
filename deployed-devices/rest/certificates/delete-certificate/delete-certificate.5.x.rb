@@ -10,8 +10,8 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 was_deleted = fleet_service
-  .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .fetch()
-  .delete()
+              .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+              .fetch
+              .delete
 
 puts was_deleted

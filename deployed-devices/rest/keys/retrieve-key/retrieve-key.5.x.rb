@@ -10,6 +10,6 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 key_sid = 'KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-key = fleet_service.keys(key_sid).fetch()
+key = fleet_service.keys(key_sid).fetch
 
 puts key.friendly_name

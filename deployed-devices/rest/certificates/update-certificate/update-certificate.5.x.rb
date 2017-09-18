@@ -10,10 +10,11 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 certificate = fleet_service
-  .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .fetch()
-  .update(
-    friendly_name: "My New Certificate",
-    device_sid: "THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+              .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+              .fetch
+              .update(
+                friendly_name: 'My New Certificate',
+                device_sid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+              )
 
 puts certificate.friendly_name

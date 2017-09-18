@@ -8,7 +8,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet = client.preview.deployed_devices
-  .fleets(fleet_sid)
-  .fetch()
+              .fleets(fleet_sid)
+              .fetch
 
 puts fleet.friendly_name

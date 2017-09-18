@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
-devices = fleet_service.devices.list()
+devices = fleet_service.devices.list
 
 puts devices

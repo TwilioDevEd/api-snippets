@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
-certificates = fleet_service.certificates().list()
+certificates = fleet_service.certificates().list
 
 puts certificates

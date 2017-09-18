@@ -10,8 +10,8 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 device = fleet_service
-  .devices('THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .fetch()
-  .update(friendly_name: "My New Device", identity: "bob@twilio.com")
+         .devices('THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+         .fetch
+         .update(friendly_name: 'My New Device', identity: 'bob@twilio.com')
 
 puts device.friendly_name

@@ -10,6 +10,6 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 key_sid = 'KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-deleted = fleet_service.keys(key_sid).delete()
+deleted = fleet_service.keys(key_sid).delete
 
 puts deleted
