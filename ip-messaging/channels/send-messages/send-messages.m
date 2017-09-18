@@ -1,5 +1,5 @@
-TCHMessage *message = [[self.channel messages] createMessageWithBody:@"test"];
-[self.channel.messages sendMessage:message completion:^(TCHResult *result) {
+TCHMessageOptions *options = [[TCHMessageOptions new] withBody:@"test"];
+[self.channel.messages sendMessageWithOptions:options completion:^(TCHResult *result, TCHMessage *message) {
     if ([result isSuccessful]) {
         NSLog(@"Message sent.");
     } else {

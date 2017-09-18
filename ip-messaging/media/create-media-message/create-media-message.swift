@@ -9,12 +9,15 @@ messageOptions.withMediaStream(inputStream,
                                defaultFilename: "image.jpg",
                                onStarted: {
                                 // Called when upload of media begins.
+                                print("Media upload started")
 },
                                onProgress: { (bytes) in
                                 // Called as upload progresses, with the current byte count.
+                                print("Media upload progress: \(bytes)")
 }) { (mediaSid) in
     // Called when upload is completed, with the new mediaSid if successful.
     // Full failure details will be provided through sendMessage's completion.
+    print("Media upload completed")
 }
 
 // Trigger the sending of the message.
