@@ -37,6 +37,7 @@ node_modules
 # Miscellaneous
 .DS_Store
 *.*~
+.python-version
 
 #IDEs
 *.idea
