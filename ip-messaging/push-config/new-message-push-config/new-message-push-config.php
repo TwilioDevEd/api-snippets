@@ -19,6 +19,6 @@ $client = new Twilio\Rest\Client($TWILIO_API_KEY, $TWILIO_API_SECRET, $TWILIO_AC
 $service = $client->chat->v2->services($CHAT_SERVICE_SID);
 $response = $service->update(array(
     "Notifications.NewMessage.Enabled" => "true",
-    "Notifications.NewMessage.Template" => "A New message in ${CHANNEL} from ${USER}: ${MESSAGE}",
+    "Notifications.NewMessage.Template" => 'A New message in ${CHANNEL} from ${USER}: ${MESSAGE}',
     "Notifications.NewMessage.Sound" => "default",
 ));
