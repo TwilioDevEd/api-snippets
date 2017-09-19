@@ -38,7 +38,9 @@ run_api_faker:
 	sleep 25
 
 install_dependencies:
-	ruby tools/snippet-testing/model/dependency.rb
+	ruby tools/snippet-testing/model/dependency.rb && \
+	make append_certs && \
+	make save_dependencies
 
 save_dependencies:
 	cp -r tools/dependencies /dependencies
@@ -46,8 +48,15 @@ save_dependencies:
 restore_dependencies:
 	cp -r /dependencies tools/dependencies
 
-run_all_tests:
+run_tests:
 	ruby tools/snippet-testing/snippet_tester.rb
 
 run_docker_dev:
-	docker run -it -v $PWD:/src api-snippets bash -c "make start_dev; bash --login"
+	docker run -it -v $$PWD:/src api-snippets bash -c "make start_dev; bash --login"
+
+FAKE_CERT = /usr/local/share/ca-certificates/twilio_fake.crt
+
+append_certs:
+	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
+		cat $(FAKE_CERT) >> $$line; \
+	done
