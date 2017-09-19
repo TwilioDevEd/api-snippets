@@ -19,5 +19,8 @@ module LanguageHandler
         "sys.modules['twilio.rest.base.resources'] = twilio.rest.resources.base\n"
       )
     end
+
+    def replace_twilio_client_initialization(file_content)
+    end
   end
 end

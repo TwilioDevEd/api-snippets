@@ -12,4 +12,4 @@ country = client.pricing \
                 .fetch()
 
 for p in country.phone_number_prices:
-    print("{} {}".format(p['number_type'], p['current_price']))
+    print("{} {}".format(p['type'], p['current_price']))

@@ -13,11 +13,18 @@ module LanguageHandler
     def text_with_custom_header(file_content)
       cert_path = ENV['FAKE_CERT_PATH']
       file_content.prepend(
-        "import twilio.http\n"\
-        "import sys\n"\
-        "twilio.http.get_cert_file = lambda: '#{cert_path}'\n"\
-        "sys.modules['twilio.http'] = twilio.http\n"
+        "from twilio.http.http_client import TwilioHttpClient\n"\
+        "class FakerHttpClient(TwilioHttpClient):\n"\
+        "    def __init__(self, *args, **kwargs):\n"\
+        "         super(FakerHttpClient, self).__init__(*args, **kwargs)\n"\
+        "         self.session.verify = '#{cert_path}'\n"\
       )
+    end
+
+    def replace_twilio_client_initialization(file_content)
+      cert_path = ENV['FAKE_CERT_PATH']
+      file_content.gsub! 'Client(account_sid, auth_token)',
+        'Client(account_sid, auth_token, http_client=FakerHttpClient())' || file_content
     end
   end
 end
