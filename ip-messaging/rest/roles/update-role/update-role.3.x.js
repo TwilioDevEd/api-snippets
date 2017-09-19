@@ -7,8 +7,10 @@ const service = client.chat.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 service
   .roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .update({
-    permission: 'inviteMember',
+  .fetch()
+  .then(role => {
+    const new_permissions = ['sendMediaMessage'].concat(role.permissions || []);
+    return role.update({permission: new_permissions});
   })
   .then(response => {
     console.log(response);
