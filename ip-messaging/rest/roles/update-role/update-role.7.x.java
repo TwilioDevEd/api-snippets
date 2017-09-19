@@ -18,7 +18,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Role role = Role.fetcher(SERVICE_SID, ROLE_SID).fetch();
-    List<String> newPermissions = new ArrayList<String>(Arrays.asList("sendMessage"));
+    List<String> newPermissions = new ArrayList<String>(Arrays.asList("sendMediaMessage"));
     newPermissions.addAll(role.getPermission());
 
     // Update the role
