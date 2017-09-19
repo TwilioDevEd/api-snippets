@@ -23,4 +23,4 @@ services:
   - docker
 
 script:
-  - docker build .
+  - docker build . --build-arg SNIPPET_LANGUAGE=$SNIPPET_LANGUAGE
