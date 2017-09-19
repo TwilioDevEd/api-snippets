@@ -23,12 +23,8 @@ module LanguageHandler
 
     def replace_twilio_client_initialization(file_content)
       cert_path = ENV['FAKE_CERT_PATH']
-      result = ''
-      file_content.each_line do |line|
-        result += line.include?('client = Client(') ?
-           line.gsub!(')', ', http_client=FakerHttpClient())') : line
-      end
-      result
+      file_content.gsub! 'Client(account_sid, auth_token)',
+        'Client(account_sid, auth_token, http_client=FakerHttpClient())'
     end
   end
 end
