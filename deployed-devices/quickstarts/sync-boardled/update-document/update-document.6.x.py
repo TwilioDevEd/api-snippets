@@ -6,9 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-new_data = {
-    'led': "ON"
-}
+new_data = {'led': "ON"}
 
 document = client.sync \
     .services("default") \

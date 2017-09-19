@@ -4,7 +4,6 @@ sudo: required
 matrix:
   include:
     - env: SNIPPET_LANGUAGE=python:curl
-      dist: precise
     - env: SNIPPET_LANGUAGE=java6
     - env: SNIPPET_LANGUAGE=java7
     - env: SNIPPET_LANGUAGE=csharp:ruby
