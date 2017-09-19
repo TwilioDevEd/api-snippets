@@ -1,5 +1,4 @@
 # Get the Node helper library from https://twilio.com/docs/libraries/python
-from pathlib import Path
 from Twilio.rest import Client
 
 # Get your Account SID and Auth Token from https://twilio.com/console
@@ -11,8 +10,8 @@ fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
 was_deleted = fleet_service\
-  .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')\
-  .fetch()\
-  .delete()
+    .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')\
+    .fetch()\
+    .delete()
 
 print(was_deleted.sid)
