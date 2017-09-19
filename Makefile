@@ -22,6 +22,7 @@ export HOSTS
 start:
 	make register_hosts
 	make run_api_faker
+	make restore_dependencies
 
 start_dev:
 	make register_hosts
@@ -60,3 +61,6 @@ append_certs:
 	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
 		cat $(FAKE_CERT) >> $$line; \
 	done
+
+build_base:
+	docker build . -f Dockerfile-base -t twiliodeved/api-snippets:base && docker push twiliodeved/api-snippets:base
