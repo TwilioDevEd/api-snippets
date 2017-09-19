@@ -16,8 +16,9 @@ $client = new Client($sid, $token);
 $role = $client->chat
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    ->update(
-        array("sendMessage", "leaveChannel")
-    );
+    ->fetch();
+
+$new_permissions = array_merge(['sendMediaMessage'], $role->permissions || []);
+$role->update($new_permissions);
 
 print $role->friendlyName;

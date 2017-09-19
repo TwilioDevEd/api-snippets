@@ -17,9 +17,11 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    List<String> permissions = Arrays.asList("sendMessage", "leaveChannel");
+    Role role = Role.fetcher(SERVICE_SID, ROLE_SID).fetch();
+    List<String> newPermissions = new ArrayList<String>(Arrays.asList("sendMediaMessage"));
+    newPermissions.addAll(role.getPermission());
 
     // Update the role
-    Role role = Role.updater(SERVICE_SID, ROLE_SID, permissions).update();
+    Role role = Role.updater(SERVICE_SID, ROLE_SID, newPermissions).update();
   }
 }

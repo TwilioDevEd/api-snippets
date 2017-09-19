@@ -10,6 +10,9 @@ client = Client(account, token)
 role = client.chat \
     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-    .update(permission=["sendMessage", "leaveChannel"])
+    .fetch()
+
+new_permissions = ['sendMediaMessage'] + (role.permission or [])
+role.update(permission=new_permissions)
 
 print(role.friendly_name)
