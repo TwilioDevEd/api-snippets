@@ -21,9 +21,9 @@ class Example
         var newPermissions = new List<string> { "sendMessage" };
 
         var role = RoleResource.Fetch(serviceSid, roleSid);
-        newPermissions.AddRage(role.Permissions ?? empty_list);
+        newPermissions.AddRange(role.Permissions ?? empty_list);
 
-        var role = RoleResource.Update(serviceSid, roleSid, newPermissions);
+        role = RoleResource.Update(serviceSid, roleSid, newPermissions);
 
         foreach (var permission in role.Permissions)
         {

@@ -9,8 +9,8 @@ service
   .roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
   .then(role => {
-    const new_permissions = ['sendMediaMessage'].concat(role.permissions || []);
-    return role.update({permission: new_permissions});
+    const newPermissions = ['sendMediaMessage'].concat(role.permissions || []);
+    return role.update({permission: newPermissions});
   })
   .then(response => {
     console.log(response);

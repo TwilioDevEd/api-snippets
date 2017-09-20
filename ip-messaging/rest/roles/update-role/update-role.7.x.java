@@ -21,6 +21,6 @@ public class Example {
     newPermissions.addAll(role.getPermissions());
 
     // Update the role
-    Role role = Role.updater(SERVICE_SID, ROLE_SID, newPermissions).update();
+    role = Role.updater(SERVICE_SID, ROLE_SID, newPermissions).update();
   }
 }
