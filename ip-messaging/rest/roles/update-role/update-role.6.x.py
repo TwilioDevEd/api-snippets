@@ -12,7 +12,7 @@ role = client.chat \
     .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .fetch()
 
-new_permissions = ['sendMediaMessage'] + (role.permission or [])
+new_permissions = ['sendMediaMessage'] + (role.permissions or [])
 role.update(permission=new_permissions)
 
 print(role.friendly_name)
