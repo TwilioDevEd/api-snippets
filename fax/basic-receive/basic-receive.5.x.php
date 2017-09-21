@@ -7,7 +7,7 @@ class FaxController extends Controller {
         parent::__construct();
 
         // set content-type for all requests returned by this controller
-        $this->set_output->set_content_type('text/xml')
+        $this->set_output->set_content_type('text/xml');
     }
 
     // Define a handler for when the fax is initially sent
@@ -28,7 +28,7 @@ class FaxController extends Controller {
         log_message('info', $this->input->post("MediaUrl"));
 
         // Respond with empty 200/OK to Twilio
-        $this->set_status_header(200)
-        $this->output->set_output('')
+        $this->set_status_header(200);
+        $this->output->set_output('');
     }
 }
