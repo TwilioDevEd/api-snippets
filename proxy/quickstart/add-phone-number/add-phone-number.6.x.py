@@ -1,18 +1,12 @@
-# NOTE: This example uses the ALPHA release of the next generation Twilio
-# helper library - for more information on how to download and install this
-# version, visit
-# https://www.twilio.com/docs/libraries/python#accessing-preview-twilio-features
+# Get the Node helper library from https://twilio.com/docs/libraries/python
 from twilio.rest import Client
 
-# Account SID and Auth Token are found in the console:
-# twilio.com/console
+# Get your Account SID and Auth Token from https://twilio.com/console
 account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
-
 client = Client(account, token)
 
-phone_number = client.preview \
-    .proxy \
+phone_number = client.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .phone_numbers \
     .create(sid="PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
