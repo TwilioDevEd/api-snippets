@@ -1,14 +1,11 @@
-// NOTE: This example uses the ALPHA release of the next generation Twilio
-// helper library - for more information on how to download and install this version, visit
-// https://www.twilio.com/docs/libraries/node#accessing-preview-twilio-features
-
-// These consts are your accountSid and authToken from https://www.twilio.com/console
+// Get the Node helper library from https://twilio.com/docs/libraries/node
+// Get your Account SID and Auth Token from https://twilio.com/console
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.proxy.services
+client.proxy.services
   .create({
     friendlyName: 'My Awesome Service',
     callbackUrl: 'https://www.example.com/',
