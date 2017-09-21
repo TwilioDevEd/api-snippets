@@ -11,4 +11,4 @@ bindings = client
            .notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
            .users('User0001').bindings.list
 
-puts bindings[0].sid
+puts bindings.length
