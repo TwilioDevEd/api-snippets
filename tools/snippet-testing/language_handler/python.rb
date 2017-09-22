@@ -28,6 +28,7 @@ module LanguageHandler
 
     def text_with_specific_replacements(file_content)
       text_with_custom_header(file_content)
+      replace_twilio_client_initialization(file_content)
     end
   end
 end

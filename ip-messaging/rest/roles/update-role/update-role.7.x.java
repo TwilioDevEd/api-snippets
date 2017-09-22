@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import com.twilio.Twilio;
 import com.twilio.rest.chat.v2.service.Role;
@@ -18,10 +17,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Role role = Role.fetcher(SERVICE_SID, ROLE_SID).fetch();
-    List<String> newPermissions = new ArrayList<String>(Arrays.asList("sendMediaMessage"));
-    newPermissions.addAll(role.getPermission());
+    List<String> newPermissions = new ArrayList<>(Arrays.asList("sendMediaMessage"));
+    newPermissions.addAll(role.getPermissions());
 
     // Update the role
-    Role role = Role.updater(SERVICE_SID, ROLE_SID, newPermissions).update();
+    role = Role.updater(SERVICE_SID, ROLE_SID, newPermissions).update();
   }
 }

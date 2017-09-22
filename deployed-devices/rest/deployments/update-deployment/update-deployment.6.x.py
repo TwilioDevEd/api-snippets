@@ -7,7 +7,9 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 deployment_sid = 'DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-deployment = client.preview.deployed_devices.deployments(sid=deployment_sid).update(
-    friendly_name='My New Device Deployment')
+deployment = client.preview\
+                   .deployed_devices\
+                   .deployments(sid=deployment_sid)\
+                   .update(friendly_name='My New Device Deployment')
 
 print(deployment.friendly_name)

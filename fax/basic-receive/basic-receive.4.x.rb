@@ -7,11 +7,11 @@ post '/fax/sent' do
   # fax with <Receive>, or reject with <Reject>.
   content_type 'text/xml'
 
-  <<-twiml
+  <<-TWIML
     <Response>
         <Receive action="/fax/received"/>
     </Response>'
-    twiml
+    TWIML
 end
 
 # Define a handler for when the fax is finished sending to us - if successful,

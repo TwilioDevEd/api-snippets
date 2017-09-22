@@ -7,6 +7,9 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 deployment_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-deployment = client.preview.deployed_devices.deployments(sid=deployment_sid).fetch()
+deployment = client.preview\
+                   .deployed_devices\
+                   .deployments(sid=deployment_sid)\
+                   .fetch()
 
 print(deployment.friendly_name)

@@ -1,5 +1,4 @@
 # Get the Node helper library from https://twilio.com/docs/libraries/python
-from pathlib import Path
 from Twilio.rest import Client
 
 # Get your Account SID and Auth Token from https://twilio.com/console

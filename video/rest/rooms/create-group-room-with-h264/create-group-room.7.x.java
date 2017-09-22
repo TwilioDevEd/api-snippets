@@ -14,7 +14,7 @@ public class Example {
         Room room = Room.creator()
                 .setUniqueName("DailyStandupWithH264Codec")
                 .setType(RoomType.GROUP)
-                .setVideoCodecs("H264")
+                .setVideoCodecs(Room.VideoCodec.forValue("H264"))
                 .setStatusCallback("http://example.org")
                 .create();
 

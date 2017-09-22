@@ -7,6 +7,9 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 deployment_sid = 'DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-deleted = client.preview.deployed_devices.deployments(sid=deployment_sid).delete()
+deleted = client.preview\
+                .deployed_devices\
+                .deployments(sid=deployment_sid)\
+                .delete()
 
 print(deleted)

@@ -10,4 +10,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 users = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
               .users.list
 
-puts users[0].sid
+users.each do |user|
+  puts user.sid
+end

@@ -16,7 +16,7 @@ class Example
         var room = RoomResource.Create(
             uniqueName: "DailyStandupWithH264Codec",
             type: RoomResource.RoomTypeEnum.Group,
-            videoCodecs: 'H264',
+            videoCodecs: RoomResource.VideoCodecEnum.H264,
             statusCallback: new Uri("http://example.org"));
 
         Console.WriteLine(room.Sid);

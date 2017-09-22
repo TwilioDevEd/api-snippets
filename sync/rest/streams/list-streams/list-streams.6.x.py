@@ -12,4 +12,5 @@ streams = client.sync \
     .list()
 
 for stream in streams:
-    print('SID: ' + stream.sid + ', unique name: ' + (stream.unique_name or ''))
+    name = stream.unique_name or ''
+    print('SID: {}, unique name: {}'.format(stream.sid, name))

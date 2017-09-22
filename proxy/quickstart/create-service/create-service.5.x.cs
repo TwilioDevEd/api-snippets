@@ -1,7 +1,7 @@
 // Get the Node helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Proxy;
+using Twilio.Rest.Preview.Proxy;
 
 class Example
 {

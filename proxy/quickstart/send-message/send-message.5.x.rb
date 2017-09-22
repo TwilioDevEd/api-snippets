@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 body = 'Reply to this message to chat!'
-message_interaction = client.proxy
+message_interaction = client.preview.proxy
                             .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                             .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                             .participants('KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
