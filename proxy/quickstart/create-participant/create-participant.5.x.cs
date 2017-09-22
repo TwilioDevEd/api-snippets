@@ -1,16 +1,13 @@
-// NOTE: This example uses the ALPHA release of the next generation Twilio
-// helper library - for more information on how to download and install this version, visit
-// https://www.twilio.com/docs/libraries/csharp#accessing-preview-twilio-features
-
+// Get the Node helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Proxy.Service.Session;
+using Twilio.Rest.Proxy.Service.Session;
 
 class Example
 {
     static void Main(string[] args)
     {
-        // Find your Account Sid, Auth Token and Proxy Service sid at twilio.com/console
+        // Get your Account SID and Auth Token from https://twilio.com/console
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string proxyServiceSid = "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
