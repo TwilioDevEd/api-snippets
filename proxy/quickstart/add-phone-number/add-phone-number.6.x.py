@@ -6,7 +6,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-phone_number = client.proxy \
+phone_number = client.preview.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .phone_numbers \
     .create(sid="PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")

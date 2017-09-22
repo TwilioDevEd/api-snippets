@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 client = Twilio::REST::Client.new account_sid, auth_token
 
-session = client.proxy
+session = client.preview.proxy
                 .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                 .sessions
                 .create(unique_name: 'MyFirstSession')

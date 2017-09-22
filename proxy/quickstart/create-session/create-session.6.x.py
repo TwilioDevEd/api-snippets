@@ -7,7 +7,7 @@ token = "your_auth_token"
 
 client = Client(account, token)
 
-session = client.proxy \
+session = client.preview.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sessions \
     .create(unique_name="MyFirstSession")

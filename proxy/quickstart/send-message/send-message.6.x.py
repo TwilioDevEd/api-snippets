@@ -7,7 +7,7 @@ token = "your_auth_token"
 
 client = Client(account, token)
 
-message_interaction = client.proxy \
+message_interaction = client.preview.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .participants("KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \

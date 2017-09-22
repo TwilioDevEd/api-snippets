@@ -8,6 +8,7 @@ $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
 $service = $client
+    ->preview
     ->proxy
     ->services
     ->create([
