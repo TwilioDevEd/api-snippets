@@ -14,7 +14,7 @@ post '/sms' do
   message = if sms_count.zero?
               'Hello, thanks for the new message.'
             else
-              'Hello, thanks for message number #{sms_count + 1}'
+              "Hello, thanks for message number #{sms_count + 1}"
             end
 
   twiml = Twilio::TwiML::MessagingResponse.new do |r|

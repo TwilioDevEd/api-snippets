@@ -37,6 +37,7 @@ node_modules
 # Miscellaneous
 .DS_Store
 *.*~
+.python-version
 
 #IDEs
 *.idea
@@ -59,5 +60,6 @@ testable_snippets/
 # Custom Ruby Gems
 Gemfile*
 jreyes-example.*
+.bundle
 
 venv

@@ -9,11 +9,13 @@ key_location = '/…/CY499a5cbd774f4970a9ab51e2e8c4fb57.key.decrypted'
 client = mqtt.Client(client_id="bob", clean_session=False)
 client.set_tls(None, pem_location, key_location)
 
+
 #
 # Print out any updates.
 #
 def print_message(client, userdata, msg):
     print(msg.topic + ' ' + str(msg.payload))
+
 
 client.on_message = print_message
 
