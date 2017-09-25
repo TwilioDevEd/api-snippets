@@ -19,7 +19,7 @@ module Model
       CSHARP_NAME => ['4.x', CS_V5],
       PHP_NAME    => ['4.10', '5.14.1'],
       PYTHON_NAME => ['5.6.0', '6.6.3'],
-      RUBY_NAME   => ['4.13.0', '5.2.2'],
+      RUBY_NAME   => ['4.13.0', '5.2.3'],
       NODE_NAME   => ['2.11.0', '3.6.7'],
       JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
       JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.14.5', suffix: '-jar-with-dependencies' }
