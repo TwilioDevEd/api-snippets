@@ -18,7 +18,7 @@ public class Example
 
         UserResource user = UserResource.Fetch(
             serviceSid,
-            "User001"
+            "User0001"
         );
 
        Console.WriteLine(user.Sid);

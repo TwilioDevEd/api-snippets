@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 user = client
        .notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-       .users('User001').fetch
+       .users('User0001').fetch
 
 puts user.sid

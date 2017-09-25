@@ -18,4 +18,4 @@ $client = new Client($accountSid, $authToken);
 // Delete a user
 $client
     ->notify->services($serviceSid)
-    ->users('User001')->delete();
+    ->users('User0001')->delete();
