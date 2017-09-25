@@ -11,7 +11,7 @@ client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
   .then(service => {
-    console.log(service.identity);
+    console.log(service.sid);
   })
   .catch(error => {
     console.log(error);
