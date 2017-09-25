@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>
+        Hello Curious George.
+    </Say>
+    <Message>
+        Curious George, thanks for the call!
+    </Message>
+</Response>
