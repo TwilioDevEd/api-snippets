@@ -17,7 +17,7 @@ phone_number_sid = 'PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
 
 # Update the number
 number = client.api.v2010.accounts(current_owner_sid)
-                 .incoming_phone_numbers(phone_number_sid)
-                 .fetch
+               .incoming_phone_numbers(phone_number_sid)
+               .fetch
 number.update(account_sid: new_owner_sid)
 puts number.phone_number

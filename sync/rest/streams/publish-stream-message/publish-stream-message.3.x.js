@@ -11,7 +11,7 @@ service
     data: {
       id: 'bob',
       x: 256,
-      y: 42
+      y: 42,
     },
   })
   .then(message => {

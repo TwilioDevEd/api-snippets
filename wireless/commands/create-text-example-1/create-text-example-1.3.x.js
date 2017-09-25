@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 client.wireless.commands
   .create({
     command: 'wakeup',
-    sim: "AliceSmithSmartMeter"
+    sim: 'AliceSmithSmartMeter',
   })
   .then(response => {
     console.log(response);

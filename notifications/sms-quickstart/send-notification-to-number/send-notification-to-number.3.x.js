@@ -6,7 +6,7 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const notificationOpts = {
-  toBinding: JSON.stringify ({
+  toBinding: JSON.stringify({
     binding_type: 'sms',
     address: '+1651000000000',
   }),

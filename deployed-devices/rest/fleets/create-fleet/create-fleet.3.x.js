@@ -6,7 +6,7 @@ const client = new Twilio(accountSid, authToken);
 
 client.preview.deployed_devices.fleets
   .create({
-    friendlyName: 'My Fleet of Devices'
+    friendlyName: 'My Fleet of Devices',
   })
   .then(response => {
     console.log(response);
