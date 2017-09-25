@@ -12,11 +12,7 @@ const service = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service.notifications
   .create({
     identity: '00000001',
-    apn: `{"aps" :'
-            '{ "alert":'
-              '{"title":"Bob alert",'
-               '"body" : "Bob, you just received a badge"},'
-            '"badge" : 1 }}'`,
+    apn: '{"aps" :{ "alert": { "title":"Bob alert", "body" : "Bob, you just received a badge"},"badge" : 1 }}}'
   })
   .then(notification => {
     console.log(notification);

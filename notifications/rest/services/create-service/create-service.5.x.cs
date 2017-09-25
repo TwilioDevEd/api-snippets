@@ -16,11 +16,11 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var service = ServiceResource.Create(
-            friendlyName: "My awesome service",
+            friendlyName: "My Awesome service",
             apnCredentialSid: apnCredentialSid,
             fcmCredentialSid: fcmCredentialSid
         );
 
-        Console.WriteLine(service.Sid);
+        Console.WriteLine(service.FriendlyName);
     }
 }

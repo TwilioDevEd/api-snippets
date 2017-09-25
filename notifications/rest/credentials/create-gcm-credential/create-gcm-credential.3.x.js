@@ -6,7 +6,7 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const credentialOpts = {
-  ApiKey: 'gcm_api_key',
+  apiKey: 'gcm_api_key',
   friendlyName: 'MyGCMCredential',
   type: 'gcm',
 };
