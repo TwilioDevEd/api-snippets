@@ -18,7 +18,7 @@ def hello_monkey():
     message = callers[from_number] if from_number in callers else "Monkey"
 
     resp = twiml.Response()
-    resp.message("{},  thanks for the message!".format(message))
+    resp.message("{}, thanks for the message!".format(message))
 
     return str(resp)
 
