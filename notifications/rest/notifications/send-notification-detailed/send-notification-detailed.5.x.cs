@@ -27,7 +27,7 @@ public class Example
             apn: "{\"aps\" : " +
                    "{ \"alert\": " +
                        "{\"title\":\"New alert\"," +
-                        "\"body\" : \"Hello Bob!\"}");
+                        "\"body\" : \"Hello Bob!\"}}}");
 
         Console.WriteLine(notification.Sid);
     }
