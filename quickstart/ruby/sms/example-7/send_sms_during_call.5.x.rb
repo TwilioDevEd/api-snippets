@@ -13,7 +13,7 @@ get '/sms-quickstart' do
   name = friends[sender] || "Monkey"
 
   twiml = Twilio::TwiML::VoiceResponse.new do |r|
-    r.say(body: "Hello #{name}{}")
+    r.say(body: "Hello #{name}")
     r.sms(body: "#{name}, thanks for the call!")
   end
 
