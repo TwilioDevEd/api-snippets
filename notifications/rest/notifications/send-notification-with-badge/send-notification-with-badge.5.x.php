@@ -26,4 +26,4 @@ $notification = $client
                          "\"body\" : \"Bob, you just received a badge\"}, " .
                      "\"badge\" : 1 }}"]);
 
-echo $notification->body; // => This is the body for all Bindings
+echo $notification->sid; //
