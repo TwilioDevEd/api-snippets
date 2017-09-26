@@ -1,0 +1,53 @@
+{
+  "start_time": "2015-07-31T22:12:22Z",
+  "end_time": "2015-07-31T22:27:22Z",
+  "reservations_accepted": 0,
+  "reservations_canceled": 0,
+  "reservations_created": 0,
+  "reservations_rescinded": 0,
+  "reservations_rejected": 0,
+  "reservations_timed_out": 0,
+  "tasks_entered": 0,
+  "tasks_canceled": 0,
+  "tasks_deleted": 0,
+  "tasks_moved": 0,
+  "tasks_timed_out_in_workflow": 0,
+  "avg_task_acceptance_time": 0,
+  "wait_duration_until_canceled": {
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0
+  },
+  "wait_duration_until_accepted": {
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0
+  },
+  "split_by_wait_time": {
+    "5": {
+        "above": {
+            "tasks_canceled": 0,
+            "reservations_accepted": 0
+        },
+        "below": {
+            "tasks_canceled": 0,
+            "reservations_accepted": 0
+        }
+    },
+    "30": {
+        "above": {
+            "tasks_canceled": 0,
+            "reservations_accepted": 0
+        },
+        "below": {
+            "tasks_canceled": 0,
+            "reservations_accepted": 0
+        }
+    }
+  },
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "workspace_sid": "WS7d4813fc78909747b773945352c5b960",
+  "workflow_sid": "WWb630832558964d981afe7e370df6985b"
+}
