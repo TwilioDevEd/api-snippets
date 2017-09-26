@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data_sessions": [
+    {
+      "operator_country": "USA",
+      "last_updated": "2017-06-11T17:32:31Z",
+      "operator_mnc": 260,
+      "operator_mcc": 310,
+      "cell_location_estimate": {
+          "lat": 37.8828168,
+          "lon": -122.3684899
+      },
+      "operator_name": "T-Mobile",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "start": "2017-06-11T17:13:12Z",
+      "cell_id": "310-260-40482-1243",
+      "radio_link": "LTE",
+      "sid": null,
+      "end": "2017-06-11T17:32:31Z",
+      "packets_uploaded": 246,
+      "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
+      "packets_downloaded": 296
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://wireless.twilio.com/v1/Sims/DEb8eff34b248d066a31c4a953134e183e/DataSessions?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://wireless.twilio.com/v1/Sims/DEb8eff34b248d066a31c4a953134e183e/DataSessions?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "data_sessions"
+  }
+}
