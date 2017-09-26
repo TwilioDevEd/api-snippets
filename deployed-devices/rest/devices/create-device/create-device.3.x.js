@@ -12,7 +12,7 @@ const fleetService = client.preview.deployed_devices.fleets(fleetSid);
 
 fleetService.devices
   .create({
-    friendlyName: 'My Device #1'
+    friendlyName: 'My Device #1',
   })
   .then(response => {
     console.log(response);

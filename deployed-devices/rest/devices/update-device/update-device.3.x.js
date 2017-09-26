@@ -14,7 +14,7 @@ fleetService
   .devices('THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
     friendlyName: 'My New Device',
-    identity: 'bob@twilio.com'
+    identity: 'bob@twilio.com',
   })
   .then(response => {
     console.log(response);

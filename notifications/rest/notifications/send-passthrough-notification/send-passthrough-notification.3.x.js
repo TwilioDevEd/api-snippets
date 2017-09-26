@@ -15,8 +15,8 @@ service.notifications
       JSON.stringify({
         binding_type: 'sms',
         address: '+15555555555',
-      }), JSON.stringify(
-      {
+      }),
+      JSON.stringify({
         binding_type: 'facebook-messenger',
         address: '123456789123',
       }),

@@ -13,7 +13,7 @@ fleet
   .certificates('CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
     friendlyName: 'My New Certificate',
-    deviceSid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    deviceSid: 'THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
   })
   .then(response => {
     console.log(response);

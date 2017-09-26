@@ -8,7 +8,7 @@ client.wireless.commands
   .create({
     command: 'SGVsbG8sIE1hY2hpbmUh==',
     sim: 'AliceSmithSmartMeter',
-    commandMode: 'binary'
+    commandMode: 'binary',
   })
   .then(response => {
     console.log(response);

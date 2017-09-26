@@ -13,7 +13,7 @@ client.video.rooms
     uniqueName: 'DailyStandupWithH264Codec',
     type: 'group',
     videoCodecs: 'H264',
-    statusCallback: 'http://example.org'
+    statusCallback: 'http://example.org',
   })
   .then(room => {
     console.log(room.sid);

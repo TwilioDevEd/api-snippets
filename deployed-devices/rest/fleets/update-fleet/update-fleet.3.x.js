@@ -7,7 +7,7 @@ const client = new Twilio(accountSid, authToken);
 client.sync
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({
-    friendlyName: 'My New Fleet of Devices'
+    friendlyName: 'My New Fleet of Devices',
   })
   .then(response => {
     console.log(response);

@@ -10,7 +10,7 @@ service
   .fetch()
   .then(role => {
     const newPermissions = ['sendMediaMessage'].concat(role.permissions || []);
-    return role.update({permission: newPermissions});
+    return role.update({ permission: newPermissions });
   })
   .then(response => {
     console.log(response);
