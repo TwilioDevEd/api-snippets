@@ -1,0 +1,2 @@
+curl https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Workers/RealTimeStatistics \
+    -u '{account_sid}:{auth_token}'
