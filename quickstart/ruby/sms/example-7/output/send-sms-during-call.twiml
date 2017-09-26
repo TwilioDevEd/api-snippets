@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say>
-        Hello Curious George.
+  	<Say>
+        Hello Monkey! You will get an SMS message soon.
     </Say>
-    <Message>
-        Curious George, thanks for the call!
-    </Message>
+  	<Sms>
+        Here it is!
+    </Sms>
 </Response>
