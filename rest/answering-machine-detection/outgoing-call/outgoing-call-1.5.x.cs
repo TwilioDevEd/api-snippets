@@ -14,10 +14,10 @@ class Example
 
         var call = CallResource.Update(
             "CA42ed11f93dc08b952027ffbc406d0868",
-            to: '+1562300000',
-            from: '+18180000000',
-            machineDetection: 'Enable',
-            url: 'https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'
+            to: "+1562300000",
+            from: "+18180000000",
+            machineDetection: "Enable",
+            url: "https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16"
         );
 
         Console.WriteLine(call.To);
