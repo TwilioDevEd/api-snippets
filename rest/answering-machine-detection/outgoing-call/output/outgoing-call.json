@@ -1,0 +1,30 @@
+{
+  "sid": "CA2ee3a4bce40452c7f7a0a43fcd24b301",
+  "date_created": null,
+  "date_updated": null,
+  "parent_call_sid": null,
+  "account_sid": "AC22ef5e6f64bf40a6ac84123ae4fb9fa7",
+  "to": "+1562300000",
+  "to_formatted": "(562) 300-0000",
+  "from": "+18180000000",
+  "from_formatted": "(818) 000-0000",
+  "phone_number_sid": "PNe8bab76ac59a79c26b3f6490d8075a91",
+  "status": "queued",
+  "start_time": null,
+  "end_time": null,
+  "duration": null,
+  "price": null,
+  "price_unit": "USD",
+  "direction": "outbound-api",
+  "answered_by": null,
+  "api_version": "2010-04-01",
+  "annotation": null,
+  "forwarded_from": null,
+  "group_sid": null,
+  "caller_name": null,
+  "uri": "\/2010-04-01\/Accounts\/AC22ef5e6f64bf40a6ac84123ae4fb9fa7\/Calls\/CA2ee3a4bce40452c7f7a0a43fcd24b301.json",
+  "subresource_uris": {
+    "notifications": "\/2010-04-01\/Accounts\/AC22ef5e6f64bf40a6ac84123ae4fb9fa7\/Calls\/CA2ee3a4bce40452c7f7a0a43fcd24b301\/Notifications.json",
+    "recordings": "\/2010-04-01\/Accounts\/AC22ef5e6f64bf40a6ac84123ae4fb9fa7\/Calls\/CA2ee3a4bce40452c7f7a0a43fcd24b301\/Recordings.json"
+  }
+}
