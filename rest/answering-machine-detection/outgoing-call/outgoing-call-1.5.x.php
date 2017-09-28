@@ -8,7 +8,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Client($sid, $token);
 
-$call = $client->calls("CA42ed11f93dc08b952027ffbc406d0868")->update([
+$call = $client->calls->create([
   "to" => "+1562300000",
   "from" => "+18180000000",
   "machineDetection" => "Enable",
