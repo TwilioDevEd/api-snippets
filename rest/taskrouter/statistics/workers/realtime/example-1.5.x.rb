@@ -9,6 +9,6 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
-                   .workers.realtimestatistics.fetch
+                   .workers.real_time_statistics.fetch
 
 puts statistics.activity_statistics[0]['workers'] + " in " + statistics.activity_statistics[0]['friendly_name']

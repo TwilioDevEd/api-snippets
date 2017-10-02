@@ -15,7 +15,7 @@ $client = new Client($accountSid, $authToken);
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
     ->workflows($workflowSid)
-    ->cumulativestatistics()
+    ->cumulative_statistics()
     ->fetch(
         array('minutes' => 60)
     );

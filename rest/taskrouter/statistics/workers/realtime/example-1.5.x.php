@@ -15,7 +15,7 @@ $client = new Client($accountSid, $authToken);
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
     ->workers($workerSid)
-    ->realtimestatistics()
+    ->realTimeStatistics()
     ->fetch();
 
 echo $statistics->activity_statistics[0]['workers'] + " in " + statistics.activity_statistics[0]['friendly_name']

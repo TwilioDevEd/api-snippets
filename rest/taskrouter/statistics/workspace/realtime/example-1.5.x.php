@@ -13,7 +13,7 @@ $client = new Client($accountSid, $authToken);
 
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
-    ->realtimestatistics()
+    ->realTimeStatistics()
     ->fetch();
 
 echo $statistics->tasksByStatus["pending"];

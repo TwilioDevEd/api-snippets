@@ -7,7 +7,8 @@ const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
   .workspaces(workspaceSid)
-  .workers.realtimestatistics()
+  .workers
+  .realTimeStatistics()
   .fetch()
   .then(responseData => {
     var activityData = responseData.activity_statistics[0];
