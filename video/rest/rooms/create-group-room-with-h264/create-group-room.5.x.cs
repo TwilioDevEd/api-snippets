@@ -1,5 +1,6 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
+using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Video.V1;
 
@@ -16,7 +17,7 @@ class Example
         var room = RoomResource.Create(
             uniqueName: "DailyStandupWithH264Codec",
             type: RoomResource.RoomTypeEnum.Group,
-            videoCodecs: RoomResource.VideoCodecEnum.H264,
+            videoCodecs: new List<RoomResource.VideoCodecEnum> { RoomResource.VideoCodecEnum.H264 },
             statusCallback: new Uri("http://example.org"));
 
         Console.WriteLine(room.Sid);
