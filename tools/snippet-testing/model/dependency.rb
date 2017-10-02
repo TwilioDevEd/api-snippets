@@ -22,7 +22,7 @@ module Model
       RUBY_NAME   => ['4.13.0', '5.2.3'],
       NODE_NAME   => ['2.11.0', '3.6.7'],
       JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
-      JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.14.5', suffix: '-jar-with-dependencies' }
+      JAVA7_NAME  => { group: 'com.twilio.sdk', name: 'twilio', version: '7.15.0', suffix: '-jar-with-dependencies' }
     }.freeze
 
     JAVA_DEPENDENCIES = {
