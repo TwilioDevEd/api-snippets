@@ -9,6 +9,6 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 statistics = client.taskrouter.workspaces(workspace_sid) \
-    .workers.cumulativestatistics().fetch()
+    .workers.cumulative_statistics().fetch()
 
 print(statistics.reservations_accepted)
