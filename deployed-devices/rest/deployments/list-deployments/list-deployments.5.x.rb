@@ -6,7 +6,7 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-deployments = client.preview.deployed_devices.deployments.list()
+deployments = client.preview.deployed_devices.deployments.list
 
 deployments.each do |deployment|
   puts deployment.sid

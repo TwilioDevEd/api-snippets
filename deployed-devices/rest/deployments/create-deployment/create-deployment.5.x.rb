@@ -7,7 +7,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 fleet = client.preview.deployed_devices.deployments.create(
-    friendly_name: 'My Device Deployment',
+  friendly_name: 'My Device Deployment'
 )
 
 puts fleet.sid
