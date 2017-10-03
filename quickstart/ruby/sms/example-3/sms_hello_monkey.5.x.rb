@@ -5,7 +5,7 @@ require 'sinatra'
 
 get '/sms-quickstart' do
   twiml = Twilio::TwiML::MessagingResponse.new do |r|
-    r.message(body: "Hello, Mobile Monkey")
+    r.message(body: 'Hello, Mobile Monkey')
   end
 
   twiml.to_s

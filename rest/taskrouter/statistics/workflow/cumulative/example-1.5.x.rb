@@ -14,4 +14,3 @@ statistics = client.taskrouter.v1.workspaces(workspace_sid)
 
 puts statistics.avg_task_acceptance_time
 puts statistics.tasks_created
-

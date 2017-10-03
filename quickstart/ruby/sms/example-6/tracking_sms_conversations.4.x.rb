@@ -6,17 +6,17 @@ require 'sinatra'
 enable :sessions
 
 get '/sms-quickstart' do
-  session["counter"] ||= 0
-  counter = session["counter"]
+  session['counter'] ||= 0
+  counter = session['counter']
 
   from_number = params[:From]
   to_number = params[:To]
   friends = {
-    "+14153334444" => "Curious George",
-    "+14158157775" => "Boots",
-    "+14155551234" => "Virgil"
+    '+14153334444' => 'Curious George',
+    '+14158157775' => 'Boots',
+    '+14155551234' => 'Virgil'
   }
-  name = friends[from_number] || "Monkey"
+  name = friends[from_number] || 'Monkey'
 
   message = "#{name} has messaged #{to_number} #{counter} times"
 
@@ -24,6 +24,6 @@ get '/sms-quickstart' do
     r.Message message
   end
 
-  session["counter"] += 1
+  session['counter'] += 1
   twiml.text
 end
