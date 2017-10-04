@@ -3,6 +3,7 @@ import java.util.Map;
 
 import com.twilio.Twilio;
 import com.twilio.rest.taskrouter.v1.workspace.WorkspaceStatistics;
+import com.twilio.rest.taskrouter.v1.workspace.WorkspaceCumulativeStatistics;
 
 public class Example {
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";

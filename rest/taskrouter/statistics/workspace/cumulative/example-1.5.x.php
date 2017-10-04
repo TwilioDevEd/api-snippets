@@ -13,7 +13,7 @@ $client = new Client($accountSid, $authToken);
 
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
-    ->cumulativeStatistics()
+    ->workspaceCumulativeStatistics()
     ->fetch(
         array('minutes' => 60)
     );

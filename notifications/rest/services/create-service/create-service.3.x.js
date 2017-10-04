@@ -7,13 +7,13 @@ const apnCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const fcmCredentialSid = 'CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const Twilio = require('twilio');
 
-const client = new Twilio(accountSid,authToken);
+const client = new Twilio(accountSid, authToken);
 
 client.notify.services
   .create({
     friendlyName: 'My Awesome Service',
     apnCredentialSid: apnCredentialSid,
-    fcmCredentialSid: fcmCredentialSid
+    fcmCredentialSid: fcmCredentialSid,
   })
   .then(service => {
     console.log(service.friendlyName);

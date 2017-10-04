@@ -9,7 +9,7 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 workspace = client.taskrouter.workspaces(workspace_sid)
-statistics = workspace.cumulative_statistics().fetch()
+statistics = workspace.workspace_cumulative_statistics().fetch()
 
 print(statistics.avg_task_acceptance_time)
 print(statistics.tasks_created)

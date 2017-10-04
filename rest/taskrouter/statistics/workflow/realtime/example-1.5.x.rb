@@ -10,7 +10,8 @@ workflow_sid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
-                   .workflows(workflow_sid).real_time_statistics.fetch
+                   .workflows(workflow_sid)
+                   .workflow_real_time_statistics.fetch
 
 puts statistics.tasks_by_status['pending']
 puts statistics.tasks_by_status['assigned']

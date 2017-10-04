@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
   .workspaces(workspaceSid)
-  .cumulativeStatistics()
+  .workspaceCumulativeStatistics()
   .fetch()
   .then(responseData => {
     console.log(responseData.avgTaskAcceptanceTime);

@@ -11,4 +11,7 @@ client = Client(account_sid, auth_token)
 statistics = client.taskrouter.workspaces(workspace_sid) \
     .workers.real_time_statistics().fetch()
 
-print(statistics.activity_statistics[0]['workers'] + " in " + statistics.activity_statistics[0]['friendly_name'])
+print(
+    statistics.activity_statistics[0]['workers'] + " in " +
+    statistics.activity_statistics[0]['friendly_name']
+)

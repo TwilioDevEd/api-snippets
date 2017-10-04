@@ -3,7 +3,8 @@
 using Newtonsoft.Json.Linq;
 using System;
 using Twilio;
-using Twilio.Rest.Taskrouter.V1.Workspace.Workflow;
+using Twilio.Rest.Taskrouter.V1.Workspace;
+using System.Collections.Generic;
 
 class Example
 {
@@ -19,7 +20,8 @@ class Example
 
         var stats = WorkspaceRealTimeStatisticsResource.Fetch(workspaceSid);
 
-        var tasksByStatus = stats.TasksByStatus;
+        var tasksByStatus = (Dictionary<String, String>)stats.TasksByStatus;
+
         Console.WriteLine(tasksByStatus["pending"]);
         Console.WriteLine(tasksByStatus["assigned"]);
     }

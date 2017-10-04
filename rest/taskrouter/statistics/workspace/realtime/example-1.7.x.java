@@ -14,7 +14,7 @@ public class Example {
 
     WorkspaceRealTimeStatistics statistics = WorkspaceRealTimeStatistics.fetcher(WORKSPACE_SID).fetch();
 
-    Map<String, Object> tasksByStatus = statistics.get("tasks_by_status");
+    Map<String, Object> tasksByStatus = statistics.getTasksByStatus();
     System.out.println("Pending Tasks: " + tasksByStatus.get("pending"));
     System.out.println("Assigned Tasks: " + tasksByStatus.get("assigned"));
   }

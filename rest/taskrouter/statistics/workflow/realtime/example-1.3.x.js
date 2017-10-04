@@ -9,7 +9,7 @@ const client = require('twilio')(accountSid, authToken);
 client.taskrouter.v1
   .workspaces(workspaceSid)
   .workflows(workflowSid)
-  .realTimeStatistics()
+  .workflowRealTimeStatistics()
   .fetch()
   .then(responseData => {
     console.log(responseData.tasks_by_status.pending);
