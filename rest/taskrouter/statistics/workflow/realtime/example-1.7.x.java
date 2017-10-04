@@ -2,7 +2,7 @@
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.rest.taskrouter.v1.workspace.workflow.WorkflowStatistics;
+import com.twilio.rest.taskrouter.v1.workspace.workflow.WorkflowRealTimeStatistics;
 
 public class Example {
   private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -15,7 +15,7 @@ public class Example {
 
     WorkflowRealTimeStatistics statistics = WorkflowRealTimeStatistics.fetcher(WORKSPACE_SID, WORKFLOW_SID).fetch();
 
-    Map<String, Object> tasksByStatus = statistics.get("tasks_by_status");
+    Map<String, Object> tasksByStatus = statistics.getTasksByStatus();
     System.out.println("Pending Tasks: " + tasksByStatus.get("pending"));
     System.out.println("Assigned Tasks: " + tasksByStatus.get("assigned"));
   }
