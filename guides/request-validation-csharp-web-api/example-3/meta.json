@@ -1,0 +1,5 @@
+{
+  "title": "An improved request validation filter attribute, useful for testing",
+  "description": "Use this version of the custom filter attribute if you test your controllers.",
+  "type": "server"
+}
