@@ -1,0 +1,5 @@
+{
+  "type": "server",
+  "description": "Confirm incoming requests to your controllers are genuine with this filter.",
+  "title": "Use filter attribute to validate Twilio requests"
+}
