@@ -5,29 +5,27 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using Twilio.AspNet.Mvc;
+using Twilio.Security;
 
 namespace ValidateRequestExample.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class ValidateTwilioRequestAttribute : ActionFilterAttribute
     {
-        private readonly RequestValidationHelper _requestValidator;
-        private readonly string _authToken;
-        private readonly bool _isTestEnvironment;
+        private readonly RequestValidator _requestValidator;
+        private static bool IsTestEnvironment =>
+            bool.Parse(ConfigurationManager.AppSettings["IsTestEnvironment"]);
 
         public ValidateTwilioRequestAttribute()
         {
-            _requestValidator = new RequestValidationHelper();
-            _authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
-            _isTestEnvironment = bool.Parse(ConfigurationManager.AppSettings["IsTestEnvironment"]);
+            var authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
+            _requestValidator = new RequestValidator(authToken);
         }
 
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             var context = (HttpContextBase)actionContext.Request.Properties["MS_HttpContext"];
-
-            if (!_isTestEnvironment && !_requestValidator.IsValidRequest(context, _authToken))
+            if (!IsValidRequest(context.Request) || !IsTestEnvironment)
             {
                 actionContext.Response = actionContext.Request.CreateErrorResponse(
                     HttpStatusCode.Forbidden,
@@ -36,6 +34,13 @@ namespace ValidateRequestExample.Filters
             }
 
             base.OnActionExecuting(actionContext);
+        }
+
+        private bool IsValidRequest(HttpRequestBase request)
+        {
+            var signature = request.Headers["X-Twilio-Signature"];
+            var requestUrl = request.RawUrl;
+            return _requestValidator.Validate(requestUrl, request.Form, signature);
         }
     }
 }
