@@ -1,6 +1,6 @@
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
-using Twilio.TwiML.Mvc;
 using ValidateRequestExample.Filters;
 
 namespace ValidateRequestExample.Controllers
@@ -10,11 +10,12 @@ namespace ValidateRequestExample.Controllers
         [ValidateTwilioRequest]
         public ActionResult Voice(string from)
         {
-            var response = new TwilioResponse();
-            const string message = "Thanks for calling! " +
-                "Your phone number is {0}. I got your call because of Twilio's webhook. " +
+            var message = "Thanks for calling! " +
+                $"Your phone number is {from}. " +
+                "I got your call because of Twilio's webhook. " +
                 "Goodbye!";
 
+            var response = new VoiceResponse();
             response.Say(string.Format(message, from));
             response.Hangup();
 
@@ -24,10 +25,11 @@ namespace ValidateRequestExample.Controllers
         [ValidateTwilioRequest]
         public ActionResult Message(string body)
         {
-            var response = new TwilioResponse();
+            var message = $"Your text to me was {body.Length} characters long. " +
+                "Webhooks are neat :)";
 
-            response.Say($"Your text to me was {body.Length} characters long. Webhooks are neat :)");
-            response.Hangup();
+            var response = new MessagingResponse();
+            response.Message(new Message(message));
 
             return TwiML(response);
         }

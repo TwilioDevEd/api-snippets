@@ -3,38 +3,36 @@ using System.Configuration;
 using System.Web;
 using System.Net;
 using System.Web.Mvc;
-using Twilio.TwiML;
+using Twilio.Security;
 
 namespace ValidateRequestExample.Filters
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class ValidateTwilioRequestAttribute : ActionFilterAttribute
     {
-        private readonly RequestValidator _requestValidator = new RequestValidator();
-        private readonly string _twilioAuthTokenKey;
+        private readonly RequestValidator _requestValidator;
 
-        public ValidateTwilioRequestAttribute(string twilioAuthTokenKey)
+        public ValidateTwilioRequestAttributeRequestAttribute()
         {
-            _twilioAuthTokenKey = twilioAuthTokenKey;
+            var authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
+            _requestValidator = new RequestValidator(authToken);
         }
 
-        public ValidateTwilioRequestAttribute()
+        public override void OnActionExecuting(ActionExecutingContext actionContext)
         {
-            _twilioAuthTokenKey = "TwilioAuthToken";
-        }
-
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
-        {
-            var twilioAuthToken = ConfigurationManager.AppSettings[_twilioAuthTokenKey];
-            var context = ((HttpApplication)filterContext.HttpContext.GetService(typeof(HttpApplication))).Context;
-            var isValidRequest = _requestValidator.IsValidRequest(context, twilioAuthToken);
-
-            if(!isValidRequest)
+            var context = actionContext.HttpContext;
+            if(!IsValidRequest(context.Request))
             {
-                filterContext.Result = new System.Web.Mvc.HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                actionContext.Result = new HttpStatusCodeResult(HttpStatusCode.Forbidden);
             }
 
-            base.OnActionExecuting(filterContext);
+            base.OnActionExecuting(actionContext);
+        }
+
+        private bool IsValidRequest(HttpRequestBase request) {
+            var signature = request.Headers["X-Twilio-Signature"];
+            var requestUrl = request.RawUrl;
+            return _requestValidator.Validate(requestUrl, request.Form, signature);
         }
     }
 }
