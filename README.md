@@ -75,7 +75,7 @@
 
 ## Continuous Integration
 All snippets are run in a container-based environment for each language
-(see [.travis.yml](.travis.yml#L32) file), so the first check we do is for
+(see [.travis.yml](.travis.yml#25) file), so the first check we do is for
 syntax error.
 
 There're two kind of snippets we test:
@@ -151,201 +151,31 @@ testable:
 - Specific dependencies are supported for snippets. If a new dependency is
   introduced, the testing scripts should be modified to support it.
 
+### Pre-commit hook  
+Use of pre-commit hooks is recommended. Only the snippets which have been modified will be
+linted.
+
+To install the pre-commit hook run the following:
+
+```bash
+make install
+```
+
+If you want to commit snippets that are a work in progress you can bypass the pre-commit
+hook as follows:
+
+```bash
+git commit --no-verify
+```
+
 ### Local Snippet Testing
 
-The next steps describe how to run the snippets test locally in a UNIX based
-operating system (examples will be provided for Debian based Linux distributions
-and OSX using [Homebrew](http://brew.sh/)). **This has not been tested in a
-Windows OS.**
+1. Install [Docker](https://docs.docker.com/engine/installation/).
 
-#### Setting Up the Environment
-
-Make sure you have the following dependencies installed on your system.
-
-1. Install Node.js. The best option for this is to use
-   [nvm](https://github.com/creationix/nvm#install-script)
+1. Run the tests.
 
    ```bash
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash \
-   export NVM_DIR="$HOME/.nvm" \
-   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
-   nvm install --lts
-   npm install
-   ```
-
-1. Install Python and PIP.
-
-   On Linux:
-   ```bash
-   sudo apt-get install python-pip python2.7-dev build-essential \
-   sudo pip install --upgrade pip
-   ```
-
-   On OSX:
-
-   ```bash
-   brew install python
-   ```
-
-   Once you have python and pip ready, run the command below
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-1. Install JDK8 and Gradle. The best option for this is to use
-   [sdkman](http://sdkman.io/install.html)
-
-   ```bash
-   curl -s "https://get.sdkman.io" | bash \
-   source "$HOME/.sdkman/bin/sdkman-init.sh" \
-   sdk install java \
-   sdk install gradle
-   ```
-
-1. Install PHP 5 with CURL.
-
-   On Linux:
-
-   ```bash
-   sudo add-apt-repository ppa:ondrej/php -y
-   sudo apt-get update
-   sudo apt-get install -y --force-yes php5.6
-   ```
-
-   On OSX:
-
-   ```bash
-   brew install php56
-   ```
-
-   Once you have php ready, please install
-   [Composer](https://getcomposer.org/download/)
-
-   ```bash
-   curl -sS https://getcomposer.org/installer | \
-   sudo php -- --install-dir=/usr/local/bin --filename=composer
-   ```
-
-1. Install Ruby and RubyGems.
-
-   ```bash
-   curl -sSL https://get.rvm.io | bash -s stable --ruby
-   ```
-
-1. Install MonoDevelop.
-
-   On Linux (http://www.mono-project.com/docs/getting-started/install/linux/#usage):
-   ```bash
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
-   echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list \
-   sudo apt-get update \
-   sudo apt-get install mono-complete -y
-   ```
-
-   On OSX:
-   ```bash
-   brew install mono
-   ```
-
-#### Install Language Dependencies
-
-The testing and installation scripts use ruby. Before installing language
-dependencies you need to install the following gems:
-
-```bash
-gem install json colorize nokogiri
-```
-
-You can use the following command to install language dependencies, which will
-download the latest version of the helper libraries for each language:
-
-```bash
-ruby tools/snippet-testing/model/dependency.rb
-```
-
-**Note:** That file specifies the latest version for every helper library for
-each language, but for java the files to specify the versions are located in:
-`tools/snippet-testing/language_handler/file-templates/build.<version>.gradle`
-where `<version>` should be `6` or `7`.
-
-Another option is to use the `snippet_tester.rb` file and pass the `-i` flag,
-this will try to install whatever dependency is needed before running the tests:
-
-```bash
-ruby tools/snippet-testing/snippet_tester.rb -i
-```
-
-**Note:** This will also install missing dependencies before running the tests.
-`sudo` will be used within the dependency installation script so you might need
-to enter your password.
-**DO NOT** run the whole script with `sudo` as it would install dependencies for
-the wrong user.
-
-#### Run the Tests
-
-1. Clone and run the fake-api server in a different terminal session.
-
-   ```bash
-   git clone git@github.com:TwilioDevEd/twilio-api-faker.git \
-   cd twilio-api-faker \
-   sudo gradle run
-   ```
-
-1. Make your system trust the fake server's self signed certificate.
-
-   On Linux:
-   ```bash
-   sudo apt-get install ca-certificates \
-   sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt \
-   sudo update-ca-certificates
-   ```
-
-   On OSX:
-   Use the system's keychain to trust the provided certificate in the `keystore`
-   directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
-   for more information.
-
-1. Change your hosts file.
-
-   Edit your `/etc/hosts` file. Add the following entries:
-   ```
-   127.0.0.1 api.twilio.com
-   127.0.0.1 chat.twilio.com
-   127.0.0.1 fax.twilio.com
-   127.0.0.1 ip-messaging.twilio.com
-   127.0.0.1 lookups.twilio.com
-   127.0.0.1 messaging.twilio.com
-   127.0.0.1 monitor.twilio.com
-   127.0.0.1 notifications.twilio.com
-   127.0.0.1 notify.twilio.com
-   127.0.0.1 pricing.twilio.com
-   127.0.0.1 preview.twilio.com
-   127.0.0.1 sync.twilio.com
-   127.0.0.1 taskrouter.twilio.com
-   127.0.0.1 video.twilio.com
-   127.0.0.1 wireless.twilio.com
-   ```
-
-1. Make a copy of the `.env.example` file.
-
-   ```bash
-   cp .env.example .env
-   ```
-
-1. Set the necessary environment variables.
-
-   Change environment variables in the `.env` file to match your configuration
-   and then use the `source` command to export the variables.
-
-   ```bash
-   source .env
-   ```
-
-1. Finally, run the tests.
-
-   ```bash
-   ruby tools/snippet-testing/snippet_tester.rb
+   ./test
    ```
 
    **Note:** Remember to mark the directories you want to be tested with a
@@ -355,6 +185,18 @@ the wrong user.
    If a directory is specified, then the default testing behavior for that
    directory and everything it contains is `true`.
 
+   Run tests in specific directory:
    ```bash
-   ruby tools/snippet-testing/snippet_tester.rb -d rest/making-calls
+   ./test -d rest/making-calls
+   ```
+
+   Alternatively, you can filter by directory and/or language:
+
+   ```bash
+   ./test -d rest/making-calls -l ruby
+   ```
+   Available languages are node, ruby, java6, java7, python, php, csharp and curl. These languages can be combined as follows:
+
+   ```bash
+   ./test -d rest/making-calls -l java6:python
    ```

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+# Initialize our own variables:
+output_file=""
+verbose=0
+
+while getopts "d:l:" opt; do
+    case "$opt" in
+    d)  test_dir=$OPTARG
+        ;;
+    l)  language=$OPTARG
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+cmd="ruby tools/snippet-testing/snippet_tester.rb"
+
+if [ -n "$test_dir" ]; then
+cmd="$cmd -d $test_dir";
+fi
+
+if [ -n "$language" ]; then
+cmd="SNIPPET_LANGUAGE=$language $cmd";
+fi
+# -a stdout
+docker run -it -v $PWD:/src twiliodeved/api-snippets bash --login -c "make start && $cmd"

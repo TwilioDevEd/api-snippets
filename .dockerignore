@@ -1,3 +1,5 @@
 .gradle
 testable_snippets
 tools/dependencies
+node_modules
+.git

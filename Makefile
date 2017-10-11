@@ -15,52 +15,119 @@ define HOSTS
 127.0.0.1 sync.twilio.com
 127.0.0.1 taskrouter.twilio.com
 127.0.0.1 video.twilio.com
+127.0.0.1 wireless.twilio.com
 endef
 
 export HOSTS
 
-start:
-	make register_hosts
-	make run_api_faker
-	make restore_dependencies
-
-start_dev:
-	make register_hosts
-	make restore_dependencies
-	make run_api_faker
-
-register_hosts:
+define register_hosts
 	printf "$$HOSTS" >> /etc/hosts;
+endef
 
-run_api_faker:
-	cd ../twilio-api-faker;\
-	gradle run </dev/null &>/dev/null &
-	cd ../src
-	sleep 25
+define run_api_faker
+	cd /twilio-api-faker && \
+	java -jar ./build/libs/twilio-api-faker.jar > twilio-api-faker.txt &
+	cd /src
+	sleep 5
+endef
 
-install_dependencies:
-	ruby tools/snippet-testing/model/dependency.rb && \
-	make append_certs && \
-	make save_dependencies
+define install_dependencies
+	ruby tools/snippet-testing/model/dependency.rb
+	$(call append_certs, save_dependencies)
+endef
 
-save_dependencies:
-	cp -r tools/dependencies /dependencies
+define save_dependencies
+	cp -r /src/tools/dependencies /dependencies
+endef
 
-restore_dependencies:
-	cp -r /dependencies tools/dependencies
+define restore_dependencies
+	cp -r /dependencies /src/tools
+endef
+
+FAKE_CERT = /usr/local/share/ca-certificates/twilio_fake.crt
+
+define append_certs
+	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
+		cat $(FAKE_CERT) >> $$line; \
+	done
+endef
+
+define files_changed_by_ext
+  FILES=$(shell git diff --cached --name-only -- '*.$(1)'); \
+	FILES=$(shell git diff --name-only -- '*.$(1)'); \
+	echo $$FILES
+endef
+
+define install_git_hooks
+	rm .git/hooks/pre-commit
+	echo '#!/bin/sh\n\nmake lint' >> .git/hooks/pre-commit
+endef
+
+run_docker_dev:
+	@docker build . -t twiliodeved/api-snippets --no-cache
+	@docker run -it -v $$PWD:/src twiliodeved/api-snippets bash -c "make start; bash --login"
+
+start:
+	$(call register_hosts)
+	$(call restore_dependencies)
+	$(call run_api_faker)
+	npm i --quiet
 
 run_tests:
 	ruby tools/snippet-testing/snippet_tester.rb
 
-run_docker_dev:
-	docker run -it -v $$PWD:/src api-snippets bash -c "make start_dev; bash --login"
+define lint_js
+	FILES=$(shell $(call files_changed_by_ext,js)); \
+	if [ -n "$$FILES" ]; then \
+		node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FILES; \
+	fi
+endef
 
-FAKE_CERT = /usr/local/share/ca-certificates/twilio_fake.crt
+define fix_js
+	FILES=$(shell $(call files_changed_by_ext,js)); \
+	if [ -n "$$FILES" ]; then \
+		node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules --fix $$FILES; \
+	fi
+endef
 
-append_certs:
-	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
-		cat $(FAKE_CERT) >> $$line; \
-	done
+define lint_ruby
+	FILES=$(shell $(call files_changed_by_ext,rb)); \
+	if [ -n "$$FILES" ]; then \
+		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "rubocop $$FILES"; \
+	fi
+endef
 
-build_base:
-	docker build . -f Dockerfile-base -t twiliodeved/api-snippets:base && docker push twiliodeved/api-snippets:base
+define fix_ruby
+	FILES=$(shell $(call files_changed_by_ext,rb)); \
+	if [ -n "$$FILES" ]; then \
+		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "rubocop -a $$FILES"; \
+	fi
+endef
+
+define lint_python
+	FILES=$(shell $(call files_changed_by_ext,py)); \
+	if [ -n "$$FILES" ]; then \
+		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "flake8 $$FILES"; \
+	fi
+endef
+
+define lint_php
+	FILES=$(shell $(call files_changed_by_ext,php)); \
+	if [ -n "$$FILES" ]; then \
+		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "phplint $$FILES"; \
+	fi
+endef
+
+lint:
+	@$(call lint_js)
+	@$(call lint_php)
+	@$(call lint_ruby)
+	@$(call lint_python)
+
+
+fix:
+	@$(call fix_js)
+	@$(call fix_ruby)
+
+install:
+	@$(call install_git_hooks)
