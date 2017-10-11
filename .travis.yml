@@ -2,11 +2,13 @@ sudo: required
 
 matrix:
   include:
-    - env: SNIPPET_LANGUAGE=python:curl
+    - env: SNIPPET_LANGUAGE=csharp
+    - env: SNIPPET_LANGUAGE=curl
     - env: SNIPPET_LANGUAGE=java6
     - env: SNIPPET_LANGUAGE=java7
-    - env: SNIPPET_LANGUAGE=csharp:ruby
     - env: SNIPPET_LANGUAGE=node:php
+    - env: SNIPPET_LANGUAGE=python
+    - env: SNIPPET_LANGUAGE=ruby
 
 notifications:
   slack:
