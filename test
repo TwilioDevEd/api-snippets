@@ -28,5 +28,6 @@ fi
 if [ -n "$language" ]; then
 cmd="SNIPPET_LANGUAGE=$language $cmd";
 fi
-# -a stdout
+
+docker build . -t twiliodeved/api-snippets --no-cache
 docker run -it -v $PWD:/src twiliodeved/api-snippets bash --login -c "make start && $cmd"
