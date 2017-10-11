@@ -11,9 +11,9 @@ const client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
 const recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 const uri = `https://video.twilio.com/v1/Recordings/${recordingSid}/Media`;
-const response = client.request({ method: "POST", uri: uri });
-const mediaLocation = JSON.parse(response.body).location;
-
-request.get(mediaLocation, (err, res, media) => {
-  console.log(media);
+client.request({ method: "GET", uri: uri }).then(response => {
+  const mediaLocation = JSON.parse(response.body).location;
+  request.get(mediaLocation, (err, res, media) => {
+    console.log(media);
+  });
 });
