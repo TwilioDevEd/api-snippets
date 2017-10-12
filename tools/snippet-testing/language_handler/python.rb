@@ -8,8 +8,7 @@ module LanguageHandler
 
     def execute_command(file)
       command = bash_string_command(
-        'source /usr/local/bin/virtualenvwrapper.sh &&'\
-        " workon #{dependencies_directory} &&"\
+        "workon #{dependencies_directory} &&"\
         " python #{file}"
       )
       execute_with_suppressed_output(command, file)
