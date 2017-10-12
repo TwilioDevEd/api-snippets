@@ -1,0 +1,34 @@
+#!/bin/sh
+
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+while getopts "a:f:" opt; do
+    case "$opt" in
+    a)  lint_all=1
+        ;;
+    f)  fix=1
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+# if [ -n "$$fix" ]; then \
+# FIX="--fix"; \
+# fi; \
+# FILES=$(shell $(call files_changed_by_ext,js)); \
+# if [ -z "$$lint_all" ]; then \
+# FILES="./**/*.js"; \
+# fi; \
+# if [ -n "$$FILES" ]; then \
+# echo node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FIX $$FILES; \
+# node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FIX $$FILES; \
+# fi
+
+lint_js() {
+  echo "jose was here.."
+}
+
+lint_js
