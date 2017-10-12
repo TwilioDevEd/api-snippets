@@ -43,6 +43,23 @@
     make update
     ```
 
+### Pre-commit hook  
+Use of pre-commit hooks is recommended. Only the snippets which have been modified will be
+linted.
+
+To install the pre-commit hook run the following:
+
+```bash
+make install
+```
+
+If you want to commit snippets that are a work in progress you can bypass the pre-commit
+hook as follows:
+
+```bash
+git commit --no-verify
+```
+
 ## Guidelines
 
 1. Snippets should use placeholders for user information in a format that
@@ -192,20 +209,3 @@ testable:
 
 - Specific dependencies are supported for snippets. If a new dependency is
   introduced, the testing scripts should be modified to support it.
-
-### Pre-commit hook  
-Use of pre-commit hooks is recommended. Only the snippets which have been modified will be
-linted.
-
-To install the pre-commit hook run the following:
-
-```bash
-make install
-```
-
-If you want to commit snippets that are a work in progress you can bypass the pre-commit
-hook as follows:
-
-```bash
-git commit --no-verify
-```
