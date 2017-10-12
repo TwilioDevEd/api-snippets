@@ -1,6 +1,11 @@
-import org.json.JSONObject;
+import com.twilio.http.HttpMethod;
+import com.twilio.http.Request;
+import com.twilio.http.Response;
+import com.twilio.http.TwilioRestClient;
+import com.twilio.rest.Domains;
 import com.twilio.Twilio;
-import com.twilio.rest.video.v1.Recording;
+
+import org.json.JSONObject;
 
 
 public class Example {
@@ -16,13 +21,14 @@ public class Example {
         String recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioRestClient restClient = Twilio.getRestClient();
         Request request = new Request(
-            HttpMethod.POST,
-            Domains.VIDEO.toString(),
-            "/v1/Recordings/" + recordingSid + "/Media/",
-            restClient.getRegion()
+                HttpMethod.GET,
+                Domains.VIDEO.toString(),
+                "/v1/Recordings/" + recordingSid + "/Media/",
+                restClient.getRegion()
         );
         Response response = restClient.request(request);
-        String mediaLocation = json.getJSONObject(response.getStream()).getString("location");
+        JSONObject json = new JSONObject(response.getStream());
+        String mediaLocation = json.getString("location");
 
         System.out.println(mediaLocation);
     }
