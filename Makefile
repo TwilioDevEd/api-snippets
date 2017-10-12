@@ -129,5 +129,8 @@ fix:
 	@$(call fix_js)
 	@$(call fix_ruby)
 
+update:
+	docker pull twiliodeved/api-snippets-base:latest
+
 install:
 	@$(call install_git_hooks)
