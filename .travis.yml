@@ -2,10 +2,8 @@ sudo: required
 
 matrix:
   include:
-    - env: SNIPPET_LANGUAGE=csharp
-    - env: SNIPPET_LANGUAGE=curl
-    - env: SNIPPET_LANGUAGE=java6
-    - env: SNIPPET_LANGUAGE=java7
+    - env: SNIPPET_LANGUAGE=csharp:curl
+    - env: SNIPPET_LANGUAGE=java6:java7
     - env: SNIPPET_LANGUAGE=node:php
     - env: SNIPPET_LANGUAGE=python
     - env: SNIPPET_LANGUAGE=ruby
@@ -24,5 +22,4 @@ services:
   - docker
 
 script:
-  - docker build . -t twiliodeved/api-snippets &&
-    sudo docker run -it -e SNIPPET_LANGUAGE=$SNIPPET_LANGUAGE twiliodeved/api-snippets bash --login -c "make start; make run_tests"
+  - ./test -l $SNIPPET_LANGUAGE
