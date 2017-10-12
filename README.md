@@ -1,6 +1,48 @@
 # Code snippets for the Twilio API documentation
 [![Build Status](https://travis-ci.org/TwilioDevEd/api-snippets.svg?branch=master)](https://travis-ci.org/TwilioDevEd/api-snippets)
 
+### Local Snippet Testing
+
+1. Install [Docker](https://docs.docker.com/engine/installation/).
+
+1. Run the tests (OS X/Linux).
+
+   ```bash
+   ./test
+   ```
+
+   **Note:** Remember to mark the directories you want to be tested with a
+   `test.yaml` file. For more information go [here](#continuous-integration).
+
+   You can also specify a directory to be tested (relative or absolute path).
+   If a directory is specified, then the default testing behavior for that
+   directory and everything it contains is `true`.
+
+   Run tests in a specific directory:
+   ```bash
+   ./test -d rest/making-calls
+   ```
+
+   Alternatively, you can filter by directory and/or language:
+
+   ```bash
+   ./test -d rest/making-calls -l ruby
+   ```
+   Available languages are node, ruby, java6, java7, python, php, csharp and curl. These languages can be combined as follows:
+
+   ```bash
+   ./test -d rest/making-calls -l java6:python
+   ```
+
+1. Update the base image.
+
+  Periodically, and especially if you run tests and you get errors relating to missing
+  dependencies, you may need to update the base image. This can be done by running:
+
+    ```bash
+    make update
+    ```
+
 ## Guidelines
 
 1. Snippets should use placeholders for user information in a format that
@@ -167,36 +209,3 @@ hook as follows:
 ```bash
 git commit --no-verify
 ```
-
-### Local Snippet Testing
-
-1. Install [Docker](https://docs.docker.com/engine/installation/).
-
-1. Run the tests.
-
-   ```bash
-   ./test
-   ```
-
-   **Note:** Remember to mark the directories you want to be tested with a
-   `test.yaml` file. For more information go [here](#continuous-integration).
-
-   You can also specify a directory to be tested (relative or absolute path).
-   If a directory is specified, then the default testing behavior for that
-   directory and everything it contains is `true`.
-
-   Run tests in specific directory:
-   ```bash
-   ./test -d rest/making-calls
-   ```
-
-   Alternatively, you can filter by directory and/or language:
-
-   ```bash
-   ./test -d rest/making-calls -l ruby
-   ```
-   Available languages are node, ruby, java6, java7, python, php, csharp and curl. These languages can be combined as follows:
-
-   ```bash
-   ./test -d rest/making-calls -l java6:python
-   ```
