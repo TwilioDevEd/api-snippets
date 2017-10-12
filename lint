@@ -1,10 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
-while getopts "a:f:" opt; do
+while getopts "a?:l:f?:" opt; do
     case "$opt" in
     a)  lint_all=1
+        ;;
+    l)  language=$OPTARG
         ;;
     f)  fix=1
         ;;
@@ -15,20 +17,54 @@ shift $((OPTIND-1))
 
 [ "$1" = "--" ] && shift
 
-# if [ -n "$$fix" ]; then \
-# FIX="--fix"; \
-# fi; \
-# FILES=$(shell $(call files_changed_by_ext,js)); \
-# if [ -z "$$lint_all" ]; then \
-# FILES="./**/*.js"; \
-# fi; \
-# if [ -n "$$FILES" ]; then \
-# echo node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FIX $$FILES; \
-# node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FIX $$FILES; \
-# fi
-
-lint_js() {
-  echo "jose was here.."
+files_to_lint() {
+  FILES=$(eval "git diff --cached --name-only -- '$1'")
+  FILES=($FILES $(eval "git diff --name-only -- '$1'"))
+	echo $FILES
 }
 
-lint_js
+
+lint_js() {
+  flags=""
+  if [ -n "$fix" ]; then
+    flags=($flags "--fix")
+  fi
+	node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules|tools $flags $1
+}
+
+lint_ruby() {
+  docker run -a stdout -i -v $PWD:/src twiliodeved/api-snippets bash --login -c "rubocop $1"
+}
+
+lint_python() {
+  docker run -a stdout -i -v $PWD:/src twiliodeved/api-snippets bash --login -c "flake8 $1"
+}
+
+lint_php() {
+  docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "phplint $1"
+}
+
+# lint untracked files
+# lint cached files
+lint_changed_or_new_files() {
+  echo "## lint all files $1"
+}
+
+# lint files of specific language
+# lint all files
+lint_all() {
+  eval lint_js "./"
+  eval lint_php "./"
+  eval lint_python "./"
+  eval lint_ruby "./"
+}
+
+if [ -z "$language" ]; then
+  if [ -n "$lint_all" ]; then
+    eval lint_all
+  else
+    lint_changed_or_new_files
+  fi
+else
+  echo $language
+fi
