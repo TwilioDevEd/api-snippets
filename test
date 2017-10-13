@@ -1,0 +1,47 @@
+#!/bin/sh
+
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+USAGE="Snippet tester runner
+Usage: test [-d] [-l language] [-h]
+    -h      Shows this help
+    -d      Directory in which to run tests
+    -l language The language to filter by options are:
+        - csharp
+        - java6
+        - java7
+        - node
+        - php
+        - ruby
+        - python
+      and may be combined as follows:
+
+      test -l ruby:java6:python"
+
+
+while getopts "d:l:h?:" opt; do
+    case "$opt" in
+    d)  test_dir=$OPTARG
+        ;;
+    l)  language=$OPTARG
+        ;;
+    h)  echo "$USAGE"
+        exit 0 ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+cmd="ruby tools/snippet-testing/snippet_tester.rb"
+
+if [ -n "$test_dir" ]; then
+cmd="$cmd -d $test_dir";
+fi
+
+if [ -n "$language" ]; then
+cmd="SNIPPET_LANGUAGE=$language $cmd";
+fi
+
+docker run -it -v $PWD:/src twiliodeved/api-snippets bash --login -c "make start && $cmd"

@@ -20,4 +20,4 @@ calls = sub_account.calls.list(start_time=date.strftime('%Y-%m-%d'))
 for call in calls:
     time_to_bill += ceil(int(call.duration) / 60)
 
-print("Account {0} used {1} minutes.").format(sub_account_sid, time_to_bill)
+print("Account {0} used {1} minutes.".format(sub_account_sid, time_to_bill))

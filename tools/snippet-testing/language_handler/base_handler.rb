@@ -144,7 +144,7 @@ module LanguageHandler
     end
 
     def bash_string_command(command)
-      "bash -c '#{command}'"
+      "bash --login -c \"#{command}\""
     end
 
     def lang_cname

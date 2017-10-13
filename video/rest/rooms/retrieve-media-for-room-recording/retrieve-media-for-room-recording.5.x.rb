@@ -10,10 +10,9 @@ client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 room_sid = 'RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 recording_sid = 'RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-uri = 'https://video.twilio.com/v1/' +
-      "Rooms/#{room_sid}/" +
-      "Recordings/#{recording_sid}/" +
-      'Media'
+host = 'https://video.twilio.com'
+uri = "#{host}/v1/Rooms/#{room_sid}/Recordings/#{recording_sid}/Media"
+
 response = client.request(method: 'POST', uri: uri)
 media_location = JSON.parse(response.body)['location']
 

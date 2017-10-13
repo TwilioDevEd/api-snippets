@@ -5,7 +5,7 @@ AllCops:
     - '*/testable_snippets/**/*'
     - 'tools/**/*'
     - 'twilio-api-faker/**/*'
-Style/FileName:
+Naming:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false

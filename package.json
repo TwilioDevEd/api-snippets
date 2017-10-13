@@ -5,7 +5,7 @@
   "scripts": {
     "prettier:base": "prettier --single-quote --trailing-comma es5",
     "prettier:write": "npm run prettier:base -- --write",
-    "eslint": "eslint",
+    "eslint": "node_modules/.bin/eslint",
     "format:js": "npm run prettier:write -- \"!(tools|node_modules)/**/*.js\"",
     "test:js": "npm run eslint -- \"!(tools|node_modules)/**/*.js\"",
     "test": "npm run test:js"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/TwilioDevEd/api-snippets#readme",
   "devDependencies": {
+    "@ljharb/eslint-config": "^12.2.1",
     "eslint": "^4.3.0",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.3.0",

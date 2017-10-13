@@ -37,6 +37,7 @@ node_modules
 # Miscellaneous
 .DS_Store
 *.*~
+.python-version
 
 #IDEs
 *.idea
@@ -55,9 +56,11 @@ testable_snippets/
 /composer.json
 /composer.lock
 /tools/dependencies/
+.phplint-cache
 
 # Custom Ruby Gems
 Gemfile*
 jreyes-example.*
+.bundle
 
 venv
