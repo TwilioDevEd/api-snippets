@@ -22,4 +22,4 @@ services:
   - docker
 
 script:
-  - ./test -l $SNIPPET_LANGUAGE
+  - make update && ./lint -a && ./test -l $SNIPPET_LANGUAGE

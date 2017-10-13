@@ -2,14 +2,20 @@
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
-while getopts "a?:l:f?:" opt; do
+USAGE="A simple wrapper for running linters for each server language
+Usage: lint [-a] [-f] [-h]
+    -h      Shows this help
+    -a      Lints all files
+    -f      Attempts to fix linting errors"
+
+while getopts "a?:f?:h?:" opt; do
     case "$opt" in
     a)  lint_all=1
         ;;
-    l)  language=$OPTARG
-        ;;
     f)  fix=1
         ;;
+    h)  echo "$USAGE"
+        exit 0 ;;
     esac
 done
 
@@ -17,54 +23,67 @@ shift $((OPTIND-1))
 
 [ "$1" = "--" ] && shift
 
+
 files_to_lint() {
   FILES=$(eval "git diff --cached --name-only -- '$1'")
-  FILES=($FILES $(eval "git diff --name-only -- '$1'"))
+  FILES="$FILES $(eval "git diff --name-only -- '$1'")"
+  FILES="$FILES $(eval "git ls-files --others --exclude-standard '$1'")"
 	echo $FILES
 }
 
+run_in_docker() {
+  docker run -a stdout -i -v $PWD:/src twiliodeved/api-snippets bash --login -c $1
+}
 
 lint_js() {
   flags=""
   if [ -n "$fix" ]; then
     flags=($flags "--fix")
   fi
-	node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules|tools $flags $1
+	node_modules/.bin/eslint -c .eslintrc $flags $1
 }
 
 lint_ruby() {
-  docker run -a stdout -i -v $PWD:/src twiliodeved/api-snippets bash --login -c "rubocop $1"
+  flags=""
+  if [ -n "$fix" ]; then
+    flags=($flags "-a")
+  fi
+  eval run_in_docker "rubocop $flags $1"
 }
 
 lint_python() {
-  docker run -a stdout -i -v $PWD:/src twiliodeved/api-snippets bash --login -c "flake8 $1"
+  eval run_in_docker "flake8 $1"
 }
 
 lint_php() {
-  docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "phplint $1"
+  eval run_in_docker "phplint $1"
 }
 
-# lint untracked files
-# lint cached files
 lint_changed_or_new_files() {
-  echo "## lint all files $1"
+  files=$(eval files_to_lint "*.$1")
+  if [ -n "$files" ]; then
+    eval lint_$1 $files
+  fi
 }
 
-# lint files of specific language
 # lint all files
 lint_all() {
+  echo "
+
+### lint all files ###
+
+  "
   eval lint_js "./"
   eval lint_php "./"
   eval lint_python "./"
   eval lint_ruby "./"
 }
 
-if [ -z "$language" ]; then
-  if [ -n "$lint_all" ]; then
-    eval lint_all
-  else
-    lint_changed_or_new_files
-  fi
+if [ -n "$lint_all" ]; then
+  eval lint_all
 else
-  echo $language
+  eval lint_changed_or_new_files "php"
+  eval lint_changed_or_new_files "js"
+  eval lint_changed_or_new_files "python"
+  eval lint_changed_or_new_files "ruby"
 fi

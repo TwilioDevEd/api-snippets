@@ -60,7 +60,7 @@ endef
 
 define install_git_hooks
 	rm .git/hooks/pre-commit
-	echo '#!/bin/sh\n\nmake lint' >> .git/hooks/pre-commit
+	echo '#!/bin/sh\n\n./lint' >> .git/hooks/pre-commit
 endef
 
 run_docker_dev:
@@ -76,61 +76,9 @@ start:
 run_tests:
 	ruby tools/snippet-testing/snippet_tester.rb
 
-define lint_js
-	FILES=$(shell $(call files_changed_by_ext,js)); \
-	if [ -n "$$FILES" ]; then \
-		node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules $$FILES; \
-	fi
-endef
-
-define fix_js
-	FILES=$(shell $(call files_changed_by_ext,js)); \
-	if [ -n "$$FILES" ]; then \
-		node_modules/.bin/eslint -c .eslintrc --ignore-pattern node_modules --fix $$FILES; \
-	fi
-endef
-
-define lint_ruby
-	FILES=$(shell $(call files_changed_by_ext,rb)); \
-	if [ -n "$$FILES" ]; then \
-		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "rubocop $$FILES"; \
-	fi
-endef
-
-define fix_ruby
-	FILES=$(shell $(call files_changed_by_ext,rb)); \
-	if [ -n "$$FILES" ]; then \
-		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "rubocop -a $$FILES"; \
-	fi
-endef
-
-define lint_python
-	FILES=$(shell $(call files_changed_by_ext,py)); \
-	if [ -n "$$FILES" ]; then \
-		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "flake8 $$FILES"; \
-	fi
-endef
-
-define lint_php
-	FILES=$(shell $(call files_changed_by_ext,php)); \
-	if [ -n "$$FILES" ]; then \
-		docker run -a stdout -i -v $$PWD:/src twiliodeved/api-snippets bash --login -c "phplint $$FILES"; \
-	fi
-endef
-
-lint:
-	@$(call lint_js)
-	@$(call lint_php)
-	@$(call lint_ruby)
-	@$(call lint_python)
-
-
-fix:
-	@$(call fix_js)
-	@$(call fix_ruby)
-
 update:
-	docker pull twiliodeved/api-snippets-base:latest
+	@docker pull twiliodeved/api-snippets-base:latest \
+	&& docker build . -t twiliodeved/api-snippets --no-cache
 
 install:
 	@$(call install_git_hooks)
