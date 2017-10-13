@@ -23,4 +23,4 @@ services:
   - docker
 
 script:
-  - make install_in_travis && make install && ./lint -a && ./test -l $SNIPPET_LANGUAGE
+  - sudo make update_docker && make install && ./lint -a && ./test -l $SNIPPET_LANGUAGE

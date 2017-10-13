@@ -93,7 +93,7 @@ install:
 	@$(call install_git_hooks)
 
 
-install_in_travis:
+update_docker:
 	@curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
 	&& sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable" \
 	&& sudo apt-get update \
