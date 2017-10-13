@@ -8,6 +8,13 @@
 1. Run the tests (OS X/Linux).
 
    ```bash
+   make update && make install && ./test
+   ```
+   Once installation is completed, you should run `make update` only periodically, in
+   order to update the dependencies for this repository.
+
+
+   ```bash
    ./test
    ```
 
