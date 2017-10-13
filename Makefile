@@ -59,7 +59,7 @@ define files_changed_by_ext
 endef
 
 define install_git_hooks
-	rm .git/hooks/pre-commit
+	rm -f .git/hooks/pre-commit
 	echo '#!/bin/sh\n\n./lint' >> .git/hooks/pre-commit
 endef
 

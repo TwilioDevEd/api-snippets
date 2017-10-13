@@ -8,11 +8,10 @@
 1. Run the tests (OS X/Linux).
 
    ```bash
-   make make install && ./test
+   make install && ./test
    ```
    Once installation is completed, you should run `make install` only periodically, in
    order to update the dependencies for this repository.
-
 
    ```bash
    ./test
@@ -51,6 +50,7 @@
     ```
 
 ### Pre-commit hook  
+
 Use of pre-commit hooks is recommended. Only the snippets which have been modified will be
 linted.
 
@@ -65,6 +65,27 @@ hook as follows:
 
 ```bash
 git commit --no-verify
+```
+### Linting
+If you installed the pre-commit hook your files will be linted when you try to commit your
+work. However it may be useful to run the linters as you work.
+
+To lint just new or modified files:
+
+```bash
+./lint
+```
+
+Lint and attempt fixing linting errors (very useful):
+
+```bash
+./lint -f
+```
+
+Lint all files:
+
+```bash
+./lint -a
 ```
 
 ## Guidelines
