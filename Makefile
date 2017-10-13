@@ -68,13 +68,20 @@ run_docker_dev:
 	@docker run -it -v $$PWD:/src twiliodeved/api-snippets bash -c "make start; bash --login"
 
 start:
-	$(call register_hosts)
-	$(call restore_dependencies)
-	$(call run_api_faker)
-	npm i --quiet
+	@$(call register_hosts)
+	@$(call restore_dependencies)
+	@$(call run_api_faker)
+	@npm i --quiet
 
 run_tests:
 	ruby tools/snippet-testing/snippet_tester.rb
+
+install_api_faker:
+		rm -rf /twilio-api-faker \
+	  && git clone https://github.com/TwilioDevEd/twilio-api-faker.git --depth 1 /twilio-api-faker \
+	  && cp /twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt \
+	  && update-ca-certificates \
+	  && cd /twilio-api-faker && gradle jar && cd /api-snippets-base
 
 install:
 	@docker pull twiliodeved/api-snippets-base:latest \

@@ -5,12 +5,8 @@ USER root
 
 ENV RUN_ENV=test
 
-RUN rm -rf /twilio-api-faker \
-    && git clone https://github.com/TwilioDevEd/twilio-api-faker.git /twilio-api-faker \
-    && cp /twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt \
-    && update-ca-certificates \
-    && cd /twilio-api-faker && gradle jar && cd /api-snippets-base
-
 COPY . /src
 
 WORKDIR /src
+
+RUN make install_api_faker
