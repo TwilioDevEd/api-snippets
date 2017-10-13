@@ -8,9 +8,9 @@
 1. Run the tests (OS X/Linux).
 
    ```bash
-   make update && make install && ./test
+   make make install && ./test
    ```
-   Once installation is completed, you should run `make update` only periodically, in
+   Once installation is completed, you should run `make install` only periodically, in
    order to update the dependencies for this repository.
 
 
@@ -47,7 +47,7 @@
   dependencies, you may need to update the base image. This can be done by running:
 
     ```bash
-    make update
+    make install
     ```
 
 ### Pre-commit hook  

@@ -76,9 +76,7 @@ start:
 run_tests:
 	ruby tools/snippet-testing/snippet_tester.rb
 
-update:
+install:
 	@docker pull twiliodeved/api-snippets-base:latest \
 	&& docker build . -t twiliodeved/api-snippets --no-cache
-
-install:
 	@$(call install_git_hooks)
