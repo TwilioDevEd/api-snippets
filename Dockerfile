@@ -9,4 +9,4 @@ COPY . /src
 
 WORKDIR /src
 
-RUN make install_api_faker
+RUN make append_certs && make install_api_faker

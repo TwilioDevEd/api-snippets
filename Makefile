@@ -44,13 +44,6 @@ define restore_dependencies
 	cp -r /dependencies /src/tools
 endef
 
-FAKE_CERT = /usr/local/share/ca-certificates/twilio_fake.crt
-
-define append_certs
-	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
-		cat $(FAKE_CERT) >> $$line; \
-	done
-endef
 
 define files_changed_by_ext
   FILES=$(shell git diff --cached --name-only -- '*.$(1)'); \
@@ -62,6 +55,17 @@ define install_git_hooks
 	rm -f .git/hooks/pre-commit
 	echo '#!/bin/sh\n\n./lint' >> .git/hooks/pre-commit
 endef
+
+define enabled_docker_experimental_features
+	cp ./daemon.json /etc/docker/daemon.json
+endef
+
+FAKE_CERT = /usr/local/share/ca-certificates/twilio_fake.crt
+
+append_certs:
+	find /.virtualenvs/ -name '*cacert.pem' | while read line; do \
+		cat $(FAKE_CERT) >> $$line; \
+	done
 
 run_docker_dev:
 	@docker build . -t twiliodeved/api-snippets --no-cache
@@ -87,3 +91,14 @@ install:
 	@docker pull twiliodeved/api-snippets-base:latest \
 	&& docker build . -t twiliodeved/api-snippets --no-cache
 	@$(call install_git_hooks)
+
+
+install_in_travis:
+	@curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
+	&& sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable" \
+	&& sudo apt-get update \
+	&& apt-cache policy docker-ce \
+	&& sudo apt-get install -y docker-ce \
+	&& $(call enabled_docker_experimental_features) \
+	&& sudo service docker restart \
+	&& sleep 10
