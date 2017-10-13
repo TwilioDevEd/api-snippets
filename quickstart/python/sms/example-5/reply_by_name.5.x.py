@@ -5,6 +5,7 @@ from twilio import twiml
 
 app = Flask(__name__)
 
+
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond and greet the caller by name."""
@@ -21,6 +22,7 @@ def hello_monkey():
     resp.message("{}, thanks for the message!".format(message))
 
     return str(resp)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
