@@ -26,7 +26,7 @@ app.post('/fax/sent', (req, res) => {
 // We will have a URL to the contents of the fax at this point
 app.post('/fax/received', (req, res) => {
   // log the URL of the PDF received in the fax
-  console.log(res.body.MediaUrl);
+  console.log(req.body.MediaUrl);
 
   // Respond with empty 200/OK to Twilio
   res.status(200);
