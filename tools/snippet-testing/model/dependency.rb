@@ -18,7 +18,7 @@ module Model
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', CS_V5],
       PHP_NAME    => ['4.10', '5.15.0'],
-      PYTHON_NAME => ['5.6.0', '6.7.0'],
+      PYTHON_NAME => ['5.6.0', '6.8.0'],
       RUBY_NAME   => ['4.13.0', '5.3.0'],
       NODE_NAME   => ['2.11.0', '3.7.0'],
       JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
