@@ -35,7 +35,7 @@ class Example
             accountSid,
             authToken,
             workspaceSid,
-            null,
+            taskQueueSid,
             policies: policies,
             expiration: DateTime.UtcNow.AddSeconds(28800) // 60 * 60 * 8
             );
@@ -59,7 +59,7 @@ class PolicyUrlUtils
         _taskQueueSid = taskQueueSid;
     }
 
-    public string TaskQueue => $"{Workspace}/TaskQueue/{_taskQueueSid}";
+    public string TaskQueue => $"{Workspace}/TaskQueues/{_taskQueueSid}";
 
     string Workspace =>
         $"{taskRouterBaseUrl}/{taskRouterVersion}/Workspaces/{_workspaceSid}";
