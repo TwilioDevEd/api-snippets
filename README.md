@@ -306,26 +306,22 @@ the wrong user.
    directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
    for more information.
 
-1. Change your hosts file.
 
-   Edit your `/etc/hosts` file. Add the following entries:
+1. Update your hosts file with [this content](./tools/hosts)
+
+   ```bash
+   sudo cat ./tools/hosts >> /etc/hosts
    ```
-   127.0.0.1 api.twilio.com
-   127.0.0.1 chat.twilio.com
-   127.0.0.1 fax.twilio.com
-   127.0.0.1 ip-messaging.twilio.com
-   127.0.0.1 lookups.twilio.com
-   127.0.0.1 messaging.twilio.com
-   127.0.0.1 monitor.twilio.com
-   127.0.0.1 notifications.twilio.com
-   127.0.0.1 notify.twilio.com
-   127.0.0.1 pricing.twilio.com
-   127.0.0.1 preview.twilio.com
-   127.0.0.1 sync.twilio.com
-   127.0.0.1 taskrouter.twilio.com
-   127.0.0.1 video.twilio.com
-   127.0.0.1 wireless.twilio.com
+
+   If you want to avoid this step, you can simply pass the option `-u` to the
+   test runner.
+
+   ```bash
+   SNIPPET_LANGUAGE=node ruby tools/snippet-testing/snippet_tester.rb -u -d rest/calls
    ```
+
+   **Note:** To make changes inside the `/etc/hosts` file, it will prompt you
+   for your password.
 
 1. Make a copy of the `.env.example` file.
 
