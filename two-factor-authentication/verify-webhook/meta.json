@@ -1,0 +1,5 @@
+{
+  "title": "Verify an Incoming Two-factor Authentication Webhook",
+  "type": "server",
+  "tags": ["2fa"]
+}
