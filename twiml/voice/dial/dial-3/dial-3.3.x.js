@@ -3,7 +3,7 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const response = new VoiceResponse();
 response.dial(
   {
-    action: '/handleDialCallStatus.php',
+    action: '/handleDialCallStatus',
     method: 'GET',
   },
   '415-123-4567'
