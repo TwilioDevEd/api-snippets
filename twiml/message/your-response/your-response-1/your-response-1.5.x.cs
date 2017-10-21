@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Messaging;
+using System;
 
 
 class Example
@@ -8,9 +10,9 @@ class Example
         var response = new MessagingResponse();
         var message = new Message();
         message.Body("Hello World!");
-        response.Message(message);
-        response.Redirect(url: "https://demo.twilio.com/sms/welcome");
+        response.Append(message);
+        response.Redirect(url: new Uri("https://demo.twilio.com/sms/welcome"));
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

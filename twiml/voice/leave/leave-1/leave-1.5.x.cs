@@ -1,4 +1,5 @@
 using Twilio.TwiML;
+using System;
 
 
 class Example
@@ -6,10 +7,10 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        response.Enqueue("support", waitUrl: "wait.xml");
+        response.Enqueue("support", waitUrl: new Uri("wait.xml"));
         response
             .Say("Unfortunately, the support line has closed. Please call again tomorrow.");
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

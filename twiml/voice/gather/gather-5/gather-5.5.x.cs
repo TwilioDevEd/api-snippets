@@ -1,4 +1,7 @@
 using Twilio.TwiML;
+using Twilio.Http;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -6,11 +9,11 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(action: "/process_gather.php", method: "GET");
+        var gather = new Gather(action: new Uri("/process_gather.php"), method: HttpMethod.Get);
         gather.Say("Enter something, or not");
-        response.Gather(gather);
-        response.Redirect("/process_gather.php?Digits=TIMEOUT", method: "GET");
+        response.Append(gather);
+        response.Redirect(new Uri("/process_gather.php?Digits=TIMEOUT"), method: HttpMethod.Get);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

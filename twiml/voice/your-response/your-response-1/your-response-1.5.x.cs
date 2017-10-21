@@ -1,5 +1,5 @@
 using Twilio.TwiML;
-
+using System;
 
 class Example
 {
@@ -7,8 +7,8 @@ class Example
     {
         var response = new VoiceResponse();
         response.Say("Hello World");
-        response.Play("https://api.twilio.com/Cowbell.mp3");
+        response.Play(new Uri("https://api.twilio.com/Cowbell.mp3"));
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

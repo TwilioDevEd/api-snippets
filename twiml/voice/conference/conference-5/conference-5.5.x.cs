@@ -1,5 +1,5 @@
 using Twilio.TwiML;
-
+using Twilio.TwiML.Voice;
 
 class Example
 {
@@ -8,8 +8,8 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
         dial.Conference("SimpleRoom", muted: true);
-        response.Dial(dial);
+        response.Append(dial);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

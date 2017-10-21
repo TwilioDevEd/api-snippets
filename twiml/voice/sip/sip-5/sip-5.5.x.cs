@@ -1,4 +1,7 @@
+using System;
+using Twilio.Converters;
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -7,9 +10,11 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Sip("sip:jack@example.com;transport=tls");
-        response.Dial(dial);
+        var sip = new Sip(new Uri("http://example.com"), "jack");
 
-        System.Console.WriteLine(response.ToString());
+        dial.Append(sip);
+        response.Append(dial);
+
+        Console.WriteLine(response.ToString());;
     }
 }
