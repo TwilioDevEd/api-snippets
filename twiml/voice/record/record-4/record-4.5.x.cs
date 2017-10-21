@@ -1,4 +1,5 @@
 using Twilio.TwiML;
+using System;
 
 
 class Example
@@ -7,8 +8,8 @@ class Example
     {
         var response = new VoiceResponse();
         response.Record(transcribe: true,
-            transcribeCallback: "/handle_transcribe.php");
+            transcribeCallback: new Uri("/handle_transcribe.php"));
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

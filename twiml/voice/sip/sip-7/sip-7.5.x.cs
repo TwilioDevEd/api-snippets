@@ -1,4 +1,6 @@
+using System;
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -7,9 +9,11 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Sip("kate@example.com", username: "admin", password: "1234");
-        response.Dial(dial);
+        var sip = new Sip(new Uri("http://example.com"), "kate", "1234");
 
-        System.Console.WriteLine(response.ToString());
+        response.Append(sip);
+        response.Append(dial);
+
+        Console.WriteLine(response.ToString());;
     }
 }

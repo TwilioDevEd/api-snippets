@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.Http;
+using System;
 
 
 class Example
@@ -8,10 +10,10 @@ class Example
         var response = new VoiceResponse();
         response
             .Say("Please leave a message at the beep.\nPress the star key when finished.");
-        response.Record(action: "http://foo.edu/handleRecording.php",
-            method: "GET", maxLength: 20, finishOnKey: "*");
+        response.Record(action: new Uri("http://foo.edu/handleRecording.php"),
+            method: HttpMethod.Get, maxLength: 20, finishOnKey: "*");
         response.Say("I did not receive a recording");
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

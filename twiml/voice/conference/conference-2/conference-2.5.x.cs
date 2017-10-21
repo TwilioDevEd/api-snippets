@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -9,8 +11,8 @@ class Example
         var dial = new Dial();
         dial.Conference("moderated-conference-room",
             startConferenceOnEnter: false);
-        response.Dial(dial);
+        response.Append(dial);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

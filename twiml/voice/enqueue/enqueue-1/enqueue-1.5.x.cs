@@ -1,4 +1,5 @@
 using Twilio.TwiML;
+using System;
 
 
 class Example
@@ -6,8 +7,8 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        response.Enqueue("support", waitUrl: "wait-music.xml");
+        response.Enqueue("support", waitUrl: new Uri("wait-music.xml"));
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

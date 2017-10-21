@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -10,8 +12,8 @@ class Example
         dial.Number("858-987-6543");
         dial.Number("415-123-4567");
         dial.Number("619-765-4321");
-        response.Dial(dial);
+        response.Append(dial);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }
