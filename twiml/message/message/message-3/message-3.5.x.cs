@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.Http;
+using System;
 
 
 class Example
@@ -7,8 +9,8 @@ class Example
     {
         var response = new MessagingResponse();
         response.Message("Store Location: 123 Easy St.",
-            action: "/SmsHandler.php", method: "POST");
+            action: new Uri("/SmsHandler.php"), method: HttpMethod.Post);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

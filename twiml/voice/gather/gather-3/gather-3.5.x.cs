@@ -1,4 +1,7 @@
 using Twilio.TwiML;
+using Twilio.Http;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -6,12 +9,12 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(action: "/process_gather.php", method: "GET");
+        var gather = new Gather(action: new Uri("/process_gather.php"), method: HttpMethod.Get);
         gather
             .Say("Please enter your account number,\nfollowed by the pound sign");
-        response.Gather(gather);
+        response.Append(gather);
         response.Say("We didn't receive any input. Goodbye!");
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

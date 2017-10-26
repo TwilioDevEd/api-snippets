@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -8,8 +10,8 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
         dial.Conference("Customer Waiting Room", beep: "false");
-        response.Dial(dial);
+        response.Append(dial);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

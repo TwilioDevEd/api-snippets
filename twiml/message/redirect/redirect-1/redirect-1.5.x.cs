@@ -1,4 +1,5 @@
 using Twilio.TwiML;
+using System;
 
 
 class Example
@@ -6,8 +7,8 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        response.Redirect("http://www.foo.com/nextInstructions");
+        response.Redirect(new Uri("http://www.foo.com/nextInstructions"));
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

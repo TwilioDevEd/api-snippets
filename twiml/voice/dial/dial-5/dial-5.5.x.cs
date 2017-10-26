@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -7,10 +9,10 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial(record: "record-from-ringing-dual",
-            recordingStatusCallback: "www.myexample.com");
+            recordingStatusCallback: new Uri("www.myexample.com"));
         dial.Number("+15558675309");
-        response.Dial(dial);
+        response.Append(dial);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

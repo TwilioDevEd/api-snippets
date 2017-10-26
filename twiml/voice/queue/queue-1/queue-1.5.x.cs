@@ -1,5 +1,6 @@
 using Twilio.TwiML;
-
+using Twilio.TwiML.Voice;
+using System;
 
 class Example
 {
@@ -7,9 +8,10 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Queue("support", url: "about_to_connect.xml");
-        response.Dial(dial);
+        dial.Queue("support", url: new Uri("about_to_connect.xml"));
 
-        System.Console.WriteLine(response.ToString());
+        response.Append(dial);
+
+        Console.WriteLine(response.ToString());;
     }
 }

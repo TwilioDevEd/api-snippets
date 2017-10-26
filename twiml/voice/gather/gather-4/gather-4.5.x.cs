@@ -1,4 +1,6 @@
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+using System;
 
 
 class Example
@@ -6,10 +8,10 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(input: "speech", action: "/completed");
+        var gather = new Gather(input: "speech", action: new Uri("/completed"));
         gather.Say("Welcome to Twilio, please tell us why you're calling");
-        response.Gather(gather);
+        response.Append(gather);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());;
     }
 }

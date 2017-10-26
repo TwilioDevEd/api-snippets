@@ -13,12 +13,12 @@ module Model
     JAVA7_NAME      = 'java7'.freeze
 
     CS_V4 = '4.7.2'.freeze
-    CS_V5 = '5.7.0'.freeze
+    CS_V5 = '5.8.0'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', CS_V5],
       PHP_NAME    => ['4.10', '5.15.0'],
-      PYTHON_NAME => ['5.6.0', '6.7.0'],
+      PYTHON_NAME => ['5.6.0', '6.8.0'],
       RUBY_NAME   => ['4.13.0', '5.3.0'],
       NODE_NAME   => ['2.11.0', '3.7.0'],
       JAVA6_NAME  => { group: 'com.twilio.sdk', name: 'twilio-java-sdk', version: '6.3.0', suffix: '-jar-with-dependencies' },
@@ -44,6 +44,7 @@ module Model
       ],
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME][1] => [
         { name: 'Twilio', version: CS_V5 },
+        { name: 'System.Xml.Linq', version: '3.5.0'},
         { name: 'JWT', version: '1.3.4' }
       ]
     }.freeze
@@ -234,6 +235,7 @@ module Model
       AVAILABLE_LIBRARY_VERSION[CSHARP_NAME].each do |version|
         install_language_version(CSHARP_NAME, version) do
           CSHARP_DEPENDENCIES[version].each do |dependency|
+            puts dependency
             next if Dir.exist?("#{dependency[:name]}.#{dependency[:version]}")
             cmdSudoPrefix = 'sudo ' unless ENV['RUN_ENV'] == 'test'
             system(

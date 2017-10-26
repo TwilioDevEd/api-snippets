@@ -10,6 +10,6 @@ taskqueue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 statistics = client.taskrouter.workspaces(workspace_sid) \
-    .task_queues(taskqueue_sid).task_queue_cumulative_statistics().fetch()
+    .task_queues(taskqueue_sid).cumulative_statistics().fetch()
 
 print(statistics.reservations_accepted)
