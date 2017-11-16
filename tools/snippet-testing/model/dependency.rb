@@ -13,7 +13,7 @@ module Model
     JAVA7_NAME      = 'java7'.freeze
 
     CS_V4 = '4.7.2'.freeze
-    CS_V5 = '5.8.1'.freeze
+    CS_V5 = '5.8.2'.freeze
 
     AVAILABLE_LIBRARY_VERSION = {
       CSHARP_NAME => ['4.x', CS_V5],
