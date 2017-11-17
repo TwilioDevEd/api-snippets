@@ -8,7 +8,6 @@
     "reservations_rejected": 0,
     "reservations_rescinded": 0,
     "reservations_timed_out": 0,
-    "tasks_assigned": 0,
     "activity_durations": [
       {
         "sid": "WAe29fd962395b0ce5da1fa6b3e24f834f",

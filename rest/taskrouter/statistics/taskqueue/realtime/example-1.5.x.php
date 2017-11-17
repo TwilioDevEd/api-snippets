@@ -15,7 +15,7 @@ $client = new Client($accountSid, $authToken);
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
     ->taskQueues($taskQueueSid)
-    ->taskQueueRealTimeStatistics()
+    ->realTimeStatistics()
     ->fetch();
 
 echo $statistics->longestTaskWaitingAge;
