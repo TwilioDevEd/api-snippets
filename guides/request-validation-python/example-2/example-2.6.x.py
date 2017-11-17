@@ -1,18 +1,19 @@
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
-from twilio import twiml
+from flask import Flask, request
+from twilio.twiml.voice_response import VoiceResponse, MessagingResponse
 
-@require_POST
-@csrf_exempt
+
+app = Flask(__name__)
+
+
+@app.route('/voice', methods=['POST'])
 @validate_twilio_request
-def incoming_call(request):
+def incoming_call():
     """Twilio Voice URL - receives incoming calls from Twilio"""
     # Create a new TwiML response
-    resp = twiml.Response()
+    resp = VoiceResponse()
 
     # <Say> a message to the caller
-    from_number = request.POST['From']
+    from_number = request.values['From']
     body = """
     Thanks for calling!
 
@@ -22,20 +23,24 @@ def incoming_call(request):
     resp.say(body)
 
     # Return the TwiML
-    return HttpResponse(resp)
+    return str(resp)
 
-@require_POST
-@csrf_exempt
+
+@app.route('/message', methods=['POST'])
 @validate_twilio_request
-def incoming_message(request):
+def incoming_message():
     """Twilio Messaging URL - receives incoming messages from Twilio"""
     # Create a new TwiML response
-    resp = twiml.Response()
+    resp = MessagingResponse()
 
     # <Message> a text back to the person who texted us
     body = "Your text to me was {0} characters long. Webhooks are neat :)" \
-        .format(len(request.POST['Body']))
+        .format(len(request.values['Body']))
     resp.message(body)
 
     # Return the TwiML
-    return HttpResponse(resp)
+    return str(resp)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

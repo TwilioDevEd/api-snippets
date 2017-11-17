@@ -7,6 +7,7 @@ import os
 
 app = Flask(__name__)
 
+
 def validate_twilio_request(f):
     """Validates that incoming requests genuinely originated from Twilio"""
     @wraps(f)
