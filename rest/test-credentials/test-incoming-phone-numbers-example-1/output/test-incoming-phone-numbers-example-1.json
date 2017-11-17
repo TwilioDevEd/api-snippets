@@ -8,8 +8,6 @@
     "voice_fallback_url":"",
     "voice_fallback_method":"POST",
     "voice_caller_id_lookup":false,
-    "date_created":"Wed, 10 Oct 2012 21:36:14 +0000",
-    "date_updated":"Wed, 10 Oct 2012 21:36:14 +0000",
     "sms_url":"",
     "sms_method":"POST",
     "sms_fallback_url":"",
