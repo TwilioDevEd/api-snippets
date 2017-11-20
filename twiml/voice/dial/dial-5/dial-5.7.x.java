@@ -1,8 +1,7 @@
-import com.twilio.twiml.Dial;
-import com.twilio.twiml.Number;
+import com.twilio.twiml.voice.Dial;
+import com.twilio.twiml.voice.Number;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Language;
 
 public class Example {
     public static void main(String[] args) {

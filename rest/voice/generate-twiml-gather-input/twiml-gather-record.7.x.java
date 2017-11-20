@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.twilio.twiml.*;
-import com.twilio.twiml.Number;
+import com.twilio.twiml.voice.Number;
 
 public class TwilioHandleKeyServlet extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
