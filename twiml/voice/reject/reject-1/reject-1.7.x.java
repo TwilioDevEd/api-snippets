@@ -1,4 +1,4 @@
-import com.twilio.twiml.Reject;
+import com.twilio.twiml.voice.Reject;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
 

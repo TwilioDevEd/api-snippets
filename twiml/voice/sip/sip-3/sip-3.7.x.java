@@ -1,6 +1,6 @@
-import com.twilio.twiml.Dial;
+import com.twilio.twiml.voice.Dial;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Sip;
+import com.twilio.twiml.voice.Sip;
 import com.twilio.twiml.TwiMLException;
 
 

@@ -24,7 +24,7 @@ public class TwilioServlet extends HttpServlet {
     Gather gather = new Gather.Builder()
         .action("/handle-gather")
         .numDigits(1)
-        .method(Method.POST)
+        .method(HttpMethod.POST)
         .say(sayInGather)
         .build();
 

@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Dial;
-import com.twilio.twiml.Queue;
+import com.twilio.twiml.voice.Dial;
+import com.twilio.twiml.voice.Queue;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
