@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="woman" language="fr">Chapeau!</Say>
+    <Say voice="woman" language="fr-FR">Chapeau!</Say>
 </Response>
