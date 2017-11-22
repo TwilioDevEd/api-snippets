@@ -1,7 +1,7 @@
 // Get the Node helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Proxy;
+using Twilio.Rest.Proxy;
 
 class Example
 {
@@ -14,7 +14,7 @@ class Example
         const string sessionSid = "KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioClient.Init(accountSid, authToken);
 
-        var proxyService = ServiceResource.Create("FRIENDLY_NAME");
+        var proxyService = ServiceResource.Create("UNIQUE_NAME");
 
         Console.WriteLine(proxyService.Sid);
     }
