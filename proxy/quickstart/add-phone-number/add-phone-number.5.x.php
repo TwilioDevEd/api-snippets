@@ -8,7 +8,6 @@ $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
 $phoneNumber = $client
-    ->preview
     ->proxy
     ->services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->phoneNumbers->create(
