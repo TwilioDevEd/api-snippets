@@ -1,4 +1,4 @@
-// Get the Node helper library from https://twilio.com/docs/libraries/java
+// Get the Java helper library from https://twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.rest.preview.deployedDevices.FleetDeleter;
 

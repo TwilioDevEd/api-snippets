@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once('./twilio-php/Services/Twilio.php');
 
 // Instantiate a client using your API key and secret - but then, you'll need to
