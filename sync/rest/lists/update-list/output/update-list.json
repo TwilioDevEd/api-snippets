@@ -1,0 +1,16 @@
+{
+  "unique_name": "MyFirstList",
+  "links": {
+    "items": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items",
+    "permissions": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions"
+  },
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "created_by": "system",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2016-07-11T19:11:15Z",
+  "date_updated": "2016-07-11T19:11:15Z",
+  "date_expires": "2016-07-21T19:11:15Z",
+  "sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "revision": "0"
+}

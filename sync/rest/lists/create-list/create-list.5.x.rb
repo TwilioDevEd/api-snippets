@@ -9,6 +9,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a List
-response = service.sync_lists.create(unique_name: 'MyCollection')
+response = service.sync_lists.create(unique_name: 'MyCollection',
+                                     ttl: 1814400)
 
 puts response

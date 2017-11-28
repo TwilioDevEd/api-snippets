@@ -26,7 +26,8 @@ $doc = $client->sync
     ->documents->create(
         array(
             'uniqueName' => "MyFirstDocument",
-            'data' => $data
+            'data' => $data,
+            'ttl' => 1814400 // expires in 21 days
         )
     );
 
