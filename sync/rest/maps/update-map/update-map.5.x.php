@@ -21,4 +21,4 @@ $map = $client->sync
         )
     );
 
-echo $map->dateExpires, PHP_EOL;
+echo $map->dateExpires->format(DateTime::ISO8601), PHP_EOL;

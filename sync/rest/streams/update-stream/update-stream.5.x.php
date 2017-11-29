@@ -21,4 +21,4 @@ $stream = $client->sync
         )
     );
 
-echo $stream->dateExpires, PHP_EOL;
+echo $stream->dateExpires->format(DateTime::ISO8601), PHP_EOL;

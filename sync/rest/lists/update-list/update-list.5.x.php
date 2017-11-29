@@ -21,4 +21,4 @@ $list = $client->sync
         )
     );
 
-echo $list->dateExpires, PHP_EOL;
+echo $list->dateExpires->format(DateTime::ISO8601), PHP_EOL;
