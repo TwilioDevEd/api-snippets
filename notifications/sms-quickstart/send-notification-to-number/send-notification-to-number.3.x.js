@@ -10,7 +10,7 @@ const notificationOpts = {
     binding_type: 'sms',
     address: '+1651000000000',
   }),
-  body: 'Knok-Knok! This is your first Notify SMS',
+  body: 'Knock-Knock! This is your first Notify SMS',
 };
 
 client.notify
