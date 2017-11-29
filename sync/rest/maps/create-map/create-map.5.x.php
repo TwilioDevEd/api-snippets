@@ -17,7 +17,8 @@ $map = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps->create(
         array(
-            'uniqueName' => "Players"
+            'uniqueName' => "Players",
+            'ttl' => 1814400
         )
     );
 

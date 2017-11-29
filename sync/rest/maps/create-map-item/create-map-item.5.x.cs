@@ -25,7 +25,8 @@ public class Example
             serviceSid,
             "Players",
             "steph_curry",
-            data);
+            data,
+            864000); // expires in 10 days
 
         Console.WriteLine(item.Data);
     }

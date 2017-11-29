@@ -23,7 +23,8 @@ public class Example
 
         var item = SyncListItemResource.Create(serviceSid,
                                                "MyCollection",
-                                               data);
+                                               data,
+                                               864000); // expires in 10 days
 
         Console.WriteLine(item.Index);
     }

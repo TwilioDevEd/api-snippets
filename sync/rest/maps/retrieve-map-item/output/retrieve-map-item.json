@@ -5,6 +5,7 @@
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-07-07T21:38:21Z",
   "date_updated": "2016-07-07T21:38:21Z",
+  "date_expires": null,
   "key": "steph_curry",
   "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {
