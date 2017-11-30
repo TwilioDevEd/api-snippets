@@ -12,6 +12,7 @@ list_item = client.sync \
     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sync_lists("MyCollection") \
     .sync_list_items \
-    .create(data=data)
+    .create(data=data,
+            ttl=864000)  # expires in 10 days
 
 print(list_item.data)
