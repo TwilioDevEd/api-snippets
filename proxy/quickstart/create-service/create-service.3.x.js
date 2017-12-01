@@ -5,9 +5,9 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.proxy.services
+client.proxy.services
   .create({
-    friendlyName: 'My Awesome Service',
+    uniqueName: 'My Awesome Service',
     callbackUrl: 'https://www.example.com/',
   })
   .then(response => {
