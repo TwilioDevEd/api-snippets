@@ -13,7 +13,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create a Maps group
-    SyncMap map = SyncMap.creator(SERVICE_SID).setUniqueName("Players").create();
+    SyncMap map = SyncMap.creator(SERVICE_SID)
+                         .setUniqueName("Players")
+                         .setTtl(1814400)
+                         .create();
 
     System.out.println(map.getSid());
   }

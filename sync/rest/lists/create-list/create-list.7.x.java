@@ -12,7 +12,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    SyncList list = SyncList.creator(SERVICE_SID).setUniqueName("MyFirstList").create();
+    SyncList list = SyncList.creator(SERVICE_SID)
+                            .setUniqueName("MyFirstList")
+                            .setTtl(1814400)
+                            .create();
 
     System.out.println(list.getSid());
   }

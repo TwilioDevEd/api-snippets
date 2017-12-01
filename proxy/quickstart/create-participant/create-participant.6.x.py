@@ -7,7 +7,7 @@ token = "your_auth_token"
 
 client = Client(account, token)
 
-participant = client.preview.proxy \
+participant = client.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-    .participants.create(identifier="+15558675309", friendly_name="Alice")
+    .participants.create(identifier="+15558675309", unique_name="Alice")

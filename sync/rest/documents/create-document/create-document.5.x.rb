@@ -20,7 +20,8 @@ data = [
 # Create the Document, data can be any JSON
 response = service.documents.create(
   unique_name: 'MyFirstDocument',
-  data: "{#{data.join(',')}}"
+  data: "{#{data.join(',')}}",
+  ttl: 1814400  # expires in 21 days
 )
 
 puts response

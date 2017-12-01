@@ -14,6 +14,7 @@ service
       name: 'Stephen Curry',
       username: 'spicy_curry',
     },
+    ttl: 864000 // expires in 10 days
   })
   .then(response => {
     console.log(response);

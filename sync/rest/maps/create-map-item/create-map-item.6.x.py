@@ -12,6 +12,8 @@ map_item = client.sync \
     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sync_maps("Players") \
     .sync_map_items \
-    .create(key="steph_curry", data=data)
+    .create(key="steph_curry",
+            data=data,
+            ttl=864000)  # expires in 10 days
 
 print(map_item.data)

@@ -9,6 +9,7 @@ service.documents
   .create({
     uniqueName: 'MyFirstDocument',
     data: { firstName: 'Alice' },
+    ttl: 1814400 // expires in 21 days
   })
   .then(response => {
     console.log(response);
