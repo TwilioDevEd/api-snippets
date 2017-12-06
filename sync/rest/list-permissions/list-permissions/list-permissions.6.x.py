@@ -13,5 +13,5 @@ list_permissions = client.sync \
     .list()
 
 for list_permission in list_permissions:
-    print(list_permission.unique_name)
+    print(list_permission.identity)
     print(list_permission.url)

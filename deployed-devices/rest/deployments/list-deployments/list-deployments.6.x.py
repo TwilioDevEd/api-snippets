@@ -6,7 +6,11 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-deployments = client.preview.deployed_devices.deployments.list()
+fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+deployments = client.preview\
+                    .deployed_devices\
+                    .fleets(fleet_sid)\
+                    .deployments.list()
 
 for deployment in deployments:
     print(deployment.sid)

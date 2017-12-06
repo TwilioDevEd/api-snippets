@@ -13,5 +13,5 @@ map_permissions = client.sync \
     .list()
 
 for map_permission in map_permissions:
-    print(map_permission.unique_name)
+    print(map_permission.identity)
     print(map_permission.url)
