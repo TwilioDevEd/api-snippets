@@ -1,6 +1,6 @@
 # Download the Python helper library from twilio.com/docs/python/install
 import json
-import urllib2
+from urllib.request import urlopen
 
 from twilio.rest import Client
 
@@ -18,5 +18,5 @@ uri = "https://video.twilio.com/v1/" +\
 response = client.request("POST", uri)
 media_location = json.loads(response.text).get("location")
 
-media_content = urllib2.urlopen(media_location).read()
+media_content = urlopen(media_location).read()
 print(media_content)

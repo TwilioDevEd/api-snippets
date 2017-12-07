@@ -6,9 +6,11 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
+fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 deployment_sid = 'DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 deployment = client.preview\
                    .deployed_devices\
+                   .fleets(fleet_sid)\
                    .deployments(sid=deployment_sid)\
                    .update(friendly_name='My New Device Deployment')
 
