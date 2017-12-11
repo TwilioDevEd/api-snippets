@@ -16,7 +16,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    HashMap<String, Object> data = new HashMap<String, Object>();
+    Map<String, Object> data = new HashMap<>();
     data.put("name", "Stephen Curry");
     data.put("level", 31);
     data.put("username", "spicy_curry");

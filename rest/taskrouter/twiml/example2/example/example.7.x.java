@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.voice.EnqueueTask;
+import com.twilio.twiml.voice.Enqueue;
 import com.twilio.twiml.Task;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
@@ -17,8 +17,9 @@ public class Example extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Task task = new Task.Builder().data("{\"account_number\":\"12345abcdef\"}").build();
 
-    EnqueueTask enqueue =
-        new EnqueueTask.Builder(task).workflowSid("WW0123456789abcdef0123456789abcdef").build();
+    Enqueue enqueue =
+        new Enqueue.Builder()
+        .task(task).workflowSid("WW0123456789abcdef0123456789abcdef").build();
 
     VoiceResponse twiml = new VoiceResponse.Builder().enqueue(enqueue).build();
 
