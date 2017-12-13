@@ -7,7 +7,7 @@ api_key_secret = "your_api_key_secret"
 client = Client(api_key_sid, api_key_secret)
 
 publishedtrack = client.video.rooms('DailyStandup').participants.get(
-	'PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').published_tracks.list()
+    'PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').published_tracks.list()
 
 for publishedtrack in publishedtrack:
-	print(publishedtrack.date_created)
+    print(publishedtrack.date_created)

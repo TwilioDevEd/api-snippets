@@ -10,5 +10,5 @@ var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
 client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants.get('Alice').fetch()
   .then((participant) => {
-	console.log(participant.duration);
+    console.log(participant.duration);
   });

@@ -9,6 +9,6 @@ var Twilio = require('twilio');
 var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
 client.video.rooms('DailyStandup').participants.get('Alice').publishedTracks.get('Camera').fetch()
-  .then((publishedTrack) => {
-	console.log(publishedTrack.kind);
+  .then(publishedTrack => {
+    console.log(publishedTrack.kind);
   });

@@ -4,18 +4,18 @@ import com.twilio.rest.video.v1.room.Participant;
 
 public class ParticipantsExample3 {
 
-	public static final String API_KEY_SID = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-	public static final String API_KEY_SECRET = "your_api_key_secret";
+    public static final String API_KEY_SID = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String API_KEY_SECRET = "your_api_key_secret";
 
-	public static void main(String args[]) {
-		Twilio.init(API_KEY_SID, API_KEY_SECRET);
+    public static void main(String args[]) {
+        Twilio.init(API_KEY_SID, API_KEY_SECRET);
 
-		ResourceSet<Participant> participants = Participant.reader("DailyStandup")
-				.setStatus(Participant.Status.CONNECTED)
-				.read();
+        ResourceSet<Participant> participants = Participant.reader("DailyStandup")
+                .setStatus(Participant.Status.CONNECTED)
+                .read();
 
-		for (Participant participant : participants) {
-			System.out.println(participant.getIdentity());
-		}
-	}
+        for (Participant participant : participants) {
+            System.out.println(participant.getIdentity());
+        }
+    }
 }

@@ -7,6 +7,8 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-publishedTrack = client.video.rooms('DailyStandup').participants('Alice').published_tracks('Camera').fetch()
+publishedTrack = client.video.rooms('DailyStandup')
+                     .participants('Alice')
+                     .published_tracks('Camera').fetch
 
 puts publishedTrack.date_created

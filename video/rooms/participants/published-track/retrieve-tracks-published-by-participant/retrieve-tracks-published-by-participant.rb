@@ -7,7 +7,9 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-publishedTracks = client.video.rooms('DailyStandup').participants('PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').published_tracks.list()
+publishedTracks = client.video.rooms('DailyStandup')
+                      .participants('PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                      .published_tracks.list
 
 publishedTracks.each do |publishedTrack|
-	puts publishedTrack.date_created
+  puts publishedTrack.date_created

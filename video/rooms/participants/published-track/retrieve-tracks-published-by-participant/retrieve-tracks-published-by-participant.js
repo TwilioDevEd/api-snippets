@@ -8,5 +8,9 @@ var Twilio = require('twilio');
 
 var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
-client.video.rooms('DailyStandup').participants.get('PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-.publishedTracks.list().then((publishedTracks) => {publishedTracks.forEach(publishedTrack => console.log(publishedTrack.sid))});
+client.video.rooms('DailyStandup')
+  .participants.get('PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .publishedTracks.list()
+  .then(publishedTracks => {
+    publishedTracks.forEach(publishedTrack => console.log(publishedTrack.sid))
+  });
