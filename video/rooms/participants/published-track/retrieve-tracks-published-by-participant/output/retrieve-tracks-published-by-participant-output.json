@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://video.twilio.com/v1/Rooms/DailyStandup/Participants/ZestyYolandaZimmerman/PublishedTracks?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://video.twilio.com/v1/Rooms/DailyStandup/Participants/ZestyYolandaZimmerman/PublishedTracks?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "published_tracks"
+  },
+  "published_tracks": [{
+    "kind": "audio",
+    "name": "moderator-audio",
+    "date_updated": null,
+    "sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "enabled": true,
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/PublishedTracks/MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2017-12-13T23:46:36Z",
+    "room_sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "participant_sid": "PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  }, {
+    "kind": "video",
+    "name": "moderator-camera",
+    "date_updated": null,
+    "sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "enabled": true,
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/PublishedTracks/MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2017-12-13T23:46:36Z",
+    "room_sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "participant_sid": "PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  }]
+}

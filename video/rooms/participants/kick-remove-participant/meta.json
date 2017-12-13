@@ -1,4 +1,9 @@
 {
   "title": "Remove a Participant",
+<<<<<<< HEAD
   "type": "mobile"
 }
+=======
+  "type": "server"
+}
+>>>>>>> d2e12a3d405f79817a3f0e4943d4202fb4dc8809
