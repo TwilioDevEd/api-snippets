@@ -1,6 +1,6 @@
 {
   "kind": "video",
-  "name": "moderator-camera",
+`  "name": "Camera",
   "date_updated": null,
   "sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "enabled": true,
