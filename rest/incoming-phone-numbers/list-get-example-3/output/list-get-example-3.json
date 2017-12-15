@@ -9,7 +9,7 @@
         {
             "sid": "PN3f94c94562ac88dccf16f8859a1a8b25",
             "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "friendly_name": "Jenny",
+            "friendly_name": "Joey",
             "phone_number": "+14158675309",
             "voice_url": "http:\/\/demo.twilio.com\/docs/voice.xml",
             "voice_method": "GET",

@@ -13,8 +13,8 @@ public class Example {
 
     Message message = Message
         .creator(new PhoneNumber("+15558675309"), new PhoneNumber("+14158141829"),
-            "Jenny please?! I love you <3")
-        .setMediaUrl("http://www.example.com/hearts.png")
+            "Let's grab lunch at Milliways tomorrow!")
+        .setMediaUrl("http://www.example.com/cheeseburger.png")
         .create();
 
     System.out.println(message.getSid());

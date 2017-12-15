@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 call = client.calls.create(
-    to="client:tommy",
+    to="client:charlie",
     from_="+15017250604",
     url="http://demo.twilio.com/docs/voice.xml"
 )

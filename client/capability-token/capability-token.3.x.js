@@ -19,7 +19,7 @@ app.get('/token', (req, res) => {
   capability.addScope(
     new ClientCapability.OutgoingClientScope({ applicationSid: appSid })
   );
-  capability.addScope(new ClientCapability.IncomingClientScope('jenny'));
+  capability.addScope(new ClientCapability.IncomingClientScope('joey'));
   const token = capability.toJwt();
 
   res.set('Content-Type', 'application/jwt');

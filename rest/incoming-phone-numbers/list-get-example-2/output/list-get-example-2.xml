@@ -4,7 +4,7 @@
         <IncomingPhoneNumber>
             <Sid>PN3f94c94562ac88dccf16f8859a1a8b25</Sid>
             <AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
-            <FriendlyName>Jenny</FriendlyName>
+            <FriendlyName>Joey</FriendlyName>
             <PhoneNumber>+14158675309</PhoneNumber>
             <VoiceUrl>http://demo.twilio.com/docs/voice.xml</VoiceUrl>
             <VoiceMethod>GET</VoiceMethod>

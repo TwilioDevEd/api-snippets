@@ -20,10 +20,10 @@ public class Example {
 
     // Build a filter for the MessageList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("Body", "Jenny please?! I love you <3"));
+    params.add(new BasicNameValuePair("Body", "Let's grab lunch at Milliways tomorrow!"));
     params.add(new BasicNameValuePair("To", "+15558675309"));
     params.add(new BasicNameValuePair("From", "+14158141829"));
-    params.add(new BasicNameValuePair("MediaUrl", "http://www.example.com/hearts.png"));
+    params.add(new BasicNameValuePair("MediaUrl", "http://www.example.com/cheeseburger.png"));
     
     
     MessageFactory messageFactory = client.getAccount().getMessageFactory();

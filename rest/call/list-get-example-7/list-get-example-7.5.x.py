@@ -7,4 +7,4 @@ auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 # A list of call objects with the properties described above
-calls = client.calls.list(from_="client:tommy")
+calls = client.calls.list(from_="client:charlie")

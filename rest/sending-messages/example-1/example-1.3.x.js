@@ -6,9 +6,9 @@ const client = require('twilio')(accountSid, authToken);
 
 client.messages
   .create({
-    body: 'Jenny please?! I love you <3',
+    body: "Let's grab lunch at Milliways tomorrow!",
     to: '+15558675309',
     from: '+14158141829',
-    mediaUrl: 'http://www.example.com/hearts.png',
+    mediaUrl: 'http://www.example.com/cheeseburger.png',
   })
   .then(message => process.stdout.write(message.sid));

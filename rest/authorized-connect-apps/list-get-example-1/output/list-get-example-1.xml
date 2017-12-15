@@ -7,10 +7,10 @@
 	    <Permission>get-all</Permission>
 	    <Permission>post-all</Permission>
 	  </Permissions>
-      <ConnectAppFriendlyName>Jenny Tracker</ConnectAppFriendlyName>
+      <ConnectAppFriendlyName>Joey</ConnectAppFriendlyName>
       <ConnectAppDescription/>
-      <ConnectAppCompanyName>Tommy PI</ConnectAppCompanyName>
-      <ConnectAppHomepageUrl>http://www.tommypi.com</ConnectAppHomepageUrl>
+      <ConnectAppCompanyName>Charlie</ConnectAppCompanyName>
+      <ConnectAppHomepageUrl>http://www.example.com</ConnectAppHomepageUrl>
     </AuthorizedConnectApp>
     ...
   </AuthorizedConnectApps>

@@ -1,6 +1,6 @@
 curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages \
-    -d "Body=Jenny%20please%3F%21%20I%20love%20you%20<3" \
+    -d "Body=Let%27s%20grab%20lunch%20at%20Milliways%20tomorrow!" \
     -d "To=%2B15558675309" \
     -d "From=%2B14158141829" \
-    -d "MediaUrl=http://www.example.com/hearts.png" \
+    -d "MediaUrl=http://www.example.com/cheeseburger.png" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

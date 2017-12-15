@@ -7,9 +7,9 @@ auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
 message = client.messages.create(
-    body="Jenny please?! I love you <3",
+    body="Let's grab lunch at Milliways tomorrow!",
     to="+15558675309",
     from_="+14158141829",
-    media_url="http://www.example.com/hearts.png"
+    media_url="http://www.example.com/cheeseburger.png"
 )
 print(message.sid)

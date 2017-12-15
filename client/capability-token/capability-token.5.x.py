@@ -17,7 +17,7 @@ def get_capability_token():
     # Twilio Application Sid
     application_sid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     capability.allow_client_outgoing(application_sid)
-    capability.allow_client_incoming('jenny')
+    capability.allow_client_incoming('joey')
     token = capability.generate()
 
     return Response(token, mimetype='application/jwt')

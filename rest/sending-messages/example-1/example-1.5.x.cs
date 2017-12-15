@@ -15,12 +15,12 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var mediaUrl = new List<Uri>() {
-            new Uri("http://www.example.com/hearts.png")
+            new Uri("http://www.example.com/cheeseburger.png")
         };
         var to = new PhoneNumber("+14158141829");
         var message = MessageResource.Create(to,
                                              from: new PhoneNumber("+15558675309"),
-                                             body: "Jenny please?! I love you <3",
+                                             body: "Let's grab lunch at Milliways tomorrow!",
                                              mediaUrl: mediaUrl);
 
         Console.WriteLine(message.Sid);
