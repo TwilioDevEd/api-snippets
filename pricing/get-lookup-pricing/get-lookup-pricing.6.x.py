@@ -6,7 +6,7 @@ auth_token = "your_auth_token"
 
 # Use Lookup API to get country code / MCC / MNC that corresponds
 # to given phone number
-phone_number = "+15108675309"
+phone_number = "+15108675310"
 print("Find outbound SMS price to: ", phone_number)
 
 client = Client(account_sid, auth_token)

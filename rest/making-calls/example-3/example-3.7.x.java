@@ -16,7 +16,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Call call = Call
-        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
+        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675310"),
             new URI("http://demo.twilio.com/docs/voice.xml"))
         .setMethod(HttpMethod.GET).setSendDigits("1234#").create();
 

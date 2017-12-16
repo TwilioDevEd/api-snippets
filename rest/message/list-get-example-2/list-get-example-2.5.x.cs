@@ -14,7 +14,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var messages = MessageResource.Read(
-            to: new PhoneNumber("+15558675309"),
+            to: new PhoneNumber("+15558675310"),
             from: new PhoneNumber("+15017250604"),
             dateSentAfter: new DateTime(2016, 8, 31));
 

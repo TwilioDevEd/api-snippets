@@ -18,7 +18,7 @@ public class Example {
     // Build a filter for the OutgoingCallerIdList
     Map<String, String> params = new HashMap<String, String>();
     
-    params.put("PhoneNumber", "+14158675309");
+    params.put("PhoneNumber", "+14158675310");
     
     OutgoingCallerIdList callerIds = client.getAccount().getOutgoingCallerIds(params);
     

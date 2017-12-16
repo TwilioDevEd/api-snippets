@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Message message = Message
-        .creator(new PhoneNumber("+15558675309"), new PhoneNumber("+14158141829"),
+        .creator(new PhoneNumber("+15558675310"), new PhoneNumber("+14158141829"),
             "Let's grab lunch at Milliways tomorrow!")
         .setMediaUrl("http://www.example.com/cheeseburger.png")
         .create();

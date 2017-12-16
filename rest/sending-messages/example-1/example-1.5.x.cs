@@ -19,7 +19,7 @@ class Example
         };
         var to = new PhoneNumber("+14158141829");
         var message = MessageResource.Create(to,
-                                             from: new PhoneNumber("+15558675309"),
+                                             from: new PhoneNumber("+15558675310"),
                                              body: "Let's grab lunch at Milliways tomorrow!",
                                              mediaUrl: mediaUrl);
 

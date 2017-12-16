@@ -17,7 +17,7 @@ public class Example
 
         // Look up a phone number in local format
         var phoneNumber = PhoneNumberResource.Fetch(
-            new PhoneNumber("(510) 867-5309"),
+            new PhoneNumber("(510) 867-5310"),
             "US",
             new List<string> { "carrier" });
 

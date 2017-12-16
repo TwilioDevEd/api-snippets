@@ -19,7 +19,7 @@
    In the case of phone numbers, the following should be used:
 
    ```
-   Destination Phone Number: +15558675309
+   Destination Phone Number: +15558675310
    From/Twilio Number: +15017250604
    ```
 

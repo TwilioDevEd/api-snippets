@@ -14,7 +14,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String from = "+15017250604";
-        String to = "+15558675309";
+        String to = "+15558675310";
         URI mediaUrl = new URI("https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
         FaxCreator faxCreator = Fax.creator(to, mediaUrl);
         faxCreator.setFrom(from);

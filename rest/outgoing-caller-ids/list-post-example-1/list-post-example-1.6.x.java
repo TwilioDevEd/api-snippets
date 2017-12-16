@@ -20,7 +20,7 @@ public class Example {
     Map<String, String> params = new HashMap<String, String>();
     
     params.put("FriendlyName", "My Home Phone Number");
-    params.put("PhoneNumber", "+14158675309");
+    params.put("PhoneNumber", "+14158675310");
     
     OutgoingCallerIdFactory callerIdFactory = client.getAccount().getOutgoingCallerIdFactory();
     CallerIdValidation validationAttempt = callerIdFactory.create(params);

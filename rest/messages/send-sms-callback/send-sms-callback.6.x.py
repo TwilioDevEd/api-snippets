@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 client.messages.create(
-    to="+15558675309",
+    to="+15558675310",
     from_="+15017250604",
     body="McAvoy or Stewart? These timelines can get so confusing.",
     status_callback="http://requestb.in/1234abcd"

@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$encoded = rawurlencode("(510) 867-5309");
+$encoded = rawurlencode("(510) 867-5310");
 $number = $client->lookups
     ->phoneNumbers($encoded)
     ->fetch(

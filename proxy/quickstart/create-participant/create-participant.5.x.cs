@@ -17,7 +17,7 @@ class Example
         var participant = ParticipantResource.Create(
             proxyServiceSid,
             sessionSid,
-            "+15558675309",
+            "+15558675310",
             "Alice");
 
         Console.WriteLine(participant.Sid);

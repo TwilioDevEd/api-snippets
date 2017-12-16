@@ -10,4 +10,4 @@ client = Client(account, token)
 participant = client.proxy \
     .services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-    .participants.create(identifier="+15558675309", friendly_name="Alice")
+    .participants.create(identifier="+15558675310", friendly_name="Alice")

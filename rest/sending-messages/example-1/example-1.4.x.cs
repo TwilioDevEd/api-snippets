@@ -11,7 +11,7 @@ class Example
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
     
-    var message = twilio.SendMessage("+14158141829", "+15558675309", "Let's grab lunch at Milliways tomorrow!", new string[] {"http://www.example.com/cheeseburger.png"});
+    var message = twilio.SendMessage("+14158141829", "+15558675310", "Let's grab lunch at Milliways tomorrow!", new string[] {"http://www.example.com/cheeseburger.png"});
     
     Console.WriteLine(message.Sid);
   }

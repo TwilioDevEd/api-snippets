@@ -4,7 +4,7 @@ require 'sinatra'
 require 'twilio-ruby'
 
 # Update with your own phone number in E.164 format
-MODERATOR = '+15558675309'.freeze
+MODERATOR = '+15558675310'.freeze
 
 post '/voice' do
   # Start our TwiML response

@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     Message message = Message
-        .creator(new PhoneNumber("+15558675309"), new PhoneNumber("+15017250604"),
+        .creator(new PhoneNumber("+15558675310"), new PhoneNumber("+15017250604"),
             "Open to confirm: http://yourserver.com/confirm?id=1234567890")
         .setProvideFeedback(true)
         .create();

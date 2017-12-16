@@ -9,7 +9,7 @@ const client = new Client(accountSid, authToken);
 client.outgoingCallerIds.create(
   {
     friendlyName: 'My Home Phone Number',
-    phoneNumber: '+14158675309',
+    phoneNumber: '+14158675310',
   },
   (err, callerId) => {
     if (err) {
