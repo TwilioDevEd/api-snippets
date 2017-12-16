@@ -14,7 +14,11 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var credential = CredentialResource.Update(credentialSid, "MyCredential");
+        var credential = CredentialResource.Update(
+            credentialSid,
+            "MyCredential",
+            sandbox: true
+        );
 
         Console.WriteLine(credential.FriendlyName);
     }

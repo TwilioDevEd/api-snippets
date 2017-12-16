@@ -1,27 +1,27 @@
-var http = require('http'),
-    express = require('express'),
-    twilio = require('twilio');
+const http = require('http');
+const express = require('express');
+const twilio = require('twilio');
 
-var app = express();
+const app = express();
 
-app.get('/token', function(req, res) {
+app.get('/token', (req, res) => {
   // put your Twilio API credentials here
-  var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  var authToken = "your_auth_token";
+  const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const authToken = 'your_auth_token';
 
   // put your Twilio Application Sid here
-  var appSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  const appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-  var capability = new twilio.Capability(accountSid, authToken);
+  const capability = new twilio.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);
-  var token = capability.generate();
+  const token = capability.generate();
 
-  res.set('Content-Type', 'application/jwt')
+  res.set('Content-Type', 'application/jwt');
   res.send(token);
 });
 
-app.post('/voice', function (req, res) {
-    // TODO: Create TwiML response
+app.post('/voice', (req, res) => {
+  // TODO: Create TwiML response
 });
 
 http.createServer(app).listen(1337, '127.0.0.1');

@@ -1,10 +1,18 @@
-{
-  "sid": "US57dd692b4e7d45aa9bcac8cc218e2a41",
-  "account_sid": "ACxxx",
-  "service_sid": "IS67f7fa9b52f748beb5e7914356925410",
-  "role_sid": null,
-  "identity": "kwhinnery",
-  "date_created": "2015-08-27T19:44:07Z",
-  "date_updated": "2015-08-27T19:44:07Z",
-  "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Users/US57dd692b4e7d45aa9bcac8cc218e2a41"
-}
+    {
+      "is_notifiable": null,
+      "date_updated": "2015-09-22T09:20:02Z",
+      "is_online": null,
+      "friendly_name": null,
+      "account_sid": "ACxxx",
+      "url": "https://chat.twilio.com/v2/Services/ISxxx/Users/USxxx",
+      "date_created": "2015-09-22T09:20:02Z",
+      "role_sid": null,
+      "sid": "USxxx",
+      "attributes": null,
+      "service_sid": "ISxxx",
+      "joined_channels_count": 0,
+      "identity": "allan",
+      "links": {
+        "user_channels": "https://chat.twilio.com/v2/Services/ISxxx/Users/USxxx/Channels"
+      }
+    }

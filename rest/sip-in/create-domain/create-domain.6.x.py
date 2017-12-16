@@ -6,10 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-domain = client.sip \
-        .domains \
-        .create("dunder-mifflin-scranton.sip.twilio.com",
-                friendly_name="Scranton Office",
-                voice_url="https://dundermifflin.example.com/twilio/app.php")
+domain = client.sip.domains \
+    .create("dunder-mifflin-scranton.sip.twilio.com",
+            friendly_name="Scranton Office",
+            voice_url="https://dundermifflin.example.com/twilio/app.php")
 
 print(domain.sid)

@@ -26,7 +26,7 @@ public class Example {
 
     // Loop over alerts and print out a property for each one.
     for (Alert alert : alerts) {
-      System.out.println(alert.getMessageText());
+      System.out.println(alert.getResponseBody());
     }
   }
 }

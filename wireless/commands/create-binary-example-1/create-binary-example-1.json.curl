@@ -1,0 +1,4 @@
+curl -X POST https://wireless.twilio.com/v1/Commands \
+  -d 'Sim=AliceSmithSmartMeter' \
+  -d 'Command=SGVsbG8sIE1hY2hpbmUh==' \
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

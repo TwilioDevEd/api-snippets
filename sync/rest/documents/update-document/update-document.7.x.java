@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.rest.preview.sync.service.Document;
+import com.twilio.rest.sync.v1.service.Document;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -24,7 +24,9 @@ public class Example {
     data.put("starring", starring);
     data.put("genre", "Romance");
 
-    Document document = Document.updater(SERVICE_SID, "MyFirstDocument", data).update();
+    Document document = Document.updater(SERVICE_SID, "MyFirstDocument")
+      .setData(data)
+      .update();
 
     System.out.println(document.getData());
   }

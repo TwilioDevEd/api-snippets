@@ -1,5 +1,5 @@
 from flask import Flask
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse, Gather
 
 app = Flask(__name__)
 
@@ -8,11 +8,12 @@ app = Flask(__name__)
 def voice():
     """Respond to incoming phone calls with a menu of options"""
     # Start our TwiML response
-    resp = twiml.Response()
+    resp = VoiceResponse()
 
     # Start our <Gather> verb
-    with resp.gather(numDigits=1) as gather:
-        gather.say('For sales, press 1. For support, press 2.')
+    gather = Gather(num_digits=1)
+    gather.say('For sales, press 1. For support, press 2.')
+    resp.append(gather)
 
     # If the user doesn't select an option, redirect them into a loop
     resp.redirect('/voice')

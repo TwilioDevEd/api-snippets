@@ -1,0 +1,16 @@
+{
+  "sid": "USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "identity": "User0001",
+  "segments": [
+    "premium",
+    "fitness-lifestyle"
+  ],
+  "date_updated": "2017-01-31T13:02:47Z",
+  "date_created": "2017-01-31T13:02:47Z",
+  "url": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Users/USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "links": {
+    "bindings": "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Users/User0001/Bindings"
+  }
+}

@@ -6,11 +6,10 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-map_item = client.preview \
-                 .sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .sync_maps("Players") \
-                 .sync_map_items("steph_curry") \
-                 .fetch()
+map_item = client.sync \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps("Players") \
+    .sync_map_items("steph_curry") \
+    .fetch()
 
 print(map_item.data)

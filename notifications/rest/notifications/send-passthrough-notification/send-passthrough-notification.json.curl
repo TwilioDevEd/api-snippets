@@ -1,0 +1,5 @@
+curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications \
+    --data-urlencode 'ToBinding={"binding_type":"sms", "address":"+15555555555"}' \
+    --data-urlencode 'ToBinding={"binding_type":"facebook-messenger", "address":"123456789123"}' \
+    -d 'Body=Hello Bob' \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

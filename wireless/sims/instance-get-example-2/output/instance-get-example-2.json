@@ -2,19 +2,23 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "date_updated" : "2016-05-13T22:19:53Z",
-  "commands_callback_url" : null,
-  "date_created" : "2016-05-09T23:01:05Z",
   "unique_name" : "AliceSmithSmartMeter",
-  "url" : "https://preview.twilio.com/wireless/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c",
-  "commands_callback_method" : "POST",
-  "status" : "inactive",
+  "date_updated" : "2016-05-13T22:19:53Z",
+  "voice_url": null,
+  "iccid": "8901340852295524703",
+  "voice_fallback_method": "POST",
+  "sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",
+  "voice_fallback_url": null,
+  "status" : "new",
+  "commands_callback_method": "POST",
+  "rate_plan_sid": "WP4ff4de42eb7e4969f6c81782165bd62a",
+  "voice_method": "POST",
+  "url": "https://wireless.twilio.com/v1/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c",
   "friendly_name" : "Alice's SmartMeter",
-  "sid" : "DEd3f4ec6c85ded1a5f64f10afc067895c",
-  "account_sid" : "AC8caa2afb9d5279926619c458dc65be78",
-  "links" : {
-    "rate_plan" : "https://preview.twilio.com/wireless/RatePlans/WP4ff4de42eb7e4969f6c81782165bd62a",
-    "usage" : "https://preview.twilio.com/wireless/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c/Usage"
-  },
-  "rate_plan_sid" : "WP4ff4de42eb7e4969f6c81782165bd62a"
+  "account_sid" : "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created" : "2016-05-09T23:01:05Z",
+  "commands_callback_url": null,
+  "links": {
+    "rate_plan": "https://wireless.twilio.com/v1/RatePlans/WP4ff4de42eb7e4969f6c81782165bd62a"
+  }
 }

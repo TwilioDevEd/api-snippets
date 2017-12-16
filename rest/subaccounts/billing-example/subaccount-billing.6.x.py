@@ -7,7 +7,7 @@ import datetime
 sub_account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 sub_auth_token = "your_auth_token"
 sub_account_client = Client(sub_account_sid, sub_auth_token)
-sub_account = sub_account_client.account
+sub_account = sub_account_client.api.account
 
 # Place to store the billable usage
 time_to_bill = 0
@@ -20,4 +20,4 @@ calls = sub_account.calls.list(start_time=date.strftime('%Y-%m-%d'))
 for call in calls:
     time_to_bill += ceil(int(call.duration) / 60)
 
-print("Account {0} used {1} minutes.").format(sub_account_sid, time_to_bill)
+print("Account {0} used {1} minutes.".format(sub_account_sid, time_to_bill))

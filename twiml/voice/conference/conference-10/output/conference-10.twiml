@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial>
+    <Conference record="record-from-start"
+                recordingStatusCallback="www.myexample.com">
+      LoveTwilio
+    </Conference>
+  </Dial>
+</Response>

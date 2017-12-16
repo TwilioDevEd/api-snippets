@@ -1,19 +1,18 @@
-require 'rubygems' # not necessary with ruby 1.9 but included for completeness
+# Get twilio-ruby from twilio.com/docs/ruby/install
 require 'twilio-ruby'
 
-# put your own credentials here
+# Get your Account SID and Auth Token from twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 
-# set up a client to talk to the Twilio REST API
+# Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-caller_id = @client.account
-                   .outgoing_caller_ids('PNe536d32a3c49700934481addd5ce1659')
-                   .fetch
-
-caller_id.update(
-  friendly_name: 'My Home Phone Number'
-)
-
-puts caller_id.phone_number
+@caller_id = @client.validation_requests
+                    .create(
+                      friendly_name: 'My Company Line',
+                      phone_number: '+14158675309'
+                    )
+puts @caller_id.phone_number
+puts @caller_id.friendly_name
+puts @caller_id.validation_code

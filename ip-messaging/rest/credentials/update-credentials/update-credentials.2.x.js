@@ -1,13 +1,17 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
+const client = new IpMessagingClient(accountSid, authToken);
 
-client.credentials('SERVICE_SID').update({
-    type: 'TYPE'
-}).then(function(response) {
+client
+  .credentials('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({
+    type: 'TYPE',
+  })
+  .then(response => {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(error => {
     console.log(error);
-});
+  });

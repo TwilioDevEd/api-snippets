@@ -5,9 +5,10 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.applications.create({
-  friendlyName: 'Phone Me',
-  voiceUrl: 'http://demo.twilio.com/docs/voice.xml',
-  voiceMethod: 'GET',
-})
-.then((app) => process.stdout.write(app.sid));
+client.applications
+  .create({
+    friendlyName: 'Phone Me',
+    voiceUrl: 'http://demo.twilio.com/docs/voice.xml',
+    voiceMethod: 'GET',
+  })
+  .then(app => process.stdout.write(app.sid));

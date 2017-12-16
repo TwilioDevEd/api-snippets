@@ -14,8 +14,8 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var credential = CredentialResource.Create(CredentialResource.PushServiceEnum.Gcm,
-                                                   "MyGCMCredential",
-                                                   apiKey: "your_api_key");
+                                  "MyGCMCredential",
+                                  apiKey: "your_api_key");
 
         Console.WriteLine(credential.Sid);
     }

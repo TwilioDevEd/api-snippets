@@ -1,15 +1,18 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
+const client = new IpMessagingClient(accountSid, authToken);
 
-client.credentials.create({
+client.credentials
+  .create({
     type: 'TYPE',
     apiKey: 'APIKEY',
-    friendlyName: 'FRIENDLY_NAME'
-}).then(function(response) {
+    friendlyName: 'FRIENDLY_NAME',
+  })
+  .then(response => {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(error => {
     console.log(error);
-});
+  });

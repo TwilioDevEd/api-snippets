@@ -5,19 +5,24 @@ import com.twilio.Twilio;
 import com.twilio.rest.notify.v1.Service;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACCOUNT_SID";
-  public static final String AUTH_TOKEN = "AUTH_TOKEN";
+    // Find your Account Sid and Token at twilio.com/user/account
+    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String AUTH_TOKEN = "your_auth_token";
 
-  public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String APN_CREDENTIAL_SID = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String FCM_CREDENTIAL_SID = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-  public static void main(String[] args) {
-    // Initialize the client
-    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+    public static void main(String[] args) {
+        // Initialize the client
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    // Create the service
-    Service service = Service.creator().setFriendlyName("My Awesome Service").create();
+        // Create the service
+        Service service = Service.creator()
+                .setFriendlyName("My Awesome Service")
+                .setApnCredentialSid(APN_CREDENTIAL_SID)
+                .setFcmCredentialSid(FCM_CREDENTIAL_SID)
+                .create();
 
-    System.out.println(service.getSid());
-  }
+        System.out.println(service.getFriendlyName());
+    }
 }

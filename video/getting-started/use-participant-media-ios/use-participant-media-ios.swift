@@ -1,19 +1,19 @@
 // Set the Participant Delegate to receive participant's events
 participant.delegate = self;
 
-// UIView where you want to render remote participant's video
-@IBOutlet weak var remoteView: UIView!
+// TVIVideoView where you want to render remote participant's video
+@IBOutlet weak var remoteView: TVIVideoView!
 
 // MARK: TVIParticipantDelegate
 
 func participant(_ participant: TVIParticipant, addedVideoTrack videoTrack: TVIVideoTrack) {
-    // Attach remoteView on video track to render video
-    videoTrack.attach(remoteView);
+    // Add remoteView on video track to render video
+    videoTrack.addRenderer(remoteView);
 }
 
 func participant(_ participant: TVIParticipant, removedVideoTrack videoTrack: TVIVideoTrack) {
-    // To stop rendering simply call detach
-    videoTrack.detach(remoteView);
+    // To stop rendering simply call removeRenderer
+    videoTrack.removeRenderer(remoteView);
 }
 
 func participant(_ participant: TVIParticipant, addedAudioTrack audioTrack: TVIAudioTrack) {

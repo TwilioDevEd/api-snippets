@@ -1,7 +1,6 @@
-// Get Messages for a previously created channel
-messagingClient.getChannels().then(function(channels) {
-  for (i=0; i<channels.length; i++) {
-    var channel = channels[i];
+chatClient.getSubscribedChannels().then(function(paginator) {
+  for (i = 0; i < paginator.items.length; i++) {
+    const channel = paginator.items[i];
     console.log('Channel: ' + channel.friendlyName);
   }
 });

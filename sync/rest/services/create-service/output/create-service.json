@@ -1,13 +1,17 @@
 {
-  "sid": "ISxxx",
-  "account_sid": "ACxxx",
-  "friendly_name": "FriendlyName",
+  "sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "friendly_name": "MySyncServiceInstance",
   "date_created": "2016-08-25T04:10:54Z",
-  "webhook_url": "",
-  "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90",
+  "date_updated": "2017-05-09T14:25:02Z",
+  "acl_enabled": false,
+  "reachability_webhooks_enabled": false,
+  "webhook_url": null,
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "links": {
-    "maps": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Maps",
-    "documents": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Documents",
-    "lists": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Lists"
+    "maps": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps",
+    "documents": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Documents",
+    "lists": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists",
+    "streams": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Streams"
   }
 }

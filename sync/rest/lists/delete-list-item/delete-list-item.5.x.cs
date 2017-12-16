@@ -1,20 +1,21 @@
 // Download the next-gen twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
+using Twilio;
 using Twilio.Clients;
-using Twilio.Resources.Preview.Sync.Service.SyncList;
+using Twilio.Rest.Sync.V1.Service.SyncList;
 
 class Example
 {
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/console
-    var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    var authToken = "your_auth_token";
-    var client = new TwilioRestClient(accountSid, authToken);
+    const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    const string authToken = "your_auth_token";
+    const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-    SyncListItemResource.Delete("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "MyCollection", 0)
-      .Execute(client);
+    TwilioClient.Init(accountSid, authToken);
+
+    SyncListItemResource.Delete(serviceSid, "MyCollection", 0);
 
     Console.WriteLine("Item Deleted");
   }

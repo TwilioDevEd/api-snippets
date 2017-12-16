@@ -1,0 +1,4 @@
+curl 'https://fax.twilio.com/v1/Faxes/FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' \
+    -X POST \
+    -d 'Status=canceled'  \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

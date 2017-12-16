@@ -1,29 +1,34 @@
 {
   "channels": [
     {
-      "sid": "CHxxx",
-      "account_sid": "ACxxx",
-      "service_sid": "ISxxx",
+      "unique_name": "my-channel",
+      "members_count": 0,
+      "date_updated": "2016-06-16T18:44:07Z",
       "friendly_name": "MyChannel",
-      "attributes": "",
-      "type":"private",
-      "date_created": "2015-08-24T22:18:57Z",
-      "date_updated": "2015-08-24T22:18:57Z",
       "created_by": "system",
-      "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx",
+      "account_sid": "ACxxx",
+      "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx",
+      "date_created": "2016-06-16T18:44:07Z",
+      "sid": "CHxxx",
+      "attributes": null,
+      "service_sid": "ISxxx",
+      "type": "public",
+      "messages_count": 1,
       "links": {
-        "members": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Members",
-        "messages": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CHxxx/Messages"
+        "messages": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages",
+        "invites": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CH036f44fca1d24a55b660843694f38ee2/Invites",
+        "members": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CH036f44fca1d24a55b660843694f38ee2/Members",
+        "last_message": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages/IMxxx"
       }
     }
   ],
-  "meta": {
+ "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels?PageSize=50&Page=0",
+    "first_page_url": "https://chat.twilio.com/v2/Services/ISxxx/Channels?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels?PageSize=50&Page=0",
-    "next_page_url": null,
+    "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels?PageSize=50&Page=0",
+    "next_page_url": "https://chat.twilio.com/v2/Services/ISxxx/Channels?PageSize=50&Page=1&PageToken=PTCHxxx",
     "key": "channels"
   }
 }

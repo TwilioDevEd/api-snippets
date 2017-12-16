@@ -1,0 +1,5 @@
+curl -X POST https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+ -d 'Notifications.NewMessage.Enabled=true' \
+ -d 'Notifications.NewMessage.Template=A New message in ${CHANNEL} from ${USER}: ${MESSAGE}' \
+ -d 'Notifications.NewMessage.Sound=default' \
+ -u '{twilio account sid}:{twilio auth token}'

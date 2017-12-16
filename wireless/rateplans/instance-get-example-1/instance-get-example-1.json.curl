@@ -1,0 +1,2 @@
+curl -G https://wireless.twilio.com/v1/RatePlans/WP467fb57a0aba9641a8209136d42545f8 \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

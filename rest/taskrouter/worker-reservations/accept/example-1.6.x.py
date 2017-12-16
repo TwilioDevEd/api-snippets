@@ -11,8 +11,8 @@ reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Client(account_sid, auth_token)
 
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).reservations(reservation_sid) \
-        .update(reservation_status='accepted')
+    .workers(worker_sid).reservations(reservation_sid) \
+    .update(reservation_status='accepted')
 
 # accept a reservation
 print(reservation.reservation_status)

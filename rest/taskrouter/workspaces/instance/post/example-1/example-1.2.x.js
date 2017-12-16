@@ -1,16 +1,19 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var twilio = require('twilio');
+const twilio = require('twilio');
 
-var accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var authToken = "your_auth_token";
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-var client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
+const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 
-client.workspace.update({
+client.workspace.update(
+  {
     friendlyName: 'NewFriendlyName',
-    eventCallbackUrl: 'http://requestb.in/vh9reovh'
-}, function(err, workspace) {
+    eventCallbackUrl: 'http://requestb.in/vh9reovh',
+  },
+  (err, workspace) => {
     console.log(workspace.friendly_name);
-});
+  }
+);

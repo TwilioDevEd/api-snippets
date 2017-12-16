@@ -1,19 +1,18 @@
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
-const twilio = require('twilio');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/voice', (req, res) => {
   // Create TwiML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   if (req.body.To) {
-    twiml.dial({callerId: '+15017250604'}, function() {
-      this.number(req.body.To);
-    });
+    const dial = twiml.dial({ callerId: '+15017250604' });
+    dial.number(req.body.To);
   } else {
     twiml.say('Thanks for calling!');
   }

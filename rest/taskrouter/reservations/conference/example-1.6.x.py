@@ -12,8 +12,8 @@ client = Client(account_sid, auth_token)
 
 #  Update a Reservation with a Conference instruction
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .tasks(task_sid).reservations(reservation_sid) \
-        .update(instruction='conference', dequeue_from='+18001231234')
+    .tasks(task_sid).reservations(reservation_sid) \
+    .update(instruction='conference', dequeue_from='+18001231234')
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

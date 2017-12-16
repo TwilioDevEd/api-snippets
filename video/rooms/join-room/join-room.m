@@ -1,7 +1,7 @@
 -(void)joinRoom {
 	// Join an existing room 
 	TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithBlock:^(TVIConnectOptionsBuilder * _Nonnull builder) {
-		builder.name = @"existing-room";
+		builder.roomName = @"existing-room";
 	}];
 	TVIRoom *room = [videoClient connectWithOptions:connectOptions delegate:self];
 }

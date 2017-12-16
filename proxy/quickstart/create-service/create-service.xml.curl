@@ -1,0 +1,4 @@
+curl -XPOST https://proxy.twilio.com/v1/Services \
+    -d "UniqueName=My Awesome Service" \
+    -d "CallbackUrl=https://www.example.com/" \
+    -u 'your_account_sid:your_auth_token'

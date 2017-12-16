@@ -1,34 +1,21 @@
-// If you are requiring twilio-video from CommonJS,
-//
-//     const Video = require('twilio-video');
-//
-//  If you are including twilio-video.js from a <script> tag,
-//
-//     const Video = Twilio.Video;
-//
+const {
+  createLocalTracks,
+  createLocalAudioTrack,
+  createLocalVideoTrack,
+} = require('twilio-video');
 
-const localMedia = new Video.LocalMedia();
+let localTracks;
 
-// You can call getUserMedia and add the resulting MediaStream to localMedia.
-Video.getUserMedia().then(mediaStream => {
-  localMedia.addStream(mediaStream);
+// Create default local audio and video tracks
+createLocalTracks().then(function(localTracks) {
+  console.log('Got default audio and video tracks:', localTracks);
 });
 
-// Or you can add the microphone and camera independently.
-localMedia.addMicrophone().then(() => {
-  return localMedia.addCamera();
+// Create default local track of a particular kind
+createLocalAudioTrack().then(function(audioTrack) {
+  console.log('Got default local audio track:', audioTrack);
 });
 
-// Remove the microphone.
-localMedia.removeMicrophone();
-
-// Remove the camera.
-localMedia.removeCamera();
-
-// Remove any tracks on the localMedia.
-localMedia.tracks.forEach(track => {
-  localMedia.removeTrack(track);
+createLocalVideoTrack().then(function(videoTrack) {
+  console.log('Got default local video track:', videoTrack);
 });
-
-// Stop localMedia and all Tracks on it.
-localMedia.stop();

@@ -14,8 +14,12 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var service = ServiceResource.Update(serviceSid,
-                                             friendlyName: "NewFlowHipSlackChatDock");
+        var service = ServiceResource.Update(
+                          serviceSid,
+                          friendlyName: "Another Awesome Service",
+                          facebookMessengerPageId: "your_page_id",
+                          messagingServiceSid: "your_twilio_messaging_service_sid"
+                      );
 
         Console.WriteLine(service.FriendlyName);
     }

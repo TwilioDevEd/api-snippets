@@ -1,3 +1,3 @@
-curl -XPOST https://ip-messaging.twilio.com/v1/Services/{service sid}/Channels/{Channel SID}/Members \
+curl -XPOST https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Channels/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Members \
     -d "Identity=kwhinnery" \
     -u '{twilio account sid}:{twilio auth token}'

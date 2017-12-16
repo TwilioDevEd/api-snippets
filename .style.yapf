@@ -1,0 +1,3 @@
+[style]
+dedent_closing_brackets = True
+join_multiple_lines = False

@@ -1,0 +1,2 @@
+curl -G https://wireless.twilio.com/v1/RatePlans/us-automotive \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

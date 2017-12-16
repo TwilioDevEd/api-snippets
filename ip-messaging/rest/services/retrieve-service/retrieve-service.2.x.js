@@ -1,11 +1,15 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
+const client = new IpMessagingClient(accountSid, authToken);
 
-client.services('SERVICE_SID').get().then(function(response) {
+client
+  .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .get()
+  .then(response => {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(error => {
     console.log(error);
-});
+  });

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/dial_callstatus.xml -->
+<Response>
+    <Dial action="/handleDialCallStatus" method="GET">
+        415-123-4567
+    </Dial>
+    <Say>I am unreachable</Say>
+</Response>

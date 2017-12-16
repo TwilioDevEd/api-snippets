@@ -2,24 +2,27 @@
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CH1d2cb9759eb940b4b83050a0234f94c8/Messages?PageSize=50&Page=0",
+    "first_page_url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CH1d2cb9759eb940b4b83050a0234f94c8/Messages?PageSize=50&Page=0",
+    "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages?PageSize=1000&Page=0",
     "next_page_url": null,
     "key": "messages"
   },
   "messages": [
     {
-      "sid": "IM89d815654d104f0b899103d25f83f186",
-      "account_sid": "ACxxx",
-      "service_sid": "IS67f7fa9b52f748beb5e7914356925410",
-      "to": "CH1d2cb9759eb940b4b83050a0234f94c8",
-      "date_created": "2015-08-27T20:32:09Z",
-      "date_updated": "2015-08-27T20:32:09Z",
-      "was_edited": false,
+      "body": "test message",
+      "index": 0,
+      "channel_sid": "CHxxx",
       "from": "system",
-      "body": "Jenny, Jenny, who can I turn to?",
-      "url": "https://ip-messaging.twilio.com/v1/Services/IS67f7fa9b52f748beb5e7914356925410/Channels/CH1d2cb9759eb940b4b83050a0234f94c8/Messages/IM89d815654d104f0b899103d25f83f186"
+      "date_updated": "2017-04-28T09:38:20Z",
+      "account_sid": "ACxxx",
+      "to": "CHxxx",
+      "date_created": "2017-04-28T09:38:20Z",
+      "url": "https://chat.twilio.com/v2/Services/ISxxx/Channels/CHxxx/Messages/IMxxx",
+      "sid": "IMxxx",
+      "attributes": null,
+      "service_sid": "ISxxx",
+      "was_edited": false
     }
   ]
 }

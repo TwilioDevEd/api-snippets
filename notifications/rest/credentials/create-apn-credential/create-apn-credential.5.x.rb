@@ -17,4 +17,4 @@ credential = client.notify.v1.credentials.create(
   private_key: private_key_from_file
 )
 
-puts credential.sid
+puts credential.friendly_name

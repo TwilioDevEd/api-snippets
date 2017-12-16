@@ -7,11 +7,11 @@ const client = require('twilio')(accountSid, authToken);
 
 const notificationOpts = {
   Identity: '00000001',
-  Tags: 'preferred_device',
+  Tag: 'preferred_device',
   Body: 'Hello Bob',
 };
 
-client.notify.v1
+client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .notifications.create(notificationOpts)
   .then(notification => console.log(notification.sid))

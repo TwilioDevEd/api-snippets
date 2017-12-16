@@ -3,12 +3,12 @@ private void joinChannel(final Channel channel) {
     channel.join(new StatusListener() {
         @Override
         public void onSuccess() {
-            Log.d(TAG, "Joined default channel");
+            Log.d(TAG, "Joined channel");
         }
 
         @Override
         public void onError(ErrorInfo errorInfo) {
-            Log.e(TAG,"Error joining channel: " + errorInfo.getErrorText());
+            Log.e(TAG,"Error joining channel: " + errorInfo.toString());
         }
     });
 }

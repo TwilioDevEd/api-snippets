@@ -19,6 +19,10 @@ $client = new Client($accountSid, $authToken);
 $service = $client
     ->notify
     ->services($serviceSid)
-    ->update(["friendlyName" => "NewFlowHipSlackChatDock"]);
+    ->update([
+      "friendlyName" => "Another Awesome Service",
+      "FacebookMessengerPageId" => "your_page_id",
+      "MessagingServiceSid" => "your_twilio_messaging_service_sid"
+    ]);
 
 echo $service->friendlyName; // => NewFlowHipSlackChatDock

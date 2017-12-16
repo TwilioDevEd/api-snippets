@@ -1,4 +1,4 @@
-curl -X GET -G 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
-    -d "StartDate=2017-01-17" \
-    -d "Tag=new user" \
+curl -XGET 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
+    --data-urlencode "StartDate=2017-01-17" \
+    --data-urlencode "Tag=new user" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

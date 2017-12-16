@@ -6,13 +6,13 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
-service = client.notify.v1.services('ISxxx')
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 binding = service.bindings.create(
-  endpoint: 'xxx',
-  identity: 'bob',
-  binding_type: 'gcm',
-  address: 'xxx',
+  endpoint: 'endpoint_id',
+  identity: '00000001',
+  binding_type: 'apn',
+  address: 'device_token',
   tag: 'new user'
 )
 

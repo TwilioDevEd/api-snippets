@@ -2,6 +2,7 @@ curl -X POST https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXX
     -d 'Identity=00000001' \
     -d 'Title=Generic loooooooong title for all Bindings' \
     -d 'Body=This is the body for all Bindings' \
+    -d 'Data={"custom_key1":"custom value 1","custom_key2":"custom value 2"}' \
     -d 'Fcm={"notification":{"title":"New alert","body":"Hello Bob!"}}' \
     -d 'Apn={"aps":{"alert":{"title":"New alert","body":"Hello Bob!"}}}' \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

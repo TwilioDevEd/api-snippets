@@ -8,15 +8,16 @@
 const twilio = require('twilio');
 const app = require('express')();
 const bodyParser = require('body-parser');
-const TwimlResponse = twilio.TwimlResponse;
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const shouldValidate = process.env.NODE_ENV !== 'test';
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/voice', twilio.webhook({validate: shouldValidate}), (req, res) => {
+app.post('/voice', twilio.webhook({ validate: shouldValidate }), (req, res) => {
   // Twilio Voice URL - receives incoming calls from Twilio
-  const response = new TwimlResponse();
+  const response = new VoiceResponse();
 
   response.say(
     `Thanks for calling!
@@ -28,15 +29,20 @@ app.post('/voice', twilio.webhook({validate: shouldValidate}), (req, res) => {
   res.send(response.toString());
 });
 
-app.post('/message', twilio.webhook({validate: shouldValidate}), (req, res) => {
-  // Twilio Messaging URL - receives incoming messages from Twilio
-  const response = new TwimlResponse();
+app.post(
+  '/message',
+  twilio.webhook({ validate: shouldValidate }),
+  (req, res) => {
+    // Twilio Messaging URL - receives incoming messages from Twilio
+    const response = new MessagingResponse();
 
-  response.message(`Your text to me was ${req.body.Body.length} characters long.
+    response.message(`Your text to me was ${req.body.Body
+      .length} characters long.
                     Webhooks are neat :)`);
 
-  res.set('Content-Type', 'text/xml');
-  res.send(response.toString());
-});
+    res.set('Content-Type', 'text/xml');
+    res.send(response.toString());
+  }
+);
 
 app.listen(3000);

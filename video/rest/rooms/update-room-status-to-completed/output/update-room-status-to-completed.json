@@ -1,0 +1,20 @@
+{
+    "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2015-07-30T20:00:00Z",
+    "date_updated": "2015-07-30T20:00:00Z",
+    "status": "completed",
+    "type": "peer-to-peer",
+    "sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "enable_turn": true,
+    "unique_name": "unique_name",
+    "max_participants": 10,
+    "status_callback_method": "POST",
+    "status_callback": "",
+    "record_participants_on_connect": false,
+    "end_time": "2015-07-30T20:00:00Z",
+    "duration": 10,
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "links": {
+        "recordings": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings"
+    }
+}

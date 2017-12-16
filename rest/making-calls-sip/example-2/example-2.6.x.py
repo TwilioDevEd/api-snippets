@@ -6,10 +6,12 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-call = client.calls.create(to="sip:kate@example.com",
-                           from_="Jack",
-                           url="http://www.example.com/sipdial.xml",
-                           sip_auth_password="secret",
-                           sip_auth_username="jack")
+call = client.calls.create(
+    to="sip:kate@example.com",
+    from_="Jack",
+    url="http://www.example.com/sipdial.xml",
+    sip_auth_password="secret",
+    sip_auth_username="jack"
+)
 
 print(call.sid)

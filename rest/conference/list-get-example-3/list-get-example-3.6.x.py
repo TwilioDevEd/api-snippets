@@ -7,8 +7,9 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 # A list of conference objects with the properties described above
-conferences = client.conferences.list(status="completed",
-                                      date_created="2009-07-06")
+conferences = client.conferences.list(
+    status="completed", date_created="2009-07-06"
+)
 
 for conference in conferences:
     print(conference.status)

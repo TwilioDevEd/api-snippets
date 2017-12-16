@@ -1,0 +1,5 @@
+{
+  "type": "mobile",
+  "description": "Register a listener for Member updates, then update the relevant read status",
+  "title": "Listen for Member Update Events"
+}

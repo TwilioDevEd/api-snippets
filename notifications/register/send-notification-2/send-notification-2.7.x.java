@@ -18,7 +18,7 @@ public class Example {
     Notification notification = Notification
         .creator(SERVICE_SID)
         .setBody("Hello Bob")
-        .setIdentity("Bob")
+        .setIdentity("00000001")
         .setTag("preferred_device")
         .create();
 

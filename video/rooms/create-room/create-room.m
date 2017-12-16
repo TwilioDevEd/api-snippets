@@ -1,10 +1,10 @@
--(void)createARoom {
+- (void)createRoom {
     // Create a room 
     TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
                                                                       block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
         builder.roomName = @"my-new-room";
     }];
-    TVIRoom *room = [TVIVideoClient connectWithOptions:connectOptions delegate:self];
+    TVIRoom *room = [TwilioVideo connectWithOptions:connectOptions delegate:self];
 }
 
 #pragma mark - TVIRoomDelegate

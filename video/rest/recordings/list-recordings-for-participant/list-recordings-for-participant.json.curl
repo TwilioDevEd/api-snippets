@@ -1,0 +1,2 @@
+curl -G 'https://video.twilio.com/v1/Recordings?GroupingSid=ParticipantSid' \
+  -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret' \

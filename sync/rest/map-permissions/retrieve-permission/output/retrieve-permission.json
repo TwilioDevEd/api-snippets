@@ -1,0 +1,10 @@
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "map_sid": "MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "identity": "bob",
+  "read": true,
+  "write": true,
+  "manage": false,
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Maps/MPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions/bob"
+}

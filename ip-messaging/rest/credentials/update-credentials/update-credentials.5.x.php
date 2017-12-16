@@ -6,15 +6,15 @@ require '/path/to/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Find your Account Sid and Token at twilio.com/user/account
-$sid = "ACCOUNT_SID";
-$token = "AUTH_TOKEN";
+$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$token = "your_auth_token";
 
 // Initialize the client
 $client = new Client($sid, $token);
 
 // Update the credential
-$credential = $client->ipMessaging
-    ->credentials("CREDENTIAL_SID")
+$credential = $client->chat
+    ->credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->update(
         array(
             "apiKey" => "xxxxxxxx"

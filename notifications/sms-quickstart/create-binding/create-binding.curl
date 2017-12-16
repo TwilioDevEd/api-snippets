@@ -1,0 +1,5 @@
+curl -X POST 'https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings' \
+--data-urlencode 'Identity=00000001'  \
+--data-urlencode 'BindingType=sms'  \
+--data-urlencode 'Address=+1651000000000'  \
+-u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

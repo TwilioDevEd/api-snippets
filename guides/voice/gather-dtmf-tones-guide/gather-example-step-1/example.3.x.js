@@ -1,12 +1,11 @@
 app.post('/voice', (request, response) => {
   // Use the Twilio Node.js SDK to build an XML response
-  const twiml = new twilio.TwimlResponse();
+  const twiml = new VoiceResponse();
 
   /** helper function to set up a <Gather> */
   function gather() {
-    twiml.gather({numDigits: 1}, (gatherNode) => {
-      gatherNode.say('For sales, press 1. For support, press 2.');
-    });
+    const gatherNode = twiml.gather({ numDigits: 1 });
+    gatherNode.say('For sales, press 1. For support, press 2.');
 
     // If the user doesn't enter input, loop
     twiml.redirect('/voice');
@@ -15,10 +14,14 @@ app.post('/voice', (request, response) => {
   // If the user entered digits, process their request
   if (request.body.Digits) {
     switch (request.body.Digits) {
-      case '1': twiml.say('You selected sales. Good for you!'); break;
-      case '2': twiml.say('You need support. We will help!'); break;
+      case '1':
+        twiml.say('You selected sales. Good for you!');
+        break;
+      case '2':
+        twiml.say('You need support. We will help!');
+        break;
       default:
-        twiml.say('Sorry, I don\'t understand that choice.').pause();
+        twiml.say("Sorry, I don't understand that choice.").pause();
         gather();
         break;
     }

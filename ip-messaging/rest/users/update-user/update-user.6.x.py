@@ -2,13 +2,13 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
-user = client.ip_messaging \
-             .services("SERVICE_SID") \
-             .users("USER_SID") \
-             .update(role_sid="NEW_ROLE_SID")
+user = client.chat \
+             .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+             .users("USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+             .update(role_sid="RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
 print(user.role_sid)

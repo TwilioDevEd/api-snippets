@@ -2,7 +2,6 @@ require 'json'
 require 'optparse'
 require 'ostruct'
 require 'colorize'
-require 'parallel'
 require_relative 'error_logger'
 require_relative 'model/snippet'
 require_relative 'model/test_session'
@@ -45,21 +44,23 @@ class SnippetTester
     end
   end
 
-  def run
-    puts '####### Testing marked snippets #######'
-    parallel = ENV['PARALLEL']
+  def run_before_test
+    Model::Snippet.verify_snippet_language
 
-    if parallel
-      parallel = parallel.to_i
+    valid_langs = Model::Snippet::LANGUAGES.keys.map(&:to_s)
+    langs_to_test = ENV['SNIPPET_LANGUAGE'] || valid_langs.join(':')
+    langs_to_test.split(':').each do |lang|
+      Object.const_get('LanguageHandler')
+            .const_get(lang.capitalize)
+            .run_before_test(@parent_source_folder)
     end
+  end
 
-    if !parallel
-      @snippet_models.each do |snippet|
-        test_folder(snippet)
-      end
-    else
-      Parallel.each(@snippet_models, in_processes: parallel) do |snippet|
-        test_folder(snippet)
+  def run
+    @snippet_models.each do |snippet|
+      puts "Testing #{snippet.output_folder}"
+      snippet.available_langs.each do |lang, _file_name|
+        @language_handlers.fetch(lang).test_snippet(snippet)
       end
     end
   end
@@ -85,7 +86,7 @@ class SnippetTester
     current_folder_has_config = import_existing_config(folder_path)
     # import snippet json
     import_existing_snippet(folder_path, current_config)
-    Dir.glob(folder_path+"/*") do |folder|
+    Dir.glob(folder_path + '/*') do |folder|
       scan_folder_configs(folder) if File.directory?(folder)
     end
     erase_added_config if current_folder_has_config
@@ -98,7 +99,7 @@ class SnippetTester
       puts test_config
       return true
     end
-    return false
+    false
   end
 
   def erase_added_config
@@ -147,10 +148,18 @@ class SnippetTester
       Model::Dependency.node_3_path
     )
 
+    java6_language_handler = LanguageHandler::Java6.new(
+      Model::Dependency.java_6_path
+    )
+
+    java7_language_handler = LanguageHandler::Java7.new(
+      Model::Dependency.java_7_path
+    )
+
     {
       LanguageHandler::Java::LANG_CNAME     => LanguageHandler::Java.new,
-      LanguageHandler::Java6::LANG_CNAME    => LanguageHandler::Java6.new,
-      LanguageHandler::Java7::LANG_CNAME    => LanguageHandler::Java7.new,
+      LanguageHandler::Java6::LANG_CNAME    => java6_language_handler,
+      LanguageHandler::Java7::LANG_CNAME    => java7_language_handler,
       LanguageHandler::Ruby::LANG_CNAME     => LanguageHandler::Ruby.new,
       LanguageHandler::Ruby4::LANG_CNAME    => ruby4_language_handler,
       LanguageHandler::Ruby5::LANG_CNAME    => ruby5_language_handler,
@@ -194,7 +203,7 @@ def print_errors_if_any
      "#                              #\n"\
      "# Build Finished Successfully! #\n"\
      "#                              #\n"\
-     "################################"
+     '################################'
 end
 
 def parse_options(args)
@@ -227,12 +236,13 @@ def parse_options(args)
   options
 end
 
-if __FILE__ == $0
+if $PROGRAM_NAME == __FILE__
   begin
     options = parse_options(ARGV)
     tester = SnippetTester.new(options.source_folder, options.test_default)
 
     tester.install_dependencies if options.install
+    tester.run_before_test
     tester.init
     tester.setup
     tester.run

@@ -1,14 +1,18 @@
-var accountSid = 'ACCOUNT_SID';
-var authToken = 'AUTH_TOKEN';
-var IpMessagingClient = require('twilio').IpMessagingClient;
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const IpMessagingClient = require('twilio').IpMessagingClient;
 
-var client = new IpMessagingClient(accountSid, authToken);
-var service = client.services('SERVICE_SID');
+const client = new IpMessagingClient(accountSid, authToken);
+const service = client.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
-service.channels('CHANNEL_SID').post({
-    friendlyName: 'channel_name'
-}).then(function(response) {
+service
+  .channels('CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .post({
+    friendlyName: 'channel_name',
+  })
+  .then(response => {
     console.log(response);
-}).fail(function(error) {
+  })
+  .fail(error => {
     console.log(error);
-});
+  });

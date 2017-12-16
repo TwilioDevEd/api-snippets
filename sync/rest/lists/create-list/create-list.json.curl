@@ -1,3 +1,4 @@
-curl -X POST https://preview.twilio.com/Sync/Services/ISxx/Lists \
+curl -X POST https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists \
  -d 'UniqueName=MyFirstList' \
+ -d 'Ttl=1814400' \
  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

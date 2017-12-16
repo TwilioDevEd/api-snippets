@@ -1,7 +1,7 @@
 // Where "channel" is a TCHChannel
 if let messages = channel.messages {
-  let message = messages.createMessage(withBody: "test")
-  messages.send(message) { result in
+  let options = TCHMessageOptions().withBody("test")
+  messages.sendMessage(with: options) { result, message in
     if result.isSuccessful() {
       print("Message sent.")
     } else {

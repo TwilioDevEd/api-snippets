@@ -2,7 +2,11 @@
 myChannel.on('memberJoined', function(member) {
   console.log(member.identity + 'has joined the channel.');
 });
-// Listen for members joining a channel
+// Listen for members user info changing
+myChannel.on('memberInfoUpdated', function(member) {
+  console.log(member.identity + 'updated their info.');
+});
+// Listen for members leaving a channel
 myChannel.on('memberLeft', function(member) {
   console.log(member.identity + 'has left the channel.');
 });

@@ -1,10 +1,11 @@
 TVIConnectOptions *connectOptions = [TVIConnectOptions optionsWithToken:self.accessToken
                                                                   block:^(TVIConnectOptionsBuilder * _Nonnull builder) {
     builder.roomName = @"my-room";
-    builder.localMedia = self.localMedia;
+    builder.audioTracks = @[ self.localAudioTrack ];
+    builder.videoTracks = @[ self.localVideoTrack ];
 }];
 
-TVIRoom *room = [TVIVideoClient connectWithOptions:connectOptions delegate:self];
+TVIRoom *room = [TwilioVideo connectWithOptions:connectOptions delegate:self];
 
 #pragma mark - TVIRoomDelegate
 

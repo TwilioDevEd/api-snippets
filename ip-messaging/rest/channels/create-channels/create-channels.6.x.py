@@ -2,13 +2,13 @@
 from twilio.rest import Client
 
 # Initialize the client
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
 # Create the channel
-channel = client.ip_messaging \
-                .services("SERVICE_SID") \
+channel = client.chat \
+                .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                 .channels \
                 .create(friendly_name="MyChannel")
 

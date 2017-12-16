@@ -2,11 +2,11 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
-service = client.ip_messaging.services("SERVICE_SID").update(
+service = client.chat.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").update(
     friendly_name="NEW_FRIENDLY_NAME"
 )
 

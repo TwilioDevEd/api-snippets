@@ -8,9 +8,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-notification = client.notify.services("ISxxx").notifications.create(
-    identity="Bob",
-    body="Hello Bob"
-)
+notification = client.notify.services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .notifications.create(identity="00000001", body="Hello Bob")
 
 print(notification)

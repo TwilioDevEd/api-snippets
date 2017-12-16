@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect
 # from __future__ import with_statement   # Only necessary for Python 2.5
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def handle_gather():
 
     digit_pressed = request.values.get('Digits', None)
     if digit_pressed == "1":
-        resp = twiml.Response()
+        resp = VoiceResponse()
         # Dial (310) 555-1212 - connect that number to the incoming caller.
         resp.dial("+13105551212")
         # If the dial fails:
@@ -20,7 +20,7 @@ def handle_gather():
         return str(resp)
 
     elif digit_pressed == "2":
-        resp = twiml.Response()
+        resp = VoiceResponse()
         resp.say("Record your message after the tone.")
         resp.record(maxLength="30", action="/handle-recording")
         return str(resp)
@@ -28,6 +28,7 @@ def handle_gather():
     # If the caller pressed anything but 1, redirect them to the homepage.
     else:
         return redirect("/")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

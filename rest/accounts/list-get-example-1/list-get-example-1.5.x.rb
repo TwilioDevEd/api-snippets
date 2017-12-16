@@ -9,6 +9,6 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over accounts and print out a property for each one
-@client.accounts.list.each do |account|
-    puts account.date_created
+@client.api.accounts.list.each do |account|
+  puts account.date_created
 end

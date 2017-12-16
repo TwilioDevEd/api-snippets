@@ -12,16 +12,17 @@ public class Example
         const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string authToken = "your_auth_token";
         const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string identity = "00000001";
+        const string address = "device_token";
 
         TwilioClient.Init(accountSid, authToken);
 
         var binding = BindingResource.Create(
             serviceSid,
-            "xxx",
-            "bob",
-            BindingResource.BindingTypeEnum.Gcm,
-            "xxx",
-            new List<string> { "premium", "new user" });
+            identity,
+            BindingResource.BindingTypeEnum.Apn,
+            address,
+            tag: new List<string> { "preferred device", "new user" });
 
         Console.WriteLine(binding.Sid);
     }

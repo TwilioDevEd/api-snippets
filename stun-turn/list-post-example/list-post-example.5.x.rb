@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-token = @client.account.tokens.create
+token = @client.tokens.create
 
 puts token.username

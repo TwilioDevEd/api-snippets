@@ -9,8 +9,8 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 workspace = client.taskrouter.workspaces(workspace_sid) \
-                .update(friendly_name='NewFriendlyName',
-                        event_callback_url='http://requestb.in/vh9reovh')
+    .update(friendly_name='NewFriendlyName',
+            event_callback_url='http://requestb.in/vh9reovh')
 
 print(workspace.friendly_name)
 

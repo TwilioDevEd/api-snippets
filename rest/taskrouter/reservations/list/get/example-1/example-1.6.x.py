@@ -10,7 +10,7 @@ task_sid = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 reservations = client.taskrouter.workspaces(workspace_sid) \
-        .tasks(task_sid).reservations.list()
+    .tasks(task_sid).reservations.list()
 
 for reservation in reservations:
     print(reservation.reservation_status)

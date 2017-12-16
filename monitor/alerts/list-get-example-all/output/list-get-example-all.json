@@ -1,16 +1,9 @@
 {
-	"page": 0,
-	"page_size": 50,
-	"start": 0,
-	"end": 49,
-	"uri": "https://monitor.twilio.com/v1/Alerts",
-	"first_page_uri": "https://monitor.twilio.com/v1/Alerts?Page=0&PageSize=50",
-	"previous_page_uri": null,
-	"next_page_uri": "https://monitor.twilio.com/v1/Alerts?PageSize=50&Page=1&PageToken=PANOf3b5a055e1deb0bbd46d72462fa5bb67",
-	"alerts": [
-		{
+    "alerts": [
+	    {
 			"sid": "NO5a7a84730f529f0a76b3e30c01315d1a",
 			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"service_sid": null,
 			"resource_sid": "CAa8857b0dcc71b4909aced594f7f87453",
 			"log_level": "error",
 			"error_code": "11205",
@@ -22,8 +15,17 @@
 			"date_created": "Tue, 09 Feb 2010 01:23:53 +0000",
 			"date_generated": "Tue, 09 Feb 2010 01:23:53 +0000",
 			"date_updated": "Tue, 09 Feb 2010 01:23:53 +0000",
-			"uri": "https://monitor.twilio.com/v1/Alerts/NO5a7a84730f529f0a76b3e30c01315d1a"
+			"url": "https://monitor.twilio.com/v1/Alerts/NO5a7a84730f529f0a76b3e30c01315d1a"
 		},
 		...
-	]
+	],
+	"meta": {
+        "page": 0,
+        "page_size": 50,
+        "first_page_url": "https://monitor.twilio.com/v1/Alerts?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "url": "https://monitor.twilio.com/v1/Alerts?PageSize=50&Page=0",
+        "next_page_url": null,
+        "key": "alerts"
+	}
 }

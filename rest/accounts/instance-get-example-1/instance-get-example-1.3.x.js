@@ -5,6 +5,7 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+client.api
+  .accounts('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .fetch()
-  .then((account) => console.log(account.dateCreated));
+  .then(account => console.log(account.dateCreated));

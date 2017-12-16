@@ -13,12 +13,14 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var credential = CredentialResource.Create(CredentialResource.PushServiceEnum.Apn,
-                                                   "MyAPNCredential",
-                                                   "cert.pem_content",
-                                                   "key.pem_content",
-                                                   true);
+        var credential = CredentialResource.Create(
+            CredentialResource.PushServiceEnum.Apn,
+            "MyAPNCredential",
+            "cert.pem_content",
+            "key.pem_content",
+            true
+        );
 
-        Console.WriteLine(credential.Sid);
+        Console.WriteLine(credential.FriendlyName);
     }
 }

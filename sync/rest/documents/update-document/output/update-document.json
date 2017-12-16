@@ -1,12 +1,13 @@
 {
   "unique_name": "NOW_PLAYING",
-  "url": "https://preview.twilio.com/Sync/Services/ISd23791d9d83be960b5ede4b8bffeeb90/Documents/ETab716edd6d2244568033cb3bdb0d6844",
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Documents/ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "created_by": "system",
-  "account_sid": "AC38cf10e53d331ec9ce14db86deb3bf29",
-  "date_updated": "2016-07-07T20:53:38Z",
-  "sid": "ETab716edd6d2244568033cb3bdb0d6844",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-07-07T20:53:38Z",
-  "service_sid": "ISd23791d9d83be960b5ede4b8bffeeb90",
+  "date_updated": "2016-07-07T20:53:38Z",
+  "date_expires": null,
+  "sid": "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {
     "date_updated": "2016-07-06T12:46:38Z",
     "genre": "Romance",
@@ -17,5 +18,8 @@
     ],
     "movie_title": "On The Line"
   },
-  "revision": "0"
+  "revision": "0",
+  "links": {
+    "permissions": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Documents/ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Permissions"
+  }
 }

@@ -7,8 +7,8 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 credential_list_mapping = client.sip \
-        .domains("SD32a3c49700934481addd5ce1659f04d2") \
-        .credential_list_mappings \
-        .create("CL32a3c49700934481addd5ce1659f04d2")
+    .domains("SD32a3c49700934481addd5ce1659f04d2") \
+    .credential_list_mappings \
+    .create("CL32a3c49700934481addd5ce1659f04d2")
 
 print(credential_list_mapping.sid)

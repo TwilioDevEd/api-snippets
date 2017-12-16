@@ -8,12 +8,12 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-binding = client.notify.services("ISxxx").bindings.create(
-    endpoint="xxx",
-    identity="bob",
-    binding_type="gcm",
-    address="xxx",
-    tag="premium"
-)
+binding = client.notify \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .bindings.create(endpoint="endpoint_id",
+                     identity="00000001",
+                     binding_type="apn",
+                     address="device_token",
+                     tag="new user")
 
 print(binding.sid)

@@ -9,7 +9,8 @@ token = "your_auth_token"
 client = Client(account, token)
 
 credential = client.notify \
-                   .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
-                   .update(friendly_name="MyCredential")
+                   .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+                   .update(friendly_name="MyCredential",
+                           sandbox=True)
 
 print(credential.friendly_name)

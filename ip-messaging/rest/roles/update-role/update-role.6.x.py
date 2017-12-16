@@ -2,13 +2,17 @@
 from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
 # Update role
-role = client.ip_messaging.services("SERVICE_SID").roles("ROLE_SID").update(
-    permission=["sendMessage", "leaveChannel"]
-)
+role = client.chat \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .fetch()
+
+new_permissions = ['sendMediaMessage'] + (role.permissions or [])
+role.update(permission=new_permissions)
 
 print(role.friendly_name)

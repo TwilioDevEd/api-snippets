@@ -5,6 +5,6 @@ let until = ... // upper limit
 timeInterval.sinceTimestamp = since
 timeInterval.untilTimestamp = until
 
-sharedAuthy.getApprovalRequests(withStatuses: statuses, timeInterval: timeInterval) { (requests, error) in
+sharedTwilioAuth.getApprovalRequests(withStatuses: statuses, timeInterval: timeInterval) { (requests, error) in
 	// ...	
 }

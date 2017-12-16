@@ -1,0 +1,13 @@
+AllCops:
+  TargetRubyVersion: '2.2'
+  Exclude:
+    - 'testable_snippets/**/*'
+    - '*/testable_snippets/**/*'
+    - 'tools/**/*'
+    - 'twilio-api-faker/**/*'
+Style/FileName:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false

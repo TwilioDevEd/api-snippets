@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Sync.Service;
+using Twilio.Rest.Sync.V1.Service;
 
 public class Example
 {
@@ -14,7 +14,9 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var list = SyncListResource.Create(serviceSid, "MyCollection");
+        var list = SyncListResource.Create(serviceSid,
+                                           "MyCollection",
+                                           1814400);
 
         Console.WriteLine(list.Sid);
     }

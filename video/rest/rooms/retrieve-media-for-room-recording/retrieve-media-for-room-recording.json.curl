@@ -1,0 +1,6 @@
+curl 'https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media' \
+  -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret'
+  -L
+  --output video.mkv
+
+# Output to an .mkv for video, or an .mka for audio

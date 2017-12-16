@@ -19,15 +19,19 @@ config = {
         'filters': [
             {
                 'expression': "type=='sales'",
-                'targets': [{'queue': sales_queue_sid}]
-            },
-            {
+                'targets': [{
+                    'queue': sales_queue_sid
+                }]
+            }, {
                 'expression': "type=='marketing'",
-                'targets': [{'queue': marketing_queue_sid}]
-            },
-            {
+                'targets': [{
+                    'queue': marketing_queue_sid
+                }]
+            }, {
                 'expression': "type=='support'",
-                'targets': [{'queue': support_queue_sid}]
+                'targets': [{
+                    'queue': support_queue_sid
+                }]
             }
         ],
         'default_filter': {

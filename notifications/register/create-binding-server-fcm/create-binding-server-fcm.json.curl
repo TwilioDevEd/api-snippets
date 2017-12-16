@@ -1,0 +1,8 @@
+curl -XPOST "https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Bindings" \
+    -d "Endpoint=XXXXXXXXXXXXXXX" \
+    -d "Identity=00000001"  \
+    -d "BindingType=fcm" \
+    -d "Address=fcm_device_token" \
+    -d "Tag=preferred device" \
+    -d "Tag=new user" \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

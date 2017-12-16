@@ -12,8 +12,8 @@ client = Client(account_sid, auth_token)
 
 # dequeue a reservation
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).reservations(reservation_sid) \
-        .update(instruction='dequeue', dequeue_from='+18001231234')
+    .workers(worker_sid).reservations(reservation_sid) \
+    .update(instruction='dequeue', dequeue_from='+18001231234')
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

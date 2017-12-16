@@ -10,6 +10,5 @@ client = Client(account_sid, auth_token)
 # A list of trigger objects with the properties described above
 
 triggers = client.usage.triggers.list(
-    recurring="daily",
-    usage_category="calls"
+    recurring="daily", usage_category="calls"
 )

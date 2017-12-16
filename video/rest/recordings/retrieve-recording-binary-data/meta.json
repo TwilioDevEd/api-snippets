@@ -1,0 +1,5 @@
+{
+  "testable": false,
+  "title": "Append /Media to the URI to retrieve the actual recording content binary data",
+  "type": "server"
+}

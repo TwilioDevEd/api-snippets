@@ -6,8 +6,8 @@ import com.twilio.rest.notify.v1.service.Notification;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACCOUNT_SID";
-  public static final String AUTH_TOKEN = "AUTH_TOKEN";
+  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  public static final String AUTH_TOKEN = "your_auth_token";
 
   public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
@@ -18,7 +18,7 @@ public class Example {
     Notification notification = Notification
         .creator(SERVICE_SID)
         .setBody("Hello Bob")
-        .setIdentity("Bob")
+        .setIdentity("00000001")
         .create();
 
     System.out.println(notification.getSid());

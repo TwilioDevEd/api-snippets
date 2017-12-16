@@ -2,10 +2,11 @@
 from twilio.rest import Client
 
 # Initialize the client
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
-response = client.ip_messaging.credentials("CREDENTIAL_SID").delete()
+response = client.chat \
+    .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").delete()
 
 print(response)

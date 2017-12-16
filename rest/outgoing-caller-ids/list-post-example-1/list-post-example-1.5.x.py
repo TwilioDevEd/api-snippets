@@ -3,8 +3,11 @@ from twilio.rest import TwilioRestClient
 
 # Your Account Sid and Auth Token from twilio.com/user/account
 account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token  = "your_auth_token"
+auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-caller_id = client.caller_ids.validate("+14158675309", friendly_name="My Home Phone Number")
-print(caller_id['sid'])
+caller_id = client.caller_ids.validate(
+    "+14158675309", friendly_name="My Home Phone Number"
+)
+
+print(caller_id)

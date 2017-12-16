@@ -12,7 +12,10 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var recordings = RecordingResource.Read();
+        var recordings = RecordingResource.Read(
+            dateCreatedBefore: new DateTime(2016, 10, 15),
+            dateCreatedAfter: new DateTime(2016, 10, 12)
+        );
 
         foreach (var recording in recordings)
         {

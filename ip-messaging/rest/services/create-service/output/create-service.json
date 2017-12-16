@@ -1,17 +1,42 @@
-{
-  "sid": "ISxxx",
-  "account_sid": "ACxxx",
-  "friendly_name": "HipFlowSlackDock",
-  "date_created": "2015-08-25T04:10:54Z",
-  "date_updated": "2015-08-25T04:10:54Z",
-  "default_service_role_sid": "admin",
-  "default_channel_role_sid": "creator",
-  "typing_indicator_timeout": 5,
-  "webhooks": null,
-  "url": "https://ip-messaging.twilio.com/v1/Services/ISxxx",
-  "links": {
-    "channels": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Channels",
-    "roles": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Roles",
-    "users": "https://ip-messaging.twilio.com/v1/Services/ISxxx/Users"
-  }
-}
+    {
+      "pre_webhook_url": null,
+      "read_status_enabled": true,
+      "typing_indicator_timeout": 5,
+      "limits": {
+        "channel_members": 100,
+        "user_channels": 250
+      },
+      "default_service_role_sid": "RLxxx",
+      "date_updated": "2016-08-30T13:13:10Z",
+      "post_webhook_url": null,
+      "reachability_enabled": false,
+      "friendly_name": "Test service",
+      "account_sid": "ACxxx",
+      "consumption_report_interval": 10,
+      "notifications": {
+        "new_message": {
+          "enabled": false
+        },
+        "invited_to_channel": {
+          "enabled": false
+        },
+        "removed_from_channel": {
+          "enabled": false
+        },
+        "added_to_channel": {
+          "enabled": false
+        }
+      },
+      "webhook_method": null,
+      "default_channel_creator_role_sid": "RLxxx",
+      "url": "https://chat.twilio.com/v2/Services/ISxxx",
+      "sid": "ISxxx",
+      "webhook_filters": null,
+      "date_created": "2016-08-30T13:13:05Z",
+      "default_channel_role_sid": "RLxxx",
+      "links": {
+        "channels": "https://chat.twilio.com/v2/Services/ISxxx/Channels",
+        "users": "https://chat.twilio.com/v2/Services/ISxxx/Users",
+        "roles": "https://chat.twilio.com/v2/Services/ISxxx/Roles"
+      }
+    }

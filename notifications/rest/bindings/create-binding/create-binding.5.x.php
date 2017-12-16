@@ -19,11 +19,10 @@ $client = new Client($accountSid, $authToken);
 $binding = $client
     ->notify->services($serviceSid)
     ->bindings->create(
-        "endpoint",
-        "identity",
-        "type",
-        "address",
-        ["tag" => "premium"]
+        "00000001",
+        "apn",
+        "device_token",
+        ["tag" => "new user", "endpoint" => "endpoint_id"]
     );
 
 echo $binding->sid;

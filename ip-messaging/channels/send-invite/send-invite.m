@@ -1,4 +1,4 @@
-[self.channel.members inviteByIdentity:@"Juan" completion:^(TWMResult *result) {
+[self.channel.members inviteByIdentity:@"Juan" completion:^(TCHResult *result) {
     if([result isSuccessful]) {
         NSLog(@"User invited.");
     } else {

@@ -1,0 +1,6 @@
+curl 'https://api.twilio.com/2010-04-01/Accounts/AC22ef5e6f64bf40a6ac84123ae4fb9fa7/Calls.json' -X POST \
+--data-urlencode 'To=+1562300000' \
+--data-urlencode 'From=+18180000000' \
+--data-urlencode 'MachineDetection=Enable' \
+--data-urlencode 'Url=https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16' \
+-u AC22ef5e6f64bf40a6ac84123ae4fb9fa7:[AuthToken]

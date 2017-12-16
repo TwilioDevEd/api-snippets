@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-credential_list = @client.account.sip.credential_lists.create(
+credential_list = @client.sip.credential_lists.create(
   friendly_name: 'Low Rises'
 )
 

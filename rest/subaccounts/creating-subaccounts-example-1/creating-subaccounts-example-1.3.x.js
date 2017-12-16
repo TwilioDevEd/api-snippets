@@ -4,5 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.accounts.create({friendlyName: 'Submarine'})
-  .then((account) => process.stdout.write(account.sid));
+client.api.accounts
+  .create({ friendlyName: 'Submarine' })
+  .then(account => process.stdout.write(account.sid));

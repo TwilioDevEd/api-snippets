@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.rest.preview.sync.service.syncmap.SyncMapItem;
+import com.twilio.rest.sync.v1.service.syncmap.SyncMapItem;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -24,8 +24,10 @@ public class Example {
     data.put("username", "'spicy_curry'");
 
     // Create a Map Item
-    SyncMapItem item = SyncMapItem.creator(SERVICE_SID, MAP_SID, "steph_curry", data).create();
+    SyncMapItem item = SyncMapItem.creator(SERVICE_SID, MAP_SID, "steph_curry", data)
+                                  .setTtl(864000) // expires in 10 days
+                                  .create();
 
-    System.out.println(item.getSid());
+    System.out.println(item.getUrl());
   }
 }

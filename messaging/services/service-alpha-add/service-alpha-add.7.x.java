@@ -11,7 +11,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         String pathServiceSid = "MG2172dd2db502e20dd981ef0d67850e1a";
-        String pathSid = "My company";
-        AlphaSender.creator(pathServiceSid, pathSid).create();
+        String alphaSender = "My company";
+        AlphaSender.creator(pathServiceSid, alphaSender).create();
     }
 }

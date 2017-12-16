@@ -13,22 +13,22 @@ module Model
       curl:   [LanguageHandler::Curl::LANG_CNAME, LanguageHandler::CurlXml::LANG_CNAME, LanguageHandler::CurlJson::LANG_CNAME]
     }.freeze
 
-    attr_reader :output_folder, :relative_folder, :source_folder, :title, :type, :testable, :name, :langs, :available_langs
+    attr_reader :output_folder, :relative_folder, :source_folder, :type, :testable, :name, :langs, :available_langs, :test_output
 
     alias testable? testable
 
     def initialize(meta_json_path, test_model)
-      @server_languages = get_valid_server_languages
+      @server_languages = get_valid_server_languages(test_model)
       @source_folder    = File.dirname(meta_json_path)
-      @relative_folder  = @source_folder.sub(test_model.root_source_folder,"")
+      @relative_folder  = @source_folder.sub(test_model.root_source_folder, '')
       @output_folder    = test_model.root_output_folder + @relative_folder
       json_object       = JSON.parse(File.read(meta_json_path))
-      @testable         = json_object.fetch('testable', test_model.testable).to_s.downcase == 'true'
+      @testable         = json_object.fetch('testable', test_model.testable).to_s.casecmp('true').zero?
       @name             = File.basename(@source_folder)
       @type             = json_object.fetch('type', 'server').downcase
-      @title            = json_object.fetch('title') { raise "#{meta_json_path} has no title" }
       @langs            = @type == 'server' ? @server_languages : []
       @testable         = false unless @type == 'server'
+      @test_output      = json_object.fetch('test_output', test_model.test_output)
       @available_langs  = {}
 
       Dir.glob("#{source_folder}/**") do |file|
@@ -39,19 +39,38 @@ module Model
       end
     end
 
-    def get_valid_server_languages
+    def get_valid_server_languages(test_model)
       server_languages = []
       snippet_languages = ENV['SNIPPET_LANGUAGE']
 
-      unless snippet_languages.nil?
-        snippet_languages.split(':').each do |language|
-          server_languages += LANGUAGES.fetch(language.to_sym)
-        end
+      allowed_languages = LANGUAGES.reject do |key|
+        test_model.exclude_languages.include?(key.to_s)
+      end.freeze
+
+      if snippet_languages.nil?
+        server_languages = allowed_languages.values.flatten.freeze
       else
-        server_languages = LANGUAGES.values.flatten.freeze
+        snippet_languages.split(':').each do |language|
+          if allowed_languages.key?(language.to_sym)
+            server_languages += allowed_languages.fetch(language.to_sym)
+          end
+        end
+        server_languages.flatten.freeze
       end
 
       server_languages.uniq
+    end
+
+    def self.verify_snippet_language
+      langs_to_test = ENV['SNIPPET_LANGUAGE'] || ''
+      valid_langs = LANGUAGES.keys.map(&:to_s)
+      has_valid_langs = langs_to_test.split(':').all? do |lang|
+        valid_langs.include?(lang)
+      end
+      unless has_valid_langs
+        raise ArgumentError, 'The language specified in SNIPPET_LANGUAGE ' \
+                             'should be one of: ' + valid_langs.join(', ')
+      end
     end
 
     def get_input_file(lang_cname)

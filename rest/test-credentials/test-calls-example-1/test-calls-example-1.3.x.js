@@ -10,4 +10,4 @@ client.calls
     to: '+14108675309',
     from: '+15005550006',
   })
-  .then((call) => process.stdout.write(call.sid));
+  .then(call => process.stdout.write(call.sid));

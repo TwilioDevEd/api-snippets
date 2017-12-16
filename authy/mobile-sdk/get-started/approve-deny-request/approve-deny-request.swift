@@ -1,7 +1,7 @@
-sharedAuthy.approveRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
+sharedTwilioAuth.approveRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
     // ...
 })
 
-sharedAuthy.denyRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
+sharedTwilioAuth.denyRequest(approvalRequest, completion: { (error: AUTError?) -> Void in
     // ...
 })

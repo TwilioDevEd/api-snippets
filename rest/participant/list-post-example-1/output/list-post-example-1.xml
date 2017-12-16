@@ -1,0 +1,14 @@
+<TwilioResponse>
+	<Participant>
+		<CallSid>CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</CallSid>
+		<ConferenceSid>CFXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</ConferenceSid>
+		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
+		<Muted>true</Muted>
+		<Hold>false</Hold>
+		<EndConferenceOnExit>true</EndConferenceOnExit>
+		<StartConferenceOnEnter>true</StartConferenceOnEnter>
+		<DateCreated>Wed, 18 Aug 2010 20:20:10 +0000</DateCreated>
+		<DateUpdated>Wed, 18 Aug 2010 20:23:23 +0000</DateUpdated>
+		<Uri>2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Uri>
+	</Participant>
+</TwilioResponse>

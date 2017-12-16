@@ -16,6 +16,7 @@ public class Example {
     Credential credential = Credential
         .updater("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
         .setFriendlyName("MyCredential")
+        .setSandbox(true)
         .update();
 
     System.out.println(credential.getFriendlyName());

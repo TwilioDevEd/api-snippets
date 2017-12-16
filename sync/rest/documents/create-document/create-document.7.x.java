@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.rest.preview.sync.service.Document;
+import com.twilio.rest.sync.v1.service.Document;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -28,6 +28,7 @@ public class Example {
         .creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setUniqueName("MyFirstDocument")
         .setData(data)
+        .setTtl(1814400) // expires in 21 days
         .create();
 
     System.out.println(document.getSid());

@@ -1,0 +1,6 @@
+curl 'https://fax.twilio.com/v1/Faxes' \
+    -X POST \
+    -d 'To=%2B15558675309'  \
+    -d 'From=%2B15017250604'  \
+    -d 'MediaUrl=https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf' \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

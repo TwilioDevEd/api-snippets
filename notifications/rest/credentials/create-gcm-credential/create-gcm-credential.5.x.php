@@ -20,7 +20,7 @@ $credential = $client
         "gcm",
         [
             "friendlyName" => "MyGCMCredential",
-            "apiKey" => "api_key_here"
+            "apiKey" => "gcm_api_key"
         ]
     );
 

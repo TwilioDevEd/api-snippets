@@ -10,12 +10,12 @@ workflow_sid = 'WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
-  .workflows(workflow_sid).statistics.fetch
+                   .workflows(workflow_sid).statistics.fetch
 
-puts statistics.cumulative["avg_task_acceptance_time"]
+puts statistics.cumulative['avg_task_acceptance_time']
 
-puts statistics.cumulative["tasks_created"]
+puts statistics.cumulative['tasks_created']
 
-puts statistics.realtime["tasks_by_status"]["pending"]
+puts statistics.realtime['tasks_by_status']['pending']
 
-puts statistics.realtime["tasks_by_status"]["assigned"]
+puts statistics.realtime['tasks_by_status']['assigned']

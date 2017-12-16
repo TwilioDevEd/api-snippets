@@ -7,9 +7,8 @@ const client = new LookupsClient(accountSid, authToken);
 
 client.phoneNumbers('(510) 867-5309').get({
   countryCode: 'US',
-  type: 'carrier'
-}, function(error, number) {
+  type: 'carrier',
+}, (error, number) => {
   console.log(number.carrier.type);
   console.log(number.carrier.name);
-});
 });

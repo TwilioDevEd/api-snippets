@@ -1,7 +1,9 @@
 # Download the Python helper library from twilio.com/docs/python/install
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse, Dial
 
-r = twiml.Response()
-with r.dial() as d:
-    d.queue("Queue Demo")
+r = VoiceResponse()
+d = Dial()
+d.queue("Queue Demo")
+r.append(d)
+
 print(str(r))

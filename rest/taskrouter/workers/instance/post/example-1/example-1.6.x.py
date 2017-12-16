@@ -10,13 +10,13 @@ worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 worker = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).update(attributes='{"type":"support"}')
+    .workers(worker_sid).update(attributes='{"type":"support"}')
 
 print(worker.friendly_name)
 
 # alternatively
 worker = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).fetch()
+    .workers(worker_sid).fetch()
 
 worker = worker.update(attributes='{"type":"support"}')
 

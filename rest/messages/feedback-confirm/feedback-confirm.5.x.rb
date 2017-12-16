@@ -12,7 +12,7 @@ post '/confirm' do
 
   message_sid = 'SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-  @client.account.messages(message_sid)
+  @client.messages(message_sid)
          .feedback.create(outcome: 'confirmed')
 
   redirect '/thanks'

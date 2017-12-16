@@ -18,8 +18,10 @@ get '/token' do
   identity = Faker::Internet.user_name
 
   # Create an Access Token for Video usage
-  token = Twilio::Util::AccessToken.new ENV['TWILIO_ACCOUNT_SID'],
-    ENV['TWILIO_API_KEY'], ENV['TWILIO_API_SECRET'], 3600, identity
+  token = Twilio::Util::AccessToken.new(
+    ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_API_KEY'],
+    ENV['TWILIO_API_SECRET'], 3600, identity
+  )
 
   # Grant access to Video
   grant = Twilio::Util::AccessToken::VideoGrant.new
@@ -27,5 +29,5 @@ get '/token' do
   token.add_grant grant
 
   # Generate the token and send to client
-  json :identity => identity, :token => token.to_jwt
+  json identity: identity, token: token.to_jwt
 end

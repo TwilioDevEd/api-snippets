@@ -2,14 +2,14 @@
 from twilio.rest import Client
 
 # Initialize the client
-account = "ACCOUNT_SID"
-token = "AUTH_TOKEN"
+account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+token = "your_auth_token"
 client = Client(account, token)
 
-member = client.ip_messaging \
-               .services("SERVICE_SID") \
-               .channels("CHANNEL_SID") \
-               .members("MEMBER_SID") \
+member = client.chat \
+               .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+               .channels("CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+               .members("MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                .fetch()
 
 print(member.sid)

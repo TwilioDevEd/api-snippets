@@ -8,6 +8,8 @@ use Twilio\Rest\Client;
 
 // Your Account SID and Auth Token from https://www.twilio.com/console
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$apnCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$fcmCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -19,6 +21,8 @@ $client = new Client($accountSid, $authToken);
 $service = $client
     ->notify
     ->services
-    ->create(["friendlyName" => "My Awesome Service"]);
+    ->create(["friendlyName" => "My Awesome Service",
+        "apnCredentialSid" => $apnCredentialSid,
+        "fcmCredentialSid" => $fcmCredentialSid]);
 
 echo $service->friendlyName; // => My Awesome Service

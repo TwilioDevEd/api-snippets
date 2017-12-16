@@ -1,4 +1,4 @@
-participant.on('trackAdded', track => {
+participant.on('trackAdded', function(track) {
   if (track.kind === 'audio') {
     console.log('Added an AudioTrack %s', track.id);
   } else {
@@ -6,7 +6,7 @@ participant.on('trackAdded', track => {
   }
 });
 
-participant.on('trackRemoved', track => {
+participant.on('trackRemoved', function(track) {
   if (track.kind === 'audio') {
     console.log('Removed an AudioTrack %s', track.id);
   } else {
@@ -14,7 +14,7 @@ participant.on('trackRemoved', track => {
   }
 });
 
-participant.on('trackEnabled', track => {
+participant.on('trackEnabled', function(track) {
   if (track.kind === 'audio') {
     console.log('Enabled AudioTrack %s', track.id);
   } else {
@@ -22,7 +22,7 @@ participant.on('trackEnabled', track => {
   }
 });
 
-participant.on('trackDisabled', track => {
+participant.on('trackDisabled', function(track) {
   if (track.kind === 'audio') {
     console.log('Disabled AudioTrack %s', track.id);
   } else {
@@ -30,20 +30,16 @@ participant.on('trackDisabled', track => {
   }
 });
 
-// You can attach a Participant's Media directly to a DOM element,
-participant.media.attach(document.getElementById('#my-view'));
+// You can attach Tracks to the DOM in the following manner
+participant.tracks.forEach(function(track) {
+  const mediaElement = track.attach();
+  document.getElementById('track-view').appendChild(mediaElement);
+});
 
-// You can pass the query selector directly,
-participant.media.attach('#media-view');
-
-// Or you can create a default element.
-const element = participant.media.attach();
-document.body.appendChild(element);
-
-// In all three of these scenarios, as Tracks are added and removed, the
-// attached element will be updated with the appropriate <audio> and <video>
-// tags. If you would like to manage Track attachment yourself, you can always
-// attach them manually. For example,
-participant.media.tracks.forEach(track => {
-  track.attach('#track-view');
+// You can detach Tracks from the DOM in the following manner
+participant.tracks.forEach(function(track) {
+  const trackElements = track.detach();
+  trackElements.forEach(function(element) {
+    return element.remove();
+  });
 });

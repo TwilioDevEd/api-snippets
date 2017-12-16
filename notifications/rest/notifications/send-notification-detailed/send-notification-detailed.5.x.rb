@@ -7,14 +7,15 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-service = client.notify.v1.services('ISxxx')
+service = client.notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 notification = service.notifications.create(
-  identity: 'Bob',
+  identity: '00000001',
   title: 'Generic loooooooong title for all Bindings',
   body: 'This is the body for all Bindings',
-  gcm: '{"notification":{"tag":"MyTag"}}',
-  apn: '{"aps":{"title":"Short title for Watch."}}'
+  data: '{"custom_key1":"custom value 1","custom_key2":"custom value 2"}',
+  fcm: '{"notification":{"title":"New alert","body":"Hello Bob!"}}',
+  apn: '{"aps":{"alert":{"title":"New alert.","body":"Hello Bob!"}}}'
 )
 
 puts notification

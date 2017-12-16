@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
@@ -11,16 +11,15 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
-$workers = $client->taskrouter
+$tasks = $client->taskrouter
     ->workspaces($workspaceSid)
-    ->workers
+    ->tasks
     ->read(
         array(
-            "available" => "1",
-            "taskQueueSid" => "WQf855e98ad280d0a0a325628e24ca9627"
+            "priority" => "10"
         )
     );
 
-foreach ($workers as $worker) {
-    echo "worker: " . $worker->friendlyName;
+foreach ($tasks as $task) {
+    echo "task: " . $task->sid;
 }

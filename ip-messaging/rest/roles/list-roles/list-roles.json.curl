@@ -1,0 +1,2 @@
+curl -G https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Roles \
+    -u '{twilio account sid}:{twilio auth token}'

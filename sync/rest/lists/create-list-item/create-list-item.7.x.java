@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.rest.preview.sync.service.synclist.SyncListItem;
+import com.twilio.rest.sync.v1.service.synclist.SyncListItem;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -21,7 +21,9 @@ public class Example {
     data.put("name", "'Bulbasaur");
     data.put("attack", 49);
 
-    SyncListItem item = SyncListItem.creator(SERVICE_SID, LIST_SID, data).create();
+    SyncListItem item = SyncListItem.creator(SERVICE_SID, LIST_SID, data)
+                                    .setTtl(864000) // expires in 10 days
+                                    .create();
 
     System.out.println(item);
   }

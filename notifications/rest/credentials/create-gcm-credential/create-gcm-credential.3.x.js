@@ -6,12 +6,13 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const credentialOpts = {
-  ApiKey: 'gcm_api_key',
+  apiKey: 'gcm_api_key',
   friendlyName: 'MyGCMCredential',
   type: 'gcm',
 };
 
-client.notify.v1
-  .credentials.create(credentialOpts)
+client.notify.credentials
+  .create(credentialOpts)
   .then(credential => console.log(credential.sid))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .done();

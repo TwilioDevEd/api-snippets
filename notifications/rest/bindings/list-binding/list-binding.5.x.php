@@ -19,7 +19,10 @@ $client = new Client($accountSid, $authToken);
 $bindings = $client->notify
     ->services($serviceSid)
     ->bindings
-    ->read();
+    ->read([
+      "StartDate" => "2017-01-17",
+      "tag" => "new user"
+    ]);
 
 foreach ($bindings as $binding) {
     echo $binding->identity . PHP_EOL;

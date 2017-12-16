@@ -10,7 +10,7 @@ from __future__ import print_function
 import os
 import urllib
 from twilio import twiml
-from twilio.util import RequestValidator
+from twilio.request_validator import RequestValidator
 
 twilio_master_number = os.environ['MASTER_NUMBER']
 
@@ -23,7 +23,7 @@ def handler(event, context):
             and event['Body'].lower() == "secret":
 
         form_parameters = {
-            k: urllib.unquote(v) for k, v in event.items()
+            k: urllib.unquote_plus(v) for k, v in event.items()
             if k != u'twilioSignature'
         }
 

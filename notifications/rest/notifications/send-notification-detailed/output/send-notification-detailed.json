@@ -11,7 +11,10 @@
   "body":"This is the body for all Bindings",
   "sound": null,
   "action": null,
-  "data": null,
+  "data": {
+    "custom_key1":"custom value 1",
+    "custom_key2":"custom value 2"
+  },
   "fcm": {
     "notification": {
       "title": "New alert",

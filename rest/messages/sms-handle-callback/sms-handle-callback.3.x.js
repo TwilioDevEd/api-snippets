@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/MessageStatus', (req, res) => {
   const messageSid = req.body.MessageSid;

@@ -6,13 +6,11 @@ private CameraCapturer cameraCapturer;
    to an associated view. */
 private VideoView primaryVideoView;
 
-/*  LocalMedia represents our local camera and microphone (media) configuration
-    that can be sent to other Participants in Rooms, or previewed locally */
-private LocalMedia localMedia = LocalMedia.create(this);
-
 // Initialize the camera capturer and start the camera preview
-cameraCapturer = new CameraCapturer(this, CameraSource.FRONT_CAMERA, null);
-LocalVideoTrack localVideoTrack = localMedia.addVideoTrack(true, cameraCapturer);
+cameraCapturer = new CameraCapturer(this, CameraSource.FRONT_CAMERA);
+LocalVideoTrack localVideoTrack = LocalVideoTrack.create(context, true, cameraCapturer);
 primaryVideoView.setMirror(true);
 localVideoTrack.addRenderer(primaryVideoView);
 
+// Release the local video track to free native memory resources once you are done
+localVideoTrack.release();

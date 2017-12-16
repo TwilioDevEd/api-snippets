@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial>
+        <Sip>sip:kate@example.com?mycustomheader=foo&amp;myotherheader=bar</Sip>
+    </Dial>
+</Response>

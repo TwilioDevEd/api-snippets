@@ -1,1 +1,0 @@
-let isDeviceRegistered = sharedAuthy.isDeviceRegistered()

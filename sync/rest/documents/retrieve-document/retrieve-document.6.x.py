@@ -6,10 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-document = client.preview \
-                 .sync \
-                 .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                 .documents("MyFirstDocument") \
-                 .fetch()
+document = client.sync \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents("MyFirstDocument") \
+    .fetch()
 
 print(document.data)

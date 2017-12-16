@@ -1,0 +1,2 @@
+curl -G https://wireless.twilio.com/v1/Commands/DCcb6aa7c620874dd98ba6c9c4108d0ed0 \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

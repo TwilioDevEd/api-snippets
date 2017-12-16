@@ -6,11 +6,9 @@ from twilio.rest import Client
 ACCOUNT_SID = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 AUTH_TOKEN = 'your_auth_token'
 
-
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 notification = client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .notifications.create(
-        identity='00000001',
-        body='Hello Bob',
-    )
+    .notifications.create(identity='00000001',
+                          body='Hello Bob')
+
 print(notification.sid)

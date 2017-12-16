@@ -1,0 +1,5 @@
+{
+  "description": "Configure the top-level WebHook settings for a Service instance (excluding the actual events)",
+  "type": "server",
+  "title": "Chat Service Instance WebHook settings"
+}

@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
-import com.twilio.rest.preview.sync.service.syncmap.SyncMapItem;
+import com.twilio.rest.sync.v1.service.syncmap.SyncMapItem;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -22,7 +22,7 @@ public class Example {
         .read();
 
     for (SyncMapItem item : items) {
-      System.out.println(item.getSid() + ": " + item.getData());
+      System.out.println(item.getUrl() + ": " + item.getData());
     }
   }
 }
