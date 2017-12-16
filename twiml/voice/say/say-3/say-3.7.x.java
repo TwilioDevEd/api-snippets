@@ -1,11 +1,11 @@
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Language;
+
 
 public class Example {
     public static void main(String[] args) {
-        Say say = new Say.Builder("Hej!").language(Language.SV_SE).build();
+        Say say = new Say.Builder("Hej!").language(Say.Language.SV_SE).build();
         VoiceResponse response = new VoiceResponse.Builder().say(say).build();
 
         try {

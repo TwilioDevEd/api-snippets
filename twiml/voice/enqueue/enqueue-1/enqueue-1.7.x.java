@@ -1,4 +1,4 @@
-import com.twilio.twiml.Enqueue;
+import com.twilio.twiml.voice.Enqueue;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
 
