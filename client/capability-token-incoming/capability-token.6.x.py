@@ -15,7 +15,7 @@ def get_capability_token():
     capability = ClientCapabilityToken(account_sid, auth_token)
 
     capability.allow_client_incoming("jenny")
-    token = capability.generate()
+    token = capability.to_jwt()
 
     return Response(token, mimetype='application/jwt')
 
