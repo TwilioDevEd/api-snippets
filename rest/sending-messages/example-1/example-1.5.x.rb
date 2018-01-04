@@ -8,11 +8,11 @@ auth_token = 'your_auth_token'
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-message = @client.messages.create(
-  body: 'Jenny please?! I love you <3',
+message = @client.create(
+  body: 'Ahoy, World!',
   to: '+15558675309',
   from: '+14158141829',
   media_url: 'http://www.example.com/hearts.png'
 )
 
-puts message.to
+puts message.sid
