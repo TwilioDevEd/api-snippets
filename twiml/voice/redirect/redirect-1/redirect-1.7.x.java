@@ -1,12 +1,12 @@
-import com.twilio.twiml.Redirect;
+import com.twilio.twiml.voice.Redirect;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Redirect redirect = new Redirect.Builder().method(Method.POST)
-            .url("http://pigeons.com/twiml.xml").build();
+        Redirect redirect = new Redirect.Builder("http://pigeons.com/twiml.xml").method(HttpMethod.POST)
+            .build();
         VoiceResponse response = new VoiceResponse.Builder().redirect(redirect)
             .build();
 

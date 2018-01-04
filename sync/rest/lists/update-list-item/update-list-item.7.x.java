@@ -23,8 +23,8 @@ public class Example {
     data.put("attack", 49);
 
     SyncListItem item = SyncListItem.updater(SERVICE_SID, LIST_SID, 0)
-      .setData(data)
-      .update();
+                                    .setData(data)
+                                    .update();
 
     System.out.println(item.getData());
   }

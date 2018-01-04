@@ -1,6 +1,6 @@
-import com.twilio.twiml.Body;
-import com.twilio.twiml.Message;
-import com.twilio.twiml.Redirect;
+import com.twilio.twiml.messaging.Body;
+import com.twilio.twiml.messaging.Message;
+import com.twilio.twiml.voice.Redirect;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
 

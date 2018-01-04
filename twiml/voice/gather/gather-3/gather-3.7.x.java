@@ -1,15 +1,15 @@
-import com.twilio.twiml.Gather;
+import com.twilio.twiml.voice.Gather;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
         Say say = new Say
             .Builder("Please enter your account number,\nfollowed by the pound sign").build();
         Gather gather = new Gather.Builder().action("/process_gather.php")
-            .method(Method.GET).say(say).build();
+            .method(HttpMethod.GET).say(say).build();
         Say say2 = new Say
             .Builder("We didn't receive any input. Goodbye!").build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)

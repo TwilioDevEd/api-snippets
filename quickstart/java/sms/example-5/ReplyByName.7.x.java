@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Body;
-import com.twilio.twiml.Media;
-import com.twilio.twiml.Message;
+import com.twilio.twiml.messaging.Body;
+import com.twilio.twiml.messaging.Media;
+import com.twilio.twiml.messaging.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
 

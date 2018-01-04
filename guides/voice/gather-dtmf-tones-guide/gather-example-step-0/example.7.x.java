@@ -1,6 +1,6 @@
-import com.twilio.twiml.Gather;
-import com.twilio.twiml.Redirect;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Gather;
+import com.twilio.twiml.voice.Redirect;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiML;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;

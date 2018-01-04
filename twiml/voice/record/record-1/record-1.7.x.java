@@ -1,4 +1,4 @@
-import com.twilio.twiml.Record;
+import com.twilio.twiml.voice.Record;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
 

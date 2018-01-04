@@ -1,6 +1,7 @@
-import com.twilio.twiml.Gather;
+import com.twilio.twiml.voice.Gather;
+import com.twilio.twiml.voice.Gather.Input;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
 
 
@@ -8,7 +9,7 @@ public class Example {
     public static void main(String[] args) {
         Say say = new Say
                 .Builder("Welcome to Twilio, please tell us why you're calling").build();
-        Gather gather = new Gather.Builder().input("speech")
+        Gather gather = new Gather.Builder().input(Input.SPEECH)
                 .action("/completed").say(say).build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
                 .build();

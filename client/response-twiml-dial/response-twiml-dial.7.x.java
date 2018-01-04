@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.twilio.twiml.*;
-import com.twilio.twiml.Number;
+import com.twilio.twiml.voice.Number;
 
 @WebServlet(name = "TwilioServlet", urlPatterns = {"/voice"})
 public class TwilioServlet extends HttpServlet {
