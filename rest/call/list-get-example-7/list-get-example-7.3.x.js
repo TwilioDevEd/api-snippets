@@ -5,6 +5,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls.each({ from: 'client:tommy' }, call =>
+client.calls.each({ from: 'client:charlie' }, call =>
   console.log(call.direction)
 );

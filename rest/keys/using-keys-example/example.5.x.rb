@@ -10,7 +10,7 @@ api_secret = 'your_api_secret'
 @client = Twilio::REST::Client.new(api_key, api_secret, account_sid)
 
 @message = @client.messages.create(
-  to: '+15558675309',
+  to: '+15558675310',
   from: '+15017250604',
   body: 'Hello World!'
 )

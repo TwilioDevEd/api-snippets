@@ -14,7 +14,7 @@ public class TwilioServlet extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         TwilioCapability capability = new TwilioCapability(ACCOUNT_SID, AUTH_TOKEN);
-        capability.allowClientIncoming("jenny");
+        capability.allowClientIncoming("joey");
 
         String token = capability.generateToken();
 

@@ -28,7 +28,7 @@ public class SmsController : TwilioController
         // make an associative array of senders we know, indexed by phone number
         var people = new Dictionary<string, string>()
         {
-            {"+14158675309", "Rey"},
+            {"+14158675308", "Rey"},
             {"+14158675310", "Finn"},
             {"+14158675311", "Chewy"}
         };

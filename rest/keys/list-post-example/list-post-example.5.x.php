@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $key = $client->newKeys->create(
-    array('friendlyName' => 'User Jenny')
+    array('friendlyName' => 'User Joey')
 );
 
 echo $key->sid;

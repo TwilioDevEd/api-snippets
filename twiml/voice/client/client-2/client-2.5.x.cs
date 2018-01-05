@@ -10,8 +10,8 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial(callerId: "+1888XXXXXXX");
         dial.Number("858-987-6543");
-        dial.Client("jenny");
-        dial.Client("tommy");
+        dial.Client("joey");
+        dial.Client("charlie");
         response.Append(dial);
 
         Console.WriteLine(response.ToString());;

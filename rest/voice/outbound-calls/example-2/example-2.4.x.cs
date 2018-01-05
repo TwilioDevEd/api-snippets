@@ -12,7 +12,7 @@ class Example
 
     var options = new CallOptions();
     options.Url = "http://demo.twilio.com/docs/voice.xml";
-    options.To = "client:tommy";
+    options.To = "client:charlie";
     options.From = "+15017250604";
     var call = twilio.InitiateOutboundCall(options);
     

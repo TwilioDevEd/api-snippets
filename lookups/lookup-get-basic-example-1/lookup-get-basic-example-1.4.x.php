@@ -7,7 +7,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Lookups_Services_Twilio($sid, $token);
 
-$number = $client->phone_numbers->get("+15108675309", array("Type" => "carrier"));
+$number = $client->phone_numbers->get("+15108675310", array("Type" => "carrier"));
 
 echo $number->carrier->type . "\r\n";
 echo $number->carrier->name;

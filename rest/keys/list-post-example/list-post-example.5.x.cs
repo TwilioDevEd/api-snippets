@@ -12,7 +12,7 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var key = NewKeyResource.Create(friendlyName: "User Jenny");
+        var key = NewKeyResource.Create(friendlyName: "User Joey");
 
         Console.WriteLine(key.Sid);
         Console.WriteLine(key.Secret);

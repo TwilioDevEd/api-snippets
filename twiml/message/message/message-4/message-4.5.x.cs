@@ -9,7 +9,7 @@ class Example
     {
         var response = new MessagingResponse();
         var message = new Message();
-        message.Body("Hello Jenny");
+        message.Body("Hello friend");
         message.Media(new Uri("https://demo.twilio.com/owl.png"));
         response.Append(message);
 

@@ -5,7 +5,7 @@ const authToken = 'your_auth_token';
 const LookupsClient = require('twilio').LookupsClient;
 const client = new LookupsClient(accountSid, authToken);
 
-client.phoneNumbers('+15108675309').get({
+client.phoneNumbers('+15108675310').get({
   type: 'carrier',
 }, (error, number) => {
   console.log(number.carrier.type);

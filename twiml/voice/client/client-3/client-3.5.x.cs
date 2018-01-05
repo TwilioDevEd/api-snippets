@@ -12,7 +12,7 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
 
-        dial.Client("jenny",
+        dial.Client("joey",
             statusCallbackEvent: new List<EventEnum>(
                 new EventEnum[] {
                     EventEnum.Initiated,

@@ -19,7 +19,7 @@ $_SESSION['counter'] = $counter;
 
 // make an associative array of senders we know, indexed by phone number
 $people = array(
-    "+14158675309" => "Curious George",
+    "+14158675308" => "Curious George",
     "+14158675310" => "Boots",
     "+14158675311" => "Virgil",
 );

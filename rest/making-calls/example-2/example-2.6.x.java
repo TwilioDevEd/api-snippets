@@ -21,7 +21,7 @@ public class Example {
     // Build a filter for the CallList
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("Url", "http://demo.twilio.com/docs/voice.xml"));
-    params.add(new BasicNameValuePair("To", "client:tommy"));
+    params.add(new BasicNameValuePair("To", "client:charlie"));
     params.add(new BasicNameValuePair("From", "+15017250604"));
     
     

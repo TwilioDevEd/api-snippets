@@ -15,7 +15,7 @@ class Example
 
         // Generate a random, unique code
         const string uniqueCode = "1234567890";
-        var to = new PhoneNumber("+15558675309");
+        var to = new PhoneNumber("+15558675310");
         var message = MessageResource.Create(
             to,
             from: new PhoneNumber("+15017250604"),

@@ -13,7 +13,7 @@ public class Example {
     Participant participant = Participant.creator(
       "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "+15558675309")
+      "+15558675310")
       .create();
 
     System.out.println(participant.getSid());

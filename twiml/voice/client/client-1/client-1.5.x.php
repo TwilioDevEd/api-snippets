@@ -4,6 +4,6 @@ use Twilio\Twiml;
 
 $response = new Twiml();
 $dial = $response->dial();
-$dial->client('jenny');
+$dial->client('joey');
 
 echo $response;

@@ -5,7 +5,7 @@ use Twilio\Twiml;
 $response = new Twiml();
 $dial = $response->dial(['callerId' => '+1888XXXXXXX']);
 $dial->number('858-987-6543');
-$dial->client('jenny');
-$dial->client('tommy');
+$dial->client('joey');
+$dial->client('charlie');
 
 echo $response;

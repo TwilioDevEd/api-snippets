@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Number number = new Number.Builder("+15558675309").build();
+        Number number = new Number.Builder("+15558675310").build();
         Dial dial = new Dial.Builder().record(Dial.Record
             .RECORD_FROM_RINGING_DUAL)
             .recordingStatusCallback("www.myexample.com").number(number)

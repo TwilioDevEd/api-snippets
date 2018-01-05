@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 @client.messages.create(
   from: '+15017250604',
-  to: '+15558675309',
+  to: '+15558675310',
   body: 'Open to confirm: http://yourserver.com/confirm?id=1234567890',
   provide_feedback: true
 )

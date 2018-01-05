@@ -18,7 +18,7 @@ public class ReplyByName extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Create a dict of people we know.
         HashMap<String, String> people = new HashMap<String, String>();
-        people.put("+14158675309", "Curious George");
+        people.put("+14158675308", "Curious George");
         people.put("+14158675310", "Boots");
         people.put("+14158675311", "Virgil");
 

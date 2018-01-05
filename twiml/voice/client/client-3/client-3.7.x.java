@@ -8,7 +8,7 @@ import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Client client = new Client.Builder("jenny")
+        Client client = new Client.Builder("joey")
             .statusCallback("https://myapp.com/calls/events")
             .statusCallbackMethod(HttpMethod.POST).statusCallbackEvents(Arrays
             .asList(Event.INITIATED, Event.RINGING, Event.ANSWERED, Event

@@ -17,7 +17,7 @@ public class Example
 
         // Look up a phone number in E.164 format
         var phoneNumber = PhoneNumberResource.Fetch(
-            new PhoneNumber("+15108675309"),
+            new PhoneNumber("+15108675310"),
             type: new List<string> { "carrier" });
 
         Console.WriteLine(phoneNumber.Carrier["name"]);
