@@ -20,7 +20,7 @@
 
    ```
    Destination Phone Number: +15558675310
-   From/Twilio Number: +15017250604
+   From/Twilio Number: +15017122661
    ```
 
    For auth_token:
