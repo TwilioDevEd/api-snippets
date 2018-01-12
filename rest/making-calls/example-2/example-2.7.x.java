@@ -14,7 +14,7 @@ public class Example {
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Call call = Call.creator(new PhoneNumber("client:charlie"), new PhoneNumber("+15017250604"),
+    Call call = Call.creator(new PhoneNumber("client:charlie"), new PhoneNumber("+15017122661"),
         new URI("http://demo.twilio.com/docs/voice.xml")).create();
 
     System.out.println(call.getSid());

@@ -15,7 +15,7 @@ class Example
 
         var messages = MessageResource.Read(
             to: new PhoneNumber("+15558675310"),
-            from: new PhoneNumber("+15017250604"),
+            from: new PhoneNumber("+15017122661"),
             dateSentAfter: new DateTime(2016, 8, 31));
 
         foreach (var message in messages)
