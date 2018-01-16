@@ -4,7 +4,7 @@ require 'sinatra'
 post '/voice' do
   twiml = Twilio::TwiML::Response.new do |r|
     if params['To']
-      r.Dial callerId: '+15017250604' do |d|
+      r.Dial callerId: '+15017122661' do |d|
         # wrap the phone number or client name in the appropriate TwiML verb
         # by checking if the number given has only digits and format symbols
         if params['To'].match?(/^[\d\+\-\(\) ]+$/)

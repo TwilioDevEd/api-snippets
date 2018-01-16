@@ -39,7 +39,7 @@
 
             // Step 6: Change the 'From' number below to be a valid Twilio number 
             // that you've purchased
-            "+15017250604", 
+            "+15017122661", 
 
             // the number we are sending to - Any phone number
             $number,

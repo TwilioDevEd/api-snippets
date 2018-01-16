@@ -1,6 +1,6 @@
 curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages.json' \
 --data-urlencode 'To=+15558675310'  \
---data-urlencode 'From=+15017250604'  \
+--data-urlencode 'From=+15017122661'  \
 --data-urlencode 'Body=http://yourserver.com/confirm?id=1234567890'  \
 --data-urlencode 'ProvideFeedback=true'  \
 -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token

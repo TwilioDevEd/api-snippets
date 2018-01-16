@@ -33,7 +33,7 @@
 
             // Step 5: Change the 'From' number below to be a valid Twilio number 
             // that you've purchased or verified with Twilio.
-            "+15017250604",
+            "+15017122661",
 
             // Step 6: Set the URL Twilio will request when the call is answered.
             array("url" => "http://demo.twilio.com/welcome/voice/")
