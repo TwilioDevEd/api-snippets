@@ -11,6 +11,6 @@ client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 recording_sid = 'RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 uri = "https://video.twilio.com/v1/Recordings/#{recording_sid}/Media"
 
-response = client.request('video.twilio.com', '80', 'GET', uri)
+response = client.request('video.twilio.com', 443, 'GET', uri)
 media_content = Net::HTTP.get(URI(response.body['redirect_to']))
 puts media_content
