@@ -8,7 +8,7 @@ using Twilio.TwiML;
 public class SmsController : TwilioController
 {
     [HttpPost]
-    public ActionResult Index()
+    public TwiMLResult Index()
     {
         var messagingResponse = new MessagingResponse();
         messagingResponse.Message("The Robots are coming! Head for the hills!");
