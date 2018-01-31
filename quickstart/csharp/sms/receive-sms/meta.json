@@ -1,4 +1,4 @@
 {
-  "title": "Send SMS using Twilio and C#",
+  "title": "Receive an SMS using Twilio, C#, and ASP.NET MVC",
   "type": "server"
 }
