@@ -23,7 +23,7 @@ def validate_authy_request(f):
         # Read the nonce from the request
         nonce = request.META['HTTP_X_AUTHY_SIGNATURE_NONCE']
 
-        # Concatinate all together and separate by '|'
+        # Concatenate all together and separate by '|'
         data = '|'.join([nonce, method, url, sorted_params])
 
         # Compute the signature
