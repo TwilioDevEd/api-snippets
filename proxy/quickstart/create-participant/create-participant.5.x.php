@@ -12,8 +12,8 @@ $session = $client
     ->services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->participants->create(
+        "+15558675310",
         array(
-            "proxyIdentifier" => "+15558675310",
             "friendlyName" => "Alice"
         )
     );
