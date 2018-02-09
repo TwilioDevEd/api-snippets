@@ -19,11 +19,10 @@ $client = new Client($accountSid, $authToken);
 $binding = $client
     ->notify->services($serviceSid)
     ->bindings->create(
-        'endpoint_id', // Endpoint
         '00000001', // We recommend using a GUID or other anonymized identifier for Identity.
         'apn', // Binding type
         'apn_device_token', // Address
-        ['tag' => ['preferred device', 'new user']] // Options
+        ['endpoint'=>'endpoint_id', 'tag' => ['preferred device', 'new user']] // Options
     );
 
 echo $binding->sid;

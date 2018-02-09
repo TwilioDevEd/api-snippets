@@ -23,7 +23,9 @@ $item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncMaps("Players")
     ->syncMapItems->create(
-        'steph_curry', $data
+        'steph_curry',
+        $data,
+        array('ttl' => 864000) // expires in 10 days
     );
 
 print_r($item->data);

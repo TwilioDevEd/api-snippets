@@ -5,14 +5,17 @@ using System.Web.Mvc;
 using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-public class SmsController : TwilioController
+namespace YourNewWebProject.Controllers
 {
-    [HttpPost]
-    public ActionResult Index()
+    public class SmsController : TwilioController
     {
-        var messagingResponse = new MessagingResponse();
-        messagingResponse.Message("The Robots are coming! Head for the hills!");
+        [HttpPost]
+        public TwiMLResult Index()
+        {
+            var messagingResponse = new MessagingResponse();
+            messagingResponse.Message("The Robots are coming! Head for the hills!");
 
-        return TwiML(messagingResponse);
+            return TwiML(messagingResponse);
+        }
     }
 }

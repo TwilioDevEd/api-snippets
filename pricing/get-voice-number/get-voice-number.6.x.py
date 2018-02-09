@@ -8,7 +8,7 @@ client = Client(account_sid, auth_token)
 
 number = client.pricing \
                .voice \
-               .numbers("+15108675309") \
+               .numbers("+15108675310") \
                .fetch()
 
 print(number.outbound_call_price['current_price'])

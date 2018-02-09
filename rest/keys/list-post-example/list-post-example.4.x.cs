@@ -10,7 +10,7 @@ class Example
     string AuthToken = "your_auth_token";
     var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
-    var key = twilio.AddKey("User Jenny");
+    var key = twilio.AddKey("User Joey");
 
     Console.WriteLine(key.Sid);
     Console.WriteLine(key.Secret);

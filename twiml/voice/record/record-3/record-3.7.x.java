@@ -1,8 +1,8 @@
-import com.twilio.twiml.Record;
+import com.twilio.twiml.voice.Record;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Example {
             .Builder("Please leave a message at the beep.\nPress the star key when finished.").build();
         Say say2 = new Say.Builder("I did not receive a recording").build();
         Record record = new Record.Builder()
-            .action("http://foo.edu/handleRecording.php").method(Method.GET)
+            .action("http://foo.edu/handleRecording.php").method(HttpMethod.GET)
             .maxLength(20).finishOnKey("*").build();
         VoiceResponse response = new VoiceResponse.Builder().say(say)
             .record(record).say(say2).build();

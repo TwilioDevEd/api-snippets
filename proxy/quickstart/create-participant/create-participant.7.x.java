@@ -1,6 +1,6 @@
 // Get the Java helper library from https://twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.preview.proxy.service.session.Participant;
+import com.twilio.rest.proxy.service.session.Participant;
 
 public class Example {
   // Get your Account SID and Auth Token from https://twilio.com/console
@@ -13,7 +13,7 @@ public class Example {
     Participant participant = Participant.creator(
       "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "+15558675309")
+      "+15558675310")
       .create();
 
     System.out.println(participant.getSid());

@@ -1,6 +1,5 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import java.util.HashMap;
-import java.util.Map;
 
 import com.twilio.Twilio;
 import com.twilio.rest.sync.v1.service.syncmap.SyncMapItem;
@@ -22,7 +21,9 @@ public class Example {
     data.put("level", 31);
     data.put("username", "spicy_curry");
 
-    SyncMapItem item = SyncMapItem.updater(SERVICE_SID, MAP_SID, "steph_curry", data).update();
+    SyncMapItem item = SyncMapItem.updater(SERVICE_SID, MAP_SID, "steph_curry")
+                          .setData(data)
+                          .update();
 
     System.out.println(item.getData());
   }

@@ -10,7 +10,7 @@ $appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 $capability = new ClientToken($accountSid, $authToken);
 $capability->allowClientOutgoing($appSid);
-$capability->allowClientIncoming('jenny');
+$capability->allowClientIncoming('joey');
 $token = $capability->generateToken();
 
 echo $token;

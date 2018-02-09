@@ -10,9 +10,9 @@ const url = 'https://mycompany.com/myapp.php?foo=1&bar=2';
 // The post variables in Twilio's request
 const params = {
   CallSid: 'CA1234567890ABCDE',
-  Caller: '+14158675309',
+  Caller: '+14158675310',
   Digits: '1234',
-  From: '+14158675309',
+  From: '+14158675310',
   To: '+18005551212',
 };
 

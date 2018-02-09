@@ -17,7 +17,8 @@ $list = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncLists->create(
         array(
-            'uniqueName' => "MyCollection"
+            'uniqueName' => "MyCollection",
+            'ttl' => 1814400
         )
     );
 

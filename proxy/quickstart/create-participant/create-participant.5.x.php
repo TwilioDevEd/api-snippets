@@ -8,13 +8,12 @@ $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
 $session = $client
-    ->preview
     ->proxy
     ->services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->participants->create(
+        "+15558675310",
         array(
-            "identifier" => "+15558675309",
             "friendlyName" => "Alice"
         )
     );

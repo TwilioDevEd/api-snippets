@@ -4,7 +4,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.calls.list({ from: 'client:tommy' }, (err, data) => {
+client.calls.list({ from: 'client:charlie' }, (err, data) => {
   data.calls.forEach(call => {
     console.log(call.Direction);
   });

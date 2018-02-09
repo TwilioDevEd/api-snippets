@@ -1,5 +1,5 @@
 # Get the Python helper library from https://twilio.com/docs/libraries/python
-from Twilio.rest import Client
+from twilio.rest import Client
 
 # Get your Account SID and Auth Token from https://twilio.com/console
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'

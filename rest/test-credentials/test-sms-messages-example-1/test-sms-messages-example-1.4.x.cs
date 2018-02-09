@@ -11,7 +11,7 @@ class Example
         string AuthToken = "your_auth_token";
         var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
-        var message = twilio.SendMessage("+15005550006", "+14108675309", "All in the game, yo");
+        var message = twilio.SendMessage("+15005550006", "+14108675310", "All in the game, yo");
 
         Console.WriteLine(message.Sid);
     }

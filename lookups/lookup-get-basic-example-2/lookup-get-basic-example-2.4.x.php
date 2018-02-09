@@ -7,7 +7,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Lookups_Services_Twilio($sid, $token);
 
-$number = $client->phone_numbers->get("(510) 867-5309", array("CountryCode" => "US", "Type" => "carrier"));
+$number = $client->phone_numbers->get("(510) 867-5310", array("CountryCode" => "US", "Type" => "carrier"));
 
 echo $number->carrier->type . "\r\n";
 echo $number->carrier->name;

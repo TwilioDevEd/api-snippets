@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Say;
-import com.twilio.twiml.Sms;
+import com.twilio.twiml.voice.Say;
+import com.twilio.twiml.voice.Sms;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
@@ -17,7 +17,7 @@ public class SendSmsDuringCall extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Create a dict of people we know.
         HashMap<String, String> people = new HashMap<String, String>();
-        people.put("+14158675309", "Curious George");
+        people.put("+14158675308", "Curious George");
         people.put("+14158675310", "Boots");
         people.put("+14158675311", "Virgil");
 

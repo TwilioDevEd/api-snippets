@@ -18,6 +18,8 @@ data = {
 document = client.sync \
     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
     .documents \
-    .create(unique_name="MyFirstDocument", data=data)
+    .create(unique_name="MyFirstDocument",
+            data=data,
+            ttl=1814400)  # expires in 21 days
 
 print(document.sid)

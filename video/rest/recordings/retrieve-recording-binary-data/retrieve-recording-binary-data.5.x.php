@@ -11,7 +11,7 @@ $client = new Client($apiKeySid, $apiKeySecret);
 $recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $uri = "https://video.twilio.com/v1/Recordings/$recordingSid/Media";
 $response = $client->request("GET", $uri);
-$mediaLocation = json_decode($response->content)["location"];
+$mediaLocation = $response->getContent()["redirect_to"];
 
 $media_content = file_get_contents($mediaLocation);
 print_r($media_content);

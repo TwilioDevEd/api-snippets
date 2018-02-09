@@ -4,7 +4,7 @@ require 'sinatra'
 post '/voice' do
   twiml = Twilio::TwiML::Response.new do |r|
     if params['To']
-      r.Dial callerId: '+15017250604' do |d|
+      r.Dial callerId: '+15017122661' do |d|
         d.Number params['To']
       end
     else

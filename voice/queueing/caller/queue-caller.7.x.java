@@ -5,13 +5,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Enqueue;
+import com.twilio.twiml.voice.Enqueue;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
 public class Example extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Enqueue enqueue = new Enqueue.Builder().queueName("Queue Demo").build();
+    Enqueue enqueue = new Enqueue.Builder().name("Queue Demo").build();
     VoiceResponse twiml = new VoiceResponse.Builder().enqueue(enqueue).build();
 
     response.setContentType("application/xml");

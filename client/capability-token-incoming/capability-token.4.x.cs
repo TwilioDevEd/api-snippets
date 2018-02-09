@@ -14,7 +14,7 @@ public class TokenController : Controller
     string authToken = "your_auth_token";
 
     var capability = new TwilioCapability(accountSid, authToken);
-    capability.AllowClientIncoming("jenny");
+    capability.AllowClientIncoming("joey");
     string token = capability.GenerateToken();
 
     return Content(token, "application/jwt");

@@ -28,6 +28,7 @@ public class Example {
         .creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .setUniqueName("MyFirstDocument")
         .setData(data)
+        .setTtl(1814400) // expires in 21 days
         .create();
 
     System.out.println(document.getSid());

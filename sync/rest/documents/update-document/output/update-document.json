@@ -5,6 +5,7 @@
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2016-07-07T20:53:38Z",
   "date_updated": "2016-07-07T20:53:38Z",
+  "date_expires": null,
   "sid": "ETXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {

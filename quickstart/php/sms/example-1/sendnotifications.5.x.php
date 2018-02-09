@@ -27,7 +27,7 @@
     // Step 4: make an array of people we know, to send them a message. 
     // Feel free to change/add your own phone number and name here.
     $people = array(
-        "+15558675309" => "Curious George",
+        "+15558675308" => "Curious George",
         "+15558675308" => "Boots",
         "+15558675307" => "Virgil"
     );
@@ -44,7 +44,7 @@
             array(
                 // Step 6: Change the 'From' number below to be a valid Twilio number 
                 // that you've purchased
-                'from' => "+15017250604", 
+                'from' => "+15017122661", 
                 
                 // the sms body
                 'body' => "Hey $name, Monkey Party at 6PM. Bring Bananas!"

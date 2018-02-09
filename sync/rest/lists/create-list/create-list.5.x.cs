@@ -14,7 +14,9 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var list = SyncListResource.Create(serviceSid, "MyCollection");
+        var list = SyncListResource.Create(serviceSid,
+                                           "MyCollection",
+                                           1814400);
 
         Console.WriteLine(list.Sid);
     }

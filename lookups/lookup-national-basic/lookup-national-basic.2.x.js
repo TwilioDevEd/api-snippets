@@ -6,7 +6,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = new LookupsClient(accountSid, authToken);
 
-client.phoneNumbers('(510) 867-5309').get({
+client.phoneNumbers('(510) 867-5310').get({
   countryCode: 'US',
 }, (error, number) => {
   console.log(number.phoneNumber);

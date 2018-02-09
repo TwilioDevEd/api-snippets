@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 
 message = @client.messages.create(
   body: 'All in the game, yo',
-  to: '+14108675309',
+  to: '+14108675310',
   from: '+15005550006'
 )
 

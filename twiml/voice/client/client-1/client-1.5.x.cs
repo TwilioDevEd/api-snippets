@@ -9,7 +9,7 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Client("jenny");
+        dial.Client("joey");
         response.Append(dial);
 
         Console.WriteLine(response.ToString());;

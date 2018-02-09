@@ -8,7 +8,7 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
 
 $capability = new ClientToken($accountSid, $authToken);
-$capability->allowClientIncoming("jenny");
+$capability->allowClientIncoming("joey");
 $token = $capability->generateToken();
 
 echo $token;

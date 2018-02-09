@@ -6,7 +6,7 @@ const twilio = require('twilio');
 const urlencoded = require('body-parser').urlencoded;
 
 // Update with your own phone number in E.164 format
-const MODERATOR = '+15558675309';
+const MODERATOR = '+15558675310';
 
 const app = express();
 
