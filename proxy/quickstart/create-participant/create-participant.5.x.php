@@ -12,9 +12,9 @@ $session = $client
     ->services("KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->sessions("KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->participants->create(
+        "+15558675310",
         array(
-            "identifier" => "+15558675310",
-            "uniqueName" => "Alice"
+            "friendlyName" => "Alice"
         )
     );
 

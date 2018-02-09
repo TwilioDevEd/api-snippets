@@ -5,6 +5,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
+// Find and then purchase a phone number
 client
   .availablePhoneNumbers('US')
   .local.list({
