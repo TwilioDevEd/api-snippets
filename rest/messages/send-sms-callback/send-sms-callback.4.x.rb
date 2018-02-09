@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 body = 'McAvoy or Stewart? These timelines can get so confusing.'
-client.account.messages.create(from: '+15017250604',
-                               to: '+15558675309',
+client.account.messages.create(from: '+15017122661',
+                               to: '+15558675310',
                                body: body,
                                status_callback: 'http://requestb.in/1234abcd')

@@ -4,10 +4,10 @@
       "connect_app_sid": "CNb989fdd207b04d16aee578018ef5fd93",
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "permissions": ["get-all", "post-all"],
-      "connect_app_friendly_name": "Jenny Tracker",
+      "connect_app_friendly_name": "Joey",
       "connect_app_description": null,
-      "connect_app_company_name": "Tommy PI",
-      "connect_app_homepage_url": "http://www.tommypi.com"
+      "connect_app_company_name": "Charlie",
+      "connect_app_homepage_url": "http://www.example.com"
     },
 	...
   ],

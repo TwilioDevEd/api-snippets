@@ -12,7 +12,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Get Twilio Voice pricing for calls to/from a specific number
-    Number voiceNumber = Number.fetcher(new PhoneNumber("+15108675309")).fetch();
+    Number voiceNumber = Number.fetcher(new PhoneNumber("+15108675310")).fetch();
 
     System.out.println(voiceNumber.getOutboundCallPrice().getCurrentPrice());
   }

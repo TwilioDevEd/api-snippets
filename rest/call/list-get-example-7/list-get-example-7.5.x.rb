@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 @client.calls.list(
-  from: 'client:tommy'
+  from: 'client:charlie'
 ).each do |call|
   puts call.direction
 end

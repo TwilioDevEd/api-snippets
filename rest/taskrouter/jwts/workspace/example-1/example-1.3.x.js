@@ -21,7 +21,7 @@ const capability = new TaskRouterCapability({
   accountSid: accountSid,
   authToken: authToken,
   workspaceSid: workspaceSid,
-  channelId: workerSid,
+  channelId: workspaceSid,
 });
 
 // Helper function to create Policy
@@ -45,7 +45,7 @@ function buildWorkspacePolicy(options) {
 // Event Bridge Policies
 const eventBridgePolicies = util.defaultEventBridgePolicies(
   accountSid,
-  workerSid
+  workspaceSid
 );
 
 const workspacePolicies = [

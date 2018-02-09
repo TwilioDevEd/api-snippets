@@ -14,8 +14,8 @@ uri = 'https://video.twilio.com/v1/' +
       "Rooms/#{room_sid}/" +
       "Recordings/#{recording_sid}/" +
       'Media'
-response = client.request(method: 'POST', uri: uri)
-media_location = JSON.parse(response.body)['location']
+response = client.request('video.twilio.com', 443, 'GET', uri)
+media_location = response.body['redirect_to']
 
 media_content = Net::HTTP.get(URI(media_location))
 puts media_content

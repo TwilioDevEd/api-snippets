@@ -9,7 +9,7 @@ $client = new Services_Twilio($sid, $token);
 
 // Loop over the list of calls and echo a property for each one
 foreach ($client->account->calls->getIterator(0, 50, array(
-        "From" => "client:tommy"
+        "From" => "client:charlie"
     )) as $call
 ) {
     echo $call->direction;

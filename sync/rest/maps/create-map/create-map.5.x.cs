@@ -14,7 +14,9 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var map = SyncMapResource.Create(serviceSid, "Players");
+        var map = SyncMapResource.Create(serviceSid,
+                                         "Players",
+                                         1814400);
 
         Console.WriteLine(map.Sid);
     }

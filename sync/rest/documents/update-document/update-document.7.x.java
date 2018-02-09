@@ -24,7 +24,9 @@ public class Example {
     data.put("starring", starring);
     data.put("genre", "Romance");
 
-    Document document = Document.updater(SERVICE_SID, "MyFirstDocument", data).update();
+    Document document = Document.updater(SERVICE_SID, "MyFirstDocument")
+                                .setData(data)
+                                .update();
 
     System.out.println(document.getData());
   }

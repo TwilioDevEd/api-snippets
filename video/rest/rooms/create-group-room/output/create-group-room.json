@@ -8,6 +8,7 @@
     "enable_turn": false,
     "unique_name": "DailyStandup",
     "max_participants": 10,
+    "media_region": "us1",
     "duration": 0,
     "status_callback_method": "POST",
     "status_callback": "http://example.org",

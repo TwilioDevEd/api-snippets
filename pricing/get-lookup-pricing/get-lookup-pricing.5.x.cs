@@ -18,7 +18,7 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var phoneNumber = PhoneNumberResource.Fetch(
-                new PhoneNumber("+15108675309"),
+                new PhoneNumber("+15108675310"),
                 type: new List<string> { "carrier" });
 
         var mcc = phoneNumber.Carrier["mobile_country_code"];

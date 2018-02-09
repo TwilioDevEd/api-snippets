@@ -1,0 +1,2 @@
+curl -G 'https://video.twilio.com/v1/Rooms/DailyStandup/Participants/Alice/PublishedTracks/' \
+    -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret'

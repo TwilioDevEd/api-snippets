@@ -6,4 +6,5 @@ const client = require('twilio')(accountSid, authToken);
 
 client
   .queues('QU5ef8732a3c49700934481addd5ce1659')
-  .fetch(queue => console.log(queue));
+  .fetch()
+  .then(queue => console.log(queue));

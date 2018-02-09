@@ -10,8 +10,8 @@ const uniqueCode = '1234567890';
 
 client.messages.create(
   {
-    to: '+15558675309',
-    from: '+15017250604',
+    to: '+15558675310',
+    from: '+15017122661',
     body: 'Open to confirm: http://yourserver.com/confirm?id=' + uniqueCode,
     provideFeedback: true,
   },

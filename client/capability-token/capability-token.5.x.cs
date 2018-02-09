@@ -20,7 +20,7 @@ public class TokenController : Controller
         var scopes = new HashSet<IScope>
         {
             new OutgoingClientScope(appSid),
-            new IncomingClientScope("jenny")
+            new IncomingClientScope("joey")
         };
         var capability = new ClientCapability(accountSid, authToken, scopes: scopes);
 

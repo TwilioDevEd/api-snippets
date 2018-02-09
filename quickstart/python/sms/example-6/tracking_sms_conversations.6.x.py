@@ -10,7 +10,7 @@ app.config.from_object(__name__)
 
 # Try adding your own number to this list!
 callers = {
-    "+14158675309": "Curious George",
+    "+14158675308": "Curious George",
     "+14158675310": "Boots",
     "+14158675311": "Virgil",
 }

@@ -14,7 +14,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var phoneNumber = PhoneNumberResource.Fetch(new PhoneNumber("(510) 867-5309"), "US");
+        var phoneNumber = PhoneNumberResource.Fetch(new PhoneNumber("(510) 867-5310"), "US");
 
         Console.WriteLine(phoneNumber.PhoneNumber);
     }

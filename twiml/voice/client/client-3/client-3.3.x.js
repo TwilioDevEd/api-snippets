@@ -8,7 +8,7 @@ dial.client(
     statusCallback: 'https://myapp.com/calls/events',
     statusCallbackMethod: 'POST',
   },
-  'jenny'
+  'joey'
 );
 
 console.log(response.toString());

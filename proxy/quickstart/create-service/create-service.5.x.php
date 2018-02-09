@@ -8,12 +8,11 @@ $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
 $service = $client
-    ->preview
     ->proxy
     ->services
     ->create([
-      "friendlyName" => "My Awesome Service",
+      "uniqueName" => "My Awesome Service",
       "callbackUrl" => "https://www.example.com/"
     ]);
 
-echo $service->friendlyName;
+echo $service->uniqueName;

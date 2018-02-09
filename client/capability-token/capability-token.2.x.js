@@ -14,7 +14,7 @@ app.get('/token', (req, res) => {
 
   const capability = new twilio.Capability(accountSid, authToken);
   capability.allowClientOutgoing(appSid);
-  capability.allowClientIncoming('jenny');
+  capability.allowClientIncoming('joey');
   const token = capability.generate();
 
   res.set('Content-Type', 'application/jwt');

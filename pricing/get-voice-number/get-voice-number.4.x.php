@@ -7,6 +7,6 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Pricing_Services_Twilio($sid, $token);
 
-$number = $client->voiceNumbers->get("+15108675309");
+$number = $client->voiceNumbers->get("+15108675310");
 
 echo $number->outbound_call_price->current_price . "\n";

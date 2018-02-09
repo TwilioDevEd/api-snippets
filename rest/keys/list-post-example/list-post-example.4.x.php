@@ -7,6 +7,6 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token";
 $client = new Services_Twilio($sid, $token);
 
-$key = $client->account->keys->create(array("FriendlyName" => "User Jenny"));
+$key = $client->account->keys->create(array("FriendlyName" => "User Joey"));
 echo $key->sid;
 echo $key->secret;

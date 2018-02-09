@@ -6,7 +6,7 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::LookupsClient.new account_sid, auth_token
 
-number = @client.phone_numbers.get('+15108675309', type: 'carrier')
+number = @client.phone_numbers.get('+15108675310', type: 'carrier')
 
 puts number.carrier['type']
 puts number.carrier['name']

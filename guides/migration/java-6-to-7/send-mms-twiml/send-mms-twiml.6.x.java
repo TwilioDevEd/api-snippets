@@ -10,7 +10,7 @@ public class Example {
         TwiMLResponse twiml = new TwiMLResponse();
         try {
             Message message = new Message();
-            Body body = new Body("Hello Jenny");
+            Body body = new Body("Hello friend");
             Media media = new Media("https://demo.twilio.com/owl.png");
             message.append(body);
             message.append(media);

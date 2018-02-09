@@ -17,7 +17,7 @@ public class Example {
 
         Call call = Call.creator(
                 new PhoneNumber("+14155551212"),
-                new PhoneNumber("+15017250604"),
+                new PhoneNumber("+15017122661"),
                 new URI("http://demo.twilio.com/docs/voice.xml")
                 )
                 .setRecord(true)

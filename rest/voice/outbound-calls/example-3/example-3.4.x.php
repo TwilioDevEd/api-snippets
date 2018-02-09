@@ -7,7 +7,7 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token"; 
 $client = new Services_Twilio($sid, $token);
 
-$call = $client->account->calls->create("+18668675309", "+14155551212", "http://demo.twilio.com/docs/voice.xml", array(
+$call = $client->account->calls->create("+18668675310", "+14155551212", "http://demo.twilio.com/docs/voice.xml", array(
         "SendDigits" => "1234#",
     "Method" => "GET"
     ));

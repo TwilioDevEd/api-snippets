@@ -3,8 +3,8 @@
 from twilio.rest import TwilioRestClient
 
 # Find these values at https://twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXX"
-auth_token = "YYYYYYYYYYYYYYYYYY"
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token = "your_auth_token"
 
 client = TwilioRestClient(account_sid, auth_token)
 

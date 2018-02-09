@@ -12,7 +12,7 @@ class Example
     var pricingClient = new PricingClient(accountSid, authToken);
 
     // Look up pricing information for calls to/from a specific number
-    var number = pricingClient.GetVoiceNumber("+15108675309");
+    var number = pricingClient.GetVoiceNumber("+15108675310");
     Console.WriteLine(number.OutboundCallPrice.CurrentPrice);
   }
 }

@@ -11,8 +11,8 @@ $client = new Client($sid, $token);
 $calls = $client->calls->read(
     array(
         "status" => "in-progress",
-        "starttimeAfter" => "2009-07-04",
-        "starttimeBefore" => "2009-07-06"
+        "startTimeAfter" => "2009-07-04",
+        "startTimeBefore" => "2009-07-06"
     )
 );
 // Loop over the list of calls and echo a property for each one

@@ -1,4 +1,4 @@
-from twilio import ChatGrant
+from twilio.jwt.access_token.grants import ChatGrant
 
 endpoint = 'https://some.endpoint'
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'

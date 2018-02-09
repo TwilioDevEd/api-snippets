@@ -7,6 +7,7 @@
       "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "date_updated": "2016-07-25T20:06:36Z",
       "date_created": "2016-07-25T20:06:36Z",
+      "date_expires": null,
       "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "data": {
         "text": "welcome!"

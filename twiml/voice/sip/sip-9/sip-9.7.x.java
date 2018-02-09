@@ -1,16 +1,15 @@
-import com.twilio.twiml.Dial;
+import com.twilio.twiml.voice.Dial;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Sip;
+import com.twilio.twiml.voice.Sip;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Language;
-import com.twilio.twiml.Method;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
         Sip sip = new Sip.Builder("sip:kate@example.com?customheader=foo")
-            .method(Method.POST).url("/handle_screening_on_answer").build();
+            .method(HttpMethod.POST).url("/handle_screening_on_answer").build();
         Dial dial = new Dial.Builder().record(Dial.Record.RECORD_FROM_ANSWER)
-            .timeout(10).hangupOnStar(true).callerId("bob").method(Method.POST)
+            .timeout(10).hangupOnStar(true).callerId("bob").method(HttpMethod.POST)
             .action("/handle_post_dial").sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 
