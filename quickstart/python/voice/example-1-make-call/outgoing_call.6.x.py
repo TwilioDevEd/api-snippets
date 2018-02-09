@@ -6,6 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
+# Start a phone call
 call = client.calls.create(
     to="+15558675310",
     from_="+15017122661",
