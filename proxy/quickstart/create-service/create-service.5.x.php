@@ -15,4 +15,4 @@ $service = $client
       "callbackUrl" => "https://www.example.com/"
     ]);
 
-echo $service->friendlyName;
+echo $service->uniqueName;

@@ -7,5 +7,5 @@ $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $token = "your_auth_token"; 
 $client = new Services_Twilio($sid, $token);
 
-$call = $client->account->calls->create("+15017250604", "+14155551212", "http://demo.twilio.com/docs/voice.xml", array());
+$call = $client->account->calls->create("+15017122661", "+14155551212", "http://demo.twilio.com/docs/voice.xml", array());
 echo $call->sid;

@@ -8,7 +8,7 @@ $authToken = "your_auth_token";
 $client = new Services_Twilio($accountSid, $authToken);
 
 $call = $client->account->calls->create(
-    "+15017250604", "+14155551212", "http://demo.twilio.com/docs/voice.xml",
+    "+15017122661", "+14155551212", "http://demo.twilio.com/docs/voice.xml",
     array("Record" => true)
 );
 

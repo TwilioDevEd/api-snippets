@@ -13,7 +13,7 @@ public class Example {
     public static void main(String[] args) throws URISyntaxException {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        String from = "+15017250604";
+        String from = "+15017122661";
         String to = "+15558675310";
         URI mediaUrl = new URI("https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf");
         FaxCreator faxCreator = Fax.creator(to, mediaUrl);
