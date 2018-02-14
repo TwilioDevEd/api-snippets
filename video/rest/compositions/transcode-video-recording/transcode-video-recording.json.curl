@@ -1,0 +1,6 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -d 'VideoSources=RTXXXX' \
+    -d 'VideoLayout=SINGLE' \
+    -d 'Format=mp4'
+    -d 'StatusCallback=http://my.server.org/callbacks'
