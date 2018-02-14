@@ -4,10 +4,9 @@ require 'twilio-ruby'
 require 'sinatra'
 
 get '/sms-quickstart' do
-  twiml = Twilio::TwiML::Response.new do |r|
-    r.Message 'Hello, Mobile Monkey'
+  twiml = Twilio::TwiML::MessagingResponse.new do |r|
+    r.message(body: 'Ahoy! Thanks so much for your message.')
   end
 
-  content_type 'text/xml'
-  twiml.text
+  twiml.to_s
 end
