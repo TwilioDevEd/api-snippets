@@ -7,7 +7,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
   .workspaces(workspaceSid)
-  .workers
+  .workers()
   .cumulativeStatistics()
   .fetch()
   .then(responseData => {
