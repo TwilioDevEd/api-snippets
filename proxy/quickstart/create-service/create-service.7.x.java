@@ -1,6 +1,6 @@
 // Get the Java helper library from https://twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.proxy.Service;
+import com.twilio.rest.proxy.v1.Service;
 
 public class Example {
   // Get your Account SID and Auth Token from https://twilio.com/console
@@ -10,8 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Service service = Service.creator()
-      .setUniqueName("My Awesome Service")
+    Service service = Service.creator("My Awesome Service")
       .setCallbackUrl("https://www.example.com/")
       .create();
 

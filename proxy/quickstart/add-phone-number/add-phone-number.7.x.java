@@ -1,6 +1,6 @@
 // Get the Java helper library from https://twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.proxy.service.PhoneNumber;
+import com.twilio.rest.proxy.v1.service.PhoneNumber;
 
 public class Example {
   // Get your Account SID and Auth Token from https://twilio.com/console
@@ -11,8 +11,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     PhoneNumber phoneNumber = PhoneNumber.creator(
-      "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+      "KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
       .create();
 
     System.out.println(phoneNumber.getSid());
