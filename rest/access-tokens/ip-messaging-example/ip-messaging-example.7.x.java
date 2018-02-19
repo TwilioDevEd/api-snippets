@@ -8,13 +8,9 @@ public class Example {
     String twilioApiSecret = "xxxxxxxxxxxxxx";
 
     String serviceSid = "ISxxxxxxxxxxxx";
-    String deviceId = "someiosdevice";
     String identity = "user@example.com";
-    String appName = "HipFlowSlackDockRC";
-    String endpointId = appName + ":" + identity + ":" + deviceId;
 
     ChatGrant grant = new ChatGrant();
-    grant.setEndpointId(endpointId);
     grant.setServiceSid(serviceSid);
 
     AccessToken token = new AccessToken.Builder(twilioAccountSid, twilioApiKey, twilioApiSecret)

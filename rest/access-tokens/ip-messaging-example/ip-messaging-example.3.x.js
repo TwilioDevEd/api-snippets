@@ -8,16 +8,12 @@ const twilioApiSecret = 'xxxxxxxxxxxx';
 
 // Used specifically for creating Chat tokens
 const serviceSid = 'ISxxxxxxxxxxxxx';
-const appName = 'HipFlowSlackDockRC';
 const identity = 'user@example.com';
-const deviceId = 'someiosdeviceid';
-const endpointId = `${appName}:${identity}:${deviceId}`;
 
 // Create a "grant" which enables a client to use Chat as a given user,
 // on a given device
 const chatGrant = new ChatGrant({
   serviceSid: serviceSid,
-  endpointId: endpointId,
 });
 
 // Create an access token which we will sign and return to the client,

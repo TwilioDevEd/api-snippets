@@ -14,14 +14,12 @@ class Example
         // These are specific to Chat
         const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user@example.com";
-        const string deviceId = "someiosdevice";
 
         // Create an Chat grant for this token
 
         var grant = new ChatGrant
         {
-          ServiceSid = serviceSid,
-          EndpointId = $"HipFlowSlackDockRC:{identity}:{deviceId}"
+          ServiceSid = serviceSid
         };
 
         var grants = new HashSet<IGrant>
