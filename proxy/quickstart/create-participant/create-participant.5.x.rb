@@ -8,12 +8,12 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 client = Twilio::REST::Client.new account_sid, auth_token
 
-participant = client.proxy
+participant = client.proxy.v1
                     .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                     .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                     .participants.create(
                       identifier: '+15558675310',
-                      unique_name: 'Alice'
+                      friendly_name: 'Alice'
                     )
 
 puts participant.sid

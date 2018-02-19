@@ -1,7 +1,7 @@
 // Get the C# helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Proxy.Service;
+using Twilio.Rest.Proxy.V1.Service;
 
 class Example
 {
