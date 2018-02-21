@@ -1,21 +1,22 @@
 {
     "recordings": [
         {
-            "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "status": "completed",
-            "date_created": "2015-07-30T20:00:00Z",
-            "sid": "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "source_sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "size": 0,
-            "type": "audio",
-            "duration": 0,
-            "container_format": "mka",
-            "codec": "OPUS",
             "grouping_sids": {
-                "room_sid" : "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                "room_sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                "participant_sid": "PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
             },
-            "room_sid" : "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "url": "https://video.twilio.com/v1/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "container_format": "mka",
+            "track_name": "A name",
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "codec": "opus",
+            "source_sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "sid": "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "duration": 198,
+            "date_created": "2018-01-30T18:13:27Z",
+            "type": "audio",
+            "size": 956376,
             "links": {
                 "media": "https://video.twilio.com/v1/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media"
             }
