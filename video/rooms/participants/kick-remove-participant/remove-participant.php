@@ -8,6 +8,6 @@ $apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $apiKeySecret = "your_api_key_secret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$participant = $client->video->rooms("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->participants("Alice")->fetch();
+$participant = $client->video->rooms("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->participants("PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->update(array("status" => "disconnected"));
 
-echo $participant->duration;
+echo $participant->status;

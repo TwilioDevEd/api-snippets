@@ -8,4 +8,4 @@ client = Client(api_key_sid, api_key_secret)
 
 participant = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants.get('Alice')
 
-print(participant.fetch().identity)
+print(participant.update(status='disconnected').status)
