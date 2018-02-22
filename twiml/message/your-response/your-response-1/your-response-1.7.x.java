@@ -10,7 +10,7 @@ public class Example {
         Body body = new Body("Hello World!");
         Message message = new Message.Builder().body(body).build();
         Redirect redirect = new Redirect.Builder()
-            .url("https://demo.twilio.com/sms/welcome").build();
+            .url("https://demo.twilio.com/welcome/sms/").build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).redirect(redirect).build();
 

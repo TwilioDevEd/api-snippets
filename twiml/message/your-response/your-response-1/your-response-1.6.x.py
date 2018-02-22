@@ -4,6 +4,6 @@ response = MessagingResponse()
 message = Message()
 message.body('Hello World!')
 response.append(message)
-response.redirect('https://demo.twilio.com/sms/welcome')
+response.redirect('https://demo.twilio.com/welcome/sms/')
 
 print(response)
