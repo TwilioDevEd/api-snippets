@@ -6,6 +6,6 @@ curl -X POST 'https://video.twilio.com/v1/Compositions' \
    -d 'AudioSources=RTAAAA' \
    -d 'AudioSources=RTBBBB' \
    -d 'AudioSources=RTCCCC' \
-   -d 'Layout=GRID'\
+   -d 'VideoLayout=GRID'\
    -d 'Format=mp4'\
    -d 'StatusCallback=http://my.server.org/callbacks'
