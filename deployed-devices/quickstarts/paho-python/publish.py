@@ -1,4 +1,6 @@
 import paho.mqtt.client as mqtt
+import json
+from datetime import datetime
 
 #
 # Use the actual location of your downloaded certificate and key.
@@ -17,20 +19,16 @@ client.tls_set("/usr/local/ssl/cert.pem",
     certfile=pem_location, keyfile=key_location)
 
 #
-# Print out log messages and topic updates.
+# Print out log messages.
 #
 def on_log(mqttc, obj, level, string):
     print(string)
 
-def on_message(client, userdata, msg):
-    print(msg.topic + ' ' + str(msg.payload))
-
 client.on_log = on_log
-client.on_message = on_message
 
 #
-# Use qos=1 to get your device caught up right away.
+# Publish current date/time to a new document, use QoS 1 to confirm delivery.
 #
 client.connect('mqtt-sync.us1.twilio.com', 8883, 60)
-client.subscribe('sync/docs/MyFirstDocument', qos=1)
-client.loop_forever()
+client.publish('sync/docs/HelloWorld',
+    json.dumps({"hello": datetime.now().isoformat()}), qos=1)
