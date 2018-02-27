@@ -19,7 +19,7 @@ $client->account->calls->create(
     $to_number,
     $twilio_number,
     array(
-        url="http://demo.twilio.com/docs/voice.xml"
+        "url" => "http://demo.twilio.com/docs/voice.xml"
     )
 );
 

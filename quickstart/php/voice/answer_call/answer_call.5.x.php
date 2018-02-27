@@ -8,7 +8,7 @@ $response = new Twiml;
 // Read a message aloud to the caller
 $response->say(
     "Thank you for calling! Have a great day.", 
-    array('voice' => 'alice')
+    array("voice" => "alice")
 );
 
 echo $response;
