@@ -1,46 +1,84 @@
 import base64
 import hashlib
 import hmac
+import json
+import re
 
-from django.conf import settings
-from django.http import HttpResponseForbidden
-from functools import wraps
 try:
-    from urllib.parse import urlencode
+    from urllib.parse import urlencode, quote
 except ImportError:
-    from urllib import urlencode
+    from urllib import urlencode, quote
 
 
-def validate_authy_request(f):
+def validate_authy_request(request,api_key):
     """Validates that incoming requests genuinely originated from Twilio"""
-    @wraps(f)
-    def decorated_function(request, *args, **kwargs):
-        url = request.build_absolute_uri('?')
-        method = request.method
-        params = getattr(request, method).items()
-        sorted_params = urlencode(sorted(params))
+    url = request.url
+    method = request.method
 
-        # Read the nonce from the request
-        nonce = request.META['HTTP_X_AUTHY_SIGNATURE_NONCE']
+    # Read the Flask request parameters
+    params = json.loads(request.data)
 
-        # Concatenate all together and separate by '|'
-        data = '|'.join([nonce, method, url, sorted_params])
+    # Convert the JSON dict to query params
+    query_params = __make_http_query(params)
+    sorted_params = '&'.join(sorted(query_params.replace('/', '%2F').replace('%20', '+').split('&')))
+    sorted_params = re.sub("\\%5B([0-9])*\\%5D","%5B%5D",sorted_params)
+    sorted_params = re.sub("\\=None", "=", sorted_params)
 
-        # Compute the signature
-        computed_dig = hmac.new(
-            settings.ACCOUNT_SECURITY_API_KEY.encode('utf-8'),
-            msg=data.encode('utf-8'),
-            digestmod=hashlib.sha256
-        ).digest()
-        computed_sig = base64.b64encode(computed_dig)
+    # Read the nonce from the request
+    nonce = request.headers['X-Authy-Signature-Nonce']
 
-        sig = request.META['HTTP_X_AUTHY_SIGNATURE']
+    # Concatenate all together and separate by '|'
+    data = '|'.join([nonce, method, url, sorted_params])
 
-        # Compare the message signature with your calculated signature
-        # Continue processing the request if it's valid, return a 403 error if
-        # it's not
-        if sig == computed_sig:
-            return f(request, *args, **kwargs)
-        else:
-            return HttpResponseForbidden()
-    return decorated_function
+    # Compute the signature
+    computed_dig = hmac.new(
+        api_key.encode(),
+        msg=data.encode(),
+        digestmod=hashlib.sha256
+    ).digest()
+    computed_sig = base64.b64encode(computed_dig)
+
+    sig = request.headers['X-Authy-Signature']
+
+    # Compare the message signature with your calculated signature
+    # Continue processing the request if it's valid, return a 403 error if
+    # it's not
+    return sig == computed_sig
+
+
+def __make_http_query(params, topkey=''):
+    """
+    Function to covert params into url encoded query string
+    :param dict params: Json string sent  by Authy.
+    :param string topkey: params key
+    :return string: url encoded Query.
+    """
+    if len(params) == 0:
+        return ""
+    result = ""
+    # is a dictionary?
+    if type(params) is dict:
+        for key in params.keys():
+            newkey = quote(key)
+            if topkey != '':
+                newkey = topkey + quote('[' + key + ']')
+            if type(params[key]) is dict:
+                result += __make_http_query(params[key], newkey)
+            elif type(params[key]) is list:
+                i = 0
+                for val in params[key]:
+                    if type(val) is dict:
+                        result +=   __make_http_query(val, newkey + quote('['+str(i)+']'))
+                    else:
+                        result += newkey + quote('['+str(i)+']') + "=" + quote(str(val)) + "&"
+                    i = i + 1
+            # boolean should have special treatment as well
+            elif type(params[key]) is bool:
+                result += newkey + "=" + quote(str(params[key]).lower()) + "&"
+            # assume string (integers and floats work well)
+            else:
+                result += newkey + "=" + quote(str(params[key])) + "&"
+    # remove the last '&'
+    if (result) and (topkey == '') and (result[-1] == '&'):
+        result = result[:-1]
+    return result
