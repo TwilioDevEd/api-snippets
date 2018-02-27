@@ -7,9 +7,9 @@ const crypto = require('crypto');
  * @return {Boolean} True if verified
  */
 function verifyCallback(req, apiKey) {
-  const url = req.headers['x-forwarded-proto'] + '://' + req.hostname + req.url;
+  const url = req.protocol + '://' + req.get('host') + req.originalUrl;
   const method = req.method;
-  const params = req.body;
+  const params = req.body;	// needs `npm i body-parser` on Express 4
 
   // Sort the params
   const sortedParams = qs
