@@ -10,10 +10,17 @@ public class SmsApp {
 
         post("/sms", (req, res) -> {
             res.type("application/xml");
-            Body body = new Body.Builder("The Robots are coming! Head for the hills!").build();
-            Message sms =
-                    new Message.Builder().body(body).build();
-            MessagingResponse twiml = new MessagingResponse.Builder().message(sms).build();
+            Body body = new Body
+                    .Builder("The Robots are coming! Head for the hills!")
+                    .build();
+            Message sms = new Message
+                    .Builder()
+                    .body(body)
+                    .build();
+            MessagingResponse twiml = new MessagingResponse
+                    .Builder()
+                    .message(sms)
+                    .build();
             return twiml.toXml();
         });
     }
