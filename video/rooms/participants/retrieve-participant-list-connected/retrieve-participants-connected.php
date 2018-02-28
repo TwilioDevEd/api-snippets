@@ -8,6 +8,8 @@ $apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $apiKeySecret = "your_api_key_secret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$participant = $client->video->rooms("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->participants("Alice")->fetch();
+$participants = $client->video->rooms("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->participants->read(array("status" => "connected"));
 
-echo $participant->duration;
+foreach ($participants as $participant) {
+    echo $participant->duration;
+}

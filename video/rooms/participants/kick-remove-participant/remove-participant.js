@@ -8,7 +8,9 @@ var Twilio = require('twilio');
 
 var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
-client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants.get('Alice').fetch()
+client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .participants('PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .update({status: 'disconnected'})
   .then(participant => {
-    console.log(participant.duration);
+    console.log(participant.status);
   });
