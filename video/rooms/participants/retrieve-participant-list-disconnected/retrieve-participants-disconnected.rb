@@ -7,7 +7,7 @@ api_key_secret = 'your_api_key_secret'
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-participant = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                  .participants('Alice').fetch
-
-puts participant.sid
+participants = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .participants.list(status: 'disconnected').each do |participant|
+    puts participant.sid
+  end

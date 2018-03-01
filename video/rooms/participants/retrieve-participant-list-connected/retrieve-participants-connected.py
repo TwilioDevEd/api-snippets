@@ -6,6 +6,7 @@ api_key_sid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 api_key_secret = "your_api_key_secret"
 client = Client(api_key_sid, api_key_secret)
 
-participant = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants.get('Alice')
+participants = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants
 
-print(participant.fetch().identity)
+for participant in participants.list(status='connected'):
+    print(participant.fetch().identity)
