@@ -1,25 +1,41 @@
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Http.Extensions;
+using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
 
 namespace Test
 {
     public class AuthyWebhook
     {
-        private string Verify(System.Web.HttpRequestBase Request, string ApiKey)
+        private bool Verify(Microsoft.AspNetCore.Http.HttpRequest Request,
+          Newtonsoft.Json.Linq.JObject JsonContent,
+          string ApiKey)
         {
             // Read the nonce from the request
             var nonce = Request.Headers["x-authy-signature-nonce"];
-            var method = Request.HttpMethod;
-            var url = Request.Url.AbsoluteUri;
-            var bodyRequest = new string [];
-            foreach (string key in Request.Form.Keys)
+            var method = Request.Method;
+            var url = Request.GetDisplayUrl();
+            List<String> bodyRequest = new List<String>();
+
+            // Flatten
+            var props = GetPropPaths(string.Empty, JsonContent);
+            foreach (var kvp in props)
             {
-                bodyRequest.Add(key + "=" + Request.Form[key]);
+                var encodedKey = System.Web.HttpUtility.UrlEncode(kvp.Item1);
+                var encodedValue = System.Web.HttpUtility.UrlEncode(kvp.Item2);
+                // uppercase all escaped url-encoded characters
+                Regex reg = new Regex(@"%[a-f0-9]{2}");
+                encodedKey = reg.Replace(encodedKey, m => m.Value.ToUpperInvariant());
+                encodedValue = reg.Replace(encodedValue, m => m.Value.ToUpperInvariant());
+                bodyRequest.Add(encodedKey + "=" + encodedValue);
             }
+
             // Sort the params
-            var params = String.join("&", bodyRequest.Sort());
+            bodyRequest.Sort();
+            var parameters = String.Join("&", bodyRequest);
 
             // concatenate all together and separate by '|'
-            var data = $"{nonce}|{method}|{url}|{params}";
+            var data = $"{nonce}|{method}|{url}|{parameters}";
 
             // compute the signature
             var encoding = new System.Text.ASCIIEncoding();
@@ -32,7 +48,31 @@ namespace Test
 
                 // compare the message signature with your calculated signature
                 byte[] hashmessage = hmacsha256.ComputeHash(DataBytes);
-                return Convert.ToBase64String(hashmessage) == sig;
+                var hash = Convert.ToBase64String(hashmessage);
+                return hash == sig;
+            }
+        }
+
+        private IEnumerable<Tuple<string, string>> GetPropPaths(string currPath, JObject obj)
+        {
+            foreach (var prop in obj.Properties())
+            {
+                var propPath = string.IsNullOrWhiteSpace(currPath) ? prop.Name : currPath + "[" + prop.Name + "]";
+
+                if (prop.Value.Type == JTokenType.Object)
+                {
+                    foreach (var subProp in GetPropPaths(propPath, prop.Value as JObject))
+                        yield return subProp;
+                }
+                else if (prop.Value.Type == JTokenType.Boolean)
+                {
+                    // Fix boolean type conversion to lowercase string
+                    yield return new Tuple<string, string>(propPath, prop.Value.ToString().ToLower());
+                }
+                else
+                {
+                    yield return new Tuple<string, string>(propPath, prop.Value.ToString());
+                }
             }
         }
     }
