@@ -24,7 +24,7 @@ public class Example {
     params.put("To", "+18005551212");
 
     // The X-Twilio-Signature header attached to the request
-    String twilioSignature = "RSOYDt4T1cUTdK1PDd93/VVr8B8=";
+    String twilioSignature = "GvWf1cFY/Q7PnoempGyD5oXAezc=";
 
     System.out.println(validator.validate(url, params, twilioSignature));
   }
