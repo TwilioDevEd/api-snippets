@@ -20,4 +20,4 @@ $client->taskrouter
     ->workspaces($workspaceSid)
     ->tasks($taskSid)
     ->reservations($reservationSid)
-    ->update('accepted');
+    ->update(['reservationStatus' => 'accepted']);
