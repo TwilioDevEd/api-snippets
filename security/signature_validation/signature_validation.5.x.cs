@@ -18,7 +18,7 @@ class Example
         const string url = "https://mycompany.com/myapp.php?foo=1&bar=2";
 
         // The X-Twilio-Signature header attached to the request
-        const string twilioSignature = "RSOYDt4T1cUTdK1PDd93/VVr8B8=";
+        const string twilioSignature = "GvWf1cFY/Q7PnoempGyD5oXAezc=";
 
         var parameters = new Dictionary<string, string>
         {

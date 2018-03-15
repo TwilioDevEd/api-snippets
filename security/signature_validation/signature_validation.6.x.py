@@ -16,6 +16,6 @@ params = {
 }
 
 # The X-Twilio-Signature header attached to the request
-twilio_signature = 'RSOYDt4T1cUTdK1PDd93/VVr8B8='
+twilio_signature = 'GvWf1cFY/Q7PnoempGyD5oXAezc='
 
 print(validator.validate(url, params, twilio_signature))
