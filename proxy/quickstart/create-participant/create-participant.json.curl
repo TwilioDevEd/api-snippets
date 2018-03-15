@@ -1,4 +1,0 @@
-curl -XPOST https://proxy.twilio.com/v1/Services/KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sessions/KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants.json \
-    -d "Identifier=+15558675310" \
-    -d "UniqueName=Alice" \
-    -u 'your_account_sid:your_auth_token'
