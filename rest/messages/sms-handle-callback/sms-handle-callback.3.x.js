@@ -12,7 +12,7 @@ app.post('/MessageStatus', (req, res) => {
 
   console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
 
-  res.end();
+  res.sendStatus(200);
 });
 
 http.createServer(app).listen(1337, () => {
