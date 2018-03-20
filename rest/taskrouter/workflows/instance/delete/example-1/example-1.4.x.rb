@@ -6,11 +6,11 @@ require 'twilio-ruby'
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-activity_sid = 'WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+workflow_sid = 'WWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
 client = Twilio::REST::TaskRouterClient.new(account_sid,
                                             auth_token,
                                             workspace_sid)
 
-activity = client.workspace.activities.get(activity_sid)
-activity.delete
+workflow = client.workspace.workflows.get(workflow_sid)
+workflow.delete

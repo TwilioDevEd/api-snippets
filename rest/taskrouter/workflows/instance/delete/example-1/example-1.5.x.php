@@ -8,11 +8,11 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$activitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
 $client->taskrouter
     ->workspaces($workspaceSid)
-    ->activities($activitySid)
+    ->workflows($workflowSid)
     ->delete();
