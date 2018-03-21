@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Lookups.V1;
 using Twilio.Types;
+using Twilio.Exceptions;
 
 public class Example
 {
@@ -15,12 +16,20 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        // Look up a phone number in E.164 format
-        var phoneNumber = PhoneNumberResource.Fetch(
-            new PhoneNumber("+15108675310"),
-            type: new List<string> { "carrier" });
+        try {
+          // Look up a phone number in E.164 format
+          var phoneNumber = PhoneNumberResource.Fetch(
+              new PhoneNumber("+15108675310"),
+              type: new List<string> { "carrier" });
 
-        Console.WriteLine(phoneNumber.Carrier["name"]);
-        Console.WriteLine(phoneNumber.Carrier["type"]);
+          Console.WriteLine(phoneNumber.Carrier["name"]);
+          Console.WriteLine(phoneNumber.Carrier["type"]);
+        } catch (ApiException e) {
+          if (e.Status == 404) {
+            Console.WriteLine("No carrier information");
+          } else {
+            Console.WriteLine(e.ToString());
+          }
+        }
     }
 }
