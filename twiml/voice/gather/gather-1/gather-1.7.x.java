@@ -8,8 +8,8 @@ public class Example {
     public static void main(String[] args) {
         Say say = new Say.Builder("Please press 1 or say sales for sales.")
             .build();
-        Gather gather = new Gather.Builder().input("speech dtmf").timeout(3)
-            .numDigits(1).say(say).build();
+        Gather gather = new Gather.Builder().inputs(Gather.Input.DTMF_SPEECH)
+            .timeout(3).numDigits(1).say(say).build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
             .build();
 
