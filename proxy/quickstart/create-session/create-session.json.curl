@@ -1,3 +1,0 @@
-curl -XPOST https://preview.twilio.com/Proxy/Services/KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Sessions.json \
-    -d "UniqueName=MyFirstSession" \
-    -u 'your_account_sid:your_auth_token'

@@ -21,7 +21,7 @@ public class TwilioServlet extends HttpServlet {
     String applicationSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     OutgoingClientScope outgoingScope = new OutgoingClientScope.Builder(applicationSid).build();
-    IncomingClientScope incomingScope = new IncomingClientScope("jenny");
+    IncomingClientScope incomingScope = new IncomingClientScope("joey");
 
     List<Scope> scopes = Lists.newArrayList(outgoingScope, incomingScope);
 

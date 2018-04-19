@@ -6,7 +6,15 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-number = @client.lookups.v1.phone_numbers('+15108675309').fetch(type: 'carrier')
+begin
+  number = @client.lookups.v1.phone_numbers('+15108675310').fetch(type: 'carrier')
 
-puts number.carrier['type']
-puts number.carrier['name']
+  puts number.carrier['type']
+  puts number.carrier['name']
+rescue Twilio::REST::RestError => err
+  if err.status_code === 404
+    puts 'No carrier information'
+  else
+    puts err.message
+  end
+end

@@ -6,7 +6,7 @@ const client = require('twilio')(accountSid, authToken);
 
 client.keys.create(
   {
-    friendlyName: 'User Jenny',
+    friendlyName: 'User Joey',
   },
   (err, key) => {
     process.stdout.write(key.sid);

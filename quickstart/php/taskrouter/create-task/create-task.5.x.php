@@ -19,7 +19,11 @@ $client = new Client($accountSid, $authToken);
 $task = $client->taskrouter
     ->workspaces($workspaceSid)
     ->tasks
-    ->create('{"selected_language": "es"}', $workflowSid);
+    ->create(array(
+      'attributes' => '{"selected_language": "es"}',
+      'workflowSid' => $workflowSid,
+    ));
+
 
 // display a confirmation message on the screen
 echo "Created a new task";

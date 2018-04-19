@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.twilio.twiml.*;
-import com.twilio.twiml.Number;
+import com.twilio.twiml.voice.Number;
 
 
 public class TwilioServlet extends HttpServlet {
@@ -24,7 +24,7 @@ public class TwilioServlet extends HttpServlet {
         + "Press 2 to record a message for a Twilio educator. "
         + "Press any other key to start over.").build();
 
-    Gather gather = new Gather.Builder().action("/handle-gather").numDigits(1).method(Method.POST)
+    Gather gather = new Gather.Builder().action("/handle-gather").numDigits(1).method(HttpMethod.POST)
         .say(sayInGather).build();
 
     VoiceResponse twiml = new VoiceResponse.Builder().say(say).play(play).gather(gather).build();

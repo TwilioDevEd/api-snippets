@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
@@ -15,7 +15,7 @@ $client = new Client($accountSid, $authToken);
 $statistics = $client->taskrouter
     ->workspaces($workspaceSid)
     ->taskQueues($taskQueueSid)
-    ->taskQueueCumulativeStatistics()
+    ->cumulativeStatistics()
     ->fetch(
         array('minutes' => 60)
     );

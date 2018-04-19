@@ -61,11 +61,11 @@ describe('Break lines', () => {
 
     it('in 4 taking into account line indentation - 2', () => {
       const line =
-'        Client client = new Client.Builder("jenny").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();'
+'        Client client = new Client.Builder("joey").statusCallbackEvent("initiated ringing answered completed").statusCallback("https://myapp.com/calls/events").statusCallbackMethod("POST").build();'
 
       const newLines = fileFormatter.trimLine(line, []);
       expect(newLines.length).toBe(4);
-      expect(newLines[0]).toBe('        Client client = new Client.Builder("jenny")');
+      expect(newLines[0]).toBe('        Client client = new Client.Builder("joey")');
       expect(newLines[1]).toBe('            .statusCallbackEvent("initiated ringing answered completed")');
       expect(newLines[2]).toBe('            .statusCallback("https://myapp.com/calls/events")');
       expect(newLines[3]).toBe('            .statusCallbackMethod("POST").build();');

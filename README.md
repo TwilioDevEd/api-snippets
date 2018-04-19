@@ -19,8 +19,8 @@
    In the case of phone numbers, the following should be used:
 
    ```
-   Destination Phone Number: +15558675309
-   From/Twilio Number: +15017250604
+   Destination Phone Number: +15558675310
+   From/Twilio Number: +15017122661
    ```
 
    For auth_token:
@@ -60,14 +60,14 @@
    ```
    rest/
    |-- resource-example/
-       |-- snippet-example-1/
+       └── snippet-example-1/
            |-- output/
-           |   |-- snippet-example-1.json
+           |   └── snippet-example-1.json
            |-- snippet-example-1.7.x.java
            |-- snippet-example-1.<sdk-version>.x.<language>
            |-- snippet-example-1.json.curl
            |-- snippet-example-1.xml.curl
-           |-- meta.json
+           └── meta.json
    ```
 
    Client version is important, as that is how the test harness knows which
@@ -175,13 +175,13 @@ Make sure you have the following dependencies installed on your system.
 
 1. Install Python and PIP.
 
-   On Linux:
+   - On Linux:
    ```bash
    sudo apt-get install python-pip python2.7-dev build-essential \
    sudo pip install --upgrade pip
    ```
 
-   On OSX:
+   - On OSX:
 
    ```bash
    brew install python
@@ -205,7 +205,7 @@ Make sure you have the following dependencies installed on your system.
 
 1. Install PHP 5 with CURL.
 
-   On Linux:
+   - On Linux:
 
    ```bash
    sudo add-apt-repository ppa:ondrej/php -y
@@ -213,7 +213,7 @@ Make sure you have the following dependencies installed on your system.
    sudo apt-get install -y --force-yes php5.6
    ```
 
-   On OSX:
+   - On OSX:
 
    ```bash
    brew install php56
@@ -235,7 +235,7 @@ Make sure you have the following dependencies installed on your system.
 
 1. Install MonoDevelop.
 
-   On Linux (http://www.mono-project.com/docs/getting-started/install/linux/#usage):
+   - On Linux (http://www.mono-project.com/docs/getting-started/install/linux/#usage):
    ```bash
    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
    echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list \
@@ -243,7 +243,7 @@ Make sure you have the following dependencies installed on your system.
    sudo apt-get install mono-complete -y
    ```
 
-   On OSX:
+   - On OSX:
    ```bash
    brew install mono
    ```
@@ -294,14 +294,14 @@ the wrong user.
 
 1. Make your system trust the fake server's self signed certificate.
 
-   On Linux:
+   - On Linux:
    ```bash
    sudo apt-get install ca-certificates \
    sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt \
    sudo update-ca-certificates
    ```
 
-   On OSX:
+   - On OSX:
    Use the system's keychain to trust the provided certificate in the `keystore`
    directory of the fake-api repo. Go [here](https://support.apple.com/kb/PH18677?locale=en_US)
    for more information.

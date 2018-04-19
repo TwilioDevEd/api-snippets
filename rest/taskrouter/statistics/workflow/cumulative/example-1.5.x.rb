@@ -11,7 +11,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
                    .workflows(workflow_sid)
-                   .workflow_cumulative_statistics.fetch
+                   .cumulative_statistics.fetch
 
 puts statistics.avg_task_acceptance_time
 puts statistics.tasks_entered

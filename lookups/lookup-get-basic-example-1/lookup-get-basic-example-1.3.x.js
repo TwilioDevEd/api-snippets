@@ -6,6 +6,13 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 client.lookups.v1
-  .phoneNumbers('+15108675309')
-  .fetch()
-  .then(number => console.log(number.carrier.type, number.carrier.name));
+  .phoneNumbers('+15108675310')
+  .fetch({type: 'carrier'})
+  .then(response => console.log(response.carrier))
+  .catch(error => {
+    if (error.status === 404) {
+      console.log('No carrier information');
+    } else {
+      console.log(error.message);
+    }
+  });

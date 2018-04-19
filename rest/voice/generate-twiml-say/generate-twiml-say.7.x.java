@@ -1,27 +1,21 @@
-import java.io.IOException;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.twilio.twiml.Say;
-import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
+import com.twilio.twiml.voice.Say;
 
-public class TwilioServlet extends HttpServlet {
-  // service() responds to both GET and POST requests.
-  // You can also use doGet() or doPost()
-  public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Say message =
-        new Say.Builder(
-          "Hello from your pals at Twilio! Have fun.").build();
-    VoiceResponse twiml = new VoiceResponse.Builder().say(message).build();
+import static spark.Spark.*;
 
-    response.setContentType("application/xml");
-    try {
-      response.getWriter().print(twiml.toXml());
-    } catch (TwiMLException e) {
-      e.printStackTrace();
+public class VoiceApp {
+    public static void main(String[] args) {
+
+        get("/hello", (req, res) -> "Hello Web");
+
+        post("/", (request, response) -> {
+            Say say  = new Say.Builder(
+                    "Hello from your pals at Twilio! Have fun.")
+                    .build();
+            VoiceResponse voiceResponse = new VoiceResponse.Builder()
+                    .say(say)
+                    .build();
+            return voiceResponse.toXml();
+        });
     }
-  }
 }

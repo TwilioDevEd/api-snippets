@@ -19,8 +19,8 @@ public class TwilioTest {
 
    // Build the parameters
    List<NameValuePair> params = new ArrayList<NameValuePair>();
-   params.add(new BasicNameValuePair("To", "+15558675309"));
-   params.add(new BasicNameValuePair("From", "+15017250604"));
+   params.add(new BasicNameValuePair("To", "+15558675310"));
+   params.add(new BasicNameValuePair("From", "+15017122661"));
    params.add(new BasicNameValuePair("Body", "Open to confirm: http://yourserver.com/confirm?id=1234567890"));
    params.add(new BasicNameValuePair("ProvideFeedback", "true"));
 

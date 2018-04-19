@@ -8,6 +8,7 @@ const service = client.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 service.syncLists
   .create({
     uniqueName: 'MyFirstList',
+    ttl: 1814400
   })
   .then(response => {
     console.log(response);

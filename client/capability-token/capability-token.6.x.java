@@ -17,7 +17,7 @@ public class TwilioServlet extends HttpServlet {
         String applicationSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         TwilioCapability capability = new TwilioCapability(ACCOUNT_SID, AUTH_TOKEN);
         capability.allowClientOutgoing(applicationSid);
-        capability.allowClientIncoming("jenny");
+        capability.allowClientIncoming("joey");
 
         String token = capability.generateToken();
 

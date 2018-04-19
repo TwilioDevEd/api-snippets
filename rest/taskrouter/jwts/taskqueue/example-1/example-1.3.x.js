@@ -1,7 +1,6 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These consts are your accountSid and authToken from https://www.twilio.com/console
 const taskrouter = require('twilio').jwt.taskrouter;
-const util = taskrouter.util;
 
 const TaskRouterCapability = taskrouter.TaskRouterCapability;
 const Policy = TaskRouterCapability.Policy;
@@ -9,16 +8,22 @@ const Policy = TaskRouterCapability.Policy;
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const taskqueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const TASKROUTER_BASE_URL = 'https://taskrouter.twilio.com';
 const version = 'v1';
+
+// By default, tokens are good for one hour.
+// Override this default timeout by specifiying a new value (in seconds).
+// For example, to generate a token good for 8 hours:
+const ttl = 28800;  // 60 * 60 * 8
 
 const capability = new TaskRouterCapability({
   accountSid: accountSid,
   authToken: authToken,
   workspaceSid: workspaceSid,
-  channelId: workerSid,
+  channelId: taskqueueSid,
+  ttl: ttl,
 });
 
 // Helper function to create Policy
@@ -39,26 +44,15 @@ function buildWorkspacePolicy(options) {
   });
 }
 
-// Event Bridge Policies
-const eventBridgePolicies = util.defaultEventBridgePolicies(
-  accountSid,
-  workerSid
-);
-
-const workspacePolicies = [
-  // Workspace fetch Policy
-  buildWorkspacePolicy(),
-  // Workspace subresources fetch Policy
-  buildWorkspacePolicy({ resources: ['**'] }),
-  // Workspace Tasks Update Policy
-  buildWorkspacePolicy({
-    resources: ['Workers', workerSid, 'Tasks', '**'],
-    method: 'POST',
-  }),
-];
-
-eventBridgePolicies.concat(workspacePolicies).forEach(policy => {
-  capability.addPolicy(policy);
+const allowFetchSubresources = buildWorkspacePolicy({
+  resources: ['TaskQueue', taskqueueSid, '**']
 });
+const allowUpdates = buildWorkspacePolicy({
+  resources: ['TaskQueue', taskqueueSid],
+  method: 'POST',
+});
+
+capability.addPolicy(allowFetchSubresources);
+capability.addPolicy(allowUpdates);
 
 const token = capability.toJwt();

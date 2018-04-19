@@ -19,7 +19,7 @@
 
     // make an associative array of senders we know, indexed by phone number
     $people = array(
-        "+14158675309"=>"Rey",
+        "+14158675308"=>"Rey",
         "+14158675310"=>"Finn",
         "+14158675311"=>"Chewy",
     );

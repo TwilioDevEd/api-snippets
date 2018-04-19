@@ -1,4 +1,4 @@
-# Get the Node helper library from https://twilio.com/docs/libraries/ruby
+# Get the Ruby helper library from https://twilio.com/docs/libraries/ruby
 require 'twilio-ruby'
 
 # Get your Account SID and Auth Token from https://twilio.com/console
@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new account_sid, auth_token
 
 body = 'Reply to this message to chat!'
-message_interaction = client.preview.proxy
+message_interaction = client.proxy
                             .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                             .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                             .participants('KPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.twilio.twiml.Body;
-import com.twilio.twiml.Message;
+import com.twilio.twiml.messaging.Body;
+import com.twilio.twiml.messaging.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
 
@@ -26,7 +26,7 @@ public class TrackingSmsConversations extends HttpServlet {
 
         // Create a dict of people we know.
         HashMap<String, String> people = new HashMap<String, String>();
-        people.put("+14158675309", "Curious George");
+        people.put("+14158675308", "Curious George");
         people.put("+14158675310", "Boots");
         people.put("+14158675311", "Virgil");
 

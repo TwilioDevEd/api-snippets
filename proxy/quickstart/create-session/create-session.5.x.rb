@@ -1,4 +1,4 @@
-# Get the Node helper library from https://twilio.com/docs/libraries/ruby
+# Get the Ruby helper library from https://twilio.com/docs/libraries/ruby
 require 'twilio-ruby'
 
 # Get your Account SID and Auth Token from https://twilio.com/console
@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 client = Twilio::REST::Client.new account_sid, auth_token
 
-session = client.preview.proxy
+session = client.proxy
                 .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                 .sessions
                 .create(unique_name: 'MyFirstSession')

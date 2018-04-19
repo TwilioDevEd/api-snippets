@@ -1,2 +1,2 @@
-curl -XGET 'https://lookups.twilio.com/v1/PhoneNumbers/(510)%20867-5309?CountryCode=US' \
+curl -XGET 'https://lookups.twilio.com/v1/PhoneNumbers/(510)%20867-5310?CountryCode=US' \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

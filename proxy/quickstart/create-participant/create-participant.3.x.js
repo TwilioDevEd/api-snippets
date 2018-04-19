@@ -5,12 +5,12 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.preview.proxy
+client.proxy
   .services('KSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .sessions('KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .participants.create({
-    identifier: '+15558675309',
-    friendly_name: 'Alice',
+    identifier: '+15558675310',
+    unique_name: 'Alice',
   })
   .then(response => {
     console.log(response);

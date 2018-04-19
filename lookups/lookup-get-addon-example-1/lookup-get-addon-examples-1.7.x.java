@@ -1,4 +1,4 @@
-// Install the Java helper library from twilio.com/docs/java/install
+// Install the Java helper library from twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.rest.lookups.v1.PhoneNumber;
 

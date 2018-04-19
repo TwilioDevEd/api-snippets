@@ -12,8 +12,8 @@ Net::HTTP.start(uri.host, uri.port,
 
   request = Net::HTTP::Post.new uri.request_uri
   request.basic_auth account_sid, auth_token
-  request.body = URI.encode_www_form(To: '+15558675309',
-                                     From: '+15017250604',
+  request.body = URI.encode_www_form(To: '+15558675310',
+                                     From: '+15017122661',
                                      MediaUrl: 'https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf')
 
   response = http.request request

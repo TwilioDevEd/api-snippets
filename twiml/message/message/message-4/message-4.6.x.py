@@ -2,7 +2,7 @@ from twilio.twiml.messaging_response import Body, Media, Message, MessagingRespo
 
 response = MessagingResponse()
 message = Message()
-message.body('Hello Jenny')
+message.body('Hello friend')
 message.media('https://demo.twilio.com/owl.png')
 response.append(message)
 

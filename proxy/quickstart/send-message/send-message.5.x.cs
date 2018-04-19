@@ -1,7 +1,7 @@
-// Get the Node helper library from https://twilio.com/docs/libraries/csharp
+// Get the C# helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Proxy.Service.Session.Participant;
+using Twilio.Rest.Proxy.V1.Service.Session.Participant;
 
 class Example
 {

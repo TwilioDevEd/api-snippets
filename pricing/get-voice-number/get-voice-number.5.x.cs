@@ -14,7 +14,7 @@ public class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var number = NumberResource.Fetch(new PhoneNumber("+15108675309"));
+        var number = NumberResource.Fetch(new PhoneNumber("+15108675310"));
 
         Console.WriteLine(number.OutboundCallPrice.CurrentPrice);
     }

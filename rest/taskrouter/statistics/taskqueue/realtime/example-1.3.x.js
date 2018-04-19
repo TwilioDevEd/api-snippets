@@ -9,7 +9,7 @@ const client = require('twilio')(accountSid, authToken);
 client.taskrouter.v1
   .workspaces(workspaceSid)
   .taskQueues(taskQueueSid)
-  .taskQueueRealTimeStatistics()
+  .realTimeStatistics()
   .fetch()
   .then(responseData => {
     console.log(responseData.longestTaskWaitingAge);

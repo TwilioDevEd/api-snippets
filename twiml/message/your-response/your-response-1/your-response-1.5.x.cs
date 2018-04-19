@@ -11,7 +11,7 @@ class Example
         var message = new Message();
         message.Body("Hello World!");
         response.Append(message);
-        response.Redirect(url: new Uri("https://demo.twilio.com/sms/welcome"));
+        response.Redirect(url: new Uri("https://demo.twilio.com/welcome/sms/"));
 
         Console.WriteLine(response.ToString());;
     }

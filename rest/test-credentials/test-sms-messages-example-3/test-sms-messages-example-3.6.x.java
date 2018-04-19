@@ -21,7 +21,7 @@ public class Example {
 
         // Build a filter for the SmsList
         List<NameValuePair> params = new ArrayList<>();
-        params.add(new BasicNameValuePair("To", "+14108675309"));
+        params.add(new BasicNameValuePair("To", "+14108675310"));
         params.add(new BasicNameValuePair("From", "+15005550006"));
 
         MessageFactory messageFactory = client.getAccount().getMessageFactory();

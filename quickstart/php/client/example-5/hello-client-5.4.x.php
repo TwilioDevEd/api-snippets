@@ -8,7 +8,7 @@ $authToken  = 'your_auth_token';
 $appSid     = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 // put your default Twilio Client name here
-$clientName = 'jenny';
+$clientName = 'joey';
 
 // get the Twilio Client name from the page request parameters, if given
 if (isset($_REQUEST['client'])) {

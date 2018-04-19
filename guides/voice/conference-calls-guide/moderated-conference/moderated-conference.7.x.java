@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Conference;
-import com.twilio.twiml.Dial;
+import com.twilio.twiml.voice.Conference;
+import com.twilio.twiml.voice.Dial;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
@@ -17,7 +17,7 @@ import com.twilio.twiml.VoiceResponse;
 public class IncomingCallServlet extends HttpServlet {
 
   // Update with your own phone number in E.164 format
-  public static final String MODERATOR = "+15558675309";
+  public static final String MODERATOR = "+15558675310";
 
   // Handle HTTP POST to /voice
   protected void doPost(HttpServletRequest request, HttpServletResponse response)

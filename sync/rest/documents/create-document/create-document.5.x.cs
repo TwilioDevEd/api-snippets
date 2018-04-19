@@ -25,7 +25,8 @@ public class Example
 
         var doc = DocumentResource.Create(serviceSid,
                                           "MyFirstDocument",
-                                          data);
+                                          data,
+                                          1814400); // expires in 21 days
 
         Console.WriteLine(doc.Sid);
     }

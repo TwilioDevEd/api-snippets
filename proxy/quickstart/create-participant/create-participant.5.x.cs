@@ -1,7 +1,7 @@
-// Get the Node helper library from https://twilio.com/docs/libraries/csharp
+// Get the C# helper library from https://twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Preview.Proxy.Service.Session;
+using Twilio.Rest.Proxy.V1.Service.Session;
 
 class Example
 {
@@ -17,7 +17,7 @@ class Example
         var participant = ParticipantResource.Create(
             proxyServiceSid,
             sessionSid,
-            "+15558675309",
+            "+15558675310",
             "Alice");
 
         Console.WriteLine(participant.Sid);

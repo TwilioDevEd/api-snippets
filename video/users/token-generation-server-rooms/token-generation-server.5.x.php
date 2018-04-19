@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;

@@ -11,6 +11,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 statistics = client.taskrouter.v1.workspaces(workspace_sid)
                    .task_queues(taskqueue_sid)
-                   .task_queue_real_time_statistics.fetch
+                   .real_time_statistics.fetch
 
 puts statistics.longest_task_waiting_age

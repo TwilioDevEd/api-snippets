@@ -1,6 +1,14 @@
+import com.twilio.http.HttpMethod;
+import com.twilio.http.NetworkHttpClient;
+import com.twilio.http.Request;
+import com.twilio.http.Response;
+import com.twilio.http.TwilioRestClient;
+import com.twilio.rest.Domains;
+import org.apache.commons.io.IOUtils;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.json.JSONObject;
-import com.twilio.Twilio;
-import com.twilio.rest.video.v1.Recording;
+
+import java.io.IOException;
 
 
 public class Example {
@@ -8,16 +16,22 @@ public class Example {
     public static final String API_KEY_SID = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     public static final String API_KEY_SECRET = "your_api_key_secret";
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
+        // Disable HttpClient follow redirect by default
+        HttpClientBuilder clientBuilder = HttpClientBuilder.create();
+        clientBuilder.disableRedirectHandling();
 
         // Initialize the client
-        Twilio.init(API_KEY_SID, API_KEY_SECRET);
+        TwilioRestClient restClient = new TwilioRestClient
+                .Builder(API_KEY_SID, API_KEY_SECRET)
+                .httpClient(new NetworkHttpClient(clientBuilder))
+                .build();
 
+        // Retrieve media location
         String roomSid = "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         String recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        TwilioRestClient restClient = Twilio.getRestClient();
         Request request = new Request(
-            HttpMethod.POST,
+            HttpMethod.GET,
             Domains.VIDEO.toString(),
             "/v1/Rooms/" + roomSid +
             "/Recordings/" + recordingSid +
@@ -25,8 +39,16 @@ public class Example {
             restClient.getRegion()
         );
         Response response = restClient.request(request);
-        String mediaLocation = json.getJSONObject(response.getStream()).getString("location");
+        JSONObject json = new JSONObject(response.getContent());
+        String mediaLocation = json.getString("redirect_to");
 
-        System.out.println(mediaLocation);
+        // Retrieve media content
+        String mediaContent = org.apache.http.client.fluent.Request
+                .Get(mediaLocation)
+                .execute()
+                .handleResponse((r) ->
+                        IOUtils.toString(r.getEntity().getContent()));
+
+        System.out.println(mediaContent);
     }
 }

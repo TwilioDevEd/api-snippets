@@ -1,17 +1,19 @@
+
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Net;
-using Twilio;
-using Twilio.Http;
+using System.Text;
+using Newtonsoft.Json;
 
 class Example
 {
-    static void Main (string[] args)
+    static void Main(string[] args)
     {
         // Find your Account SID and Auth Token at twilio.com/console
         const string apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string apiKeySecret = "your_api_key_secret";
-        TwilioClient.Init(apiKeySid, apiKeySecret);
 
         const string roomSid = "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -19,12 +21,14 @@ class Example
                           $"Rooms/{roomSid}/" +
                           $"Recordings/{recordingSid}/" +
                            "Media/";
-        var response = TwilioClient.GetRestClient().Request(new Request(HttpMethod.Get, uri));
-        var media_location = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content)["location"];
 
-        using(var webClient = new WebClient()) {
-            string media_content = webClient.DownloadString(media_location);
-            Console.WriteLine(media_content);
-        }
+        var request = (HttpWebRequest)WebRequest.Create(uri);
+        request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes(apiKeySid + ":" + apiKeySecret)));
+        request.AllowAutoRedirect = false;
+        string responseBody = new StreamReader(request.GetResponse().GetResponseStream()).ReadToEnd();
+        var mediaLocation = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseBody)["redirect_to"];
+
+        Console.WriteLine(mediaLocation);
+        new WebClient().DownloadFile(mediaLocation, $"{recordingSid}.out");
     }
 }

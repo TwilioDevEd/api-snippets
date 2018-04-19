@@ -1,6 +1,6 @@
 <?php
 
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/twilio-php/Services/Twilio.php'; // Loads the library
 
 // Your Account Sid and Auth Token from twilio.com/user/account
@@ -11,7 +11,7 @@ $client = new Services_Twilio($accountSid, $authToken);
 $message = $client->account->messages->create(
     array(
         'To'   => '+15005550006',
-        'From' => '+14108675309',
+        'From' => '+14108675310',
         'Body' => 'All in the game, yo'
     )
 );

@@ -19,8 +19,8 @@ class Example
         // Normally, we would call twilio.SendMessage() to send an SMS
         // But it doesn't support passing the ProvideFeedback parameter.
         var request = new RestRequest("Accounts/" + AccountSid + "/Messages.json", Method.POST);
-        request.AddParameter("From", "+15017250604");
-        request.AddParameter("To", "+15558675309");
+        request.AddParameter("From", "+15017122661");
+        request.AddParameter("To", "+15558675310");
         request.AddParameter("Body", "Open to confirm: http://yourserver.com/confirm?id=" + uniqueCode);
         request.AddParameter("ProvideFeedback", true);
         var response = twilio.Execute(request);

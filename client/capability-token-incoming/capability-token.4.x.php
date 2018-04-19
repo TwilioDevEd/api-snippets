@@ -6,7 +6,7 @@ $accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $authToken  = 'your_auth_token';
 
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
-$capability->allowClientIncoming("jenny");
+$capability->allowClientIncoming("joey");
 $token = $capability->generateToken();
 
 echo $token;

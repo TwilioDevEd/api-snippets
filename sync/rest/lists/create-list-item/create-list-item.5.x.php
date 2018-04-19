@@ -23,9 +23,8 @@ $item = $client->sync
     ->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->syncLists("MyCollection")
     ->syncListItems->create(
-        array(
-            'data' => $data
-        )
+        $data,
+        array('ttl' => 864000) // expires in 10 days
     );
 
 print_r($item->data);

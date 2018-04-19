@@ -16,7 +16,7 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var phoneNumber = PhoneNumberResource.Fetch(
-            new PhoneNumber("+15108675309"),
+            new PhoneNumber("+15108675310"),
             type: new List<string> { "caller-name", "carrier" });
 
         Console.WriteLine(phoneNumber.CallerName["caller_name"]);

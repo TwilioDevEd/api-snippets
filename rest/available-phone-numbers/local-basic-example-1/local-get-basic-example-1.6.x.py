@@ -10,6 +10,7 @@ numbers = client.available_phone_numbers("US") \
                 .local \
                 .list(area_code="510")
 
+# Purchase the phone number
 number = client.incoming_phone_numbers \
                .create(phone_number=numbers[0].phone_number)
 

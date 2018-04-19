@@ -10,7 +10,8 @@ auth_token = 'your_auth_token'
 
 # Loop over recordings and print out a property for each one
 @client.recordings.list(
-  date_created: Time.new('2009-07-06')
+  date_created_before: Time.new('2016-10-15'),
+  date_created_after: Time.new('2016-10-12')
 ).each do |recording|
   puts recording.duration
 end

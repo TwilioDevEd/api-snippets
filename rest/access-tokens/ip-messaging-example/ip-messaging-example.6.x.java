@@ -12,14 +12,10 @@ public class TokenGenerator {
 
     // Required for IP Messaging
     String ipmServiceSid = "ISxxxxxxxxxxxx";
-    String deviceId = "someiosdevice";
     String identity = "user@example.com";
-    String appName = "HipFlowSlackDockRC";
-    String endpointId = appName + ":" + identity + ":" + deviceId;
       
     // Create IP messaging grant
     IpMessagingGrant grant = new IpMessagingGrant();
-    grant.setEndpointId(endpointId);
     grant.setServiceSid(ipmServiceSid);
     
     // Create access token

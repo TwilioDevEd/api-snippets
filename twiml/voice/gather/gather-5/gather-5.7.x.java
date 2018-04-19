@@ -1,17 +1,18 @@
-import com.twilio.twiml.Gather;
-import com.twilio.twiml.Redirect;
+import com.twilio.twiml.voice.Gather;
+import com.twilio.twiml.voice.Redirect;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.Say;
+import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
-import com.twilio.twiml.Method;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
         Say say = new Say.Builder("Enter something, or not").build();
         Gather gather = new Gather.Builder().action("/process_gather.php")
-            .method(Method.GET).say(say).build();
-        Redirect redirect = new Redirect.Builder().method(Method.GET)
-            .url("/process_gather.php?Digits=TIMEOUT").build();
+            .method(HttpMethod.GET).say(say).build();
+        Redirect redirect = new Redirect.Builder("/process_gather.php?Digits=TIMEOUT")
+            .method(HttpMethod.GET)
+            .build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
             .redirect(redirect).build();
 

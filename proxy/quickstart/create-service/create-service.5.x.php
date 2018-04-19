@@ -1,5 +1,5 @@
 <?php
-// Get the Node helper library from https://twilio.com/docs/libraries/php
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require './vendor/autoload.php';
 use Twilio\Rest\Client;
 // Get your Account SID and Auth Token from https://twilio.com/console
@@ -8,12 +8,11 @@ $token = "your_auth_token";
 // Initialize the client
 $client = new Client($sid, $token);
 $service = $client
-    ->preview
     ->proxy
     ->services
     ->create([
-      "friendlyName" => "My Awesome Service",
+      "uniqueName" => "My Awesome Service",
       "callbackUrl" => "https://www.example.com/"
     ]);
 
-echo $service->friendlyName;
+echo $service->uniqueName;

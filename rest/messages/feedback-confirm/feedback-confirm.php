@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 // Use the REST API Client to make requests to the Twilio REST API

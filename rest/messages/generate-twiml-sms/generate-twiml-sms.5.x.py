@@ -1,8 +1,7 @@
-from flask import Flask
+from flask import Flask, request, redirect
 from twilio import twiml
 
 app = Flask(__name__)
-
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
@@ -14,7 +13,6 @@ def sms_reply():
     resp.message("The Robots are coming! Head for the hills!")
 
     return str(resp)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
