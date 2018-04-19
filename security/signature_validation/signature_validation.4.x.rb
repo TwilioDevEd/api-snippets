@@ -3,7 +3,7 @@ require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Auth Token from https://www.twilio.com/console
-auth_token = 'your_auth_token'
+auth_token = '12345'
 validator = Twilio::Util::RequestValidator.new(auth_token)
 
 url = 'https://mycompany.com/myapp.php?foo=1&bar=2'
