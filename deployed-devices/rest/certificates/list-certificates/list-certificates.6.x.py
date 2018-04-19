@@ -9,6 +9,6 @@ client = Client(account_sid, auth_token)
 fleet_sid = 'FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 fleet_service = client.preview.deployed_devices.fleets(fleet_sid)
 
-certificates = fleet_service.certificates.list()
+certificates = fleet_service.list()
 
 print(certificates)
