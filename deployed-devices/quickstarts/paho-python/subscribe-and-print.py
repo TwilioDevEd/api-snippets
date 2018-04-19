@@ -23,5 +23,5 @@ client.on_message = print_message
 # Use qos=1 to get your device caught up right away.
 #
 client.connect('mqtt-sync.us1.twilio.com', 8883, 60)
-client.subscribe('sync/docs/MyFirstDocument', qos=1)
+client.subscribe('sync/docs/MyDoc', qos=1)
 client.loop_forever()
