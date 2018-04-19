@@ -7,6 +7,8 @@ pem_location = './CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.pem'
 key_location = './CYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.key.decrypted'
 
 client = mqtt.Client(client_id="bob", clean_session=False)
+client.tls_set(None, pem_location, key_location)
+
 
 #
 # Initialize TLS, specify trusted CA roots, client certifiate and key file locations.
