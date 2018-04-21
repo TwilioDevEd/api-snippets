@@ -8,7 +8,7 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 capability = Twilio::JWT::TaskRouterCapability.new(
-  account_sid, auth_token,
+ (account_sid, auth_token),
   workspace_sid, worker_sid
 )
 

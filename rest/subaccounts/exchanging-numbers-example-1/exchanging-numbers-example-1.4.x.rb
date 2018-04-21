@@ -5,7 +5,7 @@ require 'twilio-ruby'
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::Client.new account_sid, auth_token
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # In the case you want to transfer numbers between subaccounts, you need to
 # know three things - the account SID of the phone number's current owner,
