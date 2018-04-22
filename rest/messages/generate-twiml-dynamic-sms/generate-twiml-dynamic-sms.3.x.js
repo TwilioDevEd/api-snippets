@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/', (req, res) => {
   const twiml = new MessagingResponse();
