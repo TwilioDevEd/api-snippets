@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Twilio\Twiml;
 
-$app->post('voice', ['middleware' => 'TwilioRequestValidator',
+$router->post('voice', ['middleware' => 'TwilioRequestValidator',
   function() {
     $twiml = new Twiml();
     $twiml->say('Hello World!');
@@ -12,7 +12,7 @@ $app->post('voice', ['middleware' => 'TwilioRequestValidator',
   }
 ]);
 
-$app->post('message', ['middleware' => 'TwilioRequestValidator',
+$router->post('message', ['middleware' => 'TwilioRequestValidator',
   function(Request $request) {
     $bodyLength = strlen($request->input('Body'));
 
