@@ -39,6 +39,8 @@ var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid)
 var workspacePolicies = [
   // Workspace fetch Policy
   buildWorkspacePolicy(),
+  // Workspace subresources fetch Policy
+  buildWorkspacePolicy({ resources: ['**'] }),
   // Workspace Activities Update Policy
   buildWorkspacePolicy({ resources: ['Activities'], method: 'POST' }),
   // Workspace Activities Worker Reserations Policy

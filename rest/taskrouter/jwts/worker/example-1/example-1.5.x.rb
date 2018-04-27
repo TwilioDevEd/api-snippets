@@ -12,6 +12,12 @@ capability = Twilio::JWT::TaskRouterCapability.new(
   workspace_sid, worker_sid
 )
 
+allow_fetch_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(
+  Twilio::JWT::TaskRouterCapability::TaskRouterUtils
+  .worker(workspace_sid, worker_sid), 'GET', true
+)
+capability.add_policy(allow_fetch_subresources)
+
 allow_activity_updates = Twilio::JWT::TaskRouterCapability::Policy.new(
   Twilio::JWT::TaskRouterCapability::TaskRouterUtils
   .all_activities(workspace_sid), 'POST', true

@@ -13,6 +13,7 @@ capability = Twilio::TaskRouter::WorkerCapability.new account_sid,
                                                       workspace_sid,
                                                       worker_sid
 
+capability.allow_fetch_subresources
 capability.allow_activity_updates
 capability.allow_reservation_updates
 

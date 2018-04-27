@@ -12,6 +12,7 @@ public class Example {
   public static void main(String[] args) throws DomainException {
 
     TaskRouterWorkerCapability capability = new TaskRouterWorkerCapability(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID, WORKER_SID);
+    capability.allowFetchSubresources();
     capability.allowActivityUpdates();
     capability.allowReservationUpdates();
     String token = capability.generateToken();
