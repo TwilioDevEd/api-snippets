@@ -13,6 +13,7 @@ capability = WorkerCapabilityToken(
     workspace_sid=workspace_sid,
     worker_sid=worker_sid
 )
+capability.allow_fetch_subresources()
 capability.allow_update_activities()
 capability.allow_update_reservations()
 token = capability.to_jwt()
