@@ -10,6 +10,7 @@ worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 capability = TaskRouterWorkerCapability(
     account_sid, auth_token, workspace_sid, worker_sid
 )
+capability.allow_fetch_subresources()
 capability.allow_activity_updates()
 capability.allow_reservation_updates()
 token = capability.generate_token()

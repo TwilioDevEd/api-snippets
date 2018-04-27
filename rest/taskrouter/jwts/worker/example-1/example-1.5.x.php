@@ -10,6 +10,7 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $capability = new WorkerCapability($accountSid, $authToken, $workspaceSid, $workerSid);
+$capability->allowFetchSubresources();
 $capability->allowActivityUpdates();
 $capability->allowReservationUpdates();
 $token = $capability->generateToken();
