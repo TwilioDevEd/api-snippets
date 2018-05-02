@@ -1,4 +1,4 @@
 {
-  "title": "Map a CredentialList to the Domain",
-  "type": "server"
+  "type": "server",
+  "title": "Map a IpAccessControlList to the Domain"
 }
