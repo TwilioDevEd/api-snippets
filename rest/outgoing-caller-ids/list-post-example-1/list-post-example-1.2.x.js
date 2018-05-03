@@ -1,12 +1,21 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-var authToken = "your_auth_token";
-var client = require('twilio')(accountSid, authToken);
+const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const authToken = 'your_auth_token';
+const Client = require('twilio').RestClient;
 
-client.outgoingCallerIds.create({
-    friendlyName: "My Home Phone Number",
-    phoneNumber: "+14158675309"
-}, function(err, callerId) {
-    process.stdout.write(callerId.sid);
-});
+const client = new Client(accountSid, authToken);
+
+client.outgoingCallerIds.create(
+  {
+    friendlyName: 'My Home Phone Number',
+    phoneNumber: '+14158675310',
+  },
+  (err, callerId) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(callerId.sid);
+    }
+  }
+);

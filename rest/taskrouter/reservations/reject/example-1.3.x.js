@@ -15,7 +15,7 @@ client.taskrouter.v1
   .update({
     reservationStatus: 'rejected',
   })
-  .then((reservation) => {
+  .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);
   });

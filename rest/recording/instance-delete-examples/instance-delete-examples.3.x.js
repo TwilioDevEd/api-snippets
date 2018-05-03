@@ -6,10 +6,11 @@ const client = require('twilio')(accountSid, authToken);
 
 const recordingSid = 'RE557ce644e5ab84fa21cc21112e22c485';
 
-client.recordings(recordingSid)
+client
+  .recordings(recordingSid)
   .remove()
   .then(() => console.log(`Sid ${recordingSid} deleted successfully.`))
-  .catch((err) => {
+  .catch(err => {
     console.log(err.status);
     throw err;
   });

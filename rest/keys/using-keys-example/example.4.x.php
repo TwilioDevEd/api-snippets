@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once('./twilio-php/Services/Twilio.php');
 
 // Instantiate a client using your API key and secret - but then, you'll need to
@@ -15,8 +15,8 @@ $account = $client->accounts->get($accountSid);
 // Send a message for the main account
 $message = $account->messages->create(
     array(
-      'To' => '+15558675309', // destination phone number
-      'From' => '+15017250604', // twilio number in your account
+      'To' => '+15558675310', // destination phone number
+      'From' => '+15017122661', // twilio number in your account
       'Body' => 'Never gonna give you up.'
     )
 );

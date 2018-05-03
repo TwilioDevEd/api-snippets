@@ -13,7 +13,7 @@ class Example
         const string authToken = "your_auth_token";
 
         TwilioClient.Init(accountSid, authToken);
-        
+
         AccountResource.Update(
             pathSid: accountSidToActivate,
             status: AccountResource.StatusEnum.Active);

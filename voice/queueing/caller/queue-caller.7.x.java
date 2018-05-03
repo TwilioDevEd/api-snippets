@@ -5,17 +5,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.Dial;
-import com.twilio.twiml.Queue;
+import com.twilio.twiml.voice.Enqueue;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
 public class Example extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Queue queue = new Queue.Builder("Queue Demo").build();
-    Dial dial = new Dial.Builder().queue(queue).build();
-
-    VoiceResponse twiml = new VoiceResponse.Builder().dial(dial).build();
+    Enqueue enqueue = new Enqueue.Builder().name("Queue Demo").build();
+    VoiceResponse twiml = new VoiceResponse.Builder().enqueue(enqueue).build();
 
     response.setContentType("application/xml");
 

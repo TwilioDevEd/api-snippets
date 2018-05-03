@@ -9,8 +9,9 @@ service = @client.chat.v2.services(service_sid)
 
 # Create role
 role = service.roles.create(
-    friendly_name: 'friendlyName',
-    type: 'deployment',
-    permission: ['createChannel', 'joinChannel'])
+  friendly_name: 'friendlyName',
+  type: 'deployment',
+  permission: %w[createChannel joinChannel]
+)
 
 puts "Created role #{role.sid}."

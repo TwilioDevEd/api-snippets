@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $calls = $client->calls->read(
-    array("status" => "busy", "to" => "+15558675309")
+    array("status" => "busy", "to" => "+15558675310")
 );
 // Loop over the list of calls and echo a property for each one
 foreach ($calls as $call) {

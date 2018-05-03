@@ -1,0 +1,27 @@
+{
+  "total_workers": 2,
+  "activity_statistics": [
+    {
+      "sid": "WA7208808f8a0460f4a38c17375767716c",
+      "friendly_name": "Reserved",
+      "workers": 0
+    },
+    {
+      "sid": "WAc568c96375feb0d4fce47f6975a3eed8",
+      "friendly_name": "Ready",
+      "workers": 0
+    },
+    {
+      "sid": "WAe29fd962395b0ce5da1fa6b3e24f834f",
+      "friendly_name": "Busy",
+      "workers": 0
+    },
+    {
+      "sid": "WAef18703ae3626aa90f6c4eea177aa57b",
+      "friendly_name": "Not Ready",
+      "workers": 2
+    }
+  ],
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "workspace_sid": "WS7d4813fc78909747b773945352c5b960"
+}

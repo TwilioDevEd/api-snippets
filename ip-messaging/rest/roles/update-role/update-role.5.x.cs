@@ -17,13 +17,13 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         // Update the role
-        var permissions = new List<string>
-        {
-            "sendMessage",
-            "leaveChannel"
-        };
+        var empty_list = new List<string>();
+        var newPermissions = new List<string> { "sendMessage" };
 
-        var role = RoleResource.Update(serviceSid, roleSid, permissions);
+        var role = RoleResource.Fetch(serviceSid, roleSid);
+        newPermissions.AddRange(role.Permissions ?? empty_list);
+
+        role = RoleResource.Update(serviceSid, roleSid, newPermissions);
 
         foreach (var permission in role.Permissions)
         {

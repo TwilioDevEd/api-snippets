@@ -1,21 +1,18 @@
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-      "commands": {
-        "enabled": true
-      },
-      "renewal": "monthly",
-      "date_updated": "2016-09-01T08:21:09Z",
-      "friendly_name" : "Data-only US automotive rate plan",
-      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "unique_name": "us-automotive",
-      "url": "https://preview.twilio.com/wireless/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
-      "sid": "WP467fb57a0aba9641a8209136d42545f8",
-      "date_created": "2016-05-20T06:06:07Z",
-      "roaming": [],
-      "data": {
-        "cap": 50,
-        "metering": "pooled"
-      }
-    }
+  "voice_enabled": false,
+  "unique_name": "us-automotive",
+  "data_limit": 50,
+  "data_metering": "pooled",
+  "date_updated": "2016-09-01T08:21:09Z",
+  "friendly_name": "Data-only US automotive rate plan",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2016-05-20T06:06:07Z",
+  "url": "https://wireless.twilio.com/v1/RatePlans/WP467fb57a0aba9641a8209136d42545f8",
+  "messaging_enabled": true,
+  "data_enabled": true,
+  "sid": "WP467fb57a0aba9641a8209136d42545f8",
+  "national_roaming_enabled": false,
+  "national_roaming_data_limit": 0
 }

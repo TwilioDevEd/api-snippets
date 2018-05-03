@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client.account.conferences.list(
+@client.conferences.list(
   status: 'in-progress',
   friendly_name: 'MyRoom'
 ).each do |conference|

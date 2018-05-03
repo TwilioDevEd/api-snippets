@@ -1,2 +1,2 @@
-curl -X GET https://preview.twilio.com/Sync/Services/ISxx/Lists \
+curl -X GET https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists \
  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

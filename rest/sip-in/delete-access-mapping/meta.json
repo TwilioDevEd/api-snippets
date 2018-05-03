@@ -1,4 +1,4 @@
 {
-  "title": "Delete a CredentialListMapping from a Domain",
-  "type": "server"
+  "type": "server",
+  "title": "Delete a IpAccessControlList from a Domain"
 }

@@ -1,0 +1,20 @@
+{
+    "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2015-07-30T20:00:00Z",
+    "date_updated": "2015-07-30T20:00:00Z",
+    "status": "in-progress",
+    "type": "group",
+    "sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "enable_turn": false,
+    "unique_name": "DailyStandupWithH264Codec",
+    "max_participants": 10,
+    "duration": 0,
+    "status_callback_method": "POST",
+    "status_callback": "http://example.org",
+    "record_participants_on_connect": true,
+    "end_time": "2015-07-30T20:00:00Z",
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "links": {
+        "recordings": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings"
+    }
+}

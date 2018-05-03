@@ -1,4 +1,4 @@
 {
-  "title": "Send SMS Notification",
-  "type": "server"
+  "type": "server",
+  "title": "Send SMS Notification Using Identity"
 }

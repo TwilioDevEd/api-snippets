@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/MessageStatus', (req, res) => {
   const messageSid = req.body.MessageSid;
@@ -12,7 +12,7 @@ app.post('/MessageStatus', (req, res) => {
 
   console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
 
-  res.end();
+  res.sendStatus(200);
 });
 
 http.createServer(app).listen(1337, () => {

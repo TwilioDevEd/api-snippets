@@ -10,4 +10,4 @@ worker_sid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 worker = client.taskrouter.workspaces(workspace_sid) \
-                                      .workers(worker_sid).delete()
+    .workers(worker_sid).delete()

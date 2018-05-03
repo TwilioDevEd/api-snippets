@@ -11,7 +11,7 @@ $token = "12345";
 
 // The X-Twilio-Signature header - in PHP this should be
 // $_SERVER["HTTP_X_TWILIO_SIGNATURE"];
-$signature = 'RSOYDt4T1cUTdK1PDd93/VVr8B8=';
+$signature = 'GvWf1cFY/Q7PnoempGyD5oXAezc=';
 
 // Initialize the validator
 $validator = new RequestValidator($token);
@@ -24,9 +24,9 @@ $url = 'https://mycompany.com/myapp.php?foo=1&bar=2';
 // $postVars = $_POST
 $postVars = array(
     'CallSid' => 'CA1234567890ABCDE',
-    'Caller' => '+14158675309',
+    'Caller' => '+14158675310',
     'Digits' => '1234',
-    'From' => '+14158675309',
+    'From' => '+14158675310',
     'To' => '+18005551212'
 );
 

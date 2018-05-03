@@ -8,8 +8,8 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@numbers = @client.account.available_phone_numbers('US').toll_free.list
+@numbers = @client.api.available_phone_numbers('US').toll_free.list
 
 @number = @numbers[0].phone_number
 
-@client.account.incoming_phone_numbers.create(phone_number: @number)
+@client.incoming_phone_numbers.create(phone_number: @number)

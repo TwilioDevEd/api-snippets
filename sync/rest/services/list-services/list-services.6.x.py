@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-services = client.preview.sync.services.list()
+services = client.sync.services.list()
 
 for service in services:
     print(service.sid)

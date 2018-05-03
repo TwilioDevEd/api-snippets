@@ -2,7 +2,7 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/php
-require_once('/path/to/twilio-php/Rest/Client.php');
+require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
@@ -20,7 +20,7 @@ $user = $client
     ->notify->services($serviceSid)
     ->users->create([
         'identity' => 'User0001',
-        'segments' => ['premium', 'fitness-lifestyle']
+        'segment' => ['premium', 'fitness-lifestyle']
     ]);
 
 echo $user->sid;

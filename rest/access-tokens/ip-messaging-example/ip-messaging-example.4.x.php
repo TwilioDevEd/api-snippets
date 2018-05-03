@@ -8,10 +8,7 @@ $twilioApiSecret = 'xxxxxxxxxxxxxx';
 
 // Required for IP messaging grant
 $ipmServiceSid = 'ISxxxxxxxxxxxx';
-$appName = 'HipFlowSlackDockRC';
 $identity = 'user@example.com';
-$deviceId = 'someiosdevice';
-$endpointId = $appName . ':' . $identity . ':' . $deviceId;
 
 // Create access token
 $token = new Services_Twilio_AccessToken(
@@ -25,7 +22,6 @@ $token = new Services_Twilio_AccessToken(
 // Create IP Messaging grant
 $ipmGrant = new Services_Twilio_Auth_IpMessagingGrant();
 $ipmGrant->setServiceSid($ipmServiceSid);
-$ipmGrant->setEndpointId($endpointId);
 
 // Add grant to token
 $token->addGrant($ipmGrant);

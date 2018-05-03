@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over short_codes and print out a property for each one
-@client.account.short_codes.list(
+@client.short_codes.list(
   short_code: '898'
 ).each do |short_code|
   puts short_code.sms_method

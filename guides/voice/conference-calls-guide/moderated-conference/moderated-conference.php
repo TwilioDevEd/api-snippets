@@ -1,12 +1,12 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 
 // this line loads the library 
 require_once '/path/to/vendor/autoload.php';
 use Twilio\Twiml;
 
 // Update with your own phone number in E.164 format
-$MODERATOR = '+15558675309';
+$MODERATOR = '+15558675310';
 
 $response = new Twiml;
 

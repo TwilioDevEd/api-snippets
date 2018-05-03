@@ -6,10 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-did_delete = client.preview \
-                   .sync \
-                   .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                   .documents("MyFirstDocument") \
-                   .delete()
+did_delete = client.sync \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .documents("MyFirstDocument") \
+    .delete()
 
 print(did_delete)

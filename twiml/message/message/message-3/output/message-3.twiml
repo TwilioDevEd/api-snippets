@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Message action="/SmsHandler.php" method="POST">
+        Store Location: 123 Easy St.
+    </Message>
+</Response>

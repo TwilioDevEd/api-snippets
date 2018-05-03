@@ -1,0 +1,7 @@
+twilio*.jar
+composer*
+vendor/*
+Example.java
+Example.app
+Example.exe
+lib

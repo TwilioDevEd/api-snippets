@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
-using Twilio;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
 
 class Example {
     static void Main (string[] args) {
@@ -13,7 +14,7 @@ class Example {
         const string roleSid = "RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         // Update a user
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
+        var client = new IpMessagingClient(accountSid, authToken);
         User user = client.UpdateUser(serviceSid, userSid, roleSid);
         Console.WriteLine(user);
     }

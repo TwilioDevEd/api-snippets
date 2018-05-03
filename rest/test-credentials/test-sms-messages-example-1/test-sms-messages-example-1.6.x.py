@@ -8,8 +8,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-        body="All in the game, yo",
-        to="+5571981265131",
-        from_="")
+    body="All in the game, yo", to="+5571981265131", from_=""
+)
 
 print(message.sid)

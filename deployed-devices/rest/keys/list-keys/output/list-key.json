@@ -1,0 +1,24 @@
+{
+  "keys": [
+    {
+      "sid": "KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "friendly_name": null,
+      "fleet_sid": "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "device_sid": "THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "secret": null,
+      "date_created": "2017-08-14T17:52:00Z",
+      "date_updated": "2017-08-14T17:52:00Z",
+      "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys/KYXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    }
+  ],
+  "meta": {
+    "key": "keys",
+    "page": 0,
+    "page_size": 50,
+    "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys?PageSize=50&Page=0",
+    "next_page_url": null,
+    "previous_page_url": null,
+    "first_page_url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys?PageSize=50&Page=0"
+  }
+}

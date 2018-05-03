@@ -13,7 +13,7 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     ResourceSet<Call> calls =
-        Call.reader().setStatus(Call.Status.BUSY).setTo(new PhoneNumber("+15558675309")).read();
+        Call.reader().setStatus(Call.Status.BUSY).setTo(new PhoneNumber("+15558675310")).read();
 
     // Loop over calls and print out a property for each one.
     for (Call call : calls) {

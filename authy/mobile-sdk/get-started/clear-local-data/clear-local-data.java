@@ -1,0 +1,1 @@
+twilioAuth.clearLocalData();

@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/csharp/install
 using System;
-using Twilio;
+using Twilio.IpMessaging;
+using Twilio.IpMessaging.Model;
 
 class Example {
     static void Main (string[] args) {
@@ -11,8 +12,8 @@ class Example {
         string roleSid = "RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         // Retrieve the role
-        var client = new TwilioIpMessagingClient(accountSid, authToken);
-        Role role = client.getRole(serviceSid,roleSid);
+        var client = new IpMessagingClient(accountSid, authToken);
+        Role role = client.GetRole(serviceSid,roleSid);
         Console.WriteLine(role);
     }
 }

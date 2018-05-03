@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
@@ -13,6 +13,6 @@ $client = new Client($sid, $token);
 $participant = $client
     ->conferences("CFbbe4632a3c49700934481addd5ce1659")
     ->participants("CA386025c9bf5d6052a1d1ea42b4d16662")
-    ->update("True");
+    ->update(array("muted" => "True"));
 
 echo $participant->muted;

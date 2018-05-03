@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Notify;
+using Twilio.Rest.Notify.V1;
 
 public class Example
 {
@@ -21,6 +21,6 @@ public class Example
             true
         );
 
-        Console.WriteLine(credential.friendlyName);
+        Console.WriteLine(credential.FriendlyName);
     }
 }

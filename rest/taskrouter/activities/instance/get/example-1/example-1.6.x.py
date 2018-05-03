@@ -9,6 +9,6 @@ activity_sid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 activity = client.taskrouter.workspaces(workspace_sid) \
-        .activities(activity_sid).fetch()
+    .activities(activity_sid).fetch()
 
 print(activity.friendly_name)

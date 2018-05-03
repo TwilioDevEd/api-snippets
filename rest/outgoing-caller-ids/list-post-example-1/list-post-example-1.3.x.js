@@ -4,9 +4,9 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.outgoingCallerIds
+client.validationRequests
   .create({
     friendlyName: 'My Home Phone Number',
-    phoneNumber: '+14158675309',
+    phoneNumber: '+14158675310',
   })
-  .then((callerId) => process.stdout.write(callerId.sid));
+  .then(data => console.log(data.validationCode));

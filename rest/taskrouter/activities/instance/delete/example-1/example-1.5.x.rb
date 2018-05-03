@@ -10,6 +10,6 @@ activity_sid = 'WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 activity = client.taskrouter.v1.workspaces(workspace_sid)
-  .activities(activity_sid)
+                 .activities(activity_sid)
 
 activity.delete

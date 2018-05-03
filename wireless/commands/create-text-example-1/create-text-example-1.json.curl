@@ -1,0 +1,4 @@
+curl -X POST https://wireless.twilio.com/v1/Commands \
+  -d 'Sim=AliceSmithSmartMeter' \
+  -d 'Command=wakeup' \
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

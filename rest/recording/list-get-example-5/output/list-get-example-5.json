@@ -1,0 +1,25 @@
+{
+	"page": 0,
+	"page_size": 50,
+	"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?Page=0&PageSize=50",
+	"first_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?Page=0&PageSize=50",
+	"previous_page_uri": null,
+	"next_page_uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings.json?Page=1&PageSize=50",
+	"recordings": [
+		{
+			"account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"api_version": "2010-04-01",
+			"call_sid": "CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"channels": 2,
+			"date_created": "Tue, 18 Oct 2016 21:55:38 +0000",
+			"date_updated": "Tue, 18 Oct 2016 21:56:34 +0000",
+			"duration": "53",
+			"price": "-0.00250",
+			"price_unit": "USD",
+			"sid": "REXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"source": "DialVerb",
+			"status": "completed",
+			"uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/REXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json"
+		}
+	]
+}

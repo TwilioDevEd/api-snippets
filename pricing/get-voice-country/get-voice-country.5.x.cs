@@ -17,7 +17,6 @@ public class Example
 
         foreach (var price in country.InboundCallPrices)
         {
-            Console.WriteLine(price.Type);
             Console.WriteLine(price.CurrentPrice);
         }
     }

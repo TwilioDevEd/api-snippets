@@ -1,5 +1,5 @@
-$ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.json \
+curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls.json \
     -d "Url=http://demo.twilio.com/docs/voice.xml" \
-    -d "To=client:tommy" \
+    -d "To=client:charlie" \
     -d "From=%2B15017250604" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

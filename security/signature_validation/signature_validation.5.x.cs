@@ -9,7 +9,7 @@ class Example
     static void Main(string[] args)
     {
         // Your Auth Token from twilio.com/console
-        const string authToken = "your-secret";
+        const string authToken = "12345";
 
         // Initialize the validator
         var validator = new RequestValidator(authToken);
@@ -18,14 +18,14 @@ class Example
         const string url = "https://mycompany.com/myapp.php?foo=1&bar=2";
 
         // The X-Twilio-Signature header attached to the request
-        const string twilioSignature = "RSOYDt4T1cUTdK1PDd93/VVr8B8=";
+        const string twilioSignature = "GvWf1cFY/Q7PnoempGyD5oXAezc=";
 
         var parameters = new Dictionary<string, string>
         {
             {"CallSid", "CA1234567890ABCDE"},
-            {"Caller", "+14158675309"},
+            {"Caller", "+14158675310"},
             {"Digits", "1234"},
-            {"From", "+14158675309"},
+            {"From", "+14158675310"},
             {"To", "+18005551212"}
         };
 

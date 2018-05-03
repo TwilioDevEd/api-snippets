@@ -13,8 +13,8 @@ class Example
         const string authToken = "your_auth_token";
         TwilioClient.Init(accountSid, authToken);
 
-        var to = new Client("client:tommy");
-        var from = new PhoneNumber("+15017250604");
+        var to = new Client("client:charlie");
+        var from = new PhoneNumber("+15017122661");
         var call = CallResource.Create(to,
                                        from,
                                        url: new Uri("http://demo.twilio.com/docs/voice.xml"));

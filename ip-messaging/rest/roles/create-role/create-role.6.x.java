@@ -1,7 +1,14 @@
+import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.ipmessaging.Role;
-import com.twilio.sdk.resource.list.ipmessaging.RoleList;
 import com.twilio.sdk.TwilioIPMessagingClient;
 import com.twilio.sdk.resource.instance.ipmessaging.Service;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TwilioTest {
     // Find your Account Sid and Token at twilio.com/user/account
@@ -24,6 +31,6 @@ public class TwilioTest {
         final Map<String, String> roleparams = new HashMap<String, String>();
         roleparams.put("FriendlyName", "RoleName");
         Role role = service.createRole(roleparams);
-        System.out.println(role.toString());    
+        System.out.println(role.toString());
     }
 }

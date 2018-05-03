@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
@@ -9,7 +9,7 @@ $authToken = "your_auth_authToken";
 $client = new Client($accountSid, $authToken);
 
 $call = $client->calls->create(
-    "+14155551212", "+14158675309",
+    "+14155551212", "+14158675310",
     array("url" => "http://demo.twilio.com/docs/voice.xml", "record" => true)
 );
 

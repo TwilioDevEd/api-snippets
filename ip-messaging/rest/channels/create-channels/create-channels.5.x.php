@@ -18,8 +18,8 @@ $channel = $client->chat
     ->channels
     ->create(
         array(
-            'friendlyName' => 'CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-            'uniqueName' => 'unique_channel_name'
+            'friendlyName' => 'MyChannel',
+            'uniqueName' => 'my-channel'
         )
     );
 

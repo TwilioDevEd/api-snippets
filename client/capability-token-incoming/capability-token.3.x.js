@@ -11,11 +11,9 @@ app.get('/token', (req, res) => {
 
   const capability = new ClientCapability({
     accountSid: accountSid,
-    authToken: authToken
+    authToken: authToken,
   });
-  capability.addScope(
-    new ClientCapability.IncomingClientScope('jenny')
-  );
+  capability.addScope(new ClientCapability.IncomingClientScope('joey'));
   const token = capability.toJwt();
 
   res.set('Content-Type', 'application/jwt');

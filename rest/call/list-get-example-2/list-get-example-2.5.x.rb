@@ -13,7 +13,7 @@ auth_token = 'your_auth_token'
 
 # Get all calls for given account which have the status of completed and given
 # start time and print the call direction
-@client.account.calls.list(status: 'completed', start_time: @start_time)
+@client.calls.list(status: 'completed', start_time: @start_time)
        .each do |call|
          puts call.direction
        end

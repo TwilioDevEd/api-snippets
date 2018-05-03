@@ -9,7 +9,7 @@ token = "your_auth_token"
 client = Client(account, token)
 
 credential = client.notify \
-                   .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
+                   .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
                    .fetch()
 
 print(credential.friendly_name)

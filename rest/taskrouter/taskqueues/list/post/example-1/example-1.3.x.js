@@ -5,12 +5,9 @@ const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
-client.taskrouter.v1
-  .workspaces(workspaceSid)
-  .taskQueues
-  .create({
-    friendlyName: 'English',
-    reservationActivitySid: 'WAxxxx',
-    assignmentActivitySid: 'WAyyyy',
-    targetWorkers: 'languages HAS "english"',
-  });
+client.taskrouter.v1.workspaces(workspaceSid).taskQueues.create({
+  friendlyName: 'English',
+  reservationActivitySid: 'WAxxxx',
+  assignmentActivitySid: 'WAyyyy',
+  targetWorkers: 'languages HAS "english"',
+});

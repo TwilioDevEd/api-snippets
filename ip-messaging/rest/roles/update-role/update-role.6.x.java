@@ -1,7 +1,12 @@
+import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.resource.instance.ipmessaging.Role;
-import com.twilio.sdk.resource.list.ipmessaging.RoleList;
 import com.twilio.sdk.TwilioIPMessagingClient;
 import com.twilio.sdk.resource.instance.ipmessaging.Service;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TwilioTest {
     // Find your Account Sid and Token at twilio.com/user/account
@@ -21,7 +26,7 @@ public class TwilioTest {
         final List<NameValuePair> roleParams = new ArrayList<NameValuePair>();
         roleParams.add(new BasicNameValuePair("Permission", "sendMessage"));
         roleParams.add(new BasicNameValuePair("Permission", "leaveChannel"));
-        role.update(roleparams);
+        role.update(roleParams);
         System.out.println(role.toString());
     }
 }

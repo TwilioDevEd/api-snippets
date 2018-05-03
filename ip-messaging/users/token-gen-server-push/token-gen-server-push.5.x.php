@@ -1,5 +1,7 @@
-use Twilio\Jwt\Grants\IpMessagingGrant;
-$ipmGrant = new IpMessagingGrant();
-$ipmGrant->setServiceSid($ipmServiceSid);
-$ipmGrant->setEndpointId($endpointId);
-$ipmGrant->setPushCredentialSid("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+<?php
+
+use Twilio\Jwt\Grants\ChatGrant;
+$grant = new ChatGrant();
+$grant->setServiceSid($serviceSid);
+$grant->setEndpointId($endpointId);
+$grant->setPushCredentialSid("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")

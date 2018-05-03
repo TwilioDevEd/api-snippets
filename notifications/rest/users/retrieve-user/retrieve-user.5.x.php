@@ -2,7 +2,7 @@
 // NOTE: This example uses the next generation Twilio helper library - for more
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/php
-require_once('/path/to/twilio-php/Rest/Client.php');
+require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
@@ -17,7 +17,7 @@ $client = new Client($accountSid, $authToken);
 
 // Create a user
 $user = $client
-    ->notify->services($serviceSid)
-    ->users('User001');
+    ->notify->v1->services($serviceSid)
+    ->users("User0001")->fetch();
 
 echo $user->sid;

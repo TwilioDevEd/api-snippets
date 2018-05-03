@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 use Twilio\Rest\Client;
@@ -8,11 +8,11 @@ use Twilio\Rest\Client;
 $accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $authToken = "your_auth_token";
 $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$activitySid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$workflowSid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $client = new Client($accountSid, $authToken);
 
 $client->taskrouter
     ->workspaces($workspaceSid)
-    ->activities($activitySid)
+    ->workflows($workflowSid)
     ->delete();

@@ -10,7 +10,7 @@ taskqueue_sid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 taskqueue = client.taskrouter.v1.workspaces(workspace_sid)
-  .task_queues(taskqueue_sid)
+                  .task_queues(taskqueue_sid)
 
 taskqueue = taskqueue.update(target_workers: 'languages HAS "english"')
 

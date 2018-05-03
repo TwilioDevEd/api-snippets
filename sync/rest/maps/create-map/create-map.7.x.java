@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.preview.sync.service.SyncMap;
+import com.twilio.rest.sync.v1.service.SyncMap;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -13,7 +13,10 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Create a Maps group
-    SyncMap map = SyncMap.creator(SERVICE_SID).setUniqueName("Players").create();
+    SyncMap map = SyncMap.creator(SERVICE_SID)
+                         .setUniqueName("Players")
+                         .setTtl(1814400)
+                         .create();
 
     System.out.println(map.getSid());
   }

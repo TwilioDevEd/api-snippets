@@ -6,10 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = TwilioRestClient(account_sid, auth_token)
 
-numbers = client.phone_numbers.search(
-    country="GB",
-    type="mobile"
-)
+numbers = client.phone_numbers.search(country="GB", type="mobile")
 
 # Purchase the first number in the list
 if numbers:

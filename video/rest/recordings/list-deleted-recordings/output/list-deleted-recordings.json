@@ -1,0 +1,35 @@
+{
+    "recordings": [
+        {
+            "status": "deleted",
+            "grouping_sids": {
+                "room_sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                "participant_sid": "PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            },
+            "url": "https://video.twilio.com/v1/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "container_format": "mka",
+            "track_name": "A name",
+            "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "codec": "opus",
+            "source_sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "sid": "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "duration": 198,
+            "date_created": "2018-01-30T18:13:27Z",
+            "type": "audio",
+            "size": 956376,
+            "links": {
+                "media": "https://video.twilio.com/v1/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media"
+            }
+        }
+    ],
+    "meta": {
+        "page": 0,
+        "count": 1,
+        "page_size": 50,
+        "first_page_url": "https://video.twilio.com/v1/Recordings?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "url": "https://video.twilio.com/v1/Recordings?PageSize=50&Page=0",
+        "next_page_url": null,
+        "key": "recordings"
+    }
+}

@@ -11,4 +11,4 @@ const filterOpts = {
   dateSent: new Date(2016, 0, 1),
 };
 
-client.messages.each(filterOpts, (message) => console.log(message.body));
+client.messages.each(filterOpts, message => console.log(message.body));

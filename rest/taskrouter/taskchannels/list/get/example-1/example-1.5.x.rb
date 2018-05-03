@@ -9,6 +9,6 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 client.taskrouter.v1.workspaces(workspace_sid)
-  .task_channels.list.each do |task_channel|
+      .task_channels.list.each do |task_channel|
   puts task_channel.unique_name
 end

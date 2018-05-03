@@ -9,4 +9,4 @@ activity_sid = "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 activity = client.taskrouter.workspaces(workspace_sid) \
-        .activities(activity_sid).delete()
+    .activities(activity_sid).delete()

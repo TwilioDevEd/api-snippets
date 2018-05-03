@@ -10,4 +10,4 @@ workflow_sid = "WWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 workflow = client.taskrouter.workspaces(workspace_sid) \
-        .workflows(workflow_sid).delete()
+    .workflows(workflow_sid).delete()

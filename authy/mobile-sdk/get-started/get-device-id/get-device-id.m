@@ -1,0 +1,1 @@
+NSString *deviceId = [sharedTwilioAuth getDeviceId];

@@ -18,7 +18,7 @@ public class Example {
     // Build a filter for the IncomingPhoneNumberList
     Map<String, String> params = new HashMap<String, String>();
     
-    params.put("PhoneNumber", "+14158675309");
+    params.put("PhoneNumber", "+14158675310");
     
     IncomingPhoneNumberList numbers = client.getAccount().getIncomingPhoneNumbers(params);
     

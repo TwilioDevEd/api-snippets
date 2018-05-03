@@ -3,7 +3,7 @@
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const taskQueueSid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const taskQueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.v1
@@ -11,6 +11,6 @@ client.taskrouter.v1
   .taskQueues(taskQueueSid)
   .statistics()
   .fetch()
-  .then((responseData) => {
-     console.log(responseData.cumulative.reservations_accepted);
-   });
+  .then(responseData => {
+    console.log(responseData.cumulative.reservations_accepted);
+  });

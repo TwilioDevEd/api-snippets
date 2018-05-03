@@ -7,8 +7,8 @@ auth_token = 'your_auth_token'
 
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
-credential = client.notify
+credential = client.notify.v1
                    .credentials('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                   .fetch()
+                   .fetch
 
 puts credential.friendly_name

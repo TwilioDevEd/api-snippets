@@ -6,8 +6,9 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Retreive the service
-service = client.preview.sync.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a Maps group
-response = service.sync_maps.create(unique_name: 'Players')
+response = service.sync_maps.create(unique_name: 'Players',
+                                    ttl: 1814400)
 puts response

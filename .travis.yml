@@ -1,3 +1,4 @@
+dist: trusty
 sudo: required
 
 rvm:
@@ -7,7 +8,7 @@ before_install:
   - ./install_travis_dependencies.sh
 
 install:
-  - gem install json colorize parallel
+  - gem install json colorize nokogiri rubocop
   - git clone https://github.com/TwilioDevEd/twilio-api-faker.git
   - sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
   - sudo update-ca-certificates
@@ -24,25 +25,37 @@ env:
     - GRADLE_OPTS="-Dorg.gradle.daemon=true"
     - BASH=/bin/bash
     - BASH_SOURCE=/usr/local/bin/virtualenvwrapper.sh
-    - PARALLEL=2
-  matrix:
-    - SNIPPET_LANGUAGE=java6
-    - SNIPPET_LANGUAGE=java7
-    - SNIPPET_LANGUAGE=python:curl
-    - SNIPPET_LANGUAGE=php:ruby
 
 matrix:
   include:
+    - env: SNIPPET_LANGUAGE=python:curl
+      dist: precise
+    - env: SNIPPET_LANGUAGE=java6
+      jdk: oraclejdk7
+    - env: SNIPPET_LANGUAGE=java7
+      jdk: oraclejdk8
     - language: csharp
       mono: latest
-      env: SNIPPET_LANGUAGE=csharp:node
+      env: SNIPPET_LANGUAGE=csharp:ruby
+    - env: SNIPPET_LANGUAGE=node:php
 
 addons:
   hosts:
     - api.twilio.com
-    - taskrouter.twilio.com
-    - pricing.twilio.com
+    - chat.twilio.com
+    - fax.twilio.com
+    - ip-messaging.twilio.com
     - lookups.twilio.com
+    - messaging.twilio.com
+    - monitor.twilio.com
+    - notifications.twilio.com
+    - notify.twilio.com
+    - preview.twilio.com
+    - pricing.twilio.com
+    - sync.twilio.com
+    - taskrouter.twilio.com
+    - video.twilio.com
+    - wireless.twilio.com
 
 notifications:
   slack:
@@ -54,3 +67,10 @@ notifications:
 cache:
   apt: true
   pip: true
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/

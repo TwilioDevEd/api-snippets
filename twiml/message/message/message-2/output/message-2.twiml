@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Message>
+        <Body>Store Location: 123 Easy St.</Body>
+        <Media>https://demo.twilio.com/owl.png</Media>
+    </Message>
+</Response>

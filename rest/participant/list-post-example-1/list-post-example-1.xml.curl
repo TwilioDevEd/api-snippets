@@ -1,0 +1,4 @@
+curl 'https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/AgentConf12/Participants' -X POST \
+  --data-urlencode 'To=+15624421212' \
+  --data-urlencode 'From=+18180021216' \
+  -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

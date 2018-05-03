@@ -10,6 +10,6 @@ worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 worker = client.taskrouter.v1.workspaces(workspace_sid)
-  .workers(worker_sid).fetch
+               .workers(worker_sid).fetch
 
 puts worker.friendly_name

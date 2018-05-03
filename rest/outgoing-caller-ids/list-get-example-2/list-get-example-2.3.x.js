@@ -4,6 +4,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.outgoingCallerIds
-  .each({phoneNumber: '+14158675309'},
-        (callerId) => console.log(callerId.phoneNumber));
+client.api
+  .accounts(accountSid)
+  .outgoingCallerIds // filter callerids to include only those that have the following number
+  .each({ phoneNumber: '+14158675310' }, callerId => console.log(callerId.sid));

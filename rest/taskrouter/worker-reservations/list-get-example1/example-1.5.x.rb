@@ -11,7 +11,7 @@ reservation_sid = 'WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 reservation = client.taskrouter.v1.workspaces(workspace_sid)
-  .workers(worker_sid).reservations(reservation_sid)
+                    .workers(worker_sid).reservations(reservation_sid)
 
 reservation.update(reservation_status: 'accepted')
 

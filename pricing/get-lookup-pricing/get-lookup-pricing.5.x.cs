@@ -18,7 +18,7 @@ public class Example
         TwilioClient.Init(accountSid, authToken);
 
         var phoneNumber = PhoneNumberResource.Fetch(
-                new PhoneNumber("+15108675309"),
+                new PhoneNumber("+15108675310"),
                 type: new List<string> { "carrier" });
 
         var mcc = phoneNumber.Carrier["mobile_country_code"];
@@ -30,8 +30,7 @@ public class Example
         var prices = countries
             .OutboundSmsPrices
             .Where(price => price.Mcc.Equals(mcc) && price.Mnc.Equals(mnc))
-            .SelectMany(price => price.Prices)
-            .Where(price => price.Type.Equals(InboundSmsPrice.TypeEnum.Local));
+            .SelectMany(price => price.Prices);
 
 
         foreach (var price in prices)

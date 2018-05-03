@@ -13,7 +13,7 @@ rescue
   puts "Error replacing content in file: #{file_path}"
 end
 
-Dir.glob("**/*") do |file|
+Dir.glob('**/*') do |file|
   next if file.index(/^tools\//) || file.include?('nuget/') || file.include?('vendor/') || file.include?('testable_snippets/')
   replace_account_sid(file) unless File.directory?(file)
 end

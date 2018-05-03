@@ -1,0 +1,46 @@
+{
+  "start_time": "2015-07-31T22:50:48Z",
+  "end_time": "2015-07-31T23:05:48Z",
+  "reservations_accepted": 0,
+  "reservations_canceled": 0,
+  "reservations_created": 0,
+  "reservations_rejected": 0,
+  "reservations_rescinded": 0,
+  "reservations_timed_out": 0,
+  "activity_durations": [
+    {
+      "sid": "WAe29fd962395b0ce5da1fa6b3e24f834f",
+      "friendly_name": "Busy",
+      "min": 0,
+      "max": 0,
+      "avg": 0,
+      "total": 0
+    },
+    {
+      "sid": "WAef18703ae3626aa90f6c4eea177aa57b",
+      "friendly_name": "Not Ready",
+      "min": 0,
+      "max": 0,
+      "avg": 0,
+      "total": 0
+    },
+    {
+      "sid": "WAc568c96375feb0d4fce47f6975a3eed8",
+      "friendly_name": "Ready",
+      "min": 0,
+      "max": 0,
+      "avg": 0,
+      "total": 0
+    },
+    {
+      "sid": "WA7208808f8a0460f4a38c17375767716c",
+      "friendly_name": "Reserved",
+      "min": 0,
+      "max": 0,
+      "avg": 0,
+      "total": 0
+    }
+  ],
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "workspace_sid": "WS7d4813fc78909747b773945352c5b960"
+}

@@ -4,5 +4,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.accounts.each({friendlyName: 'MySubaccount'},
-                     (account) => console.log(account.status));
+client.api.accounts.each({ friendlyName: 'MySubaccount' }, account =>
+  console.log(account.status)
+);

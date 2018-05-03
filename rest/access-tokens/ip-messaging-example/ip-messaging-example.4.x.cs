@@ -13,7 +13,6 @@ class Example
     // These are specific to IP Messaging
     var ipmServiceSid = "ISxxxxxxxxxxxx";
     var identity = "user@example.com";
-    var deviceId = "someiosdevice";
 
     // Create an Access Token generator
     var token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);
@@ -21,7 +20,6 @@ class Example
 
     // Create an IP messaging grant for this token
     var grant = new IpMessagingGrant();
-    grant.EndpointId = $"HipFlowSlackDockRC:{identity}:{deviceId}";
     grant.ServiceSid = ipmServiceSid;
     token.AddGrant(grant);
 

@@ -20,7 +20,7 @@ public class Example {
     List<String> callbackEvents = Arrays.asList("initiated", "ringing", "answered", "completed");
 
     Call call = Call
-        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675309"),
+        .creator(new PhoneNumber("+14155551212"), new PhoneNumber("+18668675310"),
             new URI("http://demo.twilio.com/docs/voice.xml"))
         .setMethod(HttpMethod.GET).setStatusCallback("https://www.myapp.com/events")
         .setStatusCallbackMethod(HttpMethod.POST).setStatusCallbackEvent(callbackEvents).create();

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/simple_gather.xml -->
+<Response>
+    <Gather input="speech" action="/completed">
+           <Say>Welcome to Twilio, please tell us why you're calling</Say>
+        </Gather>
+</Response>

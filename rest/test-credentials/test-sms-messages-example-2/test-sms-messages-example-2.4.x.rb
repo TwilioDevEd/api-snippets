@@ -8,8 +8,9 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 message = @client.account.messages.create(
-  :body => 'Hey Mr Nugget, you the bomb!',
-  :to   => '+15005550009',
-  :from => '+15005550006')
+  body: 'Hey Mr Nugget, you the bomb!',
+  to: '+15005550009',
+  from: '+15005550006'
+)
 
 puts message.sid

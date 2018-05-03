@@ -1,0 +1,6 @@
+curl -X POST https://wireless.twilio.com/v1/RatePlans \
+    -d 'UniqueName=SmartMeterCA' \
+    -d "FriendlyName=California SmartMeter Plan" \
+    -d 'DataLimit=5' \
+    -d 'MessagingEnabled=true' \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

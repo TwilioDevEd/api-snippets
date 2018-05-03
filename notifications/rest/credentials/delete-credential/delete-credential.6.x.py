@@ -9,5 +9,5 @@ token = "your_auth_token"
 client = Client(account, token)
 
 client.notify \
-      .credentials("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") \
+      .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
       .delete()

@@ -7,15 +7,15 @@ import com.twilio.rest.notify.v1.service.user.UserBinding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACCOUNT_SID";
-  public static final String AUTH_TOKEN = "AUTH_TOKEN";
+  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  public static final String AUTH_TOKEN = "your_auth_token";
 
   public static void main(String[] args) {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     String serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    String identity = "NUXXXX"
+    String identity = "User0001";
     // List the User Bindings
     ResourceSet<UserBinding> userBindings = UserBinding
         .reader(serviceSid, identity).read();

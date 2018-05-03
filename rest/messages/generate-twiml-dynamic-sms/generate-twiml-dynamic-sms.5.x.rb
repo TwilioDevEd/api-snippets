@@ -8,13 +8,13 @@ post '/sms' do
   body = params['Body'].downcase
 
   # Build response based on given body param
-  twiml = Twilio::TwiML::Response.new do |resp|
+  twiml = Twilio::TwiML::MessagingResponse.new do |resp|
     if body == 'hello'
-      resp.Message 'Hi!'
+      resp.message body: 'Hi!'
     elsif body == 'bye'
-      resp.Message 'Goodbye'
+      resp.message body: 'Goodbye'
     end
   end
 
-  twiml.text
+  twiml.to_s
 end

@@ -25,19 +25,19 @@ def call():
     # Otherwise, extract the Whitepages data
     whitepages = add_ons['results']['whitepages_pro_caller_id']
 
-    # Grab the first result Whitepages gave us
+    # Grab the result Whitepages gave us
     # (see the "Documentation" tab on the Whitepages add-on for more details)
-    caller_id = whitepages['result']['results'][0]
+    caller_id = whitepages['result']
 
     # See if we can get the caller's name
     try:
-        first_name = caller_id['belongs_to'][0]['names'][0]['first_name']
+        first_name = caller_id['belongs_to'][0]['firstname']
     except (IndexError, KeyError):
         first_name = 'a mystery'
 
     # And what city the caller lives in
     try:
-        city = caller_id['associated_locations'][0]['city']
+        city = caller_id['current_addresses'][0]['city']
     except (IndexError, KeyError):
         city = 'a mystery'
 

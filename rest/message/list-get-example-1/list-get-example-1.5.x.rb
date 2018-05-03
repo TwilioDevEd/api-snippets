@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Get message with the given sid
-@message = @client.account.messages('MM800f449d0399ed014aae2bcc0cc2f2ec').fetch
+@message = @client.api.messages('MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 
-@client.account.messages.list.each do |message|
+@client.messages.list.each do |message|
   puts message.body
 end

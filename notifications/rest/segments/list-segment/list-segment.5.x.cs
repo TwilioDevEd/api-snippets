@@ -18,6 +18,9 @@ public class Example
 
         var segments = SegmentResource.Read(serviceSid);
 
-        Console.WriteLine(segments[0].getSid());
+        foreach (var segment in segments)
+        {
+            Console.WriteLine(segment.Sid);
+        }
     }
 }

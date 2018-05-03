@@ -1,23 +1,54 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These consts are your accountSid and authToken from https://www.twilio.com/console
-const twilio = require('twilio');
+const taskrouter = require('twilio').jwt.taskrouter;
+const util = taskrouter.util;
+
+const TaskRouterCapability = taskrouter.TaskRouterCapability;
+const Policy = TaskRouterCapability.Policy;
 
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const workerSid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-const capability = new twilio.jwt.TaskRouterWorkerCapability(accountSid,
-  authToken,
-  workspaceSid,
-  workerSid);
+const TASKROUTER_BASE_URL = 'https://taskrouter.twilio.com';
+const version = 'v1';
 
-capability.allowActivityUpdates();
-capability.allowReservationUpdates();
+const capability = new TaskRouterCapability({
+  accountSid: accountSid,
+  authToken: authToken,
+  workspaceSid: workspaceSid,
+  channelId: workerSid});
 
-const token = capability.generate();
+// Helper function to create Policy
+function buildWorkspacePolicy(options) {
+  options = options || {};
+  var resources = options.resources || [];
+  var urlComponents = [TASKROUTER_BASE_URL, version, 'Workspaces', workspaceSid]
 
-// By default, tokens are good for one hour.
-// Override this default timeout by specifiying a new value (in seconds).
-// For example, to generate a token good for 8 hours:
-token = capability.generate(28800);  // 60 * 60 * 8
+  return new Policy({
+    url: urlComponents.concat(resources).join('/'),
+    method: options.method || 'GET',
+    allow: true
+  });
+}
+
+// Event Bridge Policies
+var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
+
+var workspacePolicies = [
+  // Workspace fetch Policy
+  buildWorkspacePolicy(),
+  // Workspace subresources fetch Policy
+  buildWorkspacePolicy({ resources: ['**'] }),
+  // Workspace Activities Update Policy
+  buildWorkspacePolicy({ resources: ['Activities'], method: 'POST' }),
+  // Workspace Activities Worker Reserations Policy
+  buildWorkspacePolicy({ resources: ['Workers', workerSid, 'Reservations', '**'], method: 'POST' }),
+];
+
+eventBridgePolicies.concat(workspacePolicies).forEach(function (policy) {
+  capability.addPolicy(policy);
+});
+
+var token = capability.toJwt();

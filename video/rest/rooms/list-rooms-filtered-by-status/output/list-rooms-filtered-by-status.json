@@ -1,0 +1,32 @@
+{
+    "rooms": [{
+        "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "date_created": "2015-07-30T20:00:00Z",
+        "date_updated": "2015-07-30T20:00:00Z",
+        "status": "in-progress",
+        "type": "peer-to-peer",
+        "sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "enable_turn": false,
+        "unique_name": "DailyStandup",
+        "max_participants": 10,
+        "duration": 0,
+        "status_callback_method": "POST",
+        "status_callback": "",
+        "record_participants_on_connect": false,
+        "end_time": "2015-07-30T20:00:00Z",
+        "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "links": {
+            "recordings": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings"
+        }
+    }],
+    "meta": {
+        "page": 0,
+        "count": 1,
+        "page_size": 50,
+        "first_page_url": "https://video.twilio.com/v1/Rooms?PageSize=50&Page=0",
+        "previous_page_url": null,
+        "url": "https://video.twilio.com/v1/Rooms?PageSize=50&Page=0",
+        "next_page_url": null,
+        "key": "rooms"
+    }
+}

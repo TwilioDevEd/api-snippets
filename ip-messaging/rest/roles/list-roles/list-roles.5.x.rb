@@ -8,6 +8,6 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 service = @client.chat.v2.services(service_sid)
 
 # List roles
-roles = service.roles.each do |r|
-    puts "Role #{r.sid} has permissions #{r.permissions.join(', ')}"
+service.roles.each do |r|
+  puts "Role #{r.sid} has permissions #{r.permissions.join(', ')}"
 end

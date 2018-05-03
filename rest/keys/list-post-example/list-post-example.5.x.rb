@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@key = @client.account.new_keys.create(friendly_name: 'User Jenny')
+@key = @client.new_keys.create(friendly_name: 'User Joey')
 
 puts @key.sid
 puts @key.secret

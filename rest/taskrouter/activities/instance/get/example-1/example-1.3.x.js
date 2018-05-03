@@ -10,4 +10,4 @@ client.taskrouter.v1
   .workspaces(workspaceSid)
   .activities(activitySid)
   .fetch()
-  .then((activity) => console.log(activity.friendlyName));
+  .then(activity => console.log(activity.friendlyName));

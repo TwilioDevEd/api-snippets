@@ -8,6 +8,6 @@ auth_token = 'your_auth_token'
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 client
-    .notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    .users('0000001')
-    .segment_membership('premium').delete();
+  .notify.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+  .users('0000001')
+  .segment_memberships('premium').delete

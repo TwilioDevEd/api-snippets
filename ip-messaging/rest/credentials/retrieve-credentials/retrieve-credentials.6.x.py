@@ -6,6 +6,7 @@ account = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 token = "your_auth_token"
 client = Client(account, token)
 
-credential = client.chat.credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch()
+credential = client.chat \
+    .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch()
 
 print(credential.sid)

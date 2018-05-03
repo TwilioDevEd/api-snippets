@@ -1,0 +1,5 @@
+{
+  "description": "Enable all the available PRE and POST event callbacks for a Service instance",
+  "type": "server",
+  "title": "Enable all Event Callbacks via Chat Webhooks"
+}

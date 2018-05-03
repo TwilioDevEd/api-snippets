@@ -8,6 +8,7 @@ var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 var workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 var capability = new twilio.TaskRouterWorkerCapability(accountSid, authToken, workspaceSid, workerSid);
+capability.allowFetchSubresources();
 capability.allowActivityUpdates();
 capability.allowReservationUpdates();
 var token = capability.generate();

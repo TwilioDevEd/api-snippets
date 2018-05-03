@@ -13,6 +13,7 @@ class Example
     string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     TaskRouterWorkerCapability capability = new TaskRouterWorkerCapability(AccountSid, AuthToken, WorkspaceSid, WorkerSid);
+    capability.AllowFetchSubresources();
     capability.AllowActivityUpdates();
     capability.AllowReservationUpdates();
     var token = capability.GenerateToken();

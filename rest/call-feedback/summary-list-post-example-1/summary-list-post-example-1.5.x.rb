@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@summary = @client.account.calls.feedback_summaries
+@summary = @client.calls.feedback_summaries
                   .create(
                     start_date: Time.parse('2014-06-01'),
                     end_date: Time.parse('2014-06-30'),

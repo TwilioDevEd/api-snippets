@@ -12,8 +12,8 @@ client = Client(account_sid, auth_token)
 
 # reject a reservation
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .workers(worker_sid).reservations(reservation_sid) \
-        .update(reservation_status='rejected')
+    .workers(worker_sid).reservations(reservation_sid) \
+    .update(reservation_status='rejected')
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

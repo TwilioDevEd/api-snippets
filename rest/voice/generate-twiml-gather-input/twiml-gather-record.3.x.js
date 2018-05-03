@@ -9,7 +9,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 // POST: '/voice/handle-gather'
-router.post('/handle-gather', twilio.webhook({validate: false}), (req, res) => {
+router.post(
+  '/handle-gather',
+  twilio.webhook({ validate: false }),
+  (req, res) => {
     const selectedOption = req.body.Digits;
     const twiml = new VoiceResponse();
 
@@ -33,21 +36,24 @@ router.post('/handle-gather', twilio.webhook({validate: false}), (req, res) => {
     }
 
     res.send(redirectWelcome());
-});
+  }
+);
 
 const redirectWelcome = () => {
-    const twiml = new VoiceResponse();
+  const twiml = new VoiceResponse();
 
-    twiml.say({voice: 'alice', language: 'en-GB'},
-              'Returning to the main menu');
+  twiml.say(
+    { voice: 'alice', language: 'en-GB' },
+    'Returning to the main menu'
+  );
 
-    twiml.redirect('/voice');
+  twiml.redirect('/voice');
 
-    return twiml;
+  return twiml;
 };
 
 app.use('/', router);
 
 http.createServer(app).listen(1337, () => {
-    console.log('Express server listening on port 1337');
+  console.log('Express server listening on port 1337');
 });

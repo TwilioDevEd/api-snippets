@@ -7,9 +7,9 @@ const client = require('twilio')(accountSid, authToken);
 
 client.messages
   .create({
-    to: '+15558675309',
-    from: '+15017250604',
+    to: '+15558675310',
+    from: '+15017122661',
     body: 'McAvoy or Stewart? These timelines can get so confusing.',
     statusCallback: 'http://requestb.in/1234abcd',
   })
-  .then((message) => console.log(message.sid));
+  .then(message => console.log(message.sid));

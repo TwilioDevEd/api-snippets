@@ -8,8 +8,10 @@ workspace_sid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 task_queue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 capability = TaskQueueCapabilityToken(
-    account_sid=account_sid, auth_token=auth_token,
-    workspace_sid=workspace_sid, task_queue_sid=task_queue_sid
+    account_sid=account_sid,
+    auth_token=auth_token,
+    workspace_sid=workspace_sid,
+    task_queue_sid=task_queue_sid
 )
 capability.allow_fetch_subresources()
 capability.allow_update_subresources()

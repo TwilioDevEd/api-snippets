@@ -1,0 +1,14 @@
+{
+  "sid": "THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "friendly_name": "My New Device",
+  "unique_name": null,
+  "fleet_sid": "FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "deployment_sid": "DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "identity": "bob@twilio.com",
+  "enabled": true,
+  "date_created": "2017-08-14T19:19:30Z",
+  "date_updated": "2017-08-14T19:21:45Z",
+  "date_authenticated": null,
+  "url": "https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Devices/THXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}

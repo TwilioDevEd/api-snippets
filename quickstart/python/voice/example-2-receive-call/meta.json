@@ -1,0 +1,5 @@
+{
+    "title": "Respond to an incoming call with a brief message",
+    "description": "Respond to an incoming request from Twilio with instructions on how to handle the call",
+    "type": "server"
+}

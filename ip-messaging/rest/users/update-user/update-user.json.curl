@@ -1,3 +1,3 @@
-curl -XPOST https://chat.twilio.com/v2/Services/{service sid}/Users/{user sid} \
+curl -XPOST https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Users/USXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
     -d "RoleSID=xxxxx" \
     -u '{twilio account sid}:{twilio auth token}'

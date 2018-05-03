@@ -6,15 +6,15 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 const credentialOpts = {
-  certificate: Certificate@cert.pem,
-  privateKey: PrivateKey@key.pem,
+  certificate: 'Certificate@cert.pem',
+  privateKey: 'PrivateKey@key.pem',
   friendlyName: 'MyAPNCredential',
-  sandbox: true,
+  sandbox: 'true',
   type: 'apn',
 };
 
-client.notify
-  .credentials.create(credentialOpts)
+client.notify.credentials
+  .create(credentialOpts)
   .then(credential => console.log(credential.friendlyName))
   .catch(error => console.log(error))
   .done();

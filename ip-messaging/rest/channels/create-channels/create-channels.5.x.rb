@@ -8,5 +8,5 @@ service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # Create the channel
 service = @client.chat.v2.services(service_sid)
-channel = service.channels.create(unique_name: "My new channel")
+channel = service.channels.create(unique_name: 'my-channel')
 puts "Channel #{channel.sid} (\"#{channel.unique_name}\") created!"

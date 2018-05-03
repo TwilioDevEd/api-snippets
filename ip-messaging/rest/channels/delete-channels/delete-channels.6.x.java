@@ -2,6 +2,7 @@ import com.twilio.sdk.resource.instance.ipmessaging.Channel;
 import com.twilio.sdk.resource.list.ipmessaging.ChannelList;
 import com.twilio.sdk.TwilioIPMessagingClient;
 import com.twilio.sdk.resource.instance.ipmessaging.Service;
+import com.twilio.sdk.TwilioRestException;
 
 public class TwilioTest {
   // Find your Account Sid and Token at twilio.com/user/account

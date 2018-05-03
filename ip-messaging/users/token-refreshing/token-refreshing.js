@@ -1,4 +1,4 @@
-chatClient.on('tokenExpired', refreshToken);   
+chatClient.on('tokenExpired', refreshToken);
 
 function refreshToken() {
   fetchAccessToken(setNewToken);

@@ -5,6 +5,7 @@ const authToken = 'your_auth_token';
 
 const client = require('twilio')(accountSid, authToken);
 
-client.api.accounts('ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa').tokens
-  .create({})
-  .then((token) => console.log(token.username));
+client.api
+  .accounts('ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+  .tokens.create({})
+  .then(token => console.log(token.username));

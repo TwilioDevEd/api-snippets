@@ -10,6 +10,6 @@ taskqueue_sid = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 client = Client(account_sid, auth_token)
 
 taskqueue = client.taskrouter.workspaces(workspace_sid) \
-        .task_queues(taskqueue_sid).fetch()
+    .task_queues(taskqueue_sid).fetch()
 
 print(taskqueue.friendly_name)

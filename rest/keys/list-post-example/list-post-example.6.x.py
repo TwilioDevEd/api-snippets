@@ -7,7 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 key = client.new_keys \
-            .create(friendly_name="User Jenny")
+            .create(friendly_name="User Joey")
 
 print(key.sid)
 print(key.secret)

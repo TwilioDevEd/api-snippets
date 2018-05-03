@@ -5,10 +5,11 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.account.newKeys.create({
-    friendlyName: 'User Jenny',
+client.api.account.newKeys
+  .create({
+    friendlyName: 'User Joey',
   })
-  .then((key) => {
+  .then(key => {
     process.stdout.write(key.sid);
     process.stdout.write(key.secret);
   });

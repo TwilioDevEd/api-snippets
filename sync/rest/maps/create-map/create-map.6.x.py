@@ -6,10 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-map_instance = client.preview \
-                     .sync \
-                     .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                     .sync_maps \
-                     .create(unique_name="Players")
+map_instance = client.sync \
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .sync_maps \
+    .create(unique_name="Players", ttl=1814400)
 
 print(map_instance.sid)

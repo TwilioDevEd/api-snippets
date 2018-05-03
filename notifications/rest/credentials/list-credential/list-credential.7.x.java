@@ -3,7 +3,7 @@
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
-import com.twilio.rest.notify.Credential;
+import com.twilio.rest.notify.v1.Credential;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account

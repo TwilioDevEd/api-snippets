@@ -1,0 +1,14 @@
+[flake8]
+exclude =
+    ./tools/*,
+    ./venv/*,
+    ./twiml/*,
+    ./guides/*,
+    ./testable_snippets/*,
+    */testable_snippets/*
+
+ignore =
+    # D100: Missing docstring in public module
+    D100,
+    # H306: imports not in alphabetical order (time, os)
+    H306,

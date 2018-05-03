@@ -5,6 +5,7 @@ logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 
+
 @app.route("/MessageStatus", methods=['POST'])
 def incoming_sms():
     message_sid = request.values.get('MessageSid', None)
@@ -12,6 +13,7 @@ def incoming_sms():
     logging.info('SID: {}, Status: {}'.format(message_sid, message_status))
 
     return ('', 204)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

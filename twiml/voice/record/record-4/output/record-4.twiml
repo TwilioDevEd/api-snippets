@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- page located at http://example.com/record_and_transcribe.xml -->
+<Response>
+    <Record transcribe="true" transcribeCallback="/handle_transcribe.php"/>
+</Response> 

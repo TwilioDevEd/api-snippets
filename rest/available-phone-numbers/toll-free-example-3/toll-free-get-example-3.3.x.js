@@ -5,16 +5,16 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-
-client.availablePhoneNumbers('US').tollFree
-  .list({
+client
+  .availablePhoneNumbers('US')
+  .tollFree.list({
     areaCode: '800',
     contains: 'KYLO',
   })
-  .then((availablePhoneNumbers) => {
+  .then(availablePhoneNumbers => {
     const number = availablePhoneNumbers[0];
     return client.incomingPhoneNumbers.create({
       phoneNumber: number.phoneNumber,
     });
   })
-  .then((purchasedNumber) => console.log(purchasedNumber.sid));
+  .then(purchasedNumber => console.log(purchasedNumber.sid));

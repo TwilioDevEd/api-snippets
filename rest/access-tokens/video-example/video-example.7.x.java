@@ -2,7 +2,7 @@ import com.twilio.jwt.accesstoken.AccessToken;
 import com.twilio.jwt.accesstoken.VideoGrant;
 
 public class TokenGenerator {
-  
+
   public static void main(String[] args) {
     // Required for all types of tokens
     String twilioAccountSid = "ACxxxxxxxxxxxx";
@@ -11,11 +11,10 @@ public class TokenGenerator {
 
     // Required for Video
     String identity = "user";
-      
+
     // Create Video grant
-    VideoGrant grant = new VideoGrant();
-    grant.setRoom("cool room");
-    
+    VideoGrant grant = new VideoGrant().setRoom("cool room");
+
     // Create access token
     AccessToken token = new AccessToken.Builder(
       twilioAccountSid,

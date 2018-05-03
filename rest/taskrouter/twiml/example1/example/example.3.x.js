@@ -5,12 +5,12 @@ const express = require('express');
 const app = express();
 
 app.post('/enqueue_call', (request, response) => {
-    const resp = new VoiceResponse();
-    resp.enqueue({workflowSid: 'WW0123456789abcdef0123456789abcdef'});
+  const resp = new VoiceResponse();
+  resp.enqueue({ workflowSid: 'WW0123456789abcdef0123456789abcdef' });
 
-    response.setHeader('Content-Type', 'application/xml');
-    response.write(resp.toString());
-    response.end();
+  response.setHeader('Content-Type', 'application/xml');
+  response.write(resp.toString());
+  response.end();
 });
 
 app.listen(8080);

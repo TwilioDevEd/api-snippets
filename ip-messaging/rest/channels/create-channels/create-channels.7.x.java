@@ -15,8 +15,8 @@ public class Example {
 
     // Create the channel
     Channel channel = Channel.creator(SERVICE_SID)
-        .setFriendlyName("General")
-        .setUniqueName("general")
+        .setFriendlyName("MyChannel")
+        .setUniqueName("my-channel")
         .create();
 
     System.out.println(channel.getAttributes());

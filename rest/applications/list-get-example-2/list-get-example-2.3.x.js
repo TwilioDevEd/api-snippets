@@ -5,6 +5,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-
-client.applications
-  .each({friendlyName: 'MyApp'}, (app) => console.log(app.VoiceUrl));
+client.applications.each({ friendlyName: 'MyApp' }, app =>
+  console.log(app.VoiceUrl)
+);

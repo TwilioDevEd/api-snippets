@@ -1,0 +1,2 @@
+curl -G https://wireless.twilio.com/v1/Sims/DEd3f4ec6c85ded1a5f64f10afc067895c \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

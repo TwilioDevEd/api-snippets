@@ -9,5 +9,6 @@ const filterOpts = {
   dateCreatedAfter: '2016-10-12',
 };
 
-client.recordings
-  .each(filterOpts, (recording) => console.log(recording.duration));
+client.recordings.each(filterOpts, recording =>
+  console.log(recording.duration)
+);

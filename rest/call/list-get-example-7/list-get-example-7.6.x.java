@@ -18,7 +18,7 @@ public class Example {
     // Build a filter for the CallList
     Map<String, String> params = new HashMap<String, String>();
     
-    params.put("From", "client:tommy");
+    params.put("From", "client:charlie");
     
     CallList calls = client.getAccount().getCalls(params);
     

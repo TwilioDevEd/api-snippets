@@ -1,14 +1,17 @@
 {
   "index": 0,
-  "url": "https://preview.twilio.com/Sync/Services/IS7bbc7e0d624a6f5969602deb4282d296/Lists/ES2dc3eca055314f338ddbc8e523df575f/Items/0",
+  "url": "https://sync.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Lists/ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Items/0",
   "created_by": "system",
-  "account_sid": "ACxxx",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_updated": "2016-07-25T20:16:55Z",
   "date_created": "2016-07-25T20:06:36Z",
-  "service_sid": "ISxxx",
+  "date_expires": null,
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "data": {
-    "text": "hello!"
+    "number": "001",
+    "attack": "49",
+    "name": "Bulbasaur"
   },
-  "list_sid": "ESxxx",
+  "list_sid": "ESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "revision": "1"
 }

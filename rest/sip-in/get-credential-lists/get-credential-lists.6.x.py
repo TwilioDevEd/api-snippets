@@ -7,9 +7,7 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 # A list of credential_list objects with the properties described above
-credential_lists = client.sip \
-                         .credential_lists \
-                         .list()
+credential_lists = client.sip.credential_lists.list()
 
 for credential_list in credential_lists:
     print(credential_list.friendly_name)

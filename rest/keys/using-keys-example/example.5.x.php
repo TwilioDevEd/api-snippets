@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
@@ -12,9 +12,9 @@ $client = new Client($apiKey, $apiSecret, $accountSid);
 
 // Send a message for the main account
 $message = $client->messages->create(
-    '+15558675309', // destination phone number
+    '+15558675310', // destination phone number
     array(
-        'from' => '+15017250604', // twilio number in your account
+        'from' => '+15017122661', // twilio number in your account
         'body' => 'Never gonna give you up.'
     )
 );

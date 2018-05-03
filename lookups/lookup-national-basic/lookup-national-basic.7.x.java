@@ -13,7 +13,7 @@ public class Example {
   public static void main(String[] args) throws UnsupportedEncodingException {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    String nationalNumber = URLEncoder.encode("(510) 867-5309", "UTF-8")
+    String nationalNumber = URLEncoder.encode("(510) 867-5310", "UTF-8")
       .replaceAll("\\+", "%20");
 
     PhoneNumber number = PhoneNumber

@@ -11,4 +11,4 @@ client.taskrouter.v1
     friendlyName: 'NewFriendlyName',
     eventCallbackUrl: 'http://requestb.in/vh9reovh',
   })
-  .then((workspace) => console.log(workspace.friendlyName));
+  .then(workspace => console.log(workspace.friendlyName));

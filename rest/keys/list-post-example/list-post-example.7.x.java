@@ -10,7 +10,7 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    NewKey key = NewKey.creator().setFriendlyName("User Jenny").create();
+    NewKey key = NewKey.creator().setFriendlyName("User Joey").create();
 
     System.out.println(key.getSid());
     System.out.println(key.getSecret());

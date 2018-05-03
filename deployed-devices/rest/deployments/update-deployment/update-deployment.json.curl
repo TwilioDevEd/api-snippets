@@ -1,0 +1,4 @@
+curl -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token' \
+  -X POST https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Deployments/DLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+  -d 'FriendlyName=My New Device Deployment' \
+  -d 'SyncServiceSid=ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'

@@ -1,19 +1,15 @@
-
-const request = require('request');
-
-// These identifiers are your accountSid and authToken from
-// https://www.twilio.com/console
+// Download the Node helper library from twilio.com/docs/node/install
+// These consts are your accountSid and authToken from https://www.twilio.com/console
 const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
+const client = require('twilio')(accountSid, authToken);
 
-const options = {
-    url: 'https://fax.twilio.com/v1/Faxes/FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    auth: {
-      user: accountSid,
-      pass: authToken
-    }
-}
-
-request.get(options, (error, response, body) => {
-    console.log(JSON.parse(body).mediaUrl);
-});
+client.fax.v1
+  .faxes('FXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+  .fetch()
+  .then(response => {
+    console.log(response.sid);
+  })
+  .catch(err => {
+    console.log(err);
+  });

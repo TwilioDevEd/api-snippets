@@ -1,0 +1,4 @@
+{
+  "title": "Retrieve an in-progress or completed Room instance by RoomSid",
+  "type": "server"
+}

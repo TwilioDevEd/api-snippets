@@ -19,6 +19,10 @@ public class Example {
     Map<String, FilterRequirement> activityUpdateFilter = new HashMap<>();
     activityUpdateFilter.put("ActivitySid", FilterRequirement.REQUIRED);
 
+    Policy allowFetchSubresources = new Policy.Builder()
+        .url(UrlUtils.workspace(WORKSPACE_SID) + "/**")
+        .build();
+
     Policy allowActivityUpdates = new Policy.Builder()
         .url(UrlUtils.worker(WORKSPACE_SID, WORKER_SID))
         .method(HttpMethod.POST)
@@ -34,6 +38,7 @@ public class Example {
         .method(HttpMethod.POST)
         .build();
 
+    policies.add(allowFetchSubresources);
     policies.add(allowActivityUpdates);
     policies.add(allowTasksUpdate);
     policies.add(allowReservationUpdate);

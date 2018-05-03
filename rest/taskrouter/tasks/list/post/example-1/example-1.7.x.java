@@ -11,7 +11,10 @@ public class Example {
   public static void main(String[] args) {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Task task = Task.creator(WORKSPACE_SID, "{\"type\":\"support\"}", WORKFLOW_SID).create();
+    Task task = Task.creator(WORKSPACE_SID)
+        .setWorkflowSid( WORKFLOW_SID)
+        .setAttributes("{\"type\":\"support\"}")
+        .create();
 
     System.out.println(task.getAttributes());
   }

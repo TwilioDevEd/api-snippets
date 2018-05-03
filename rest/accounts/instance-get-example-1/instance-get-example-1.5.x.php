@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
@@ -13,7 +13,7 @@ $client = new Client($sid, $token);
 // You can call $client->account to access the authenticated account
 // you used to initialize the client.
 // Use $client->account->fetch() to get the instance
-$account = $client
+$account = $client->api
     ->accounts("ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     ->fetch();
 

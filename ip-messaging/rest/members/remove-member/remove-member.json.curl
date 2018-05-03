@@ -1,2 +1,2 @@
-curl -XDELETE https://chat.twilio.com/v2/Services/{service sid}/Channels/{Channel SID}/Members/{Member SID} \
+curl -XDELETE https://chat.twilio.com/v2/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Channels/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Members/MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
     -u '{twilio account sid}:{twilio auth token}'

@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.service.Binding;
+import com.twilio.rest.notify.v1.service.Binding;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -14,7 +14,9 @@ public class Example {
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Delete a binding
-    boolean wasDeleted = Binding.deleter("ISxxx", "BSxxx").delete();
+    boolean wasDeleted = Binding
+        .deleter("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "BSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        .delete();
     System.out.println("Success deleting Binding: " + wasDeleted);
   }
 }

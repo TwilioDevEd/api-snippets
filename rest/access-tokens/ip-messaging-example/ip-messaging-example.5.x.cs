@@ -11,15 +11,16 @@ class Example
         const string twilioApiKey = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string twilioApiSecret = "your_secret";
 
-        // These are specific to IP Messaging
-        const string ipmServiceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        // These are specific to Chat
+        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user@example.com";
-        const string deviceId = "someiosdevice";
 
-        // Create an IP messaging grant for this token
-        var grant = new IpMessagingGrant();
-        grant.EndpointId = $"HipFlowSlackDockRC:{identity}:{deviceId}";
-        grant.ServiceSid = ipmServiceSid;
+        // Create an Chat grant for this token
+
+        var grant = new ChatGrant
+        {
+          ServiceSid = serviceSid
+        };
 
         var grants = new HashSet<IGrant>
         {

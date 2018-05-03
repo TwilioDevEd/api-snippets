@@ -1,0 +1,6 @@
+curl -XPOST 'https://video.twilio.com/v1/Rooms' \
+  -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret' \
+  -d 'UniqueName=DailyStandup' \
+  -d 'Type=peer-to-peer' \
+  -d 'EnableTurn=false' \
+  -d 'StatusCallback=http://example.org'

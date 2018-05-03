@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial callerId="+1888XXXXXXX">
+        <Number>858-987-6543</Number>
+        <Client>joey</Client>
+        <Client>charlie</Client>
+    </Dial>
+</Response>

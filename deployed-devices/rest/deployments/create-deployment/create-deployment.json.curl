@@ -1,0 +1,3 @@
+curl -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token' \
+  -X POST https://preview.twilio.com/DeployedDevices/Fleets/FLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Deployments \
+  -d 'FriendlyName=My Device Deployment'

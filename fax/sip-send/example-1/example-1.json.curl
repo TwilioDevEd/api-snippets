@@ -1,0 +1,6 @@
+curl 'https://fax.twilio.com/v1/Faxes' \
+    -X POST \
+    --data-urlencode 'To=sip:kate@example.com'  \
+    --data-urlencode 'From=Jack'  \
+    --data-urlencode 'MediaUrl=https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf' \
+    -u AC850685e1d9b8c09dae0b938923dc0d42:your_auth_token

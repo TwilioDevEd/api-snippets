@@ -12,7 +12,7 @@ class Example
     var lookupsClient = new LookupsClient(accountSid, authToken);
 
     // Look up a phone number in local format
-    var phoneNumber = lookupsClient.GetPhoneNumber("(510) 867-5309", "US", true);
+    var phoneNumber = lookupsClient.GetPhoneNumber("(510) 867-5310", "US", true);
     Console.WriteLine(phoneNumber.Carrier.Type);
     Console.WriteLine(phoneNumber.Carrier.Name); 
   }

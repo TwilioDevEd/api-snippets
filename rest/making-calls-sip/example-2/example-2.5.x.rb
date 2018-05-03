@@ -12,7 +12,7 @@ auth_token = 'your_auth_token'
 @accounts = @client.api.v2010.accounts(account_sid)
 
 # Create a call sip w/ authentication
-@call = @client.account.calls.create(
+@call = @client.calls.create(
   url: 'http://www.example.com/sipdial.xml',
   to: 'sip:kate@example.com',
   from: 'Jack',

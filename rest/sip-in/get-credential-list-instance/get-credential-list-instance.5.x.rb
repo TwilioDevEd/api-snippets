@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 @credential_list_sid = 'CL32a3c49700934481addd5ce1659f04d2'
 
-@credential_list = @client.account.sip
+@credential_list = @client.sip
                           .credential_lists(@credential_list_sid)
                           .fetch
 

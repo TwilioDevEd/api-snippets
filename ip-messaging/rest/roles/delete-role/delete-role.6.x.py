@@ -8,7 +8,7 @@ client = Client(account, token)
 
 # Delete role
 response = client.chat \
-                  .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                  .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-                  .delete()
+    .services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .roles("RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
+    .delete()
 print(response)

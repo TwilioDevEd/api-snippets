@@ -5,5 +5,6 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-client.authorizedConnectApps
-  .each((authorizedApp) => console.log(authorizedApp.connectAppHomepageUrl));
+client.authorizedConnectApps.each(authorizedApp =>
+  console.log(authorizedApp.connectAppHomepageUrl)
+);

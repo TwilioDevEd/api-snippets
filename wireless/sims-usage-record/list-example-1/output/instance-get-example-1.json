@@ -1,0 +1,48 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "usage_records": [
+    {
+      "commands": {
+        "total": 6,
+        "to_sim": 3,
+        "from_sim": 3,
+        "home": {
+          "total": 6,
+          "to_sim": 3,
+          "from_sim": 3
+        },
+        "national_roaming": null
+      },
+      "sim_sid": "DEb8eff34b248d066a31c4a953134e183e",
+      "data": {
+        "total": 5446765119,
+        "upload": 301092596,
+        "download": 5145672523,
+        "units": "bytes"
+        "home": {
+          "total": 5446765119,
+          "upload": 301092596,
+          "download": 5145672523
+          "units": "bytes",
+        },
+        "national_roaming": null,
+      },
+      "period": {
+        "end": "2017-05-23T01:14:37.507Z",
+        "start": "2017-04-23T01:14:37.507Z"
+      },
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://wireless.twilio.com/v1/Sims/DEb8eff34b248d066a31c4a953134e183e/UsageRecords?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://wireless.twilio.com/v1/Sims/DEb8eff34b248d066a31c4a953134e183e/UsageRecords?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "usage_records"
+  }
+}

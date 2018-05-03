@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/voice', (req, res) => {
   // Create TwiML response
   const twiml = new VoiceResponse();
 
   if (req.body.To) {
-    const dial = twiml.dial({callerId: '+15017250604'});
+    const dial = twiml.dial({ callerId: '+15017122661' });
     dial.number(req.body.To);
   } else {
     twiml.say('Thanks for calling!');

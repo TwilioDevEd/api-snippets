@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Api.V2010.Account;
+using Twilio.Rest.Fax.V1;
 using Twilio.Types;
 using System.Collections.Generic;
 
@@ -17,7 +17,7 @@ class Example
 
         TwilioClient.Init(accountSid, authToken);
 
-        var fax = FaxResource.Fetch(faxSid, client: TwilioClient);
+        var fax = FaxResource.Fetch(faxSid);
 
         Console.WriteLine(fax.Sid);
     }

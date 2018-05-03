@@ -7,6 +7,6 @@ auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
 client.sip \
-      .ip_access_control_lists("AL32a3c49700934481addd5ce1659f04d2") \
-      .ip_addresses("IP32a3c49700934481addd5ce1659f04d2") \
-      .delete()
+    .ip_access_control_lists("AL32a3c49700934481addd5ce1659f04d2") \
+    .ip_addresses("IP32a3c49700934481addd5ce1659f04d2") \
+    .delete()

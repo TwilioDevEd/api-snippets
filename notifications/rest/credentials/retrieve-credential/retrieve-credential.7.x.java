@@ -2,7 +2,7 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/java
 import com.twilio.Twilio;
-import com.twilio.rest.notify.Credential;
+import com.twilio.rest.notify.v1.Credential;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account
@@ -13,7 +13,7 @@ public class Example {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-    Credential credential = Credential.fetcher("CRxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").fetch();
+    Credential credential = Credential.fetcher("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").fetch();
 
     System.out.println(credential.getFriendlyName());
   }

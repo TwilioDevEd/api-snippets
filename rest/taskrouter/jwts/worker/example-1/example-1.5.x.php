@@ -1,5 +1,5 @@
 <?php
-// Get the PHP helper library from twilio.com/docs/php/install
+// Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Jwt\TaskRouter\WorkerCapability;
 
@@ -10,6 +10,7 @@ $workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $capability = new WorkerCapability($accountSid, $authToken, $workspaceSid, $workerSid);
+$capability->allowFetchSubresources();
 $capability->allowActivityUpdates();
 $capability->allowReservationUpdates();
 $token = $capability->generateToken();

@@ -1,0 +1,20 @@
+{
+    "api_key_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "status": "processing",
+    "date_created": "2015-07-30T20:00:00Z",
+    "sid": "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "source_sid": "MTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "size": 0,
+    "type": "audio",
+    "duration": 0,
+    "container_format": "mka",
+    "codec": "OPUS",
+    "grouping_sids": {
+        "room_sid" : "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    },
+    "room_sid" : "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "links": {
+        "media": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media"
+    }
+}

@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 
 call = client.api.account \
              .calls.create(url="http://demo.twilio.com/docs/voice.xml",
-                           to="client:tommy",
-                           from_="+15017250604")
+                           to="client:charlie",
+                           from_="+15017122661")
 
 print(call.sid)

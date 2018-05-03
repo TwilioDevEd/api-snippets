@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial>
+    <Conference beep="false" 
+                waitUrl="http://your-webhook-host.com"
+                startConferenceOnEnter="true"
+                endConferenceOnExit="true">
+      NoMusicNoBeepRoom
+    </Conference>
+  </Dial>
+</Response>
