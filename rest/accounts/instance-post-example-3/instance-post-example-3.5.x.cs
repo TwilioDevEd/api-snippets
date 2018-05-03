@@ -15,7 +15,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         AccountResource.Update(
-            accountSidToClose,
+            pathSid: accountSidToClose,
             status: AccountResource.StatusEnum.Closed);
     }
 }

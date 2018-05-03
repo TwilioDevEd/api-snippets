@@ -15,7 +15,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         AccountResource.Update(
-            accountSidToActivate,
+            pathSid: accountSidToActivate,
             status: AccountResource.StatusEnum.Active);
     }
 }

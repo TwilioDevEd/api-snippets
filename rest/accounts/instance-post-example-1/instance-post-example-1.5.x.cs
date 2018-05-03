@@ -15,7 +15,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         AccountResource.Update(
-            accountSidToSuspend,
+            pathSid: accountSidToSuspend,
             status: AccountResource.StatusEnum.Suspended);
     }
 }
