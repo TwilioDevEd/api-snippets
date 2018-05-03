@@ -10,5 +10,5 @@ number = client.lookups.phone_numbers("+16502530000").fetch(
     type="caller-name",
 )
 
-print(number.carrier['type'])
-print(number.carrier['name'])
+print(number.caller_name['caller_type'])
+print(number.caller_name['caller_name'])
