@@ -9,7 +9,7 @@ class Example
     static void Main(string[] args)
     {
         // Your Auth Token from twilio.com/console
-        const string authToken = "your-secret";
+        const string authToken = "12345";
 
         // Initialize the validator
         var validator = new RequestValidator(authToken);
