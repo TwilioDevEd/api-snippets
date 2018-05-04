@@ -1,5 +1,4 @@
 # Get twilio-ruby from twilio.com/docs/ruby/install
-require 'rubygems' # This line not needed for ruby > 1.8
 require 'sinatra'
 require 'twilio-ruby'
 

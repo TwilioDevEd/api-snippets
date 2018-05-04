@@ -4,7 +4,7 @@ require 'twilio-ruby'
 # Get your Account Sid and Auth Token from twilio.com/user/account
 account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
-@client = Twilio::REST::MonitorClient.new account_sid, auth_token
+@client = Twilio::REST::MonitorClient.new(account_sid, auth_token)
 
 @params = {
   actor_sid: 'USd0afd67cddff4ec7cb0022771a203cb1',

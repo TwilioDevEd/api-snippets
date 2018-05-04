@@ -11,7 +11,7 @@ Net::HTTP.start(uri.host, uri.port,
                 use_ssl: uri.scheme == 'https') do |http|
 
   request = Net::HTTP::Post.new uri.request_uri
-  request.basic_auth account_sid, auth_token
+  request.basic_auth(account_sid, auth_token)
   request.body = URI.encode_www_form(To: 'sip:kate@example.com',
                                      From: 'Jack',
                                      MediaUrl: 'https://www.twilio.com/docs/documents/25/justthefaxmaam.pdf')
