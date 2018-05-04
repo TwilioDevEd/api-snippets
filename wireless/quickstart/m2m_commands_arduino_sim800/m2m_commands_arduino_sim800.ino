@@ -53,7 +53,7 @@ void loop()
         M2MCommand m2m;
 
         /* Index to start search for M2M command */
-        static uint8_t index = 1; 
+        static uint8_t index = 34; 
 
         /* Delete any SMS encountered which are not commands? */
         bool delete_non_commands = false;

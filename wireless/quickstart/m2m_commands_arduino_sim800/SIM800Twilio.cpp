@@ -21,6 +21,14 @@ void SIM800Twilio::reset_modem()
         }
         
         delay(1000);
+
+        /* 
+         * Clear out any extra messages - depending on state,
+         * the module may send out Voice Ready/SMS Ready messages.
+         */
+
+        _read_serial();
+        _read_serial();
 }
 
 /*
