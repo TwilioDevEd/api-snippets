@@ -1,4 +1,5 @@
 {
+  "type": "server",
   "title": "Programmable Wireless Machine to Machine commands with an Arduino Uno or Nano and SIM800 Modem",
-  "type": "server"
+  "description": "Send and receive machine to machine commands (M2) with an Arduino Nano or Uno and SIM800"
 }
