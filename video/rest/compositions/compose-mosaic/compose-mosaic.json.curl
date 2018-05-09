@@ -1,0 +1,31 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'RoomSid=RMXXXX' \
+    -F 'AudioSources=*' \
+    -F 'AudioSourcesExcluded=advisor-audio' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Resolution=1280x720' \
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "interviewed":{
+        "z_pos":2,
+        "x_pos":400,
+        "y_pos":180,
+        "width":480,
+        "height":360,
+        "video_sources":["interviewed-video"]
+      },
+      "interviewers":{
+        "z_pos":1,
+        "x_pos":10,
+        "y_pos":0,
+        "width":1260,
+        "height":720,
+        "max_rows":3,
+        "max_columns":3,
+        "reuse":"show_newest",
+        "cells_excluded":[4],
+        "video_sources":["iterviewer-*"]
+      }
+    }'
+EOF

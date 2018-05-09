@@ -1,0 +1,53 @@
+{
+    "compositions": [
+        {
+            "account_sid": "ACXXXX",
+            "audio_sources": [
+                "PAXXXX"
+            ],
+            "audio_sources_excluded": [],
+            "bitrate": 500,
+            "date_completed": "2018-03-26T13:36:35Z",
+            "date_created": "2018-03-26T13:26:28Z",
+            "date_deleted": null,
+            "duration": 15,
+            "format": "mp4",
+            "links": {
+                "media": "https://video.twilio.com/v1/Compositions/CJXXXX/Media"
+            },
+            "resolution": "1280x720",
+            "room_sid": "RMXXXX",
+            "sid": "CJXXXX",
+            "size": 283500000,
+            "status": "completed",
+            "trim": true,
+            "url": "https://video.twilio.com/v1/Compositions/CJXXXX",
+            "video_layout": {
+                "single": {
+                    "cells_excluded": [],
+                    "height": null,
+                    "max_columns": null,
+                    "max_rows": null,
+                    "reuse": "show_oldest",
+                    "video_sources": [
+                        "PAXXXX"
+                    ],
+                    "video_sources_excluded": [],
+                    "width": null,
+                    "x_pos": 0,
+                    "y_pos": 0,
+                    "z_pos": 0
+                }
+            }
+        }
+    ],
+    "meta": {
+        "first_page_url": "https://video.twilio.com/v1/Compositions?Status=completed&PageSize=50&Page=0",
+        "key": "compositions",
+        "next_page_url": null,
+        "page": 0,
+        "page_size": 50,
+        "previous_page_url": null,
+        "url": "https://video.twilio.com/v1/Compositions?status=completed&PageSize=50&Page=0"
+    }
+}

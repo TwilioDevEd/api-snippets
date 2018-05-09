@@ -9,8 +9,10 @@ const Twilio = require('twilio');
 
 const client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
-client.video.compositions('CJXXXX')
+deleted = client.video.compositions('CJXXXX')
   .fetch()
   .then(composition =>{
     console.log('Read Composition with SID=' + composition.sid);
   });
+
+console.log(deleted)

@@ -1,0 +1,15 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'RoomSid=RMXXXX' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Format=mp4' \
+    -F 'AudioSources=teacher-audio-sess-*' \
+<<-EOF -F 'VideoLayout={
+      "sequence":{
+        "max_rows":1,
+        "max_columns":1,
+        "reuse":"show_newest",
+        "video_sources":["teacher-video-sess-*"]
+      }
+    }'
+EOF

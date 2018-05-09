@@ -24,7 +24,7 @@ client.request({
       if(err){
         console.log(err)
       } else {
-        //Variable media contains the binary Composition Media Data
+        //Variable 'media' contains the binary Composition Media Data
         console.log('Media loaded successfully');
       }
     });

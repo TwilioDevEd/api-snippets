@@ -1,8 +1,12 @@
 curl -X POST 'https://video.twilio.com/v1/Compositions' \
     -u 'SKXXXX:your_api_key_secret' \
-    -d 'VideoSources=RMXXXX' \
-    -d 'AudioSources=RMXXXX' \
-    -d 'VideoLayout=GRID' \
-    -d 'Resolution=1920x1080' \
-    -d 'Format=mp4'
-    -d 'StatusCallback=http://my.server.org/callbacks'
+    -F 'RoomSid=RMXXXX' \
+    -F 'AudioSources=*' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "grid":{
+        "video_sources":["*"]
+      }
+    }'
+EOF

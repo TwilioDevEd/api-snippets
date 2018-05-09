@@ -1,0 +1,24 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'RoomSid=RMXXXX' \
+    -F 'AudioSources=*' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Resolution=1280x720'\
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "main":{
+        "z_pos":1,
+        "video_sources":["teacher-screen-video"]
+      },
+      "row":{
+        "z_pos":2,
+        "x_pos":10,
+        "y_pos":530,
+        "width":1260,
+        "height":160,
+        "max_rows":1,
+        "video_sources":["*"],
+        "video_sources_excluded":["teacher-screen-video"]
+      }
+    }'
+EOF

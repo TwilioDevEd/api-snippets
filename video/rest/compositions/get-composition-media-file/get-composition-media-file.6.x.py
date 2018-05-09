@@ -15,5 +15,5 @@ response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')
 
 media = urlopen(media_location).read()
-#Variable media contains the binary Composition Media Data
+#Variable 'media' contains the binary Composition Media Data
 print('Media loaded successfully')
