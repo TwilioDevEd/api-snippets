@@ -18,14 +18,16 @@ client.request({
   method: 'GET',
   uri: uri
 })
-  .then(response =>{
-    const mediaLocation = JSON.parse(response.body).redirect_to;
-    request.get(mediaLocation, (err, res, media)=>{
-      if(err){
-        console.log(err)
-      } else {
-        //Variable 'media' contains the binary Composition Media Data
-        console.log('Media loaded successfully');
-      }
-    });
+.then(response =>{
+  const mediaLocation = JSON.parse(response.body).redirect_to;
+
+  // For example, download the media to a local file
+  var file = fs.createWriteStream('myFile.mp4');
+  var r = request(mediaLocation)
+  r.on('response', (res) =>{
+    res.pipe(file)
   });
+})
+.catch(error =>{
+  console.log("Error fetching /Media resource " + error);
+});

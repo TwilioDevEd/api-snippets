@@ -8,7 +8,7 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$composition = $client->video->compositions("CJXXXX")
-    ->fetch();
+$deleted = $client->video->compositions("CJXXXX")
+    ->delete();
 
-echo $composition->sid;
+echo $deleted;

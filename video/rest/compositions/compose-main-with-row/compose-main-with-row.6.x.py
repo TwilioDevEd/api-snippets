@@ -9,7 +9,7 @@ client = Client(api_key_sid, api_key_secret)
 
 composition = client.video.compositions.create(
     room_sid = 'RMXXXX',
-    audio_sources = ['MTAAAA', 'soundtrack'],
+    audio_sources = '*',
     video_layout = {
                         'main' : {
                             'z_pos': 1,
@@ -21,6 +21,7 @@ composition = client.video.compositions.create(
                             'y_pos': 530,
                             'width': 1260,
                             'height': 160,
+                            'max_rows': 1,
                             'video_sources': ['*'],
                             'video_sources_excluded': ['teacher-screen-video']
                         }

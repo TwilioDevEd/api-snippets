@@ -9,7 +9,7 @@ client = Client(api_key_sid, api_key_secret)
 
 composition = client.video.compositions.create(
     room_sid = 'RMXXXX',
-    audio_sources = ['MTAAAA', 'soundtrack'],
+    audio_sources = '*',
     video_layout = {
                         'main' : {
                             'z_pos': 1,
