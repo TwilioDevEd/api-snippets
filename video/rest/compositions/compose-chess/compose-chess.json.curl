@@ -1,0 +1,21 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'RoomSid=RMXXXX' \
+    -F 'AudioSources=*' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Resolution=1280x720' \
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "chess_table":{
+        "x_pos":10,
+        "y_pos":0,
+        "width":1260,
+        "height":720,
+        "max_rows":3,
+        "max_columns":3,
+        "reuse":"show_newest",
+        "cells_excluded":[1,3,5,7],
+        "video_sources":["*"]
+      }
+    }'
+EOF

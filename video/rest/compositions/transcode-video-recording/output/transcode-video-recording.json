@@ -1,0 +1,38 @@
+{
+    "account_sid": "ACXXXX",
+    "audio_sources": [],
+    "audio_sources_excluded": [],
+    "bitrate": 0,
+    "date_completed": null,
+    "date_created": "2018-03-26T13:01:04Z",
+    "date_deleted": null,
+    "duration": 0,
+    "format": "mp4",
+    "links": {
+        "media": "https://video.twilio.com/v1/Compositions/CJXXXX/Media"
+    },
+    "resolution": "640x480",
+    "room_sid": "RMXXXX",
+    "sid": "CJXXXX",
+    "size": 0,
+    "status": "processing",
+    "trim": true,
+    "url": "https://video.twilio.com/v1/Compositions/CJXXXX",
+    "video_layout": {
+        "transcode": {
+            "cells_excluded": [],
+            "height": null,
+            "max_columns": null,
+            "max_rows": null,
+            "reuse": "show_oldest",
+            "video_sources": [
+                "RTXXXX"
+            ],
+            "video_sources_excluded": [],
+            "width": null,
+            "x_pos": 0,
+            "y_pos": 0,
+            "z_pos": 0
+        }
+    }
+}

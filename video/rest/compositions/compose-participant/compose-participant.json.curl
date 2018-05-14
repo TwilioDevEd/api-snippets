@@ -1,0 +1,12 @@
+curl -X POST 'https://video.twilio.com/v1/Compositions' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'RoomSid=RMXXXX' \
+    -F 'AudioSources=PAXXXX' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "single":{
+        "video_sources":["PAXXXX"]
+      }
+    }'
+EOF

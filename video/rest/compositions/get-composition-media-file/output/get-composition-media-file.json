@@ -1,0 +1,6 @@
+{
+  "redirect_to":
+  "https://com-twilio-us1-video-composition.s3.amazonaws.com/ACXXXX/CJXXXX.webm?
+  X-Amz-Security-Token=XXXXX&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=XXXXXXXXXXXXXXX&
+  X-Amz-SignedHeaders=host&X-Amz-Expires=6000&X-Amz-Credential=XXXX&X-Amz-Signature=XXXXX"
+}
