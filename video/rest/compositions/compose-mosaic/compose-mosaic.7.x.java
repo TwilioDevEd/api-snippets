@@ -41,14 +41,14 @@ public class PipComposition{
                       + "}";
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-                        .setAudioSources("*")
-                        .setAudioSourcesExcluded("advisor-audio")
-                        .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-        								.setStatusCallback("http://my.server.org/callbacks")
-                        .setResolution("1280x720")
-        								.setFormat(Format.MP4)
-        								.create();
+                  .setRoomSid("RMXXXX")
+                  .setAudioSources("*")
+                  .setAudioSourcesExcluded("advisor-audio")
+                  .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
+                  .setStatusCallback("http://my.server.org/callbacks")
+                  .setResolution("1280x720")
+                  .setFormat(Format.MP4)
+                  .create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }

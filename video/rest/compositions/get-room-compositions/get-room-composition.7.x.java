@@ -16,8 +16,8 @@ public class GetCompositionList{
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
       ResourceSet<Composition> compositions = Composition.reader()
-            .setRoomSid("RMXXXX")
-         		.read();
+              .setRoomSid("RMXXXX")
+              .read();
 
       for(Composition c : compositions){
         System.out.println("Read Composition with SID=" + c.getSid());

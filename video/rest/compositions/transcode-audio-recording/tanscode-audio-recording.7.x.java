@@ -15,11 +15,11 @@ public class TranscodeAudioRecording{
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-        								.setAudioSources("RTXXXX")
-        								.setStatusCallback("http://my.server.org/callbacks")
-        								.setFormat(Format.MP4)
-        								.create();
+        					.setRoomSid("RMXXXX")
+        					.setAudioSources("RTXXXX")
+        					.setStatusCallback("http://my.server.org/callbacks")
+        					.setFormat(Format.MP4)
+        					.create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }

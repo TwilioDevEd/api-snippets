@@ -3,7 +3,7 @@ curl -X POST 'https://video.twilio.com/v1/Compositions' \
     -F 'RoomSid=RMXXXX' \
     -F 'AudioSources=MTAAAA' \
     -F 'AudioSources=soundtrack' \
-    -F 'Resolution=1280x720'\
+    -F 'Resolution=1280x720' \
     -F 'Format=mp4' \
     -F 'StatusCallback=http://my.server.org/callbacks' \
 <<-EOF -F 'VideoLayout={

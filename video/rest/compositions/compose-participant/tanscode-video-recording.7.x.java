@@ -24,12 +24,12 @@ public class ParticipantComposition{
                      + "}";
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-                        .setAudioSources("PAXXXX")
-                        .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-        								.setStatusCallback("http://my.server.org/callbacks")
-        								.setFormat(Format.MP4)
-        								.create();
+        					.setRoomSid("RMXXXX")
+        					.setAudioSources("PAXXXX")
+        					.setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
+        					.setStatusCallback("http://my.server.org/callbacks")
+        					.setFormat(Format.MP4)
+        					.create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }

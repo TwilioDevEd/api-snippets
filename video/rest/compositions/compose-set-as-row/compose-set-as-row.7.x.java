@@ -17,7 +17,7 @@ public class GridComposition{
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
       final String videoLayout =
-                        "{"
+                          "{"
                         + "   \"grid\": {"
                         + "       \"max_rows\": 1,"
                         + "       \"video_sources\":["
@@ -29,11 +29,11 @@ public class GridComposition{
                         + "}";
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-                        .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-        								.setStatusCallback("http://my.server.org/callbacks")
-        								.setFormat(Format.MP4)
-        								.create();
+                  .setRoomSid("RMXXXX")
+                  .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
+                  .setStatusCallback("http://my.server.org/callbacks")
+                  .setFormat(Format.MP4)
+                  .create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }

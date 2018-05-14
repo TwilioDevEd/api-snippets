@@ -5,7 +5,7 @@ import com.twilio.rest.video.v1.Composition.Format;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class PipComposition{
+public class ChessComposition{
 
   // Find your credentials at twilio.com/console
   public static final String ACCOUNT_SID = "ACXXXX";
@@ -32,13 +32,13 @@ public class PipComposition{
                       + "}";
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-                        .setAudioSources("*")
-                        .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-        								.setStatusCallback("http://my.server.org/callbacks")
-                        .setResolution("1280x720")
-        								.setFormat(Format.MP4)
-        								.create();
+                  .setRoomSid("RMXXXX")
+                  .setAudioSources("*")
+                  .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
+                  .setStatusCallback("http://my.server.org/callbacks")
+                  .setResolution("1280x720")
+                  .setFormat(Format.MP4)
+                  .create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }

@@ -1,4 +1,4 @@
 {
-  "title": "List all Compositions generated out of a given Room SID.",
+  "title": "List all Compositions in a Room SID",
   "type": "server"
 }

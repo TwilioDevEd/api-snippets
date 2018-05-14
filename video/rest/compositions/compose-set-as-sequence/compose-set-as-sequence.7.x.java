@@ -17,7 +17,7 @@ public class SequenceComposition{
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
       final String videoLayout =
-                        "{"
+                          "{"
                         + "   \"sequence\": {"
                         + "       \"max_rows\": 1,"
                         + "       \"max_columns\": 1,"
@@ -27,12 +27,12 @@ public class SequenceComposition{
                         + "}";
 
       Composition composition = Composition.creator()
-        								.setRoomSid("RMXXXX")
-                        .setAudioSources("teacher-audio-sess-*")
-                        .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-        								.setStatusCallback("http://my.server.org/callbacks")
-        								.setFormat(Format.MP4)
-        								.create();
+                  .setRoomSid("RMXXXX")
+                  .setAudioSources("teacher-audio-sess-*")
+                  .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
+                  .setStatusCallback("http://my.server.org/callbacks")
+                  .setFormat(Format.MP4)
+                  .create();
 
       System.out.println("Created composition with SID=" + composition.getSid());
   }
