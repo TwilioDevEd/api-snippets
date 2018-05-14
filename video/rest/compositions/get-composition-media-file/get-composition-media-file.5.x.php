@@ -9,7 +9,7 @@ $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
 $compositionSid = "CJXXXX";
-$uri = "https://video.twilio.com/v1/Compositions/$compositionSid/Media";
+$uri = "https://video.twilio.com/v1/Compositions/$compositionSid/Media?Ttl=6000";
 $response = $client->request("GET", $uri);
 $mediaLocation = $response->getContent()["redirect_to"];
 

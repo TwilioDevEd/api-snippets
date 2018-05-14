@@ -10,7 +10,7 @@ api_key_secret = 'your_api_key_secret'
 client = Client(api_key_sid, api_key_secret)
 
 composition_sid = 'CXXXX'
-uri = 'https://video.twilio.com/v1/Compositions/{}/Media'.format(composition_sid)
+uri = 'https://video.twilio.com/v1/Compositions/{}/Media?Ttl=6000'.format(composition_sid)
 response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')
 
