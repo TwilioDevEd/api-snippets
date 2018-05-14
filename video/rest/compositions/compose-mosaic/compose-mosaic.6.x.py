@@ -34,6 +34,7 @@ composition = client.video.compositions.create(
                         }
                     },
     status_callback = 'http://my.server.org/callbacks',
+    resolution = '1280x720',
     format='mp4')
 
 print('Created composition with SID=%s' % (composition.sid))
