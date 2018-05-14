@@ -1,4 +1,4 @@
 {
-  "title": "List all completed compositions in your account",
+  "title": "List all Compositions generated out of a given Room SID.",
   "type": "server"
 }
