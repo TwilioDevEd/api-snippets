@@ -12,7 +12,7 @@ import com.twilio.twiml.TwiMLException;
 public class TwilioServlet extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String body = request.getParameter("Body");
-    String message;
+    String message = "Message";
     if (body == "hello") {
       // Use a generic message
       message = "Hi there!";
@@ -22,7 +22,8 @@ public class TwilioServlet extends HttpServlet {
     }
 
     // Create a TwiML response and add our friendly message.
-    Message sms = new Message.Builder().body(new Body(message)).build();
+    Body messageBody = new Body.Builder(message).build();
+    Message sms = new Message.Builder().body(messageBody).build();
     MessagingResponse twiml = new MessagingResponse.Builder().message(sms).build();
 
     response.setContentType("application/xml");
