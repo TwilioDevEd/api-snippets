@@ -1,5 +1,5 @@
 from flask import Flask, request
-from twilio import twiml
+from twilio.twiml.voice_response import VoiceResponse
 import json
 import os
 import requests
@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/voice", methods=['GET', 'POST'])
 def voice():
     # Start our TwiML response
-    response = twiml.Response()
+    response = VoiceResponse()
     response.say('Hi! I want to know what do you think about coding.')
     response.record(maxLength="10", action="/recording")
     response.hangup()
@@ -23,7 +23,7 @@ def recording():
     recording_url = request.values.get("RecordingUrl", None)
     print(recording_url)
 
-    response = twiml.Response()
+    response = VoiceResponse()
     response.say("Thanks for howling... take a listen to what you howled.")
     response.play(recording_url)
     response.say("Goodbye.")
