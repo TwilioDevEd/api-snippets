@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Fax snippet."""
 
-from flask.ext.script import Manager
+from flask_script import Manager
 from flask import Flask, Response, request
 
 app = Flask(__name__)
