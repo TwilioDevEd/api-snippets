@@ -1,6 +1,6 @@
 #include "ethernet.h"
 
-Ethernet eth = Ethernet();
+Ethernet lte = Ethernet();
 /* Setup variables for Twilio. The APN is fixed for Programmable Wireless. Feel free to change the URL and path. */
 const char      apn[20]         = "wireless.twilio.com";
 const char      URL[100]        = "s3.amazonaws.com";
@@ -23,31 +23,31 @@ void setup()
 {
         /* Start Serial Output and GPRS */
         SerialUSB.begin(115200);
-        eth.Power_On();
+        lte.Power_On();
         SerialUSB.println("\n\rSerial working.");
 
 
-        while(!eth.Check_If_Power_On()) {
+        while(!lte.Check_If_Power_On()) {
                 SerialUSB.println("Waiting for module power up.");
                 delay(1000);
         }
-        while(!(eth.init())) {
+        while(!(lte.init())) {
                 SerialUSB.print("Initializing LTE...");
                 delay(1000);
         }
-        eth.join(apn);
+        lte.join(apn);
 
         /* Print out IP data if successful */
         SerialUSB.print("\n\rIP Address: ");
-        SerialUSB.print(eth.ip_string);
+        SerialUSB.print(lte.ip_string);
 
         /* Connect to host and path */
-        if(eth.connect(URL, port, TCP)) {
-                eth.write(path);
+        if(lte.connect(URL, port, TCP)) {
+                lte.write(path);
                 while(MODULE_PORT.available()) {
                         serialDebug.write(MODULE_PORT.read());
                 }    
-                eth.close(1);
+                lte.close(1);
         } else {
                 SerialUSB.println("Connection Error!");
         }
