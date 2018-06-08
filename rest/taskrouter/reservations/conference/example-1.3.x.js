@@ -14,7 +14,9 @@ client.taskrouter.v1
   .reservations(reservationSid)
   .update({
     instruction: 'conference',
-    dequeueFrom: '+18001231234',
+    from: '+18001231234',
+    conferenceStatusCallback: 'https://www.example.com/ConferenceEvents',
+    conferenceStatusCallbackEvent: 'start end join leave mute hold'
   })
   .then(reservation => {
     console.log(reservation.reservationStatus);

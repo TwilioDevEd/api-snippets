@@ -23,6 +23,8 @@ $reservation = $client->taskrouter
 $reservation->update(
     array(
         'instruction' => 'conference',
-        'dequeueFrom' => '+18001231234'
+        'from' => '+18001231234',
+        'conferenceStatusCallback' => 'https://www.example.com/ConferenceEvents',
+        'conferenceStatusCallbackEvent' => array("start", "end", "join", "leave", "mute", "hold")
     )
 );

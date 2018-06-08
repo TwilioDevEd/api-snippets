@@ -16,6 +16,8 @@ $reservation = $client->workspace->tasks->get($taskSid)->reservations->get($rese
 $reservation->update(
     array(
         'Instruction' => 'conference',
-        'DequeueFrom' => '+18001231234'
+        'From' => '+18001231234',
+        'ConferenceStatusCallback' => 'https://www.example.com/ConferenceEvents',
+        'ConferenceStatusCallbackEvent' => array("start", "end", "join", "leave", "mute", "hold")
     )
 );
