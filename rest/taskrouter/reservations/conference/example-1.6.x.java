@@ -1,6 +1,8 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
 import com.twilio.sdk.TwilioRestException;
 import com.twilio.sdk.TwilioTaskRouterClient;
@@ -23,9 +25,16 @@ public class Example {
     Reservation reservation = client.getReservation(WORKSPACE_SID, TASK_SID, RESERVATION_SID);
 
     // Update a Reservation with a Conference instruction
-    Map<String, String> params = new HashMap<String, String>();
-    params.put("Instruction", "conference");
-    params.put("DequeueFrom", "+18001231234");
+    List<NameValuePair> params = new ArrayList<NameValuePair>();
+    params.add(new BasicNameValuePair("Instruction", "conference"));
+    params.add(new BasicNameValuePair("From", "+18001231234"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallback", "https://www.example.com/ConferenceEvents"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "start"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "end"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "join"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "leave"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "mute"));
+    params.add(new BasicNameValuePair("ConferenceStatusCallbackEvent", "hold"));
     reservation.update(params);
   }
 }

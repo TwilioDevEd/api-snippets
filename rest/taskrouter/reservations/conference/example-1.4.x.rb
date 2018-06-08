@@ -13,10 +13,14 @@ client = Twilio::REST::TaskRouterClient.new account_sid,
                                             workspace_sid
 
 # Update a Reservation with a Conference instruction
+status_callback = %w[start end join leave mute hold]
 reservation = client.workspace
                     .tasks.get(task_sid)
                     .reservations.get(reservation_sid)
 
-reservation.update(instruction: 'conference', dequeueFrom: '+18001231234')
+reservation.update(instruction: 'conference',
+                   from: '+18001231234',
+                   conference_status_callback: 'https://www.example.com/ConferenceEvents',
+                   conference_status_callback_event: status_callback)
 puts reservation.reservation_status
 puts reservation.worker_name

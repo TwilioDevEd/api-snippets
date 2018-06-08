@@ -1,6 +1,7 @@
 // Download the twilio-csharp library from
 // https://www.twilio.com/docs/libraries/csharp#installation
 using System;
+using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Taskrouter.V1.Workspace.Task;
 
@@ -25,7 +26,19 @@ class Example
         Console.WriteLine(reservation.WorkerName);
 
         ReservationResource.Update(
-            workspaceSid, taskSid, reservationSid, instruction: "conference",
-            dequeueFrom: "+18001231234");
+            workspaceSid, taskSid, reservationSid,
+            instruction: "conference",
+            from: "+18001231234",
+            conferenceStatusCallback: "https://www.example.com/ConferenceEvents",
+            conferenceStatusCallbackEvent: new List<ReservationResource.ConferenceEventEnum>
+            {
+                ReservationResource.ConferenceEventEnum.Start,
+                ReservationResource.ConferenceEventEnum.End,
+                ReservationResource.ConferenceEventEnum.Join,
+                ReservationResource.ConferenceEventEnum.Leave,
+                ReservationResource.ConferenceEventEnum.Mute,
+                ReservationResource.ConferenceEventEnum.Hold
+            }
+        );
     }
 }

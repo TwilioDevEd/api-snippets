@@ -21,6 +21,9 @@ class Example
 
     client.UpdateReservation(WorkspaceSid, "Tasks", TaskSid, ReservationSid,
         instruction: "conference",
-        dequeueFrom: "+18001231234");
+        from: "+18001231234",
+        conferenceStatusCallback: "https://www.example.com/ConferenceEvents",
+        conferenceStatusCallbackEvent: new string[] { "start", "end", "join", "leave", "mute", "hold" }
+    );
   }
 }

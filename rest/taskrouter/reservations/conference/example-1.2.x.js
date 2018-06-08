@@ -13,7 +13,9 @@ const client = new twilio.TaskRouterClient(accountSid, authToken, workspaceSid);
 // Update a Reservation with a Conference instruction
 client.workspace.tasks(taskSid).reservations(reservationSid).update({
   instruction: 'conference',
-  dequeueFrom: '+18001231234',
+  from: '+18001231234',
+  conferenceStatusCallback: 'https://www.example.com/ConferenceEvents',
+  conferenceStatusCallbackEvent: 'start end join leave mute hold'
 }, (err, reservation) => {
   console.log(reservation.reservation_status);
   console.log(reservation.worker_name);
