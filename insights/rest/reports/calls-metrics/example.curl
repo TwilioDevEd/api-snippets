@@ -1,3 +1,2 @@
-curl -G https://preview.twilio.com/insights \
-  /Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Metrics \
+curl -G https://preview.twilio.com/insights/Calls/CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Metrics \
   -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token"
