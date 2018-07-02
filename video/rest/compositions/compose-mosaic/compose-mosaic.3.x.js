@@ -35,7 +35,7 @@ client.video.compositions.
           max_columns: 3,
           reuse: "show_newest",
           cells_excluded: [4],
-          video_sources: ['iterviewer-*']
+          video_sources: ['interviewer-*']
         }
       },
     statusCallback: 'http://my.server.org/callbacks',

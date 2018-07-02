@@ -21,7 +21,7 @@ composition = @client.video.compositions.create(
       max_columns: 3,
       reuse: 'show_newest',
       cells_excluded: [1,3,5,7],
-      video_sources: ['interviewed-video']
+      video_sources: ['*']
     }
   },
   status_callback: 'http://my.server.org/callbacks',

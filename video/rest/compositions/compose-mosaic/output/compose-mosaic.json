@@ -47,7 +47,7 @@
             "max_rows": 3,
             "reuse": "show_newest",
             "video_sources": [
-                "iterviewer-*"
+                "interviewer-*"
             ],
             "video_sources_excluded": [],
             "width": 1260,

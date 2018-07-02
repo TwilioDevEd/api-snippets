@@ -25,7 +25,7 @@ curl -X POST 'https://video.twilio.com/v1/Compositions' \
         "max_columns":3,
         "reuse":"show_newest",
         "cells_excluded":[4],
-        "video_sources":["iterviewer-*"]
+        "video_sources":["interviewer-*"]
       }
     }'
 EOF

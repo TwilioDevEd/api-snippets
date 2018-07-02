@@ -28,7 +28,7 @@ public class PipComposition{
                       + "       \"y_pos\": 30,"
                       + "       \"width\": 240,"
                       + "       \"height\": 180,"
-                      + "       \"video_sources\": [\"RTBBBB\"]"
+                      + "       \"video_sources\": [\"MTBBBB\"]"
                       + "    }"
                       + "}";
 

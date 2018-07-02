@@ -16,19 +16,17 @@ client.video.compositions.
     roomSid: 'RMXXXX',
     audioSources: '*',
     videoLayout: {
-      videoLayout: {
-        chess_table : {
-          x_pos: 10,
-          y_pos: 0,
-          width: 1260,
-          height: 720,
-          max_rows: 3,
-          max_columns: 3,
-          reuse: "show_newest",
-          cells_excluded: [1,3,5,7],
-          video_sources: ['*']
-        }
-      },
+      chess_table : {
+        x_pos: 10,
+        y_pos: 0,
+        width: 1260,
+        height: 720,
+        max_rows: 3,
+        max_columns: 3,
+        reuse: "show_newest",
+        cells_excluded: [1,3,5,7],
+        video_sources: ['*']
+      }
     },
     statusCallback: 'http://my.server.org/callbacks',
     resolution: '1280x720',

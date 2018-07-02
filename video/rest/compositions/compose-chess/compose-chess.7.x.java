@@ -27,7 +27,7 @@ public class ChessComposition{
                       + "       \"max_columns\": 3,"
                       + "       \"reuse\": \"show_newest\","
                       + "       \"cells_excluded\": [1,3,5,7]"
-                      + "       \"video_sources\": [\"student-*\"]"
+                      + "       \"video_sources\": [\"*\"]"
                       + "    }"
                       + "}";
 

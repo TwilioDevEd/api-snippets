@@ -30,7 +30,7 @@ composition = client.video.compositions.create(
                             'max_columns': 3,
                             'reuse': 'show_newest',
                             'cells_excluded': [4],
-                            'video_sources': ['iterviewer-*']
+                            'video_sources': ['interviewer-*']
                         }
                     },
     status_callback = 'http://my.server.org/callbacks',
