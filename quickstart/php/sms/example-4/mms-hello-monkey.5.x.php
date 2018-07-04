@@ -2,9 +2,9 @@
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
 // following the instructions to install it with Composer.
 require_once "vendor/autoload.php";
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $message = $response->message();
 $message->body('Hello, Mobile Monkey');
 $message->media('https://demo.twilio.com/owl.png');

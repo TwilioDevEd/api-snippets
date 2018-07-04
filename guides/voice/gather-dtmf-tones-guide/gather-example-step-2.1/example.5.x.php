@@ -3,10 +3,10 @@
 // sent as an HTTP POST to /gather in our application
 require_once '/path/to/vendor/autoload.php';
 
-use Twilio\Twiml;
+use Twilio\TwiML;
 
 // Use the Twilio PHP SDK to build an XML response
-$response = new Twiml();
+$response = new TwiML();
 
 // If the user entered digits, process their request
 if (array_key_exists('Digits', $_POST)) {

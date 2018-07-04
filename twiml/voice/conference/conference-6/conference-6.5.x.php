@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $dial = $response->dial();
 $dial->conference('NoMusicNoBeepRoom', ['beep' => 'false', 'waitUrl' => 'http://your-webhook-host.com',
     'startConferenceOnEnter' => 'true', 'endConferenceOnExit' => 'true']);

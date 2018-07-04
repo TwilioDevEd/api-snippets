@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $dial = $response->dial(['action' => 'handleLeaveConference.php',
     'method' => 'POST', 'hangupOnStar' => 'true', 'timeLimit' => 30]);
 $dial->conference('LoveTwilio');

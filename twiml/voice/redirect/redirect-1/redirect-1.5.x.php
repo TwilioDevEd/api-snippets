@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $response->redirect('http://pigeons.com/twiml.xml', ['method' => 'POST']);
 
 echo $response;
