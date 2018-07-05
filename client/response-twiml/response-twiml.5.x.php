@@ -3,8 +3,8 @@
 
 // this line loads the library 
 require('vendor/autoload.php'); 
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml;
+$response = new TwiML;
 $response->say("Thanks for calling!");
 echo $response;

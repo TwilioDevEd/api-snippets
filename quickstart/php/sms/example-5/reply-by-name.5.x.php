@@ -2,7 +2,7 @@
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
 // following the instructions to install it with Composer.
 require_once "vendor/autoload.php";
-use Twilio\Twiml;
+use Twilio\TwiML;
 
 // make an associative array of senders we know, indexed by phone number
 $people = array(
@@ -15,7 +15,7 @@ $people = array(
 // otherwise, consider them just another monkey
 $name = $people[$_REQUEST['From']] ?: 'Monkey';
 
-$response = new Twiml();
+$response = new TwiML();
 $response->message("{$name}, thanks for the message!");
 
 header("content-type: text/xml");

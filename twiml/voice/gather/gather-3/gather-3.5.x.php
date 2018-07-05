@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $gather = $response->gather(['action' => '/process_gather.php',
     'method' => 'GET']);
 $gather->say('Please enter your account number,\nfollowed by the pound sign');

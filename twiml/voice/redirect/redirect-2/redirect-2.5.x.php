@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $response->dial('415-123-4567');
 $response->redirect('http://www.foo.com/nextInstructions');
 

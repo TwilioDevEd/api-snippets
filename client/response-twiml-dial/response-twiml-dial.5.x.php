@@ -3,9 +3,9 @@
 
 // this line loads the library 
 require('vendor/autoload.php'); 
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml;
+$response = new TwiML;
 
 // get the phone number from the page request parameters, if given
 if (isset($_REQUEST['To'])) {

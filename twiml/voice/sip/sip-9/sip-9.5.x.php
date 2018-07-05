@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\Twiml;
+use Twilio\TwiML;
 
-$response = new Twiml();
+$response = new TwiML();
 $dial = $response->dial(['record' => 'record-from-answer', 'timeout' => 10,
     'hangupOnStar' => 'true', 'callerId' => 'bob', 'method' => 'POST',
     'action' => '/handle_post_dial']);
