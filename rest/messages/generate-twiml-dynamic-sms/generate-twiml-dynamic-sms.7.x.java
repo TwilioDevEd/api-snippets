@@ -13,11 +13,11 @@ public class TwilioServlet extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String body = request.getParameter("Body");
     String message = "Message";
-    if (body == "hello") {
-      // Use a generic message
+    if (body.equals("hello")) {
+      // Say hi
       message = "Hi there!";
-    } else if (body == "bye") {
-      // Use the caller's name
+    } else if (body.equals("bye")) {
+      // Say goodbye
       message = "Goodbye!";
     }
 
