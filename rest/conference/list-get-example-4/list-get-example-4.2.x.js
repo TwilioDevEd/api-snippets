@@ -11,7 +11,7 @@ client.conferences.list(
   },
   (err, data) => {
     data.conferences.forEach(conference => {
-      console.log(conference.Status);
+      console.log(conference.sid);
     });
   }
 );

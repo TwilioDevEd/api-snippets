@@ -17,16 +17,16 @@ public class Example {
 
     // Build a filter for the ConferenceList
     Map<String, String> params = new HashMap<String, String>();
-    
+
     params.put("Status", "in-progress");
     params.put("DateCreated>", "2009-07-06");
-    
+
     ConferenceList conferences = client.getAccount().getConferences(params);
-    
+
     // Loop over conferences and print out a property for each one.
     for (Conference conference : conferences) {
-      System.out.println(conference.getStatus());
+      System.out.println(conference.getSid());
     }
-    
+
   }
 }

@@ -13,5 +13,5 @@ $conferences = $client->conferences->read(
 );
 // Loop over the list of conferences and echo a property for each one
 foreach ($conferences as $conference) {
-    echo $conference->status;
+    echo $conference->sid;
 }

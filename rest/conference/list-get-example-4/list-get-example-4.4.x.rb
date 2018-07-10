@@ -10,5 +10,5 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 conferences = client.account.conferences
                     .list(status: 'in-progress', "date_created>": '2009-07-06')
 conferences.each do |conference|
-  puts conference.status
+  puts conference.sid
 end

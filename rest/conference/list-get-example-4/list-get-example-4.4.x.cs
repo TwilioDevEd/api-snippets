@@ -15,10 +15,10 @@ class Example
     request.DateCreatedComparison = ComparisonType.GreaterThanOrEqualTo;
     request.DateCreated = new DateTime(2009, 07, 06);
     var conferences = twilio.ListConferences(request);
-    
+
     foreach (var conference in conferences.Conferences)
     {
-      Console.WriteLine(conference.Status);
+      Console.WriteLine(conference.Sid);
     }
   }
 }

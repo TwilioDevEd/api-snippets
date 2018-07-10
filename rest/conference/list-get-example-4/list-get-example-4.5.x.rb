@@ -12,5 +12,5 @@ auth_token = 'your_auth_token'
   status: 'in-progress',
   date_created: Time.parse('2009-07-06')
 ).each do |conference|
-  puts conference.status
+  puts conference.sid
 end

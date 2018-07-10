@@ -18,7 +18,7 @@ class Example
 
         foreach (var conference in conferences)
         {
-            Console.WriteLine(conference.Status);
+            Console.WriteLine(conference.Sid);
         }
     }
 }
