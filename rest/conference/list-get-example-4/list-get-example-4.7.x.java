@@ -21,7 +21,7 @@ public class Example {
 
     // Loop over conferences and print out a property for each one.
     for (Conference conference : conferences) {
-      System.out.println(conference.getStatus());
+      System.out.println(conference.getSid());
     }
   }
 }

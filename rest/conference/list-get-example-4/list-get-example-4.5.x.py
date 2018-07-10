@@ -11,3 +11,5 @@ client = TwilioRestClient(account_sid, auth_token)
 conferences = client.conferences.list(
     status="in-progress", created_after=date(2009, 7, 6)
 )
+for conference in conferences:
+    print(conference.sid)

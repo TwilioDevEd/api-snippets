@@ -13,5 +13,5 @@ foreach ($client->account->conferences->getIterator(0, 50, array(
     "DateCreated>" => "2009-07-06"
     )) as $conference
 ) {
-    echo $conference->status;
+    echo $conference->sid;
 }

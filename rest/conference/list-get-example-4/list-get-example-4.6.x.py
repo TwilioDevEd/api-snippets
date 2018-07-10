@@ -13,4 +13,4 @@ conferences = client.conferences.list(
 )
 
 for conference in conferences:
-    print(conference.status)
+    print(conference.sid)
