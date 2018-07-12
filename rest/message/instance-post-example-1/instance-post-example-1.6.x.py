@@ -6,5 +6,5 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-client.messages("MM800f449d0399ed014aae2bcc0cc2f2ec") \
+client.messages("MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
       .update(body="")
