@@ -1,7 +1,7 @@
 require('dotenv').load();
 const http = require('http');
 const path = require('path');
-const AccessToken = require('twilio').AccessToken;
+const AccessToken = require('twilio').jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 const express = require('express');
 // Create Express webapp
