@@ -3,7 +3,7 @@ require('dotenv').load();
 const http = require('http');
 const path = require('path');
 
-const AccessToken = require('twilio').AccessToken;
+const AccessToken = require('twilio').jwt.AccessToken;
 const VideoGrant = AccessToken.VideoGrant;
 const express = require('express');
 const randomUsername = require('./randos');
