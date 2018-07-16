@@ -5,7 +5,7 @@ require 'twilio-ruby'
 post '/voice' do
   Twilio::TwiML::VoiceResponse.new do |r|
     r.gather numDigits: 1 do |g|
-      g.say('For sales, press 1. For support, press 2.')
+      g.say(message: 'For sales, press 1. For support, press 2.')
     end
     r.redirect('/voice')
   end.to_s
