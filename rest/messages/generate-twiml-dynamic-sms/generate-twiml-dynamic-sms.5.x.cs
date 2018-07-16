@@ -10,7 +10,7 @@ public class HelloWorldController : TwilioController
   [HttpPost]
   public ActionResult Index()
   {
-      const string requestBody = Request.Form["Body"];
+      var requestBody = Request.Form["Body"];
       var response = new MessagingResponse();
       if(requestBody == "hello")
       {
