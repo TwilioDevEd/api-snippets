@@ -5,7 +5,7 @@ require 'twilio-ruby'
 post '/record' do
   Twilio::TwiML::VoiceResponse.new do |r|
     # Use <Say> to give the caller some instructions
-    r.say('Hello. Please leave a message after the beep.')
+    r.say(message: 'Hello. Please leave a message after the beep.')
 
     # Use <Record> to record the caller's message
     r.record

@@ -5,7 +5,7 @@ require 'httparty'
 
 post '/voice' do
   Twilio::TwiML::VoiceResponse.new do |r|
-    r.say('Hi! I want to know what do you think about coding.')
+    r.say(message: 'Hi! I want to know what do you think about coding.')
     r.record(maxLength: '10', action: '/recording')
     r.hangup
   end.to_s
@@ -16,9 +16,9 @@ post '/recording' do
   puts recording_url
 
   Twilio::TwiML::VoiceResponse.new do |r|
-    r.say('Thanks for howling... take a listen to what you howled.')
+    r.say(message: 'Thanks for howling... take a listen to what you howled.')
     r.play(url: recording_url)
-    r.say('Goodbye.')
+    r.say(message: 'Goodbye.')
   end.to_s
 end
 
