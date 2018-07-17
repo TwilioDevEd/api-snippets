@@ -5,7 +5,7 @@ require 'twilio-ruby'
 post '/voice' do
   Twilio::TwiML::VoiceResponse.new do |r|
     r.gather(numDigits: 1, action: '/gather') do |g|
-      g.say('For sales, press 1. For support, press 2.')
+      g.say(message: 'For sales, press 1. For support, press 2.')
     end
 
     # If the user doesn't enter input, loop
@@ -18,15 +18,15 @@ post '/gather' do
     case params['Digits']
     when '1'
       Twilio::TwiML::VoiceResponse.new do |r|
-        r.say('You selected sales. Good for you!')
+        r.say(message: 'You selected sales. Good for you!')
       end.to_s
     when '2'
       Twilio::TwiML::VoiceResponse.new do |r|
-        r.say('You need support. We will help!')
+        r.say(message: 'You need support. We will help!')
       end.to_s
     else
       Twilio::TwiML::VoiceResponse.new do |r|
-        r.say('Sorry, I don\'t understand that choice.')
+        r.say(message: 'Sorry, I don\'t understand that choice.')
         r.pause
         r.redirect('/voice')
       end.to_s
