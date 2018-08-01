@@ -31,7 +31,7 @@ namespace ValidateRequestExample.Filters
 
         private bool IsValidRequest(HttpRequestBase request) {
             var signature = request.Headers["X-Twilio-Signature"];
-            var requestUrl = request.RawUrl;
+            var requestUrl = request.Url.AbsoluteUri;
             return _requestValidator.Validate(requestUrl, request.Form, signature);
         }
     }
