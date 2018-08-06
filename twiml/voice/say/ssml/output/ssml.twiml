@@ -1,0 +1,16 @@
+<Response>
+  <Say voice="Polly.Joanna">
+    Hi
+    <break strength="x-weak" time="100ms"/>
+    <emphasis level="moderate">Words to emphasize</emphasis>
+    <p>Words to speak</p>
+    aaaaaa
+    <phoneme alphabet="x-sampa" ph="pɪˈkɑːn">Words to speak</phoneme>
+    bbbbbbb
+    <prosody pitch="-10%" rate="85%" volume="-6dB">Words to speak</prosody>
+    <s>Words to speak</s>
+    <say-as interpret-as="spell-out" role="yyyymmdd">Words to speak</say-as>
+    <sub alias="alias">Words to be substituted</sub>
+    <w>Words to speak</w>
+  </Say>
+</Response>
