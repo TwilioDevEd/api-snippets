@@ -1,5 +1,5 @@
 {
-  "title": "Sample data from the IBM Watson Text to Speech Add-on",
+  "title": "Sample data from the IBM Watson Speech to Text Add-on",
   "description": "This is a sample of the payload your application would receive when using the IBM Watson Speech to Text add-on.",
   "type": "output"
 }
