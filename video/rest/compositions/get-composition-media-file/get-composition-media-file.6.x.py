@@ -15,8 +15,7 @@ response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')
 
 # For example, get the data and download the media to a local file
-data = urlopen(media_location).read()
 local_file = 'myFile.mp4'
 with open (local_file, 'wb') as f:
-    f.write(data)
+    f.write(urlopen(media_location).read())
 
