@@ -14,6 +14,9 @@ uri = 'https://video.twilio.com/v1/Compositions/{}/Media?Ttl=6000'.format(compos
 response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')
 
-# For example, download the media to a local file
-local_file = open('myFile.mp4', 'w')
-local_file.write(urlopen(media_location).read())
+# For example, get the data and download the media to a local file
+data = urlopen(media_location).read()
+local_file = 'myFile.mp4'
+with open (local_file, 'wb') as f:
+    f.write(data)
+
