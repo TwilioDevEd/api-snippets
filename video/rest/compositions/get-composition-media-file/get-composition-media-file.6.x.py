@@ -18,4 +18,3 @@ media_location = json.loads(response.text).get('redirect_to')
 local_file = 'myFile.mp4'
 with open (local_file, 'wb') as f:
     f.write(urlopen(media_location).read())
-
