@@ -11,10 +11,11 @@ namespace YourNewWebProject.Controllers
     public class SmsController : TwilioController
     {
         [HttpPost]
-        public TwiMLResult Index()
+        public TwiMLResult Index(SmsRequest incomingMessage)
         {
             var messagingResponse = new MessagingResponse();
-            messagingResponse.Message("The Robots are coming! Head for the hills!");
+            messagingResponse.Message("The copy cat says: " +
+                                      incomingMessage.Body);
 
             return TwiML(messagingResponse);
         }
