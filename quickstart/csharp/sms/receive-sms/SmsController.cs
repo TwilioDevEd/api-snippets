@@ -2,16 +2,14 @@
 // In Package Manager, run:
 // Install-Package Twilio.AspNet.Mvc -DependencyVersion HighestMinor
 
-using System.Web.Mvc;
 using Twilio.AspNet.Common;
 using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
-namespace YourNewWebProject.Controllers
+namespace WebApplication1.Controllers
 {
     public class SmsController : TwilioController
     {
-        [HttpPost]
         public TwiMLResult Index(SmsRequest incomingMessage)
         {
             var messagingResponse = new MessagingResponse();
