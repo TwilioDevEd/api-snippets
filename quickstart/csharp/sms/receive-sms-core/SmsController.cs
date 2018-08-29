@@ -6,7 +6,7 @@ using Twilio.AspNet.Common;
 using Twilio.AspNet.Core;
 using Twilio.TwiML;
 
-namespace YourNewWebProject.Controllers
+namespace TwilioReceive.Controllers
 {
     public class SmsController : TwilioController
     {
