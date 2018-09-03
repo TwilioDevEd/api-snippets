@@ -1,0 +1,11 @@
+curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tasks/WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Reservations/WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    -d "Instruction=conference" \
+    -d "From=+18001231234" \
+    -d "ConferenceStatusCallback=https://www.example.com/ConferenceEvents" \
+    -d "ConferenceStatusCallbackEvent=start" \
+    -d "ConferenceStatusCallbackEvent=end" \
+    -d "ConferenceStatusCallbackEvent=join" \
+    -d "ConferenceStatusCallbackEvent=leave" \
+    -d "ConferenceStatusCallbackEvent=mute" \
+    -d "ConferenceStatusCallbackEvent=hold" \
+    -u '{account_sid}:{auth_token}'
