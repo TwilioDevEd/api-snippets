@@ -16,8 +16,14 @@ client.taskrouter.v1
     instruction: 'conference',
     from: '+18001231234',
     conferenceStatusCallback: 'https://www.example.com/ConferenceEvents',
-    conferenceStatusCallbackEvent: ["start", "end", "join", "leave", "mute", "hold"]
-  })
+    conferenceStatusCallbackEvent: [
+      'start',
+      'end',
+      'join',
+      'leave',
+      'mute',
+      'hold'
+    ]})
   .then(reservation => {
     console.log(reservation.reservationStatus);
     console.log(reservation.workerName);

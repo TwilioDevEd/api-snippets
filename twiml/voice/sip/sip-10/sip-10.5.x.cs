@@ -15,13 +15,11 @@ class Example
         var sip = new Sip(
             new Uri("http://example.com"),
             "kate",
-            statusCallbackEvent: new List<Sip.EventEnum>(
-                new EventEnum[] {
-                    EventEnum.Initiated,
-                    EventEnum.Ringing,
-                    EventEnum.Answered,
-                    EventEnum.Completed
-                }
+            statusCallbackEvent: new List<EventEnum>(
+                EventEnum.Initiated,
+                EventEnum.Ringing,
+                EventEnum.Answered,
+                EventEnum.Completed
             ),
             statusCallback: new Uri("https://myapp.com/calls/events"),
             statusCallbackMethod: HttpMethod.Post

@@ -13,14 +13,12 @@ class Example
         var dial = new Dial();
 
         dial.Client("joey",
-            statusCallbackEvent: new List<EventEnum>(
-                new EventEnum[] {
+            statusCallbackEvent: new List<EventEnum>() {
                     EventEnum.Initiated,
                     EventEnum.Ringing,
                     EventEnum.Answered,
                     EventEnum.Completed
-                }
-            ),
+                },
             statusCallback: new Uri("https://myapp.com/calls/events"),
             statusCallbackMethod: HttpMethod.Post);
 
