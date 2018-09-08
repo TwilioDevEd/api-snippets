@@ -17,11 +17,12 @@ class Example
 
         var to = new PhoneNumber("+14155551212");
         var from = new PhoneNumber("+18668675310");
-        var statusCallbackEvents = new List<string>() {
-            "initiated",
-            "ringing",
-            "answered",
-            "completed" };
+        var statusCallbackEvents = new List<EventEnum>()
+            EventEnum.Initiated,
+            EventEnum.Ringing,
+            EventEnum.Answered,
+            EventEnum.Completed
+        };
 
         var call = CallResource.Create(
             to,

@@ -5,8 +5,5 @@ curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXX
     --data-urlencode "Method=GET" \
     --data-urlencode "StatusCallback=https://www.myapp.com/events" \
     --data-urlencode "StatusCallbackMethod=POST" \
-    --data-urlencode "StatusCallbackEvent=initiated" \
-    --data-urlencode "StatusCallbackEvent=ringing" \
-    --data-urlencode "StatusCallbackEvent=answered" \
-    --data-urlencode "StatusCallbackEvent=completed" \
+    --data-urlencode "StatusCallbackEvent=initiated ringing answered completed" \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

@@ -1,12 +1,14 @@
 <?php
-require_once './vendor/autoload.php';
-use Twilio\TwiML;
+require './vendor/autoload.php';
+use Twilio\Twiml;
 
 $response = new TwiML();
 $dial = $response->dial();
 $dial->client('joey',
-    ['statusCallbackEvent' => 'initiated ringing answered completed',
-    'statusCallback' => 'https://myapp.com/calls/events',
-    'statusCallbackMethod' => 'POST']);
+    [
+      'statusCallbackEvent' => array('initiated', 'ringing', 'answered', 'completed'),
+      'statusCallback' => 'https://myapp.com/calls/events',
+      'statusCallbackMethod' => 'POST'
+    ]);
 
 echo $response;

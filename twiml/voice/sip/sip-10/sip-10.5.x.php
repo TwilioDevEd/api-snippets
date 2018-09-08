@@ -5,7 +5,7 @@ use Twilio\TwiML;
 $response = new TwiML();
 $dial = $response->dial();
 $dial->sip('sip:kate@example.com',
-    ['statusCallbackEvent' => 'initiated ringing answered completed',
+    ['statusCallbackEvent' => array('initiated', 'ringing', 'answered', 'completed'),
     'statusCallback' => 'https://myapp.com/calls/events',
     'statusCallbackMethod' => 'POST']);
 

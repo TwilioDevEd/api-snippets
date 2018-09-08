@@ -5,7 +5,7 @@ const dial = response.dial();
 dial.conference(
   {
     statusCallback: 'https://myapp.com/events',
-    statusCallbackEvent: 'start end join leave mute hold',
+    statusCallbackEvent: ['start', 'end', 'join', 'leave', 'mute', 'hold']
   },
   'EventedConf'
 );
