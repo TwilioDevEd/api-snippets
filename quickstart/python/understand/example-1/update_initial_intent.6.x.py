@@ -6,8 +6,6 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-assistant_sid = 'UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-
 # Provide actions for your assistant: say something and listen for a repsonse.
 update_action = {
     'actions': [
@@ -17,8 +15,9 @@ update_action = {
 }
 
 # Update the default intent to use your new actions.
+# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
 client.preview.understand \
-    .assistants(assistant_sid) \
+    .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .intents('hello-world') \
     .intent_actions().update(update_action)
 
