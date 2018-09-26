@@ -6,10 +6,10 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-assistant_sid = 'UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # Create a new intent named 'tell_a_joke'
+# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
 intent = client.preview.understand \
-                       .assistants(assistant_sid) \
+                       .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                        .intents \
                        .create(unique_name='tell-a-joke')
 
