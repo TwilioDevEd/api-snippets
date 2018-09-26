@@ -6,8 +6,6 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-assistant_sid = 'UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-
 phrases = [
     'Tell me a joke',
     'Tell me a joke',
@@ -22,9 +20,11 @@ phrases = [
     'I like jokes',
     'I\'d like to hear a punny joke'
 ]
+
+# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
 for phrase in phrases:
     sample = client.preview.understand \
-                           .assistants(assistant_sid) \
+                           .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                            .intents('tell-a-joke') \
                            .samples \
                            .create(language='en-us', tagged_text=phrase)
