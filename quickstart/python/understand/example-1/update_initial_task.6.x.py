@@ -14,11 +14,11 @@ update_action = {
     ]
 }
 
-# Update the default intent to use your new actions.
+# Update the default task to use your new actions.
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
 client.preview.understand \
     .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .intents('hello-world') \
-    .intent_actions().update(update_action)
+    .tasks('hello-world') \
+    .task_actions().update(update_action)
 
-print("Intent actions updated")
+print("Task actions updated")
