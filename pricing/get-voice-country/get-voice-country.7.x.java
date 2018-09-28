@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.pricing.v1.voice.Country;
+import com.twilio.rest.pricing.v2.voice.Country;
 import com.twilio.type.InboundCallPrice;
 
 public class Example {

@@ -12,5 +12,5 @@
         "current_price" : null
     },
     "price_unit": "USD",
-    "url": "https://pricing.twilio.com/v1/Voice/Numbers/+15108673509"
+    "url": "https://pricing.twilio.com/v2/Voice/Numbers/+15108673509"
 }

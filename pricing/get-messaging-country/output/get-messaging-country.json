@@ -1,5 +1,5 @@
 {
-  "url": "https://pricing.twilio.com/v1/Messaging/Countries/EE",
+  "url": "https://pricing.twilio.com/v2/Messaging/Countries/EE",
   "country": "Estonia",
   "iso_country": "EE",
   "price_unit": "USD",

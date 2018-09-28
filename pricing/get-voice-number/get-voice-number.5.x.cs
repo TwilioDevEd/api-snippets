@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Pricing.V1.Voice;
+using Twilio.Rest.Pricing.v2.Voice;
 using Twilio.Types;
 
 public class Example
@@ -16,6 +16,6 @@ public class Example
 
         var number = NumberResource.Fetch(new PhoneNumber("+15108675310"));
 
-        Console.WriteLine(number.OutboundCallPrice.CurrentPrice);
+        Console.WriteLine(number.OutboundCallPriceWithOrigin.CurrentPrice);
     }
 }

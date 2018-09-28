@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.pricing.v1.messaging.Country;
+import com.twilio.rest.pricing.v2.messaging.Country;
 import com.twilio.type.InboundSmsPrice;
 
 public class Example {

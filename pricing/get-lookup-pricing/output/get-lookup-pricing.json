@@ -1,5 +1,5 @@
 {
-  "url": "https://lookups.twilio.com/v1/PhoneNumbers/+15108675310?Type=carrier",
+  "url": "https://lookups.twilio.com/v2/PhoneNumbers/+15108675310?Type=carrier",
   "carrier": {
     "error_code": null,
     "type": "mobile",

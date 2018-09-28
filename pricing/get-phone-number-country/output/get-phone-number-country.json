@@ -14,5 +14,5 @@
         }
     ],
     "price_unit": "USD",
-    "url": "https://pricing.twilio.com/v1/PhoneNumbers/Countries/US"
+    "url": "https://pricing.twilio.com/v2/PhoneNumbers/Countries/US"
 }

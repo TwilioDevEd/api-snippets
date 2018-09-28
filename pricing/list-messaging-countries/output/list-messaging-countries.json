@@ -2,262 +2,262 @@
   "meta": {
     "page": 0,
     "page_size": 50,
-    "first_page_url": "https://pricing.twilio.com/v1/Messaging/Countries?PageSize=50&Page=0",
+    "first_page_url": "https://pricing.twilio.com/v2/Messaging/Countries?PageSize=50&Page=0",
     "previous_page_url": null,
-    "url": "https://pricing.twilio.com/v1/Messaging/Countries?PageSize=50&Page=0",
-    "next_page_url": "https://pricing.twilio.com/v1/Messaging/Countries?PageSize=50&Page=1&PageToken=DNCV",
+    "url": "https://pricing.twilio.com/v2/Messaging/Countries?PageSize=50&Page=0",
+    "next_page_url": "https://pricing.twilio.com/v2/Messaging/Countries?PageSize=50&Page=1&PageToken=DNCV",
     "key": "countries"
   },
   "countries": [
     {
       "country": "Andorra",
       "iso_country": "AD",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AD"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AD"
     },
     {
       "country": "United Arab Emirates",
       "iso_country": "AE",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AE"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AE"
     },
     {
       "country": "Afghanistan",
       "iso_country": "AF",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AF"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AF"
     },
     {
       "country": "Antigua and Barbuda",
       "iso_country": "AG",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AG"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AG"
     },
     {
       "country": "Anguilla",
       "iso_country": "AI",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AI"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AI"
     },
     {
       "country": "Albania",
       "iso_country": "AL",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AL"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AL"
     },
     {
       "country": "Armenia",
       "iso_country": "AM",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AM"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AM"
     },
     {
       "country": "Netherlands Antilles",
       "iso_country": "AN",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AN"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AN"
     },
     {
       "country": "Angola",
       "iso_country": "AO",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AO"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AO"
     },
     {
       "country": "Antarctica",
       "iso_country": "AQ",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AQ"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AQ"
     },
     {
       "country": "Argentina",
       "iso_country": "AR",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AR"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AR"
     },
     {
       "country": "American Samoa",
       "iso_country": "AS",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AS"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AS"
     },
     {
       "country": "Austria",
       "iso_country": "AT",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AT"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AT"
     },
     {
       "country": "Australia",
       "iso_country": "AU",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AU"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AU"
     },
     {
       "country": "Aruba",
       "iso_country": "AW",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AW"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AW"
     },
     {
       "country": "Aland Islands",
       "iso_country": "AX",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AX"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AX"
     },
     {
       "country": "Azerbaijan",
       "iso_country": "AZ",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/AZ"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/AZ"
     },
     {
       "country": "Bosnia and Herzegovina",
       "iso_country": "BA",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BA"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BA"
     },
     {
       "country": "Barbados",
       "iso_country": "BB",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BB"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BB"
     },
     {
       "country": "Bangladesh",
       "iso_country": "BD",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BD"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BD"
     },
     {
       "country": "Belgium",
       "iso_country": "BE",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BE"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BE"
     },
     {
       "country": "Burkina Faso",
       "iso_country": "BF",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BF"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BF"
     },
     {
       "country": "Bulgaria",
       "iso_country": "BG",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BG"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BG"
     },
     {
       "country": "Bahrain",
       "iso_country": "BH",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BH"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BH"
     },
     {
       "country": "Burundi",
       "iso_country": "BI",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BI"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BI"
     },
     {
       "country": "Benin",
       "iso_country": "BJ",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BJ"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BJ"
     },
     {
       "country": "Bermuda",
       "iso_country": "BM",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BM"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BM"
     },
     {
       "country": "Brunei",
       "iso_country": "BN",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BN"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BN"
     },
     {
       "country": "Bolivia",
       "iso_country": "BO",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BO"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BO"
     },
     {
       "country": "Brazil",
       "iso_country": "BR",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BR"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BR"
     },
     {
       "country": "Bahamas",
       "iso_country": "BS",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BS"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BS"
     },
     {
       "country": "Bhutan",
       "iso_country": "BT",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BT"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BT"
     },
     {
       "country": "Botswana",
       "iso_country": "BW",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BW"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BW"
     },
     {
       "country": "Belarus",
       "iso_country": "BY",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BY"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BY"
     },
     {
       "country": "Belize",
       "iso_country": "BZ",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/BZ"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/BZ"
     },
     {
       "country": "Canada",
       "iso_country": "CA",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CA"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CA"
     },
     {
       "country": "Cocos (Keeling) Islands",
       "iso_country": "CC",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CC"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CC"
     },
     {
       "country": "DR Congo",
       "iso_country": "CD",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CD"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CD"
     },
     {
       "country": "Central Africa",
       "iso_country": "CF",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CF"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CF"
     },
     {
       "country": "Congo",
       "iso_country": "CG",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CG"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CG"
     },
     {
       "country": "Switzerland",
       "iso_country": "CH",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CH"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CH"
     },
     {
       "country": "Ivory Coast",
       "iso_country": "CI",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CI"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CI"
     },
     {
       "country": "Cook Islands",
       "iso_country": "CK",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CK"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CK"
     },
     {
       "country": "Chile",
       "iso_country": "CL",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CL"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CL"
     },
     {
       "country": "Cameroon",
       "iso_country": "CM",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CM"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CM"
     },
     {
       "country": "China",
       "iso_country": "CN",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CN"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CN"
     },
     {
       "country": "Colombia",
       "iso_country": "CO",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CO"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CO"
     },
     {
       "country": "Costa Rica",
       "iso_country": "CR",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CR"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CR"
     },
     {
       "country": "Cuba",
       "iso_country": "CU",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CU"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CU"
     },
     {
       "country": "Cape Verde",
       "iso_country": "CV",
-      "url": "https://pricing.twilio.com/v1/Messaging/Countries/CV"
+      "url": "https://pricing.twilio.com/v2/Messaging/Countries/CV"
     }
   ]
 }

@@ -1,7 +1,7 @@
 // Download the twilio-csharp library from twilio.com/docs/libraries/csharp
 using System;
 using Twilio;
-using Twilio.Rest.Pricing.V1.Messaging;
+using Twilio.Rest.Pricing.v2.Messaging;
 
 public class Example
 {

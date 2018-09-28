@@ -12,4 +12,4 @@ $client = new Client($sid, $token);
 
 $number = $client->pricing->voice->numbers("+15108675310")->fetch();
 
-$number->outboundCallPrice["current_price"] . PHP_EOL;
+$number->outboundCallPriceWithOrigin["current_price"] . PHP_EOL;
