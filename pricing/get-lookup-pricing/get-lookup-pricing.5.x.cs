@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Twilio;
-using Twilio.Rest.Lookups.V1;
-using Twilio.Rest.Pricing.V1.Messaging;
+using Twilio.Rest.Lookups.v2;
+using Twilio.Rest.Pricing.v2.Messaging;
 using Twilio.Types;
 
 public class Example

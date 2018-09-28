@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
-import com.twilio.rest.pricing.v1.messaging.Country;
+import com.twilio.rest.pricing.v2.messaging.Country;
 
 public class Example {
   // Find your Account Sid and Token at twilio.com/user/account

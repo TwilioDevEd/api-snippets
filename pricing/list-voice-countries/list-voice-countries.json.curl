@@ -1,2 +1,2 @@
-curl -XGET https://pricing.twilio.com/v1/Voice/Countries \
+curl -XGET https://pricing.twilio.com/v2/Voice/Countries \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

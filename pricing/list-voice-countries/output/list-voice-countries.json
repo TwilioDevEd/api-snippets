@@ -2,22 +2,22 @@
     "meta": {
         "page": 0,
         "page_size": 50,
-        "first_page_url": "https://pricing.twilio.com/v1/Voice/Countries?PageSize=50&Page=0",
+        "first_page_url": "https://pricing.twilio.com/v2/Voice/Countries?PageSize=50&Page=0",
         "previous_page_url": null,
-        "url": "https://pricing.twilio.com/v1/Voice/Countries?PageSize=50&Page=0",
-        "next_page_url": "https://pricing.twilio.com/v1/Voice/Countries?PageSize=50&Page=1&PageToken=DNDE",
+        "url": "https://pricing.twilio.com/v2/Voice/Countries?PageSize=50&Page=0",
+        "next_page_url": "https://pricing.twilio.com/v2/Voice/Countries?PageSize=50&Page=1&PageToken=DNDE",
         "key": "countries"
     },
     "countries": [
         {
             "country": "Andorra",
             "iso_country": "AD",
-            "url": "https://pricing.twilio.com/v1/Voice/Countries/AD"
+            "url": "https://pricing.twilio.com/v2/Voice/Countries/AD"
         },
         {
             "country": "United Arab Emirates",
             "iso_country": "AE",
-            "url": "https://pricing.twilio.com/v1/Voice/Countries/AE"
+            "url": "https://pricing.twilio.com/v2/Voice/Countries/AE"
         }
 	...
      ]

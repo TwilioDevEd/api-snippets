@@ -1,2 +1,2 @@
-curl -XGET https://pricing.twilio.com/v1/Voice/Numbers/+15108675310 \
+curl -XGET https://pricing.twilio.com/v2/Voice/Numbers/+15108675310 \
     -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

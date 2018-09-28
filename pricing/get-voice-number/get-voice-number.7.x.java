@@ -1,6 +1,6 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.pricing.v1.voice.Number;
+import com.twilio.rest.pricing.v2.voice.Number;
 import com.twilio.type.PhoneNumber;
 
 public class Example {
@@ -14,6 +14,6 @@ public class Example {
     // Get Twilio Voice pricing for calls to/from a specific number
     Number voiceNumber = Number.fetcher(new PhoneNumber("+15108675310")).fetch();
 
-    System.out.println(voiceNumber.getOutboundCallPrice().getCurrentPrice());
+    System.out.println(voiceNumber.getOutboundCallPriceWithOrigin().getCurrentPrice());
   }
 }
