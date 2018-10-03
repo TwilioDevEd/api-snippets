@@ -10,7 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$country = $client->pricing->voice->countries("EE")->fetch();
+$country = $client->pricing->v2->voice->countries("EE")->fetch();
 
 foreach ($country->inboundCallPrices as $p) {
     echo "{$p["number_type"]} {$p["current_price"]}\n";

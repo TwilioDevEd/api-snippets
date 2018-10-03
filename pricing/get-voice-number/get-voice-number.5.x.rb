@@ -6,5 +6,5 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-number = @client.pricing.voice.numbers('+15108675310')
+numbers = @client.pricing.v2.voice.numbers('+15108675310')
 puts number.fetch.outbound_call_price['current_price']

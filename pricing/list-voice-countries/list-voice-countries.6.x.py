@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-voice_countries = client.pricing \
+voice_countries = client.pricing.v2 \
                         .voice \
                         .countries \
                         .list()

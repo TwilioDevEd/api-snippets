@@ -14,6 +14,6 @@ public class Example {
     // Get Twilio Voice pricing for calls to/from a specific number
     Number voiceNumber = Number.fetcher(new PhoneNumber("+15108675310")).fetch();
 
-    System.out.println(voiceNumber.getOutboundCallPriceWithOrigin().getCurrentPrice());
+    System.out.println(voiceNumber.getOutboundCallPrices().getCurrentPrice());
   }
 }
