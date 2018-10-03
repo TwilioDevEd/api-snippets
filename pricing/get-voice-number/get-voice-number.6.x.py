@@ -6,9 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-number = client.pricing \
+number = client.pricing.v2 \
                .voice \
-               .numbers("+15108675310") \
+               .numbers(destination_number="+15108675310") \
                .fetch()
 
-print(number.outbound_call_price['current_price'])
+print(number.outbound_call_prices['current_price'])

@@ -16,6 +16,6 @@ public class Example
 
         var number = NumberResource.Fetch(new PhoneNumber("+15108675310"));
 
-        Console.WriteLine(number.OutboundCallPriceWithOrigin.CurrentPrice);
+        Console.WriteLine(number.outboundCallPrices.CurrentPrice);
     }
 }
