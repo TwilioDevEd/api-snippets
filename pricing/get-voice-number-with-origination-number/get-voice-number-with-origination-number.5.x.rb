@@ -6,7 +6,6 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-countries = @client.pricing.voice.countries.list
-countries.each do |c|
-  puts c.iso_country
-end
+numbers = @client.pricing.voice.numbers('+15108675310')
+puts number.fetch(origination_number: '+12421234567')
+           .outbound_call_price['current_price']

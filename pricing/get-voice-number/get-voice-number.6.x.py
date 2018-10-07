@@ -6,7 +6,7 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-number = client.pricing.v2 \
+number = client.pricing \
                .voice \
                .numbers(destination_number="+15108675310") \
                .fetch()

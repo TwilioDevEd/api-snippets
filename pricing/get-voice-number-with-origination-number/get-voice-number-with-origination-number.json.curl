@@ -1,0 +1,2 @@
+curl -XGET https://pricing.twilio.com/v2/Voice/Numbers/+3935523885?OriginationNumber=+12421234567 \
+    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'

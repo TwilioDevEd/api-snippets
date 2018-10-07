@@ -10,8 +10,7 @@ $token = "your_auth_token";
 
 $client = new Client($sid, $token);
 
-$voiceCountries = $client->pricing->voice->countries->read();
+$number = $client->pricing->voice->numbers("+15108675310")
+                 ->fetch(['originationNumber' => '+12421234567']);
 
-foreach ($voiceCountries as $c) {
-    echo $c->isoCountry . PHP_EOL;
-}
+$number->outboundCallPrices["current_price"] . PHP_EOL;
