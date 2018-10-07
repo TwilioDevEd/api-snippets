@@ -1,0 +1,22 @@
+{
+    "country": "Italy",
+    "destination_number": "+3935523885",
+    "inbound_call_price": {
+        "base_price": null,
+        "current_price": null,
+        "number_type": null
+    },
+    "iso_country": "IT",
+    "origination_number": "+12421234567",
+    "outbound_call_prices": [
+        {
+            "base_price": "0.315",
+            "current_price": "0.315",
+            "origination_prefixes": [
+                "1242"
+            ]
+        }
+    ],
+    "price_unit": "USD",
+    "url": "https://pricing.twilio.com/v2/Voice/Numbers/+3935523885"
+}

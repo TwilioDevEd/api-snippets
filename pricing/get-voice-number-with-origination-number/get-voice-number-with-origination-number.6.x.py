@@ -6,10 +6,9 @@ account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 auth_token = "your_auth_token"
 client = Client(account_sid, auth_token)
 
-voice_countries = client.pricing \
-                        .voice \
-                        .countries \
-                        .list()
+number = client.pricing \
+               .voice \
+               .numbers(destination_number="+15108675310") \
+               .fetch(origination_number="+12421234567")
 
-for country in voice_countries:
-    print(country.iso_country)
+print(number.outbound_call_prices['current_price'])
