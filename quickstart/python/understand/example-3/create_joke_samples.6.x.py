@@ -25,7 +25,7 @@ phrases = [
 for phrase in phrases:
     sample = client.preview.understand \
                            .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                           .intents('tell-a-joke') \
+                           .tasks('tell-a-joke') \
                            .samples \
                            .create(language='en-us', tagged_text=phrase)
 
