@@ -6,21 +6,21 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-# Create a new intent named 'tell_a_joke'
-# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
+# Create a new task named 'tell_a_joke'
+# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 intent = client.preview.understand \
                        .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                        .intents \
                        .create(unique_name='tell-a-joke')
 
-# Provide actions for the new intent
+# Provide actions for the new task
 joke_actions = {
     'actions': [
         {'say': 'I was going to look for my missing watch, but I could never find the time.'}
     ]
 }
 
-# Update the tell-a-joke intent to use this 'say' action.
+# Update the tell-a-joke task to use this 'say' action.
 client.preview.understand \
     .assistants(assistant_sid) \
     .intents(intent.sid) \
