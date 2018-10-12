@@ -6,8 +6,8 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-# Provide actions for your assistant: say something and listen for a repsonse.
-update_action = {
+# Update your assistant's initiation action task to say something and listen for a repsonse.
+update_initiation_action = {
     'actions': [
         {'say': 'Hi there, I\'m your virtual assistant! How can I help you?'},
         {'listen': True}
@@ -18,7 +18,6 @@ update_action = {
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/assistant/list
 client.preview.understand \
     .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-    .intents('hello-world') \
-    .intent_actions().update(update_action)
+    .update(initiation_actions=update_initiation_action)
 
 print("Intent actions updated")
