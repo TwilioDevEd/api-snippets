@@ -22,7 +22,7 @@ joke_actions = {
 
 # Update the tell-a-joke task to use this 'say' action.
 client.preview.understand \
-    .assistants(assistant_sid) \
+    .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .tasks(task.sid) \
     .task_actions().update(joke_actions)
 
