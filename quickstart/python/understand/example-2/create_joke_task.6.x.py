@@ -26,4 +26,4 @@ client.preview.understand \
     .tasks(task.sid) \
     .task_actions().update(joke_actions)
 
-print(intent.sid)
+print(task.sid)
