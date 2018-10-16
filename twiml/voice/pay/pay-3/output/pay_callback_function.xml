@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say>Calling Twilio Pay</Say>
+  <Pay chargeAmount="20.45" 
+    action="https://enter-your-callback-function-url.twil.io/pay"/>
+</Response>
