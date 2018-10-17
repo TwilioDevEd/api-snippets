@@ -24,7 +24,7 @@ public class Example {
         SsmlS s = new SsmlS.Builder("Words to speak").build();
         SsmlSub sub = new SsmlSub.Builder("Words to be substituted").alias("alias").build();
         SsmlPhoneme phoneme = new SsmlPhoneme.Builder("Words to speak").alphabet(Alphabet.X_SAMPA).ph("pɪˈkɑːn").build();
-        SsmlSayAs sayAs = new SsmlSayAs.Builder("Words to speak").role(Role.YYYYMMDD).interpretAs(InterpretAs.SPELL_OUT).build();
+        SsmlSayAs sayAs = new SsmlSayAs.Builder("Words to speak").interpretAs(InterpretAs.SPELL_OUT).build();
         SsmlP p = new SsmlP.Builder("Words to speak").build();
         SsmlW w = new SsmlW.Builder("Words to speak").build();
         Say say = new Say.Builder("Hi").voice(Say.Voice.POLLY_JOANNA).ssmlBreak(_break).ssmlEmphasis(emphasis).ssmlP(p).addText("aaaaaa").ssmlPhoneme(phoneme).addText("bbbbbbb").ssmlProsody(prosody).ssmlS(s).ssmlSayAs(sayAs).ssmlSub(sub).ssmlW(w).build();
