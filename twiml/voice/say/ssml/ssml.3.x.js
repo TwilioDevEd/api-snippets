@@ -38,8 +38,7 @@ say.ssmlProsody(
 say.ssmlS('Words to speak');
 say.ssmlSayAs(
   {
-    'interpret-as': 'spell-out',
-    role: 'yyyymmdd'
+    'interpret-as': 'spell-out'
   },
   'Words to speak'
 );
