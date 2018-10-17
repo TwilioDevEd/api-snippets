@@ -14,7 +14,7 @@ class Example
         say.AddText("bbbbbbb");
         say.SsmlProsody("Words to speak", pitch: "-10%", rate: "85%", volume: "-6dB");
         say.SsmlS("Words to speak");
-        say.SsmlSayAs("Words to speak", role: "yyyymmdd", interpretAs: "spell-out");
+        say.SsmlSayAs("Words to speak", interpretAs: "spell-out");
         say.SsmlSub("Words to be substituted", alias: "alias");
         say.SsmlW("Words to speak");
         response.Say(say);
