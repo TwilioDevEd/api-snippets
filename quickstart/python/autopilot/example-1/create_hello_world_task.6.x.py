@@ -14,14 +14,11 @@ hello_world_task_actions = {
     ]
 }
 
-
 # Create the hello_world task
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 task = client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                        .tasks \
-                       .create(
-                           unique_name='hello-world',
-                           actions=hello_world_task_actions)
+                       .create(unique_name='hello_world') \
+                       .actions(hello_world_task_actions)
 
-print("Hello-world task has been created!")
-print(task.sid)
+print("Hello-world task created!")
