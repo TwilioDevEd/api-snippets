@@ -14,11 +14,10 @@ phrases = [
 ]
 
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-# Replace 'UDXXX...' with the SID for the task you just created.
 for phrase in phrases:
     sample = client.autopilot \
         .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-        .tasks('UDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+        .tasks('hello-world') \
         .samples \
         .create(language='en-us', tagged_text=phrase)
 
