@@ -20,7 +20,6 @@ task = client.autopilot \
     .tasks \
     .create(
         unique_name='tell-a-joke',
-        actions=joke_actions)
+        task_actions=joke_actions)
 
-print("Tell-a-joke task has been created!")
 print(task.sid)
