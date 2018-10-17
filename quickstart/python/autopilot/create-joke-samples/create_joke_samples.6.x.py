@@ -26,7 +26,7 @@ phrases = [
 for phrase in phrases:
     sample = client.autopilot \
         .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-        .tasks('UDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+        .tasks('tell-a-joke') \
         .samples \
         .create(language='en-us', tagged_text=phrase)
 
