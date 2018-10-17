@@ -15,11 +15,11 @@ joke_actions = {
 
 # Create a new task named 'tell_a_joke'
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-task = client.preview.understand \
-                       .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                       .tasks \
-                       .create(
-                           unique_name='tell-a-joke',
-                           task_actions=joke_actions)
+task = client.autopilot \
+    .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .tasks \
+    .create(
+        unique_name='tell-a-joke',
+        task_actions=joke_actions)
 
 print(task.sid)

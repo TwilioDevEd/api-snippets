@@ -16,7 +16,7 @@ update_initiation_action = {
 
 # Update the default intent to use your new actions.
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-client.preview.understand \
+client.autopilot \
     .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .update(initiation_actions=update_initiation_action)
 

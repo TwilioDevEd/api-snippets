@@ -8,9 +8,9 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-query = client.preview.understand \
-                      .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                      .queries \
-                      .create(language='en-US', query='Tell me a joke')
+query = client.autopilot \
+    .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .queries \
+    .create(language='en-US', query='Tell me a joke')
 
 print(query.results.get('task'))
