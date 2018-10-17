@@ -6,19 +6,18 @@ account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
-# Build task actions that say something and listens for a repsonse.
-hello_world_task_actions = {
+# Update your assistant's initiation action task to say something and listen for a repsonse.
+update_initiation_action = {
     'actions': [
         {'say': 'Hi there, I\'m your virtual assistant! How can I help you?'},
         {'listen': True}
     ]
 }
 
-# Create the hello_world task
+# Update the default intent to use your new actions.
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-task = client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                       .tasks \
-                       .create(unique_name='hello_world') \
-                       .actions(hello_world_task_actions)
+client.preview.understand \
+    .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .update(initiation_actions=update_initiation_action)
 
-print("Hello-world task created!")
+print("Intent actions updated")
