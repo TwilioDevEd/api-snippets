@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pay>
+   <Prompt for="payment-card-number">
+     <Say>Please enter your 15 digit Visa or Mastercard number.</Say>
+   </Prompt>
+  </Pay>
+</Response>

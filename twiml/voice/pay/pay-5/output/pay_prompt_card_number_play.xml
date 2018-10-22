@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pay>
+   <Prompt for="payment-card-number">
+     <Play>https://myurl.com/twilio/twiml/audio/card_number.mp3</Play>
+   </Prompt>
+  </Pay>
+</Response>

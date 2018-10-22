@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pay>
+   <Prompt for="security-code" cardType="visa">
+     <Say> Please enter security code for your Visa card. It’s the 3 digits located on the back of your card </Say>
+   </Prompt>
+  </Pay>
+</Response>
