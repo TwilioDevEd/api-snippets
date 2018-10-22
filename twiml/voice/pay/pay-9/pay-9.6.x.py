@@ -9,7 +9,7 @@ prompt.say(
 pay.append(prompt)
 prompt2 = Prompt(attempt='2 3', for_='expiration-date')
 prompt2.say(
-    'Please enter your expiration date,  two digits for the month and two digits for the year. For exampe, if your expiration date is March 2022, then please enter 0 3 2 2'
+    'Please enter your expiration date, two digits for the month and two digits for the year. For example, if your expiration date is March 2022, then please enter 0 3 2 2'
 )
 pay.append(prompt2)
 response.append(pay)

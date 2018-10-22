@@ -2,7 +2,7 @@
 <Response>
   <Pay>
    <Prompt for="payment-card-number">
-     <Say>Please enter your 15 digit visa or master card number.</Say>
+     <Say>Please enter your 15 digit Visa or Mastercard number.</Say>
    </Prompt>
   </Pay>
 </Response>

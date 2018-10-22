@@ -7,7 +7,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Say say = new Say.Builder("Please enter security code for your visa card. It’s the 3 digits located in the back of your card").build();
+        Say say = new Say.Builder("Please enter security code for your Visa card. It’s the 3 digits located on the back of your card").build();
         Prompt prompt = new Prompt.Builder().cardTypes(Prompt.CardType.VISA).for_(Prompt.For.SECURITY_CODE).say(say).build();
         Pay pay = new Pay.Builder().prompt(prompt).build();
         VoiceResponse response = new VoiceResponse.Builder().pay(pay).build();

@@ -7,7 +7,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Say say = new Say.Builder("Please enter your 15 digit visa or master card number.").build();
+        Say say = new Say.Builder("Please enter your 15 digit Visa or Mastercard number.").build();
         Prompt prompt = new Prompt.Builder().for_(Prompt.For.PAYMENT_CARD_NUMBER).say(say).build();
         Pay pay = new Pay.Builder().prompt(prompt).build();
         VoiceResponse response = new VoiceResponse.Builder().pay(pay).build();
