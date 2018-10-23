@@ -2,7 +2,7 @@
   "channels": [
     {
       "sid": "TC72e66c2c822002ff3cad36c608979ee9",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Default",
       "unique_name": "default",
@@ -12,7 +12,7 @@
     },
     {
       "sid": "TC33089dd1198dfcdf986c1c44d1173840",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Voice",
       "unique_name": "voice",
@@ -22,7 +22,7 @@
     },
     {
       "sid": "TC8e4591f7176c8c85993002344f691296",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Video",
       "unique_name": "video",
@@ -32,7 +32,7 @@
     },
     {
       "sid": "TC06f04ec398062896c18f00af02a85922",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "SMS",
       "unique_name": "sms",
@@ -42,7 +42,7 @@
     },
     {
       "sid": "TC0729bb17003b3c1a347239e93cc458b1",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Programmable Chat",
       "unique_name": "chat",
@@ -52,7 +52,7 @@
     },
     {
       "sid": "TC8c3b3ae361440b4e4f4557a5cfc32f72",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Custom1",
       "unique_name": "custom1",
@@ -62,7 +62,7 @@
     },
     {
       "sid": "TC42bdf6d766d036b87087e45b5ddb62a8",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Custom2",
       "unique_name": "custom2",
@@ -72,7 +72,7 @@
     },
     {
       "sid": "TCa718ea222669f2bfac6e0836c89e4ead",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Custom3",
       "unique_name": "custom3",
@@ -82,7 +82,7 @@
     },
     {
       "sid": "TC9b39f59f71c1e974134c5eff8972537a",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Custom4",
       "unique_name": "custom4",
@@ -92,7 +92,7 @@
     },
     {
       "sid": "TCfc2136ff7a54e182ec78c9f8e1cd937c",
-      "account_sid": "AC1c41896f44563b7c8194235ee6d267b1",
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "workspace_sid": "WS74facd34612674c795b19d40690aeec2",
       "friendly_name": "Custom5",
       "unique_name": "custom5",
