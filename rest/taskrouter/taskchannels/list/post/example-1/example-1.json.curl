@@ -1,5 +1,4 @@
 curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/TaskChannels \
     -d "FriendlyName=My Channel" \
     -d "UniqueName=my-channel" \
-    -d "ChannelOptimizedRouting=true" \
     -u '{account_sid}:{auth_token}'
