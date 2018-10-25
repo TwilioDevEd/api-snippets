@@ -10,7 +10,7 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
         var sip = new Sip(
-            new Uri("http://example.com?mycustomheader=foo&myotherheader=bar"),
+            new Uri("http://example.com?x-mycustomheader=foo&x-myotherheader=bar"),
             "jack");
 
         response.Append(sip);
