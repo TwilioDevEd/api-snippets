@@ -1,4 +1,4 @@
 {
-  "title": "Retrieve a TaskChannel",
-  "type": "server"
+  "type": "server",
+  "title": "Retrieve a Task Channel"
 }
