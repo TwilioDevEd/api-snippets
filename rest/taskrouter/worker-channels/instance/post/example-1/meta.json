@@ -1,4 +1,4 @@
 {
-  "title": "Update WorkerChannel instance",
-  "type": "server"
+  "type": "server",
+  "title": "Update a Worker Channel"
 }
