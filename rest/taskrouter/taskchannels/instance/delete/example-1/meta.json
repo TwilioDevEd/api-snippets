@@ -1,4 +1,4 @@
 {
-  "title": "Delete a TaskChannel",
-  "type": "server"
+  "type": "server",
+  "title": "Delete a Task Channel"
 }
