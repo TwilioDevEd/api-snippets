@@ -1,4 +1,4 @@
 {
-  "title": "Get WorkerChannel instance",
-  "type": "server"
+  "type": "server",
+  "title": "Retrieve a Worker Channel"
 }
