@@ -1,4 +1,4 @@
 {
-  "title": "List All Worker Channels",
-  "type": "server"
+  "type": "server",
+  "title": "List all Worker Channels"
 }
