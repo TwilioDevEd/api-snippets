@@ -23,7 +23,7 @@ namespace ValidateRequestExample.Filters
         public override void OnActionExecuting(ActionExecutingContext actionContext)
         {
             var context = actionContext.HttpContext;
-            if(!IsValidRequest(context.Request) || !IsTestEnvironment)
+            if (!IsTestEnvironment && !IsValidRequest(context.Request))
             {
                 actionContext.Result = new HttpStatusCodeResult(HttpStatusCode.Forbidden);
             }
