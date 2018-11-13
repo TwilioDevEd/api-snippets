@@ -5,8 +5,8 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Enqueue enqueue = new Enqueue.Builder().waitUrl("wait-music.xml")
-            .name("support").build();
+        Enqueue enqueue = new Enqueue.Builder("support")
+            .waitUrl("wait-music.xml").build();
         VoiceResponse response = new VoiceResponse.Builder().enqueue(enqueue)
             .build();
 

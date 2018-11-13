@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
+$response = new VoiceResponse();
 $response->enqueue('support', ['waitUrl' => 'wait.xml']);
 $response->say('Unfortunately, the support line has closed. Please call again tomorrow.');
 

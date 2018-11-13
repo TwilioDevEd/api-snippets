@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -11,6 +12,6 @@ class Example
         response.Pause(length: 10);
         response.Say("I just paused 10 seconds");
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

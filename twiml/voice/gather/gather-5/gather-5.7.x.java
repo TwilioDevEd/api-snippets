@@ -10,9 +10,9 @@ public class Example {
         Say say = new Say.Builder("Enter something, or not").build();
         Gather gather = new Gather.Builder().action("/process_gather.php")
             .method(HttpMethod.GET).say(say).build();
-        Redirect redirect = new Redirect.Builder("/process_gather.php?Digits=TIMEOUT")
-            .method(HttpMethod.GET)
-            .build();
+        Redirect redirect = new Redirect
+            .Builder("/process_gather.php?Digits=TIMEOUT").method(HttpMethod
+            .GET).build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
             .redirect(redirect).build();
 

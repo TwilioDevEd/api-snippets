@@ -1,28 +1,16 @@
-import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.voice.Conference;
 import com.twilio.twiml.voice.Dial;
 import com.twilio.twiml.VoiceResponse;
+import com.twilio.twiml.TwiMLException;
 import java.util.Arrays;
-import java.util.List;
-
-import static com.twilio.twiml.voice.Conference.Event;
 
 public class Example {
     public static void main(String[] args) {
-        List<Event> events = Arrays.asList(
-            Event.START,
-            Event.END,
-            Event.JOIN,
-            Event.LEAVE,
-            Event.MUTE,
-            Event.HOLD
-        );
-
         Conference conference = new Conference.Builder("EventedConf")
             .statusCallback("https://myapp.com/events")
-            .statusCallbackEvents(events)
-            .build();
-
+            .statusCallbackEvents(Arrays.asList(Conference.Event.START,
+            Conference.Event.END, Conference.Event.JOIN, Conference.Event.LEAVE,
+            Conference.Event.MUTE, Conference.Event.HOLD)).build();
         Dial dial = new Dial.Builder().conference(conference).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 

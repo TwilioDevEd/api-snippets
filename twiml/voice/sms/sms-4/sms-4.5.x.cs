@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -11,6 +12,6 @@ class Example
         response.Sms("Store Location: 123 Easy St.",
             statusCallback: new Uri("/smsHandler.php"));
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

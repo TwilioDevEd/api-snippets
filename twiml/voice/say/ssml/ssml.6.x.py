@@ -1,4 +1,4 @@
-from twilio.twiml.voice_response import Say, VoiceResponse
+from twilio.twiml.voice_response import VoiceResponse, Say
 
 response = VoiceResponse()
 say = Say('Hi', voice='Polly.Joanna')

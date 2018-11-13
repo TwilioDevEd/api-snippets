@@ -9,8 +9,8 @@ public class Example {
         Sip sip = new Sip.Builder("sip:kate@example.com?customheader=foo")
             .method(HttpMethod.POST).url("/handle_screening_on_answer").build();
         Dial dial = new Dial.Builder().record(Dial.Record.RECORD_FROM_ANSWER)
-            .timeout(10).hangupOnStar(true).callerId("bob").method(HttpMethod.POST)
-            .action("/handle_post_dial").sip(sip).build();
+            .timeout(10).hangupOnStar(true).callerId("bob").method(HttpMethod
+            .POST).action("/handle_post_dial").sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 
         try {

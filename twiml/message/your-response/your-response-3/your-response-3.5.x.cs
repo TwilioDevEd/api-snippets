@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Messaging;
 
 
 class Example
@@ -9,6 +10,6 @@ class Example
         var response = new MessagingResponse();
         response.Message("I'm hungry!");
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

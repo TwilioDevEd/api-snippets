@@ -6,8 +6,8 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Enqueue enqueue = new Enqueue.Builder().waitUrl("wait.xml")
-            .name("support").build();
+        Enqueue enqueue = new Enqueue.Builder("support").waitUrl("wait.xml")
+            .build();
         Say say = new Say
             .Builder("Unfortunately, the support line has closed. Please call again tomorrow.").build();
         VoiceResponse response = new VoiceResponse.Builder().enqueue(enqueue)

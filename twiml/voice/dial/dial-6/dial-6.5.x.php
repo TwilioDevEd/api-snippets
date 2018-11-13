@@ -1,9 +1,9 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
-$dial = $response->dial(['record' => 'record-from-ringing-dual',
+$response = new VoiceResponse();
+$dial = $response->dial('', ['record' => 'record-from-ringing-dual',
     'recordingStatusCallback' => 'www.myexample.com']);
 $dial->conference('myteamroom');
 

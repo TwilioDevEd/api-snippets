@@ -1,3 +1,4 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
 
@@ -13,6 +14,6 @@ class Example
         pay.Append(prompt);
         response.Append(pay);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());
     }
 }

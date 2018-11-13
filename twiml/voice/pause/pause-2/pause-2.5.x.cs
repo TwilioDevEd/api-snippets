@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -10,6 +11,6 @@ class Example
         response.Pause(length: 5);
         response.Say("Hi there.");
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

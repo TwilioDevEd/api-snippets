@@ -1,6 +1,6 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Messaging;
-using System;
 
 
 class Example
@@ -13,6 +13,6 @@ class Example
         message.Media(new Uri("https://demo.twilio.com/owl.png"));
         response.Append(message);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

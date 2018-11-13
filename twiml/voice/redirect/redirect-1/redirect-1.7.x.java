@@ -5,7 +5,8 @@ import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Redirect redirect = new Redirect.Builder("http://pigeons.com/twiml.xml").method(HttpMethod.POST)
+        Redirect redirect = new Redirect
+            .Builder("http://pigeons.com/twiml.xml").method(HttpMethod.POST)
             .build();
         VoiceResponse response = new VoiceResponse.Builder().redirect(redirect)
             .build();

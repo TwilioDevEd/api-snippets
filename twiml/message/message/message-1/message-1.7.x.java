@@ -1,4 +1,3 @@
-import com.twilio.twiml.messaging.Body;
 import com.twilio.twiml.messaging.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
@@ -6,8 +5,8 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Body body = new Body.Builder("Store Location: 123 Easy St.").build();
-        Message message = new Message.Builder().body(body).build();
+        Message message = new Message.Builder("Store Location: 123 Easy St.")
+            .build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).build();
 

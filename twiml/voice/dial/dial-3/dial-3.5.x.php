@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
+$response = new VoiceResponse();
 $response->dial('415-123-4567', ['action' => '/handleDialCallStatus',
     'method' => 'GET']);
 $response->say('I am unreachable');

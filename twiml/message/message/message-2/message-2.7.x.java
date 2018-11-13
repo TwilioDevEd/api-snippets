@@ -8,7 +8,8 @@ import com.twilio.twiml.TwiMLException;
 public class Example {
     public static void main(String[] args) {
         Body body = new Body.Builder("Store Location: 123 Easy St.").build();
-        Media media = new Media.Builder("https://demo.twilio.com/owl.png").build();
+        Media media = new Media.Builder("https://demo.twilio.com/owl.png")
+            .build();
         Message message = new Message.Builder().body(body).media(media).build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).build();

@@ -1,9 +1,9 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
-$dial = $response->dial(['record' => 'record-from-answer', 'timeout' => 10,
+$response = new VoiceResponse();
+$dial = $response->dial('', ['record' => 'record-from-answer', 'timeout' => 10,
     'hangupOnStar' => 'true', 'callerId' => 'bob', 'method' => 'POST',
     'action' => '/handle_post_dial']);
 $dial->sip('sip:kate@example.com?customheader=foo', ['method' => 'POST',

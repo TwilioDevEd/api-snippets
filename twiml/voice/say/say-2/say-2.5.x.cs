@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -9,6 +10,6 @@ class Example
         var response = new VoiceResponse();
         response.Say("Chapeau!", voice: "alice", language: "fr-FR");
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

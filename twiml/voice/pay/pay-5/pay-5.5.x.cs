@@ -10,10 +10,11 @@ class Example
         var response = new VoiceResponse();
         var pay = new Pay();
         var prompt = new Prompt(for_: "payment-card-number");
-        prompt.Play(new Uri("https://myurl.com/twilio/twiml/audio/card_number.mp3"));
+        prompt
+            .Play(new Uri("https://myurl.com/twilio/twiml/audio/card_number.mp3"));
         pay.Append(prompt);
         response.Append(pay);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());
     }
 }

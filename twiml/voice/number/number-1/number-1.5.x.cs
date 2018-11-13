@@ -10,9 +10,8 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
         dial.Number("415-123-4567", sendDigits: "wwww1928");
-
         response.Append(dial);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

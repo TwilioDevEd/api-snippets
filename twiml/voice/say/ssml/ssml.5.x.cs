@@ -1,4 +1,7 @@
+using System;
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+
 
 class Example
 {
@@ -12,13 +15,14 @@ class Example
         say.AddText("aaaaaa");
         say.SsmlPhoneme("Words to speak", alphabet: "x-sampa", ph: "pɪˈkɑːn");
         say.AddText("bbbbbbb");
-        say.SsmlProsody("Words to speak", pitch: "-10%", rate: "85%", volume: "-6dB");
+        say.SsmlProsody("Words to speak", pitch: "-10%", rate: "85%",
+            volume: "-6dB");
         say.SsmlS("Words to speak");
         say.SsmlSayAs("Words to speak", interpretAs: "spell-out");
         say.SsmlSub("Words to be substituted", alias: "alias");
         say.SsmlW("Words to speak");
-        response.Say(say);
+        response.Append(say);
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());
     }
 }
