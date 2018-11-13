@@ -1,82 +1,95 @@
 /*
- * Twilio Machine to Machine Commands Quickstart on Arduino.
- * 
- * Uses a SIMCom SIM800. Any ATMega328 board should work, just change the 
- * pins and wiring.
- */
+    Twilio Machine to Machine Commands Quickstart on Adafruit Feather 32u4 FONA
+*/
+
+#include "Adafruit_FONA.h"
 #include <SoftwareSerial.h>
-#include "SIM800Twilio.hpp"
 
-/* 
- *  Software Serial definitions:
- *  https://www.arduino.cc/en/Reference/SoftwareSerial
- *  
- *  If you get errors, lower the modem baud rate.
- */
-#define RX_PIN 2
-#define TX_PIN 3
-#define MODEM_BAUD 4800
+#define FONA_RX  9
+#define FONA_TX  8
+#define FONA_RST 4
+#define FONA_RI  7
 
-SIM800Twilio modem(RX_PIN, TX_PIN, MODEM_BAUD);
+/*
+    Software Serial definitions:
+    https://www.arduino.cc/en/Reference/SoftwareSerial
 
-/* One time setup things - serial, modem */
-void setup() 
-{
-        Serial.begin(115200);
-        Serial.println("Twilio Programmable Wireless SIM800L Demo");
-        modem.begin();
+    If you get errors, lower the modem baud rate.
+*/
+SoftwareSerial fonaSS = SoftwareSerial(FONA_TX, FONA_RX);
+SoftwareSerial *fonaSerial = &fonaSS;
+
+Adafruit_FONA fona = Adafruit_FONA(FONA_RST);
+
+char replybuffer[255];
+
+void setup() {
+  while (!Serial);
+  Serial.begin(115200);
+  Serial.println(F("FONA SMS caller ID test"));
+  Serial.println(F("Initializing....(May take 3 seconds)"));
+
+  /*
+     Adafruit Feather 32u4 FONA setup
+  */
+  fonaSerial->begin(4800);
+  if (! fona.begin(*fonaSerial)) {
+    Serial.println(F("Couldn't find FONA"));
+    while (1);
+  }
+  Serial.println(F("FONA is OK"));
+  fonaSerial->print("AT+CNMI=2,1\r\n");
+
+  Serial.println("Sending Command!");
+ 
+  /*
+     Send an SMS to short code 2936, which is a Twilio
+     Machine to machine command.
+  */
+  char sendto[21] = "2936";
+
+  /*
+      Keep `command` under 160 ASCII characters, or 67 UCS-2 characters.
+      https://www.twilio.com/docs/glossary/what-sms-character-limit
+  */
+  char command[141] = "hello from feather32u4";
+
+  /*
+      Write a Twilio M2M command.
+  */
+  if (!fona.sendSMS(sendto, command)) {
+    Serial.println(F("Failed"));
+  } else {
+    Serial.println(F("Sent!"));
+  }
 }
 
+void loop() {
+  uint16_t smslen;
+  int index = 1;
+  /*
+      Read a Twilio M2M command. Note that it will find the lowest
+      indexed one with the code as is; in your code. if you cache the
+      index you can start the next read_command to move to the next one.
+  */
 
-/* Endless loop. Add your code here to customize this example. */
-void loop() 
-{
-        /* 
-         *  Keep `command` under 160 ASCII characters, or 67 UCS-2 characters.
-         *  https://www.twilio.com/docs/glossary/what-sms-character-limit
-         */
-        String command = "Ahoy, world!";
+  if (!fona.readSMS(index, replybuffer, 250, &smslen)) {
+    Serial.println(F("Failed!"));
+  } else {
 
-        /* 
-         *  Write a Twilio M2M command. 
-         */
-        Serial.print("Sending command: ");
-        Serial.println(command);
-        modem.send_command(command);
+    /* Print the command */
+    Serial.println(replybuffer);
+    delay(2000);
 
-        /* 
-         *  Read a Twilio M2M command. Note that it will find the lowest 
-         *  indexed one with the code as is; in your code. if you cache the 
-         *  index you can start the next read_command to move to the next one.
-         */
-        Serial.println("\r\nLooking for a M2M command...\r\n");
-        M2MCommand m2m;
+    /* Delete the stored command */
+    fona.deleteSMS(1);
 
-        /* Index to start search for M2M command */
-        static uint8_t index = 1; 
-
-        /* Delete any SMS encountered which are not commands? */
-        bool delete_non_commands = false;
-
-        /* If you find a command, print out the index, timestamp, and command. */
-        if (modem.read_command(m2m, index, delete_non_commands)) {
-                Serial.println("----------------------------------------");
-                Serial.print("Index: ");
-                Serial.println(m2m.index);
-
-                Serial.print("Date: ");
-                Serial.println(m2m.date);
-
-                Serial.print("\r\n");
-                Serial.println(m2m.command);
-        } else {
-               Serial.println("Couldn't find a M2M command!"); 
-        }
-
-        /* That's all, folks! */
-        Serial.println("Finished.");
-        while(1) {
-                delay(5000);
-        }
+    /* That's all, folks! */
+    Serial.println("Finished.");
+    while (1) {
+      delay(5000);
+    }
+  }
+  /* Poll for a stored command every 5 seconds */
+  delay(5000);
 }
-
