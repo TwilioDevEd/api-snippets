@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
+$response = new VoiceResponse();
 $response->say('Chapeau!', ['voice' => 'alice', 'language' => 'fr-FR']);
 
 echo $response;

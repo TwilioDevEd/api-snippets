@@ -5,8 +5,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Redirect redirect = new Redirect.Builder("../nextInstructions")
-            .build();
+        Redirect redirect = new Redirect.Builder("../nextInstructions").build();
         VoiceResponse response = new VoiceResponse.Builder().redirect(redirect)
             .build();
 

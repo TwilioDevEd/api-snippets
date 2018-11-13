@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\MessagingResponse;
 
-$response = new TwiML();
+$response = new MessagingResponse();
 $response->message('I\'m hungry!');
 
 echo $response;

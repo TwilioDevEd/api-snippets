@@ -8,8 +8,8 @@ public class Example {
     public static void main(String[] args) {
         Say say = new Say
             .Builder("Welcome to Twilio, please tell us why you're calling").build();
-        Gather gather = new Gather.Builder().input("speech")
-            .action("/completed").say(say).build();
+        Gather gather = new Gather.Builder().action("/completed").inputs(Gather
+            .Input.SPEECH).say(say).build();
         VoiceResponse response = new VoiceResponse.Builder().gather(gather)
             .build();
 

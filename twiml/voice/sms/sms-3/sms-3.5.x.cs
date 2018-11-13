@@ -1,6 +1,7 @@
-using Twilio.TwiML;
-using Twilio.Http;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
+
 
 class Example
 {
@@ -8,9 +9,10 @@ class Example
     {
         var response = new VoiceResponse();
         response.Say("Our store is located at 123 Easy St.");
-        response.Sms("Store Location: 123 Easy St.", action: new Uri("/smsHandler.php"),
-            method: HttpMethod.Post);
+        response.Sms("Store Location: 123 Easy St.",
+            action: new Uri("/smsHandler.php"), method: Twilio.Http.HttpMethod
+            .Post);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

@@ -9,11 +9,10 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        var sip = new Sip(new Uri("http://example.com"), "kate", "1234");
-
-        response.Append(sip);
+        dial.Sip(new Uri("kate@example.com", UriKind.Relative),
+            username: "admin", password: "1234");
         response.Append(dial);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

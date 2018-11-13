@@ -1,6 +1,6 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
-using System;
 
 
 class Example
@@ -14,6 +14,6 @@ class Example
         dial.Client("charlie");
         response.Append(dial);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

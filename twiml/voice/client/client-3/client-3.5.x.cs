@@ -1,9 +1,7 @@
-using static Twilio.TwiML.Voice.Client;
 using System;
-using Twilio.Http;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
-using System.Collections.Generic;
+using System.Linq;
 
 class Example
 {
@@ -11,19 +9,13 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-
-        dial.Client("joey",
-            statusCallbackEvent: new List<EventEnum>() {
-                    EventEnum.Initiated,
-                    EventEnum.Ringing,
-                    EventEnum.Answered,
-                    EventEnum.Completed
-                },
+        dial.Client("joey", statusCallbackEvent: new []{Client.EventEnum
+            .Initiated, Client.EventEnum.Ringing, Client.EventEnum.Answered,
+            Client.EventEnum.Completed}.ToList(),
             statusCallback: new Uri("https://myapp.com/calls/events"),
-            statusCallbackMethod: HttpMethod.Post);
-
+            statusCallbackMethod: Twilio.Http.HttpMethod.Post);
         response.Append(dial);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

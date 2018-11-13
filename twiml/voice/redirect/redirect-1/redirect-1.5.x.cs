@@ -1,6 +1,6 @@
-using Twilio.TwiML;
-using Twilio.Http;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -8,8 +8,9 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        response.Redirect(new Uri("http://pigeons.com/twiml.xml"), method: HttpMethod.Post);
+        response.Redirect(method: Twilio.Http.HttpMethod.Post,
+            url: new Uri("http://pigeons.com/twiml.xml"));
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

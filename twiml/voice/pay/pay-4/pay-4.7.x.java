@@ -5,7 +5,8 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Pay pay = new Pay.Builder().paymentConnector("Stripe_Connector_1").build();
+        Pay pay = new Pay.Builder().paymentConnector("Stripe_Connector_1")
+            .build();
         VoiceResponse response = new VoiceResponse.Builder().pay(pay).build();
 
         try {

@@ -1,17 +1,18 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
-using System;
-
+using System.Linq;
 
 class Example
 {
     static void Main()
     {
         var response = new VoiceResponse();
-        var gather = new Gather(input: "speech", action: new Uri("/completed"));
+        var gather = new Gather(input: new []{Gather.InputEnum.Speech}.ToList(),
+            action: new Uri("/completed"));
         gather.Say("Welcome to Twilio, please tell us why you're calling");
         response.Append(gather);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

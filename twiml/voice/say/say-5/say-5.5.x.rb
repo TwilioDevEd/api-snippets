@@ -1,6 +1,6 @@
 require 'twilio-ruby'
 
 response = Twilio::TwiML::VoiceResponse.new
-response.say(message: 'Bom dia.', voice: 'alice', language: 'pt-BR', loop: 2)
+response.say(voice: 'alice', language: 'pt-BR', loop: 2, message: 'Bom dia.')
 
 puts response

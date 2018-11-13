@@ -1,10 +1,9 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once './vendor/autoload.php';
 use Twilio\TwiML\VoiceResponse;
 
 $response = new VoiceResponse();
 $response->say('Calling Twilio Pay');
-$response->append('');
 $response->pay(['chargeAmount' => '20.45']);
 
 echo $response;

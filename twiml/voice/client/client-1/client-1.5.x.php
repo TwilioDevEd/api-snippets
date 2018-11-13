@@ -1,9 +1,9 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
-$dial = $response->dial();
+$response = new VoiceResponse();
+$dial = $response->dial('');
 $dial->client('joey');
 
 echo $response;

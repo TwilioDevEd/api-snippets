@@ -1,14 +1,12 @@
-import com.twilio.http.HttpMethod;
-import com.twilio.twiml.messaging.Body;
 import com.twilio.twiml.messaging.Message;
 import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Body body = new Body.Builder("Store Location: 123 Easy St.").build();
-        Message message = new Message.Builder().action("/SmsHandler.php")
-            .method(HttpMethod.POST).body(body).build();
+        Message message = new Message.Builder("Store Location: 123 Easy St.")
+            .action("/SmsHandler.php").method(HttpMethod.POST).build();
         MessagingResponse response = new MessagingResponse.Builder()
             .message(message).build();
 

@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
+$response = new VoiceResponse();
 $gather = $response->gather(['action' => '/process_gather.php',
     'method' => 'GET']);
 $gather->say('Enter something, or not');

@@ -1,9 +1,7 @@
-using static Twilio.TwiML.Voice.Conference;
 using System;
-using System.Collections.Generic;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
-
+using System.Linq;
 
 class Example
 {
@@ -11,22 +9,12 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-
-        dial.Conference(
-            "EventedConf",
+        dial.Conference("EventedConf",
             statusCallback: new Uri("https://myapp.com/events"),
-            statusCallbackEvent: new List<EventEnum>(
-                new EventEnum[] {
-                    EventEnum.Start,
-                    EventEnum.End,
-                    EventEnum.Join,
-                    EventEnum.Leave,
-                    EventEnum.Mute,
-                    EventEnum.Hold
-                }
-            )
-        );
-
+            statusCallbackEvent: new []{Conference.EventEnum.Start, Conference
+            .EventEnum.End, Conference.EventEnum.Join, Conference.EventEnum
+            .Leave, Conference.EventEnum.Mute, Conference.EventEnum.Hold}
+            .ToList());
         response.Append(dial);
 
         Console.WriteLine(response.ToString());

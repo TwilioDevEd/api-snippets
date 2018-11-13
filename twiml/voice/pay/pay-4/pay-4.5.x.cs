@@ -1,3 +1,4 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
 
@@ -9,6 +10,6 @@ class Example
         var response = new VoiceResponse();
         response.Pay(paymentConnector: "Stripe_Connector_1");
 
-        System.Console.WriteLine(response.ToString());
+        Console.WriteLine(response.ToString());
     }
 }

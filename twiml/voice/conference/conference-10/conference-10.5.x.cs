@@ -1,6 +1,7 @@
+using System;
 using Twilio.TwiML;
 using Twilio.TwiML.Voice;
-using System;
+
 
 class Example
 {
@@ -8,10 +9,12 @@ class Example
     {
         var response = new VoiceResponse();
         var dial = new Dial();
-        dial.Conference("LoveTwilio", record: "record-from-start",
-            recordingStatusCallback: new Uri("www.myexample.com"));
+        dial.Conference("LoveTwilio", record: Conference.RecordEnum
+            .RecordFromStart,
+            recordingStatusCallback: new Uri("www.myexample.com", UriKind
+            .Relative));
         response.Append(dial);
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

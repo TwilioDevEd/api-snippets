@@ -1,5 +1,6 @@
-using Twilio.TwiML;
 using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
 
 class Example
@@ -10,6 +11,6 @@ class Example
         response.Say("Our store is located at 123 Easy St.");
         response.Sms("Store Location: 123 Easy St.");
 
-        Console.WriteLine(response.ToString());;
+        Console.WriteLine(response.ToString());
     }
 }

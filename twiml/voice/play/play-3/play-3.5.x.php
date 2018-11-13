@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML();
-$response->play(['digits' => 'wwww3']);
+$response = new VoiceResponse();
+$response->play('', ['digits' => 'wwww3']);
 
 echo $response;
