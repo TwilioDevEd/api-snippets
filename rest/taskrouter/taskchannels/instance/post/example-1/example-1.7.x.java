@@ -14,7 +14,6 @@ public class UpdateTaskChannel {
 
 		TaskChannel.updater(WORKSPACE_SID, TASK_CHANNEL_SID)
 			.setFriendlyName("My New Channel")
-			.setUniqueName("my-new-channel")
 			.update();
 	}
 
