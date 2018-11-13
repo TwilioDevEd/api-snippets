@@ -1,5 +1,5 @@
 {
   "type": "server",
-  "title": "Programmable Wireless Machine to Machine commands with an Arduino Uno or Nano and SIM800 Modem",
+  "title": "Programmable Wireless Machine to Machine commands with an Adafruit Feather 32u4 FONA",
   "description": "Send and receive machine to machine commands (M2) with an Arduino Nano or Uno and SIM800"
 }
