@@ -10,7 +10,7 @@ app.post('/enqueue_call', (request, response) => {
   const json = { account_number: '12345abcdef' };
 
   resp
-    .enqueueTask({
+    .enqueue({
       workflowSid: 'WW0123456789abcdef0123456789abcdef',
       waitUrl: '/hold_music.php',
       action: '/post_bridge_survey.php',
