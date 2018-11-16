@@ -5,7 +5,7 @@
 #include <MKRGSM.h>
 
 /*
-    Arduino MKR GSM1400 definitions:
+    Arduino MKR GSM 1400 definitions:
     https://www.arduino.cc/en/Reference/GSM
 */
 GSM gsmAccess;
