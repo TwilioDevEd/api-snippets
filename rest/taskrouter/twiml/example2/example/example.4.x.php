@@ -1,6 +1,6 @@
 <?php
 // Download the library and copy into the folder containing this file.
-require('/path/to/vendor/twilio/sdk/Services/Twilio.php');
+require_once '/path/to/vendor/twilio/sdk/Services/Twilio.php';
 
 $response = new Services_Twilio_Twiml;
 $response->enqueue(array('workflowSid' => 'WW0123456789abcdef0123456789abcdef'))
