@@ -1,13 +1,12 @@
 <?php
 // Download the library and copy into the folder containing this file.
-require('twilio-php/Services/Twilio.php');
+require('/pat/to/vendor/twilio/sdk/Services/Twilio.php');
 
 $response = new Services_Twilio_Twiml;
-$response->enqueue(array(workflowSid => 'WW0123456789abcdef0123456789abcdef'))
-	->task("{'account_number':'12345abcdef'}");
+$response->enqueue(array('workflowSid' => 'WW0123456789abcdef0123456789abcdef'))
+    ->task("{'account_number':'12345abcdef'}");
 print $response;
 ?>
-
 <!-- alternatively -->
 
 <?php
