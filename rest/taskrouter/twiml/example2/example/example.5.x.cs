@@ -62,8 +62,9 @@ namespace project {
             response.ContentType = "text/xml";
 
             var twiml = new VoiceResponse();
-            twiml.Enqueue("{\"account_number\":\"12345abcdef\"}",
-                workflowSid: "WW0123456789abcdef0123456789abcdef");
+            var enqueue = new Enqueue(workflowSid: "WW0123456789abcdef0123456789abcdef");
+            enqueue.Task("{\"account_number\": \"12345abcdef\"}");
+            twiml.Append(enqueue);
 
             string xml = twiml.ToString();
             return (response, xml);
