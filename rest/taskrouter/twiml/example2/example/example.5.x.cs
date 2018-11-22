@@ -3,71 +3,28 @@
 using System;
 using System.Net;
 using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
-namespace project {
-    class TwilioExample
+class Example
+{
+    public static void SendResponse(HttpListenerContext ctx)
     {
-        static void Main(string[] args)
-        {
-            if (!HttpListener.IsSupported)
-            {
-                Console.WriteLine ("HttpListener NOT supported.");
-                return;
-            }
-            string[] prefixes = {"http://*:8080/"};
+        HttpListenerRequest request = ctx.Request;
+        HttpListenerResponse response = ctx.Response;
 
-            // URI prefixes are required,
-            if (prefixes == null || prefixes.Length == 0)
-              throw new ArgumentException("prefixes");
+        response.StatusCode = (int)HttpStatusCode.OK;
+        response.ContentType = "text/xml";
 
-            // Create a listener.
-            HttpListener listener = new HttpListener();
-            // Add the prefixes.
-            foreach (string s in prefixes)
-            {
-                listener.Prefixes.Add(s);
-            }
-            listener.Start();
-            Console.WriteLine("Listening...");
+        // Generate TwiML
+        var twiml = new VoiceResponse();
+        var enqueue = new Enqueue(workflowSid: "WW0123456789abcdef0123456789abcdef");
+        enqueue.Task("{\"account_number\": \"12345abcdef\"}");
+        twiml.Append(enqueue);
 
-            // Note: The GetContext method blocks while waiting for a request.
-            HttpListenerContext context = listener.GetContext();
-            HttpListenerRequest request = context.Request;
-
-            // Obtain a response object.
-            var result = SendResponse(context);
-            HttpListenerResponse response = result.Item1;
-            string xml = result.Item2;
-
-            byte[] buffer = System.Text.Encoding.UTF8.GetBytes(xml);
-
-            // Get a response stream and write the response to it.
-            response.ContentLength64 = buffer.Length;
-            System.IO.Stream output = response.OutputStream;
-            output.Write(buffer,0,buffer.Length);
-
-            // You must close the output stream.
-            output.Close();
-            listener.Stop();
-
-            Console.WriteLine("Output: \n"+xml);
-        }
-
-        public static (HttpListenerResponse, string) SendResponse(HttpListenerContext ctx)
-        {
-            HttpListenerRequest request = ctx.Request;
-            HttpListenerResponse response = ctx.Response;
-
-            response.StatusCode = (int)HttpStatusCode.OK;
-            response.ContentType = "text/xml";
-
-            var twiml = new VoiceResponse();
-            var enqueue = new Enqueue(workflowSid: "WW0123456789abcdef0123456789abcdef");
-            enqueue.Task("{\"account_number\": \"12345abcdef\"}");
-            twiml.Append(enqueue);
-
-            string xml = twiml.ToString();
-            return (response, xml);
-        }
+        // Write the output and close the stream
+        byte[] buffer = Encoding.UTF8.GetBytes(twiml.ToString());
+        response.ContentLength64 = buffer.Length;
+        response.OutputStream.Write(buffer,0, buffer.Length);
+        response.OutputStream.Close();
     }
 }
