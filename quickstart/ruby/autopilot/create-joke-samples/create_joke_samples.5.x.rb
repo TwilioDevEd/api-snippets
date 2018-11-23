@@ -23,7 +23,6 @@ phrases = [
 ]
 
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-# Replace 'UDXXX...' with the SID for the task you just created.
 phrases.each do |phrase|
   sample = @client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                              .tasks("tell-a-joke")
