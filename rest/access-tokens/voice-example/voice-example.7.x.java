@@ -16,6 +16,9 @@ public class TokenGenerator {
     // Create Voice grant
     VoiceGrant grant = new VoiceGrant();
     grant.setOutgoingApplicationSid(outgoingApplicationSid);
+
+    // Optional: add to allow incoming calls
+    grant.setIncomingAllow(true);
     
     // Create access token
     AccessToken token = new AccessToken.Builder(
