@@ -1,5 +1,3 @@
-package com.mycompany.app;
-
 // Download the helper library from https://www.twilio.com/docs/java/install
 import com.twilio.Twilio;
 import com.twilio.rest.autopilot.v1.assistant.Query;
