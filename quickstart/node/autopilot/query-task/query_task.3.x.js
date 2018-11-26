@@ -6,7 +6,7 @@ const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
 // Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
-query = client.preview.understand.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+query = client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                                  .queries
                                  .create({
                                    language: 'en-US',
