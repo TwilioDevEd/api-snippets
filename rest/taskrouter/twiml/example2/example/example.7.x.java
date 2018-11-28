@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.twilio.twiml.voice.Enqueue;
-import com.twilio.twiml.Task;
+import com.twilio.twiml.voice.Task;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
@@ -15,7 +15,8 @@ public class Example extends HttpServlet {
 
   @Override
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Task task = new Task.Builder().data("{\"account_number\":\"12345abcdef\"}").build();
+
+    Task task = new Task.Builder("{\"account_number\":\"12345abcdef\"}").build();
 
     Enqueue enqueue =
         new Enqueue.Builder()
