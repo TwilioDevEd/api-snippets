@@ -14,7 +14,10 @@ identity = 'user'
 token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
 # Create a Voice grant and add to token
-voice_grant = VoiceGrant(outgoing_application_sid=outgoing_application_sid)
+voice_grant = VoiceGrant(
+    outgoing_application_sid=outgoing_application_sid,
+    incoming_allow=True, # Optional: add to allow incoming calls
+)
 token.add_grant(voice_grant)
 
 # Return token info as JSON

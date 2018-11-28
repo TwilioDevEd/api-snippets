@@ -13,6 +13,9 @@ identity = 'user'
 grant = Twilio::JWT::AccessToken::VoiceGrant.new
 grant.outgoing_application_sid = outgoing_application_sid
 
+# Optional: add to allow incoming calls
+grant.incoming_allow = true
+
 # Create an Access Token
 token = Twilio::JWT::AccessToken.new(
   account_sid,

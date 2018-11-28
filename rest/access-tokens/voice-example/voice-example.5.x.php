@@ -27,6 +27,9 @@ $token = new AccessToken(
 $voiceGrant = new VoiceGrant();
 $voiceGrant->setOutgoingApplicationSid($outgoingApplicationSid);
 
+// Optional: add to allow incoming calls
+$voiceGrant->setIncomingAllow(true);
+
 // Add grant to token
 $token->addGrant($voiceGrant);
 

@@ -19,6 +19,9 @@ class Example
         var grant = new VoiceGrant();
         grant.OutgoingApplicationSid = outgoingApplicationSid;
 
+        // Optional: add to allow incoming calls
+        grant.IncomingAllow = true;
+
         var grants = new HashSet<IGrant>
         {
             { grant }
