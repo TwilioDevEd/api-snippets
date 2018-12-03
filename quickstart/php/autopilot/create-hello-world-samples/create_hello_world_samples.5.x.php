@@ -27,7 +27,6 @@ foreach ($phrases as $phrase) {
                                         $language = "en-us",
                                         $taggedText = $phrase
                                     );
-    print($sample->sid);
 
+    print($sample->sid);
 }
-?>

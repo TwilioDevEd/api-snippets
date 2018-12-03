@@ -30,7 +30,10 @@ foreach ($phrases as $phrase) {
     $sample = $twilio->autopilot->v1->assistants("UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                                     ->tasks("tell-a-joke")
                                     ->samples
-                                    ->create($language = "en-us", $taggedText = $phrase);
+                                    ->create(
+                                        $language = "en-us",
+                                        $taggedText = $phrase
+                                    );
+
     print($sample->sid);
 }
-?>

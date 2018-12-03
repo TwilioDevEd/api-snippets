@@ -13,18 +13,17 @@ $twilio = new Client($sid, $token);
 //Provide actions for the new task
 $jokeActions = array(
     "actions" => array(
-        "say" => "I was going to look for my missing watch, but I could never find the time.",
+        array("say" => "I was going to look for my missing watch, but I could never find the time."),
     )
 );
 
-// Create a new task named 'tell_a_joke'
+// Create a new task named 'tell-a-joke'
 // Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 $task = $twilio->autopilot->v1->assistants("UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                               ->tasks
-                              ->create(array(
-                                 "uniqueName" => "tell-a-joke",
-                                 "actions" => $jokeActions,
+                              ->create("tell-a-joke", array(
+                                  "friendlyName" => "Tell a Joke",
+                                  "actions" => $jokeActions,
                               ));
 
 print($task->sid);
-?>
