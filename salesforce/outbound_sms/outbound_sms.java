@@ -1,12 +1,11 @@
-```
 //Post Example
 TwilioApiClient api = new TwilioApiClient();
 api.addUrlPart('Accounts');
-api.addUrlPart('AC91c6dc4cca313b7a23b1b36b4a37e89c');
+api.addUrlPart('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 api.addUrlPart('Messages.json');
 
-api.addParam('To','7152520504');
-api.addParam('From','7159727069');
+api.addParam('To','+15558675310');
+api.addParam('From','+15017122661');
 api.addParam('Body','Here is my message');
 TwilioApiClientResponse response = api.doPost();
 
@@ -16,4 +15,3 @@ Integer totalSegments = response.getTwilioJsonParser().get('num_segments').getIn
 
 //Example a key with object
 String media = response.getTwilioJsonParser().get('subresource_uris').get('media').getString();
-```
