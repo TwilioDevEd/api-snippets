@@ -1,8 +1,8 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
-import com.twilio.rest.video.v1.Composition;
+import com.twilio.rest.video.v1.CompositionHook;
 
-public class DeleteComposition{
+public class DeleteCompositionHook{
 
   // Find your credentials at twilio.com/console
   public static final String ACCOUNT_SID = "ACXXXX";
@@ -13,7 +13,7 @@ public class DeleteComposition{
       // Initialize the client
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
-      boolean didDelete = Composition.deleter("CJXXXX")
+      boolean didDelete = CompositionHook.deleter("HKXXXX")
           .delete();
 
       System.out.println(didDelete);

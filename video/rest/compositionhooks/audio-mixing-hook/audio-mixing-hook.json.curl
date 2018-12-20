@@ -1,0 +1,6 @@
+curl -X POST 'https://video.twilio.com/v1/CompositionHooks' \
+    -u 'SKXXXX:your_api_key_secret' \
+    -F 'FriendlyName=MixingAllRoomAudiosHook' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'AudioSources=*' \
+    -F 'Format=mp4'

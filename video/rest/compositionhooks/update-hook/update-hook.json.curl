@@ -1,0 +1,13 @@
+curl -X POST 'https://video.twilio.com/v1/CompositionHooks/HKXXXX' \
+    -u 'SKXXXX:your_api_key_secret'
+    -F 'FriendlyName=MyFirstCompositionHook' \
+    -F 'Enabled=false' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'AudioSources=*' \
+    -F 'Format=mp4' \
+<<-EOF -F 'VideoLayout={
+      "grid":{
+        "video_sources":["*"]
+      }
+    }'
+EOF

@@ -1,0 +1,2 @@
+curl -X GET 'https://video.twilio.com/v1/CompositionHooks/HKXXXX' \
+  -u 'SKXXXX:your_api_key_secret'

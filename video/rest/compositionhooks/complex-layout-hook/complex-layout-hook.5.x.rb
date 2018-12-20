@@ -8,8 +8,8 @@ api_key_secret = 'your_api_key_secret'
 
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
-composition = @client.video.compositions.create(
-  room_sid: 'RMXXXX',
+compositionHook = @client.video.compositionHooks.create(
+  friendlyName: 'MyHookWithComplexVideoLayout',
   audio_sources: ['MTAAAA','soundtrack'],
   video_layout: {
     main: {
@@ -30,4 +30,4 @@ composition = @client.video.compositions.create(
   format: 'mp4'
 )
 
-puts composition.sid
+puts compositionHook.sid
