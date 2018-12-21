@@ -14,11 +14,11 @@ const client = new Twilio(API_KEY_SID, API_KEY_SECRET, {accountSid: ACCOUNT_SID}
 client.video.compositionHooks.
     create({
       friendlyName: 'MyHookWithComplexVideoLayout',
-      audioSources: ['MTAAAA', 'soundtrack'],
+      audioSources: ['listener-audio', 'presenter-audio'],
       videoLayout: {
         main: {
           z_pos: 1,
-          video_sources: ['screen-presentation']
+          video_sources: ['screen']
         },
         pip: {
           z_pos: 2,
@@ -26,7 +26,7 @@ client.video.compositionHooks.
           y_pos: 30,
           width: 240,
           height: 180,
-          video_sources: ['MTBBBB']
+          video_sources: ['presenter-cam']
         }
       },
       statusCallback: 'http://my.server.org/callbacks',

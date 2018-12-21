@@ -21,7 +21,7 @@ class Program
             main = new
             {
                 z_pos = 1,
-                video_sources = new string[]{"screen-presentation"}
+                video_sources = new string[]{"screen"}
             },
             pip = new {
                 z_pos = 2,
@@ -29,13 +29,13 @@ class Program
                 y_pos = 30,
                 width = 240,
                 height = 180,
-                video_sources = new string[]{"MTBBBB"}
+                video_sources = new string[]{"presenter-cam"}
             }
         };
 
         var compositionHook = CompositionHookResource.Create(
           friendlyName: "MyHookWithComplexVideoLayout",
-          audioSources: new List<string>{"MTAAAA", "soundtrack"},
+          audioSources: new List<string>{"listener-audio", "presenter-audio"},
           videoLayout: layout,
           statusCallback: new Uri('http://my.server.org/callbacks'),
           resolution: "1280x720",

@@ -10,11 +10,11 @@ $client = new Client($apiKeySid, $apiKeySecret);
 
 $compositionHook = $client->video->compositionHooks->create([
     'friendlyName' => 'MyHookWithComplexVideoLayout',
-    'audioSources' => array('MTAAAA', 'soundtrack'),
+    'audioSources' => array('listener-audio', 'presenter-audio'),
     'videoLayout' =>  array(
                         'main' => array (
                           'z_pos' => 1,
-                          'video_sources' => array('screen-presentation')
+                          'video_sources' => array('screen')
                         ),
                         'pip' => array(
                           'z_pos' => 2,
@@ -22,7 +22,7 @@ $compositionHook = $client->video->compositionHooks->create([
                           'y_pos' => 30,
                           'width' => 240,
                           'height' => 180,
-                          'video_sources' => array('MTBBBB')
+                          'video_sources' => array('presenter-cam')
                         )
                       ),
     'statusCallback' => 'http://my.server.org/callbacks',

@@ -10,11 +10,11 @@ api_key_secret = 'your_api_key_secret'
 
 compositionHook = @client.video.compositionHooks.create(
   friendlyName: 'MyHookWithComplexVideoLayout',
-  audio_sources: ['MTAAAA','soundtrack'],
+  audio_sources: ['listener-audio','presenter-audio'],
   video_layout: {
     main: {
       z_pos: 1,
-      video_sources: ['screen-presentation']
+      video_sources: ['screen']
     },
     pip: {
       z_pos: 2,
@@ -22,7 +22,7 @@ compositionHook = @client.video.compositionHooks.create(
       y_pos: 30,
       width: 240,
       height: 180,
-      video_sources: ['MTBBBB']
+      video_sources: ['presenter-cam']
     }
   },
   status_callback: 'http://my.server.org/callbacks',

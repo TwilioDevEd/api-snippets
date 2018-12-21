@@ -6,8 +6,8 @@
   "date_created": "2018-12-19T16:44:10Z",
   "date_updated": null,
   "audio_sources": [
-    "MTAAAA",
-    "soundtrack"
+    "listener-audio",
+    "presenter-audio"
   ],
   "audio_sources_excluded": [],
   "trim": true,
@@ -24,7 +24,7 @@
       "max_rows": null,
       "y_pos": 30,
       "video_sources": [
-        "MTBBBB"
+        "presenter-cam"
       ]
     },
     "main": {
@@ -39,7 +39,7 @@
       "max_rows": null,
       "y_pos": 0,
       "video_sources": [
-        "screen-presentation"
+        "screen"
       ]
     }
   },

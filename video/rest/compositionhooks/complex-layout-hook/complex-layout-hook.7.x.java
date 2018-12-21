@@ -20,7 +20,7 @@ public class ComplexLayoutHook{
                         "{"
                       + "   \"main\": {"
                       + "       \"z_pos\": 1,"
-                      + "       \"video_sources\":[\"screen-presetation\"]"
+                      + "       \"video_sources\":[\"screen\"]"
                       + "    },"
                       + "   \"row\": {"
                       + "       \"z_pos\": 2,"
@@ -28,13 +28,13 @@ public class ComplexLayoutHook{
                       + "       \"y_pos\": 30,"
                       + "       \"width\": 240,"
                       + "       \"height\": 180,"
-                      + "       \"video_sources\": [\"MTBBBB\"]"
+                      + "       \"video_sources\": [\"presenter-cam\"]"
                       + "    }"
                       + "}";
 
       CompositionHook compositionHook = CompositionHook.creator()
         					.setFriendlyName("MixingAllRoomAudiosHook")
-                  .setAudioSources(Arrays.asList("MTAAAA","soundtrack"))
+                  .setAudioSources(Arrays.asList("listener-audio","presenter-audio"))
                   .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
                   .setStatusCallback("http://my.server.org/callbacks")
                   .setResolution("1280x720")

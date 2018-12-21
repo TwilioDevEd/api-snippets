@@ -15,7 +15,7 @@
           "max_rows": null,
           "y_pos": 30,
           "video_sources": [
-            "MTBBBB"
+            "presenter-cam"
           ]
         },
         "main": {
@@ -30,7 +30,7 @@
           "max_rows": null,
           "y_pos": 0,
           "video_sources": [
-            "screen-presentation"
+            "screen"
           ]
         }
       },
@@ -42,8 +42,8 @@
       "account_sid": "ACXXXX",
       "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
       "audio_sources": [
-        "MTAAAA",
-        "soundtrack"
+        "listener-audio",
+        "listener-video"
       ],
       "sid": "HKXXXX",
       "date_created": "2018-12-19T16:44:10Z",
