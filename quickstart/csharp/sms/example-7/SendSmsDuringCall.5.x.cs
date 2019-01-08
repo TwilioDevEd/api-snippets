@@ -15,7 +15,7 @@ public class SendSmsDuringCall : TwilioController
         {
             {"+14158675308", "Curious George"},
             {"+12349013030", "Boots"},
-            {"+14158675311", "Virgil"}
+            {"+12348134522", "Virgil"}
         };
 
         // if the sender is known, then greet them by name

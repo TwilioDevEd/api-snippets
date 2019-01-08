@@ -20,7 +20,7 @@ public class ReplyByName extends HttpServlet {
         HashMap<String, String> people = new HashMap<String, String>();
         people.put("+14158675308", "Curious George");
         people.put("+12349013030", "Boots");
-        people.put("+14158675311", "Virgil");
+        people.put("+12348134522", "Virgil");
 
         // if the sender is known, then greet them by name
         String fromNumber = request.getParameter("From");

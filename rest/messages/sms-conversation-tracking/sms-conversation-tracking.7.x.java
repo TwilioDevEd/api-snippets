@@ -28,7 +28,7 @@ public class TwilioServlet extends HttpServlet {
     HashMap<String, String> callers = new HashMap<String, String>();
     callers.put("+14158675308", "Rey");
     callers.put("+12349013030", "Finn");
-    callers.put("+14158675311", "Chewy");
+    callers.put("+12348134522", "Chewy");
 
     String fromNumber = request.getParameter("From");
     String toNumber = request.getParameter("To");

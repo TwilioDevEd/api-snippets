@@ -21,7 +21,7 @@ namespace Quickstart
             var people = new Dictionary<string, string>() {
                 {"+14158675308", "Curious George"},
                 {"+12349013030", "Boots"},
-                {"+14158675311", "Virgil"}
+                {"+12348134522", "Virgil"}
             };
 
             // Iterate over all our friends
