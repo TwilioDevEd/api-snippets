@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $numbers = $client->incomingPhoneNumbers->read(
-    array("phoneNumber" => "+14158675310")
+    array("phoneNumber" => "+12349013030")
 );
 // Loop over the list of numbers and echo a property for each one
 foreach ($numbers as $number) {

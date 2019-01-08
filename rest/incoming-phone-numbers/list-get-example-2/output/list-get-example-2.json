@@ -1,7 +1,7 @@
 {
     "page": 0,
     "page_size": 50,
-    "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers.xml?PhoneNumber=%2B14158675310",
+    "uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers.xml?PhoneNumber=%2B12349013030",
     "first_page_uri": "\/2010-04-01\/Accounts\/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\/IncomingPhoneNumbers.xml?PhoneNumber=%2B18675310&Page=0&PageSize=50",
     "previous_page_uri": null,
     "next_page_uri": null,
@@ -10,7 +10,7 @@
             "sid": "PN3f94c94562ac88dccf16f8859a1a8b25",
             "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "friendly_name": "Joey",
-            "phone_number": "+14158675310",
+            "phone_number": "+12349013030",
             "voice_url": "http:\/\/demo.twilio.com\/docs/voice.xml",
             "voice_method": "GET",
             "voice_fallback_url": null,

@@ -9,7 +9,7 @@ auth_token = 'your_auth_token'
 
 # Loop over caller_ids and print out a property for each one
 @client.outgoing_caller_ids.list(
-  phone_number: '+14158675310'
+  phone_number: '+12349013030'
 ).each do |caller_id|
   puts caller_id.phone_number
 end

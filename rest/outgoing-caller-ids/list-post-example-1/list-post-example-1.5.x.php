@@ -9,7 +9,7 @@ $token = "your_auth_token";
 $client = new Client($sid, $token);
 
 $validationRequest = $client->validationRequests->create(
-    "+14158675310",
+    "+12349013030",
     array(
         "friendlyName" => "My Home Phone Number"
     )

@@ -5,7 +5,7 @@ const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const authToken = 'your_auth_token';
 const client = require('twilio')(accountSid, authToken);
 
-const opts = { phoneNumber: '+14158675310' };
+const opts = { phoneNumber: '+12349013030' };
 
 client.incomingPhoneNumbers.each(opts, number =>
   console.log(number.phoneNumber)

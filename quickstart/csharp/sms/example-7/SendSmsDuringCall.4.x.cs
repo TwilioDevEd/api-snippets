@@ -13,7 +13,7 @@ public class SendSmsDuringCall : TwilioController
         // make an associative array of people we know, indexed by phone number
         var people = new Dictionary<string, string>() {
           {"+14158675308", "Curious George"},
-          {"+14158675310", "Boots"},
+          {"+12349013030", "Boots"},
           {"+14158675311", "Virgil"}
         };
 
