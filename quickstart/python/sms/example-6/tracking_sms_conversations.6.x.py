@@ -11,8 +11,8 @@ app.config.from_object(__name__)
 # Try adding your own number to this list!
 callers = {
     "+14158675308": "Curious George",
-    "+14158675310": "Boots",
-    "+14158675311": "Virgil",
+    "+12349013030": "Boots",
+    "+12348134522": "Virgil",
 }
 
 @app.route("/", methods=['GET', 'POST'])

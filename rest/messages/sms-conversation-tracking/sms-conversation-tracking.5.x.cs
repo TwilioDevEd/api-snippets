@@ -29,8 +29,8 @@ public class SmsController : TwilioController
         var people = new Dictionary<string, string>()
         {
             {"+14158675308", "Rey"},
-            {"+14158675310", "Finn"},
-            {"+14158675311", "Chewy"}
+            {"+12349013030", "Finn"},
+            {"+12348134522", "Chewy"}
         };
 
         // if the sender is known, then greet them by name

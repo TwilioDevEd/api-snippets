@@ -18,9 +18,9 @@ public class Example {
     // The post variables in Twilio's request
     Map<String, String> params = new HashMap<>();
     params.put("CallSid", "CA1234567890ABCDE");
-    params.put("Caller", "+14158675310");
+    params.put("Caller", "+12349013030");
     params.put("Digits", "1234");
-    params.put("From", "+14158675310");
+    params.put("From", "+12349013030");
     params.put("To", "+18005551212");
 
     // The X-Twilio-Signature header attached to the request

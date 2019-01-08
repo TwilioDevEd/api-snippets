@@ -8,7 +8,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # Loop over numbers and print out a property for each one
 numbers = client.account
-                .incoming_phone_numbers.list(phone_number: '+14158675310')
+                .incoming_phone_numbers.list(phone_number: '+12349013030')
 numbers.each do |number|
   puts number.phone_number
 end

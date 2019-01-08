@@ -7,8 +7,8 @@ use Twilio\TwiML;
 // make an associative array of senders we know, indexed by phone number
 $people = array(
     "+14158675308" => "Curious George",
-    "+14158675310" => "Boots",
-    "+14158675311" => "Virgil",
+    "+12349013030" => "Boots",
+    "+12348134522" => "Virgil",
 );
 
 // if the sender is known, then greet them by name

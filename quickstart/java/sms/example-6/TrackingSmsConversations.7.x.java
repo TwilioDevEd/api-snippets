@@ -27,8 +27,8 @@ public class TrackingSmsConversations extends HttpServlet {
         // Create a dict of people we know.
         HashMap<String, String> people = new HashMap<String, String>();
         people.put("+14158675308", "Curious George");
-        people.put("+14158675310", "Boots");
-        people.put("+14158675311", "Virgil");
+        people.put("+12349013030", "Boots");
+        people.put("+12348134522", "Virgil");
 
         String toNumber = request.getParameter("To");
         String fromNumber = request.getParameter("From");

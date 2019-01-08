@@ -14,7 +14,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         var numbers = IncomingPhoneNumberResource.Read(
-            phoneNumber: new PhoneNumber("+14158675310"));
+            phoneNumber: new PhoneNumber("+12349013030"));
 
         foreach (var number in numbers)
         {

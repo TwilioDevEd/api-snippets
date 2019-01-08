@@ -7,6 +7,6 @@ dial.number({
     statusCallbackEvent: 'initiated ringing answered completed',
     statusCallback: 'https://myapp.com/calls/events',
     statusCallbackMethod: 'POST'
-}, '+14158675310');
+}, '+12349013030');
 
 console.log(response.toString());
