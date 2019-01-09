@@ -1,0 +1,23 @@
+curl -X POST 'https://video.twilio.com/v1/CompositionHooks' \
+    -u 'SKXXXX:your_api_key_secret'
+    -F 'FriendlyName=MyHookWithComplexVideoLayout' \
+    -F 'StatusCallback=http://my.server.org/callbacks' \
+    -F 'AudioSources=listener-audio' \
+    -F 'AudioSources=presenter-audio' \
+    -F 'Format=mp4' \
+    -F 'Resolution=1280x720' \
+<<-EOF -F 'VideoLayout={
+          "main":{
+            "z_pos":1,
+            "video_sources":["screen"]
+          },
+          "pip":{
+            "z_pos":2,
+            "x_pos":1000,
+            "y_pos":30,
+            "width":240,
+            "height":180,
+            "video_sources":["presenter-cam"]
+          }
+        }'
+EOF

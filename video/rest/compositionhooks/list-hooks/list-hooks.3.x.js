@@ -9,8 +9,13 @@ const Twilio = require('twilio');
 
 const client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
-composition = client.video.compositions('CJXXXX')
-  .fetch()
-  .then(composition =>{
-    console.log('Read Composition with SID=' + composition.sid);
+client.video.compositionHooks.
+  list({
+    enabled: true
+  })
+  .then(hooks =>{
+    console.log("Found " + hooks.length + " Composition Hooks.");
+    hooks.forEach(function(hook){
+      console.log('Read hook with SID=' + hook.sid);
+    });
   });

@@ -1,0 +1,19 @@
+{
+  "account_sid": "ACXXXX",
+  "sid": "HKXXXX",
+  "friendly_name": "MixingAllRoomAudiosHook",
+  "enabled": true,
+  "date_created": "2018-12-19T16:22:13Z",
+  "date_updated": null,
+  "audio_sources": [
+    "*"
+  ],
+  "audio_sources_excluded": [],
+  "video_layout": {},
+  "format": "mp4",
+  "trim": true,
+  "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+  "resolution": "640x480",
+  "status_callback_method": "POST",
+  "status_callback": "http://my.server.org/callbacks"
+}

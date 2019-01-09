@@ -1,0 +1,188 @@
+{
+  "composition_hooks": [
+    {
+      "trim": true,
+      "video_layout": {
+        "pip": {
+          "z_pos": 2,
+          "reuse": "show_oldest",
+          "x_pos": 1000,
+          "max_columns": null,
+          "cells_excluded": [],
+          "video_sources_excluded": [],
+          "height": 180,
+          "width": 240,
+          "max_rows": null,
+          "y_pos": 30,
+          "video_sources": [
+            "presenter-cam"
+          ]
+        },
+        "main": {
+          "z_pos": 1,
+          "reuse": "show_oldest",
+          "x_pos": 0,
+          "max_columns": null,
+          "cells_excluded": [],
+          "video_sources_excluded": [],
+          "height": null,
+          "width": null,
+          "max_rows": null,
+          "y_pos": 0,
+          "video_sources": [
+            "screen"
+          ]
+        }
+      },
+      "audio_sources_excluded": [],
+      "format": "mp4",
+      "date_updated": null,
+      "friendly_name": "MyHookWithComplexVideoLayout",
+      "enabled": true,
+      "account_sid": "ACXXXX",
+      "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+      "audio_sources": [
+        "listener-audio",
+        "listener-video"
+      ],
+      "sid": "HKXXXX",
+      "date_created": "2018-12-19T16:44:10Z",
+      "resolution": "1280x720",
+      "status_callback_method": "POST",
+      "status_callback": "http://my.server.org/callbacks"
+    },
+    {
+      "trim": true,
+      "video_layout": {},
+      "audio_sources_excluded": [],
+      "format": "mp4",
+      "date_updated": null,
+      "friendly_name": "MixingAllRoomAudiosHook",
+      "enabled": true,
+      "account_sid": "ACXXXX",
+      "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+      "audio_sources": [
+        "*"
+      ],
+      "sid": "HKXXXX",
+      "date_created": "2018-12-19T16:22:13Z",
+      "resolution": "640x480",
+      "status_callback_method": "POST",
+      "status_callback": "http://my.server.org/callbacks"
+    },
+    {
+      "trim": true,
+      "video_layout": {
+        "grid": {
+          "z_pos": 0,
+          "reuse": "show_oldest",
+          "x_pos": 0,
+          "max_columns": null,
+          "cells_excluded": [],
+          "video_sources_excluded": [],
+          "height": null,
+          "width": null,
+          "max_rows": null,
+          "y_pos": 0,
+          "video_sources": [
+            "*"
+          ]
+        }
+      },
+      "audio_sources_excluded": [],
+      "format": "mp4",
+      "date_updated": null,
+      "friendly_name": "MyFirstCompositionHook2",
+      "enabled": true,
+      "account_sid": "ACXXXX",
+      "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+      "audio_sources": [
+        "*"
+      ],
+      "sid": "HKXXXX",
+      "date_created": "2018-12-19T16:15:25Z",
+      "resolution": "640x480",
+      "status_callback_method": "POST",
+      "status_callback": "http://my.server.org/callbacks"
+    },
+    {
+      "trim": true,
+      "video_layout": {
+        "grid": {
+          "z_pos": 0,
+          "reuse": "show_oldest",
+          "x_pos": 0,
+          "max_columns": null,
+          "cells_excluded": [],
+          "video_sources_excluded": [],
+          "height": null,
+          "width": null,
+          "max_rows": null,
+          "y_pos": 0,
+          "video_sources": [
+            "*"
+          ]
+        }
+      },
+      "audio_sources_excluded": [],
+      "format": "mp4",
+      "date_updated": null,
+      "friendly_name": "MyFirstCompositionHook",
+      "enabled": true,
+      "account_sid": "ACXXXX",
+      "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+      "audio_sources": [
+        "*"
+      ],
+      "sid": "HKXXXX",
+      "date_created": "2018-12-19T16:04:11Z",
+      "resolution": "640x480",
+      "status_callback_method": "POST",
+      "status_callback": "http://my.server.org/callbacks"
+    },
+    {
+      "trim": true,
+      "video_layout": {
+        "grid": {
+          "z_pos": 0,
+          "reuse": "show_oldest",
+          "x_pos": 0,
+          "max_columns": null,
+          "cells_excluded": [],
+          "video_sources_excluded": [],
+          "height": null,
+          "width": null,
+          "max_rows": null,
+          "y_pos": 0,
+          "video_sources": [
+            "*"
+          ]
+        }
+      },
+      "audio_sources_excluded": [],
+      "format": "mp4",
+      "date_updated": "2018-12-19T15:52:08Z",
+      "friendly_name": "llf-composition-hook-test",
+      "enabled": false,
+      "account_sid": "ACXXXX",
+      "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+      "audio_sources": [
+        "*"
+      ],
+      "sid": "HKXXXX",
+      "date_created": "2018-12-19T15:09:41Z",
+      "resolution": "640x480",
+      "status_callback_method": "POST",
+      "status_callback": null
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://video.twilio.com/v1/CompositionHooks?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://video.twilio.com/v1/CompositionHooks?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "composition_hooks"
+  }
+}

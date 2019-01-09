@@ -1,0 +1,35 @@
+{
+  "account_sid": "ACXXXX",
+  "sid": "HKXXXX",
+  "friendly_name": "MyFirstCompositionHook",
+  "enabled": true,
+  "date_created": "2018-12-19T16:04:11Z",
+  "date_updated": null,
+  "audio_sources": [
+    "*"
+  ],
+  "audio_sources_excluded": [],
+  "video_layout": {
+    "grid": {
+      "z_pos": 0,
+      "reuse": "show_oldest",
+      "x_pos": 0,
+      "max_columns": null,
+      "cells_excluded": [],
+      "video_sources_excluded": [],
+      "height": null,
+      "width": null,
+      "max_rows": null,
+      "y_pos": 0,
+      "video_sources": [
+        "*"
+      ]
+    }
+  },
+  "format": "mp4",
+  "trim": true,
+  "resolution": "640x480",
+  "url": "https://video.twilio.com/v1/CompositionHooks/HKXXXX",
+  "status_callback_method": "POST",
+  "status_callback": "http://my.server.org/callbacks"
+}

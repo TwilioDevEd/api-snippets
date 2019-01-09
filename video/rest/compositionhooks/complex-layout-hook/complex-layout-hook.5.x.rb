@@ -8,13 +8,13 @@ api_key_secret = 'your_api_key_secret'
 
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
-composition = @client.video.compositions.create(
-  room_sid: 'RMXXXX',
-  audio_sources: ['MTAAAA','soundtrack'],
+compositionHook = @client.video.compositionHooks.create(
+  friendlyName: 'MyHookWithComplexVideoLayout',
+  audio_sources: ['listener-audio','presenter-audio'],
   video_layout: {
     main: {
       z_pos: 1,
-      video_sources: ['screen-presentation']
+      video_sources: ['screen']
     },
     pip: {
       z_pos: 2,
@@ -22,7 +22,7 @@ composition = @client.video.compositions.create(
       y_pos: 30,
       width: 240,
       height: 180,
-      video_sources: ['MTBBBB']
+      video_sources: ['presenter-cam']
     }
   },
   status_callback: 'http://my.server.org/callbacks',
@@ -30,4 +30,4 @@ composition = @client.video.compositions.create(
   format: 'mp4'
 )
 
-puts composition.sid
+puts compositionHook.sid
