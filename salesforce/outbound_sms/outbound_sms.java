@@ -1,5 +1,5 @@
 //Post Example
-TwilioApiClient api = new TwilioApiClient();
+TwilioSF__TwilioApiClient api = new TwilioSF__TwilioApiClient();
 api.addUrlPart('Accounts');
 api.addUrlPart('ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 api.addUrlPart('Messages.json');
@@ -7,7 +7,7 @@ api.addUrlPart('Messages.json');
 api.addParam('To','+15558675310');
 api.addParam('From','+15017122661');
 api.addParam('Body','Here is my message');
-TwilioApiClientResponse response = api.doPost();
+TwilioSF__TwilioApiClientResponse response = api.doPost();
 
 //Example with key value pairs
 String sid = response.getTwilioJsonParser().get('sid').getString();

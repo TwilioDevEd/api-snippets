@@ -1,5 +1,5 @@
 //Put Example with failures
-TwilioApiClient client = new TwilioApiClient();
+TwilioSF__TwilioApiClient client = new TwilioSF__TwilioApiClient();
 //Switch for throwing exceptions,=.
 //client.setThrowExceptionsOnFailedResponses();
 client.addUrlPart('Accounts');
@@ -11,6 +11,6 @@ client.addParam('From','+15558675310');
 client.addParam('Body','Here is my message');
 
 
-TwilioApiClientResponse response = client.doPut();
+TwilioSF__TwilioApiClientResponse response = client.doPut();
 system.debug(response.hasError());
 system.debug(response.getErrorMessage());
