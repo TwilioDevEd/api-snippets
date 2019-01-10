@@ -1,0 +1,5 @@
+{
+    "type": "server",
+    "title": "Programmable Wireless Machine to Machine commands with the Seeed Studio Wio LTE",
+    "description": "Send and receive machine to machine commands (M2M) with an Seeed Studio Wio LTE"
+}
