@@ -1,41 +1,48 @@
 /*
     Twilio Machine to Machine Commands Quickstart for the Seeed Studio Wio LTE
 */
+#include "wio_tracker.h"
 
-#include <WioLTEforArduino.h>
-#define INTERVAL  (1000)
+/*
+  Globals for receiving incoming Commands
+*/
+uint16_t newSMSNumber = -1;
+char receivedMessage[128];
 
-WioLTE Wio;
+/*
+  Create a Wio instance
+*/
+WioTracker wio = WioTracker();
 
 void setup() {
-  SerialUSB.println("");
-  SerialUSB.println("--- START ---------------------------------------------------");
+  /*
+    Modem setup
+  */
+  wio.Power_On();
+  SerialUSB.println("Power On!");
+  SerialUSB.println("Start network registration...");
 
   /*
-     Seeed Studio Wio LTE setup
+    Network registration
   */
-  SerialUSB.println("### I/O Initialize");
-  Wio.Init();
-
-  SerialUSB.println("### Power supply ON");
-  Wio.PowerSupplyLTE(true);
-  delay(500);
-
-  SerialUSB.println("### Turn on or reset");
-  if (!Wio.TurnOnOrReset()) {
-    SerialUSB.println("### ERROR! ###");
+  if (!wio.waitForNetworkRegister())
+  {
+    SerialUSB.println("Network error");
     return;
+  } else {
+    SerialUSB.println("Network registration complete");
   }
-  delay(3000);
-
-  SerialUSB.println("### Setup completed");
-  delay(3000);
+  
+  /*
+    Set all "REC UNREAD SMS" to "REC READ SMS"
+  */
+  wio.readAllRecUnreadSMS();
 
   /*
     Keep `command` under 160 ASCII characters, or 67 UCS-2 characters.
     https://www.twilio.com/docs/glossary/what-sms-character-limit
   */
-  SerialUSB.println("### Sending Command");
+  SerialUSB.println("Sending Command");
   char message[128] = "Hello from the Wio LTE!";
 
   /*
@@ -44,46 +51,37 @@ void setup() {
 
     Write a Twilio M2M command.
   */
-  if (!Wio.SendSMS("2936", message)) {
-    SerialUSB.println("### ERROR! ###");
-    return;
+  if (wio.sendSMS("2936", message))
+  {
+    SerialUSB.println("Command Sent");
   }
-  SerialUSB.println("### Command Sent");
-  delay(3000);
-  SerialUSB.println("### Waiting for Command");
+  else
+  {
+    SerialUSB.println("Send Error");
+  }
+  SerialUSB.println("Waiting for Command");
 }
 
 void loop() {
-  while (true) {
+  /*
+    Detect unread Commands
+  */
+  int id = wio.detectRecUnreadSMS();
 
-    char str[100];
+  /*
+    Define the index of the incoming Commands
+  */
+  if (-1 != id) {
+    newSMSNumber = id;
 
     /*
-        Read a Twilio M2M command. Note that it will find the lowest
-        indexed one with the code as is; in your code. if you cache the
-        index you can start the next read_command to move to the next one.
+      Read a Twilio M2M command. Note that it will find the lowest
+      indexed one with the code as is; in your code. if you cache the
+      index you can start the next read_command to move to the next one.
     */
-    int strLen = Wio.ReceiveSMS(str, sizeof (str));
-
-    if (strLen < 0) {
-      SerialUSB.println("### ERROR! ###");
-      goto err;
-    }
-    
-    /* Receive command */
-    if (strLen == 0) break;
-    SerialUSB.println("### Command Received");
-
-    /* Print the command */
-    SerialUSB.println(str);
-
-    /* Delete the stored command */
-    if (!Wio.DeleteReceivedSMS()) {
-      SerialUSB.println("### ERROR! ###");
-      goto err;
-    }
+    wio.readSMS(newSMSNumber, receivedMessage, 128);
+    SerialUSB.println("Command Received");
+    SerialUSB.println(receivedMessage);
   }
-
-err:
-  delay(INTERVAL);
+  delay(1000);
 }
