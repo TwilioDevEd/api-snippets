@@ -36,7 +36,7 @@ void setup() {
     https://www.twilio.com/docs/glossary/what-sms-character-limit
   */
   SerialUSB.println("### Sending Command");
-  char message[128] = "Hello from Wio LTE!";
+  char message[128] = "Hello from the Wio LTE!";
 
   /*
     Send an SMS to short code 2936, which is a Twilio
