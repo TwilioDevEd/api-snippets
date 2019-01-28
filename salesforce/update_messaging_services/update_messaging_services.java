@@ -1,11 +1,11 @@
-TwilioSF__TwilioApiClient client = new TwilioSF__TwilioApiClient();
+TwilioSF.TwilioApiClient client = new TwilioSF.TwilioApiClient();
 client.setBaseUrl('https://messaging.twilio.com/');
 client.setApiVersion('v1');
 client.addUrlPart('Services');
 client.addUrlPart('MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 client.addParam('FriendlyName','Dev Org1');
-TwilioSF__TwilioApiClientResponse response = client.doPost();
+TwilioSF.TwilioApiClientResponse response = client.doPost();
 
 system.debug(response.getTwilioJsonParser().get('friendly_name').getString());
 system.debug(response.getTwilioJsonParser().get('area_code_geomatch').getBoolean());
