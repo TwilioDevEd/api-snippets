@@ -1,5 +1,5 @@
 //Task Router Get Reservations
-TwilioSF__TwilioApiClient client = new TwilioSF__TwilioApiClient();
+TwilioSF.TwilioApiClient client = new TwilioSF.TwilioApiClient();
 client.setBaseUrl('https://taskrouter.twilio.com/');
 client.setApiVersion('v1');
 client.addUrlPart('Workspaces');
@@ -8,7 +8,7 @@ client.addUrlPart('Workers');
 client.addUrlPart('WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 client.addUrlPart('Reservations');
 
-TwilioSF__TwilioApiClientResponse response = client.doGet();
+TwilioSF.TwilioApiClientResponse response = client.doGet();
 system.debug(response.getTwilioJsonParser().get('meta').get('first_page_url').getString());
 system.debug(JSON.serializePretty(response.toMap()));
 String messagesString = response.getTwilioJsonParser().get('reservations').getString();
