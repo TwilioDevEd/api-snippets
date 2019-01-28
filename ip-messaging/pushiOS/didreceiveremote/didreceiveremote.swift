@@ -1,5 +1,4 @@
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    print(userInfo)
     // If your application supports multiple types of push notifications, you may wish to limit which ones you send to the TwilioChatClient here
     if let chatClient = chatClient, chatClient.user != nil {
         // If your reference to the Chat client exists and is initialized, send the notification to it
