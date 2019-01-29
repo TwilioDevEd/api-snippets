@@ -1,13 +1,8 @@
-func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
-    if notificationSettings.types == .None {
-        NSLog("Failed to get token, error: Notifications are not allowed")
-        if let chatClient = chatClient where chatClient.userInfo != nil {
-            chatClient.registerWithToken(nil)
-        } else {
-            updatedPushToken = nil
-        }
+let center = UNUserNotificationCenter.current()
+center.getNotificationSettings { (settings) in
+  if settings.authorizationStatus == .authorized {
+    DispatchQueue.main.async {
+      UIApplication.shared.registerForRemoteNotifications()
     }
-    else {
-        UIApplication.sharedApplication().registerForRemoteNotifications()
-    }
+  }
 }
