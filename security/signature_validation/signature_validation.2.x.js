@@ -17,6 +17,6 @@ const params = {
 };
 
 // The X-Twilio-Signature header attached to the request
-const twilioSignature = 'GvWf1cFY/Q7PnoempGyD5oXAezc=';
+const twilioSignature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ=';
 
 console.log(client.validateRequest(authToken, twilioSignature, url, params));

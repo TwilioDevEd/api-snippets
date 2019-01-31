@@ -24,7 +24,7 @@ $postVars = array(
 
 // The X-Twilio-Signature header - in PHP this should be
 // $_SERVER["HTTP_X_TWILIO_SIGNATURE"];
-$signature = 'GvWf1cFY/Q7PnoempGyD5oXAezc=';
+$signature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ=';
 
 if ($validator->validate($signature, $url, $postVars)) {
     echo "Confirmed to have come from Twilio.";
