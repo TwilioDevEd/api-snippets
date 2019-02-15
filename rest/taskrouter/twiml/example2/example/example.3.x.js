@@ -10,9 +10,7 @@ app.post('/enqueue_call', (request, response) => {
   const json = { account_number: '12345abcdef' };
 
   resp
-    .enqueue({
-      workflowSid: 'WW0123456789abcdef0123456789abcdef',
-    })
+    .enqueue('Friendly Name')
     .task({}, JSON.stringify(json));
 
   response.setHeader('Content-Type', 'application/xml');
