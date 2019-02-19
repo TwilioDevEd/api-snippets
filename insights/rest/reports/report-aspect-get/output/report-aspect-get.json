@@ -1,0 +1,51 @@
+"meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://preview.twilio.com/insights/Calls/Report/Aspects/Clients?EndDateTime=2016-09-027T00%3A00%3A00Z&StartDateTime=2016-09-02T00%3A00%3A00Z&PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://preview.twilio.com/insights/Calls/Report/Aspects/Clients?EndDateTime=2016-09-02T00%3A00%3A00Z&StartDateTime=2016-09-02T00%3A00%3A00Z&PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "response"
+},
+"response": [
+    {
+        "issue_type_counts": {
+            "dropped_call": 0,
+            "echo": 0,
+            "one_way_audio": 0,
+            "audio_latency": 0,
+            "choppy_audio": 0,
+            "noisy_call": 0
+        },
+        "call_stats": {
+            "total_calls_failed_setup": 0,
+            "total_calls_failed_network": 0,
+            "total_calls_failed_rate_exceeded": 0,
+            "total_calls_failed_authentication": 0,
+            "total_calls_failed_device_audio": 0,
+            "total_calls": 1354,
+            "total_calls_failed_configuration": 0,
+            "total_calls_failed_microphone_denied": 5
+        },
+        "start_time": "2016-09-02T15:07:13Z",
+        "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "feedback_score_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0
+        },
+        "end_time": "2016-09-07T15:01:12Z",
+        "key": "",
+        "warning_counts": {
+            "constant_audio_output_level": 37,
+            "constant_audio_input_level": 21,
+            "ice_connectivity_lost": 0,
+            "high_packet_loss": 11,
+            "high_jitter": 6,
+            "high_rtt": 1,
+            "low_mos": 47
+        }
+    }
+]

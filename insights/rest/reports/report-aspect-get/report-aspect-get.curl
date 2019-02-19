@@ -1,0 +1,4 @@
+curl -G https://preview.twilio.com/insights/Calls/Report/Aspects/Client \
+  -d "StartDateTime=2016-09-02T15:07:13Z" \
+  -d "EndDateTime=2016-09-07T15:01:12Z" \
+  -u "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token"
