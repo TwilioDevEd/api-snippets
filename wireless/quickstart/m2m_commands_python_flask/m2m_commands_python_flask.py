@@ -17,7 +17,7 @@ def sms():
     time.sleep(2)
     return "Hello World!"
 
-wireless = client.wireless.commands.create(command="hello world!", sim="DE09fb55b782fdc06c5bf49eb0fd347f68")
+wireless = client.wireless.commands.create(command="hello world!", sim="SIM_SID")
 
 if __name__ == '__main__':
     app.run()
