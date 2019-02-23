@@ -18,7 +18,7 @@ def get_capability_token():
     application_sid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     capability.allow_client_outgoing(application_sid)
     capability.allow_client_incoming(request.form["ClientName"])
-    token = capability.generate()
+    token = capability.to_jwt()
 
     return Response(token, mimetype='application/jwt')
 
