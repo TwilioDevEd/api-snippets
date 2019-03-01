@@ -1,0 +1,5 @@
+{
+  "type": "server",
+  "title": "Create Two Session Participants: Me and a Friend",
+  "description": "Use a number on your Twilio account for YOUR_TWILIO_NUMBER, and your personal numbers for the other tags."
+}

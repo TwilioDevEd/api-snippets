@@ -1,0 +1,39 @@
+$ curl -X POST https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token \
+    --data-urlencode "TwilioAddress=+37258821955" \
+    --data-urlencode "UserAddress=+37259124879" | jq
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "messaging_service_sid": "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "session_sid": "CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "identity": null,
+  "attributes": {},
+  "date_created": "2015-12-16T22:18:37Z",
+  "date_updated": "2015-12-16T22:18:38Z",
+  "type": "sms",
+  "twilio_address": "+37258821955",
+  "user_address": "+37259124879",
+  "url": "https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
+    
+$ curl -X POST https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token \
+    --data-urlencode "TwilioAddress=+37258821955" \
+    --data-urlencode "UserAddress=+37258333552"
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "messaging_service_sid": "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "session_sid": "CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "MBYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+  "identity": null,
+  "attributes": {},
+  "date_created": "2015-12-16T22:18:37Z",
+  "date_updated": "2015-12-16T22:18:38Z",
+  "type": "sms",
+  "twilio_address": "+37258821955",
+  "user_address": "+37258333552",
+  "url": "https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/MBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}

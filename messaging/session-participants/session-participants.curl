@@ -1,0 +1,9 @@
+curl -X POST https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token \
+    --data-urlencode "TwilioAddress=YOUR_TWILIO_NUMBER" \
+    --data-urlencode "UserAddress=YOUR_PERSONAL_NUMBER"
+    
+curl -X POST https://messaging.twilio.com/v1/Sessions/CHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants \
+    -u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token \
+    --data-urlencode "TwilioAddress=YOUR_TWILIO_NUMBER" \
+    --data-urlencode "UserAddress=FRIENDS_PERSONAL_NUMBER"
