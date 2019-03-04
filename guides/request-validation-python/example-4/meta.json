@@ -1,0 +1,5 @@
+{
+  "title": "Test the validity of your webhook signature",
+  "description": "This sample test will test the validity of your webhook signature with HTTP Basic or Digest authentication.",
+  "type": "server"
+}
