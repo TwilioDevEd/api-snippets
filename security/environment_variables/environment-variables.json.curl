@@ -1,0 +1,2 @@
+curl -XGET https://api.twilio.com/[DESIRED_API_PATH] \
+    -u ${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}
