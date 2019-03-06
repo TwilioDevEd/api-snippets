@@ -1,6 +1,5 @@
 {
-  "title": "Lookup with E.164 Formatted Number",
+  "title": "Load credentials from environment variables",
   "type": "server",
-  "description": "Look up a phone number in the E.164 format",
-  "tags": ["lookup", "phone number"]
+  "description": "Use environment variables instead of hard-coding your Twilio credentials"
 }
