@@ -1,0 +1,5 @@
+$ curl -XPOST https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tasks/WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Reservations/WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    -d "Instruction=Redirect" \
+    -d "RedirectCallSid=CA123456789" \
+    -d "RedirectUrl=http://example.com/assignment_redirect" \
+    -u '{account_sid}:{auth_token}'
