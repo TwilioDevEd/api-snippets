@@ -1,6 +1,3 @@
-import com.twilio.chat.ChatClientListener;
-import com.twilio.chat.StatusListener;
-
 public class Listener implements ChatClientListener {
 
   @Override public void onTokenAboutToExpire()
