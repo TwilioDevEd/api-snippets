@@ -1,0 +1,1 @@
+chatClient.updateToken(accessToken);
