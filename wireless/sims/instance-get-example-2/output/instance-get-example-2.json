@@ -10,6 +10,7 @@ Content-Type: application/json
   "sid": "DEd3f4ec6c85ded1a5f64f10afc067895c",
   "voice_fallback_url": null,
   "status" : "new",
+  "reset_status": null,
   "commands_callback_method": "POST",
   "rate_plan_sid": "WP4ff4de42eb7e4969f6c81782165bd62a",
   "voice_method": "POST",
