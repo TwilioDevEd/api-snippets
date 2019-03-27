@@ -1,5 +1,4 @@
 <?php
-// require_once './vendor/autoload.php'; // Loads the library
 require __DIR__ . '/twilio-php-master/Twilio/autoload.php';
 use Twilio\Rest\Client;
 
@@ -8,4 +7,12 @@ $api_key = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // You can generate this from w
 $api_secret = "your_api_secret"; // You can generate this from www.twilio.com/console/runtime/api-keys/create
 $client = new Client($api_key, $api_secret, $sid);
 
+// Proof request to check credentials are working.
+// Retrieving your account information
+$accounts = $client->api->v2010->accounts
+                               ->read();
+
+foreach ($accounts as $record) {
+    print($record->sid);
+}
 ?>
