@@ -1,4 +1,16 @@
 {
+  "type": "server",
   "title": "Authenticate with API Key and API Secret",
-  "type": "server"
+  "_definition": {
+    "params": {
+      "required": {},
+      "path": {}
+    },
+    "location": "https://api.twilio.com/2010-04-01/Accounts.json",
+    "method": "post",
+    "domain": "api",
+    "version": "v2010",
+    "resource": "account",
+    "action": "read"
+  }
 }

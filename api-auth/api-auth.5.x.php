@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/twilio-php-master/Twilio/autoload.php';
+require_once './vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
 $sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // Your Account Sid from twilio.com/user/account
