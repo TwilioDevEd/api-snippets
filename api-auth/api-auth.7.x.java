@@ -10,6 +10,7 @@ public class Example {
     public static final String API_SECRET = "your_api_secret";
 
     public static void main(String[] args) {
+        // DANGER! This is insecure. See http://twil.io/secure
         Twilio.init(API_KEY, API_SECRET, ACCOUNT_SID);
 
         // Proof request to check credentials are working.

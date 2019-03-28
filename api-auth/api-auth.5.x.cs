@@ -11,6 +11,7 @@ class Program
         const string apiKey = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // You can generate this from www.twilio.com/console/runtime/api-keys/create
         const string apiSecret = "your_api_secret"; // You can generate this from www.twilio.com/console/runtime/api-keys/create
 
+        // DANGER! This is insecure. See http://twil.io/secure
         TwilioClient.Init(apiKey, apiSecret, accountSid);
 
         // Proof request to check credentials are working.
