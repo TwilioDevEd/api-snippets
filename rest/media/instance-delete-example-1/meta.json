@@ -1,4 +1,4 @@
 {
-  "title": "Delete a Media",
-  "type": "server"
+  "type": "server",
+  "title": "Delete a Media Resource"
 }
