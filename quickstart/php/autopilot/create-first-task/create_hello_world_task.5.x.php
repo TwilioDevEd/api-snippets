@@ -13,8 +13,8 @@ $twilio = new Client($sid, $token);
 // Build task actions that say something and listens for a repsonse.
 $helloWorldTaskActions = array(
     "actions" => array(
-        "say" => "Hi there, I\'m your virtual assistant! How can I help you?",
-        "listen" => true,
+        array("say" => "Hi there, I'm your virtual assistant! How can I help you?"),
+        array("listen" => true),
     )
 );
 
@@ -22,9 +22,9 @@ $helloWorldTaskActions = array(
 // Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 $task = $twilio->autopilot->v1->assistants("UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                               ->tasks
-                              ->create(array(
-                                 "uniqueName" => "hello-world",
-                                 "actions" => $helloWorldTaskActions,
+                              ->create("hello-world", array(
+                                  "friendlyName" => "Hello World",
+                                  "actions" => $helloWorldTaskActions,
                               ));
 
 print($task->sid);
