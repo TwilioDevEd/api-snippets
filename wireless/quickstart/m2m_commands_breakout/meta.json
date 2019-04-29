@@ -1,0 +1,5 @@
+{
+  "type": "server",
+  "title": "Programmable Wireless Narrowband Machine to Machine commands",
+  "description": "Send and receive machine to machine commands (M2M) with Narrowband and the Breakout SDK"
+}
