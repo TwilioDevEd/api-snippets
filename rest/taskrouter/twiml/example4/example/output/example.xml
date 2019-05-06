@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-    <Enqueue
-            waitUrl="/hold_music.php"
-            action="/post_bridge_survey.php"
-            workflowSid="WW0123456789abcdef0123456789abcdef">
-        <Task>{"account_number": "12345abcdef"}</Task>
-    </Enqueue>
-</Response>
