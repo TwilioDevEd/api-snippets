@@ -1,1 +1,0 @@
-string token = capability.GenerateToken(600);

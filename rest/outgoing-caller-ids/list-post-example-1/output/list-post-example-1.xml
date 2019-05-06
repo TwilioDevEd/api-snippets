@@ -1,9 +1,0 @@
-<TwilioResponse>
-	<ValidationRequest>
-		<AccountSid>ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</AccountSid>
-		<PhoneNumber>+12349013030</PhoneNumber>
-		<FriendlyName>My Home Phone Number</FriendlyName>
-		<ValidationCode>123456</ValidationCode>
-		<CallSid>CA378358ccf6a2c88abc67859aa2e0bffa</CallSid>
-	</ValidationRequest>
-</TwilioResponse>

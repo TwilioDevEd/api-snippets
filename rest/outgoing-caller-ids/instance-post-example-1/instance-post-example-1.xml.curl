@@ -1,3 +1,0 @@
-curl -XPOST https://api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds/PNe536d32a3c49700934481addd5ce1659 \
-    -d "FriendlyName=My%20Second%20Line" \
-    -u 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token'
