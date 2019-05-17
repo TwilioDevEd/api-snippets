@@ -21,10 +21,17 @@ class TwilioRequestValidator
       // You can get your app token in your twilio console https://www.twilio.com/console
       $requestValidator = new RequestValidator(env('TWILIO_APP_TOKEN'));
 
+      $requestData = $request->toArray();
+
+      // Switch to the body content if this is a JSON request.
+      if (array_key_exists('bodySHA256', $requestData)) {
+        $requestData = $request->getContent();
+      }
+
       $isValid = $requestValidator->validate(
         $request->header('X-Twilio-Signature'),
         $request->fullUrl(),
-        $request->toArray()
+        $requestData
       );
 
       if ($isValid) {
