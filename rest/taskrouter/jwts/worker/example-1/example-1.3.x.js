@@ -36,6 +36,9 @@ function buildWorkspacePolicy(options) {
 // Event Bridge Policies
 var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
 
+// Worker Policies
+var workerPolicies = util.defaultWorkerPolicies(version, workspaceSid, workerSid);
+
 var workspacePolicies = [
   // Workspace fetch Policy
   buildWorkspacePolicy(),
@@ -47,7 +50,7 @@ var workspacePolicies = [
   buildWorkspacePolicy({ resources: ['Workers', workerSid, 'Reservations', '**'], method: 'POST' }),
 ];
 
-eventBridgePolicies.concat(workspacePolicies).forEach(function (policy) {
+eventBridgePolicies.concat(workerPolicies).concat(workspacePolicies).forEach(function (policy) {
   capability.addPolicy(policy);
 });
 

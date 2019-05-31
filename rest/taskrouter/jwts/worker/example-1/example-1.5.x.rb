@@ -30,4 +30,9 @@ allow_reservation_updates = Twilio::JWT::TaskRouterCapability::Policy.new(
 )
 capability.add_policy(allow_reservation_updates)
 
+Twilio::JWT::TaskRouterCapability::TaskRouterUtils
+.worker_policies(workspace_sid, worker_sid).each { |worker_policy|
+   capability.add_policy(worker_policy)
+}
+
 puts capability.to_s
