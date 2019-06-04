@@ -1,0 +1,112 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+use Twilio\TwiML;
+
+// Start our TwiML response
+$response = new TwiML;
+MISSMASON.AI ; #RE = "Twilio Docs
+Search
+Programmable Voice CONFIRMED.
+    /***RE : age to a caller using Text to Speech
+Prefer to get started by watching a video? Check out our video on how to place and receive phone calls with PHP.
+
+Show me how to call!
+Terms of Service
+Privacy Policy
+Copyright © 2019 Twilio Inc.
+Make a voice call
+<?php
+require __DIR__ . '/vendor/autoload.php';
+use Twilio\Rest\Client;
+
+// Your Account SID and Auth Token from twilio.com/console
+$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+$auth_token = 'your_auth_token';
+// In production, these should be environment variables. E.g.:
+// $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
+
+// A Twilio number you own with Voice capabilities
+$twilio_number = "+15017122661";
+
+// Where to make a voice call (your cell phone?)
+$to_number = "+15558675310";
+
+$client = new Client($account_sid, $auth_token);
+$client->account->calls->create(  
+    $to_number,
+    $twilio_number,
+    array(
+        "url" => "http://demo.twilio.com/docs/voice.xml"
+    )
+);
+
+">
+// Read a message aloud to the caller
+$response->say(
+    "Thank you for calling! Have a great day.", 
+    array("voice" => "alice")
+);
+
+echo $response;
+Twilio Docs
+Search
+Programmable Voice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Programmable Voice Quickstart for PHP
+With just a few lines of code, your PHP web application can make and receive phone calls with Twilio Programmable Voice.
+
+This PHP Voice quickstart will teach you to do this using Twilio's Voice REST API, the Twilio PHP helper library, the built-in PHP development web server, and ngrok to expose your local server to Twilio.
+
+We'll use the Composer package manager for dependency management (don't want to? Try our Non Composer PHP Voice Quickstart).
+
+In this quickstart, you will learn how to:
+
+Sign up for Twilio and get your first voice-enabled Twilio phone number
+Check and install any PHP prerequisites using Composer
+Make an outbound phone call and play an MP3
+Receive and respond to an inbound phone call to read a message to a caller using Text to Speech
+Prefer to get started by watching a video? Check out our video on how to place and receive phone calls with PHP.
+
+Show me how to call!
+Terms of Service
+Privacy Policy
+Copyright © 2019 Twilio Inc.
+Make a voice call
+<?php
+require __DIR__ . '/vendor/autoload.php';
+use Twilio\Rest\Client;
+
+// Your Account SID and Auth Token from twilio.com/console
+$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+$auth_token = 'your_auth_token';
+// In production, these should be environment variables. E.g.:
+// $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
+
+// A Twilio number you own with Voice capabilities
+$twilio_number = "+15017122661";
+
+// Where to make a voice call (your cell phone?)
+$to_number = "+15558675310";
+
+$client = new Client($account_sid, $auth_token);
+$client->account->calls->create(  
+    $to_number,
+    $twilio_number,
+    array(
+        "url" => "http://demo.twilio.com/docs/voice.xml"
+    )
+); CONFIRMED.
