@@ -1,0 +1,30 @@
+#-------------------------------------------------------------------------------
+#1. At connect time Adam wants to receive all the tracks.
+#   Done by default rule. No further actions required.
+
+#-------------------------------------------------------------------------------
+#2. After a while, Adam notices his bandwidth consumption is too high and
+#   decides to unsubscribe from all video tracks
+
+curl -X POST 'https://video.twilio.com/v1/Rooms/RMXXXX/Participants/Adam/SubscribeRules' \
+    -u 'SKXXXX:your_api_key_secret' \
+    --data Rules='[{"type": "include", "kind": "audio"}]' \
+    -H "Content-Type: application/x-www-form-urlencoded"
+
+#-------------------------------------------------------------------------------
+#3. Later, a video screenshare track with SID MTXXXX is published to the room
+#   and Adam subscribes to it.
+
+curl -X POST 'https://video.twilio.com/v1/Rooms/RMXXXX/Participants/Adam/SubscribeRules' \
+    -u 'SKXXXX:your_api_key_secret' \
+    --data Rules='[{"type": "include", "kind": "audio"},{"type": "include", "track": "MTXXXX"}]' \
+    -H "Content-Type: application/x-www-form-urlencoded"
+
+#-------------------------------------------------------------------------------
+#4. John, another participant, is in a noisy place and his audio track is
+#   annoying. Adam decides to unsubscribe from it.
+
+curl -X POST 'https://video.twilio.com/v1/Rooms/RMXXXX/Participants/Adam/SubscribeRules' \
+    -u 'SKXXXX:your_api_key_secret' \
+    --data Rules='[{"type": "include", "kind": "audio"},{"type": "include", "track": "MTXXXX"},{"type": "exclude", "publisher": "John", "kind": "audio"}]' \
+    -H "Content-Type: application/x-www-form-urlencoded"

@@ -1,0 +1,50 @@
+
+//-------------------------------------------------------------------------------
+//1. At connect time Adam wants to receive all the tracks.
+//   Done by default rule. No further actions required.
+
+
+//-------------------------------------------------------------------------------
+//2. After a while, Adam notices his bandwidth consumption is too high and
+//   decides to unsubscribe from all video tracks
+
+{
+  "room_sid": "RMXXXX",
+  "participant_sid": "PAXXXX",
+  "rules": [
+    {"type": "include", "kind": "audio"}
+  ],
+  "date_updated": "2019-04-30T20:28:00Z",
+  "date_created": "2019-04-30T20:15:49Z"
+}
+
+//-------------------------------------------------------------------------------
+//3. Later, a video screenshare track with SID MTXXXX is published to the room
+//   and Adam subscribes to it.
+
+{
+  "room_sid": "RMXXXX",
+  "participant_sid": "PAXXXX",
+  "rules": [
+    {"type": "include", "kind": "audio"},
+    {"type": "include", "track": "MTXXXX"}
+  ],
+  "date_updated": "2019-04-30T20:28:00Z",
+  "date_created": "2019-04-30T20:15:49Z"
+}
+
+//-------------------------------------------------------------------------------
+//4. John, another participant, is in a noisy place and his audio track is
+//   annoying. Adam decides to unsubscribe from it.
+
+{
+  "room_sid": "RMXXXX",
+  "participant_sid": "PAXXXX",
+  "rules": [
+    {"type": "include", "kind": "audio"},
+    {"type": "include", "track": "MTXXXX"},
+    {"type": "exclude", "publisher": "John", "kind": "audio"}
+  ],
+  "date_updated": "2019-04-30T20:28:00Z",
+  "date_created": "2019-04-30T20:15:49Z"
+}

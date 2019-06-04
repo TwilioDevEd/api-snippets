@@ -1,0 +1,16 @@
+{
+  "room_sid": "RMXXXX",
+  "participant_sid": "PAXXXX",
+  "rules": [
+    {
+      "all": true,
+      "type": "include"
+    },
+    {
+      "publisher": "Carl",
+      "type": "exclude"
+    }
+  ],
+  "date_updated": "2019-04-30T12:38:10Z",
+  "date_created": "2019-04-30T12:25:21Z"
+}
