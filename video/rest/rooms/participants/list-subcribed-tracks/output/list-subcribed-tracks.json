@@ -1,0 +1,61 @@
+{
+  "subscribed_tracks": [
+    {
+      "kind": "video",
+      "name": "1f6f07c7-7d02-4f4c-9caa-c7fdd6817d5a",
+      "date_updated": null,
+      "sid": "MTXXXX",
+      "enabled": true,
+      "room_sid": "RMXXXX",
+      "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks/MTXXXX",
+      "date_created": "2019-04-30T12:26:07Z",
+      "publisher_sid": "PAXYXY",
+      "participant_sid": "PAXXXX"
+    },
+    {
+      "kind": "audio",
+      "name": "4ff26a60-3447-4dd3-8281-2f83568bff50",
+      "date_updated": null,
+      "sid": "MTYYYY",
+      "enabled": true,
+      "room_sid": "RMXXXX",
+      "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks/MTYYYY",
+      "date_created": "2019-04-30T12:26:07Z",
+      "publisher_sid": "PAXYXY",
+      "participant_sid": "PAXXXX"
+    },
+    {
+      "kind": "video",
+      "name": "e124298c-f90f-468a-ad33-d7071c058231",
+      "date_updated": null,
+      "sid": "MTZZZZ",
+      "enabled": true,
+      "room_sid": "RMXXXX",
+      "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks/MTZZZZ",
+      "date_created": "2019-04-30T12:25:44Z",
+      "publisher_sid": "PAYXYX",
+      "participant_sid": "PAXXXX"
+    },
+    {
+      "kind": "audio",
+      "name": "ec40db11-aeb6-4d88-879a-0870aaa6c994",
+      "date_updated": null,
+      "sid": "MTKKKK",
+      "enabled": true,
+      "room_sid": "RMXXXX",
+      "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks/MTKKKK",
+      "date_created": "2019-04-30T12:25:44Z",
+      "publisher_sid": "PAYXYX",
+      "participant_sid": "PAXXXX"
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks?PageSize=50&Page=0",
+    "next_page_url": null,
+    "key": "subscribed_tracks"
+  }
+}

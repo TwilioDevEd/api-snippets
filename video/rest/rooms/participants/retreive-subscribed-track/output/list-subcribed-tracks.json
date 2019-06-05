@@ -1,0 +1,12 @@
+{
+  "kind": "video",
+  "name": "1f6f07c7-7d02-4f4c-9caa-c7fdd6817d5a",
+  "date_updated": null,
+  "sid": "MTXXXX",
+  "enabled": true,
+  "room_sid": "RMXXXX",
+  "url": "https://video.twilio.com/v1/Rooms/RMXXXX/Participants/PAXXXX/SubscribedTracks/MTXXXX",
+  "date_created": "2019-04-30T12:26:07Z",
+  "publisher_sid": "PAXYXY",
+  "participant_sid": "PAXXXX"
+}

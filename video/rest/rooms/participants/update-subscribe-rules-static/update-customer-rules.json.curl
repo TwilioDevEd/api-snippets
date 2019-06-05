@@ -1,0 +1,4 @@
+curl -X POST 'https://video.twilio.com/v1/Rooms/RMXXXX/Participants/Customer/SubscribeRules' \
+    -u 'SKXXXX:your_api_key_secret' \
+    --data Rules='[{"type": "include", "all": true},{"type": "exclude", "publisher": "Supervisor"}]' \
+    -H "Content-Type: application/x-www-form-urlencoded"
