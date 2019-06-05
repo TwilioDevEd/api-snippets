@@ -22,14 +22,6 @@ public class UpdateRules{
                       + "  {\"type\": \"exclude\", \"publisher\": \"Supervisor\"}"
                       + "]";
 
-      Composition composition = Composition.creator()
-                  .setRoomSid("RMXXXX")
-                  .setAudioSources("*")
-                  .setVideoLayout(new ObjectMapper().readValue(videoLayout, HashMap.class))
-                  .setStatusCallback("http://my.server.org/callbacks")
-                  .setFormat(Format.MP4)
-                  .create();
-
-      System.out.println("Created composition with SID=" + composition.getSid());
+    //This functionality is not available. We are working on it
   }
 }
