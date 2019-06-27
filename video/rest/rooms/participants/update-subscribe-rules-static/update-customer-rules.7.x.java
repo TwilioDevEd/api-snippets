@@ -16,13 +16,25 @@ public class UpdateRules{
       // Initialize the client
       Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
 
-      final String rules =
-                       "["
-                      + "  {\"type\": \"include\", \"all\": true},"
-                      + "  {\"type\": \"exclude\", \"publisher\": \"Supervisor\"}"
-                      + "]";
+      SubscribeRulesUpdate rules = new SubscribeRulesUpdate(Lists.newArrayList(
 
-      //This functionality is not currently available. We are working on it.
+              SubscribeRule.builder()
+              .withType(SubscribeRule.Type.INCLUDE).withAll()
+              .build(),
+
+              SubscribeRule.builder()
+              .withType(SubscribeRule.Type.EXCLUDE).withPublisher("Supervisor")
+              .build()
+          ));
+
+      SubscribeRules result = SubscribeRules
+      .updater("RMXXXX", "Customer")
+      .setRules(new ObjectMapper().convertValue(rules, Map.class))
+      .update();
+
+      System.out.println("Subscribe Rules updated successfully");
+
+
 
   }
 }
