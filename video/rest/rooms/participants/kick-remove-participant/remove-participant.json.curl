@@ -1,0 +1,3 @@
+curl -XPOST 'https://video.twilio.com/v1/Rooms/DailyStandup/Participants/Alice' \
+    -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_key_secret' \
+    -d 'Status=disconnected'

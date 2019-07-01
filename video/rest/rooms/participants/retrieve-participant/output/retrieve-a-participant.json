@@ -1,0 +1,16 @@
+{
+  "status": "connected",
+  "date_updated": "2017-12-13T19:59:12Z",
+  "start_time": "2017-12-13T19:59:12Z",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "duration": null,
+  "url": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "end_time": null,
+  "sid": "PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "room_sid": "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2017-12-13T19:59:12Z",
+  "identity": "Alice",
+  "links": {
+    "published_tracks": "https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Participants/PAXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/PublishedTracks"
+  }
+}
