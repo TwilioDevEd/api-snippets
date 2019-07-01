@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Video.V1;
-using static Twilio.Rest.Video.V1.CompositionResource;
+using static Twilio.Rest.Video.V1.Participant;
 
 class Program
 {
