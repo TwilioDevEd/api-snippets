@@ -1,7 +1,7 @@
 // function called after client init to set up event handlers
 function registerEventHandlers() {
   // Register UserInfo specific event handler
-  chatClient.on('userInfoUpdated', handleUserUpdate(user));
+  chatClient.on('userUpdated', handleUserUpdate(user));
 }
 
 // function to handle any UserInfo updates
