@@ -19,7 +19,8 @@
             "today": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Today.json?Category=calleridlookups"
          }, 
          "description": "Caller ID Lookups", 
-         "end_date": "2012-10-13", 
+         "end_date": "2012-10-13",
+         "as_of": "2012-09-30T21:59:05+00:00",
          "usage_unit": "lookups", 
          "price": "0", 
          "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records.json?Category=calleridlookups&StartDate=2012-08-15&EndDate=2012-10-13", 
@@ -43,7 +44,8 @@
             "today": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Today.json?Category=calls"
          }, 
          "description": "Total Calls", 
-         "end_date": "2012-10-13", 
+         "end_date": "2012-10-13",
+         "as_of": "2012-09-30T21:59:05+00:00",
          "usage_unit": "minutes", 
          "price": "0.38", 
          "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records.json?Category=calls&StartDate=2012-08-15&EndDate=2012-10-13", 
