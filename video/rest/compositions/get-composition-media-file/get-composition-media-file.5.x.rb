@@ -11,7 +11,7 @@ client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 composition_sid = 'CJXXXX'
 
-uri = "https://video.twilio.com/v1/Compositions/#{composition_sid}/Media?Ttl=6000"
+uri = "https://video.twilio.com/v1/Compositions/#{composition_sid}/Media?Ttl=3600"
 
 response = client.request("video.twilio.com", 433, 'GET', uri)
 

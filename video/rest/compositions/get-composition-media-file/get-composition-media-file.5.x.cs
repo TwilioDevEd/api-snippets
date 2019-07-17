@@ -16,7 +16,7 @@ class Example
       const string apiKeySecret = "your_api_key_secret";
 
       const string compositionSid = "CJXXXX";
-      const string uri = $"https://video.twilio.com/v1/Compositions/{compositionSid}/Media";
+      const string uri = $"https://video.twilio.com/v1/Compositions/{compositionSid}/Media?Ttl=3600";
 
       var request = (HttpWebRequest)WebRequest.Create(uri);
       equest.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes(apiKeySid + ":" + apiKeySecret)));

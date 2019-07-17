@@ -25,7 +25,7 @@ public class GetCompositionMedia{
     Request request = new Request(
         HttpMethod.GET,
         Domains.VIDEO.toString(),
-        "/v1/Compositions/" + compositionSid + "/Media?Ttl=6000",
+        "/v1/Compositions/" + compositionSid + "/Media?Ttl=3600",
         restClient.getRegion());
 
     Response response = restClient.request(request);

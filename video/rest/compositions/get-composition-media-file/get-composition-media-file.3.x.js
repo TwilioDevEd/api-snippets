@@ -12,7 +12,7 @@ const request = require('request');
 const client = new Twilio(API_KEY_SID, API_KEY_SECRET, {accountSid: ACCOUNT_SID});
 
 const compositionSid = 'CJXXXX';
-const uri ='https://video.twilio.com/v1/Compositions/' + compositionSid + '/Media?Ttl=6000';
+const uri ='https://video.twilio.com/v1/Compositions/' + compositionSid + '/Media?Ttl=3600';
 
 client.request({
   method: 'GET',
