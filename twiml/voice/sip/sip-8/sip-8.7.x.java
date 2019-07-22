@@ -7,7 +7,7 @@ import com.twilio.twiml.TwiMLException;
 public class Example {
     public static void main(String[] args) {
         Sip sip = new Sip
-            .Builder("sip:kate@example.com?mycustomheader=foo&myotherheader=bar").build();
+            .Builder("sip:kate@example.com?x-mycustomheader=foo&x-myotherheader=bar").build();
         Dial dial = new Dial.Builder().sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 
