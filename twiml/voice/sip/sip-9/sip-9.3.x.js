@@ -13,6 +13,6 @@ const dial = response.dial({
 dial.sip({
     method: 'POST',
     url: '/handle_screening_on_answer'
-}, 'sip:kate@example.com?customheader=foo');
+}, 'sip:kate@example.com?x-customheader=foo');
 
 console.log(response.toString());
