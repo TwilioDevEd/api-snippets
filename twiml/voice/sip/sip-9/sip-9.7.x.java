@@ -6,7 +6,7 @@ import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Sip sip = new Sip.Builder("sip:kate@example.com?customheader=foo")
+        Sip sip = new Sip.Builder("sip:kate@example.com?x-customheader=foo")
             .method(HttpMethod.POST).url("/handle_screening_on_answer").build();
         Dial dial = new Dial.Builder().record(Dial.Record.RECORD_FROM_ANSWER)
             .timeout(10).hangupOnStar(true).callerId("bob").method(HttpMethod
