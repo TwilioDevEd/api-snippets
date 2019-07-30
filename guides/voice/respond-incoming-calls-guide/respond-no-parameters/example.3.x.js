@@ -16,4 +16,9 @@ app.post('/voice', (request, response) => {
 });
 
 // Create an HTTP server and listen for requests on port 3000
-app.listen(3000);
+app.listen(3000, () => {
+  console.log(
+    'Now listening on port 3000. ' +
+    'Be sure to restart when you make code changes!'
+  );
+});
