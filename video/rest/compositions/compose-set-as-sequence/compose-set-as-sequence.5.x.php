@@ -8,8 +8,7 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$composition = $client->video->compositions->create([
-    'roomSid' => 'RMXXXX',
+$composition = $client->video->compositions->create('RMXXXX', [
     'audioSources' => 'teacher-audio-sess-*',
     'videoLayout' =>  array(
                         'sequence' => array (

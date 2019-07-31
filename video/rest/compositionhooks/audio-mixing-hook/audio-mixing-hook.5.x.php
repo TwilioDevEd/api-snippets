@@ -8,11 +8,11 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$compositionHook = $client->video->compositionHooks->create([
-    'friendlyName' => 'MixingAllRoomAudiosHook',
-    'audioSources' => '*',
-    'statusCallback' => 'http://my.server.org/callbacks',
-    'format' => 'mp4'
-]);
+$compositionHook = $client->video->compositionHooks->create(
+    'MixingAllRoomAudiosHook', [
+      'audioSources' => '*',
+      'statusCallback' => 'http://my.server.org/callbacks',
+      'format' => 'mp4'
+    ]);
 
 echo $compositionHook->sid;

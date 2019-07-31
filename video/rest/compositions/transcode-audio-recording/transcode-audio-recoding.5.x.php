@@ -8,8 +8,7 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$composition = $client->video->compositions->create([
-    'roomSid' => 'RMXXXX',
+$composition = $client->video->compositions->create('RMXXXX', [
     'audioSources' => 'RTXXXX',
     'statusCallback' => 'http://my.server.org/callbacks',
     'format' => 'mp4'

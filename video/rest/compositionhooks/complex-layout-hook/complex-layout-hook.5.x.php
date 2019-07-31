@@ -8,10 +8,10 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$compositionHook = $client->video->compositionHooks->create([
-    'friendlyName' => 'MyHookWithComplexVideoLayout',
-    'audioSources' => array('listener-audio', 'presenter-audio'),
-    'videoLayout' =>  array(
+$compositionHook = $client->video->compositionHooks->create(
+    'MyHookWithComplexVideoLayout', [
+      'audioSources' => array('listener-audio', 'presenter-audio'),
+      'videoLayout' =>  array(
                         'main' => array (
                           'z_pos' => 1,
                           'video_sources' => array('screen')
@@ -25,9 +25,9 @@ $compositionHook = $client->video->compositionHooks->create([
                           'video_sources' => array('presenter-cam')
                         )
                       ),
-    'statusCallback' => 'http://my.server.org/callbacks',
-    'resolution' => '1280x720',
-    'format' => 'mp4'
-]);
+      'statusCallback' => 'http://my.server.org/callbacks',
+      'resolution' => '1280x720',
+      'format' => 'mp4'
+    ]);
 
 echo $compositionHook->sid;

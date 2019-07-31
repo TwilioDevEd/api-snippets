@@ -8,8 +8,7 @@ $apiKeySid = "SKXXXX";
 $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$composition = $client->video->compositions->create([
-    'roomSid' => 'RMXXXX',
+$composition = $client->video->compositions->create('RMXXXX', [
     'videoLayout' =>  array(
                         'grid' => array (
                           'max_rows' => 1,

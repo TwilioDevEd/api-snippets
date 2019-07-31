@@ -9,16 +9,16 @@ $apiKeySecret = "your_auth_apiKeySecret";
 $client = new Client($apiKeySid, $apiKeySecret);
 
 $compositionHook = $client->video->compositionHooks('HKXXXX')->update([
-    'friendlyName' => 'MyFirstCompositionHook',
-    'enabled' => false,
-    'audioSources' => '*',
-    'videoLayout' =>  array(
+    'MyFirstCompositionHook', [
+      'enabled' => false,
+      'audioSources' => '*',
+      'videoLayout' =>  array(
                         'grid' => array (
                           'video_sources' => array('*')
                         )
                       ),
-    'statusCallback' => 'http://my.server.org/callbacks',
-    'format' => 'mp4'
-]);
+      'statusCallback' => 'http://my.server.org/callbacks',
+     'format' => 'mp4'
+   ]);
 
 echo $compositionHook->sid;
