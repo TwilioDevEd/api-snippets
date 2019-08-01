@@ -1,3 +1,8 @@
+"""
+There's no need to copy this into your codebase if you're using the official authy-python API Client
+it's provided there as well: `client.one_touch.validate_one_touch_signature(signature, nonce, method, url, params)`
+https://github.com/twilio/authy-python/blob/ab7f208efdae5ac30d7c5bef498a279dfdb102bd/authy/api/resources.py#L500
+"""
 import base64
 import hashlib
 import hmac
