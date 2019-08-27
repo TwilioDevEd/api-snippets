@@ -13,7 +13,7 @@ $token  = "your_auth_token";
 $twilio = new Client($sid, $token);
 
 $verification = $twilio->verify->v2->services("VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-                                   ->verifications("+14159373912")
+                                   ->verifications("+15017122661")
                                    ->update("approved");
 
 print($verification->to);

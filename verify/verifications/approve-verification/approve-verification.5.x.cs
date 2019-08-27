@@ -19,7 +19,7 @@ class Program
         var verification = VerificationResource.Update(
             status: VerificationResource.StatusEnum.Approved,
             pathServiceSid: "VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            pathSid: "+14159373912"
+            pathSid: "+15017122661"
         );
 
         Console.WriteLine(verification.To);

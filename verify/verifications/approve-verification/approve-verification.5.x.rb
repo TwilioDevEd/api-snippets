@@ -10,7 +10,7 @@ auth_token = 'your_auth_token'
 
 verification = @client.verify
                       .services('VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                      .verifications('+14159373912')
+                      .verifications('+15017122661')
                       .update(status: 'approved')
 
 puts verification.to
