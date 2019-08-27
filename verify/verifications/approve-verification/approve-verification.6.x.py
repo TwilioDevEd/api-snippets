@@ -10,7 +10,7 @@ client = Client(account_sid, auth_token)
 
 verification = client.verify \
                      .services('VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                     .verifications('+14159373912') \
+                     .verifications('+15017122661') \
                      .update(status='approved')
 
 print(verification.to)

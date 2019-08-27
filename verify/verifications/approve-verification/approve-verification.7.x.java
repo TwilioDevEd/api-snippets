@@ -13,7 +13,7 @@ public class Example {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Verification verification = Verification.updater(
                 "VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-                "+14159373912",
+                "+15017122661",
                 Verification.Status.APPROVED)
             .update();
 
