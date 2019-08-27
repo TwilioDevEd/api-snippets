@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Twilio\TwiML;
 
 // Start our TwiML response
-$response = new TwiML;
+$response = new TwiML\VoiceResponse();
 
 // Read a message aloud to the caller
 $response->say(
