@@ -3,58 +3,68 @@
  *
  * Verify Authy signature
  *
- * @param    string  $apiKey Authy app API KEY
- * @return   bool
+ * @param    string  $apiKey Authy PRODUCTION API KEY
+ * @return   mixed - array of data from Twilio/Authy or false if verify fails
  *
  */
-function verifyWebhook($apiKey) {
-    // Read the nonce from the request
-    $nonce = $_SERVER['HTTP_X_AUTHY_SIGNATURE_NONCE'];
+function verifyWebhook($apiKey)
+{
+    // Read the nonce, method and URL from the request
+    $nonce  = !empty($_SERVER['HTTP_X_AUTHY_SIGNATURE_NONCE']) ? $_SERVER['HTTP_X_AUTHY_SIGNATURE_NONCE']
+            : '';
     $method = $_SERVER['REQUEST_METHOD'];
-    $proto = isset($_SERVER['HTTPS']) ? "https" : "http";
-    $url = "{$proto}://{$_SERVER[HTTP_HOST]}{$_SERVER[REQUEST_URI]}";
+    $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+    $url = "$scheme://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
-    // get the Json string sent by Authy
-    $json = file_get_contents('php://input');
+    // Get the POSTed data
+    $json    = file_get_contents('php://input');
     $decoded = json_decode($json, true);
-    $normalized = normalizeArray($decoded);
 
-    //  sort the parameters by keys
-    $query = http_build_query($normalized);
-    $exploded = explode('&', $query);
-    sort($exploded);
-    $params = implode('&', $exploded);
+    // Flatten, sort and concatenate the decoded data
+    // Ref: https://www.twilio.com/docs/authy/validation?code-sample=code-sort-the-parameters
+    $flattened = [];
+    flatten($decoded, '', $flattened);
+    sort($flattened);
+    $params = implode('&', $flattened);
 
-    // concatenate all together and separate them by '|'
+    // Concatenate all together and separate them by '|'
     $data = "$nonce|$method|$url|$params";
 
-    // compute the signature
+    // Compute the signature
     $computedSig = base64_encode(hash_hmac('sha256', $data, $apiKey, true));
 
-    // get the authy signature
-    $sig = $_SERVER['HTTP_X_AUTHY_SIGNATURE'];
+    // Get the authy signature, if set, otherwise use an empty string
+    $sig = !empty($_SERVER['HTTP_X_AUTHY_SIGNATURE']) ? $_SERVER['HTTP_X_AUTHY_SIGNATURE']
+            : '';
 
-    // compare the message signature with your calculated signature
-    return hash_equals($computedSig, $sig);
+    // Compare the message signature with you calculated signature
+    return hash_equals($sig, $computedSig) ? $decoded : false;
 }
 
-/**
+/*
+ * Flatten data into an array of strings.  Each string is a key/value pair, URL encoded, with booleans converted to strings
  *
- * Replace boolean values with strings.
- *   In PHP methods like http_build_query converts values from an array
- *   to 0 and 1 integers instead of 'false' and 'true'.
+ * @param array $array data sent from Twilio/Authy
+ * @param string $key array index, used to support nested elements
+ * @param array $flattened - flattened array
  *
- * @param    array  $array Multidimensional array with boolean values
- * @return   array
+ * @return array - flattened array, URL encoded, booleans normalized into strings
  *
+ * This code courtesy of Game Creek Video https://www.gamecreekvideo.com
  */
-function normalizeArray($array) {
-  foreach ($array as &$el) {
-      if (is_bool($el)) {
-        $el = ($el) ? "true" : "false";
-      } elseif (is_array($el)) {
-        $el = normalizeArray($el);
-      }
-  }
-  return $array;
+
+function flatten($array, $key, &$flattened)
+{
+    foreach ($array as $k => $value) {
+        $fkey = ($key === '') ? $k : $key.'['.$k.']';
+        if (is_array($value)) {
+            flatten($value, $fkey, $flattened);
+        } else {
+            if (is_bool($value)) {
+                $value = $value === true ? 'true' : 'false';
+            }
+            $flattened[] = urlencode($fkey).'='.urlencode($value);
+        }
+    }
+    return $flattened;
 }
