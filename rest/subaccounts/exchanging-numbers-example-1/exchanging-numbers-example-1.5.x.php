@@ -1,25 +1,21 @@
 <?php
-// Get the PHP helper library from https://twilio.com/docs/libraries/php
-require_once '/path/to/vendor/autoload.php'; // Loads the library
+
+// Update the path below to your autoload.php,
+// see https://getcomposer.org/doc/01-basic-usage.md
+require_once '/path/to/vendor/autoload.php';
+
 use Twilio\Rest\Client;
 
-// Your Account Sid and Auth Token from twilio.com/user/account
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "your_auth_token";
-$client = new Client($sid, $token);
+// Find your Account Sid and Auth Token at twilio.com/console
+// DANGER! This is insecure. See http://twil.io/secure
+$sid    = "AC00000000000000000000000000000001";
+$token  = "your_auth_token";
+$twilio = new Client($sid, $token);
 
-// In the case you want to transfer numbers between subaccounts, you need to
-// know three things - the account SID of the phone number's current owner,
-// the account SID of the account you'd like to transfer the number to, and
-// the SID of the phone number you'd like to transfer
-$currentNumberOwnerAccountSid = "ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
-$newNumberOwnerAccountSid = "ACzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
-$phoneNumberSid = "PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
+$incoming_phone_number = $twilio->incomingPhoneNumbers("PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                                ->update(array(
+                                             "accountSid" => "AC00000000000000000000000000000002"
+                                         )
+                                );
 
-// Get an object from its sid. If you do not have a sid,
-// check out the list resource examples on this page
-$number = $client->api->accounts($currentNumberOwnerAccountSid)
-    ->incomingPhoneNumbers($phoneNumberSid)
-    ->update(array("accountSid" => $newNumberOwnerAccountSid));
-
-echo $number->phoneNumber;
+print($incoming_phone_number->friendlyName);

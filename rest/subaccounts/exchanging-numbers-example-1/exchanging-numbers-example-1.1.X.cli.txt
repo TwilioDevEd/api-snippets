@@ -1,0 +1,5 @@
+# Install the twilio-cli from https://twil.io/cli
+
+twilio api:core:incoming-phone-numbers:update \
+    --sid PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    --target-account-sid AC00000000000000000000000000000002
