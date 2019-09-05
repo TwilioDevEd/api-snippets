@@ -6,7 +6,7 @@ use Twilio\Rest\Client;
 $account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $auth_token = 'your_auth_token';
 // In production, these should be environment variables. E.g.:
-// $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
+// $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+15017122661";
