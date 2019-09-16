@@ -1,14 +1,16 @@
 // function called after client init to set up event handlers
 function registerEventHandlers() {
-  // Register UserInfo specific event handler
-  chatClient.on('userUpdated', handleUserUpdate(user));
+  user = chatClient.user;
+  // Register User updated event handler
+  user.on('updated', event => handleUserUpdate(event.user, event.updateReasons));
 }
 
-// function to handle any UserInfo updates
-function handleUserUpdate(user) {
-  // handle reachability indicator
-  if (chatClient.reachabilityEnabled) {
-    // call a function which will update the relevant UI elements to show the Reachability state for the User
-    renderUserReachability(user.online, user.notifiable);
-  }
+// function to handle User updates
+function handleUserUpdate(user, updateReasons) {
+  // loop over each reason and check for reachability change
+  updateReasons.forEach(reason =>
+    if (reason == 'online') {
+      //do something
+    }
+  )
 }
