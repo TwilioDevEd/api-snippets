@@ -1,9 +1,19 @@
+
+- (NSString*) createDeviceTokenString:(NSData*) deviceToken {
+    const unsigned char *tokenChars = deviceToken.bytes;
+    
+    NSMutableString *tokenString = [NSMutableString string];
+    for (int i=0; i < deviceToken.length; i++) {
+        NSString *hex = [NSString stringWithFormat:@"%02x", tokenChars[i]];
+        [tokenString appendString:hex];
+    }
+    return tokenString;
+}
+
 -(void) registerDevice:(NSData *) deviceToken identity:(NSString *) identity {
   // Create a POST request to the /register endpoint with device variables to register for Twilio Notifications
-  NSString *deviceTokenString = [[[[deviceToken description]
-                                    stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                                   stringByReplacingOccurrencesOfString: @">" withString: @""]
-                                  stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+  NSString *deviceTokenString = [self createDeviceTokenString:deviceToken];
 
 
   NSURLSession *session = [NSURLSession sharedSession];
