@@ -7,7 +7,7 @@ api_key_secret = "your_api_key_secret"
 client = Client(api_key_sid, api_key_secret)
 
 recording = client.video \
-    .recordings('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .recordings('RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .fetch()
 
 print(recording.type)
