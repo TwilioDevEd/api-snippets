@@ -50,8 +50,8 @@ function verifyCallback(req, apiKey) {
  * @return {number}
  */
 function sortByPropertyOnly(x, y) {
-  const xx = x.split('=');
-  const yy = y.split('=');
+  const xx = x.split('=')[0];
+  const yy = y.split('=')[0];
 
   if (xx < yy) {
     return -1;
