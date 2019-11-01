@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Refer>
+        <Sip>sip:alice@example.com?User-to-User=123456789%3Bencoding%3Dhex</Sip>
+    </Refer>
+</Response>
+

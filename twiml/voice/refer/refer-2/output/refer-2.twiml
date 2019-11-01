@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Refer>
+        <Sip>sip:alice@example.com?X-AcctNumber=123456&amp;X-ReasonForCalling=billing-question</Sip>
+    </Refer>
+</Response>
+

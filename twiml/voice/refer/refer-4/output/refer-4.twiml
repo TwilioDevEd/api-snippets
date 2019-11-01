@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Refer action="/handleRefer" method="POST">
+        <Sip>sip:alice@example.com</Sip>
+    </Refer>
+</Response>
