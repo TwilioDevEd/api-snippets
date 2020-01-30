@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Start>
+        <Stream name="Example Audio Stream" url="wss://mystream.ngrok.io/audiostream" />
+    </Start>
+</Response>

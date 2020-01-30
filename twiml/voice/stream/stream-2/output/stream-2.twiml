@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Response>
+    <Start>
+        <Stream url="wss://mystream.ngrok.io/example">
+            <Parameter name="FirstName" value="Jane" />
+            <Parameter name="LastName" value="Doe" />
+        </Stream>
+    </Start>
+</Response>
