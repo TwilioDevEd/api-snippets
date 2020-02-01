@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Start>
+        <Siprec name="My SIPREC Stream" connectorName="Gridspace_1" />
+    </Start>
+</Response>
