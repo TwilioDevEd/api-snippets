@@ -9,18 +9,17 @@ class Example
     {
         var response = new VoiceResponse();
         var say = new Say("Hi", voice: "Polly.Joanna");
-        say.SsmlBreak(strength: "x-weak", time: "100ms");
-        say.SsmlEmphasis("Words to emphasize", level: "moderate");
-        say.SsmlP("Words to speak");
+        say.Break(strength: "x-weak", time: "100ms");
+        say.Emphasis("Words to emphasize", level: "moderate");
+        say.P("Words to speak");
         say.AddText("aaaaaa");
-        say.SsmlPhoneme("Words to speak", alphabet: "x-sampa", ph: "pɪˈkɑːn");
+        say.Phoneme("Words to speak", alphabet: "x-sampa", ph: "pɪˈkɑːn");
         say.AddText("bbbbbbb");
-        say.SsmlProsody("Words to speak", pitch: "-10%", rate: "85%",
-            volume: "-6dB");
-        say.SsmlS("Words to speak");
-        say.SsmlSayAs("Words to speak", interpretAs: "spell-out");
-        say.SsmlSub("Words to be substituted", alias: "alias");
-        say.SsmlW("Words to speak");
+        say.Prosody("Words to speak", pitch: "-10%", rate: "85%", volume: "-6dB");
+        say.S("Words to speak");
+        say.SayAs("Words to speak", interpretAs: "spell-out", role: "yyyymmdd");
+        say.Sub("Words to be substituted", alias: "alias");
+        say.W("Words to speak");
         response.Append(say);
 
         Console.WriteLine(response.ToString());
