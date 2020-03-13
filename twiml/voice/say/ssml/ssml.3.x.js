@@ -1,36 +1,36 @@
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-
 const response = new VoiceResponse();
 const say = response.say({
     voice: 'Polly.Joanna'
 }, 'Hi');
-say.ssmlBreak({
+say.break_({
     strength: 'x-weak',
     time: '100ms'
 });
-say.ssmlEmphasis({
+say.emphasis({
     level: 'moderate'
 }, 'Words to emphasize');
-say.ssmlP('Words to speak');
+say.p('Words to speak');
 say.addText('aaaaaa')
-say.ssmlPhoneme({
+say.phoneme({
     alphabet: 'x-sampa',
     ph: 'pɪˈkɑːn'
 }, 'Words to speak');
 say.addText('bbbbbbb')
-say.ssmlProsody({
+say.prosody({
     pitch: '-10%',
     rate: '85%',
     volume: '-6dB'
 }, 'Words to speak');
-say.ssmlS('Words to speak');
-say.ssmlSayAs({
-    'interpret-as': 'spell-out'
+say.s('Words to speak');
+say.sayAs({
+    'interpret-as': 'spell-out',
+    role: 'yyyymmdd'
 }, 'Words to speak');
-say.ssmlSub({
+say.sub({
     alias: 'alias'
 }, 'Words to be substituted');
-say.ssmlW('Words to speak');
+say.w('Words to speak');
 
 console.log(response.toString());
