@@ -4,7 +4,7 @@ require_once '/path/to/vendor/autoload.php'; // Loads the library
 
 
 # Start our TwiML response
-$response = new Twilio\TwiML();
+$response = new Twilio\TwiML\VoiceResponse();
 
 # Use <Say> to give the caller some instructions
 $response->say('Hello. Please leave a message and I will transcribe it.');
