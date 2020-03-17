@@ -17,7 +17,7 @@ $name = $people[$_REQUEST['From']] ?: 'Monkey';
 
 $response = new VoiceResponse();
 $response->say("Hello {$name}");
-$response->message("{$name}, thanks for the call!");
+$response->sms("{$name}, thanks for the call!");
 
 header("content-type: text/xml");
 echo $response;
