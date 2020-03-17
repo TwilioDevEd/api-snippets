@@ -3,12 +3,12 @@
 
 // this line loads the library 
 require_once '/path/to/vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 // Update with your own phone number in E.164 format
 $MODERATOR = '+15558675310';
 
-$response = new TwiML;
+$response = new VoiceResponse;
 
 // Start with a <Dial> verb
 $dial = $response->dial();

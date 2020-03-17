@@ -3,8 +3,8 @@
 
 // this line loads the library 
 require_once '/path/to/vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
-$response = new TwiML;
+$response = new VoiceResponse;
 $response->say("hello world!", array('voice' => 'alice'));
 print $response;
