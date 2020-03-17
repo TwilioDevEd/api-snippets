@@ -4,9 +4,9 @@
 // https://www.twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php';
 
-use Twilio\Twiml;
+use Twilio\Twiml\VoiceResponse;
 
-$response = new Twiml();
+$response = new VoiceResponse();
 
 $response->say("You will now be connected to the first caller in the queue.");
 $dial = $response->dial();

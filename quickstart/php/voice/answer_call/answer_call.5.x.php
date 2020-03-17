@@ -1,9 +1,9 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 // Start our TwiML response
-$response = new TwiML;
+$response = new VoiceResponse;
 
 // Read a message aloud to the caller
 $response->say(

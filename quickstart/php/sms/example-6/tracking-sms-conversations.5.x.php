@@ -2,7 +2,7 @@
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
 // following the instructions to install it with Composer.
 require_once "vendor/autoload.php";
-use Twilio\TwiML;
+use Twilio\TwiML\MessagingResponse;
 
 // start the session
 session_start();
@@ -28,7 +28,7 @@ $people = array(
 // otherwise, consider them just another monkey
 $name = $people[$_REQUEST['From']] ?: 'Monkey';
 
-$response = new TwiML();
+$response = new MessagingResponse();
 $response->message("{$name} has messaged {$_REQUEST['To']} {$counter} times");
 
 header("content-type: text/xml");

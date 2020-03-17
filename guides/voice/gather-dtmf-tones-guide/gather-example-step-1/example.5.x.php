@@ -3,10 +3,10 @@
 // HTTP POST to /voice in our application
 require_once '/path/to/vendor/autoload.php';
 
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 // Use the Twilio PHP SDK to build an XML response
-$response = new TwiML();
+$response = new VoiceResponse();
 
 // If the user entered digits, process their request
 if (array_key_exists('Digits', $_POST)) {

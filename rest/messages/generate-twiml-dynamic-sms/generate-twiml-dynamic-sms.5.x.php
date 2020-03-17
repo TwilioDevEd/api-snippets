@@ -2,9 +2,9 @@
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
 
 require_once 'vendor/autoload.php'; // Loads the library
-use Twilio\Twiml;
+use Twilio\Twiml\MessagingResponse;
 
-$response = new Twiml;
+$response = new MessagingResponse;
 $body = $_REQUEST['Body'];
 $default = "I just wanna tell you how I'm feeling - Gotta make you understand";
 $options = [

@@ -3,10 +3,10 @@
 // HTTP POST to /voice in our application
 require_once '/path/to/vendor/autoload.php';
 
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 // Use the Twilio PHP SDK to build an XML response
-$response = new TwiML();
+$response = new VoiceResponse();
 
 // Use the <Gather> verb to collect user input
 $gather = $response->gather(array('numDigits' => 1, 'action' => '/gather'));

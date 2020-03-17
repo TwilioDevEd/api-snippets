@@ -1,10 +1,10 @@
 <?php
 // Include the bundled autoload from the Twilio PHP Helper Library
 require __DIR__ . '/twilio-php-master/src/Twilio/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 // Start our TwiML response
-$response = new TwiML;
+$response = new VoiceResponse;
 
 // Read a message aloud to the caller
 $response->say(

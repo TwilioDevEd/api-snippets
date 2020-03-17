@@ -4,9 +4,9 @@
 // https://www.twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php';
 
-use Twilio\Twiml;
+use Twilio\Twiml\VoiceResponse;
 
-$response = new Twiml();
+$response = new VoiceResponse();
 $response->enqueue('Queue Demo');
 
 echo $response;

@@ -1,10 +1,10 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 $city = $_REQUEST['FromCity'] ?? 'Guayaquil';
 
-$response = new TwiML();
+$response = new VoiceResponse();
 $response->say("Never gonna give you up, {$city}!", array('voice' => 'alice'));
 $response->play("https://demo.twilio.com/docs/classic.mp3");
 

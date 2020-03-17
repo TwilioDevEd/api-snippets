@@ -3,12 +3,12 @@ require 'vendor/autoload.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-use Twilio\TwiML;
+use Twilio\TwiML\VoiceResponse;
 
 $app = new \Slim\App;
 
 $app->post('/voice', function (Request $request, Response $response) {
-    $twiml = new TwiML;
+    $twiml = new VoiceResponse;
     $twiml->say('Hi! I want to know what do you think about coding.');
     $twiml->record(['maxLength' => 10, 'action' => '/recording']);
     $twiml->hangup();
@@ -18,7 +18,7 @@ $app->post('/voice', function (Request $request, Response $response) {
 });
 
 $app->post('/recording', function (Request $request, Response $response) {
-    $twiml = new TwiML;
+    $twiml = new VoiceResponse;
     $body = $request->getParsedBody();
     $recordingUrl = $body['RecordingUrl'];
 
