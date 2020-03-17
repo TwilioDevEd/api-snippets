@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Twilio\TwiML\MessagingResponse;
 use Twilio\TwiML\VoiceResponse;
 
 // Note: $app was changed for $router since Lumen 5.5.0
@@ -19,7 +20,7 @@ $router->post('message', ['middleware' => 'TwilioRequestValidator',
   function(Request $request) {
     $bodyLength = strlen($request->input('Body'));
 
-    $twiml = new VoiceResponse();
+    $twiml = new MessagingResponse();
     $twiml->message("Your text to me was $bodyLength characters long. ".
                     "Webhooks are neat :)");
 
