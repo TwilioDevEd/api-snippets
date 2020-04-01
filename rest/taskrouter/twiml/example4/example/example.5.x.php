@@ -6,11 +6,10 @@ use Twilio\Twiml\VoiceResponse;
 
 $response = new VoiceResponse();
 $response->enqueue(
-    array(
-        'workflowSid' => 'WW0123456789abcdef0123456789abcdef',
+    null,
+    ['workflowSid' => 'WW0123456789abcdef0123456789abcdef',
         'waitUrl' => '/hold_music.php',
-        'action' => '/post_bridge_survey.php'
-    )
+        'action' => '/post_bridge_survey.php']
 )->task("{'account_number':'12345abcdef'}");
 
 print $response;

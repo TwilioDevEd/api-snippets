@@ -5,7 +5,7 @@ require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Twiml\VoiceResponse;
 
 $response = new VoiceResponse();
-$response->enqueue(null, array('workflowSid' => 'WW0123456789abcdef0123456789abcdef'));
+$response->enqueue(null, ['workflowSid' => 'WW0123456789abcdef0123456789abcdef']);
 print $response;
 ?>
 
