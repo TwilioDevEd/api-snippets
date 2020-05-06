@@ -12,7 +12,7 @@ namespace ValidateRequestExample.Filters
     {
         private readonly RequestValidator _requestValidator;
 
-        public ValidateTwilioRequestAttributeRequestAttribute()
+        public ValidateTwilioRequestAttribute()
         {
             var authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
             _requestValidator = new RequestValidator(authToken);
