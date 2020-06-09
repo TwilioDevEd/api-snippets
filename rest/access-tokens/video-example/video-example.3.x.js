@@ -15,9 +15,13 @@ const videoGrant = new VideoGrant({
 
 // Create an access token which we will sign and return to the client,
 // containing the grant we just created
-const token = new AccessToken(twilioAccountSid, twilioApiKey, twilioApiSecret);
+const token = new AccessToken(
+  twilioAccountSid,
+  twilioApiKey,
+  twilioApiSecret,
+  {identity: identity}
+);
 token.addGrant(videoGrant);
-token.identity = identity;
 
 // Serialize the token to a JWT string
 console.log(token.toJwt());
