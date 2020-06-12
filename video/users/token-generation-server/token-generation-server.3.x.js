@@ -20,11 +20,9 @@ app.get('/token', (request, response) => {
   const token = new AccessToken(
     process.env.TWILIO_ACCOUNT_SID,
     process.env.TWILIO_API_KEY,
-    process.env.TWILIO_API_SECRET
+    process.env.TWILIO_API_SECRET,
+    {identity: identity}
   );
-
-  // Assign the generated identity to the token.
-  token.identity = identity;
 
   // Grant access to Video.
   const grant = new VideoGrant();
