@@ -9,7 +9,7 @@ chatClient.getChannelBySid(channelSid).then(function(channel) {
       // log media properties
       console.log('Media attributes', message.media);
       // get media temporary URL for displaying/fetching
-      message.media.getContentUrl().then(function(url) {
+      message.media.getContentTemporaryUrl().then(function(url) {
         // log media temporary URL
         console.log('Media temporary URL is ' + url);
       });
