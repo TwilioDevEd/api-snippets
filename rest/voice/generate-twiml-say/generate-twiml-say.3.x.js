@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-app.get('/', (req, res) => {
+app.all('/', (req, res) => {
   // Create TwiML response
   const twiml = new VoiceResponse();
 
