@@ -1,6 +1,6 @@
 <?php
 // Include the bundled autoload from the Twilio PHP Helper Library
-require __DIR__ . '/twilio-php-master/src/Twilio/autoload.php';
+require __DIR__ . '/twilio-php-main/src/Twilio/autoload.php';
 use Twilio\TwiML\MessagingResponse;
 // Set the content-type to XML to send back TwiML from the PHP Helper Library
 header("content-type: text/xml");
