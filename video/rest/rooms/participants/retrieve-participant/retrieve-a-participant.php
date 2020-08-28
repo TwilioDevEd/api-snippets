@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from twilio.com/docs/php/install
-require __DIR__ . '/twilio-php-master/Twilio/autoload.php';  // Loads the library
+require __DIR__ . '/twilio-php-main/Twilio/autoload.php';  // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/console
