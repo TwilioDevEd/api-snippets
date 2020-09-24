@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // Get twilio-node from twilio.com/docs/libraries/node
 const webhooks = require('twilio/lib/webhooks/webhooks');
 const request = require('request');
