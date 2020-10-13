@@ -5,8 +5,9 @@ const taskrouter = require('twilio').jwt.taskrouter;
 const TaskRouterCapability = taskrouter.TaskRouterCapability;
 const Policy = TaskRouterCapability.Policy;
 
-const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const authToken = 'your_auth_token';
+// To set up environmental variables, see http://twil.io/secure
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const taskqueueSid = 'WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 

@@ -2,12 +2,13 @@ const AccessToken = require('twilio').jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
 // Used when generating any kind of tokens
-const twilioAccountSid = 'ACxxxxxxxxxx';
-const twilioApiKey = 'SKxxxxxxxxxx';
-const twilioApiSecret = 'xxxxxxxxxxxx';
+// To set up environmental variables, see http://twil.io/secure
+const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+const twilioApiKey = process.env.TWILIO_API_KEY;
+const twilioApiSecret = process.env.TWILIO_API_SECRET;
 
 // Used specifically for creating Chat tokens
-const serviceSid = 'ISxxxxxxxxxxxxx';
+const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 const identity = 'user@example.com';
 
 // Create a "grant" which enables a client to use Chat as a given user,

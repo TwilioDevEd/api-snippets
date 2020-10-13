@@ -1,10 +1,9 @@
 const twilio = require('twilio');
 
-const myAccountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; // Your Account SID from www.twilio.com/console
-const apiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; // You can generate this from www.twilio.com/console/runtime/api-keys/create
-const apiSecret = 'your_api_secret'; // You can generate this from www.twilio.com/console/runtime/api-keys/create
+const myAccountSid = process.env.TWILIO_ACCOUNT_SID; // Your Account SID from www.twilio.com/console
+const apiKey = process.env.TWILIO_API_KEY; // You can generate this from www.twilio.com/console/runtime/api-keys/create
+const apiSecret = process.env.TWILIO_API_SECRET; // You can generate this from www.twilio.com/console/runtime/api-keys/create
 
-// DANGER! This is insecure. See http://twil.io/secure
 const client = twilio(apiKey, apiSecret, { accountSid: myAccountSid });
 
 // Proof request to check credentials are working.

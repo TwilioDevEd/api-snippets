@@ -3,7 +3,7 @@
 // https://www.twilio.com/docs/libraries/node
 var apiKeySid = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var apiKeySecret = 'your_api_key_secret';
-var accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var accountSid = process.env.TWILIO_ACCOUNT_SID;
 var Twilio = require('twilio');
 
 var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});

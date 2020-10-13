@@ -5,7 +5,8 @@ const Twilio = require("twilio");
 
 const apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 const apiKeySecret = "your_api_key_secret";
-const accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// To set up environmental variables, see http://twil.io/secure
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
 const roomSid = "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";

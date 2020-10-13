@@ -1,9 +1,10 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These identifiers are your accountSid and authToken from
 // https://www.twilio.com/console
-const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const apiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const apiSecret = 'your_api_secret';
+// To set up environmental variables, see http://twil.io/secure
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const apiKey = process.env.TWILIO_API_KEY;;
+const apiSecret = process.env.TWILIO_API_SECRET;
 const client = require('twilio')(apiKey, apiSecret, { accountSid: accountSid });
 
 // Create a message for your account (send an outbound SMS)

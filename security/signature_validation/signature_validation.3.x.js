@@ -2,7 +2,7 @@
 const client = require('twilio');
 
 // Your Auth Token from twilio.com/console
-const authToken = '12345';
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 
 // The Twilio request URL
 const url = 'https://mycompany.com/myapp.php?foo=1&bar=2';
