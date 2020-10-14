@@ -15,8 +15,8 @@ public class Example {
 
         ResourceSet<Daily> records = Daily.reader()
                 .setCategory(Daily.Category.CALLS_INBOUND)
-                .setStartDate(new LocalDate.of(2012, 9, 1))
-                .setEndDate(new LocalDate.of(2012, 9, 30))
+                .setStartDate(LocalDate.of(2012, 9, 1))
+                .setEndDate(LocalDate.of(2012, 9, 30))
                 .read();
 
         // Loop over records and print out a property for each one.
