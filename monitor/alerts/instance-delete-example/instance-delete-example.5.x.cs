@@ -8,8 +8,9 @@ public class Example
     public static void Main(string[] args)
     {
         // Find your Account SID and Auth Token at twilio.com/console
-        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string authToken = "your_auth_token";
+        // To set up environmental variables, see http://twil.io/secure
+        const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
         const string alertSid = "NO5a7a84730f529f0a76b3e30c01315d1a";
 
         TwilioClient.Init(accountSid, authToken);

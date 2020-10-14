@@ -11,8 +11,9 @@ namespace Quickstart
         static void Main(string[] args)
         {
             // Set our Account SID and Auth Token
-            const string accountSid = "ACcace8ef80331044824b975feabebc5a7";
-            const string authToken = "your_auth_token";
+            // To set up environmental variables, see http://twil.io/secure
+            const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+            const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
             // Initialize the Twilio client
             TwilioClient.Init(accountSid, authToken);

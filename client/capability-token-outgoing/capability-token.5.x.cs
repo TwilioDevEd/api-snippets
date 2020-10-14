@@ -1,6 +1,7 @@
 // In Package Manager, run:
 // Install-Package Twilio.Client -Pre
 
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Twilio.Jwt;
@@ -12,11 +13,12 @@ public class TokenController : Controller
     public ActionResult Index()
     {
         // Put your Twilio API credentials here
-        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string authToken = "your_auth_token";
+        // To set up environmental variables, see http://twil.io/secure
+        const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
         // Put your Twilio Application SID here
-        const string appSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string appSid = Environment.GetEnvironmentVariable("TWILIO_APP_SID");
 
         var scopes = new HashSet<IScope>
         {

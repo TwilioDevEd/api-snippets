@@ -5,14 +5,14 @@ using Twilio;
 using Twilio.Rest.Verify.V2.Service;
 
 
-class Program 
+class Program
 {
     static void Main(string[] args)
     {
         // Find your Account Sid and Token at twilio.com/console
-        // DANGER! This is insecure. See http://twil.io/secure
-        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string authToken = "your_auth_token";
+        // To set up environmental variables, see http://twil.io/secure
+        const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
         TwilioClient.Init(accountSid, authToken);
 

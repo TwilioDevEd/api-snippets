@@ -9,7 +9,7 @@ class Example
     static void Main(string[] args)
     {
         // Your Auth Token from twilio.com/console
-        const string authToken = "12345";
+        const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
         // Initialize the validator
         var validator = new RequestValidator(authToken);

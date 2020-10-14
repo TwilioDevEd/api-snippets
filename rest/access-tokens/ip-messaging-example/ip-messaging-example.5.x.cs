@@ -7,12 +7,13 @@ class Example
     static void Main(string[] args)
     {
         // These values are necessary for any access token
-        const string twilioAccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string twilioApiKey = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        const string twilioApiSecret = "your_secret";
+        // To set up environmental variables, see http://twil.io/secure
+        const string twilioAccountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string twilioApiKey = Environment.GetEnvironmentVariable("TWILIO_API_KEY");
+        const string twilioApiSecret = Environment.GetEnvironmentVariable("TWILIO_API_SECRET");
 
         // These are specific to Chat
-        const string serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        const string serviceSid = Environment.GetEnvironmentVariable("TWILIO_SERVICE_SID");
         const string identity = "user@example.com";
 
         // Create an Chat grant for this token

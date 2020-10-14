@@ -7,7 +7,7 @@ const app = express();
 app.get('/token', (req, res) => {
   // put your Twilio API credentials here
   // To set up environmental variables, see http://twil.io/secure
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
   const authToken = process.env.TWILIO_AUTH_TOKEN;
 
   // put your Twilio Application Sid here

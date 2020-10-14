@@ -7,8 +7,9 @@ class Example
   static void Main(string[] args)
   {
     // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "your_auth_token";
+    // To set up environmental variables, see http://twil.io/secure
+    string AccountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+    string AuthToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
     string WorkspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     string WorkerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 

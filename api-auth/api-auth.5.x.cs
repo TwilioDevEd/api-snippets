@@ -7,11 +7,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // Your Account Sid from twilio.com/user/account
-        const string apiKey = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // You can generate this from www.twilio.com/console/runtime/api-keys/create
-        const string apiSecret = "your_api_secret"; // You can generate this from www.twilio.com/console/runtime/api-keys/create
+        // To set up environmental variables, see http://twil.io/secure
+        const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string apiKey = Environment.GetEnvironmentVariable("TWILIO_API_KEY"); // You can generate this from www.twilio.com/console/runtime/api-keys/create
+        const string apiSecret = Environment.GetEnvironmentVariable("TWILIO_API_SECRET"); // You can generate this from www.twilio.com/console/runtime/api-keys/create
 
-        // DANGER! This is insecure. See http://twil.io/secure
         TwilioClient.Init(apiKey, apiSecret, accountSid);
 
         // Proof request to check credentials are working.
