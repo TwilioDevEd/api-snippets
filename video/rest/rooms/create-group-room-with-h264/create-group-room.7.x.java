@@ -3,9 +3,10 @@ import com.twilio.rest.video.v1.Room;
 import com.twilio.rest.video.v1.Room.RoomType;
 
 public class Example {
-    // Find your Account Sid and Token at twilio.com/console
-    public static final String API_KEY_SID = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    public static final String API_KEY_SECRET = "your_api_key_secret";
+    // Get your Account SID and Auth Token from https://twilio.com/console
+    // To set up environment variables, see http://twil.io/secure
+    public static final String API_KEY_SID = System.getenv("TWILIO_API_KEY_SID");;
+    public static final String API_KEY_SECRET = System.getenv("TWILIO_API_KEY_SECRET");
 
     public static void main(String args[]) {
         // Initialize the client

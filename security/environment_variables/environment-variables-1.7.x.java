@@ -2,7 +2,8 @@
 import com.twilio.Twilio;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
   public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
   public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
