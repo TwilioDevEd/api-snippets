@@ -7,9 +7,10 @@ import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.type.PhoneNumber;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String SUBACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String SUBACCOUNT_AUTH_TOKEN = "your_auth_token";
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
+  public static final String SUBACCOUNT_SID = System.getenv("TWILIO_SUBACCOUNT_SID");
+  public static final String SUBACCOUNT_AUTH_TOKEN = System.getenv("TWILIO_SUBACCOUNT_AUTH_TOKEN");
 
   public static void main(String[] args) throws URISyntaxException {
     Twilio.init(SUBACCOUNT_SID, SUBACCOUNT_AUTH_TOKEN);

@@ -12,8 +12,10 @@ import com.twilio.jwt.client.Scope;
 
 public class TwilioServlet extends HttpServlet {
 
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
+  public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+  public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     List<Scope> scopes = Lists.newArrayList(new IncomingClientScope("joey"));

@@ -5,14 +5,15 @@ import com.twilio.Twilio;
 import com.twilio.rest.chat.v2.Service;
 
 public class Example {
-    // Find your Account Sid at https://www.twilio.com/console/account/settings
-    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    // Get your Account SID from https://twilio.com/console
+    // To set up environment variables, see http://twil.io/secure
+    public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
     // Create an API Key and Secret at https://www.twilio.com/console/chat/dev-tools/api-keys
-    public static final String API_KEY = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    public static final String API_SECRET = "your_api_secret";
+    public static final String API_KEY = System.getenv("TWILIO_API_KEY");
+    public static final String API_SECRET = System.getenv("TWILIO_API_SECRET");
 
     // Your Chat Service SID from https://www.twilio.com/console/chat/services
-    public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    public static final String SERVICE_SID = System.getenv("TWILIO_SERVICE_SID");
 
     public static void main(String[] args) {
         // Authenticate with Twilio

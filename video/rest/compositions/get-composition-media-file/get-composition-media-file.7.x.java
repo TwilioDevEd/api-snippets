@@ -6,8 +6,9 @@ import com.twilio.rest.video.v1.Composition.Format;
 public class GetCompositionMedia{
 
   // Find your credentials at twilio.com/console
-  public static final String API_KEY_SID = "SKXXXX";
-  public static final String API_KEY_SECRET = "your_api_key_secret";
+  // To set up environment variables, see http://twil.io/secure
+  public static final String API_KEY_SID = System.getenv("TWILIO_API_KEY_SID");
+  public static final String API_KEY_SECRET = System.getenv("TWILIO_API_KEY_SECRET");
 
   public static void main( String[] args ) throws IOException{
     // Disable HttpClient follow redirect by default

@@ -5,9 +5,10 @@ import java.util.Arrays;
 import java.net.URI;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
-  private static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  private static final String AUTH_TOKEN = "your_auth_token";
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
+  private static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+  private static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
   private static final String WORKSPACE_SID = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String TASK_SID = "WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   private static final String RESERVATION_SID = "WRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";

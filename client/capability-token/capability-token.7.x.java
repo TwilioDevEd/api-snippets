@@ -13,14 +13,15 @@ import com.twilio.jwt.client.Scope;
 
 public class TwilioServlet extends HttpServlet {
 
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
+  public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+  public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
+  // Find an application Sid from twilio.com/user/account/apps
+  public static final String APP_SID = System.getenv("TWILIO_APP_SID");
 
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // Find an application Sid from twilio.com/user/account/apps
-    String applicationSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-
-    OutgoingClientScope outgoingScope = new OutgoingClientScope.Builder(applicationSid).build();
+    OutgoingClientScope outgoingScope = new OutgoingClientScope.Builder(APP_SID).build();
     IncomingClientScope incomingScope = new IncomingClientScope("joey");
 
     List<Scope> scopes = Lists.newArrayList(outgoingScope, incomingScope);

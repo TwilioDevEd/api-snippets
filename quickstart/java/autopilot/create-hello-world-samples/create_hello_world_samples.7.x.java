@@ -4,8 +4,8 @@ import com.twilio.rest.autopilot.v1.assistant.task.Sample;
 
 public class Example {
     // Your Account Sid and Auth Token from twilio.com/console
-    public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    public static final String AUTH_TOKEN = "your_auth_token";
+    public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+    public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
     public static String[] phrases = {
         "hello",
