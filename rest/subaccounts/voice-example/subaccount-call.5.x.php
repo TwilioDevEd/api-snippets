@@ -4,8 +4,9 @@ require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$sAsid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$sAtoken = "your_auth_token";
+// To set up environmental variables, see http://twil.io/secure
+$sAsid = getenv('TWILIO_ACCOUNT_SID');
+$sAtoken = getenv('TWILIO_AUTH_TOKEN');
 $sAClient = new Client($sAsid, $sAtoken);
 
 $sAClient->calls->create(

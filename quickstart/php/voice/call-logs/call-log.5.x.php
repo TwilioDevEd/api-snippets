@@ -10,8 +10,9 @@
     use Twilio\Rest\Client;
     
     // Step 2: Set our AccountSid and AuthToken from https://twilio.com/console
-    $AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    $AuthToken = "your_auth_token";
+// To set up environmental variables, see http://twil.io/secure
+    $AccountSid = getenv('TWILIO_ACCOUNT_SID');
+    $AuthToken = getenv('TWILIO_AUTH_TOKEN');
 
     // Step 3: Instantiate a new Twilio Rest Client
     $client = new Client($AccountSid, $AuthToken);

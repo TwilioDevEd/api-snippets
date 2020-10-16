@@ -5,9 +5,10 @@ use Twilio\Rest\Client;
 
 /// Instantiate a client using your API key and secret - but then, you'll need to
 // manually specify your main account (or subaccount) SID when making a request
-$accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$apiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$apiSecret = 'your_api_secret';
+// To set up environmental variables, see http://twil.io/secure
+$accountSid = getenv('TWILIO_ACCOUNT_SID');
+$apiKey = getenv('TWILIO_API_KEY');
+$apiSecret = getenv('TWILIO_API_KEY_SECRET');
 $client = new Client($apiKey, $apiSecret, $accountSid);
 
 // Send a message for the main account

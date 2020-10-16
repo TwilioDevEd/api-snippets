@@ -5,9 +5,10 @@ use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VoiceGrant;
 
 // Required for all Twilio access tokens
-$twilioAccountSid = 'ACxxxxxxxxxxxx';
-$twilioApiKey = 'SKxxxxxxxxxxxx';
-$twilioApiSecret = 'xxxxxxxxxxxxxx';
+// To set up environmental variables, see http://twil.io/secure
+$twilioAccountSid = getenv('TWILIO_ACCOUNT_SID');
+$twilioApiKey = getenv('TWILIO_API_KEY');
+$twilioApiSecret = getenv('TWILIO_API_KEY_SECRET');
 
 // Required for Voice grant
 $outgoingApplicationSid = 'APxxxxxxxxxxxx';

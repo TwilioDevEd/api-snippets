@@ -5,8 +5,9 @@ require_once "vendor/autoload.php";
 use Twilio\Rest\Client;
 
 // put your Twilio API credentials here
-$accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$authToken  = 'your_auth_token';
+// To set up environmental variables, see http://twil.io/secure
+$accountSid = getenv('TWILIO_ACCOUNT_SID');
+$authToken  = getenv('TWILIO_AUTH_TOKEN');
 
 $workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $taskSid = 'WTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';

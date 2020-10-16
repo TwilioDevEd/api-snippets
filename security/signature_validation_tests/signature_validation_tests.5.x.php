@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
 // Your auth token from twilio.com/user/account
+// To set up environmental variables, see http://twil.io/secure
 $token = getenv('TWILIO_AUTH_TOKEN');
 
 // Initialize the validator
