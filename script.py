@@ -93,14 +93,25 @@ def add_comment(file_ext, comment_char, condition):
 
 if __name__ == "__main__":
     # cs_fix()
-    replace_placeholders('.php', {
-        r'[\'\"]AC[Xx].+[\'\"]': 'getenv(\'TWILIO_ACCOUNT_SID\')',
-        r'[\'\"]your_auth_token[\'\"]': 'getenv(\'TWILIO_AUTH_TOKEN\')',
-        r'[\'\"]SK[Xx].+[\'\"]': 'getenv(\'TWILIO_API_KEY\')',
-        r'[\'\"]your_auth_apiKeySecret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
-        r'[\'\"]your_api_key_secret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
-        r'[\'\"]your_api_secret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
-        r'[\'\"]YOUR_API_SECRET[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
-        r'[\'\"]xxx.*[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')'
+    # replace_placeholders('.php', {
+    #     r'[\'\"]AC[Xx].+[\'\"]': 'getenv(\'TWILIO_ACCOUNT_SID\')',
+    #     r'[\'\"]your_auth_token[\'\"]': 'getenv(\'TWILIO_AUTH_TOKEN\')',
+    #     r'[\'\"]SK[Xx].+[\'\"]': 'getenv(\'TWILIO_API_KEY\')',
+    #     r'[\'\"]your_auth_apiKeySecret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
+    #     r'[\'\"]your_api_key_secret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
+    #     r'[\'\"]your_api_secret[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
+    #     r'[\'\"]YOUR_API_SECRET[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')',
+    #     r'[\'\"]xxx.*[\'\"]': 'getenv(\'TWILIO_API_KEY_SECRET\')'
+    # })
+    # add_comment('.php', '//', 'getenv')
+    replace_placeholders('.rb', {
+        r'[\'\"]AC[Xx].+[\'\"]': 'ENV[\'TWILIO_ACCOUNT_SID\']',
+        r'[\'\"]your_auth_token[\'\"]': 'ENV[\'TWILIO_AUTH_TOKEN\']',
+        r'[\'\"]SK[Xx].+[\'\"]': 'ENV[\'TWILIO_API_KEY\']',
+        r'[\'\"]your_auth_apiKeySecret[\'\"]': 'ENV[\'TWILIO_API_KEY_SECRET\']',
+        r'[\'\"]your_api_key_secret[\'\"]': 'ENV[\'TWILIO_API_KEY_SECRET\']',
+        r'[\'\"]your_api_secret[\'\"]': 'ENV[\'TWILIO_API_KEY_SECRET\']',
+        r'[\'\"]YOUR_API_SECRET[\'\"]': 'ENV[\'TWILIO_API_KEY_SECRET\']',
+        r'[\'\"]xxx.*[\'\"]': 'ENV[\'TWILIO_API_KEY_SECRET\']'
     })
-    add_comment('.php', '//', 'getenv')
+    add_comment('.rb', '#', 'ENV')

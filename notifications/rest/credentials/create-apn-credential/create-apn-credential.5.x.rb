@@ -2,8 +2,9 @@
 require 'twilio-ruby'
 
 # Get your Account Sid and Auth Token from https://www.twilio.com/console
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = 'your_auth_token'
+# To set up environmental variables, see http://twil.io/secure
+account_sid = ENV['TWILIO_ACCOUNT_SID']
+auth_token = ENV['TWILIO_AUTH_TOKEN']
 certificate_from_file = 'certificate_contents'
 private_key_from_file = 'private_key_contents'
 

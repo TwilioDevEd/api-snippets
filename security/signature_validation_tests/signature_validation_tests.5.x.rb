@@ -4,6 +4,7 @@ require 'twilio-ruby'
 require 'httparty'
 
 # Get your Auth Token from https://www.twilio.com/console
+# To set up environmental variables, see http://twil.io/secure
 auth_token = ENV['TWILIO_AUTH_TOKEN']
 @validator = Twilio::Security::RequestValidator.new(auth_token)
 

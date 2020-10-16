@@ -41,6 +41,7 @@ module Model
 
     def get_valid_server_languages(test_model)
       server_languages = []
+# To set up environmental variables, see http://twil.io/secure
       snippet_languages = ENV['SNIPPET_LANGUAGE']
 
       allowed_languages = LANGUAGES.reject do |key|
