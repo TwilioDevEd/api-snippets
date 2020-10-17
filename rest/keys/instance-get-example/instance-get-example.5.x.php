@@ -6,13 +6,14 @@ use Twilio\Rest\Client;
 // Your Account Sid and Auth Token from twilio.com/user/account
 // To set up environmental variables, see http://twil.io/secure
 $sid = getenv('TWILIO_ACCOUNT_SID');
+$sub_account_sid = getenv('TWILIO_SUBACCOUNT_SID');
 $token = getenv('TWILIO_AUTH_TOKEN');
 $client = new Client($sid, $token);
 
 // Get an object from its sid. If you do not have a sid,
 // check out the list resource examples on this page
 $key = $client
-    ->keys("SK2a0747eba6abf96b7e3c3ff0b4530f6e")
+    ->keys($sub_account_sid)
     ->fetch();
 
 echo $key->friendlyName;
