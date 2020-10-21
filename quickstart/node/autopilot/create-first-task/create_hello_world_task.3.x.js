@@ -1,8 +1,9 @@
 // Download the helper library from https://www.twilio.com/docs/node/install
 
 // Your Account Sid and Auth Token from twilio.com/console
-const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-const authToken = 'your_auth_token';
+// To set up environmental variables, see http://twil.io/secure
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 // Build task actions that say something and listens for a repsonse.

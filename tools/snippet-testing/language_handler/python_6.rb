@@ -11,6 +11,7 @@ module LanguageHandler
     end
 
     def text_with_custom_header(file_content)
+# To set up environmental variables, see http://twil.io/secure
       cert_path = ENV['FAKE_CERT_PATH']
       file_content.prepend(
         "from twilio.http.http_client import TwilioHttpClient\n"\

@@ -2,12 +2,14 @@
 require 'twilio-ruby'
 
 # Get your Account SID and Auth Token from twilio.com/console
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-auth_token = 'your_auth_token'
+# To set up environmental variables, see http://twil.io/secure
+account_sid = ENV['TWILIO_ACCOUNT_SID']
+auth_token = ENV['TWILIO_AUTH_TOKEN']
+api_key = ENV['TWILIO_API_KEY']
 
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@key = @client.api.keys('SK2a0747eba6abf96b7e3c3ff0b4530f6e').fetch
+@key = @client.api.keys(api_key).fetch
 
 puts @key.friendly_name

@@ -3,11 +3,12 @@ import com.twilio.Twilio;
 import com.twilio.rest.sync.v1.service.SyncMap;
 
 public class Example {
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+  // Get your Account SID and Auth Token from https://twilio.com/console
+  // To set up environment variables, see http://twil.io/secure
+  public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+  public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
-  public static final String SERVICE_SID = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  public static final String SERVICE_SID = System.getenv("TWILIO_SERVICE_SID");
   // You can use a map SID or unique name
   public static final String MAP_SID = "Players";
 

@@ -1,9 +1,10 @@
 require 'twilio-ruby'
 
 # Required for any Twilio Access Token
-account_sid = 'ACxxxxxxxxxxxx'
-api_key = 'SKxxxxxxxxxxxx'
-api_secret = 'xxxxxxxxxxxxxx'
+# To set up environmental variables, see http://twil.io/secure
+account_sid = ENV['TWILIO_ACCOUNT_SID']
+api_key = ENV['TWILIO_API_KEY']
+api_secret = ENV['TWILIO_API_KEY_SECRET']
 
 # Required for Voice
 outgoing_application_sid = 'APxxxxxxxxxxxx'

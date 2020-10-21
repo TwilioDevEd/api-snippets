@@ -8,6 +8,7 @@ import os
 
 # Your Auth Token from twilio.com/user/account saved as an environment variable
 # Remember never to hard code your auth token in code, browser Javascript, or distribute it in mobile apps
+# To set up environmental variables, see http://twil.io/secure
 auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
 validator = RequestValidator(auth_token)
 

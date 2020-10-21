@@ -1,9 +1,11 @@
 # Download the Python helper library from twilio.com/docs/python/install
+import os
 from twilio.rest import Client
 
 # Find your credentials at twilio.com/console
-api_key_sid = 'SKXXXX'
-api_key_secret = 'your_api_key_secret'
+# To set up environmental variables, see http://twil.io/secure
+api_key_sid = os.environ['TWILIO_API_KEY']
+api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 compositionHook = client.video.compositionHooks.create(

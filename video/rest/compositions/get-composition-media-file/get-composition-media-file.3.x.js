@@ -2,9 +2,10 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/node
 
-const apiKeySid = "SKXXXX";
-const apiKeySecret = "your_api_key_secret";
-const accountSid = "ACXXXX";
+// To set up environmental variables, see http://twil.io/secure
+const apiKeySid = process.env.TWILIO_API_KEY;
+const apiKeySecret = process.env.TWILIO_API_KEY_SECRET;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
 
 const Twilio = require("twilio");
 

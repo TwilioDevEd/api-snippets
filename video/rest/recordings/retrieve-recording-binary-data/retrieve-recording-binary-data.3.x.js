@@ -3,9 +3,10 @@
 // https://www.twilio.com/docs/libraries/node
 const Twilio = require("twilio");
 
-const apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-const apiKeySecret = "your_api_key_secret";
-const accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// To set up environmental variables, see http://twil.io/secure
+const apiKeySid = process.env.TWILIO_API_KEY;
+const apiKeySecret = process.env.TWILIO_API_KEY_SECRET;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const client = new Twilio(apiKeySid, apiKeySecret, { accountSid: accountSid });
 
 const recordingSid = "RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";

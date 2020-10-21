@@ -3,8 +3,9 @@ require 'rubygems'
 require 'twilio-ruby'
 
 # Find your credentials at twilio.com/console
-api_key_sid = 'SKXXXX'
-api_key_secret = 'your_api_key_secret'
+# To set up environmental variables, see http://twil.io/secure
+api_key_sid = ENV['TWILIO_API_KEY']
+api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 

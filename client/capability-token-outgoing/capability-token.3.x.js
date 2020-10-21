@@ -6,11 +6,12 @@ const app = express();
 
 app.get('/token', (req, res) => {
   // put your Twilio API credentials here
-  const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-  const authToken = 'your_auth_token';
+  // To set up environmental variables, see http://twil.io/secure
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
 
   // put your Twilio Application Sid here
-  const appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const appSid = process.env.TWILIO_APP_SID;
 
   const capability = new ClientCapability({
     accountSid: accountSid,

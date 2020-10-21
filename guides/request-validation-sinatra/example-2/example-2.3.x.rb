@@ -9,6 +9,7 @@ require 'sinatra'
 require 'twilio-ruby'
 require 'rack'
 
+# To set up environmental variables, see http://twil.io/secure
 use Rack::TwilioWebhookAuthentication, ENV['TWILIO_AUTH_TOKEN'], '/'
 
 post '/' do

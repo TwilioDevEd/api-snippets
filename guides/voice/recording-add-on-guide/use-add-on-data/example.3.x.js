@@ -35,8 +35,9 @@ app.post('/callback', (req, res) => {
   }
 
   const payloadUrl = addOns.results.ibm_watson_speechtotext.payload[0].url
+  // To set up environmental variables, see http://twil.io/secure
   const accountSID = process.env.TWILIO_ACCOUNT_SID
-  const authToken = process.env.TWILIO_AUTH_TOKEN
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
 
   axios.get(payloadUrl, {auth: {username: accountSID, password: authToken}})
     .then(response => {

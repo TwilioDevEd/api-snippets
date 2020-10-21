@@ -1,8 +1,10 @@
+import os
 from twilio.rest import Client
 
 # Auth credentials
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token = "your_auth_token"
+# To set up environmental variables, see http://twil.io/secure
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
 
 # Use Lookup API to get country code / MCC / MNC that corresponds
 # to given phone number

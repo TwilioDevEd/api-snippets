@@ -7,7 +7,8 @@ $TWILIO_ACCOUNT_SID = "YOUR_ACCOUNT_SID";
 
 // Create an API Key and Secret at https://www.twilio.com/console/chat/dev-tools/api-keys
 $TWILIO_API_KEY = "YOUR_API_KEY";
-$TWILIO_API_SECRET = "YOUR_API_SECRET";
+// To set up environmental variables, see http://twil.io/secure
+$TWILIO_API_SECRET = getenv('TWILIO_API_KEY_SECRET');
 
 // Your Chat Service SID from https://www.twilio.com/console/chat/services
 $CHAT_SERVICE_SID = "YOUR_CHAT_SERVICE_SID";

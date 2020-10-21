@@ -5,9 +5,10 @@ use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\ConversationsGrant;
 
 // Required for all Twilio access tokens
-$twilioAccountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$twilioApiKey = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$twilioApiSecret = 'your_api_secret';
+// To set up environmental variables, see http://twil.io/secure
+$twilioAccountSid = getenv('TWILIO_ACCOUNT_SID');
+$twilioApiKey = getenv('TWILIO_API_KEY');
+$twilioApiSecret = getenv('TWILIO_API_KEY_SECRET');
 $TwilioConfigurationSid = 'VSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 // choose a random username for the connecting user
 $identity = 'randomUsername';

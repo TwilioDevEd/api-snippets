@@ -48,6 +48,7 @@ class SnippetTester
     Model::Snippet.verify_snippet_language
 
     valid_langs = Model::Snippet::LANGUAGES.keys.map(&:to_s)
+# To set up environmental variables, see http://twil.io/secure
     langs_to_test = ENV['SNIPPET_LANGUAGE'] || valid_langs.join(':')
     langs_to_test.split(':').each do |lang|
       Object.const_get('LanguageHandler')

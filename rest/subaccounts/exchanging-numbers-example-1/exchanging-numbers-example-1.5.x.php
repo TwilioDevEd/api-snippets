@@ -7,14 +7,15 @@ require_once '/path/to/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Find your Account Sid and Auth Token at twilio.com/console
-// DANGER! This is insecure. See http://twil.io/secure
-$sid    = "AC00000000000000000000000000000001";
-$token  = "your_auth_token";
+// To set up environmental variables, see http://twil.io/secure
+$sid = getenv('TWILIO_ACCOUNT_SID');
+$token = getenv('TWILIO_AUTH_TOKEN');
+$sub_account_sid = getenv('TWILIO_SUBACCOUNT_SID');
 $twilio = new Client($sid, $token);
 
 $incoming_phone_number = $twilio->incomingPhoneNumbers("PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                                 ->update(array(
-                                             "accountSid" => "AC00000000000000000000000000000002"
+                                             "accountSid" => $sub_account_sid
                                          )
                                 );
 

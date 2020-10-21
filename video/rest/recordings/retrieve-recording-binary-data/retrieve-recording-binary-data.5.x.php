@@ -4,7 +4,8 @@ require_once "/path/to/vendor/autoload.php"; // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/console
-$apiKeySid = "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// To set up environmental variables, see http://twil.io/secure
+$apiKeySid = getenv('TWILIO_API_KEY');
 $apiKeySecret = "your_auth_api_key_secret";
 $client = new Client($apiKeySid, $apiKeySecret);
 

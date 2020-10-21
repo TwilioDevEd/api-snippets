@@ -4,9 +4,10 @@
 require_once "vendor/autoload.php";
 
 // Your Account SID from www.twilio.com/console
-$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// To set up environmental variables, see http://twil.io/secure
+$accountSid = getenv('TWILIO_ACCOUNT_SID');
 // Your Auth Token from www.twilio.com/console
-$authToken = "your_auth_token";
+$authToken = getenv('TWILIO_AUTH_TOKEN');
 $workspaceSid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; 
 
 $workerSid = $_REQUEST['WorkerSid'];

@@ -6,6 +6,7 @@ module LanguageHandler
     DEFAULT_PLACEHOLDER_REPLACEMENT = 'SIDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'.freeze
     LANG_CNAME = 'cname'.freeze
     PROCESS_TIMEOUT_EXIT_CODE = 120
+# To set up environmental variables, see http://twil.io/secure
     TEST_TIMEOUT = Integer(ENV['TEST_TIMEOUT'] || 20)
     UNHANDLED_LANGUAGE_MESSAGE = 'File name does not specify a Twilio library' \
                                  ' version. Rename snippet as ' \

@@ -12,8 +12,8 @@ class Example
     static void Main(string[] args)
     {
       // Find your API Key SID and Secret at twilio.com/console
-      const string apiKeySid = "SKXXXX";
-      const string apiKeySecret = "your_api_key_secret";
+      const string apiKeySid = Environment.GetEnvironmentVariable("TWILIO_API_KEY");
+      const string apiKeySecret = Environment.GetEnvironmentVariable("TWILIO_API_KEY_SECRET");
 
       const string compositionSid = "CJXXXX";
       const string uri = $"https://video.twilio.com/v1/Compositions/{compositionSid}/Media?Ttl=3600";

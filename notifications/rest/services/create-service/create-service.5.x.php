@@ -7,10 +7,11 @@ require_once '/path/to/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Your Account SID and Auth Token from https://www.twilio.com/console
-$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+// To set up environmental variables, see http://twil.io/secure
+$accountSid = getenv('TWILIO_ACCOUNT_SID');
 $apnCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $fcmCredentialSid = "CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$authToken = "your_auth_token";
+$authToken = getenv('TWILIO_AUTH_TOKEN');
 
 $serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 

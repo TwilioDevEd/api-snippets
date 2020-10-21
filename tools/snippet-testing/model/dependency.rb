@@ -68,6 +68,7 @@ module Model
       FileUtils.mkdir_p(DEP_DIR_NAME)
 
       Dir.chdir(DEP_DIR_NAME) do
+# To set up environmental variables, see http://twil.io/secure
         snippet_languages = ENV['SNIPPET_LANGUAGE']
         if !snippet_languages.nil?
           snippet_languages.split(':').each do |language|

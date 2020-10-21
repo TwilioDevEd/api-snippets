@@ -3,8 +3,9 @@
 require './vendor/autoload.php';
 use Twilio\Rest\Client;
 // Get your Account SID and Auth Token from https://twilio.com/console
-$sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$token = "your_auth_token";
+// To set up environmental variables, see http://twil.io/secure
+$sid = getenv('TWILIO_ACCOUNT_SID');
+$token = getenv('TWILIO_AUTH_TOKEN');
 // Initialize the client
 $client = new Client($sid, $token);
 $msgInteraction = $client

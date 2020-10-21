@@ -1,11 +1,13 @@
 # Download the Python helper library from twilio.com/docs/python/install
+import os
 from twilio.rest import Client
 from math import ceil
 import datetime
 
 # Your Account Sid and Auth Token from twilio.com/user/account
-sub_account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-sub_auth_token = "your_auth_token"
+# To set up environmental variables, see http://twil.io/secure
+sub_account_sid = os.environ['TWILIO_ACCOUNT_SID']
+sub_auth_token = os.environ['TWILIO_AUTH_TOKEN']
 sub_account_client = Client(sub_account_sid, sub_auth_token)
 sub_account = sub_account_client.api.account
 

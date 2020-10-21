@@ -3,30 +3,36 @@
 
 ## Guidelines
 
-1. Snippets should use placeholders for user information in a format that
-   resembles the original value. For example:
+1. Snippets should use environmental variables to store user account information
+   instead of placeholders. For example (in NodeJS):
+   ```
+   accountSid = process.env.TWILIO_ACCOUNT_SID
+   ```
+   Instead of:
+   ```
+   accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+   ```
+   As the latter impose a high security risk for users who push their own credentials
+   on public repositories.
+
+1. Critical user account information that should be stored on environmental variables is:
+    - Account SID
+    - Sub accounts SIDs
+    - Authentication Token
+    - API key SID
+    - API key Secret
+
+   Any other information such as Call SID, etc. can have placeholders on them:
 
    ```
-   Account SID: ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    Call SID:    CAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   API Key:     SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
-
-   **Note:** This is important as Twilio libraries use these values as a part
-   of the URL for API requests. When testing the snippets real requests will
-   be made to a fake server.
 
    In the case of phone numbers, the following should be used:
 
    ```
    Destination Phone Number: +15558675310
    From/Twilio Number: +15017122661
-   ```
-
-   For auth_token:
-
-   ```
-   Auth Token: your_auth_token
    ```
 
 1. **Snippet file names are important**. A snippet's file extension is the only

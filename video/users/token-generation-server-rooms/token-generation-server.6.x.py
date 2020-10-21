@@ -16,6 +16,7 @@ def index():
 @app.route('/token')
 def token():
     # get credentials for environment variables
+# To set up environmental variables, see http://twil.io/secure
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     api_key = os.environ['TWILIO_API_KEY']
     api_secret = os.environ['TWILIO_API_SECRET']

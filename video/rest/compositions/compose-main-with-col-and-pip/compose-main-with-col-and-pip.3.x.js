@@ -3,9 +3,10 @@
 // https://www.twilio.com/docs/libraries/node
 
 // Find your credentials at twilio.com/console
-const API_KEY_SID = 'SKXXXX';
-const API_KEY_SECRET = 'your_api_key_secret';
-const ACCOUNT_SID = 'ACXXXX';
+// To set up environmental variables, see http://twil.io/secure
+const API_KEY_SID = process.env.TWILIO_API_KEY;
+const API_KEY_SECRET = process.env.TWILIO_API_KEY_SECRET;
+const ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
 
 const Twilio = require('twilio');
 

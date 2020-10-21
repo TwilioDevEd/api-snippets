@@ -5,8 +5,9 @@ use Twilio\Rest\Client;
 
 // Download the PHP helper library from twilio.com/docs/php/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-$auth_token = 'your_auth_token';
+// To set up environmental variables, see http://twil.io/secure
+$account_sid = getenv('TWILIO_ACCOUNT_SID');
+$auth_token = getenv('TWILIO_AUTH_TOKEN');
 $client = new Client($account_sid, $auth_token);
 
 $client->messages->create(

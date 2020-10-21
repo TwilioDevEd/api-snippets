@@ -1,12 +1,14 @@
 # Download the Python helper library from twilio.com/docs/python/install
+import os
 from twilio.rest import Client
 
 # Find your Account Sid at https://www.twilio.com/console/account/settings
-account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+# To set up environmental variables, see http://twil.io/secure
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
 # Create an API Key and Secret at
 # https://www.twilio.com/console/chat/dev-tools/api-keys
-api_key = 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-api_secret = 'your_api_secret'
+api_key = os.environ['TWILIO_API_KEY']
+api_secret = os.environ['TWILIO_API_KEY_SECRET']
 # Your Chat Service SID from https://www.twilio.com/console/chat/services
 service_sid = 'ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 

@@ -10,14 +10,14 @@ class Program
     static void Main(string[] args)
     {
         // Find your Account Sid and Token at twilio.com/console
-        // DANGER! This is insecure. See http://twil.io/secure
-        const string accountSid = "AC00000000000000000000000000000001";
-        const string authToken = "your_auth_token";
+        // To set up environmental variables, see http://twil.io/secure
+        const string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
+        const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
         TwilioClient.Init(accountSid, authToken);
 
         var incomingPhoneNumber = IncomingPhoneNumberResource.Update(
-            accountSid: "AC00000000000000000000000000000002",
+            accountSid: Environment.GetEnvironmentVariable("TWILIO_SUB_ACCOUNT_SID"),
             pathSid: "PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         );
 
