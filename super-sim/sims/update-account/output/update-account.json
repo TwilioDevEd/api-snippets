@@ -1,0 +1,11 @@
+{
+  "sid": "HSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "unique_name": null,
+  "status": "new",
+  "fleet_sid": null,
+  "iccid": "iccid",
+  "date_created": "2015-07-30T20:00:00Z",
+  "date_updated": "2015-07-30T20:00:00Z",
+  "url": "https://supersim.twilio.com/v1/Sims/HSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
