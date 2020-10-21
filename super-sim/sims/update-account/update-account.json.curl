@@ -1,0 +1,3 @@
+curl -X POST https://supersim.twilio.com/v1/Sims/HSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+--data-urlencode "AccountSid=ACbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" \
+-u ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_auth_token
