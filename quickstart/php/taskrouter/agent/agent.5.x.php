@@ -23,7 +23,7 @@ $workerToken = $workerCapability->generateToken();
 <head>
     <title>Customer Care - Voice Agent Screen</title>
     <link rel="stylesheet" href="//media.twiliocdn.com/taskrouter/quickstart/agent.css"/>
-    <script src="//media.twiliocdn.com/taskrouter/js/v1.13/taskrouter.min.js"></script>
+    <script src="https://sdk.twilio.com/js/taskrouter/v1.21/taskrouter.min.js" integrity="sha384-5fq+0qjayReAreRyHy38VpD3Gr9R2OYIzonwIkoGI4M9dhfKW6RWeRnZjfwSrpN8" crossorigin="anonymous"></script>
     <script src="agent.js"></script>
 </head>
 <body>
