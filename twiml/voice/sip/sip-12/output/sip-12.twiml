@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial sequential="true">
+    <Sip>sip:alice@example.com</Sip>
+    <Sip>sip:bob@example.com</Sip>
+    <Sip>sip:charlie@example.com</Sip>
+</Dial>
+</Response>
