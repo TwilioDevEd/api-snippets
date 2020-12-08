@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial>
+    <Number>+12143211432</Number>
+    <Sip>sip:alice-soft-phone@example.com</Sip>
+    <Sip>sip:alice-desk-phone@example.com</Sip>
+    <Sip>sip:alice-mobile-client@example.com</Sip>
+  </Dial>
+</Response>
