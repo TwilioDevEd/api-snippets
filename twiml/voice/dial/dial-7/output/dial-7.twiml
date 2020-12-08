@@ -1,0 +1,7 @@
+<Response>
+    <Dial record="record-from-answer" 
+        recordingTrack="inbound" 
+        recordingStatusCallback="https://www.myexample.com/recording-handler">
+        <Number>+15551239876</Number>
+    </Dial>
+</Response>
