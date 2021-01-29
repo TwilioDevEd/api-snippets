@@ -1,8 +1,10 @@
-from twilio.twiml.voice_response import Refer, VoiceResponse
+from twilio.twiml.voice_response import Refer, ReferSip, VoiceResponse
 
 response = VoiceResponse()
 refer = Refer()
-refer.refer_sip('sip:alice@example.com?X-AcctNumber=123456&X-ReasonForCalling=billing-question')
+refer.sip(
+    'sip:alice@example.com?X-AcctNumber=123456&X-ReasonForCalling=billing-question'
+)
 response.append(refer)
 
 print(response)
