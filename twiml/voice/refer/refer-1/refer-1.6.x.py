@@ -1,4 +1,4 @@
-from twilio.twiml.voice_response import Refer, ReferSip, VoiceResponse
+from twilio.twiml.voice_response import Refer, VoiceResponse
 
 response = VoiceResponse()
 refer = Refer()
