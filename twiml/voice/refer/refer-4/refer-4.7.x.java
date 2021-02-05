@@ -7,7 +7,7 @@ import com.twilio.http.HttpMethod;
 public class Example {
     public static void main(String[] args) {
         ReferSip sip = new ReferSip.Builder("sip:alice@example.com").build();
-        Refer refer = new Refer.Builder().action("/handleRefer").method(HttpMethod.POST).referSip(number).build();
+        Refer refer = new Refer.Builder().action("/handleRefer").method(HttpMethod.POST).sip(sip).build();
         VoiceResponse response = new VoiceResponse.Builder().refer(refer).build();
 
         try {
