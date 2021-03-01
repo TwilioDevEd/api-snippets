@@ -1,0 +1,5 @@
+<Response>
+    <Dial answerOnBridge="true" referUrl="https://example.com/handler">
+        <Sip>sip:AgentA@xyz.sip.us1.twilio.com?User-to-User=123456789%3Bencoding%3Dhex&amp;X-Name=Agent%2C+A</Sip>
+    </Dial>
+</Response>
