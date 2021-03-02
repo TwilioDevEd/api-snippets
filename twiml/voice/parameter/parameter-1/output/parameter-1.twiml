@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+   <Dial>
+     <Client>
+        <Identity>user-jane</Identity>
+        <Parameter name="FirstName" value ="Jane"/>
+        <Parameter name="LastName" value ="Doe" />
+      </Client>
+    </Dial>
+</Response>
