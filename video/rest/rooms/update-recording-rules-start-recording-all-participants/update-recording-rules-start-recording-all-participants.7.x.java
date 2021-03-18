@@ -10,25 +10,24 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class UpdateRules{
-
-  // Find your credentials at twilio.com/console
-  public static final String ACCOUNT_SID = "ACXXXX";
-  public static final String API_KEY_SID = "SKXXXX";
-  public static final String API_KEY_SECRET = "your_api_key_secret";
+  // Find your Account Sid and Token at twilio.com/console
+  // and set the environment variables. See http://twil.io/secure
+  public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
+  public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
   public static void main( String[] args ) throws IOException{
       // Initialize the client
-      Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
-      
+      Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+
       ArrayList<RecordingRule> rules = new ArrayList<>();
-	  rules.add(RecordingRule.builder()
-			.withType(RecordingRule.Type.INCLUDE).withAll()
-			.build());
+      rules.add(RecordingRule.builder()
+              .withType(RecordingRule.Type.INCLUDE).withAll()
+              .build());
 	
       RecordingRules recordingRules =
-			RecordingRules.updater("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-					.setRules(new ObjectMapper().convertValue(new RecordingRulesUpdate(rules), Map.class))
-					.update();
+          RecordingRules.updater("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+          .setRules(new ObjectMapper().convertValue(new RecordingRulesUpdate(rules), Map.class))
+          .update();
 
 	  System.out.println(recordingRules.getRoomSid());
   }
