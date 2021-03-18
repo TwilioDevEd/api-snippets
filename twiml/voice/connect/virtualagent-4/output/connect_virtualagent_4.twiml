@@ -1,0 +1,5 @@
+<Response>
+  <Connect>
+    <VirtualAgent connectorName="project" sentimentAnalysis="true"/>
+  </Connect>
+</Response>
