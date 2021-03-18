@@ -6,7 +6,7 @@ const connect = response.connect({
 });
 connect.virtualAgent({
     connectorName: 'project',
-    statuscallback: 'https://mycallbackurl.com'
+    statusCallback: 'https://mycallbackurl.com'
 });
 
 console.log(response.toString());

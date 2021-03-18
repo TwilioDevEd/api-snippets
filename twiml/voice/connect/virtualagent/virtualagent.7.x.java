@@ -6,7 +6,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        VirtualAgent virtualagent = new VirtualAgent.Builder().connectorName("project").statuscallback("https://mycallbackurl.com").build();
+        VirtualAgent virtualagent = new VirtualAgent.Builder().connectorName("project").statusCallback("https://mycallbackurl.com").build();
         Connect connect = new Connect.Builder().action("https://myactionurl.com/twiml").virtualAgent(virtualagent).build();
         VoiceResponse response = new VoiceResponse.Builder().connect(connect).build();
 

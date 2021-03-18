@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Connect action="https://myactionurl.com/twiml" >
-    <VirtualAgent connectorName="project" statuscallback="https://mycallbackurl.com"/>
+    <VirtualAgent connectorName="project" statusCallback="https://mycallbackurl.com"/>
   </Connect>
 </Response>
