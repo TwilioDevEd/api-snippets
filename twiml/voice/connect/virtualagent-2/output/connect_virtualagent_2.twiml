@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say>Hello! You will be now be connected to a virtual agent.</Say>
+  <Connect action="https://myactionurl.com/virtualagent_ended">
+    <VirtualAgent connectorName="project" statusCallback="https://mycallbackurl.com"/>
+  </Connect>
+</Response>
