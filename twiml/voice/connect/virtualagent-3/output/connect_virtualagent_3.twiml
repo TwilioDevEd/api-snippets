@@ -1,0 +1,5 @@
+<Response>
+  <Connect>
+    <VirtualAgent connectorName="project" language="fr"/>
+  </Connect>
+</Response>
