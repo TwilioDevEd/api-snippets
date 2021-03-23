@@ -1,3 +1,3 @@
 curl -X POST https://video.twilio.com/v1/Rooms/RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/RecordingRules \
 --data-urlencode Rules='[{"type": "include", "publisher": "Alice"}, {"type": "include", "kind": "audio"}]' \
--u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN 
