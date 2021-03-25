@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-from twiml_generator import TwiMLCodeGenerator, load_language_spec
+from twiml_generator import TwimlCodeGenerator, load_language_spec
 from pathlib import Path
 from lxml import etree
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
                     twiml_filepath, language
                 )
                 print("{} -> {}".format(twiml_filepath, code_filepath), end='')
-                code_generator = TwiMLCodeGenerator(
+                code_generator = TwimlCodeGenerator(
                     twiml_filepath,
                     code_filepath=code_filepath,
                     lib_filepath=Path(__file__).parent / 'lib',
@@ -82,9 +82,9 @@ if __name__ == '__main__':
                 if args.test:
                     result, stdout, input_tree, output_tree = code_generator.verify(
                     )
-                    if result == TwiMLCodeGenerator.VERIFY_SUCCESS:
+                    if result == TwimlCodeGenerator.VERIFY_SUCCESS:
                         print(' \x1B[92m[passed]\x1B[39m')
-                    elif result == TwiMLCodeGenerator.VERIFY_FAILURE:
+                    elif result == TwimlCodeGenerator.VERIFY_FAILURE:
                         print(' \x1B[91m[failed]\x1B[39m')
                         print('INPUT:\n' + input_tree)
                         print('OUTPUT:\n' + output_tree)
