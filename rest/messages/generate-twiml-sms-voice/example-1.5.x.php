@@ -3,7 +3,7 @@
 
 // this line loads the library 
 require('vendor/autoload.php'); 
-use Twilio\Twiml\VoiceResponse;
+use Twilio\TwiML\VoiceResponse;
 
 $response = new VoiceResponse;
 $response->say("Hello! You will get an SMS message soon.");

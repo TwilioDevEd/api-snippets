@@ -2,7 +2,7 @@
 // Download the library and copy into the folder containing this file.
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 
-use Twilio\Twiml\VoiceResponse;
+use Twilio\TwiML\VoiceResponse;
 
 $response = new VoiceResponse();
 $response->enqueue(null, ["workflowSid" => "WW0123456789abcdef0123456789abcdef"])

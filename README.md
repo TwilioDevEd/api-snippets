@@ -98,8 +98,8 @@ There're two kind of snippets we test:
   body may or may not has the parameters needed to update the resource
   according to the expected result.
 
-- **Twiml snippets:**
-  When running Twiml snippets, the snippets should print the `xml` result to the
+- **TwiML snippets:**
+  When running TwiML snippets, the snippets should print the `xml` result to the
   standard output, so we can capture that output and compare it with the
   expected `xml` sample. We read this `/output/sample.xml` file which is
   placed in the same folder of the snippet.
@@ -132,7 +132,7 @@ testable:
    ```
 
 **Notes:**
-- For testing Twiml snippets the option available is:
+- For testing TwiML snippets the option available is:
 
   ```
   meta.json -> "test_output": true
