@@ -33,7 +33,8 @@ app.post('/gather', (request, response) => {
         twiml.say('You need support. We will help!');
         break;
       default:
-        twiml.say("Sorry, I don't understand that choice.").pause();
+        twiml.say("Sorry, I don't understand that choice.");
+        twiml.pause();
         twiml.redirect('/voice');
         break;
     }

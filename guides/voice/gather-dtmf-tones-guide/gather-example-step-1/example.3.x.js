@@ -21,7 +21,8 @@ app.post('/voice', (request, response) => {
         twiml.say('You need support. We will help!');
         break;
       default:
-        twiml.say("Sorry, I don't understand that choice.").pause();
+        twiml.say("Sorry, I don't understand that choice.");
+        twiml.pause();
         gather();
         break;
     }
