@@ -5,3 +5,4 @@ Example.java
 Example.app
 Example.exe
 lib
+dotnet_env/*

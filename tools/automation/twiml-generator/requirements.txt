@@ -1,1 +1,1 @@
--e git+https@github.com:TwilioDevEd/twiml-generator.git@master#egg=twiml_generator
+-e git+https://github.com/TwilioDevEd/twiml-generator.git@master#egg=twiml_generator
