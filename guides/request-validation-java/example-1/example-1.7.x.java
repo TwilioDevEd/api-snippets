@@ -76,7 +76,7 @@ public class TwilioRequestValidatorFilter implements Filter {
     private String getRequestUrlAndQueryString(HttpServletRequest request) {
         String queryString = request.getQueryString();
         String requestUrl = request.getRequestURL().toString();
-        if(queryString != null && queryString != "") {
+        if(queryString != null && !queryString.equals("")) {
             return requestUrl + "?" + queryString;
         }
         return requestUrl;
