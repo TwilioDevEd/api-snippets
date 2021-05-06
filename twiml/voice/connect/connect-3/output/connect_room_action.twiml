@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-  <Connect action='https://myactionurl.com/'>
-    <Room statusCallback='https://myactionurl.com/'>meeting</Room>
-  </Connect>
-</Response>
