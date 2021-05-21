@@ -10,7 +10,7 @@ public class MessageStatusController : Controller
     public ActionResult Index()
     {
         // Log the message id and status
-        var smsSid = Request.Form["SmsSid"];
+        var smsSid = Request.Form["MessageSid"];
         var messageStatus = Request.Form["MessageStatus"];
         var logMessage = $"\"{smsSid}\", \"{messageStatus}\"";
 
