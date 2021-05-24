@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import java.util.List;
+import java.util.ArrayList;
 
-import com.google.common.collect.Lists;
 import com.twilio.http.HttpMethod;
 import com.twilio.jwt.taskrouter.Policy;
 import com.twilio.jwt.taskrouter.TaskRouterCapability;
@@ -30,7 +30,7 @@ public class Example {
         .build();
 
 
-    List<Policy> policies = Lists.newArrayList(allowFetchSubresources, allowUpdatesSubresources,
+    List<Policy> policies = Arrays.asList(allowFetchSubresources, allowUpdatesSubresources,
         allowDeleteSubresources);
 
 
