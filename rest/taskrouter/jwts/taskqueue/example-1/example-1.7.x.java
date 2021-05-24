@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import java.util.List;
-import java.util.ArrayList;
 
+import com.google.common.collect.Lists;
 import com.twilio.http.HttpMethod;
 import com.twilio.jwt.taskrouter.Policy;
 import com.twilio.jwt.taskrouter.TaskRouterCapability;
@@ -13,29 +13,22 @@ public class Example {
   private static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
   private static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
   private static final String WORKSPACE_SID = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+  private static final String TASKQUEUE_SID = "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
   public static void main(String[] args) {
     Policy allowFetchSubresources = new Policy.Builder()
-        .url(UrlUtils.workspace(WORKSPACE_SID) + "/**")
+        .url(UrlUtils.taskQueue(WORKSPACE_SID, TASKQUEUE_SID) + "/**")
         .build();
 
-    Policy allowUpdatesSubresources = new Policy.Builder()
-        .url(UrlUtils.workspace(WORKSPACE_SID) + "/**")
+    Policy allowUpdates = new Policy.Builder()
+        .url(UrlUtils.taskQueue(WORKSPACE_SID, TASKQUEUE_SID))
         .method(HttpMethod.POST)
         .build();
 
-    Policy allowDeleteSubresources = new Policy.Builder()
-        .url(UrlUtils.workspace(WORKSPACE_SID) + "/**")
-        .method(HttpMethod.DELETE)
-        .build();
-
-
-    List<Policy> policies = Arrays.asList(allowFetchSubresources, allowUpdatesSubresources,
-        allowDeleteSubresources);
-
+    List<Policy> policies = Lists.newArrayList(allowFetchSubresources, allowUpdates);
 
     TaskRouterCapability.Builder capabilityBuilder =
-        new TaskRouterCapability.Builder(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID, WORKSPACE_SID)
+        new TaskRouterCapability.Builder(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID, TASKQUEUE_SID)
             .policies(policies);
 
     String token = capabilityBuilder.build().toJwt();

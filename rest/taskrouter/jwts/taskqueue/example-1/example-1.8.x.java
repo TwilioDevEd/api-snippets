@@ -1,7 +1,7 @@
 // Install the Java helper library from twilio.com/docs/java/install
 import java.util.List;
+import java.util.Arrays;
 
-import com.google.common.collect.Lists;
 import com.twilio.http.HttpMethod;
 import com.twilio.jwt.taskrouter.Policy;
 import com.twilio.jwt.taskrouter.TaskRouterCapability;
@@ -25,7 +25,7 @@ public class Example {
         .method(HttpMethod.POST)
         .build();
 
-    List<Policy> policies = Lists.newArrayList(allowFetchSubresources, allowUpdates);
+    List<Policy> policies = Arrays.asList(allowFetchSubresources, allowUpdates);
 
     TaskRouterCapability.Builder capabilityBuilder =
         new TaskRouterCapability.Builder(ACCOUNT_SID, AUTH_TOKEN, WORKSPACE_SID, TASKQUEUE_SID)

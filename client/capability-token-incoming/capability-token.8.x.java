@@ -1,11 +1,11 @@
 import java.io.IOException;
 import java.util.List;
+import java.util.Arrays;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.common.collect.Lists;
 import com.twilio.jwt.client.ClientCapability;
 import com.twilio.jwt.client.IncomingClientScope;
 import com.twilio.jwt.client.Scope;
@@ -18,7 +18,7 @@ public class TwilioServlet extends HttpServlet {
   public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    List<Scope> scopes = Lists.newArrayList(new IncomingClientScope("joey"));
+    List<Scope> scopes = Arrays.asList(new IncomingClientScope("joey"));
 
     ClientCapability capability = new ClientCapability.Builder(ACCOUNT_SID, AUTH_TOKEN)
       .scopes(scopes)

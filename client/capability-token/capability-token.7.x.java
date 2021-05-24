@@ -1,11 +1,11 @@
 import java.io.IOException;
 import java.util.List;
-import java.util.Arrays;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.common.collect.Lists;
 import com.twilio.jwt.client.ClientCapability;
 import com.twilio.jwt.client.IncomingClientScope;
 import com.twilio.jwt.client.OutgoingClientScope;
@@ -24,7 +24,7 @@ public class TwilioServlet extends HttpServlet {
     OutgoingClientScope outgoingScope = new OutgoingClientScope.Builder(APP_SID).build();
     IncomingClientScope incomingScope = new IncomingClientScope("joey");
 
-    List<Scope> scopes = Arrays.asList(outgoingScope, incomingScope);
+    List<Scope> scopes = Lists.newArrayList(outgoingScope, incomingScope);
 
     ClientCapability capability = new ClientCapability.Builder(ACCOUNT_SID, AUTH_TOKEN)
         .scopes(scopes)
