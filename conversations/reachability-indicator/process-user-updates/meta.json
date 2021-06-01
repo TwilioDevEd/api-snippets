@@ -1,0 +1,5 @@
+{
+  "title": "Handle Reachability updates on client side",
+  "description": "Handle an UpdateReason change and process the Reachability Indicators",
+  "type": "mobile"
+}
