@@ -27,7 +27,7 @@ client
   .then((response) => {
     // For example, download the media to a local file
     const file = fs.createWriteStream("myFile.mp4");
-    const r = request(response.data.redirect_to);
+    const r = request(response.body.redirect_to);
     r.on("response", (res) => {
       res.pipe(file);
     });
