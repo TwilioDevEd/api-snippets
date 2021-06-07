@@ -14,7 +14,7 @@ class Program
         const string apiKeySecret = Environment.GetEnvironmentVariable("TWILIO_API_KEY_SECRET");
 
         ResourceSet<ParticipantResource> participants = ParticipantResource.Read(
-                  "DailyStandup",
+                  "RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
                   ParticipantResource.StatusEnum.Disconnected);
 
         foreach(ParticipantResource p in participants)

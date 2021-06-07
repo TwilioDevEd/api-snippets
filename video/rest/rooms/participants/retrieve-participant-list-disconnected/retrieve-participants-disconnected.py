@@ -8,7 +8,7 @@ api_key_sid = os.environ['TWILIO_API_KEY']
 api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
-participants = client.video.rooms('DailyStandup').participants
+participants = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants
 
 for participant in participants.list(status='disconnected'):
     print(participant.fetch().sid)
