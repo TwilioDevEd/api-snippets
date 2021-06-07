@@ -8,7 +8,7 @@ var Twilio = require('twilio');
 
 var client = new Twilio(apiKeySid, apiKeySecret, {accountSid: accountSid});
 
-client.video.rooms('DailyStandup').participants
+client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').participants
   .each({status: 'disconnected'}, (participant) => {
     console.log(participant.sid);
   });

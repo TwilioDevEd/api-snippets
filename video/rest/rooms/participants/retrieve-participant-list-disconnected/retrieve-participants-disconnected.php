@@ -9,7 +9,7 @@ $apiKeySid = getenv('TWILIO_API_KEY');
 $apiKeySecret = getenv('TWILIO_API_KEY_SECRET');
 $client = new Client($apiKeySid, $apiKeySecret);
 
-$participants = $client->video->rooms("DailyStandup")
+$participants = $client->video->rooms("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
       ->participants->read(array("status" => "disconnected"));
 
 foreach ($participants as $participant) {

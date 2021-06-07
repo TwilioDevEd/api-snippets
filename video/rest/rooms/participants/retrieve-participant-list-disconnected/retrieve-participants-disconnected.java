@@ -10,7 +10,7 @@ public class ParticipantsExample3 {
     public static void main(String args[]) {
         Twilio.init(API_KEY_SID, API_KEY_SECRET);
 
-        ResourceSet<Participant> participants = Participant.reader("DailyStandup")
+        ResourceSet<Participant> participants = Participant.reader("RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                 .setStatus(Participant.Status.DISCONNECTED)
                 .read();
 
