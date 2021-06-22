@@ -14,7 +14,7 @@ LANGUAGES_VERSIONS = {
     'java': '8.x',
     'csharp': '5.x',
     'node': '3.x',
-    'php': '5.x',
+    'php': '6.x',
     'ruby': '5.x'
 }
 
