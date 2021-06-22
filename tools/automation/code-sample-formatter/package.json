@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "argparse": "1.0.9",
     "node-find-files": "0.0.4",
-    "recursive-readdir": "^2.2.1",
-    "argparse": "1.0.9"
+    "recursive-readdir": "^2.2.1"
   },
   "devDependencies": {
     "jasmine": "^2.6.0"
