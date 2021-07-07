@@ -15,5 +15,5 @@ records = client.usage.records.last_month.list()
 
 # Print the JSON object
 for record in records:
-    print (record.start_date, record.end_date, record.category, record.count,
+    print(record.start_date, record.end_date, record.category, record.count,
     record.count_unit, record.price, record.price_unit)
