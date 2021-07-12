@@ -13,3 +13,7 @@ client = Client(account_sid, auth_token)
 records = client.usage.records.list(
     category="calls-inbound", start_date="2012-09-01", end_date="2012-09-30"
 )
+
+for record in records:
+    print(record.start_date, record.end_date, record.category, record.count,
+    record.count_unit, record.price, record.price_unit)
