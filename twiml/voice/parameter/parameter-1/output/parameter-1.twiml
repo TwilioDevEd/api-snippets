@@ -2,7 +2,7 @@
 <Response>
    <Dial>
      <Client>
-        <Identity>user-jane</Identity>
+        <Identity>user_jane</Identity>
         <Parameter name="FirstName" value ="Jane"/>
         <Parameter name="LastName" value ="Doe" />
       </Client>

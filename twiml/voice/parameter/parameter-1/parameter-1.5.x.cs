@@ -10,7 +10,7 @@ class Example
         var response = new VoiceResponse();
         var dial = new Dial();
         var client = new Client();
-        client.Identity("user-jane");
+        client.Identity("user_jane");
         client.Parameter(name: "FirstName", value: "Jane");
         client.Parameter(name: "LastName", value: "Doe");
         dial.Append(client);

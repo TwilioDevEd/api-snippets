@@ -8,7 +8,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Identity identity = new Identity.Builder("user-jane").build();
+        Identity identity = new Identity.Builder("user_jane").build();
         Parameter parameter = new Parameter.Builder().name("FirstName").value("Jane").build();
         Parameter parameter2 = new Parameter.Builder().name("LastName").value("Doe").build();
         Client client = new Client.Builder().identity(identity).parameter(parameter).parameter(parameter2).build();
