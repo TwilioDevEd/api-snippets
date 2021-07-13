@@ -1,0 +1,3 @@
+# Install the twilio-cli from https://twil.io/cli
+
+twilio api:core:usage:records:all-time:list

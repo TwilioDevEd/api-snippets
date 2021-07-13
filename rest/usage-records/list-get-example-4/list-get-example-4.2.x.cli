@@ -1,0 +1,6 @@
+# Install the twilio-cli from https://twil.io/cli
+
+twilio api:core:usage:records:daily:list \
+    --start-date=2012-09-01 \
+    --end-date=2012-09-30 \
+    --category=calls-inbound
