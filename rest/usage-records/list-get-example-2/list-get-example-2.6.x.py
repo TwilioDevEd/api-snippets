@@ -11,3 +11,6 @@ client = Client(account_sid, auth_token)
 
 # A list of record objects with the properties described above
 records = client.usage.records.today.list(category="calls")
+
+for record in records:
+    print(record.count)

@@ -13,3 +13,6 @@ client = Client(account_sid, auth_token)
 records = client.usage.records.daily.list(
     category="calls-inbound", start_date="2012-09-01", end_date="2012-09-30"
 )
+
+for record in records:
+    print(record.count)
