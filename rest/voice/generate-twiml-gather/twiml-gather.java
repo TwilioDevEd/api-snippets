@@ -23,7 +23,7 @@ public class TwilioServlet extends HttpServlet {
         Say say = new Say(message);
 
         // Play an MP3 for incoming callers.
-        Play play = new Play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3");
+        Play play = new Play("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3");
 
         Gather gather = new Gather();
         gather.setAction("/handle-gather");

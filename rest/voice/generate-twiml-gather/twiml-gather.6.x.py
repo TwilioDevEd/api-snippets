@@ -12,7 +12,7 @@ def voice():
     # Greet the caller by name
     resp.say("Hello. It's me. ")
     # Play an mp3
-    resp.play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3")
+    resp.play("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3")
 
     # Gather digits.
     with resp.gather(numDigits=1, action="/handle-gather", method="POST") as g:

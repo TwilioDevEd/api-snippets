@@ -16,7 +16,7 @@ public class VoiceController : Controller
 
         var response = new VoiceResponse();
         response.Say("Hello. It's me.", voice: "alice", language: "en-GB");
-        response.Play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3");
+        response.Play("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3");
         response.Gather (gather);
 
         return Content(response.ToString(), "text/xml");

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Say>Hello. It's me.</Say>
-    <Play>http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3</Play>
+    <Play>https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3</Play>
 </Response>

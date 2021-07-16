@@ -10,7 +10,7 @@ def voice():
 
     resp = VoiceResponse()
     resp.say("Hello. It's me.")
-    resp.play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3")
+    resp.play("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3")
     return str(resp)
 
 
