@@ -13,7 +13,7 @@ public class TwilioServlet extends HttpServlet {
   public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Create a TwiML response and add our friendly message.
     Say say = new Say.Builder("Hello. It's me.").build();
-    Play play = new Play.Builder("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3").build();
+    Play play = new Play.Builder("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3").build();
 
     VoiceResponse twiml = new VoiceResponse.Builder().say(say).play(play).build();
 

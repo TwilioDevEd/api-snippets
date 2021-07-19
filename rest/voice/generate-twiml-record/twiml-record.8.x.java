@@ -18,7 +18,7 @@ public class TwilioServlet extends HttpServlet {
     Say say = new Say.Builder(message).build();
 
     // Play an MP3 for incoming callers.
-    Play play = new Play.Builder("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3").build();
+    Play play = new Play.Builder("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3").build();
 
     Say sayInGather = new Say.Builder("To speak to a real person, press 1. "
         + "Press 2 to record a message for a Twilio educator. "

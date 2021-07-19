@@ -7,5 +7,5 @@ use Services_Twilio_Twiml;
 
 $response = new Services_Twilio_Twiml;
 $response->say("Hello. It's me. I've been wondering if after this guide you'd like to meet.");
-$response->play("http://howtodocs.s3.amazonaws.com/ahoyhoy.mp3");
+$response->play("https://deved-sample-assets-2691.twil.io/ahoyhoy.mp3");
 print $response;
