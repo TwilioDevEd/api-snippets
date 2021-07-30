@@ -13,11 +13,11 @@ public class VoiceController : TwilioController
 	public TwiMLResult Index()
 	{
 		var response = new VoiceResponse();
-		response.Gather(numDigits: 1, action: new Uri("/voice/gather"))
+		response.Gather(numDigits: 1, action: new Uri("/voice/gather", UriKind.Relative))
 			    .Say("For sales, press 1. For support, press 2.");
 
 		// If the user doesn't enter input, loop
-		response.Redirect(new Uri("/voice"));
+		response.Redirect(new Uri("/voice", UriKind.Relative));
 
 		return TwiML(response);
 	}
@@ -41,14 +41,14 @@ public class VoiceController : TwilioController
 					break;
 				default:
 					response.Say("Sorry, I don't understand that choice.").Pause();
-					response.Redirect(new Uri("/voice"));
+					response.Redirect(new Uri("/voice", UriKind.Relative));
 					break;
 			}
 		}
 		else
 		{
 			// If no input was sent, redirect to the /voice route
-			response.Redirect(new Uri("/voice"));
+			response.Redirect(new Uri("/voice", UriKind.Relative));
 		}
 
 		return TwiML(response);

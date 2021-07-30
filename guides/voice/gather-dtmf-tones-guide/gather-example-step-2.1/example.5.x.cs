@@ -28,14 +28,14 @@ public class VoiceController : TwilioController
 					break;
 				default:
 					response.Say("Sorry, I don't understand that choice.").Pause();
-					response.Redirect(new Uri("/voice"));
+					response.Redirect(new Uri("/voice", UriKind.Relative));
 					break;
 			}
 		}
 		else
 		{
 			// If no input was sent, redirect to the /voice route
-			response.Redirect(new Uri("/voice"));
+			response.Redirect(new Uri("/voice", UriKind.Relative));
 		}
 
 		return TwiML(response);

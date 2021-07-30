@@ -45,6 +45,6 @@ public class VoiceController : TwilioController
 			.Say("For sales, press 1. For support, press 2.");
 
 		// If the user doesn't enter input, loop
-		response.Redirect(new Uri("/voice"));
+		response.Redirect(new Uri("/voice", UriKind.Relative));
 	}
 }
