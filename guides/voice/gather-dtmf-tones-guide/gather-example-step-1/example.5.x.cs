@@ -10,7 +10,7 @@ using System;
 public class VoiceController : TwilioController
 {
 	[HttpPost]
-	public TiwMLResult Index(VoiceRequest request)
+	public TwiMLResult Index(VoiceRequest request)
 	{
 		var response = new VoiceResponse();
 
