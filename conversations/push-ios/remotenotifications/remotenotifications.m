@@ -1,6 +1,6 @@
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
     if (self.conversationsClient && self.conversationsClient.user) {
-        [self.TwilioConversationsClient registerWithNotificationToken:deviceToken
+        [self.conversationsClient registerWithNotificationToken:deviceToken
                                             completion:^(TCHResult *result) {
                                                 if (![result isSuccessful]) {
                                                     // try registration again or verify token
