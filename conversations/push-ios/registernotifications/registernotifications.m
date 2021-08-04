@@ -1,9 +1,9 @@
 if (self.updatedPushToken) {
     [self.conversationsClient registerWithNotificationToken:self.updatedPushToken
                                                  completion:^(TCHResult *result) {
-      if (![result isSuccessful]) {
-        // try registration again or verify token
-      }
+        if (![result isSuccessful]) {
+            // try registration again or verify token
+        }
     }];
 }
 
