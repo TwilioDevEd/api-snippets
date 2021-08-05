@@ -10,7 +10,7 @@ class Example
         var response = new VoiceResponse();
         var pay = new Pay();
         var prompt = new Prompt(for_: "payment-card-number");
-        prompt.Say("Please enter your 15 digit Visa or Mastercard number.");
+        prompt.Say("Please enter your 16 digit Visa or Mastercard number.");
         pay.Append(prompt);
         response.Append(pay);
 
