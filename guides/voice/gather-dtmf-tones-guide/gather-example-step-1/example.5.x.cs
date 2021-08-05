@@ -3,18 +3,20 @@
 
 using System.Web.Mvc;
 using Twilio.AspNet.Mvc;
+using Twilio.AspNet.Common;
 using Twilio.TwiML;
+using System;
 
 public class VoiceController : TwilioController
 {
 	[HttpPost]
-	public ActionResult Index(string digits)
+	public TwiMLResult Index(VoiceRequest request)
 	{
 		var response = new VoiceResponse();
 
-		if (!string.IsNullOrEmpty(digits))
+		if (!string.IsNullOrEmpty(request.Digits))
 		{
-			switch (digits)
+			switch (request.Digits)
 			{
 				case "1":
 					response.Say("You selected sales. Good for you!");
@@ -39,11 +41,10 @@ public class VoiceController : TwilioController
 
 	private static void RenderMainMenu(VoiceResponse response)
 	{
-		response.Gather(
-			new Gather(numDigits: 1)
-			.Say("For sales, press 1. For support, press 2."));
+		response.Gather(numDigits: 1)
+			.Say("For sales, press 1. For support, press 2.");
 
 		// If the user doesn't enter input, loop
-		response.Redirect("/voice");
+		response.Redirect(new Uri("/voice", UriKind.Relative));
 	}
 }
