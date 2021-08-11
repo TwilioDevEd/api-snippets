@@ -9,7 +9,6 @@ api_key = os.environ['TWILIO_API_KEY']
 api_secret = os.environ['TWILIO_API_KEY_SECRET']
 
 # required for Sync grant
-outgoing_application_sid = 'APxxxxxxxxxxxxx'
 identity = 'user'
 
 # Create access token with credentials

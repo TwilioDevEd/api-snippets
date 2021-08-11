@@ -8,7 +8,6 @@ const twilioApiKey = process.env.TWILIO_API_KEY;
 const twilioApiSecret = process.env.TWILIO_API_SECRET;
 
 // Used specifically for creating Sync tokens
-const outgoingApplicationSid = 'APxxxxxxxxxxxxx';
 const identity = 'user';
 
 // Create a "grant" which enables a client to use Sync as a given user

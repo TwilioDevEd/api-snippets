@@ -11,7 +11,6 @@ $twilioApiKey = getenv('TWILIO_API_KEY');
 $twilioApiSecret = getenv('TWILIO_API_KEY_SECRET');
 
 // Required for Sync grant
-$outgoingApplicationSid = 'APxxxxxxxxxxxx';
 // An identifier for your app - can be anything you'd like
 $identity = "john_doe";
 

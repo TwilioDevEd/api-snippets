@@ -12,7 +12,6 @@ identity = 'user'
 
 # Create Sync grant for our token
 grant = Twilio::JWT::AccessToken::SyncGrant.new
-grant.outgoing_application_sid = outgoing_application_sid
 
 # Optional: add to allow incoming calls
 grant.incoming_allow = true

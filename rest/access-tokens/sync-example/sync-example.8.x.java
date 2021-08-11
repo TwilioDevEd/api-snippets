@@ -12,7 +12,6 @@ public class TokenGenerator {
     String twilioApiSecret = System.getenv("TWILIO_API_SECRET");
 
     // Required for Sync
-    String outgoingApplicationSid = System.getenv("TWILIO_APP_SID");
     String identity = "user";
       
     // Create Sync grant

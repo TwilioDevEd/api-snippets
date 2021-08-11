@@ -13,7 +13,6 @@ class Example
         const string twilioApiSecret = Environment.GetEnvironmentVariable("TWILIO_API_SECRET");
 
         // These are specific to Sync
-        const string outgoingApplicationSid = "APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         const string identity = "user";
 
         // Create a Sync grant for this token
