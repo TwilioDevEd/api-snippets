@@ -5,6 +5,8 @@ require 'twilio-ruby'
 account_sid = ENV['TWILIO_ACCOUNT_SID']
 api_key = ENV['TWILIO_API_KEY']
 api_secret = ENV['TWILIO_API_KEY_SECRET']
+twilioSyncService = ENV['TWILIO_SYNC_SERVICE_SID']
+
 
 # Required for Sync
 outgoing_application_sid = 'APxxxxxxxxxxxx'
@@ -13,8 +15,8 @@ identity = 'user'
 # Create Sync grant for our token
 grant = Twilio::JWT::AccessToken::SyncGrant.new
 
-# Optional: add to allow incoming calls
-grant.incoming_allow = true
+# Create a "grant" which enables a client to use Sync as a given user
+grant.serviceSid = twilioSyncService
 
 # Create an Access Token
 token = Twilio::JWT::AccessToken.new(

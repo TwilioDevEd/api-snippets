@@ -9,6 +9,8 @@ use Twilio\Jwt\Grants\SyncGrant;
 $twilioAccountSid = getenv('TWILIO_ACCOUNT_SID');
 $twilioApiKey = getenv('TWILIO_API_KEY');
 $twilioApiSecret = getenv('TWILIO_API_KEY_SECRET');
+$twilioSyncService = getenv("TWILIO_SYNC_SERVICE_SID");
+
 
 // Required for Sync grant
 // An identifier for your app - can be anything you'd like
@@ -25,10 +27,10 @@ $token = new AccessToken(
 
 // Create Sync grant
 $syncGrant = new SyncGrant();
-$syncGrant->setOutgoingApplicationSid($outgoingApplicationSid);
 
-// Optional: add to allow incoming calls
-$syncGrant->setIncomingAllow(true);
+// Create a "grant" which enables a client to use Sync as a given user
+$syncGrant->setServiceSid($twilioSyncService);
+
 
 // Add grant to token
 $token->addGrant($syncGrant);

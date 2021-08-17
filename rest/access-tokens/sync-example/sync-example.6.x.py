@@ -7,6 +7,7 @@ from twilio.jwt.access_token.grants import SyncGrant
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 api_key = os.environ['TWILIO_API_KEY']
 api_secret = os.environ['TWILIO_API_KEY_SECRET']
+twilioSyncService = os.environ[process.env.['TWILIO_SYNC_SERVICE_SID']
 
 # required for Sync grant
 identity = 'user'
@@ -16,9 +17,10 @@ token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 
 # Create a Sync grant and add to token
 sync_grant = SyncGrant(
-    outgoing_application_sid=outgoing_application_sid,
-    incoming_allow=True, # Optional: add to allow incoming calls
+    # Create a "grant" which enables a client to use Sync as a given user
+    serviceSid=twilioSyncService
 )
+
 token.add_grant(sync_grant)
 
 # Return token info as JSON
