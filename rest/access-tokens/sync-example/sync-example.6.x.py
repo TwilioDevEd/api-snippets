@@ -18,7 +18,7 @@ token = AccessToken(account_sid, api_key, api_secret, identity=identity)
 # Create a Sync grant and add to token
 sync_grant = SyncGrant(
     # Create a "grant" which enables a client to use Sync as a given user
-    serviceSid=twilio_sync_service
+    service_sid=twilio_sync_service
 )
 
 token.add_grant(sync_grant)
