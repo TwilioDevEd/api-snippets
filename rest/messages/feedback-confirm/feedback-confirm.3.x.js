@@ -19,7 +19,6 @@ app.get('/confirm', (req, res) => {
 
   // Send Feedback to Twilio
   client
-    .accounts(accountSid)
     .messages(messageSid)
     .feedback.create({
       outcome: 'confirmed',
