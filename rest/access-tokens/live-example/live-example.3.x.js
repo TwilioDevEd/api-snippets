@@ -22,15 +22,15 @@ const client = require('twilio')(twilioApiKey, twilioApiSecret, {
 client.media.playerStreamer('VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
     .playbackGrant()
     .create({ttl: 60})
-    .then(playback_grant => {
+    .then(playbackGrant => {
         // Wrap the PlaybackGrant that you received from the REST API
         // in a PlaybackGrant object and then attach that wrapped
         // grant to your Access Token
         const wrappedPlaybackGrant = new PlaybackGrant({
-          grant: playback_grant.grant
+          grant: playbackGrant.grant
         });
         token.addGrant(wrappedPlaybackGrant);
+        // Serialize the token to a JWT string
+        console.log(token.toJwt());
       }
     );
-// Serialize the token to a JWT string
-console.log(token.toJwt());
