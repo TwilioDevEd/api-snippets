@@ -1,5 +1,5 @@
 const AccessToken = require('twilio').jwt.AccessToken;
-const VideoGrant = AccessToken.VideoGrant;
+const PlaybackGrant = AccessToken.PlaybackGrant;
 
 // Used when generating any kind of tokens
 // To set up environmental variables, see http://twil.io/secure
@@ -19,19 +19,18 @@ const token = new AccessToken(
 // via the REST API
 const client = require('twilio')(twilioApiKey, twilioApiSecret, { 
     accountSid: twilioAccountSid });
-const playbackGrant = client.media.playerStreamer('VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .playbackGrant()
-  .create({ttl: 60})
-  .then(playback_grant => console.log(playback_grant.sid));
-
-// Wrap the PlaybackGrant that you received from the REST API
-// in a PlaybackGrant object and then attach that wrapped
-// grant to your Access Token
-const wrappedPlaybackGrant = new PlaybackGrant({
-  grant: playbackGrant.grant
-});
-
-token.addGrant(wrappedPlaybackGrant);
-
+client.media.playerStreamer('VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+    .playbackGrant()
+    .create({ttl: 60})
+    .then(playback_grant => {
+        // Wrap the PlaybackGrant that you received from the REST API
+        // in a PlaybackGrant object and then attach that wrapped
+        // grant to your Access Token
+        const wrappedPlaybackGrant = new PlaybackGrant({
+          grant: playback_grant.grant
+        });
+        token.addGrant(wrappedPlaybackGrant);
+      }
+    );
 // Serialize the token to a JWT string
 console.log(token.toJwt());
