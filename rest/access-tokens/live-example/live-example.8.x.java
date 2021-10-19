@@ -30,7 +30,7 @@ public class TokenGenerator {
       twilioAccountSid,
       twilioApiKey,
       twilioApiSecret
-    ).grant(grant).build();
+    ).grant(wrappedPlaybackGrant).build();
 
     System.out.println(token.toJwt());
   }

@@ -2,7 +2,7 @@
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
 require_once '/path/to/vendor/autoload.php'; // Loads the library
 use Twilio\Jwt\AccessToken;
-use Twilio\Jwt\Grants\VideoGrant;
+use Twilio\Jwt\Grants\PlaybackGrant;
 use Twilio\Rest\Client;
 
 // Required for all Twilio access tokens
