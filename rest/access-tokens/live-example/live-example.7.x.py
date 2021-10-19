@@ -25,7 +25,7 @@ playback_grant = client.media \
 # in a PlaybackGrant object and then attach that wrapped
 # grant to your Access Token
 wrapped_grant = PlaybackGrant(grant=playback_grant.grant)
-token.add_grant(PlaybackGrant(grant=wrapped_grant)
+token.add_grant(PlaybackGrant(grant=wrapped_grant))
 
 # Return token info as JSON
 print(token.to_jwt())
