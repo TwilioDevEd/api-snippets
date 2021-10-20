@@ -15,8 +15,7 @@ playback_grant = @client.media
                         .create(ttl: 60)
 
 # Wrap the grant you received from the API
-# in a PlaybackGrant object and then attach that wrapped
-# grant to your Access Token
+# in a PlaybackGrant object
 wrapped_playback_grant = Twilio::JWT::AccessToken::PlaybackGrant.new
 wrapped_playback_grant.grant = playback_grant.grant
 

@@ -21,11 +21,10 @@ public class TokenGenerator {
         .create();
 
     // Wrap the grant you received from the API
-    // in a PlaybackGrant object and then attach that wrapped
-    // grant to your Access Token
+    // in a PlaybackGrant object
     PlaybackGrant wrappedPlaybackGrant = new PlaybackGrant().setGrant(playbackGrant.getGrant());
 
-    // Create access token
+    // Create an Access Token and add the PlaybackGrant to it
     AccessToken token = new AccessToken.Builder(
       twilioAccountSid,
       twilioApiKey,
