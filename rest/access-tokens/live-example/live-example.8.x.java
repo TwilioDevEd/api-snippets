@@ -15,8 +15,8 @@ public class TokenGenerator {
     // Create a PlaybackGrant resource for a specific PlayerStreamer
     // via the REST API
     Twilio.init(twilioApiKey, twilioApiSecret, twilioAccountSid);
-    PlaybackGrant playbackGrant =
-        PlaybackGrant.creator("VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    com.twilio.rest.media.v1.playerstreamer.PlaybackGrant playbackGrant =
+        com.twilio.rest.media.v1.playerstreamer.PlaybackGrant.creator("VJ3f3dc19da15af020bb395f0487f5221d")
         .setTtl(60)
         .create();
 
