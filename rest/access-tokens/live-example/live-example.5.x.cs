@@ -22,7 +22,7 @@ class Example
         TwilioClient.Init(twilioApiKey, twilioApiSecret, twilioAccountSid);
         var playbackGrant = PlaybackGrantResource.Create(
             ttl: 60,
-            pathSid: "VJ3f3dc19da15af020bb395f0487f5221d"
+            pathSid: "VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         );
 
         // Serialize the returned grant into <Dictionary<string, object>>
@@ -30,15 +30,12 @@ class Example
         var grantDictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
 
         // Wrap the grant you received from the API
-        // in a PlaybackGrant object and then attach that wrapped
-        // grant to your Access Token
-        var wrappedPlaybackGrant = new PlaybackGrant();
-        Console.WriteLine(playbackGrant);
-        wrappedPlaybackGrant.Grant = grantDictionary;
+        // in a PlaybackGrant object
+        var wrappedPlaybackGrant = new PlaybackGrant{Grant = grantDictionary};
 
         var grants = new HashSet<IGrant> { wrappedPlaybackGrant };
 
-        // Create an Access Token generator and attach the grants
+        // Create an Access Token generator and attach the PlaybackGrant
         var token = new Token(
             twilioAccountSid,
             twilioApiKey,

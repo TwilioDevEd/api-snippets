@@ -28,12 +28,11 @@ $token = new AccessToken(
                                     ->create(["ttl" => 60]);
 
 // Wrap the grant you received from the API
-// in a PlaybackGrant object and then attach that wrapped
-// grant to your Access Token
+// in a PlaybackGrant object
 $wrappedPlaybackGrant = new PlaybackGrant();
 $wrappedPlaybackGrant->setGrant($playbackGrant->grant);
 
-// Add grant to token
+// Attach the PlaybackGrant to the Access Token
 $token->addGrant($wrappedPlaybackGrant);
 
 // render token to string
