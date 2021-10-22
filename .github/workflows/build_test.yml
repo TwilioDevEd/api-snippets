@@ -1,0 +1,119 @@
+name: Build and test snippets
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  FAKE_CERT_PATH: ~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem
+  GRADLE_OPTS: "-Dorg.gradle.daemon=true"
+  BASH: /bin/bash
+  BASH_SOURCE: /usr/local/bin/virtualenvwrapper.sh
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel virtualenv virtualenvwrapper
+          pip install -r requirements.txt
+      - name: Run Tests
+        run: |
+          echo "Run api faker"
+          ./run_twilio_api_faker.sh
+          echo "Running tests"
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: python
+
+  curl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - name: Run Tests
+        run: |
+          ./run_twilio_api_faker.sh
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: curl
+
+  node:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - name: Run Tests
+        run: |
+          ./run_twilio_api_faker.sh
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: node
+
+  ruby:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - name: Install rvm
+        run: |
+          sudo apt-add-repository -y ppa:rael-gc/rvm
+          sudo apt-get update
+          sudo apt-get install rvm
+          sudo usermod -a -G rvm $USER
+      - name: Run Tests
+        run: |
+          ./run_twilio_api_faker.sh
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: ruby
+
+  csharp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - name: Run Tests
+        run: |
+          ./run_twilio_api_faker.sh
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: csharp
+
+  php:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/setup
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '5.6'
+      - name: Run Tests
+        run: |
+          ./run_twilio_api_faker.sh
+          ruby tools/snippet-testing/snippet_tester.rb -i
+        env:
+          SNIPPET_LANGUAGE: php

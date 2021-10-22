@@ -5,7 +5,7 @@ module LanguageHandler
     LANG_CNAME = 'py'.freeze
 
     def self.run_before_test(directory)
-      dirs = ['./venv/*', './guides/*', './testable_snippets/*']
+      dirs = ['venv/*', 'guides/*', 'testable_snippets/*']
       exclude = dirs.map{|dir| "--exclude='#{dir}'"}
       Dir.chdir(directory) do
         output = `yapf #{exclude.join(' ')} -i -r . && flake8`
