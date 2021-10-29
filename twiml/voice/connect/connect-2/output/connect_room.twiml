@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Connect>
+    <Room participantIdentity="alice">DailyStandup</Room>
+  </Connect>
+</Response>
