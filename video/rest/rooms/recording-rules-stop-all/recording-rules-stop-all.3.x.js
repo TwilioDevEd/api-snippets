@@ -8,4 +8,4 @@ const client = require('twilio')(accountSid, authToken);
 client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
             .recordingRules
             .update({rules: [{"type": "exclude", "all": true}]})
-            .then(recording_rules => console.log(recording_rules.roomSid));
+            .then(recordingRules => console.log(recordingRules.roomSid));

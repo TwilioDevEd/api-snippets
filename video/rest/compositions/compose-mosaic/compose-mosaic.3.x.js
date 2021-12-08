@@ -16,7 +16,7 @@ client.video.compositions.
   create({
     roomSid: 'RMXXXX',
     audioSources: '*',
-    audioSourcesExcluded: 'advisor-audio'
+    audioSourcesExcluded: 'advisor-audio',
     videoLayout: {
         interviewed: {
           z_pos: 2,

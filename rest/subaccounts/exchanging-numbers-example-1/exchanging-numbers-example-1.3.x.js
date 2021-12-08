@@ -7,4 +7,4 @@ const client = require('twilio')(accountSid, authToken);
 
 client.incomingPhoneNumbers('PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .update({accountSid: process.env.TWILIO_SUB_ACCOUNT_SID})
-  .then(incoming_phone_number => console.log(incoming_phone_number.friendlyName));
+  .then(incomingPhoneNumber => console.log(incomingPhoneNumber.friendlyName));
