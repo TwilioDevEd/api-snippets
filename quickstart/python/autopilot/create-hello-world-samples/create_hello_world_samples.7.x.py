@@ -15,7 +15,8 @@ phrases = [
     'Hi there'
 ]
 
-# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
+# Replace 'UAXXX...' with your Assistant's unique SID 
+# https://www.twilio.com/console/autopilot/list
 for phrase in phrases:
     sample = client.autopilot \
         .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \

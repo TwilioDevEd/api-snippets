@@ -1,7 +1,6 @@
-#Download the Python helper library from twilio.com/docs/python/install
+# Download the Python helper library from twilio.com/docs/python/install
 import os
 from twilio.rest import Client
-import json
 
 # Find your credentials at twilio.com/console
 # To set up environmental variables, see http://twil.io/secure

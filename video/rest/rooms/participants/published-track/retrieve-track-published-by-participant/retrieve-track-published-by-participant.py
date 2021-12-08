@@ -9,8 +9,8 @@ api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 publishedtrack = client.video.rooms('DailyStandup')\
-        .participants.get('Alice')\
-        .published_tracks.get('Camera')\
-        .fetch()
+    .participants.get('Alice')\
+    .published_tracks.get('Camera')\
+    .fetch()
 
 print(publishedtrack.date_created)

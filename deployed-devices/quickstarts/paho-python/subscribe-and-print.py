@@ -11,8 +11,10 @@ client.tls_set(None, pem_location, key_location)
 
 
 #
-# Initialize TLS, specify trusted CA roots, client certifiate and key file locations.
-# You may need to adjust the location of trusted Certificate Authorities depending on your OS.
+# Initialize TLS, specify trusted CA roots, client certifiate and key 
+# file locations.
+# You may need to adjust the location of trusted Certificate 
+# Authorities depending on your OS.
 # Typical locations are /etc/ssl/cert.pem and /usr/local/ssl/cert.pem
 #
 client.tls_set("/usr/local/ssl/cert.pem",

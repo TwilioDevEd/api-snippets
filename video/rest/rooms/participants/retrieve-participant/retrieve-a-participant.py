@@ -9,7 +9,7 @@ api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 participant = client.video.rooms('DailyStandup')\
-        .participants.get('Alice')\
-        .fetch()
+    .participants.get('Alice')\
+    .fetch()
 
 print(participant.sid)

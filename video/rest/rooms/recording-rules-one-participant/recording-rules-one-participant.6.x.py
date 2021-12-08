@@ -12,6 +12,9 @@ client = Client(account_sid, auth_token)
 recording_rules = client.video \
                         .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                         .recording_rules \
-                        .update(rules=[{"type": "include", "publisher": "Alice"}, {"type": "include", "kind": "audio"}])
+                        .update(rules=[
+                            {"type": "include", "publisher": "Alice"},
+                            {"type": "include", "kind": "audio"}
+                        ])
 
 print(recording_rules.room_sid)

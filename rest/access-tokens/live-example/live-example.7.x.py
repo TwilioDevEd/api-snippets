@@ -16,9 +16,9 @@ token = AccessToken(account_sid, api_key, api_secret)
 # via the REST API
 client = Client(api_key, api_secret, account_sid)
 playback_grant = client.media \
-                    .player_streamer('VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
-                    .playback_grant() \
-                    .create(ttl=60)
+    .player_streamer('VJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
+    .playback_grant() \
+    .create(ttl=60)
 
 
 # Wrap the grant you received from the API
