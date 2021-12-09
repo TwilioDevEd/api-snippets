@@ -25,7 +25,7 @@ get '/token' do
 
   # Create an Access Token for Chat usage
   token = Twilio::Util::AccessToken.new(
-# To set up environmental variables, see http://twil.io/secure
+    # To set up environmental variables, see http://twil.io/secure
     ENV['TWILIO_ACCOUNT_SID'],
     ENV['TWILIO_API_KEY'],
     ENV['TWILIO_API_SECRET'],

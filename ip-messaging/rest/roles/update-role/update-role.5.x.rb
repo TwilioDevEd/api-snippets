@@ -11,5 +11,5 @@ service = client.chat.v2.services(service_sid)
 # Update a role
 role = service.roles('RLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX').fetch
 new_permissions = role.permissions | ['sendMediaMessage']
-role = role.update(permission: new_permissions)
+role.update(permission: new_permissions)
 puts "Role #{role.sid} now has permissions #{role.permissions.join(', ')}"

@@ -10,22 +10,22 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 
 # Build task actions that say something and listens for a repsonse.
 phrases = [
-    "hello",
-    "hi",
-    "Hello",
-    "Hi there"
+  'hello',
+  'hi',
+  'Hello',
+  'Hi there'
 ]
 
 # Create the hello_world task
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 phrases.each do |phrase|
   sample = @client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                             .tasks("hello-world")
-                             .samples
-                             .create(
-                               language: "en-us",
-                               tagged_text: phrase
-                             )
+                  .tasks('hello-world')
+                  .samples
+                  .create(
+                    language: 'en-us',
+                    tagged_text: phrase
+                  )
 
   puts sample.sid
 end
