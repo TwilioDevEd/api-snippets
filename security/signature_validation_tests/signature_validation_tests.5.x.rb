@@ -20,7 +20,7 @@ params = {
 # rubocop:disable Metrics/MethodLength
 def test_url(method, url, params, valid)
   if method == 'GET'
-    url += '?' + URI.encode_www_form(params)
+    url += "?#{URI.encode_www_form(params)}"
     params = {}
   end
 
