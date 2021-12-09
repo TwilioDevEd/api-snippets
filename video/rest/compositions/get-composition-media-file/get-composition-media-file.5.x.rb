@@ -14,10 +14,10 @@ composition_sid = 'CJXXXX'
 
 uri = "https://video.twilio.com/v1/Compositions/#{composition_sid}/Media?Ttl=3600"
 
-response = client.request("video.twilio.com", 433, 'GET', uri)
+response = client.request('video.twilio.com', 433, 'GET', uri)
 
 media_location = response.body['redirect_to']
 # For example, write the composition media to a local file
-open('myFile.mp4', "wb") do |file|
+open('myFile.mp4', 'wb') do |file|
   file << open(media_location).read
 end

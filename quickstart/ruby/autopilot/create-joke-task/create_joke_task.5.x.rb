@@ -11,7 +11,7 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 # Provide actions for the new task
 joke_actions = {
   'actions' => [
-    { "say": 'I was going to look for my missing watch, but I could never find the time.' },
+    { "say": 'I was going to look for my missing watch, but I could never find the time.' }
   ]
 }
 

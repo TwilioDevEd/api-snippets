@@ -11,7 +11,6 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 recording_rules = @client.video
                          .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                          .recording_rules
-                         .update(rules: [{"type": :"include", "kind": "audio"}])
+                         .update(rules: [{ "type": :include, "kind": 'audio' }])
 
 puts recording_rules.room_sid
-
