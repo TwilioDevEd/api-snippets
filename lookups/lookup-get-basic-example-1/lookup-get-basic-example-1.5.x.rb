@@ -13,7 +13,7 @@ begin
   puts number.carrier['type']
   puts number.carrier['name']
 rescue Twilio::REST::RestError => e
-  if e.status_code === 404
+  if e.status_code === 404 # rubocop:disable Style/CaseEquality
     puts 'No carrier information'
   else
     puts e.message
