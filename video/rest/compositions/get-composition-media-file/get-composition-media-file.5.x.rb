@@ -19,5 +19,5 @@ response = client.request('video.twilio.com', 433, 'GET', uri)
 media_location = response.body['redirect_to']
 # For example, write the composition media to a local file
 open('myFile.mp4', 'wb') do |file|
-  file << open(media_location).read
+  file << File.open(media_location).read
 end
