@@ -21,7 +21,7 @@ composition = @client.video.compositions.create(
       max_rows: 3,
       max_columns: 3,
       reuse: 'show_newest',
-      cells_excluded: [1,3,5,7],
+      cells_excluded: [1, 3, 5, 7],
       video_sources: ['*']
     }
   },

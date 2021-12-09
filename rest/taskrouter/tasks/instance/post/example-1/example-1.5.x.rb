@@ -13,14 +13,14 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 # update a task's attributes
 task = client.taskrouter.v1.workspaces(workspace_sid).tasks(task_sid)
 
-task = task.update(attributes: '{"type":"support"}')
+task.update(attributes: '{"type":"support"}')
 
 puts task.attributes
 
 # cancel a task
 task = client.taskrouter.v1.workspaces(workspace_sid).tasks(task_sid)
 
-task = task.update(assignment_status: 'canceled', reason: 'waiting too long')
+task.update(assignment_status: 'canceled', reason: 'waiting too long')
 
 puts task.assignment_status
 

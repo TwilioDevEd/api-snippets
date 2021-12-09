@@ -10,6 +10,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Update a List TTL, set to expires in 10 days
-list = service.sync_lists('MyFirstList').update(ttl: 864000)
+list = service.sync_lists('MyFirstList').update(ttl: 864_000)
 
 puts puts "SID: #{list.sid}, expires: #{list.date_expires}"

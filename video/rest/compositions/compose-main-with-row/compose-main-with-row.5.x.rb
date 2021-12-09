@@ -24,7 +24,7 @@ composition = @client.video.compositions.create(
       width: 1260,
       height: 160,
       max_rows: 1,
-      video_sources: ['*']
+      video_sources: ['*'],
       video_sources_excluded: ['teacher-screen-video']
     }
   },

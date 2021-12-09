@@ -11,7 +11,7 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Query Sync List
 items = service.sync_lists('MyCollection').sync_list_items.stream(
-  from:  '10',
+  from: '10',
   order: 'asc'
 )
 
