@@ -14,7 +14,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 reservation = client.taskrouter.v1.workspaces(workspace_sid)
                     .tasks(task_sid).reservations(reservation_sid)
 
-reservation = reservation.update(reservation_status: 'accepted')
+reservation.update(reservation_status: 'accepted')
 
 puts reservation.reservation_status
 

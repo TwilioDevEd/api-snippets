@@ -14,12 +14,12 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 reservation = client.taskrouter.v1.workspaces(workspace_sid)
                     .tasks(task_sid).reservations(reservation_sid)
 
-reservation = reservation.update(
-  instruction:              'call',
-  call_from:                '+15558675310',
-  call_url:                 'http://example.com/agent_answer',
+reservation.update(
+  instruction: 'call',
+  call_from: '+15558675310',
+  call_url: 'http://example.com/agent_answer',
   call_status_callback_url: 'http://example.com/agent_answer_status_callback',
-  call_accept:              'true'
+  call_accept: 'true'
 )
 
 puts reservation.reservation_status
