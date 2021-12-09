@@ -9,7 +9,7 @@ workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 worker_sid = 'WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 capability = Twilio::JWT::TaskRouterCapability.new(
- (account_sid, auth_token),
+  account_sid, auth_token,
   workspace_sid, worker_sid
 )
 
@@ -32,8 +32,8 @@ allow_reservation_updates = Twilio::JWT::TaskRouterCapability::Policy.new(
 capability.add_policy(allow_reservation_updates)
 
 Twilio::JWT::TaskRouterCapability::TaskRouterUtils
-.worker_policies(workspace_sid, worker_sid).each { |worker_policy|
-   capability.add_policy(worker_policy)
-}
+  .worker_policies(workspace_sid, worker_sid).each do |worker_policy|
+  capability.add_policy(worker_policy)
+end
 
 puts capability.to_s

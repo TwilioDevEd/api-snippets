@@ -22,7 +22,7 @@ data = [
 response = service.documents.create(
   unique_name: 'MyFirstDocument',
   data: "{#{data.join(',')}}",
-  ttl: 1814400  # expires in 21 days
+  ttl: 1_814_400  # expires in 21 days
 )
 
 puts response

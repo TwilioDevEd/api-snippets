@@ -11,7 +11,7 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Query for a map item
 items = service.sync_maps('Players').sync_map_items.stream(
-  from:  'steph_curry',
+  from: 'steph_curry',
   order: 'asc'
 )
 items.each do |map_item|

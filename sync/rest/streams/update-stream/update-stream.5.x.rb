@@ -10,6 +10,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Update a Map TTL, set to expires in 10 days
-stream = service.sync_streams('MyStream').update(ttl: 864000)
+stream = service.sync_streams('MyStream').update(ttl: 864_000)
 
 puts "SID: #{stream.sid}, expires: #{stream.date_expires}"

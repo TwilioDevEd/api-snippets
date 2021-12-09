@@ -9,8 +9,8 @@ auth_token = 'your_auth_token'
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 sim = @client.supersim.sims('HSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                      .update(
-                         account_sid: 'ACbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
-                       )
+             .update(
+               account_sid: 'ACbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+             )
 
 puts sim.account_sid

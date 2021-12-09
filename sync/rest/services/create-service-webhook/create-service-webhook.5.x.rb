@@ -9,6 +9,6 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 # Create the service
 service = client.sync.v1.services.create(
   friendly_name: 'MySyncServiceInstance',
-  webhook_url:   'https://example.com/sync'
+  webhook_url: 'https://example.com/sync'
 )
 puts service
