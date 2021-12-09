@@ -9,7 +9,7 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
 participant = client.video.rooms('DailyStandup')
-                  .participants('Alice')
-                  .update(status: 'disconnected')
+                    .participants('Alice')
+                    .update(status: 'disconnected')
 
 puts participant.status

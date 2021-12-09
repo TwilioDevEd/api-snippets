@@ -11,9 +11,9 @@ client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 room_sid = 'RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 recording_sid = 'RTXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-uri = 'https://video.twilio.com/v1/' +
-      "Rooms/#{room_sid}/" +
-      "Recordings/#{recording_sid}/" +
+uri = 'https://video.twilio.com/v1/' \
+      "Rooms/#{room_sid}/" \
+      "Recordings/#{recording_sid}/" \
       'Media'
 response = client.request('video.twilio.com', 443, 'GET', uri)
 media_location = response.body['redirect_to']

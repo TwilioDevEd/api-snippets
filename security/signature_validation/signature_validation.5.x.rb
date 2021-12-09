@@ -9,10 +9,10 @@ validator = Twilio::Security::RequestValidator.new(auth_token)
 url = 'https://mycompany.com/myapp.php?foo=1&bar=2'
 params = {
   'CallSid' => 'CA1234567890ABCDE',
-  'Caller'  => '+12349013030',
-  'Digits'  => '1234',
-  'From'    => '+12349013030',
-  'To'      => '+18005551212'
+  'Caller' => '+12349013030',
+  'Digits' => '1234',
+  'From' => '+12349013030',
+  'To' => '+18005551212'
 }
 # The X-Twilio-Signature header attached to the request
 twilio_signature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ='

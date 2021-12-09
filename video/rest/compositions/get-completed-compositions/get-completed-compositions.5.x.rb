@@ -10,9 +10,9 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 compositions = @client.video.compositions
-                            .list(
-                              status: 'completed'
-                            )
+                      .list(
+                        status: 'completed'
+                      )
 
 compositions.each do |c|
   puts c.sid
