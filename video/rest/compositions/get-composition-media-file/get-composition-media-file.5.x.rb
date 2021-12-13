@@ -1,7 +1,6 @@
 # Download the helper library from https://www.twilio.com/docs/ruby/install
 require 'twilio-ruby'
 require 'net/http'
-require 'open-uri'
 
 # Find your credentials at twilio.com/console
 # To set up environmental variables, see http://twil.io/secure
@@ -18,6 +17,8 @@ response = client.request('video.twilio.com', 433, 'GET', uri)
 
 media_location = response.body['redirect_to']
 # For example, write the composition media to a local file
+response = Net::HTTP.get_response(URI.parse(media_location))
+
 open('myFile.mp4', 'wb') do |file|
-  file << File.open(media_location).read
+  file.write(response.body)
 end
