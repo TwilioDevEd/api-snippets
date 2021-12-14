@@ -34,7 +34,7 @@ module LanguageHandler
       @input_file = snippet_model.get_input_file(lang_cname)
       @test_output = snippet_model.test_output
       path = snippet_model.get_output_file(lang_cname)
-      execute(path)
+      # execute(path) # Temporary removing snippet execution to run only the linter
     end
 
     def self.run_before_test(_directory); end
