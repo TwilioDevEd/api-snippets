@@ -1,4 +1,6 @@
-if (message.hasMedia) {
-    NSLog(@"mediaFilename: %@ (optional)", message.mediaFilename);
-    NSLog(@"mediaSize: %ld", message.mediaSize);
-} 
+if (!message.attachedMedia.isEmpty) {
+    for (TCHMedia *media in message.attachedMedia) {
+        NSLog(@"media filename: %@ (optional)", media.filename);
+        NSLog(@"media size: %ld", media.size);
+    }
+}
