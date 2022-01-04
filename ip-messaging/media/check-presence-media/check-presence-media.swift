@@ -1,4 +1,6 @@
-if (message.hasMedia) {
-    print("mediaFilename: \(String(describing: message.mediaFilename)) (optional)")
-    print("mediaSize: \(message.mediaSize)")
-} 
+if (!message.attachedMedia.isEmpty) {
+    for media in message.attachedMedia {
+        print("media filename: \(String(describing: media.filename)) (optional)")
+        print("media size: \(media.size)")
+    }
+}

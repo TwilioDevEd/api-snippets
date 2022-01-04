@@ -1,9 +1,10 @@
-if message.hasMedia() {
-    message.getMediaContentTemporaryUrl { (result, mediaContentUrl) in
-        guard let mediaContentUrl = mediaContentUrl else {
-            return
-        }
-        // Use the url to download an image or other media
-        print(mediaContentUrl)
+conversationsClient.getTemporaryContentUrlsForMedia(message.attachedMedia) { result, mediaSidToUrlMap in
+    guard result.isSuccessful else {
+        print("Couldn't get temporary urls with error: \(String(describing: result.error))")
+        return
+    }
+
+    for (sid, url) in sidToUrlMap {
+        print("\(sid) -> \(url)")
     }
 }
