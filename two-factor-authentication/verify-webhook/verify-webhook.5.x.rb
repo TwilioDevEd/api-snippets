@@ -1,6 +1,6 @@
 require 'uri'
 
-# rubocop:disable Style/Documentation
+# Class to verify an Incoming Two-factor Authentication Webhook
 class CallbackVerifier
   # @param [request] A Rails request object
   # @param [api_key] The API key used to sign the request
@@ -30,4 +30,3 @@ class CallbackVerifier
     hash == signature
   end
 end
-# rubocop:enable Style/Documentation

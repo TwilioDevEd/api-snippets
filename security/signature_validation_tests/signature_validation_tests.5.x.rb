@@ -17,7 +17,6 @@ params = {
   'To' => '+18005551212'
 }
 
-# rubocop:disable Metrics/MethodLength
 def test_url(method, url, params, valid)
   if method == 'GET'
     url += "?#{URI.encode_www_form(params)}"
@@ -34,7 +33,6 @@ def test_url(method, url, params, valid)
   valid_str = valid ? 'valid' : 'invalid'
   puts "HTTP #{method} with #{valid_str} signature returned #{response.code}"
 end
-# rubocop:enable Metrics/MethodLength
 
 test_url('GET', url, params, true)
 test_url('GET', url, params, false)
