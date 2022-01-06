@@ -1,4 +1,4 @@
-exports.handler = function(context, event, callback) {
+exports.handler = (context, event, callback) => {
   const knockKnock = { id: 1, text: 'Knock, knock', favorited: 37 };
   const chicken = {
     id: 2,
@@ -6,5 +6,5 @@ exports.handler = function(context, event, callback) {
     favorited: 12,
   };
   const jokes = [knockKnock, chicken];
-  callback(null, jokes);
+  return callback(null, jokes);
 };
