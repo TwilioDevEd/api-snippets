@@ -14,10 +14,10 @@ client = Client(account_sid, auth_token)
 
 # redirect using a reservation
 reservation = client.taskrouter.workspaces(workspace_sid) \
-        .tasks(task_sid).reservations(reservation_sid) \
-        .update(instruction='redirect',
-                redirect_call_sid='CA123456789',
-                redirect_url='http://example.com/assignment_redirect')
+    .tasks(task_sid).reservations(reservation_sid) \
+    .update(instruction='redirect',
+            redirect_call_sid='CA123456789',
+            redirect_url='http://example.com/assignment_redirect')
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

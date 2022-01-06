@@ -9,8 +9,8 @@ api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 did_delete = client.video\
-                    .compositionHooks('HKXXXX')\
-                    .delete()
+    .compositionHooks('HKXXXX')\
+    .delete()
 
 if(did_delete):
     print('Composition removed')

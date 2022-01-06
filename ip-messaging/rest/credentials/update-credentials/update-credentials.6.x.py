@@ -10,6 +10,7 @@ client = Client(account, token)
 
 credential = client.chat \
     .credentials("CRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX") \
-    .update(friendly_name="MyCredential", api_key=os.environ['TWILIO_API_KEY_SECRET'])
+    .update(friendly_name="MyCredential",
+            api_key=os.environ['TWILIO_API_KEY_SECRET'])
 
 print(credential.friendly_name)

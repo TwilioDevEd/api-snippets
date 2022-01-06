@@ -11,9 +11,11 @@ task_channel_sid = 'TCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 client = Client(account_sid, auth_token)
 
-task_channel = client.taskrouter.workspaces(workspace_sid).task_channels(task_channel_sid)
+task_channel = client.taskrouter.workspaces(workspace_sid).task_channels(
+    task_channel_sid
+)
 
-task_channel.update(friendly_name: "My Channel")
+task_channel.update({"friendly_name": "My Channel"})
 
 print(task_channel.friendly_name)
 print(task_channel.unique_name)

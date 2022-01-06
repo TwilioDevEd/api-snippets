@@ -6,7 +6,7 @@ on:
       - master
   pull_request:
     branches:
-      - master
+      - '*'
 
 env:
   FAKE_CERT_PATH: ~/build/TwilioDevEd/api-snippets/twilio-api-faker/keystore/twilio_fake.pem

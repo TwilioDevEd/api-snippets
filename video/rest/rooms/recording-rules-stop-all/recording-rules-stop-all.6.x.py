@@ -12,6 +12,6 @@ client = Client(account_sid, auth_token)
 recording_rules = client.video \
                         .rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                         .recording_rules \
-                        .update(rules=[{"type": "exclude", "all": true}])
+                        .update(rules=[{"type": "exclude", "all": True}])
 
 print(recording_rules.room_sid)

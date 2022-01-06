@@ -9,8 +9,8 @@ api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 compositions = client.video\
-                    .compositions\
-                    .list(room_sid='RMXXXX')
+    .compositions\
+    .list(room_sid='RMXXXX')
 
 for composition in compositions:
     print('Read compositionSid=%s' % (composition.sid))

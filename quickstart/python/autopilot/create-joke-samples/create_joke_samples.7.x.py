@@ -23,7 +23,8 @@ phrases = [
     'I\'d like to hear a punny joke'
 ]
 
-# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
+# Replace 'UAXXX...' with your Assistant's unique SID 
+# https://www.twilio.com/console/autopilot/list
 # Replace 'UDXXX...' with the SID for the task you just created.
 for phrase in phrases:
     sample = client.autopilot \
