@@ -8,9 +8,9 @@ function registerEventHandlers() {
 // function to handle User updates
 function handleUserUpdate(user, updateReasons) {
   // loop over each reason and check for reachability change
-  updateReasons.forEach(reason =>
+  updateReasons.forEach(reason => {
     if (reason == 'online') {
       //do something
     }
-  )
+  })
 }
