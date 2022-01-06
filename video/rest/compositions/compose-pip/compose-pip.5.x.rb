@@ -11,7 +11,7 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 
 composition = @client.video.compositions.create(
   room_sid: 'RMXXXX',
-  audio_sources: ['MTAAAA','soundtrack'],
+  audio_sources: %w[MTAAAA soundtrack],
   video_layout: {
     main: {
       z_pos: 1,

@@ -8,7 +8,7 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 
 client = Twilio::REST::Client.new api_key_sid, api_key_secret
 
-participants = client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .participants.list(status: 'connected').each do |participant|
-    puts participant.sid
-  end
+client.video.rooms('RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+      .participants.list(status: 'connected').each do |participant|
+  puts participant.sid
+end

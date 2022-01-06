@@ -10,6 +10,6 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 subscribed_track = @client.video.rooms('RMXXXX').participants('PAXXXX')
-    .subscribed_tracks('MTXXXX').fetch()
+                          .subscribed_tracks('MTXXXX').fetch
 
-puts "Read track subscription with sid = " + subscribe_track.sid
+puts "Read track subscription with sid = #{subscribed_track.sid}"

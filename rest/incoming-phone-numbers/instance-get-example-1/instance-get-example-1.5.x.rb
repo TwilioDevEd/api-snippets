@@ -8,7 +8,7 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 incoming_phone_number = @client
-  .incoming_phone_numbers('PNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-  .fetch
+                        .incoming_phone_numbers('PNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+                        .fetch
 
 puts incoming_phone_number.sid

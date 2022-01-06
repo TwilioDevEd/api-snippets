@@ -10,7 +10,7 @@ sub_account_sid = ENV['TWILIO_SUBACCOUNT_SID']
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 incoming_phone_number = @client
-  .incoming_phone_numbers('PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-  .update(account_sid: sub_account_sid)
+                        .incoming_phone_numbers('PNXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                        .update(account_sid: sub_account_sid)
 
 puts incoming_phone_number.friendly_name

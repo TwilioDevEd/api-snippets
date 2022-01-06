@@ -11,27 +11,27 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 url = 'https://mycompany.com/myapp'
 params = {
   'CallSid' => 'CA1234567890ABCDE',
-  'Caller'  => '+12349013030',
-  'Digits'  => '1234',
-  'From'    => '+12349013030',
-  'To'      => '+18005551212'
+  'Caller' => '+12349013030',
+  'Digits' => '1234',
+  'From' => '+12349013030',
+  'To' => '+18005551212'
 }
 
 def test_url(method, url, params, valid)
-    if method == 'GET'
-        url += '?' + URI.encode_www_form(params)
-        params = {}
-    end
+  if method == 'GET'
+    url += "?#{URI.encode_www_form(params)}"
+    params = {}
+  end
 
-    signature = @validator.build_signature_for(valid ? url : "http://invalid.com", params)
-    headers = {'X-Twilio-Signature': signature}
-    if method == 'GET'
-      response = HTTParty.get(url, headers: headers)
-    else
-      response = HTTParty.post(url, body: params, headers: headers)
-    end
-    valid_str = valid ? 'valid' : 'invalid'
-    puts "HTTP #{method} with #{valid_str} signature returned #{response.code}"
+  signature = @validator.build_signature_for(valid ? url : 'http://invalid.com', params)
+  headers = { 'X-Twilio-Signature': signature }
+  response = if method == 'GET'
+               HTTParty.get(url, headers: headers)
+             else
+               HTTParty.post(url, body: params, headers: headers)
+             end
+  valid_str = valid ? 'valid' : 'invalid'
+  puts "HTTP #{method} with #{valid_str} signature returned #{response.code}"
 end
 
 test_url('GET', url, params, true)

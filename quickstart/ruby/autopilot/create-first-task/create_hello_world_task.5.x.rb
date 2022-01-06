@@ -10,7 +10,7 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 
 # Build task actions that say something and listens for a repsonse.
 hello_world_task_actions = {
-  "actions" => [
+  'actions' => [
     { "say": "Hi there, I'm your virtual assistant! How can I help you?" },
     { "listen": true }
   ]
@@ -19,11 +19,11 @@ hello_world_task_actions = {
 # Create the hello_world task
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 task = @client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                         .tasks
-                         .create(
-                           unique_name: "hello-world",
-                           actions: hello_world_task_actions
-                         )
+              .tasks
+              .create(
+                unique_name: 'hello-world',
+                actions: hello_world_task_actions
+              )
 
-puts "Hello-world task has been created!"
+puts 'Hello-world task has been created!'
 puts task.sid

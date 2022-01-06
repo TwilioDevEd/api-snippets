@@ -1,12 +1,12 @@
 require 'uri'
 
+# Class to verify an Incoming Two-factor Authentication Webhook
 class CallbackVerifier
-
   # @param [request] A Rails request object
   # @param [api_key] The API key used to sign the request
   # @return [boolean] True if verified
   def verify_callback(request, api_key)
-    url = url_for(:only_path => false, :overwrite_params=>nil)
+    url = url_for(only_path: false, overwrite_params: nil)
 
     # Sort and join the parameters on Rails
     json_params = JSON.parse(request.body.read)

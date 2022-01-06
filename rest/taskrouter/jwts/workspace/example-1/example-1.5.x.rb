@@ -8,7 +8,7 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 workspace_sid = 'WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 capability = Twilio::JWT::TaskRouterCapability.new(
- (account_sid, auth_token), workspace_sid, workspace_sid
+  account_sid, auth_token, workspace_sid, workspace_sid
 )
 
 allow_fetch_subresources = Twilio::JWT::TaskRouterCapability::Policy.new(

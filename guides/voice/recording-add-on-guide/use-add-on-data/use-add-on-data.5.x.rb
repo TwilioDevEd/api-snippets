@@ -31,7 +31,7 @@ post '/callback' do
 
   payload_url = add_ons['results']['ibm_watson_speechtotext']['payload'][0]['url']
 
-# To set up environmental variables, see http://twil.io/secure
+  # To set up environmental variables, see http://twil.io/secure
   account_sid = ENV['TWILIO_ACCOUNT_SID']
   auth_token = ENV['TWILIO_AUTH_TOKEN']
   resp = HTTParty.get(

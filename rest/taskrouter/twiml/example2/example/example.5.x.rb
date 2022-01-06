@@ -5,7 +5,6 @@ require 'sinatra'
 set :port, 8080
 
 post '/enqueue_call' do
-
   attributes = '{"account_number": "12345abcdef"}'
 
   Twilio::TwiML::VoiceResponse.new do |response|

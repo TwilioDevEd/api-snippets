@@ -12,6 +12,6 @@ begin
                     .document_permissions('bob')
                     .update(read: true, write: true, manage: false)
   puts response
-rescue Twilio::REST::TwilioError => err
-  puts err
+rescue Twilio::REST::TwilioError => e
+  puts e
 end

@@ -10,11 +10,11 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 @client.video.rooms('RMXXXX').participants('Customer')
-.subscribe_rules.update(
-  rules: [
-    {"type": "include", "all": true},
-    {"type": "exclude", "publisher": "Supervisor"}
-  ]
-)
+       .subscribe_rules.update(
+         rules: [
+           { "type": 'include', "all": true },
+           { "type": 'exclude', "publisher": 'Supervisor' }
+         ]
+       )
 
 puts 'Subscribe Rules updated successfully'

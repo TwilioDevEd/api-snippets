@@ -13,10 +13,10 @@ composition = @client.video.compositions.create(
   room_sid: 'RMXXXX',
   video_layout: {
     grid: {
-      video_sources: [
-        "RTAAAA",
-        "MTBBBB",
-        "teacher-webcast"
+      video_sources: %w[
+        RTAAAA
+        MTBBBB
+        teacher-webcast
       ]
     }
   },
