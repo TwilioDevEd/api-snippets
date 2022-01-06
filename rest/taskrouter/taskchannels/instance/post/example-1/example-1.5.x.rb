@@ -12,7 +12,7 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 task_channel = client.taskrouter.v1.workspaces(workspace_sid).task_channels(task_channel_sid)
 
-task_channel.update(friendly_name: "My Channel")
+task_channel.update(friendly_name: 'My Channel')
 
 puts task_channel.friendly_name
 puts task_channel.unique_name

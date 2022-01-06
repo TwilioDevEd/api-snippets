@@ -7,7 +7,7 @@ post '/voice' do
       r.Dial callerId: '+15017122661' do |d|
         # wrap the phone number or client name in the appropriate TwiML verb
         # by checking if the number given has only digits and format symbols
-        if params['To'].match?(/^[\d\+\-\(\) ]+$/)
+        if params['To'].match?(/^[\d+\-() ]+$/)
           d.Number params['To']
         else
           d.Client params['To']

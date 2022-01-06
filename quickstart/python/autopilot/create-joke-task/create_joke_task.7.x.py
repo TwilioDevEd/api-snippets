@@ -11,12 +11,17 @@ client = Client(account_sid, auth_token)
 # Provide actions for the new task
 joke_actions = {
     'actions': [
-        {'say': 'I was going to look for my missing watch, but I could never find the time.'}
+        {
+            'say': 
+                'I was going to look for my missing ' 
+                'watch, but I could never find the time.'
+        }
     ]
 }
 
 # Create a new task named 'tell_a_joke'
-# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
+# Replace 'UAXXX...' with your Assistant's unique SID 
+# https://www.twilio.com/console/autopilot/list
 task = client.autopilot \
     .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
     .tasks \

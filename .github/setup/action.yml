@@ -1,0 +1,21 @@
+name: "Set up"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout twilio-api-faker
+      uses: actions/checkout@v2
+      with:
+        repository: TwilioDevEd/twilio-api-faker
+        path: twilio-api-faker
+    - name: Setup Ruby 2.6
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Install general dependencies
+      run: |
+        sudo apt-get install -y --force-yes build-essential ca-certificates curl
+        gem install json colorize nokogiri rubocop
+        sudo cp twilio-api-faker/keystore/twilio_fake.pem /usr/local/share/ca-certificates/twilio_fake.crt
+        sudo update-ca-certificates
+      shell: bash

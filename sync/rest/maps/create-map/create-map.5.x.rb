@@ -11,5 +11,5 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a Maps group
 response = service.sync_maps.create(unique_name: 'Players',
-                                    ttl: 1814400)
+                                    ttl: 1_814_400)
 puts response

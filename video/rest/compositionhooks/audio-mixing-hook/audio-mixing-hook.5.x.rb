@@ -9,11 +9,11 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
-compositionHook = @client.video.compositionHooks.create(
+composition_hook = @client.video.compositionHooks.create(
   friendlyName: 'MixingAllRoomAudiosHook',
   audio_sources: '*',
   status_callback: 'http://my.server.org/callbacks',
   format: 'mp4'
 )
 
-puts compositionHook.sid
+puts composition_hook.sid

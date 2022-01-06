@@ -9,9 +9,10 @@ post '/sms' do
 
   # Build response based on given body param
   twiml = Twilio::TwiML::MessagingResponse.new do |resp|
-    if body == 'hello'
+    case body
+    when 'hello'
       resp.message body: 'Hi!'
-    elsif body == 'bye'
+    when 'bye'
       resp.message body: 'Goodbye'
     end
   end

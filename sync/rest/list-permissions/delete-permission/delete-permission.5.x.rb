@@ -11,6 +11,6 @@ begin
   response = service.sync_lists('MyFirstList')
                     .sync_list_permissions('bob').delete
   puts response
-rescue Twilio::REST::TwilioError => err
-  puts err
+rescue Twilio::REST::TwilioError => e
+  puts e
 end

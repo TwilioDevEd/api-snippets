@@ -10,19 +10,19 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 
 # Provide actions for the new task
 joke_actions = {
-  "actions" => [
-    { "say": "I was going to look for my missing watch, but I could never find the time." },
+  'actions' => [
+    { "say": 'I was going to look for my missing watch, but I could never find the time.' }
   ]
 }
 
 # Create a new task named 'tell_a_joke'
 # Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
 task = @client.autopilot.assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-                         .tasks
-                         .create(
-                           unique_name: "tell-a-joke",
-                           actions: joke_actions
-                         )
+              .tasks
+              .create(
+                unique_name: 'tell-a-joke',
+                actions: joke_actions
+              )
 
-puts "Tell-a-joke task has been created!"
+puts 'Tell-a-joke task has been created!'
 puts task.sid

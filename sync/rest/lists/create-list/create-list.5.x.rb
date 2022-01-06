@@ -11,6 +11,6 @@ service = client.sync.v1.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 # Create a List
 response = service.sync_lists.create(unique_name: 'MyCollection',
-                                     ttl: 1814400)
+                                     ttl: 1_814_400)
 
 puts response

@@ -12,10 +12,10 @@ begin
 
   puts number.carrier['type']
   puts number.carrier['name']
-rescue Twilio::REST::RestError => err
-  if err.status_code === 404
+rescue Twilio::REST::RestError => e
+  if e.status_code == 404
     puts 'No carrier information'
   else
-    puts err.message
+    puts e.message
   end
 end

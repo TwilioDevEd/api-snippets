@@ -7,7 +7,6 @@ api_key = ENV['TWILIO_API_KEY']
 api_secret = ENV['TWILIO_API_KEY_SECRET']
 twilio_sync_service = ENV['TWILIO_SYNC_SERVICE_SID']
 
-
 # Required for Sync
 identity = 'user'
 

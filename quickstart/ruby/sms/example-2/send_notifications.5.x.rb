@@ -10,8 +10,7 @@ from = '+15551234567' # Your Twilio number
 to = '+15555555555' # Your mobile phone number
 
 client.messages.create(
-from: from,
-to: to,
-body: "Hey friend!"
+  from: from,
+  to: to,
+  body: 'Hey friend!'
 )
-

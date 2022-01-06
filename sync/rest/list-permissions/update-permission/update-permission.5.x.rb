@@ -12,6 +12,6 @@ begin
                     .sync_list_permissions('bob')
                     .update(read: true, write: true, manage: true)
   puts response
-rescue Twilio::REST::TwilioError => err
-  puts err
+rescue Twilio::REST::TwilioError => e
+  puts e
 end

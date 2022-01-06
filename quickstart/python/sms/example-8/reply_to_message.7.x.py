@@ -1,6 +1,6 @@
 # /usr/bin/env python
 # Download the twilio-python library from twilio.com/docs/libraries/python
-from flask import Flask, request
+from flask import Flask
 from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)

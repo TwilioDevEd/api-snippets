@@ -19,8 +19,9 @@ reservation = client.taskrouter.workspaces(workspace_sid) \
         instruction='conference',
         from_='+18001231234',
         conference_status_callback='https://www.example.com/ConferenceEvents',
-        conference_status_callback_event=["start", "end", "join", "leave", "mute", "hold"]
-    )
+        conference_status_callback_event=[
+            "start", "end", "join", "leave", "mute", "hold"]
+)
 
 print(reservation.reservation_status)
 print(reservation.worker_name)

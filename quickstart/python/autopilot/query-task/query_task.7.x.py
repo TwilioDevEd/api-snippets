@@ -9,7 +9,8 @@ account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
-# Replace 'UAXXX...' with your Assistant's unique SID https://www.twilio.com/console/autopilot/list
+# Replace 'UAXXX...' with your Assistant's unique SID 
+# https://www.twilio.com/console/autopilot/list
 query = client.preview.understand \
                       .assistants('UAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                       .queries \

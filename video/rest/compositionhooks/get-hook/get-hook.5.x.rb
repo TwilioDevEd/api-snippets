@@ -1,4 +1,4 @@
-#Download the helper library from https://www.twilio.com/docs/ruby/install
+# Download the helper library from https://www.twilio.com/docs/ruby/install
 require 'rubygems'
 require 'twilio-ruby'
 
@@ -9,7 +9,7 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
-compositionHook = @client.video.compositionHooks(HKXXXX)
-   .fetch()
+composition_hook = @client.video.compositionHooks(HKXXXX)
+                          .fetch
 
-puts compositionHook.sid
+puts composition_hook.sid

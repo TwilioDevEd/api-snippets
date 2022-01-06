@@ -10,6 +10,6 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 deleted = @client.video.compositionHooks(HKXXXX)
-    .delete()
+                 .delete
 
 puts deleted

@@ -10,9 +10,9 @@ api_key_secret = ENV['TWILIO_API_KEY_SECRET']
 @client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
 
 hooks = @client.video.compositionHooks
-                            .list(
-                              enabled: true
-                            )
+               .list(
+                 enabled: true
+               )
 
 hooks.each do |hook|
   puts hook.sid

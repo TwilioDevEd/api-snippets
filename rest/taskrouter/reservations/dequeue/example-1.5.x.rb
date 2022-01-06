@@ -14,8 +14,8 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 reservation = client.taskrouter.v1.workspaces(workspace_sid)
                     .tasks(task_sid).reservations(reservation_sid)
 
-reservation = reservation.update(instruction:  'dequeue',
-                                 dequeue_from: '+18001231234')
+reservation.update(instruction: 'dequeue',
+                   dequeue_from: '+18001231234')
 
 puts reservation.reservation_status
 
