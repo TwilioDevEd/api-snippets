@@ -35,12 +35,12 @@ function buildWorkspacePolicy(options) {
 }
 
 // Event Bridge Policies
-var eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
+const eventBridgePolicies = util.defaultEventBridgePolicies(accountSid, workerSid);
 
 // Worker Policies
-var workerPolicies = util.defaultWorkerPolicies(version, workspaceSid, workerSid);
+const workerPolicies = util.defaultWorkerPolicies(version, workspaceSid, workerSid);
 
-var workspacePolicies = [
+const workspacePolicies = [
   // Workspace fetch Policy
   buildWorkspacePolicy(),
   // Workspace subresources fetch Policy
@@ -55,4 +55,4 @@ eventBridgePolicies.concat(workerPolicies).concat(workspacePolicies).forEach(fun
   capability.addPolicy(policy);
 });
 
-var token = capability.toJwt();
+const token = capability.toJwt();
