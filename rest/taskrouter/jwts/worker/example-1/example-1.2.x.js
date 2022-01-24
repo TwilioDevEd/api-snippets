@@ -1,20 +1,20 @@
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
-var twilio = require('twilio');
+const twilio = require('twilio');
 
-var accountSid = process.env.TWILIO_ACCOUNT_SID;
-var authToken = process.env.TWILIO_AUTH_TOKEN;
-var workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-var workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const workspaceSid = "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const workerSid = "WKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
-var capability = new twilio.TaskRouterWorkerCapability(accountSid, authToken, workspaceSid, workerSid);
+const capability = new twilio.TaskRouterWorkerCapability(accountSid, authToken, workspaceSid, workerSid);
 capability.allowFetchSubresources();
 capability.allowActivityUpdates();
 capability.allowReservationUpdates();
-var token = capability.generate();
+const token = capability.generate();
 
 // By default, tokens are good for one hour.
 // Override this default timeout by specifiying a new value (in seconds).
 // For example, to generate a token good for 8 hours:
 
-var token = capability.generate(28800);  // 60 * 60 * 8
+const token = capability.generate(28800);  // 60 * 60 * 8
