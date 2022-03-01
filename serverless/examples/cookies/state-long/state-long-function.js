@@ -24,13 +24,8 @@ exports.handler = (context, event, callback) => {
     // You can increment the count state for the next message, or any other
     // operation that makes sense for your application's needs. Use the
     // third argument of setCookie to set cookie attributes, such as making
-    // count last for the max of 4 hours instead of the default 1 hour
-    .setCookie('count', (count + 1).toString(), [
-      'HttpOnly',
-      'Secure',
-      'SameSite=Strict',
-      'Max-Age=14400',
-    ]);
+    // count last for the max of 24 hours instead of the default 4 hours
+    .setCookie('count', (count + 1).toString(), ['Max-Age=86400']);
 
   return callback(null, response);
 };
