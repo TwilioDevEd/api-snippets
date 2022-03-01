@@ -8,7 +8,13 @@ exports.handler = (context, event, callback) => {
   // always strings, so you'll need to convert the count to a number
   const count = Number(event.request.cookies.count) || 0;
 
-  twiml.message(`Your current count is ${count}`);
+  // Return a dynamic message based on if this is the first message or not
+  const message =
+    count > 0
+      ? `Your current count is ${count}`
+      : 'Hello, thanks for the new message!';
+
+  twiml.message(message);
 
   response
     // Add the stringified TwiML to the response body
