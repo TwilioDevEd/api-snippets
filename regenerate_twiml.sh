@@ -15,10 +15,10 @@ if [ -z "$FILES" ]; then
     FILES=$(find ~/src/api-snippets/twiml -name "*.twiml" | grep "output")
 fi
 VERSIONS=( "python:.6.x.py"
-           "java:.7.x.java"
+           "java:.8.x.java"
            "node:.3.x.js"
            "csharp:.5.x.cs"
-           "php:.5.x.php"
+           "php:.6.x.php"
            "ruby:.5.x.rb" )
 echo "$FILES" | while read -r line; do
     echo Starting "$line"
