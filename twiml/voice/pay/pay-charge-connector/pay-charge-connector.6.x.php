@@ -3,12 +3,6 @@ require_once './vendor/autoload.php';
 use Twilio\TwiML\VoiceResponse;
 
 $response = new VoiceResponse();
-$response->pay(
-    [
-        'chargeAmount' => '10.00', 
-        'paymentConnector' => 'My_Payment_Connector', 
-        'action' => 'https://your-callback-function-url.com/pay'
-    ]
-);
+$response->pay(['chargeAmount' => '10.00', 'paymentConnector' => 'My_Pay_Connector', 'action' => 'https://your-callback-function-url.com/pay']);
 
 echo $response;
