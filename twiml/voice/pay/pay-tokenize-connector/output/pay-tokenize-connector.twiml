@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Pay chargeAmount="0" paymentConnector="My_Pay_Connector" action="https://your-callback-function-url.com/pay" />
+</Response>
