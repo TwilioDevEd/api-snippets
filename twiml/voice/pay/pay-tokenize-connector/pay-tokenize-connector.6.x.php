@@ -6,7 +6,7 @@ $response = new VoiceResponse();
 $response->pay(
     [
         'chargeAmount' => '0', 
-        'paymentConnector' => 'My_Payment_Connector', 
+        'paymentConnector' => 'My_Pay_Connector', 
         'action' => 'https://your-callback-function-url.com/pay'
     ]
 );

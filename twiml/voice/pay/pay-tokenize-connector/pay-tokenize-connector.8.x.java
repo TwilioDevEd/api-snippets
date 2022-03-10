@@ -6,7 +6,7 @@ import com.twilio.twiml.TwiMLException;
 public class Example {
     public static void main(String[] args) {
         Pay pay = new Pay.Builder().chargeAmount("0")
-            .paymentConnector("My_Payment_Connector")
+            .paymentConnector("My_Pay_Connector")
             .action("https://your-callback-function-url.com/pay")
             .build();
         VoiceResponse response = new VoiceResponse.Builder().pay(pay).build();
