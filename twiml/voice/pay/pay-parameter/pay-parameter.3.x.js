@@ -7,8 +7,8 @@ const pay = response.pay({
     action: 'https://your-callback-function-url.com/pay'
 });
 pay.parameter({
-    name: 'card_type',
-    value: 'mastercard'
+    name: 'custom_parameter_1',
+    value: 'custom_value_1'
 });
 
 console.log(response.toString());

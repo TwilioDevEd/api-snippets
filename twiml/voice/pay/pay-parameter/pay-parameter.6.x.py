@@ -6,7 +6,7 @@ pay = Pay(
     payment_connector='My_Generic_Pay_Connector',
     action='https://your-callback-function-url.com/pay'
 )
-pay.parameter(name='card_type', value='mastercard')
+pay.parameter(name='custom_parameter_1', value='custom_value_1')
 response.append(pay)
 
 print(response)
