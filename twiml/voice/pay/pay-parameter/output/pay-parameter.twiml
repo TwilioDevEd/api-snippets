@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Pay chargeAmount="10.00" paymentConnector="My_Generic_Pay_Connector" action="https://your-callback-function-url.com/pay">
-        <Parameter name="card_type" value="mastercard" />
+        <Parameter name="custom_parameter_1" value="custom_value_1" />
     </Pay>
 </Response>

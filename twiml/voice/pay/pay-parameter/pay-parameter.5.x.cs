@@ -8,7 +8,7 @@ class Example
     {
         var response = new VoiceResponse();
         var pay = new Pay(chargeAmount: "10.00", paymentConnector: "My_Generic_Pay_Connector", action: new Uri("https://your-callback-function-url.com/pay"));
-        pay.Parameter(name: "card_type", value: "mastercard");
+        pay.Parameter(name: "custom_parameter_1", value: "custom_value_1");
         response.Append(pay);
 
         Console.WriteLine(response.ToString());
