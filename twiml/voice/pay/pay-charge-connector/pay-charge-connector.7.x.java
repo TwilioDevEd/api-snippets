@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Pay pay = new Pay.Builder().chargeAmount("10.00")
+        Pay pay = new Pay.Builder().chargeAmount("10")
             .paymentConnector("My_Pay_Connector")
             .action("https://your-callback-function-url.com/pay")
             .build();

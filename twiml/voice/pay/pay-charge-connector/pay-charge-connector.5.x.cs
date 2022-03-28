@@ -9,7 +9,7 @@ class Example
     {
         var response = new VoiceResponse();
         response.Pay(
-            chargeAmount: "10.00", 
+            chargeAmount: "10", 
             paymentConnector: "My_Pay_Connector", 
             action: new Uri("https://your-callback-function-url.com/pay")
         );
