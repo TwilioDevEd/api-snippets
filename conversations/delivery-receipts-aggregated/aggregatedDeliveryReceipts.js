@@ -16,10 +16,3 @@ if (undeliveredReceipts !== "none") {
     alert(`Out of ${totalReceipts} sent messages, ${deliveredReceipts} were delivered, ${failedReceipts} have failed.`);
 }
 
-// get the list of of delivery receipts
-const detailedDeliveryReceipts = await message.getDetailedDeliveryReceipts();
-
-detailedDeliveryReceipts.map((detailedDeliveryReceipt) => {
-    // get status of the delivery receipts
-    const receiptStatus = detailedDeliveryReceipt.status;
-});
