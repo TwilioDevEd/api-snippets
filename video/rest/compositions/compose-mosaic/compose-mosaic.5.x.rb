@@ -2,42 +2,50 @@
 require 'rubygems'
 require 'twilio-ruby'
 
-# Find your credentials at twilio.com/console
-# To set up environmental variables, see http://twil.io/secure
-api_key_sid = ENV['TWILIO_API_KEY']
-api_key_secret = ENV['TWILIO_API_KEY_SECRET']
+# Find your Account SID and Auth Token at twilio.com/console
+# and set the environment variables. See http://twil.io/secure
+account_sid = ENV['TWILIO_ACCOUNT_SID']
+auth_token = ENV['TWILIO_AUTH_TOKEN']
+@client = Twilio::REST::Client.new(account_sid, auth_token)
 
-@client = Twilio::REST::Client.new(api_key_sid, api_key_secret)
-
-composition = @client.video.compositions.create(
-  room_sid: 'RMXXXX',
-  audio_sources: '*',
-  audio_sources_excluded: 'advisor-audio',
-  video_layout: {
-    interviewed: {
-      z_pos: 2,
-      x_pos: 400,
-      y_pos: 180,
-      width: 480,
-      height: 360,
-      video_sources: ['interviewed-video']
-    },
-    interviewers: {
-      z_pos: 1,
-      x_pos: 10,
-      y_pos: 0,
-      width: 1260,
-      height: 720,
-      max_rows: 3,
-      max_columns: 3,
-      reuse: 'show_newest',
-      cells_excluded: [4],
-      video_sources: ['interviewer-*']
-    }
-  },
-  status_callback: 'http://my.server.org/callbacks',
-  resolution: '1280x720',
-  format: 'mp4'
-)
+composition = @client.video
+                     .compositions
+                     .create(
+                        audio_sources: ['*'],
+                        audio_sources_excluded: ['advisor-audio'],
+                        video_layout: {
+                          'interviewed' => {
+                            'z_pos' => 2,
+                            'x_pos' => 400,
+                            'y_pos' => 180,
+                            'width' => 480,
+                            'height' => 360,
+                            'video_sources' => [
+                              'interviewed-video',
+                            ]
+                          },
+                          'interviewers' => {
+                            'z_pos' => 1,
+                            'x_pos' => 10,
+                            'y_pos' => 0,
+                            'width' => 1260,
+                            'height' => 720,
+                            'max_rows' => 3,
+                            'max_columns' => 3,
+                            'cells_excluded' => [
+                              4,
+                            ],
+                            'reuse' => 'show_newest',
+                            'video_sources' => [
+                              'interviewer-*',
+                            ]
+                          }
+                        },
+                        status_callback: 'https://www.example.com/callbacks',
+                        resolution: '1280x720',
+                        format: 'mp4',
+                        room_sid: 'RMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+                      )
 
 puts composition.sid
+
