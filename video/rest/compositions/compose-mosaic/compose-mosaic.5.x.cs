@@ -34,7 +34,7 @@ class Program
                     {"y_pos", 180},
                     {"width", 480},
                     {"height", 360},
-                    {"video_sources", new object [] {
+                    {"video_sources", new string [] {
                         "interviewed-video"
                     }}
                 }},
@@ -47,11 +47,11 @@ class Program
                     {"height", 720},
                     {"max_rows", 3},
                     {"max_columns", 3},
-                    {"cells_excluded", new object [] {
+                    {"cells_excluded", new int [] {
                         4
                     }},
                     {"reuse", "show_newest"},
-                    {"video_sources", new object [] {
+                    {"video_sources", new string [] {
                         "interviewer-*"
                     }}
                 }}

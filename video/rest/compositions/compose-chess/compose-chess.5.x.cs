@@ -32,13 +32,13 @@ class Program
                     {"max_rows", 3},
                     {"max_columns", 3},
                     {"reuse", "show_newest"},
-                    {"cells_excluded", new object [] {
+                    {"cells_excluded", new int [] {
                         1,
                         3,
                         5,
                         7
                     }},
-                    {"video_sources", new object [] {
+                    {"video_sources", new string [] {
                         "*"
                     }}
                 }}
