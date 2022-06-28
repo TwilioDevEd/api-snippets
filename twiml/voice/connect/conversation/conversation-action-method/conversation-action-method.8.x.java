@@ -2,12 +2,12 @@ import com.twilio.twiml.voice.Connect;
 import com.twilio.twiml.voice.Conversation;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
-
+import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
         Conversation conversation = new Conversation.Builder().serviceInstanceSid("ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").build();
-        Connect connect = new Connect.Builder().conversation(conversation).build();
+        Connect connect = new Connect.Builder().action("https://your-action-url.com/").method(HttpMethod.GET).conversation(conversation).build();
         VoiceResponse response = new VoiceResponse.Builder().connect(connect).build();
 
         try {
