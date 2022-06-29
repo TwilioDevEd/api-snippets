@@ -9,7 +9,7 @@ class Example
     {
         var response = new VoiceResponse();
         var connect = new Connect();
-        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", record: "record-from-answer");
+        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", record: Conversation.RecordEnum.RecordFromAnswer);
         response.Append(connect);
 
         Console.WriteLine(response.ToString());

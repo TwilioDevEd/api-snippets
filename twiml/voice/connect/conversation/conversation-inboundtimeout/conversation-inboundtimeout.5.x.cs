@@ -9,7 +9,7 @@ class Example
     {
         var response = new VoiceResponse();
         var connect = new Connect();
-        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", inboundTimeout: "10");
+        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", inboundTimeout: 10);
         response.Append(connect);
 
         Console.WriteLine(response.ToString());
