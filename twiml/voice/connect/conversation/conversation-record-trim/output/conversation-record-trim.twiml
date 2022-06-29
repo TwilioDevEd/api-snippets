@@ -1,0 +1,5 @@
+<Response>
+    <Connect>
+        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" record="record-from-answer" trim="trim-silence"/>
+    </Connect>
+</Response>
