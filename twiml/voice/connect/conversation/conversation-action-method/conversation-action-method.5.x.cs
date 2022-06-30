@@ -8,7 +8,7 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var connect = new Connect(action: new Uri("https://your-action-url.com/"), method: Twilio.Http.HttpMethod.Get);
+        var connect = new Connect(action: new Uri("https://example.com/yourActionUrl"), method: Twilio.Http.HttpMethod.Get);
         connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         response.Append(connect);
 

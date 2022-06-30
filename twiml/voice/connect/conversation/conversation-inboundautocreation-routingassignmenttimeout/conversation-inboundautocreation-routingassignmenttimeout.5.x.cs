@@ -8,8 +8,8 @@ class Example
     static void Main()
     {
         var response = new VoiceResponse();
-        var connect = new Connect(action: new Uri("https://example.com/yourActionUrl"));
-        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", statusCallback: "https://example.com/yourStatusCallback");
+        var connect = new Connect();
+        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", inboundAutocreation: true, routingAssignmentTimeout: 10);
         response.Append(connect);
 
         Console.WriteLine(response.ToString());

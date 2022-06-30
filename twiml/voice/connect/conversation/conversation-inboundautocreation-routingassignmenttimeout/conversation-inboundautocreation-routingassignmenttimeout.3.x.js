@@ -4,9 +4,8 @@ const response = new VoiceResponse();
 const connect = response.connect();
 connect.conversation({
     serviceInstanceSid: 'ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    record: 'record-from-answer',
-    recordingStatusCallback: 'https://example.com/yourRecordingStatusCallback',
-    recordingStatusCallbackMethod: 'GET'
+    inboundAutocreation: true,
+    routingAssignmentTimeout: '10'
 });
 
 console.log(response.toString());

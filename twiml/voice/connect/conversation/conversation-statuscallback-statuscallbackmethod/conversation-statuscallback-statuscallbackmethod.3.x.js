@@ -4,7 +4,7 @@ const response = new VoiceResponse();
 const connect = response.connect();
 connect.conversation({
     serviceInstanceSid: 'ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    statusCallback: 'https://your-status-callback-url.com/statusCallback',
+    statusCallback: 'https://example.com/yourStatusCallback',
     statusCallbackMethod: 'GET'
 });
 

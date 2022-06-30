@@ -9,7 +9,7 @@ class Example
     {
         var response = new VoiceResponse();
         var connect = new Connect();
-        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", record: Conversation.RecordEnum.RecordFromAnswer, recordingStatusCallback: new Uri("https://your-recording-status-callback-url.com/"), recordingStatusCallbackMethod: Twilio.Http.HttpMethod.Get);
+        connect.Conversation(serviceInstanceSid: "ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", record: Conversation.RecordEnum.RecordFromAnswer, recordingStatusCallback: new Uri("https://example.com/yourRecordingStatusCallback"), recordingStatusCallbackMethod: Twilio.Http.HttpMethod.Get);
         response.Append(connect);
 
         Console.WriteLine(response.ToString());

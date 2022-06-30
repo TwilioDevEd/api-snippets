@@ -1,5 +1,5 @@
 <Response>
     <Connect>
-        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" record="record-from-answer" recordingStatusCallback="https://your-recording-status-callback-url.com/" recordingStatusCallbackEvent="in-progress completed"/>
+        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" record="record-from-answer" recordingStatusCallback="https://example.com/yourRecordingStatusCallback" recordingStatusCallbackEvent="in-progress completed"/>
     </Connect>
 </Response>

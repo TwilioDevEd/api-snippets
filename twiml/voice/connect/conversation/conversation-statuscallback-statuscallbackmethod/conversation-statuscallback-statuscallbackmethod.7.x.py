@@ -4,7 +4,7 @@ response = VoiceResponse()
 connect = Connect()
 connect.conversation(
     service_instance_sid='ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    status_callback='https://your-status-callback-url.com/statusCallback',
+    status_callback='https://example.com/yourStatusCallback',
     status_callback_method='GET')
 response.append(connect)
 

@@ -1,5 +1,5 @@
 <Response>
-    <Connect action="https://your-action-url.com/">
-        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" statusCallback="https://your-status-callback-url.com/statusCallback"/>
+    <Connect action="https://example.com/yourActionUrl">
+        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" statusCallback="https://example.com/yourStatusCallback"/>
       </Connect>
 </Response>

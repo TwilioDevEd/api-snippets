@@ -6,7 +6,7 @@ import com.twilio.http.HttpMethod;
 
 public class Example {
     public static void main(String[] args) {
-        Conversation conversation = new Conversation.Builder().serviceInstanceSid("ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").statusCallback("https://your-status-callback-url.com/statusCallback").statusCallbackMethod(HttpMethod.GET).build();
+        Conversation conversation = new Conversation.Builder().serviceInstanceSid("ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").statusCallback("https://example.com/yourStatusCallback").statusCallbackMethod(HttpMethod.GET).build();
         Connect connect = new Connect.Builder().conversation(conversation).build();
         VoiceResponse response = new VoiceResponse.Builder().connect(connect).build();
 

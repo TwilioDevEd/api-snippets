@@ -1,10 +1,11 @@
 from twilio.twiml.voice_response import Connect, Conversation, VoiceResponse
 
 response = VoiceResponse()
-connect = Connect(action='https://example.com/yourActionUrl')
+connect = Connect()
 connect.conversation(
     service_instance_sid='ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    status_callback='https://example.com/yourStatusCallback')
+    inbound_autocreation=True,
+    routing_assignment_timeout='10')
 response.append(connect)
 
 print(response)

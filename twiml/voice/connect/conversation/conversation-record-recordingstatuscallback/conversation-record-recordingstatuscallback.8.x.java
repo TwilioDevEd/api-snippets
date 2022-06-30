@@ -6,7 +6,7 @@ import com.twilio.twiml.TwiMLException;
 
 public class Example {
     public static void main(String[] args) {
-        Conversation conversation = new Conversation.Builder().serviceInstanceSid("ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").record(Conversation.Record.RECORD_FROM_ANSWER).recordingStatusCallback("https://your-recording-status-callback-url.com/").build();
+        Conversation conversation = new Conversation.Builder().serviceInstanceSid("ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx").record(Conversation.Record.RECORD_FROM_ANSWER).recordingStatusCallback("https://example.com/yourRecordingStatusCallback").build();
         Connect connect = new Connect.Builder().conversation(conversation).build();
         VoiceResponse response = new VoiceResponse.Builder().connect(connect).build();
 
