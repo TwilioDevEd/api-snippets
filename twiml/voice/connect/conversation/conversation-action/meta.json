@@ -1,5 +1,5 @@
 {
-    "title": "Use <Connect>'s action and method attributes with <Conversation>",
+    "title": "Use <Connect>'s action attribute with <Conversation>",
     "type": "server",
     "test_output": true
 }
