@@ -1,0 +1,5 @@
+<Response>
+    <Connect action="https://example.com/yourActionUrl">
+        <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+    </Connect>
+</Response>
