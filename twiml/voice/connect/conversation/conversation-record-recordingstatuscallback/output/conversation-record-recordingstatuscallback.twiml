@@ -1,0 +1,6 @@
+<Response>
+    <Connect>
+      <Conversation serviceInstanceSid="ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" record="record-from-answer" recordingStatusCallback="https://example.com/yourRecordingStatusCallback"/>
+    </Connect>
+  </Response>
+  

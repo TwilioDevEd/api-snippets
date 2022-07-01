@@ -1,0 +1,5 @@
+{
+    "title": "Use <Connect><Conversation> with record and recordingStatusCallback attributes",
+    "type": "server",
+    "test_output": true
+}

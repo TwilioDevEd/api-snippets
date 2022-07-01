@@ -1,0 +1,5 @@
+{
+    "title": "Use <Connect>'s action attribute and <Conversation>'s statusCallback attribute. ",
+    "type": "server",
+    "test_output": true
+}

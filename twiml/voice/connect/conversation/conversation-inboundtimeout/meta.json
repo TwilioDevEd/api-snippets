@@ -1,0 +1,5 @@
+{
+    "title": "Use <Conversation> with inboundTimeout attribute",
+    "type": "server",
+    "test_output": true
+}
