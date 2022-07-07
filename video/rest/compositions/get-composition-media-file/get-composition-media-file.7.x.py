@@ -5,13 +5,13 @@ from urllib.request import urlopen
 
 from twilio.rest import Client
 
-# Your Account Sid and Auth Token from twilio.com/console
-# To set up environmental variables, see http://twil.io/secure
-api_key_sid = os.environ['TWILIO_API_KEY']
-api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
-client = Client(api_key_sid, api_key_secret)
+# Find your Account SID and Auth Token at twilio.com/console
+# and set the environment variables. See http://twil.io/secure
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+client = Client(account_sid, auth_token)
 
-composition_sid = 'CXXXX'
+composition_sid = 'CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 uri = 'https://video.twilio.com/v1/Compositions/{}/Media?Ttl=3600'.format(composition_sid)
 response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')
