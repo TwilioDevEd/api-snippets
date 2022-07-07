@@ -1,7 +1,14 @@
 // Install the Java helper library from twilio.com/docs/java/install
-import com.twilio.Twilio;
-import com.twilio.rest.video.v1.Composition;
-import com.twilio.rest.video.v1.Composition.Format;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.twilio.http.*;
+import com.twilio.rest.Domains;
+import org.apache.commons.io.FileUtils;
+import org.apache.http.impl.client.HttpClientBuilder;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
 public class GetCompositionMedia {
 
@@ -14,13 +21,13 @@ public class GetCompositionMedia {
     // Disable HttpClient follow redirect by default
     HttpClientBuilder clientBuilder = HttpClientBuilder.create();
     clientBuilder.disableRedirectHandling();
-​
+    
     // Initialize the client
     TwilioRestClient restClient = new TwilioRestClient
             .Builder(ACCOUNT_SID, AUTH_TOKEN)
             .httpClient(new NetworkHttpClient(clientBuilder))
             .build();
-​
+
     // Retrieve media location
     String compositionSid = "CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     Request request = new Request(
@@ -28,13 +35,13 @@ public class GetCompositionMedia {
             Domains.VIDEO.toString(),
             "/v1/Compositions/" + compositionSid + "/Media?Ttl=3600",
             restClient.getRegion());
-​
+
     Response response = restClient.request(request);
-​
+
     ObjectMapper mapper = new ObjectMapper();
     JsonNode actualObj = mapper.readTree(response.getContent());
     String mediaLocation = actualObj.get("redirect_to").asText();
-​
+
     // For example, download the media to a local file
     FileUtils.copyURLToFile(new URL(mediaLocation), new File("myFile.mp4"));
   }
