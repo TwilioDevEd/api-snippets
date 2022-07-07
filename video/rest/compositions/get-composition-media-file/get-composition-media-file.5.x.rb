@@ -10,7 +10,7 @@ auth_token = ENV['TWILIO_AUTH_TOKEN']
 
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-composition_sid = 'CJXXXX'
+composition_sid = 'CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 uri = "https://video.twilio.com/v1/Compositions/#{composition_sid}/Media?Ttl=3600"
 

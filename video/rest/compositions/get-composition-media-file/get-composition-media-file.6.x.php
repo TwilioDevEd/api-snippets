@@ -9,7 +9,7 @@ $sid = getenv("TWILIO_ACCOUNT_SID");
 $token = getenv("TWILIO_AUTH_TOKEN");
 $twilio = new Client($sid, $token);
 
-$compositionSid = "CJXXXX";
+$compositionSid = "CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 $uri = "https://video.twilio.com/v1/Compositions/$compositionSid/Media?Ttl=3600";
 $response = $twilio->request("GET", $uri);
 $mediaLocation = $response->getContent()["redirect_to"];

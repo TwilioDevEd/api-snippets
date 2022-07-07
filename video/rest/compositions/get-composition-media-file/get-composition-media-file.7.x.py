@@ -11,7 +11,7 @@ account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
-composition_sid = 'CXXXX'
+composition_sid = 'CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 uri = 'https://video.twilio.com/v1/Compositions/{}/Media?Ttl=3600'.format(composition_sid)
 response = client.request('GET', uri)
 media_location = json.loads(response.text).get('redirect_to')

@@ -2,6 +2,9 @@
 // information on how to download and install this version, visit
 // https://www.twilio.com/docs/libraries/node
 
+const fs = require('fs');
+const request = require('request');
+
 // Download the helper library from https://www.twilio.com/docs/node/install
 // Find your Account SID and Auth Token at twilio.com/console
 // and set the environment variables. See http://twil.io/secure
