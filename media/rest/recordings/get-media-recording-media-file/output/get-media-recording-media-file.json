@@ -1,0 +1,8 @@
+{
+  "redirect_to":
+  "https://com-twilio-us1-live-recordings.s3.amazonaws.com/ACXXXX/ZXXXXX/KVXXXX.mp4?
+  response-content-disposition=attachment%3B%20filename%3D%22KVXXXX.mp4%22&
+  response-content-type=video%2Fmp4&X-Amz-Security-Token=XXXXX&
+  X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=XXXXXXXXXXXXXXX&X-Amz-SignedHeaders=host&
+  X-Amz-Expires=3600&X-Amz-Credential=XXXX&X-Amz-Signature=XXXXX"
+}
