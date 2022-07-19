@@ -5,16 +5,11 @@ use Twilio\Rest\Client;
 
 // Find your credentials at twilio.com/console
 // To set up environmental variables, see http://twil.io/secure
-$apiKeySid = getenv('TWILIO_API_KEY');
-$apiKeySecret = getenv('TWILIO_API_KEY_SECRET');
-$client = new Client($apiKeySid, $apiKeySecret);
+$sid = getenv('TWILIO_ACCOUNT_SID');
+$token = getenv('TWILIO_AUTH_TOKEN');
+$client = new Client($sid, $token);
 
 $client->video->rooms('RMXXXX')->participants('Customer')
-->subscribeRules->update(
-    'rules' =>   array(
-                        array("type" => "include", "all" => true),
-                        array("type" => "exclude", "publisher" => "Supervisor")
-                      )
-);
+->subscribeRules->update(“rules” => [[“type” => “include”, “all” => true], [“type” => “exclude”, “publisher” => “Supervisor”]]);
 
 echo 'Subscribe Rules updated successfully';
