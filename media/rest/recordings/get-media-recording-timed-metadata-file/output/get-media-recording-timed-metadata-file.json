@@ -1,0 +1,8 @@
+{
+  "redirect_to":
+  "https://com-twilio-us1-live-recordings.s3.amazonaws.com/ACXXXX/ZXXXXX/KVXXXX.vtt?
+  response-content-disposition=attachment%3B%20filename%3D%22KVXXXX.vtt%22&
+  response-content-type=text%2Fvtt&X-Amz-Security-Token=XXXXX&
+  X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=XXXXXXXXXXXXXXX&X-Amz-SignedHeaders=host&
+  X-Amz-Expires=3600&X-Amz-Credential=XXXX&X-Amz-Signature=XXXXX"
+}

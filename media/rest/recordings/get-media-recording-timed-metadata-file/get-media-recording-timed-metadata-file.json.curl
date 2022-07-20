@@ -1,0 +1,2 @@
+curl -X GET 'https://media.twilio.com/v1/MediaRecordings/KVXXXX/TimedMetadata?Ttl=3600' \
+     -u 'SKXXXX:your_api_key_secret'
