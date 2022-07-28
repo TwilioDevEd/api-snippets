@@ -1,0 +1,9 @@
+{
+  "room_sid": "RMXXXX",
+  "participant_sid": "PAXXXX",
+  "rules": [
+    {"type": "include", "publisher": "Instructor"}
+  ],
+  "date_updated": "2022-04-30T20:28:00Z",
+  "date_created": "2022-04-30T20:15:49Z"
+}
