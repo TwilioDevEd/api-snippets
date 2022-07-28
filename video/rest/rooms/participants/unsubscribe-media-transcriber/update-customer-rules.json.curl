@@ -1,0 +1,4 @@
+curl -X POST 'https://video.twilio.com/v1/Rooms/RMXXXX/Participants/Customer/SubscribeRules' \
+    -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+    --data Rules='[{"type": "include", "publisher": "Instructor"}]' \
+    -H "Content-Type: application/x-www-form-urlencoded"
