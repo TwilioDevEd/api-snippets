@@ -1,6 +1,5 @@
-const http = require('http');
 const express = require('express');
-const MessagingResponse = require('twilio').twiml.MessagingResponse;
+const { MessagingResponse } = require('twilio').twiml;
 
 const app = express();
 
@@ -13,10 +12,9 @@ app.post('/sms', (req, res) => {
     'https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg'
   );
 
-  res.writeHead(200, { 'Content-Type': 'text/xml' });
-  res.end(twiml.toString());
+  res.type('text/xml').send(twiml.toString());
 });
 
-http.createServer(app).listen(1337, () => {
-  console.log('Express server listening on port 1337');
+app.listen(3000, () => {
+  console.log('Express server listening on port 3000');
 });
