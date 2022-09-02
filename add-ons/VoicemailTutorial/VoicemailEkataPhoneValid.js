@@ -28,9 +28,9 @@ exports.handler = (context, event, callback) => {
       // End the call with <Hangup>
       twiml.hangup();
     }
-    // callback has two parameters: error and response.
-    // since we are exiting successfully, we set error to null
-    // the provided twiml is returned to the caller in the callback
+    // Callback accepts two arguments: error and response.
+    // Since we are exiting successfully, we set error to null
+    // and return the TwiML to the caller as the response.
     return callback(null, twiml);
   }
   
