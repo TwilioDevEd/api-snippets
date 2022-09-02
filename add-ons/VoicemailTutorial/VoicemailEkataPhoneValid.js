@@ -20,7 +20,7 @@ exports.handler = (context, event, callback) => {
       twiml.say('Enter a message here prompting callers to leave a message');
   
       // Use <Record> to record the caller's message, and play an audible beep. 
-      // additionally, attempt to transcribe for more information at a glance. 
+      // Additionally, transcribe the recording for more information at a glance. 
       twiml.record({
         transcribe: true,
         playBeep: true
