@@ -12,7 +12,7 @@ exports.handler = (context, event, callback) => {
       ? ekataResults(addOns.results.ekata_phone_valid)
       : false;
     if (blockCalls) {
-      // should the number be illegitimate, end the operation. 
+      // End the operation if the number is illegitimate
       twiml.reject();
     } else {
       // Give some input to the caller prompting them to leave a message. We
