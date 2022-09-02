@@ -1,7 +1,7 @@
-// This code sample serves to filter robocalls prior to taking a voicemail.
+// This code sample serves to filter robocalls prior to recording a voicemail.
 
 // Twilio Functions automatically executes the exports.handler method in any
-// code you write. It comes with inputs for a context, event, and callback.
+// code you write. The parameters provided are context, event, and callback.
 // Full documentation: https://www.twilio.com/docs/runtime/functions/invocation
 exports.handler = (context, event, callback) => {
     // Create a new voice response object
