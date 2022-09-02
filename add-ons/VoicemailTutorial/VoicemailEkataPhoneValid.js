@@ -4,7 +4,7 @@
 // code you write. The parameters provided are context, event, and callback.
 // Full documentation: https://www.twilio.com/docs/runtime/functions/invocation
 exports.handler = (context, event, callback) => {
-    // Create a new voice response object
+    // Create a new Voice response object
     const twiml = new Twilio.twiml.VoiceResponse();
     const addOns = event.AddOns;
     // If the addOn executed properly, verify that the number is legitimate.
