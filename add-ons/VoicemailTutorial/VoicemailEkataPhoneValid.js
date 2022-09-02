@@ -38,7 +38,7 @@ exports.handler = (context, event, callback) => {
   function ekataResults(ekata) {
     // documentation on ekata JSON can be found by navigating to the Add-ons'
     // page in the Marketplace, and selecting the 'documentation' tab.
-    if(!ekata || ekata.status !== "success") return false; 
+    if (!ekata || ekata.status !== "success") return false; 
     return ekata.result.is_valid;
   }
   
