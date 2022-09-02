@@ -7,13 +7,10 @@ exports.handler = (context, event, callback) => {
     // Create a new voice response object
     const twiml = new Twilio.twiml.VoiceResponse();
     const addOns = event.AddOns;
-    let blockCalls = false;
-    
-    // verify that the addOn executed properly
-    if (addOns.status === 'successful') {
-      // if the addOn executed properly, verify that the number is legitimate.
-      blockCalls = ekata_results(addOns.results.ekata_phone_valid);
-    }
+    // If the addOn executed properly, verify that the number is legitimate.
+    const blockCalls = addOns.status === 'successful'
+      ? ekataResults(addOns.results.ekata_phone_valid)
+      : false;
     if (blockCalls) {
       // should the number be illegitimate, end the operation. 
       twiml.reject();
