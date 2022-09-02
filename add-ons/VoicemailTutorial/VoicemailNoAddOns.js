@@ -6,7 +6,7 @@
 // code you write. The parameters provided are context, event, and callback.
 // Full documentation: https://www.twilio.com/docs/runtime/functions/invocation
 exports.handler = (context, event, callback) => {
-    // Create a new voice response object
+    // Create a new Voice response object
     const twiml = new Twilio.twiml.VoiceResponse();
     
     // Give some input to the caller prompting them to leave a message. We
