@@ -1,9 +1,9 @@
-// This code sample outlines how to take a recording utilizing webhooks, and 
-// then hangup. For the complete version including Add-on integration, it is
-// recommended to copy paste the next code sample on this page. 
+// This code sample outlines how to create a webhook using Twilio Functions that
+// records a transcribed voicemail and then hangs up. For the complete version,
+// including Add-on integration, copy and paste the next code sample on this page.
 
 // Twilio Functions automatically executes the exports.handler method in any
-// code you write. It comes with inputs for a context, event, and callback.
+// code you write. The parameters provided are context, event, and callback.
 // Full documentation: https://www.twilio.com/docs/runtime/functions/invocation
 exports.handler = (context, event, callback) => {
     // Create a new voice response object
