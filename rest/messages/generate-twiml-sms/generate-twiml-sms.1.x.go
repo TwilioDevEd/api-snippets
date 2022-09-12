@@ -10,10 +10,11 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.POST("/handle-sms", func(context *gin.Context) {
+	router.POST("/sms", func(context *gin.Context) {
 		message := &twiml.MessagingMessage{
 			Body: "The Robots are coming! Head for the hills!",
 		}
+
 		twimlResult, _ := twiml.Messages([]twiml.Element{message})
 
 		context.Header("Content-Type", "text/xml")

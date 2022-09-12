@@ -11,7 +11,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.POST("/handle-sms", func(context *gin.Context) {
+	router.POST("/sms", func(context *gin.Context) {
 		incomingBody := strings.ToLower(strings.TrimSpace(context.PostForm("Body")))
 
 		var body string
@@ -26,6 +26,7 @@ func main() {
 		message := &twiml.MessagingMessage{
 			Body: body,
 		}
+
 		twimlResult, _ := twiml.Messages([]twiml.Element{message})
 
 		context.Header("Content-Type", "text/xml")

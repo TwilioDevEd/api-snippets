@@ -11,20 +11,19 @@ func main() {
 	router := gin.Default()
 
 	router.POST("/sms", func(context *gin.Context) {
+		messageBody := twiml.MessagingBody{
+			Message: "The Robots are coming! Head for the hills!",
+		}
+		messageMedia := twiml.MessagingMedia{
+			Url: "https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg",
+		}
 		message := &twiml.MessagingMessage{
-			InnerElements: []twiml.Element{
-				twiml.MessagingBody{
-					Message: "The Robots are coming! Head for the hills!",
-				},
-				twiml.MessagingMedia{
-					Url: "https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg",
-				},
-			},
+			InnerElements: []twiml.Element{messageBody, messageMedia},
 		}
 
 		twimlResult, _ := twiml.Messages([]twiml.Element{message})
 
-		context.Header("Content-Type", "text/xml; charset=\"utf-8\"")
+		context.Header("Content-Type", "text/xml")
 		context.String(http.StatusOK, twimlResult)
 	})
 
