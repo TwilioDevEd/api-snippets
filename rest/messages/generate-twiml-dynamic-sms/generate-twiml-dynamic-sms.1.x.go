@@ -27,10 +27,13 @@ func main() {
 			Body: body,
 		}
 
-		twimlResult, _ := twiml.Messages([]twiml.Element{message})
-
-		context.Header("Content-Type", "text/xml")
-		context.String(http.StatusOK, twimlResult)
+		twimlResult, err := twiml.Messages([]twiml.Element{message})
+		if err != nil {
+			context.String(http.StatusInternalServerError, err)
+		} else {
+			context.Header("Content-Type", "text/xml")
+			context.String(http.StatusOK, twimlResult)
+		}
 	})
 
 	router.Run(":3000")
