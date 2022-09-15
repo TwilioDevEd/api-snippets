@@ -1,14 +1,28 @@
-package main
-
 import (
+	"flag"
 	"fmt"
 	"net/http"
 	"os"
+	"testing"
 
 	"github.com/gin-gonic/gin"
 	"github.com/twilio/twilio-go/client"
 	"github.com/twilio/twilio-go/twiml"
 )
+
+// The init function is a great place to prepare application state prior to execution
+// In this case, parsing input flags to your app
+func init() {
+	testing.Init()
+	flag.Parse()
+}
+
+// Helper method to determine if your Go code is being run in test mode
+func IsTestRun() bool {
+	return flag.Lookup("test.v").Value.(flag.Getter).Get().(bool)
+	// Some teams may prefer to use env vars to indicate testing instead, such as
+	// return os.Getenv("GO_ENV") == "testing"
+}
 
 func requireValidTwilioSignature(validator *client.RequestValidator) gin.HandlerFunc {
 	return func(context *gin.Context) {
@@ -24,8 +38,8 @@ func requireValidTwilioSignature(validator *client.RequestValidator) gin.Handler
 
 		// Requests are validated based on the incoming url, parameters,
 		// and the X-Twilio-Signature header.
-		// If the request is not valid, return a 403 error
-		if !validator.Validate(url, params, signatureHeader) {
+		// If the request is not valid AND this isn't being run in a test env, return a 403 error
+		if !validator.Validate(url, params, signatureHeader) && !IsTestRun() {
 			fmt.Println("Request isn't from Twilio 🚫")
 			context.AbortWithStatus(http.StatusForbidden)
 			return

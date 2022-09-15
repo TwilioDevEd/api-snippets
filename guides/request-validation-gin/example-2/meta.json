@@ -1,5 +1,5 @@
 {
-  "title": "Disable Twilio webhook middleware when testing Gin routes.",
-  "description": "Disable webhook validation during testing.",
+  "title": "Apply custom middleware to Gin route to validate Twilio requests",
+  "description": "Confirm incoming requests to your Gin routes are genuine by applying you custom middleware.",
   "type": "server"
 }

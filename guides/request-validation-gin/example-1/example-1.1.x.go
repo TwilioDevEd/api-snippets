@@ -3,11 +3,9 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/twilio/twilio-go/client"
-	"github.com/twilio/twilio-go/twiml"
 )
 
 func requireValidTwilioSignature(validator *client.RequestValidator) gin.HandlerFunc {
@@ -33,28 +31,4 @@ func requireValidTwilioSignature(validator *client.RequestValidator) gin.Handler
 		// If the request is valid, execute the next middleware (in this case, the route handler)
 		context.Next()
 	}
-}
-
-func main() {
-	router := gin.Default()
-	// Create a RequestValidator instance
-	requestValidator := client.NewRequestValidator(os.Getenv("TWILIO_AUTH_TOKEN"))
-
-	// Apply the requireValidTwilioSignature to your route handler(s), before any code that you want
-	// to only apply to validated requests
-	router.POST("/sms", requireValidTwilioSignature(&requestValidator), func(context *gin.Context) {
-		message := &twiml.MessagingMessage{
-			Body: "Yay, valid requests!",
-		}
-
-		twimlResult, err := twiml.Messages([]twiml.Element{message})
-		if err != nil {
-			context.String(http.StatusInternalServerError, err.Error())
-		} else {
-			context.Header("Content-Type", "text/xml")
-			context.String(http.StatusOK, twimlResult)
-		}
-	})
-
-	router.Run(":3000")
 }
