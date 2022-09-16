@@ -10,6 +10,7 @@ import (
 	"github.com/twilio/twilio-go/twiml"
 )
 
+// Custom Gin middleware that rejects non-Twilio requests
 func requireValidTwilioSignature(validator *client.RequestValidator) gin.HandlerFunc {
 	return func(context *gin.Context) {
 		// Your url will vary depending on your environment and how your application is deployed
@@ -40,8 +41,8 @@ func main() {
 	// Create a RequestValidator instance
 	requestValidator := client.NewRequestValidator(os.Getenv("TWILIO_AUTH_TOKEN"))
 
-	// Apply the requireValidTwilioSignature to your route handler(s), before any code that you want
-	// to only apply to validated requests
+	// Apply the requireValidTwilioSignature middleware to your route handler(s), before any
+	// code that you want to only apply to validated requests
 	router.POST("/sms", requireValidTwilioSignature(&requestValidator), func(context *gin.Context) {
 		message := &twiml.MessagingMessage{
 			Body: "Yay, valid requests!",
