@@ -30,10 +30,12 @@ namespace ValidateRequestExample.Filters
             var context = actionContext.HttpContext;
             if (!IsValidRequest(context.Request))
             {
-                actionContext.HttpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                actionContext.Result = new ForbidResult();
             }
-
-            base.OnActionExecuting(actionContext);
+            else
+            {
+                base.OnActionExecuting(actionContext);
+            }
         }
 
         private bool IsValidRequest(HttpRequest request) {
