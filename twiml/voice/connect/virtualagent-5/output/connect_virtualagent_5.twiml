@@ -1,0 +1,7 @@
+<Response>
+  <Connect>
+    <VirtualAgent connectorName="uniqueName">
+      <Parameter name="customer_name" value="Burton Guster"/>
+    </VirtualAgent>
+  </Connect>
+</Response>
