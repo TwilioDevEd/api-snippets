@@ -10,10 +10,6 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.GET("/", func(context *gin.Context) {
-		context.String(http.StatusOK, "Hello from your pals at Twilio!")
-	})
-
 	router.POST("/answer", func(context *gin.Context) {
 		say := &twiml.VoiceSay{
 			Message: "Hello from your pals at Twilio! Have fun.",
