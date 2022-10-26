@@ -5,7 +5,7 @@ const connect = response.connect();
 connect.conversation({
     serviceInstanceSid: 'ISxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     statusCallback: 'https://example.com/yourStatusCallback',
-    statusCallbackEvent: 'call-initiated call-in-progress call-ringing call-completed'
+    statusCallbackEvent: 'call-initiated call-ringing call-answered call-completed'
 });
 
 console.log(response.toString());
