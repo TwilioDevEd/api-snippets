@@ -1,12 +1,8 @@
 /*
    Setting Read Horizon (all forms, like setAllRead, setNoneRead, advanceIndex, etc)
-   Retrieving/checking Read Horizon for rendering
 */
 
 import {Message} from "@twilio/conversations";
-
-// get last read message index of the conversation
-conversation.lastReadMessageIndex();
 
 // get a message from conversation
 const message: Message = await conversation.getMessages().items[5];
@@ -20,8 +16,5 @@ await conversation.setAllMessagesRead();
 // Mark all messages unread
 await conversation.setAllMessagesUnread();
 
-// advance the conversation's last read message index to the current read horizon
+// advance the conversation's last read message index to the current read horizon - won't allow you to move the marker backwards
 await conversation.advanceLastReadMessageIndex(message.index);
-
-// get unread messages count for the user, that is, count of all the messages after message
-await conversation.getUnreadMessagesCount();

@@ -10,12 +10,11 @@ public class UpdateRules{
   // Find your credentials at twilio.com/console
   // To set up environment variables, see http://twil.io/secure
   public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
-  public static final String API_KEY_SID = System.getenv("TWILIO_API_KEY_SID");
-  public static final String API_KEY_SECRET = System.getenv("TWILIO_API_KEY_SECRET");
+  public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN”);
 
   public static void main( String[] args ) throws IOException{
       // Initialize the client
-      Twilio.init(API_KEY_SID, API_KEY_SECRET, ACCOUNT_SID);
+      Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
       SubscribeRulesUpdate rules = new SubscribeRulesUpdate(Lists.newArrayList(
 

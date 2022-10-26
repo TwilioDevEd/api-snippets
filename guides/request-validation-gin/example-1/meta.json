@@ -1,0 +1,5 @@
+{
+  "title": "Custom middleware for Gin projects to validate Twilio requests",
+  "description": "Confirm incoming requests to your Gin routes are genuine with this custom middleware.",
+  "type": "server"
+}

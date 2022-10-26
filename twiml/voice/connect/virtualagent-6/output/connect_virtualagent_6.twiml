@@ -1,0 +1,8 @@
+<Response>
+  <Connect>
+    <VirtualAgent connectorName="uniqueName">
+      <Config name="language" value="en-us"/>
+      <Config name="voiceName" value="en-US-Wavenet-C"/>
+    </VirtualAgent>
+  </Connect>
+</Response>

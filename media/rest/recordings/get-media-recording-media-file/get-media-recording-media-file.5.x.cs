@@ -21,8 +21,8 @@ class Example
 		TwilioClient.Init(accountSid, authToken);
 
 		// Retrieve media location
-		const string compositionSid = "CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-		const string uri = $"https://video.twilio.com/v1/Compositions/{compositionSid}/Media?Ttl=3600";
+		const string recordingSid = "KVXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+		const string uri = $"https://media.twilio.com/v1/MediaRecordings/{recordingSid}/Media?Ttl=3600";
 		var request = (HttpWebRequest)WebRequest.Create(uri);
 		request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes(accountSid + ":" + authToken)));
 		request.AllowAutoRedirect = false;

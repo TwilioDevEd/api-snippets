@@ -8,10 +8,10 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
-const compositionSid = "CJXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const recordingSid = "KVXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 const uri =
-  "https://video.twilio.com/v1/Compositions/" +
-  compositionSid +
+  "https://media.twilio.com/v1/MediaRecordings/" +
+    recordingSid +
   "/Media?Ttl=3600";
 
 client
