@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Pay paymentMethod="ach-debit" chargeAmount="13.22">
+        <Prompt for="bank-account-number">
+            <Say>Thanks for using our service. Please enter your bank account number.</Say>
+        </Prompt>
+        <Prompt for="bank-account-number" requireMatchingInputs="true">
+            <Say>Thank you. Please enter your bank account number again.</Say>
+        </Prompt>
+    </Pay>
+</Response>
