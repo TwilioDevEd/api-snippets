@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pay timeout="5" maxAttempts="3" paymentMethod="ach-debit" language="en-US">
+    <Prompt for="bank-routing-number">
+      <Say>Please enter your bank routing number.</Say>
+    </Prompt>
+    <Prompt for="bank-routing-number" errorType="timeout">
+      <Say>You didn't enter your routing number. Please enter your bank routing number.</Say>
+    </Prompt>
+    <Prompt for="bank-routing-number" errorType="invalid-bank-routing-number">
+      <Say>That was an invalid bank routing number. Please try again.</Say>
+    </Prompt>
+    <Prompt for="bank-account-number">
+      <Say>Please enter your bank account number.</Say>
+    </Prompt>
+    <Prompt for="bank-account-number" errorType="timeout">
+      <Say>You didn't enter your bank account number. Please enter your bank account number.</Say>
+    </Prompt>
+    <Prompt for="payment-processing">
+      <Say>Thank you. Please wait while we process your payment.</Say>
+    </Prompt>
+  </Pay>
+</Response>

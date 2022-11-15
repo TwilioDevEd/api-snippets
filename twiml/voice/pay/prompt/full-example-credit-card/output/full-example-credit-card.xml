@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pay paymentMethod="credit-card" validCardTypes="visa mastercard amex">
+    <!-- Prompts for credit card number -->
+    <Prompt for="payment-card-number">
+      <Say>Please enter your credit card number.</Say>
+    </Prompt>
+    <Prompt for="payment-card-number" errorType="timeout">
+      <Say>You didn't enter your credit card number. Please enter your credit card number.</Say>
+    </Prompt>
+    <Prompt for="payment-card-number" errorType="invalid-card-number">
+      <Say>You entered an invalid credit card number. Please try again.</Say>
+    </Prompt>
+    <Prompt for="payment-card-number" errorType="invalid-card-type">
+      <Say>The card number you entered isn't from one of our accepted credit card issuers. Please enter a Visa, MasterCard, or American Express credit card number.</Say>
+    </Prompt>
+    <!-- Prompts for expiration date -->
+    <Prompt for="expiration-date">
+      <Say>Please enter your credit card's expiration date. Two digits for the month and two digits for the year.</Say>
+    </Prompt>
+    <Prompt for="expiration-date" errorType="timeout">
+      <Say>Sorry. You didn't enter an expiration date. Please enter your card's expiration date. Two digits for the month and two digits for the year.</Say>
+    </Prompt>
+    <Prompt for="expiration-date" errorType="invalid-date">
+      <Say>The date you entered was incorrect or is in the past. Please enter the expiration date. Two digits for the month and two digits for the year. For example, to enter July twenty twenty two, enter 0 7 2 2.</Say>
+    </Prompt>
+    <!-- Prompts for three-digit security code -->
+    <Prompt for="security-code" cardType="visa mastercard">
+      <Say>Please enter your security code. It's the 3 digits located on the back of your card.</Say>
+    </Prompt>
+    <Prompt for="security-code" errorType="timeout" cardType="visa mastercard">
+      <Say>You didn't enter your credit card security code. Please enter your security code. It's the 3 digits located on the back of your card.</Say>
+    </Prompt>
+    <Prompt for="security-code" errorType="invalid-security-code" cardType="visa mastercard">
+      <Say>That was an invalid security code. The security code must be 3 digits. Please try again.</Say>
+    </Prompt>
+    <!-- Prompts for four-digit security code (American Express) -->
+    <Prompt for="security-code" cardType="amex">
+      <Say>Please enter your security code. It's the 4 digits located on the front of your card.</Say>
+    </Prompt>
+    <Prompt for="security-code" errorType="timeout" cardType="amex">
+      <Say>You didn't enter your credit card security code.  Please enter your security code. It's the 4 digits located on the front of your card.</Say>
+    </Prompt>
+    <Prompt for="security-code" errorType="invalid-security-code" cardType="amex">
+      <Say>That was an invalid security code. The security code must be 4 digits. Please try again.</Say>
+    </Prompt>
+    <!-- Prompts for postal/zip code -->
+    <Prompt for="postal-code">
+      <Say>Please enter your 5 digit billing zip code.</Say>
+    </Prompt>
+    <Prompt for="postal-code" errorType="timeout">
+      <Say>You didn't enter your billing zip code. Please enter your 5 digit billing zip code.</Say>
+    </Prompt>
+    <!-- Prompt after customer has entered all payment information -->
+    <Prompt for="payment-processing">
+      <Say>Thank you. Please wait while we process your payment.</Say>
+    </Prompt>
+  </Pay>
+</Response>
