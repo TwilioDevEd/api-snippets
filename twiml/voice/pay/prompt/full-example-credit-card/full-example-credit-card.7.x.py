@@ -8,7 +8,7 @@ prompt.say('Please enter your credit card number.')
 pay.append(prompt)
 prompt2 = Prompt(error_type='timeout', for_='payment-card-number')
 prompt2.say(
-    'I am sorry I didn\'t hear anything. Please enter your credit card number.'
+    'You didn\'t enter your credit card number. Please enter your credit card number.'
 )
 pay.append(prompt2)
 prompt3 = Prompt(error_type='invalid-card-number', for_='payment-card-number')
@@ -74,7 +74,7 @@ prompt14.say('Please enter your 5 digit billing zip code.')
 pay.append(prompt14)
 prompt15 = Prompt(error_type='timeout', for_='postal-code')
 prompt15.say(
-    'I am sorry I didn\'t hear anything. Please enter your 5 digit billing zip code.'
+    'You didn\'t enter your billing zip code. Please enter your 5 digit billing zip code.'
 )
 pay.append(prompt15)
 prompt16 = Prompt(for_='payment-processing')

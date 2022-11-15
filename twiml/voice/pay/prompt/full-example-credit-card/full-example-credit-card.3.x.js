@@ -13,7 +13,7 @@ const prompt2 = pay.prompt({
     for: 'payment-card-number',
     errorType: 'timeout'
 });
-prompt2.say('I am sorry I didn\'t hear anything. Please enter your credit card number.');
+prompt2.say('You didn\'t enter your credit card number. Please enter your credit card number.');
 const prompt3 = pay.prompt({
     for: 'payment-card-number',
     errorType: 'invalid-card-number'
@@ -80,7 +80,7 @@ const prompt15 = pay.prompt({
     for: 'postal-code',
     errorType: 'timeout'
 });
-prompt15.say('I am sorry I didn\'t hear anything. Please enter your 5 digit billing zip code.');
+prompt15.say('You didn\'t enter your billing zip code. Please enter your 5 digit billing zip code.');
 const prompt16 = pay.prompt({
     for: 'payment-processing'
 });

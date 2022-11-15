@@ -6,7 +6,7 @@ response.pay(payment_method: 'credit-card', valid_card_types: 'visa mastercard a
         prompt.say(message: 'Please enter your credit card number.')
 end
     pay.prompt(for: 'payment-card-number', error_type: 'timeout') do |prompt2|
-        prompt2.say(message: "I am sorry I didn't hear anything. Please enter your credit card number.")
+        prompt2.say(message: "You didn't enter your credit card number. Please enter your credit card number.")
 end
     pay.prompt(for: 'payment-card-number', error_type: 'invalid-card-number') do |prompt3|
         prompt3.say(message: 'You entered an invalid credit card number. Please try again.')
@@ -45,7 +45,7 @@ end
         prompt14.say(message: 'Please enter your 5 digit billing zip code.')
 end
     pay.prompt(for: 'postal-code', error_type: 'timeout') do |prompt15|
-        prompt15.say(message: "I am sorry I didn't hear anything. Please enter your 5 digit billing zip code.")
+        prompt15.say(message: "You didn't enter your billing zip code. Please enter your 5 digit billing zip code.")
 end
     pay.prompt(for: 'payment-processing') do |prompt16|
         prompt16.say(message: 'Thank you. Please wait while we process your payment.')

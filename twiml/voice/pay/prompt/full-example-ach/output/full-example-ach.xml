@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-	<Pay input="dtmf" timeout="5" maxAttempts="3" paymentMethod="ach-debit" language="en-US">
+	<Pay timeout="5" maxAttempts="3" paymentMethod="ach-debit" language="en-US">
 		<Prompt for="bank-routing-number">
 			<Say>
 				Please enter your bank routing number.
@@ -9,7 +9,7 @@
 
 		<Prompt for="bank-routing-number" errorType= "timeout">
 			<Say>
-			I am sorry I didn't hear anything. Please enter your bank routing number.
+				You didn't enter your routing number. Please enter your bank routing number.
 			</Say>
 		</Prompt>
 
@@ -21,19 +21,19 @@
 
 		<Prompt for="bank-account-number">
 			<Say>
-				Please enter your bank account number. 
+				Please enter your bank account number.
 			</Say>
 		</Prompt>
 
 		<Prompt for="bank-account-number" errorType="timeout">
 			<Say>
-				I am sorry I did not hear anything. Please try again.
+				You didn't enter your bank account number. Please enter your bank account number.
 			</Say>
 		</Prompt>
 
 		<Prompt for="payment-processing">
 			<Say>
-				Thank you, please wait while we process your payment.
+				Thank you. Please wait while we process your payment.
 			</Say>
 		</Prompt>
 	</Pay>

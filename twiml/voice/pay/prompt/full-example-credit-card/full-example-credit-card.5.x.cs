@@ -13,7 +13,7 @@ class Example
         prompt.Say("Please enter your credit card number.");
         pay.Append(prompt);
         var prompt2 = new Prompt(errorType: new []{Prompt.ErrorTypeEnum.Timeout}.ToList(), for_: Prompt.ForEnum.PaymentCardNumber);
-        prompt2.Say("I am sorry I didn't hear anything. Please enter your credit card number.");
+        prompt2.Say("You didn't enter your credit card number. Please enter your credit card number.");
         pay.Append(prompt2);
         var prompt3 = new Prompt(errorType: new []{Prompt.ErrorTypeEnum.InvalidCardNumber}.ToList(), for_: Prompt.ForEnum.PaymentCardNumber);
         prompt3.Say("You entered an invalid credit card number. Please try again.");
@@ -52,7 +52,7 @@ class Example
         prompt14.Say("Please enter your 5 digit billing zip code.");
         pay.Append(prompt14);
         var prompt15 = new Prompt(errorType: new []{Prompt.ErrorTypeEnum.Timeout}.ToList(), for_: Prompt.ForEnum.PostalCode);
-        prompt15.Say("I am sorry I didn't hear anything. Please enter your 5 digit billing zip code.");
+        prompt15.Say("You didn't enter your billing zip code. Please enter your 5 digit billing zip code.");
         pay.Append(prompt15);
         var prompt16 = new Prompt(for_: Prompt.ForEnum.PaymentProcessing);
         prompt16.Say("Thank you. Please wait while we process your payment.");
