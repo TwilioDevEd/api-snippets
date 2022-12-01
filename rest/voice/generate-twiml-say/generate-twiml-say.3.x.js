@@ -1,16 +1,17 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-http
-  .createServer((req, res) => {
-    // Create TwiML response
-    const twiml = new VoiceResponse();
+app.all('/', (req, res) => {
+  // Create TwiML response
+  const twiml = new VoiceResponse();
 
-    twiml.say('Hello from your pals at Twilio! Have fun.');
+  twiml.say('Hello from your pals at Twilio! Have fun.');
 
-    res.writeHead(200, { 'Content-Type': 'text/xml' });
-    res.end(twiml.toString());
-  })
-  .listen(1337, '127.0.0.1');
+  res.type('xml');
+  res.send(twiml.toString());
+});
 
-console.log('TwiML server running at http://127.0.0.1:1337/');
+app.listen(1337, () => {
+  console.log('TwiML server running at http://127.0.0.1:1337/');
+});
