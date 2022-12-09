@@ -1,0 +1,25 @@
+curl --request POST \
+     --url https://api-sbox.dnlsrv.com/cigateway/id/v2/match \
+     --header 'Accept: application/json' \
+     --header 'Authorization: sha512-OrXJ9cUS2ZeapEbLBiONVK/eQtBwF1Mi7z2Zg9jNB9g71zvGSBXHqqhwfrfTD9WiNT+FIKOPvjToU/nhjml6Mw==?E5No' \
+     --header 'Content-Type: application/json' \
+     --header 'RequestTime: 2022-12-02T14:33:55.331Z' \
+     --data '
+{
+     "merchantId": "02200013919FB4",
+     "consentId": "9783471AFDB69NH34",
+     "consentTimeStamp": "2020-08-20T12:00:57+00:00",
+     "msisdn": "+14444441333",
+     "correlationId": "984681AFDB698C67",
+     "firstName": "Michael",
+     "lastName": "Johnson",
+     "address1": "3701 Ashwood Dr",
+     "address2": "Apt 20",
+     "city": "Council Bluffs",
+     "state": "IA",
+     "postalCode": "51501",
+     "countryCode": "US",
+     "nationalId": "345678901",
+     "dateOfBirth": "19800303"
+}
+'

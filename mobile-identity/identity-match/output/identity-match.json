@@ -1,0 +1,17 @@
+{
+  "results": {
+    "streetAddressScore": "10",
+    "postalCodeScore": "10",
+    "identityScore": "100",
+    "dateOfBirthScore": "10",
+    "lastNameScore": "10",
+    "countryCodeScore": "10",
+    "nationalIdScore": "10",
+    "cityScore": "10",
+    "correlationId": "984681AFDB698C67",
+    "dataSource": "Third-Party",
+    "responseId": "20221202155906M16601D121612",
+    "stateScore": "10",
+    "firstNameScore": "10"
+  }
+}
