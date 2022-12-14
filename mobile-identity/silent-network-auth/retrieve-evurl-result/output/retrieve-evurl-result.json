@@ -1,0 +1,12 @@
+{
+  "results": {
+    "correlationId": "984681AFDB698C67",
+    "referenceId": "6496849684CBAF87A9",
+    "phoneIdResult": {
+      "associationKey": "9572041AFDB69VN45",
+      "matchScores": {
+        "mdnMatchScore": "10"
+      }
+    }
+  }
+}
