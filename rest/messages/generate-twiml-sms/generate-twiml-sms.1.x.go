@@ -17,7 +17,7 @@ func main() {
 
 		twimlResult, err := twiml.Messages([]twiml.Element{message})
 		if err != nil {
-			context.String(http.StatusInternalServerError, err)
+			context.String(http.StatusInternalServerError, err.Error())
 		} else {
 			context.Header("Content-Type", "text/xml")
 			context.String(http.StatusOK, twimlResult)
