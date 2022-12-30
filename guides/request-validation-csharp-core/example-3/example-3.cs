@@ -1,60 +1,66 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using Twilio.Security;
 
 namespace ValidateRequestExample.Filters
 {
-    [AttributeUsage(AttributeTargets.Method)]
-    public class ValidateTwilioRequestAttribute : ActionFilterAttribute
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    public class ValidateTwilioRequestAttribute : TypeFilterAttribute
+    {
+        public ValidateTwilioRequestAttribute() : base(typeof(ValidateTwilioRequestFilter))
+        {
+        }
+    }
+
+    internal class ValidateTwilioRequestFilter : IAsyncActionFilter
     {
         private readonly RequestValidator _requestValidator;
-        private static IConfigurationRoot Configuration =>
-            new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true).Build();
-        private static bool IsTestEnvironment =>
-            bool.Parse(Configuration["IsTestEnvironment"]);
+        private readonly bool _isEnabled;
 
-        public ValidateTwilioRequestAttribute()
+        public ValidateTwilioRequestFilter(IConfiguration configuration, IWebHostEnvironment environment)
         {
-            var authToken = Configuration["TwilioAuthToken"];
+            var authToken = configuration["Twilio:AuthToken"] ?? throw new Exception("'Twilio:AuthToken' not configured.");
             _requestValidator = new RequestValidator(authToken);
+            _isEnabled = configuration.GetValue("Twilio:RequestValidation:Enabled", true);
         }
 
-        public override void OnActionExecuting(ActionExecutingContext actionContext)
+        public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            var context = actionContext.HttpContext;
-            if (!IsValidRequest(context.Request) || !IsTestEnvironment)
+            if (!_isEnabled)
             {
-                actionContext.HttpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                await next();
+                return;
+            }
+            
+            var httpContext = context.HttpContext;
+            var request = httpContext.Request;
+        
+            var requestUrl = $"{request.Scheme}://{request.Host}{request.Path}{request.QueryString}";
+            Dictionary<string, string> parameters = null;
+        
+            if (request.HasFormContentType)
+            {
+                var form = await request.ReadFormAsync(httpContext.RequestAborted).ConfigureAwait(false);
+                parameters = form.ToDictionary(p => p.Key, p => p.Value.ToString());
             }
 
-            base.OnActionExecuting(actionContext);
-        }
-
-
-        private bool IsValidRequest(HttpRequest request) {
-            var requestUrl = RequestRawUrl(request);
-            var parameters = ToDictionary(request.Form);
             var signature = request.Headers["X-Twilio-Signature"];
-            return _requestValidator.Validate(requestUrl, parameters, signature);
-        }
+            var isValid = _requestValidator.Validate(requestUrl, parameters, signature);
+        
+            if (!isValid)
+            {
+                httpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                return;
+            }
 
-        private static string RequestRawUrl(HttpRequest request)
-        {
-            return $"{request.Scheme}://{request.Host}{request.Path}{request.QueryString}";
-        }
-
-        private static IDictionary<string, string> ToDictionary(IFormCollection collection)
-        {
-            return collection.Keys
-                .Select(key => new { Key = key, Value = collection[key] })
-                .ToDictionary(p => p.Key, p => p.Value.ToString());
+            await next();
         }
     }
 }
