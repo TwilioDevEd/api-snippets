@@ -50,7 +50,7 @@
    snippet-example-1.6.x.java
    snippet-example-1.7.x.java
    snippet-example-1.2.x.js
-   snippet-example-1.3.x.js
+   snippet-example-1.4.x.js
    snippet-example-1.4.x.rb
    snippet-example-1.5.x.rb
    snippet-example-1.4.x.cs
