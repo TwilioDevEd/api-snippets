@@ -8,10 +8,15 @@ api_key_sid = os.environ['TWILIO_API_KEY']
 api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
-compositionHook = client.video.compositionHooks.create(
-    friendlyName = 'MixingAllRoomAudiosHook',
+composition_hook = client.video.composition_hooks.create(
+    friendlyName = 'MyFirstCompositionHook',
     audio_sources = '*',
+    video_layout = {
+                        'grid' : {
+                            'video_sources': ['*']
+                        }
+                    },
     status_callback = 'http://my.server.org/callbacks',
     format='mp4')
 
-print('Created Composition Hook with SID=%s' % (compositionHook.sid))
+print('Created Composition Hook with SID=%s' % (composition_hook.sid))
