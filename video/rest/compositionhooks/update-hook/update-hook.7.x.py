@@ -9,7 +9,7 @@ api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
 composition_hook = client.video.composition_hooks('HKXXXX').update(
-    friendlyName = 'MyFirstCompositionHook',
+    friendly_name = 'MyFirstCompositionHook',
     enabled = False,
     audio_sources = '*',
     video_layout = {
