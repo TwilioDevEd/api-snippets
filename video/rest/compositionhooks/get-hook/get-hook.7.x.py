@@ -8,9 +8,8 @@ api_key_sid = os.environ['TWILIO_API_KEY']
 api_key_secret = os.environ['TWILIO_API_KEY_SECRET']
 client = Client(api_key_sid, api_key_secret)
 
-hooks = client.video\
-                    .compositionHooks\
-                    .list(enabled=True)
+composition_hook = client.video\
+                    .composition_hooks('HKXXXX')\
+                    .fetch()
 
-for hook in hooks:
-    print('Read Composition Hook with SID=%s' % (hook.sid))
+print('Read Composition Hook with SID=%s' % (composition_hook.sid))
