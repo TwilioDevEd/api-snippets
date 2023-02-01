@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>We're sorry. All of our agents are busy right now.</Say>
+    <Say>We will call you back as soon as possible.</Say>
+    <Say>Please stay on the line to be redirected to the main menu.</Say>
+    <Hangup>
+        <Parameter name="payment_collected" value="false" />
+    </Hangup>
+</Response>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial>
+    <Application>
+      <ApplicationSid>AP1234567890abcdef1234567890abcd</ApplicationSid>
+      <Parameter name="AccountNumber" value="12345"/>
+      <Parameter name="TicketNumber" value="9876"/>
+    </Application>
+  </Dial>
+</Response>

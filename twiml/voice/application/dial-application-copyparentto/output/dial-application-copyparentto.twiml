@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Dial>
+    <Application copyParentTo="true">
+      <ApplicationSid>AP1234567890abcdef1234567890abcd</ApplicationSid>
+    </Application>
+  </Dial>
+</Response>
