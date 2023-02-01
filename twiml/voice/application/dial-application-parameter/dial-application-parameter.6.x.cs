@@ -1,12 +1,21 @@
-from twilio.twiml.voice_response import Application, ApplicationSid, Dial, Parameter, VoiceResponse
+using System;
+using Twilio.TwiML;
+using Twilio.TwiML.Voice;
 
-response = VoiceResponse()
-dial = Dial()
-application = Application()
-application.application_sid('AP1234567890abcdef1234567890abcd')
-application.parameter(name='AccountNumber', value='12345')
-application.parameter(name='TicketNumber', value='9876')
-dial.append(application)
-response.append(dial)
 
-print(response)
+class Example
+{
+    static void Main()
+    {
+        var response = new VoiceResponse();
+        var dial = new Dial();
+        var application = new Application();
+        application.ApplicationSid("AP1234567890abcdef1234567890abcd");
+        application.Parameter(name: "AccountNumber", value: "12345");
+        application.Parameter(name: "TicketNumber", value: "9876");
+        dial.Append(application);
+        response.Append(dial);
+
+        Console.WriteLine(response.ToString());
+    }
+}
