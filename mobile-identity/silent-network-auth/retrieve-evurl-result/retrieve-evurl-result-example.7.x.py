@@ -8,6 +8,7 @@ url = "https://api-sbox.dnlsrv.com/cigateway/id/v1/phoneIdResult"
 
 payload = {
     "merchantId": "02200013919FB4",
+    "subMerchantId": "00DF00000016",
     "correlationId": "984681AFDB698C67",
     "associationKey": "244464DFCB537E56",
     "match": {"consumerMdn": "+14085040458"}

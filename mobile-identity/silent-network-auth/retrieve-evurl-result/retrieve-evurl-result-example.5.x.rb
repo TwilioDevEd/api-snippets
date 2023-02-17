@@ -12,7 +12,7 @@ request["Authorization"] = 'y5jBqXWLzEF4OgK61EbJ4jbEesmxE5No'
 request["Content-Type"] = 'application/json'
 request["Accept"] = 'application/json'
 request["RequestTime"] = '2022-08-01T09:33:43+00:00'
-request.body = "{\"merchantId\":\"02200013919FB4\",\"correlationId\":\"984681AFDB698C67\",\"associationKey\":\"244464DFCB537E56\",\"match\":{\"consumerMdn\":\"+14085040458\"}}"
+request.body = "{\"merchantId\":\"02200013919FB4\",\"subMerchantId\":\"00DF00000016\",\"correlationId\":\"984681AFDB698C67\",\"associationKey\":\"244464DFCB537E56\",\"match\":{\"consumerMdn\":\"+14085040458\"}}"
 
 response = http.request(request)
 puts response.read_body
