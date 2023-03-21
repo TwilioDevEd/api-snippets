@@ -1,0 +1,27 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+  "friendly_name": "flight_departure_update",
+  "language": "en",
+  "variables": {"1": "flight_number",
+                "2": "arrival_city",
+                "3": "departure_time",
+                "4": "gate_number",
+                "5": "url_suffix"},
+  "types": {
+    "twilio/call-to-action": {
+      "body": "Owl Air: We will see you soon! Flight {{1}} to {{2}} departs at {{3}} from Gate {{4}}.",
+      "actions": [{
+          "type": "URL",
+          "title": "Check Flight Status",
+          "url": "https://owlair.com/{{5}}"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "title": "Call Support",
+          "phone": "+18005551234"
+      }]
+    }
+  }
+}'
