@@ -56,8 +56,7 @@
    snippet-example-1.6.x.cs
    snippet-example-1.4.x.php
    snippet-example-1.7.x.php
-   snippet-example-1.5.x.py
-   snippet-example-1.6.x.py
+   snippet-example-1.8.x.py
    ```
 
    And the full structure should look like this:
