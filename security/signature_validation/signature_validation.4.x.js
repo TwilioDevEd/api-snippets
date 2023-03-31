@@ -4,10 +4,10 @@ const client = require('twilio');
 // Your Auth Token from twilio.com/console
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 
-// The Twilio request URL
-const url = 'https://mycompany.com/myapp.php?foo=1&bar=2';
+// Store Twilio's request URL (the url of your webhook) as a variable
+const url = 'https://mycompany.com/myapp';
 
-// The post variables in Twilio's request
+// Store the application/x-www-form-urlencoded parameters from Twilio's request as a variable
 const params = {
   CallSid: 'CA1234567890ABCDE',
   Caller: '+12349013030',
@@ -16,7 +16,8 @@ const params = {
   To: '+18005551212',
 };
 
-// The X-Twilio-Signature header attached to the request
-const twilioSignature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ=';
+// Store the X-Twilio-Signature header attached to the request as a variable
+const twilioSignature = 'Np1nax6uFoY6qpfT5l9jWwJeit0=';
 
+// Check if the incoming signature is valid for your application URL and the incoming parameters
 console.log(client.validateRequest(authToken, twilioSignature, url, params));

@@ -11,15 +11,13 @@ class Example
         // Your Auth Token from twilio.com/console
         const string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
-        // Initialize the validator
+        // Initialize the request validator
         var validator = new RequestValidator(authToken);
 
-        // The Twilio request URL
-        const string url = "https://mycompany.com/myapp.php?foo=1&bar=2";
+        // Store Twilio's request URL (the url of your webhook) as a variable
+        const string url = "https://example.com/myapp";
 
-        // The X-Twilio-Signature header attached to the request
-        const string twilioSignature = "0/KCTR6DLpKmkAf8muzZqo1nDgQ=";
-
+        // Store the application/x-www-form-urlencoded params from Twilio's request as a variable
         var parameters = new Dictionary<string, string>
         {
             {"CallSid", "CA1234567890ABCDE"},
@@ -29,6 +27,10 @@ class Example
             {"To", "+18005551212"}
         };
 
+        // Store the X-Twilio-Signature header attached to the request as a variable
+        const string twilioSignature = "Np1nax6uFoY6qpfT5l9jWwJeit0=";
+
+        // Check if the incoming signature is valid for your application URL and the incoming parameters
         Console.WriteLine(validator.Validate(url, parameters, twilioSignature));
     }
 }

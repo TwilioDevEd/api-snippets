@@ -3,10 +3,15 @@ require 'rubygems' # This line not needed for ruby > 1.8
 require 'twilio-ruby'
 
 # Get your Auth Token from https://www.twilio.com/console
-auth_token = '12345'
+auth_token = ENV['TWILIO_AUTH_TOKEN']
+
+#  Initialize the request validator
 validator = Twilio::Security::RequestValidator.new(auth_token)
 
-url = 'https://mycompany.com/myapp.php?foo=1&bar=2'
+# Store Twilio's request URL (the url of your webhook) as a variable
+url = 'https://example.com/myapp'
+
+# Store the application/x-www-form-urlencoded params from Twilio's request as a variable
 params = {
   'CallSid' => 'CA1234567890ABCDE',
   'Caller'  => '+12349013030',
@@ -14,7 +19,9 @@ params = {
   'From'    => '+12349013030',
   'To'      => '+18005551212'
 }
-# The X-Twilio-Signature header attached to the request
-twilio_signature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ='
 
+# Store the X-Twilio-Signature header attached to the request as a variable
+twilio_signature = 'Np1nax6uFoY6qpfT5l9jWwJeit0='
+
+# Check if the incoming signature is valid for your application URL and the incoming parameters
 puts validator.validate(url, params, twilio_signature)
