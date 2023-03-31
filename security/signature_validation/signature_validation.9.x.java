@@ -10,7 +10,7 @@ public class Example {
     public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
     // Initialize the request validator
-    RequestValidator validator = new RequestValidator(authToken);
+    RequestValidator validator = new RequestValidator(AUTH_TOKEN);
 
     // Store Twilio's request URL (the url of your webhook) as a variable
     String url = "https://example.com/myapp";
