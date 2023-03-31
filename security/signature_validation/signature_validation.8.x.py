@@ -1,21 +1,27 @@
+import os
 # Download the twilio-python library from twilio.com/docs/python/install
 from twilio.request_validator import RequestValidator
 
 # Your Auth Token from twilio.com/user/account
-auth_token = '12345'
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
 
+# Initialize the request validator
 validator = RequestValidator(auth_token)
 
-url = 'https://mycompany.com/myapp.php?foo=1&bar=2'
+#  Store Twilio's request URL (the url of your webhook) as a variable
+url = 'https://example.com/myapp'
+
+#  Store the application/x-www-form-urlencoded parameters from Twilio's request as a variable
 params = {
-    'CallSid': 'CA1234567890ABCDE',
-    'Caller': '+12349013030',
-    'Digits': '1234',
-    'From': '+12349013030',
-    'To': '+18005551212'
+  'CallSid': 'CA1234567890ABCDE',
+  'Caller': '+12349013030',
+  'Digits': '1234',
+  'From': '+12349013030',
+  'To': '+18005551212'
 }
 
-# The X-Twilio-Signature header attached to the request
-twilio_signature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ='
+#  Store the X-Twilio-Signature header attached to the request as a variable
+twilio_signature = 'Np1nax6uFoY6qpfT5l9jWwJeit0='
 
+#  Check if the incoming signature is valid for your application URL and the incoming parameters
 print(validator.validate(url, params, twilio_signature))

@@ -7,31 +7,32 @@ require_once '/path/to/vendor/autoload.php';
 use Twilio\Security\RequestValidator;
 
 // Your auth token from twilio.com/user/account
-$token = "12345";
+$token = getenv("TWILIO_AUTH_TOKEN");
 
 // The X-Twilio-Signature header - in PHP this should be
-// $_SERVER["HTTP_X_TWILIO_SIGNATURE"];
-$signature = '0/KCTR6DLpKmkAf8muzZqo1nDgQ=';
+// You may be able to use $signature = $_SERVER["HTTP_X_TWILIO_SIGNATURE"];
+$signature = 'Np1nax6uFoY6qpfT5l9jWwJeit0=';
 
-// Initialize the validator
+// Initialize the request validator
 $validator = new RequestValidator($token);
 
 // The Twilio request URL. You may be able to retrieve this from
-// $_SERVER['SCRIPT_URI']
-$url = 'https://mycompany.com/myapp.php?foo=1&bar=2';
+// You may be able to use $url = $_SERVER['SCRIPT_URI']
+$url = 'https://example.com/myapp';
 
-// The post variables in the Twilio request. You may be able to use
-// $postVars = $_POST
+// Store the application/x-www-form-urlencoded parameters from Twilio's request as a variable
+// You may be able to use $postVars = $_POST
 $postVars = array(
-    'CallSid' => 'CA1234567890ABCDE',
-    'Caller' => '+12349013030',
-    'Digits' => '1234',
-    'From' => '+12349013030',
-    'To' => '+18005551212'
+  'CallSid' => 'CA1234567890ABCDE',
+  'Caller' => '+12349013030',
+  'Digits' => '1234',
+  'From' => '+12349013030',
+  'To' => '+18005551212'
 );
 
+// Check if the incoming signature is valid for your application URL and the incoming parameters
 if ($validator->validate($signature, $url, $postVars)) {
-    echo "Confirmed to have come from Twilio.";
+  echo "Confirmed to have come from Twilio.";
 } else {
-    echo "NOT VALID. It might have been spoofed!";
+  echo "NOT VALID. It might have been spoofed!";
 }

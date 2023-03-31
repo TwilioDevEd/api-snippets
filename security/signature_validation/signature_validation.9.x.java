@@ -7,15 +7,15 @@ import com.twilio.security.RequestValidator;
 public class Example {
   public static void main(String[] args) {
     // Your Auth Token from twilio.com/user/account
-    String authToken = "12345";
+    public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
-    // Initialize the validator
-    RequestValidator validator = new RequestValidator(authToken);
+    // Initialize the request validator
+    RequestValidator validator = new RequestValidator(AUTH_TOKEN);
 
-    // The Twilio request URL
-    String url = "https://mycompany.com/myapp.php?foo=1&bar=2";
+    // Store Twilio's request URL (the url of your webhook) as a variable
+    String url = "https://example.com/myapp";
 
-    // The post variables in Twilio's request
+    // Store the application/x-www-form-urlencoded parameters from Twilio's request as a variable
     Map<String, String> params = new HashMap<>();
     params.put("CallSid", "CA1234567890ABCDE");
     params.put("Caller", "+12349013030");
@@ -23,9 +23,10 @@ public class Example {
     params.put("From", "+12349013030");
     params.put("To", "+18005551212");
 
-    // The X-Twilio-Signature header attached to the request
-    String twilioSignature = "0/KCTR6DLpKmkAf8muzZqo1nDgQ=";
+    // Store the X-Twilio-Signature header attached to the request as a variable
+    String twilioSignature = "Np1nax6uFoY6qpfT5l9jWwJeit0=";
 
+    // Check if the incoming signature is valid for your application URL and the incoming parameters
     System.out.println(validator.validate(url, params, twilioSignature));
   }
 }
