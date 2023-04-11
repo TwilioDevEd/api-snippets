@@ -4,7 +4,7 @@ const response = new VoiceResponse();
 const say = response.say({
     voice: 'Polly.Joanna'
 }, 'Hi');
-say.break_({
+say.break({
     strength: 'x-weak',
     time: '100ms'
 });
