@@ -83,6 +83,7 @@ Use a descriptive and unique `title`, because that's how Wagtail users will find
 For TwiML snippets, the `type` is always `server`.
 
 Example:
+
 ```json
 {
     "title": "Start a MediaStream",
@@ -96,7 +97,7 @@ Use the [twiml-generator](https://github.com/TwilioDevEd/twiml-generator) projec
 
 **Use the verify command in the twiml-generator project to test the code**
 
-> !!!!! Do not put untested TwiML code samples into this repo !!!!!
+:warning: Do not put untested TwiML code samples into this repo :warning:
 
 This leads to a bad experience for our customers, more Support tickets, and more time engaging with DevEd and R&D to verify expected behavior.
 
@@ -106,9 +107,9 @@ Give the snippet files a *descriptive* name that includes the TwiML element name
 
 Many existing TwiML snippets are named things like `say-1` and `say-2`, which makes it time-consuming to find relevant snippets. Make finding TwiML snippets easier for yourself and other Twilions by descriptively naming the snippets. 
 
-- NO: `say-1`
+- :no_entry: NO: `say-1`
 
-- YES: `say-voice-language`
+- :white_check_mark: YES: `say-voice-language`
     - (this indicates that the TwiML snippet uses `<Say>` with the `voice` and `language` attributes)
 
 ## Updating snippets for new Helper Library versions
@@ -117,7 +118,7 @@ If you are updating snippets for a new major version of a Helper Library, **Do n
 
 Customers using previous versions still need code samples for their version of the Helper Library. If they don't see their version in the docs, they'll often open up a Support ticket or leave a bad rating on a docs page! Let's avoid this. 
 
-**AND THEN TEST THE CODE SAMPLES TO VERIFY THAT THEY OUTPUT THE EXPECTED TWIML WITHOUT ERROR** 
+:warning: AND THEN TEST THE CODE SAMPLES TO VERIFY THAT THEY OUTPUT THE EXPECTED TWIML WITHOUT ERROR :warning:
 
 BE AN OWNER: Please don't leave it up to customers or other Twilions to find out that a code sample you added/edited doesn't work. 
 
