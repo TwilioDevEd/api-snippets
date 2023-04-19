@@ -43,10 +43,11 @@ Example from `twiml/voice/stream/stream-1/output/stream-1.twiml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-   <Connect>
-       <Stream url="wss://mystream.ngrok.io/audiostream" />
-   </Connect>
+    <Start>
+        <Stream name="Example Audio Stream" url="wss://mystream.ngrok.io/audiostream" />
+    </Start>
 </Response>
+
 ```
 
 ### The Helper Library code samples
