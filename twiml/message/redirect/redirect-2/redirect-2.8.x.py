@@ -1,6 +1,6 @@
-from twilio.twiml.voice_response import Redirect, VoiceResponse
+from twilio.twiml.messaging_response import Redirect, MessagingResponse
 
-response = VoiceResponse()
+response = MessagingResponse()
 response.redirect('../nextInstructions')
 
 print(response)
