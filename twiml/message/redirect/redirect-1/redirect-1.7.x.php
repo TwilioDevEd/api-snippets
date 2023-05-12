@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-use Twilio\TwiML\VoiceResponse;
+use Twilio\TwiML\MessagingResponse;
 
-$response = new VoiceResponse();
-$response->redirect('http://www.foo.com/nextInstructions');
+$response = new MessagingResponse();
+$response->redirect('http://www.example.com/nextInstructions');
 
 echo $response;

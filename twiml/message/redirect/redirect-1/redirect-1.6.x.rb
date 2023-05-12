@@ -1,6 +1,6 @@
 require 'twilio-ruby'
 
-response = Twilio::TwiML::VoiceResponse.new
-response.redirect('http://www.foo.com/nextInstructions')
+response = Twilio::TwiML::MessagingResponse.new
+response.redirect('http://www.example.com/nextInstructions')
 
 puts response

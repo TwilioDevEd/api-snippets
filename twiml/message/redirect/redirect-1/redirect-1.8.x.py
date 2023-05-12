@@ -1,6 +1,6 @@
-from twilio.twiml.voice_response import Redirect, VoiceResponse
+from twilio.twiml.messaging_response import Redirect, MessagingResponse
 
-response = VoiceResponse()
-response.redirect('http://www.foo.com/nextInstructions')
+response = MessagingResponse()
+response.redirect('http://www.example.com/nextInstructions')
 
 print(response)

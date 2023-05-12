@@ -1,14 +1,12 @@
-import com.twilio.twiml.voice.Redirect;
-import com.twilio.twiml.VoiceResponse;
+import com.twilio.twiml.messaging.Redirect;
+import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.TwiMLException;
 
 
 public class Example {
     public static void main(String[] args) {
-        Redirect redirect = new Redirect
-            .Builder("http://www.foo.com/nextInstructions").build();
-        VoiceResponse response = new VoiceResponse.Builder().redirect(redirect)
-            .build();
+        Redirect redirect = new Redirect.Builder("http://www.example.com/nextInstructions").build();
+        MessagingResponse response = new MessagingResponse.Builder().redirect(redirect).build();
 
         try {
             System.out.println(response.toXml());

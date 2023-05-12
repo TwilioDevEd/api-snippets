@@ -1,7 +1,6 @@
-const VoiceResponse = require('twilio').twiml.VoiceResponse;
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
-
-const response = new VoiceResponse();
+const response = new MessagingResponse();
 response.redirect('../nextInstructions');
 
 console.log(response.toString());
