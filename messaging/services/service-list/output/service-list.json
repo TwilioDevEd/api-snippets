@@ -1,12 +1,12 @@
 {
     "meta": {
         "page": 0,
-        "page_size": 50,
-        "first_page_url": "https://messaging.twilio.com/v1/Services?PageSize=50&Page=0",
+        "page_size": 20,
+        "first_page_url": "https://messaging.twilio.com/v1/Services?PageSize=20&Page=0",
         "previous_page_url": null,
         "next_page_url": null,
         "key": "services",
-        "url": "https://messaging.twilio.com/v1/Services?PageSize=50&Page=0"
+        "url": "https://messaging.twilio.com/v1/Services?PageSize=20&Page=0"
     },
     "services": [
         {
