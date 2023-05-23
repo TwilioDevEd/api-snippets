@@ -6,5 +6,5 @@ require_once '/path/to/vendor/autoload.php';
 use Twilio\TwiML\VoiceResponse;
 
 $response = new VoiceResponse;
-$response->say("hello world!", array('voice' => 'alice'));
+$response->say("Hello world!");
 print $response;

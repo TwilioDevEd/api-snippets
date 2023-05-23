@@ -11,7 +11,7 @@ def voice():
     resp = VoiceResponse()
 
     # Read a message aloud to the caller
-    resp.say("hello world!", voice='alice')
+    resp.say("Hello world!")
 
     return str(resp)
 

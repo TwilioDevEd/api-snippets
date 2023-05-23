@@ -15,7 +15,7 @@ public class VoiceController : TwilioController
         var city = fromCity;
 
         var response = new VoiceResponse();
-        response.Say($"Never gonna give you up {city}", voice: "alice");
+        response.Say($"Never gonna give you up {city}");
         response.Play("https://demo.twilio.com/docs/classic.mp3");
 
         return TwiML(response)
