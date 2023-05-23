@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.twilio.twiml.voice.Play;
 import com.twilio.twiml.voice.Say;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
@@ -16,18 +15,10 @@ import com.twilio.twiml.VoiceResponse;
 public class IncomingCallServlet extends HttpServlet {
   // Handle HTTP POST to /voice
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-    // Get the city from the incoming call (if available)
-    String fromCity = request.getParameter("FromCity");
-    if (fromCity == null) {
-      fromCity = "home slice";
-    }
-
-    // Create a TwiML builder object
-    VoiceResponse twiml = new VoiceResponse.Builder()
-        .say(new Say.Builder(String.format("Never gonna give you up, %s!", fromCity)).build())
-        .play(new Play.Builder("https://demo.twilio.com/docs/classic.mp3").build())
-        .build();
+    throws ServletException, IOException {
+      
+    Say say = new Say.Builder("Hello world!").build();
+    VoiceResponse twiml = new VoiceResponse.Builder().say(say).build();
 
     // Render TwiML as XML
     response.setContentType("text/xml");
@@ -38,8 +29,5 @@ public class IncomingCallServlet extends HttpServlet {
       e.printStackTrace();
     }
 
-
-
   }
-
 }

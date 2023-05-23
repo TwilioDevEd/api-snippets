@@ -14,7 +14,7 @@ def voice():
     resp = VoiceResponse()
 
     # Read a message aloud to the caller
-    resp.say('Never gonna give you up, {}!'.format(city), voice='alice')
+    resp.say('Never gonna give you up, {}!'.format(city))
 
     # Play an audio file for the caller
     resp.play('https://demo.twilio.com/docs/classic.mp3')
