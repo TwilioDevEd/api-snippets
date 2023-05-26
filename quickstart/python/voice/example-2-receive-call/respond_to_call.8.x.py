@@ -11,7 +11,7 @@ def answer_call():
     resp = VoiceResponse()
 
     # Read a message aloud to the caller
-    resp.say("Thank you for calling! Have a great day.", voice='alice')
+    resp.say("Thank you for calling! Have a great day.", voice='Polly.Amy')
 
     return str(resp)
 
