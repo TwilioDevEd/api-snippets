@@ -7,7 +7,7 @@ import com.twilio.twiml.TwiMLException;
 public class Example {
     public static void main(String[] args) {
         Say say = new Say.Builder("Hello World!")
-                .voice(Say.Voice.ALICE)
+                .voice(Say.Voice.POLLY_AMY)
                 .language(Language.EN_GB)
                 .build();
         VoiceResponse response = new VoiceResponse.Builder()
