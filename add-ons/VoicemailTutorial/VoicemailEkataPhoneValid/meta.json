@@ -1,5 +1,0 @@
-{
-  "description": "Integrate a voicemail with the Ekata Phone Valid Add-on to block robocalls.",
-  "type": "server",
-  "title": "Robocall-Filtered Voicemail using Ekata Phone Valid Add-on"
-}
