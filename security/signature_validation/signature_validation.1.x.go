@@ -18,6 +18,9 @@ func main() {
 	url := "https://example.com/myapp"
 
 	// Store the application/x-www-form-urlencoded params from Twilio's request as a variable
+	// In practice, this MUST include all received parameters, not a
+    // hardcoded list of parameters that you receive today. New parameters
+    // may be added without notice.
 	params := map[string]string{
 		"CallSid": "CA1234567890ABCDE",
 		"Caller":  "+12349013030",
