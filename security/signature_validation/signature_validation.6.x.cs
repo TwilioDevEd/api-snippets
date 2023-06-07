@@ -18,6 +18,9 @@ class Example
         const string url = "https://example.com/myapp";
 
         // Store the application/x-www-form-urlencoded params from Twilio's request as a variable
+        // In practice, this MUST include all received parameters, not a
+        // hardcoded list of parameters that you receive today. New parameters
+        // may be added without notice.
         var parameters = new Dictionary<string, string>
         {
             {"CallSid", "CA1234567890ABCDE"},
