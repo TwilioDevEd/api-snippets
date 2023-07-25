@@ -1,0 +1,7 @@
+EXCLAMATION_MARK='!'
+curl -X POST "https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages.json" \
+--data-urlencode "ShortenUrls=True" \
+--data-urlencode "MessagingServiceSid=MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
+--data-urlencode "Body=Visit this link to start earning rewards today$EXCLAMATION_MARK https://example.com/N6uAirXeREkpV2MW7kpV2MW7TAvh1zn4gEFMTAvh1zn4gEFMN6uAirXeRE" \
+--data-urlencode "To=+15551212121" \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN

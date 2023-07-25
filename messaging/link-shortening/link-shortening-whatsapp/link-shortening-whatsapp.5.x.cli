@@ -1,0 +1,9 @@
+EXCLAMATION_MARK='!'
+# Install the twilio-cli from https://twil.io/cli
+
+twilio api:core:messages:create \
+    --shorten-urls  \
+    --messaging-service-sid MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    --body "Visit this link to start earning rewards today$EXCLAMATION_MARK https://example.com/N6uAirXeREkpV2MW7kpV2MW7TAvh1zn4gEFMTAvh1zn4gEFMN6uAirXeRE" \
+    --to "whatsapp:+15551212121"
+
