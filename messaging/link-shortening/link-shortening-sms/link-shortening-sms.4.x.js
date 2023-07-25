@@ -6,10 +6,10 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 client.messages
-  .create({
-     shortenUrls: true,
-     messagingServiceSid: 'MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-     body: 'Visit this link to start earning rewards today! https://example.com/N6uAirXeREkpV2MW7kpV2MW7TAvh1zn4gEFMTAvh1zn4gEFMN6uAirXeRE',
-     to: '+15551212121'
-   })
-  .then(message => console.log(message.sid));
+    .create({
+        shortenUrls: true,
+        messagingServiceSid: 'MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+        body: 'Visit this link to start earning rewards today! https://example.com/N6uAirXeREkpV2MW7kpV2MW7TAvh1zn4gEFMTAvh1zn4gEFMN6uAirXeRE',
+        to: '+15551212121'
+    })
+    .then(message => console.log(message.sid));
