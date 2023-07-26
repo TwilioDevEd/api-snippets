@@ -1,0 +1,6 @@
+{
+    "title": "Upload/update TLS Certificate and Private Key for a Link Shortening domain ",
+    "type": "server",
+    "tags": ["messaging"],
+    "testable": true
+}
