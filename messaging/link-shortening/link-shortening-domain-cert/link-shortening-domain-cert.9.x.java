@@ -58,8 +58,7 @@ public class Example {
 	YTp2o4Tn0HlLk3KHaBKHGiO0YGVuhXa2jz0u3jg5LLG7vusOZhQBkd4tN7L10ZMM
 	l5jSr8uncW4/3gZ/O/URQZcMH+Uzttw8nVL3mzLS/M600I+ryZdLkrmtDQWUBRwj
 	fRre92n5B+9AgpEl6RyegsXToA==
-	-----END PRIVATE KEY-----
-	"""
+	-----END PRIVATE KEY-----"""
 
     public static void main(String[] args) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
