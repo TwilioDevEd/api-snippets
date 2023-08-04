@@ -1,0 +1,5 @@
+{
+  "testable": "false",
+  "type": "server",
+  "title": "Receive an incoming message without sending a response",
+}
