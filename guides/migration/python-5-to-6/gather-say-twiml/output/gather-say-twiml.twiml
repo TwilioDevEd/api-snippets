@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="/process_gather.php" method="GET">
+        <Say>Enter something, or not</Say>
+    </Gather>
+    <Redirect method="GET">/process_gather.php?Digits=TIMEOUT</Redirect>
+</Response>
