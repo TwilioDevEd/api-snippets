@@ -1,5 +1,5 @@
 {
   "title": "Disable Twilio request validation when testing",
-  "description": "Use `APP_ENV` environment variable to disable request validation.",
+  "description": "Use APP_ENV environment variable to disable request validation.",
   "type": "server"
 }
