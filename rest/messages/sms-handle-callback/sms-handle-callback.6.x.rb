@@ -2,7 +2,7 @@ require 'sinatra'
 
 # Handle message status hook,
 # which is called whenever the message status changes
-post '/MessageStatus' do
+post '/message-status' do
   message_sid = params['MessageSid']
   message_status = params['MessageStatus']
 

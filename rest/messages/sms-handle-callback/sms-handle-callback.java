@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "MessageStatus", urlPatterns = {"/MessageStatus"})
+@WebServlet(name = "MessageStatus", urlPatterns = {"/message-status"})
 public class MessageStatus extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String messageSid = request.getParameter("MessageSid");
