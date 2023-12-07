@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 app = Flask(__name__)
 
 
-@app.route("/MessageStatus", methods=['POST'])
+@app.route("/message-status", methods=['POST'])
 def incoming_sms():
     message_sid = request.values.get('MessageSid', None)
     message_status = request.values.get('MessageStatus', None)
