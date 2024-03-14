@@ -1,0 +1,10 @@
+curl https://taskrouter.twilio.com/v1/Workspaces/WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/TaskQueues/RealTimeStatistics \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "queueSids" : [
+        "WQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "WQYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+        "WQZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+        ]
+    }' \
+-u '{account_sid}:{auth_token}'
