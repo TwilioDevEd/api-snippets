@@ -4,5 +4,5 @@
     <Sip>sip:alice@example.com</Sip>
     <Sip>sip:bob@example.com</Sip>
     <Sip>sip:charlie@example.com</Sip>
-</Dial>
+  </Dial>
 </Response>
