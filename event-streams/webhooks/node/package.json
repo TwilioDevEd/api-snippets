@@ -1,0 +1,16 @@
+{
+  "name": "twilio-event-streams-samples-webhooks-node",
+  "version": "1.0.0",
+  "description": "Sample for receiving Event Streams webhooks with Node.js",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "twilio": "^5.0.3"
+  }
+}
