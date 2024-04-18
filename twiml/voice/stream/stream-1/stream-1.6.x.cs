@@ -9,8 +9,9 @@ class Example
     {
         var response = new VoiceResponse();
         var start = new Start();
-        start.Stream(name: "Example Audio Stream", url: "wss://mystream.ngrok.io/audiostream");
+        start.Stream(name: "Example Audio Stream", url: "wss://example.com/audiostream");
         response.Append(start);
+        response.Say("The stream has started.");
 
         Console.WriteLine(response.ToString());
     }
