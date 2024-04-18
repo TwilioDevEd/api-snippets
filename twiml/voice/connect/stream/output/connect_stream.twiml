@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
    <Connect>
-       <Stream url="wss://mystream.ngrok.io/audiostream" />
+       <Stream url="wss://example.com/audiostream" />
    </Connect>
+   <Say>This TwiML instruction is unreachable unless the Stream is ended by your WebSocket server.</Say>
 </Response>
