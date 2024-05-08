@@ -9,7 +9,7 @@ public class Example {
     public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
     public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
-    Sring certAndPrivateKey = """-----BEGIN CERTIFICATE-----
+    String certAndPrivateKey = """-----BEGIN CERTIFICATE-----
 	MIIDqDCCApACCQCBT5e22Q01fjANBgkqhkiG9w0BAQsFADCBlTELMAkGA1UEBhMC
 	VVMxCzAJBgNVBAgMAkNBMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMRYwFAYDVQQK
 	DA1FeGFtcGxlLCBJbmMuMRIwEAYDVQQLDAlUZXN0IERlcHQxFDASBgNVBAMMC2V4
