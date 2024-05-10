@@ -49,6 +49,7 @@ public class JavaWebhooksClientApplication {
 			System.out.println("\tTimestamp: " + event.get("time").asText());
 			System.out.println("\tRaw event: " + event);
 		}
+		
 		System.out.println("------------------------------------------------");
 		System.out.println();
 		return "Ok";
