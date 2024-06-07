@@ -1,36 +1,36 @@
 {
-    "language": "en",
-    "date_updated": "2023-08-03T14:54:47Z",
-    "variables": {
-        "1": "coupon_code"
-    },
-    "friendly_name": "Owl Air coupon card template",
     "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "date_created": "2023-08-03T14:54:47Z",
+    "date_updated": "2023-08-03T14:54:47Z",
+    "friendly_name": "Owl Air coupon card template",
+    "language": "en",
+    "links": {
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+    },
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "types": {
         "whatsapp/card": {
-            "body": "Congratulations, you have reached Elite status! Add code {{1}} for 10% off.",
-            "media": null,
-            "header_text": "This is a {{1}} card",
             "actions": [
                 {
-                    "url": "https://owlair.example.com/",
+                    "title": "Order Online",
                     "type": "URL",
-                    "title": "Order Online"
+                    "url": "https://owlair.example.com/"
                 },
                 {
                     "phone": "+1555554567",
-                    "type": "PHONE_NUMBER",
-                    "title": "Call Us"
+                    "title": "Call Us",
+                    "type": "PHONE_NUMBER"
                 }
             ],
-            "footer": "To unsubscribe, reply Stop"
+            "body": "Congratulations, you have reached Elite status! Add code {{1}} for 10% off.",
+            "footer": "To unsubscribe, reply Stop",
+            "header_text": "This is a {{1}} card",
+            "media": null
         }
     },
-    "links": {
-        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
-        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "variables": {
+        "1": "coupon_code"
     }
 }
