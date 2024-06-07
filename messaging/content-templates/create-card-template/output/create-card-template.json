@@ -1,0 +1,39 @@
+{
+  "language": "en",
+  "date_updated": "2022-08-30T09:19:17Z",
+  "variables": {
+    "1": "coupon_code"
+  },
+  "friendly_name": "Owl Air coupon card template",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-08-30T09:19:17Z",
+  "types": {
+    "twilio/text": {
+      "body": "Congratulations, your account reached Elite status, you are now eligible for 10% off any flight! Just add coupon code {{1}} to check out."
+    },
+    "twilio/card": {
+      "body": null,
+      "media": null,
+      "subtitle": "To unsubscribe, reply Stop",
+      "actions": [
+        {
+          "url": "https://owlair.example.com/",
+          "type": "URL",
+          "title": "Order Online"
+        },
+        {
+          "phone_number": "+15551234567",
+          "type": "PHONE_NUMBER",
+          "title": "Call Us"
+        }
+      ],
+      "title": "Congratulations, you have reached Elite status! Add code {{1}} for 10% off."
+    }
+  },
+  "links": {
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  }
+}
