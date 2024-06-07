@@ -1,42 +1,42 @@
 {
-  "language": "en",
-  "date_updated": "2022-08-29T15:46:11Z",
-  "variables": {
-    "1": "end_date"
-  },
-  "friendly_name": "Owl Air list picker template",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2022-08-29T15:46:11Z",
+  "date_updated": "2022-08-29T15:46:11Z",
+  "friendly_name": "Owl Air list picker template",
+  "language": "en",
+  "links": {
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+  },
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "types": {
     "twilio/list-picker": {
       "body": "Owl Air Flash Sale! Hurry! Sale ends on {{1}}!",
+      "button": "Select a destination",
       "items": [
         {
-          "item": "SFO to NYC for $299",
+          "description": "Owl Air Flight 1337 to LGA",
           "id": "SFO1337",
-          "description": "Owl Air Flight 1337 to LGA"
+          "item": "SFO to NYC for $299"
         },
         {
-          "item": "OAK to Denver for $149",
+          "description": "Owl Air Flight 5280 to DEN",
           "id": "OAK5280",
-          "description": "Owl Air Flight 5280 to DEN"
+          "item": "OAK to Denver for $149"
         },
         {
-          "item": "LAX to Chicago for $199",
+          "description": "Owl Air Flight 96 to ORD",
           "id": "LAX96",
-          "description": "Owl Air Flight 96 to ORD"
+          "item": "LAX to Chicago for $199"
         }
-      ],
-      "button": "Select a destination"
+      ]
     },
     "twilio/text": {
       "body": "We have flights to the following destinations: (1) SFO, (2) OAK, (3) LAX. Hurry! Sale ends on {{1}}!"
     }
   },
-  "links": {
-    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
-    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "variables": {
+    "1": "end_date"
   }
 }
