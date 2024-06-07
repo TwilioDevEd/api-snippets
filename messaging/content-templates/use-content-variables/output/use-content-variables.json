@@ -1,38 +1,38 @@
 {
-    "language": "en",
-    "date_updated": "2022-11-17T08:52:12Z",
-    "variables": {
-        "1": "coupon_code",
-        "3": "images/library-logo-resource2x.width-1000.png",
-        "2": "docs"
-    },
-    "friendly_name": "Owl Air elite status card template",
     "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "date_created": "2022-11-17T08:52:12Z",
+    "date_updated": "2022-11-17T08:52:12Z",
+    "friendly_name": "Owl Air elite status card template",
+    "language": "en",
+    "links": {
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+    },
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "types": {
-        "twilio/text": {
-            "body": "Congratulations, you've reached Elite status! Add code {{1}} for 10% off."
-        },
         "twilio/card": {
+            "actions": [
+                {
+                    "title": "Order Online",
+                    "type": "URL",
+                    "url": "https://owlair.example.com/{{2}}"
+                }
+            ],
             "body": null,
             "media": [
                 "https://twilio-cms-prod.s3.amazonaws.com/{{3}}"
             ],
             "subtitle": "To unsubscribe, reply Stop",
-            "actions": [
-                {
-                    "url": "https://owlair.example.com/{{2}}",
-                    "type": "URL",
-                    "title": "Order Online"
-                }
-            ],
             "title": "Congratulations, you've reached Elite status! Add code {{1}} for 10% off."
+        },
+        "twilio/text": {
+            "body": "Congratulations, you've reached Elite status! Add code {{1}} for 10% off."
         }
     },
-    "links": {
-        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
-        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "variables": {
+        "1": "coupon_code",
+        "2": "docs",
+        "3": "images/library-logo-resource2x.width-1000.png"
     }
 }
