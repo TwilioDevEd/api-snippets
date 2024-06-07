@@ -1,14 +1,14 @@
 {
-  "language": "en",
-  "date_updated": "2022-08-29T10:43:20Z",
-  "variables": {
-    "1": "Owl Air Customer"
-  },
-  "friendly_name": "Owl Air Support quick reply template",
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2022-08-29T10:43:20Z",
+  "date_updated": "2022-08-29T10:43:20Z",
+  "friendly_name": "Owl Air Support quick reply template",
+  "language": "en",
+  "links": {
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+  },
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "types": {
     "twilio/text": {
       "body": "Hi, {{ 1 }}. \n Thanks for contacting Owl Air Support. How can I help?."
@@ -31,8 +31,8 @@
       ]
     }
   },
-  "links": {
-    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
-    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "variables": {
+    "1": "Owl Air Customer"
   }
 }
