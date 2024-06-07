@@ -1,0 +1,24 @@
+{
+  "language": "en",
+  "date_updated": "2022-08-29T15:12:22Z",
+  "variables": {
+    "1": "OrderNumber"
+  },
+  "friendly_name": "Thank you for your order media template",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-08-29T15:12:22Z",
+  "types": {
+    "twilio/media": {
+      "body": "Thank you for your order {{1}}",
+      "media": [
+        "https://twilio-cms-prod.s3.amazonaws.com/images/library-logo-resource2x.width-1000.png"
+      ]
+    }
+  },
+  "links": {
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  }
+}

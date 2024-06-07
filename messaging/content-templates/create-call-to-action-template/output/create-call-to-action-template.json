@@ -1,0 +1,38 @@
+{
+    "language": "en",
+    "date_updated": "2022-01-15T17:09:58Z",
+    "variables": {
+        "1": "flight_number",
+        "3": "departure_time",
+        "2": "arrival_city",
+        "5": "url_suffix",
+        "4": "gate_number"
+    },
+    "friendly_name": "Owl Air flight departure call to action template",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2022-01-15T17:09:58Z",
+    "types": {
+        "twilio/call-to-action": {
+            "body": "Owl Air: We will see you soon! Flight {{1}} to {{2}} departs at {{3}} from Gate {{4}}.",
+            "actions": [
+                {
+                    "url": "https://owlair.example.com/{{5}}",
+                    "type": "URL",
+                    "title": "Check Flight Status"
+                },
+                {
+                    "phone_number": "+15555551234",
+                    "type": "PHONE_NUMBER",
+                    "title": "Call Support"
+                }
+            ]
+        }
+    },
+    "links": {
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+    }
+}
+

@@ -1,0 +1,42 @@
+{
+  "language": "en",
+  "date_updated": "2022-08-29T15:46:11Z",
+  "variables": {
+    "1": "end_date"
+  },
+  "friendly_name": "Owl Air list picker template",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-08-29T15:46:11Z",
+  "types": {
+    "twilio/list-picker": {
+      "body": "Owl Air Flash Sale! Hurry! Sale ends on {{1}}!",
+      "items": [
+        {
+          "item": "SFO to NYC for $299",
+          "id": "SFO1337",
+          "description": "Owl Air Flight 1337 to LGA"
+        },
+        {
+          "item": "OAK to Denver for $149",
+          "id": "OAK5280",
+          "description": "Owl Air Flight 5280 to DEN"
+        },
+        {
+          "item": "LAX to Chicago for $199",
+          "id": "LAX96",
+          "description": "Owl Air Flight 96 to ORD"
+        }
+      ],
+      "button": "Select a destination"
+    },
+    "twilio/text": {
+      "body": "We have flights to the following destinations: (1) SFO, (2) OAK, (3) LAX. Hurry! Sale ends on {{1}}!"
+    }
+  },
+  "links": {
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  }
+}

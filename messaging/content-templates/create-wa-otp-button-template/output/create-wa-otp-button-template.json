@@ -1,0 +1,27 @@
+{
+    "language": "en",
+    "date_updated": "2023-06-02T14:34:25Z",
+    "variables": {},
+    "friendly_name": "WhatsApp OTP button template",
+    "account_sid": "$TWILIO_ACCOUNT_SID",
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2023-06-02T14:34:25Z",
+    "types": {
+        "whatsapp/authentication": {
+            "body": "{{1}}",
+            "add_security_recommendation": true,
+            "code_expiration_minutes": 40,
+            "actions": [
+                {
+                    "type": "COPY_CODE",
+                    "copy_code_text": "Copy verification code"
+                }
+            ]
+        }
+    },
+    "links": {
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+    }
+}

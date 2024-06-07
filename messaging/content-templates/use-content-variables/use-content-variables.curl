@@ -1,0 +1,29 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Owl Air elite status card template",
+    "language": "en",
+    "variables": {
+        "1": "coupon_code", 
+        "2": "docs",
+        "3": "images/library-logo-resource2x.width-1000.png"
+    },
+    "types": {
+        "twilio/card": {
+                    "title": "Congratulations, you've reached Elite status! Add code {{1}} for 10% off.",
+                    "subtitle": "To unsubscribe, reply Stop",
+                    "actions": [
+                        {
+                            "url": "https://twilio.com/{{2}}",
+                            "title": "Order Online",
+                            "type": "URL"
+                        }
+                    ],
+                    "media": ["https://twilio-cms-prod.s3.amazonaws.com/{{3}}"]
+                },
+        "twilio/text": {
+            "body": "Congratulations, you've reached Elite status! Add code {{1}} for 10% off."
+        }
+    }
+}'

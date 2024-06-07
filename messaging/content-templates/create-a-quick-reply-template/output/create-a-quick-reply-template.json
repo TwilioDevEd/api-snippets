@@ -1,0 +1,38 @@
+{
+  "language": "en",
+  "date_updated": "2022-08-29T10:43:20Z",
+  "variables": {
+    "1": "Owl Air Customer"
+  },
+  "friendly_name": "Owl Air Support quick reply template",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-08-29T10:43:20Z",
+  "types": {
+    "twilio/text": {
+      "body": "Hi, {{ 1 }}. \n Thanks for contacting Owl Air Support. How can I help?."
+    },
+    "twilio/quick-reply": {
+      "body": "Hi, {{ 1 }}. \n Thanks for contacting Owl Air Support. How can I help?",
+      "actions": [
+        {
+          "id": "flightid1",
+          "title": "Check flight status"
+        },
+        {
+          "id": "gateid1",
+          "title": "Check gate number"
+        },
+        {
+          "id": "agentid1",
+          "title": "Speak with an agent"
+        }
+      ]
+    }
+  },
+  "links": {
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+  }
+}

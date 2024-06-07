@@ -1,0 +1,14 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Thank you for your order media template",
+    "language": "en",
+    "variables": {"1":"OrderNumber"},
+    "types": {
+        "twilio/media": {
+        "body": "Thank you for your order {{1}}",   
+        "media": ["https://twilio-cms-prod.s3.amazonaws.com/images/library-logo-resource2x.width-1000.png"]
+        }
+    }
+}'

@@ -1,0 +1,30 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Owl Air Support quick reply template",
+    "language": "en",
+    "variables": {"1":"Owl Air Customer"},
+    "types": {
+        "twilio/quick-reply": {
+                    "body": "Hi, {{1}} 👋 \nThanks for contacting Owl Air Support. How can I help?",
+                    "actions": [
+                        {
+                            "title": "Check flight status",
+                            "id": "flightid1"
+                        },
+                        {
+                            "title": "Check gate number",
+                            "id": "gateid1"
+                        },
+                        {
+                            "title": "Speak with an agent",
+                            "id": "agentid1"
+                        }
+                    ]
+                },
+        "twilio/text": {
+            "body": "Hi, {{1}}. \n Thanks for contacting Owl Air Support. How can I help?."
+        }
+    }
+}' 

@@ -1,0 +1,17 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "WhatsApp OTP button template",
+    "language": "en",
+    "types": {
+      "whatsapp/authentication":{
+        "add_security_recommendation": true,
+        "code_expiration_minutes": "30",
+        "actions": [{
+            "type": "COPY_CODE",
+            "copy_code_text": "Copy verification code"
+        }]
+      }
+    }
+  }'
