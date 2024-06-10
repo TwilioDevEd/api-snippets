@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Create Quick-Reply Template",
-  "highlight": "{}",
-  "title_override": "Create a Quick Reply Template",
-  "description_override": ""
+  "type": "server"
 }
