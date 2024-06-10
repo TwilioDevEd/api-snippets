@@ -1,0 +1,28 @@
+{
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2024-06-10T22:25:37Z",
+    "date_updated": "2024-06-10T22:25:37Z",
+    "friendly_name": "dynamicproducts",
+    "language": "en",
+    "links": {
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+    },
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "types": {
+        "twilio/catalog": {
+            "body": "{{2}}",
+            "dynamic_items": "{{products}}",
+            "id": "1017234312776586",
+            "items": null,
+            "subtitle": "{{3}}",
+            "thumbnail_item_id": null,
+            "title": "The Menu: {{1}}"
+        }
+    },
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "variables": {
+        "1": "Hi, check out this menu menu_name",
+        "2": "footer text"
+    }
+}
