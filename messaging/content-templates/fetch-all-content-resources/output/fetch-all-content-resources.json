@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "page": 0,
+    "page_size": 50,
+    "first_page_url": "https://content.twilio.com/v1/Content?PageSize=50&Page=0",
+    "previous_page_url": null,
+    "url": "https://content.twilio.com/v1/Content?PageSize=50&Page=0",
+    "next_page_url": "https://content.twilio.com/v1/Content?PageSize=50&Page=1&PageToken=DNHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-1678723520",
+    "key": "contents"
+  },
+  "contents": [
+    {
+      "language": "en",
+      "date_updated": "2023-03-31T16:06:50Z",
+      "variables": {
+        "1": "07:00",
+        "3": "owl.jpg",
+        "2": "03/01/2023"
+      },
+      "friendly_name": "whatsappcard2",
+      "account_sid": "ACXXXXXXXXXXXXXXX",
+      "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "date_created": "2023-03-31T16:06:50Z",
+      "types": {
+        "twilio/card": {
+          "body": null,
+          "media": [
+            "https://twilio.example.com/{{3}}"
+          ],
+          "subtitle": null,
+          "actions": [
+            {
+              "index": 0,
+              "type": "QUICK_REPLY",
+              "id": "Stop",
+              "title": "Stop Updates"
+            }
+          ],
+          "title": "See you at {{1}} on {{2}}. Thank you."
+        }
+      },
+      "links": {
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+      }
+    },
+    {
+      "language": "en",
+      "date_updated": "2023-03-31T15:50:24Z",
+      "variables": {
+        "1": "07:00",
+        "2": "03/01/2023"
+      },
+      "friendly_name": "whatswppward_01234",
+      "account_sid": "ACXXXXXXXXXXXXXXX",
+      "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "date_created": "2023-03-31T15:50:24Z",
+      "types": {
+        "twilio/card": {
+          "body": null,
+          "media": [
+            "https://twilio.example.com/owl.jpg"
+          ],
+          "subtitle": null,
+          "actions": [
+            {
+              "index": 0,
+              "type": "QUICK_REPLY",
+              "id": "Stop",
+              "title": "Stop Updates"
+            }
+          ],
+          "title": "See you at {{1}} on {{2}}. Thank you."
+        }
+      },
+      "links": {
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp"
+      }
+    }
+  ]
+}
