@@ -1,0 +1,3 @@
+curl -X GET 'https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN

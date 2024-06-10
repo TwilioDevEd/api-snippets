@@ -1,0 +1,13 @@
+{
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
+    "whatsapp": {
+        "category": "TRANSPORTATION_UPDATE",
+        "status": "pending",
+        "name": "flight_replies",
+        "type": "whatsapp",
+        "content_type": "twilio/quick-reply",
+        "rejection_reason": ""
+    },
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
