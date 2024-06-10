@@ -1,0 +1,17 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Owl Air location template",
+    "language": "en",
+    "types": {
+        "twilio/text": {
+            "body": "Owl Air: Time to board, SFO is located at San Francisco International Airport, P.O. Box 8097, San Francisco, CA 94128 "
+        },
+        "twilio/location": {
+            "latitude": 37.62159755922449,
+            "longitude": -122.37888566473057,
+            "label": "Time to Board @ SFO"
+        }
+    }
+}'

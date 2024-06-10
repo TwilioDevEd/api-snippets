@@ -1,0 +1,24 @@
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-08-29T15:23:12Z",
+  "date_updated": "2022-08-29T15:23:12Z",
+  "friendly_name": "Owl Air location template",
+  "language": "en",
+  "links": {
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+  },
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "types": {
+    "twilio/location": {
+      "label": "Time to Board @ SFO",
+      "latitude": 37.62159755922449,
+      "longitude": -122.37888566473057
+    },
+    "twilio/text": {
+      "body": "Owl Air: Time to board, SFO is located at San Francisco International Airport, P.O. Box 8097, San Francisco, CA 94128 "
+    }
+  },
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "variables": {}
+}
