@@ -1,0 +1,36 @@
+{
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2023-08-03T14:54:47Z",
+    "date_updated": "2023-08-03T14:54:47Z",
+    "friendly_name": "Owl Air coupon card template",
+    "language": "en",
+    "links": {
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+    },
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "types": {
+        "whatsapp/card": {
+            "actions": [
+                {
+                    "title": "Order Online",
+                    "type": "URL",
+                    "url": "https://owlair.example.com/"
+                },
+                {
+                    "phone": "+1555554567",
+                    "title": "Call Us",
+                    "type": "PHONE_NUMBER"
+                }
+            ],
+            "body": "Congratulations, you have reached Elite status! Add code {{1}} for 10% off.",
+            "footer": "To unsubscribe, reply Stop",
+            "header_text": "This is a {{1}} card",
+            "media": null
+        }
+    },
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "variables": {
+        "1": "coupon_code"
+    }
+}
