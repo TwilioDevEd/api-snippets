@@ -1,0 +1,36 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Owl Air list picker template",
+    "language": "en",
+    "variables": {
+        "1": "end_date"
+    },
+    "types": {
+        "twilio/list-picker": {
+            "body": "Owl Air Flash Sale! Hurry! Sale ends on {{1}}!",
+            "button": "Select a destination",
+            "items": [
+                {
+                    "item": "SFO to NYC for $299",
+                    "description": "Owl Air Flight 1337 to LGA",
+                    "id": "SFO1337"
+                },
+                {
+                    "item": "OAK to Denver for $149",
+                    "description": "Owl Air Flight 5280 to DEN",
+                    "id": "OAK5280"
+                },
+                {
+                    "item": "LAX to Chicago for $199",
+                    "description": "Owl Air Flight 96 to ORD",
+                    "id": "LAX96"
+                }
+            ]
+        },
+       "twilio/text": {
+            "body": "We have flights to the following destinations: (1) New York City, (2) Denver, (3) Chicago. Hurry! Sale ends on {{1}}!"
+        }
+    }
+}'    
