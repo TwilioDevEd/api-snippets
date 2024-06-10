@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Use Variables with Templates",
-  "highlight": "{}",
-  "title_override": "Use Variables with Content Templates",
-  "description_override": ""
+  "type": "server"
 }

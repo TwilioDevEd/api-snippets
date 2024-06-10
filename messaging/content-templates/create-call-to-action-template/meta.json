@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Create a Call-to-action Template",
-  "highlight": "{}",
-  "title_override": "Create Call-To-Action Template",
-  "description_override": ""
+  "type": "server"
 }

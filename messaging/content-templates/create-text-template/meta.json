@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Create a Text Template",
-  "highlight": "{}",
-  "title_override": "Create Text Template",
-  "description_override": ""
+  "type": "server"
 }

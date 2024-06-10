@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Create a Media Template",
-  "highlight": "{}",
-  "title_override": "Create Media Template",
-  "description_override": ""
+  "type": "server"
 }

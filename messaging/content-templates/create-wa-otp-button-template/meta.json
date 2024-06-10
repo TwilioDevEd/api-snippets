@@ -1,6 +1,4 @@
 {
   "title": "Content Templates API - Create a WhatsApp One-time Passcode (OTP) Button Template",
-  "highlight": "{}",
-  "title_override": "Create WhatsApp OTP Button Template",
-  "description_override": ""
+  "type": "server"
 }
