@@ -1,0 +1,13 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "Owl Air Support text template",
+    "language": "en",
+    "variables": {"1":"name"},
+    "types": {
+        "twilio/text": {
+            "body": "Hi, {{1}}. \n Thanks for contacting Owl Air Support. How can I help?."
+        }
+    }
+}'

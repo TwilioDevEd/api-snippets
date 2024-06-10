@@ -1,0 +1,21 @@
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2022-09-01T12:39:19Z",
+  "date_updated": "2022-09-01T12:39:19Z",
+  "friendly_name": "Owl Air Support text template",
+  "language": "en",
+  "links": {
+    "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+  },
+  "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "types": {
+    "twilio/text": {
+      "body": "Hi, {{1}}. \n Thanks for contacting Owl Air Support. How can I help?."
+    }
+  },
+  "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "variables": {
+    "1": "name"
+  }
+}
