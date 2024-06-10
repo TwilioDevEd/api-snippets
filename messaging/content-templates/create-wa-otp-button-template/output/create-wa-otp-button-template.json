@@ -19,7 +19,7 @@
             ],
             "add_security_recommendation": true,
             "body": "{{1}}",
-            "code_expiration_minutes": 40
+            "code_expiration_minutes": 30
         }
     },
     "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
