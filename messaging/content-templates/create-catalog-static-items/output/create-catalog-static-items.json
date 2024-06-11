@@ -1,0 +1,37 @@
+{
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "date_created": "2024-06-10T22:16:39Z",
+    "date_updated": "2024-06-10T22:16:39Z",
+    "friendly_name": "fixedproducts",
+    "language": "en",
+    "links": {
+        "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
+        "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests"
+    },
+    "sid": "HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "types": {
+        "twilio/catalog": {
+            "body": "Hi, check out this menu {{1}}",
+            "dynamic_items": null,
+            "id": "1017234312776586",
+            "items": [
+                {
+                    "description": null,
+                    "id": "48rme2i4po",
+                    "media_url": null,
+                    "name": null,
+                    "price": null,
+                    "section_title": "veggies"
+                }
+            ],
+            "subtitle": "Great deals",
+            "thumbnail_item_id": "48rme2i4po",
+            "title": "The Menu: {{2}}"
+        }
+    },
+    "url": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "variables": {
+        "1": "menu_ad",
+        "2": "menu_name"
+    }
+}
