@@ -1,0 +1,18 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+   "friendly_name": "Catalog - all products",
+   "language": "en",
+   "variables": {"1": "menu_title", "2": "menu_name"},
+   "types": {
+    "twilio/catalog": {
+      "id": "1017234312776586",
+      "title": "The Menu: {{1}}",
+      "body": "Hi, check out this menu {{2}}",
+      "subtitle": "Great deals",
+      "thumbnail_item_id": "48rme2i4po"
+      }
+    }
+  }'
+
