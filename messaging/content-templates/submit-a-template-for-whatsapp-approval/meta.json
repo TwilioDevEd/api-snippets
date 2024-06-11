@@ -1,0 +1,5 @@
+{
+  "title": "Content API - Create WhatsApp ApprovalRequest",
+  "description": "Submit a Content Template for WhatsApp Approval",
+  "type": "server"
+}

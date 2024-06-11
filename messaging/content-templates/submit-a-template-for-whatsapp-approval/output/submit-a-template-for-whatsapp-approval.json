@@ -1,0 +1,7 @@
+{
+  "category": "TRANSPORTATION_UPDATE",
+  "status": "received",
+  "rejection_reason": "",
+  "name": "flight_replies",
+  "content_type": "twilio/quick-reply"
+}
