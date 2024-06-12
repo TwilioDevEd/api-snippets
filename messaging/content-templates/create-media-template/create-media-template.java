@@ -15,7 +15,7 @@ public class TwilioMedia {
         types.setTwilioMedia(twilioMedia);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_media");
+        createRequest.setFriendlyName("media_template");
         createRequest.setVariables(Map.of(
         "1", "order_number"
         ));
