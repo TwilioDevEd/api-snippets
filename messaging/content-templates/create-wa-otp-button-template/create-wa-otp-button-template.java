@@ -21,7 +21,7 @@ public class WhatsAppAuthentication {
         types.setWhatsappAuthentication(waAuth);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_wa_auth");
+        createRequest.setFriendlyName("whatsapp_otp");
 
         var content = Content.creator(createRequest).create();
 
