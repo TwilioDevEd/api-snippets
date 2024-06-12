@@ -20,7 +20,7 @@ public class TwilioLocation {
         types.setTwilioLocation(twilioLocation);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_location");
+        createRequest.setFriendlyName("owl_air_location");
         createRequest.setVariables(Map.of(
         "1", "John"
         ));
