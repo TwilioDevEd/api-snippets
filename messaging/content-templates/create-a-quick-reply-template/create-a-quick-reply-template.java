@@ -35,7 +35,7 @@ public class TwilioQuickReply {
         types.setTwilioQuickReply(twilioQuickReply);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_quickreply");
+        createRequest.setFriendlyName("owl_air_qr");
         createRequest.setVariables(Map.of(
         "1", "first_name"
         ));
