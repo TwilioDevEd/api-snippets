@@ -16,12 +16,12 @@
                     "url": "https://owlair.example.com/{{5}}",
                     "type": "URL",
                     "title": "Check Flight Status"
-                    },
-                    {
-                        "phone_number": "+15555551234",
-                        "type": "PHONE_NUMBER",
-                        "title": "Call Support"
-                        }
+                },
+                {
+                    "phone_number": "+15555551234",
+                    "type": "PHONE_NUMBER",
+                    "title": "Call Support"
+                }
             ],
             "body": "Owl Air: We will see you soon! Flight {{1}} to {{2}} departs at {{3}} from Gate {{4}}."
         }
