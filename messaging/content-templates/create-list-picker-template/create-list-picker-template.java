@@ -32,7 +32,7 @@ public class TwilioListPicker {
         types.setTwilioListPicker(twilioListPicker);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_listpicker");
+        createRequest.setFriendlyName("owl_air_list");
         createRequest.setVariables(Map.of(
         "1", "end_date"
         ));
