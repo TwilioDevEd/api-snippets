@@ -15,7 +15,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
       "actions": [{
           "type": "URL",
           "title": "Check Flight Status",
-          "url": "https://owlair.example.com/{{5}}"
+          "url": "https://owlair.com/{{5}}"
         },
         {
           "type": "PHONE_NUMBER",
