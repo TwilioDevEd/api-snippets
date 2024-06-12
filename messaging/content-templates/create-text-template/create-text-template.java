@@ -14,7 +14,7 @@ public class TwilioText {
         types.setTwilioText(twilioText);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_text");
+        createRequest.setFriendlyName("media_template");
         createRequest.setVariables(Map.of(
         "1", "first_name"
         ));
