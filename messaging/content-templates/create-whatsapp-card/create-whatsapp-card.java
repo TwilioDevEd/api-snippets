@@ -28,7 +28,7 @@ public class WhatsAppCard {
         types.setWhatsappCard(waCard);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_wa_card");
+        createRequest.setFriendlyName("owl_coupon_code");
         createRequest.setVariables(Map.of(
         "1", "coupon_code"
         ));
