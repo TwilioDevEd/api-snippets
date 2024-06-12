@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-    "friendly_name": "Owl Air list picker template",
+    "friendly_name": "owl_air_list",
     "language": "en",
     "variables": {
         "1": "end_date"
@@ -30,7 +30,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
             ]
         },
        "twilio/text": {
-            "body": "We have flights to the following destinations: (1) New York City, (2) Denver, (3) Chicago. Hurry! Sale ends on {{1}}!"
+            "body": "We have flights to the following destinations: (1) SFO, (2) OAK, (3) LAX. Hurry! Sale ends on {{1}}!"
         }
     }
 }'    
