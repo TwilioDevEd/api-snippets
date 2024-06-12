@@ -14,7 +14,7 @@ public class TwilioCard {
 
         var action1 = new Content.CardAction();
         action1.setType(Content.CardActionType.URL);
-        action1.setUrl("https://www.twilio.com");
+        action1.setUrl("https://www.owlair.com");
         action1.setTitle("Contact Us");
 
         twilioCard.setActions(Arrays.asList(action1));
@@ -23,7 +23,7 @@ public class TwilioCard {
         types.setTwilioCard(twilioCard);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_card");
+        createRequest.setFriendlyName("owl_air_card");
         createRequest.setVariables(Map.of(
         "1", "John"
         ));
