@@ -16,7 +16,7 @@ using Twilio.Rest.Content.V1;
         .Build();
     var cta2 = new CallToAction.Builder()
         .WithType(CallToActionActionType.PhoneNumber)
-        .WithPhone("+18005551234")
+        .WithPhone("+15555551234")
         .WithTitle("Call Support")
         .Build();
     twilioCallToAction.WithActions(new List<CallToAction>() { cta1, cta2 });
@@ -29,7 +29,7 @@ using Twilio.Rest.Content.V1;
     var contentCreateRequest = new ContentCreateRequest.Builder();
     contentCreateRequest.WithTypes(types.Build());
     contentCreateRequest.WithLanguage("en");
-    contentCreateRequest.WithFriendlyName("owl_coupon_code");
+    contentCreateRequest.WithFriendlyName("owl_air_cta");
     contentCreateRequest.WithVariables(new Dictionary<string, string>() { {"1", "flight_number"}, {"2", "arrival_city"}, {"3", "departure_time"}, {"4", "gate_number"}, {"5", "url_suffix"} });
     
     // create the twilio template
