@@ -36,7 +36,7 @@ using Twilio.Rest.Content.V1;
     var contentCreateRequest = new ContentCreateRequest.Builder();
     contentCreateRequest.WithTypes(types.Build());
     contentCreateRequest.WithLanguage("en");
-    contentCreateRequest.WithFriendlyName("owl_coupon_card");
+    contentCreateRequest.WithFriendlyName("owl_air_qr");
     contentCreateRequest.WithVariables(new Dictionary<string, string>() { {"1", "John"} });
     
     // create the twilio template
