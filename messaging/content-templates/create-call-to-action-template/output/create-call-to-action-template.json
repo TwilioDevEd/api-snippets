@@ -13,7 +13,7 @@
         "twilio/call-to-action": {
             "actions": [
                 {
-                    "url": "https://owlair.example.com/{{5}}",
+                    "url": "https://owlair.com/{{5}}",
                     "type": "URL",
                     "title": "Check Flight Status"
                 },
