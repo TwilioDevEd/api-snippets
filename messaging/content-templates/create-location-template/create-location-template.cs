@@ -25,7 +25,7 @@ using Twilio.Rest.Content.V1;
     var contentCreateRequest = new ContentCreateRequest.Builder();
     contentCreateRequest.WithTypes(types.Build());
     contentCreateRequest.WithLanguage("en");
-    contentCreateRequest.WithFriendlyName("location");
+    contentCreateRequest.WithFriendlyName("owl_air_location");
     
     // create the twilio template
     var contentTemplate = await CreateAsync(contentCreateRequest.Build());
