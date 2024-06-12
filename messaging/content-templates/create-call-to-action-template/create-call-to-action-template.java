@@ -25,7 +25,7 @@ public class TwilioCallToAction {
         types.setTwilioCallToAction(twilioCallToAction);
 
         var createRequest = new Content.ContentCreateRequest("en", types);
-        createRequest.setFriendlyName("java_sdk_example_twilio_calltoaction");
+        createRequest.setFriendlyName("owl_air_cta");
         createRequest.setVariables(Map.of(
         "1", "flight_number",
         "2", "arrival_city",
