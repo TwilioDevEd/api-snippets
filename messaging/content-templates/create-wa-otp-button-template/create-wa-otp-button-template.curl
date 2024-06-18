@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-    "friendly_name": "WhatsApp OTP button template",
+    "friendly_name": "whatsapp_otp",
     "language": "en",
     "types": {
       "whatsapp/authentication":{

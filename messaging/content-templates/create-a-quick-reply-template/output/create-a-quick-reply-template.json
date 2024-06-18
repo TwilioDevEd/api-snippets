@@ -2,7 +2,7 @@
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2022-08-29T10:43:20Z",
   "date_updated": "2022-08-29T10:43:20Z",
-  "friendly_name": "Owl Air Support quick reply template",
+  "friendly_name": "owl_air_qr",
   "language": "en",
   "links": {
     "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",

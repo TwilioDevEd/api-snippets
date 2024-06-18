@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-    "friendly_name": "Owl Air coupon card template",
+    "friendly_name": "owl_air_card",
     "language": "en",
     "variables": {
         "1": "coupon_code"
@@ -13,7 +13,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
                     "subtitle": "To unsubscribe, reply Stop",
                     "actions": [
                         {
-                            "url": "https://owlair.example.com/",
+                            "url": "https://owlair.com/",
                             "title": "Order Online",
                             "type": "URL"
                         },

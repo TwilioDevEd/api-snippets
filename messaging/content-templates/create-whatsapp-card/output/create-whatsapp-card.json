@@ -2,7 +2,7 @@
     "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "date_created": "2023-08-03T14:54:47Z",
     "date_updated": "2023-08-03T14:54:47Z",
-    "friendly_name": "Owl Air coupon card template",
+    "friendly_name": "owl_coupon_code",
     "language": "en",
     "links": {
         "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",

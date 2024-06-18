@@ -2,7 +2,7 @@
     "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "date_created": "2022-01-15T17:09:58Z",
     "date_updated": "2022-01-15T17:09:58Z",
-    "friendly_name": "Owl Air flight departure call to action template",
+    "friendly_name": "owl_air_cta",
     "language": "en",
     "links": {
         "approval_fetch": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests",
@@ -13,7 +13,7 @@
         "twilio/call-to-action": {
             "actions": [
                 {
-                    "url": "https://owlair.example.com/{{5}}",
+                    "url": "https://owlair.com/{{5}}",
                     "type": "URL",
                     "title": "Check Flight Status"
                 },

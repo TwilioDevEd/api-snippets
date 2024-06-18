@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-    "friendly_name": "Owl Air location template",
+    "friendly_name": "owl_air_location",
     "language": "en",
     "types": {
         "twilio/text": {

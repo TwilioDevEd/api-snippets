@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-  "friendly_name": "Owl Air flight departure call to action template",
+  "friendly_name": "owl_air_cta",
   "language": "en",
   "variables": {"1": "flight_number", 
                 "2": "arrival_city",
@@ -15,7 +15,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
       "actions": [{
           "type": "URL",
           "title": "Check Flight Status",
-          "url": "https://owlair.example.com/{{5}}"
+          "url": "https://owlair.com/{{5}}"
         },
         {
           "type": "PHONE_NUMBER",

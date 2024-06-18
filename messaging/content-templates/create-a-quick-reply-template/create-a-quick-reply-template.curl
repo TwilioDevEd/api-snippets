@@ -2,7 +2,7 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
 -H 'Content-Type: application/json' \
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
 -d '{
-    "friendly_name": "Owl Air Support quick reply template",
+    "friendly_name": "owl_air_qr",
     "language": "en",
     "variables": {"1":"Owl Air Customer"},
     "types": {

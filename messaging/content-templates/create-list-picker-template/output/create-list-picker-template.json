@@ -2,7 +2,7 @@
   "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   "date_created": "2022-08-29T15:46:11Z",
   "date_updated": "2022-08-29T15:46:11Z",
-  "friendly_name": "Owl Air list picker template",
+  "friendly_name": "owl_air_list",
   "language": "en",
   "links": {
     "approval_create": "https://content.twilio.com/v1/Content/HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ApprovalRequests/whatsapp",
