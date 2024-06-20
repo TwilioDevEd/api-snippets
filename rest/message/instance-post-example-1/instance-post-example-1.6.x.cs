@@ -14,7 +14,7 @@ class Example
         TwilioClient.Init(accountSid, authToken);
 
         const string sid = "MM5ef8732a3c49700934481addd5ce1659";
-        var message = MessageResource.Update(sid, "");
+        var message = MessageResource.Update(pathSid:sid,body:"");
 
         Console.WriteLine(message.Body); // will be empty
     }
