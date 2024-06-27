@@ -1,2 +1,2 @@
-curl -X GET "https://content.twilio.com/v1/Content
+curl -X GET "https://content.twilio.com/v1/Content"
 -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN
