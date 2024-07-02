@@ -1,0 +1,3 @@
+twilio
+fastapi
+uvicorn[standard]

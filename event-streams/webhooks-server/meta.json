@@ -1,0 +1,5 @@
+{
+  "title": "Receive webhooks from Event Streams",
+  "type": "server",
+  "tags": ["event-streams"]
+}
