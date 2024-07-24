@@ -9,9 +9,9 @@ curl -X POST 'https://content.twilio.com/v1/Content' \
     },
     "types": {
         "twilio/carousel": {
-                    "body": "New {{1}} merch just dropped! 👀",
-  "cards": [
-    {
+                 "body": "New {{1}} merch just dropped! 👀",
+                 "cards": [
+                     {
       "title":"Twilio Hoodie",
       "body":"Warm as owl feathers.",
       "media":"https://sienna-grasshopper-3262.twil.io/assets/hoodie.jpeg",
