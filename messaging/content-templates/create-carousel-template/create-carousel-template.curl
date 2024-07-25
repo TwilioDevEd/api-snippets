@@ -1,0 +1,85 @@
+curl -X POST 'https://content.twilio.com/v1/Content' \
+-H 'Content-Type: application/json' \
+-u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN \
+-d '{
+    "friendly_name": "twilio_deal",
+    "language": "en",
+    "variables": {
+        "1": "Twilio"
+    },
+    "types": {
+        "twilio/carousel": {
+                 "body": "New {{1}} merch just dropped! 👀",
+                 "cards": [
+                     {
+      "title":"Twilio Hoodie",
+      "body":"Warm as owl feathers.",
+      "media":"https://sienna-grasshopper-3262.twil.io/assets/hoodie.jpeg",
+      "actions":[
+        {
+          "type":"QUICK_REPLY",
+          "title":"I want it!",
+          "id":"want_hoodie"
+        },
+        {
+          "type":"URL",
+          "title":"I am taking this!",
+          "url":"https://sienna-grasshopper-3262.twil.io/assets/hoodie.jpeg"
+        }
+      ]
+    },
+    {
+      "title":"Twilio Tote",
+      "body":"Carry a little more.",
+      "media":"https://sienna-grasshopper-3262.twil.io/assets/tote.jpeg",
+      "actions":[
+        {
+          "type":"QUICK_REPLY",
+          "title":"I want it!",
+          "id":"want_tote"
+        },
+        {
+          "type":"URL",
+          "title":"Take the tote!",
+          "url":"https://sienna-grasshopper-3262.twil.io/assets/tote.jpeg"
+        }
+      ]
+    },
+    {
+      "title":"Twilio Bucket Hat",
+      "body":"Stay in the shade.",
+      "media":"https://sienna-grasshopper-3262.twil.io/assets/hat.jpeg",
+      "actions":[
+        {
+          "type":"QUICK_REPLY",
+          "title":"I want it!",
+          "id":"want_hat"
+        },
+        {
+          "type":"URL",
+          "title":"Hand me the hat!",
+          "url":"https://sienna-grasshopper-3262.twil.io/assets/hat.jpeg"
+        }
+      ]
+    },
+    {
+      "title":"Twilio Mug",
+      "body":"Sip a little.",
+      "media":"https://sienna-grasshopper-3262.twil.io/assets/mug.jpeg",
+      "actions":[
+        {
+          "type":"QUICK_REPLY",
+          "title":"I want it!",
+          "id":"want_mug"
+        },
+        {
+          "type":"URL",
+          "title":"Make me a mug!",
+          "url":"https://sienna-grasshopper-3262.twil.io/assets/mug.jpeg"
+        }
+      ]
+    }
+]
+        }
+    }
+}'

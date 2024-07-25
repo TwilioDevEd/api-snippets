@@ -1,0 +1,95 @@
+{
+  "account_sid": "ACXXXXXXXX",
+  "date_created": "2024-07-24T20:35:59Z",
+  "date_updated": "2024-07-24T20:35:59Z",
+  "friendly_name": "twilio_deal",
+  "language": "en",
+  "links": {
+    "approval_create": "https://content.twilio.com/v1/Content/HXxxxxxxxxx/ApprovalRequests/whatsapp",
+    "approval_fetch": "https://content.twilio.com/v1/Content/HXxxxxxxxxx/ApprovalRequests"
+  },
+  "sid": "HXxxxxxxx",
+  "types": {
+    "twilio/carousel": {
+      "body": "New {{1}} merch just dropped! 👀",
+      "cards": [
+        {
+          "actions": [
+            {
+              "id": "want_hoodie",
+              "index": 0,
+              "title": "I want it!",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "title": "I'm taking this!",
+              "type": "URL",
+              "url": "https://sienna-grasshopper-3262.twil.io/assets/hoodie.jpeg"
+            }
+          ],
+          "body": "Warm as owl feathers.",
+          "media": "https://sienna-grasshopper-3262.twil.io/assets/hoodie.jpeg",
+          "title": "Twilio Hoodie"
+        },
+        {
+          "actions": [
+            {
+              "id": "want_tote",
+              "index": 0,
+              "title": "I want it!",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "title": "Take the tote!",
+              "type": "URL",
+              "url": "https://sienna-grasshopper-3262.twil.io/assets/tote.jpeg"
+            }
+          ],
+          "body": "Carry a little more.",
+          "media": "https://sienna-grasshopper-3262.twil.io/assets/tote.jpeg",
+          "title": "Twilio Tote"
+        },
+        {
+          "actions": [
+            {
+              "id": "want_hat",
+              "index": 0,
+              "title": "I want it!",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "title": "Hand me the hat!",
+              "type": "URL",
+              "url": "https://sienna-grasshopper-3262.twil.io/assets/hat.jpeg"
+            }
+          ],
+          "body": "Stay in the shade.",
+          "media": "https://sienna-grasshopper-3262.twil.io/assets/hat.jpeg",
+          "title": "Twilio Bucket Hat"
+        },
+        {
+          "actions": [
+            {
+              "id": "want_mug",
+              "index": 0,
+              "title": "I want it!",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "title": "Make me a mug!",
+              "type": "URL",
+              "url": "https://sienna-grasshopper-3262.twil.io/assets/mug.jpeg"
+            }
+          ],
+          "body": "Sip a little.",
+          "media": "https://sienna-grasshopper-3262.twil.io/assets/mug.jpeg",
+          "title": "Twilio Mug"
+        }
+      ]
+    }
+  },
+  "url": "https://content.twilio.com/v1/Content/HXxxxxxxxxx",
+  "variables": {
+    "1": "Twilio"
+  }
+}
