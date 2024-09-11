@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/TwilioDevEd/api-snippets#readme",
   "devDependencies": {
-    "eslint": "^4.3.0",
+    "eslint": "^4.18.2",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-prettier": "^2.1.2",
